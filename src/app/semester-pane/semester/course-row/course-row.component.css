@@ -3,9 +3,9 @@
   white-space: nowrap;
 }
 td{
-  border: 1px solid black;
+  border: 5px solid lightblue;
   background-color: lightblue;
-  
-  padding: 6px;
+
+  padding: 5px;
 
 }
