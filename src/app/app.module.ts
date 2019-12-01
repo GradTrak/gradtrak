@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SemesterPaneComponent } from './semester-pane/semester-pane.component';
+import { SemesterComponent } from './semester-pane/semester/semester.component';
+import { CourseRowComponent } from './semester-pane/semester/course-row/course-row.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SemesterPaneComponent,
+    SemesterComponent,
+    CourseRowComponent
   ],
   imports: [
     BrowserModule,
