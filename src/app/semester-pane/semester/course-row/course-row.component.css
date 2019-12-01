@@ -1,0 +1,8 @@
+.row{
+  overflow: hidden;
+  white-space: nowrap;
+}
+td{
+  border: 1px solid black;
+  background-color: lightblue;
+}
