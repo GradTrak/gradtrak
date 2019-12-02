@@ -1,3 +1,16 @@
 td{
-  border: 1px black solid;
+  border: 1px black solid;}
+#head{
+  border: 1px red solid;
+  height: 30px;
+  /*TODO: the head is not going less that ~40 px in height. setting height to below it doesn't do anything...*/
+}
+#title{
+  display: inline-block;
+  margin-left: 10px;
+}
+#add{
+  display: inline-block;
+  margin-right: 10px
+  /*TODO: move button to the right*/
 }
