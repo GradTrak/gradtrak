@@ -1,10 +1,12 @@
 #semestertable{
-  border-collapse: collapse;
+  border-collapse: separate;
+  background-color: #88D1F0;
+  border-spacing:   10px 5px;
 }
 td{
   border: 0px black solid;}
 #head{
-  border: 0px red solid;
+  border: 5px red solid;
   height: 30px;
   /*TODO: the head is not going less that ~40 px in height. setting height to below it doesn't do anything...*/
 }
@@ -14,6 +16,6 @@ td{
 }
 #add{
   display: inline-block;
-  margin-right: 10px
+  margin-right: 10px;
   /*TODO: move button to the right*/
 }

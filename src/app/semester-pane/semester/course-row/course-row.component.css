@@ -2,10 +2,17 @@
   overflow: hidden;
   white-space: nowrap;
 }
+#classname{
+  width: 100px;
+  background-color: #E2F9FE;
+  height: 20px;
+}
+#unitcount{
+  width:20px;
+  text-align: center;
+  background-color: #E2F9FE;
+}
 td{
-  border: 5px solid lightblue;
-  background-color: lightblue;
-
   padding: 5px;
 
 }
