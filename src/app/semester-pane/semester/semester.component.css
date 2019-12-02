@@ -1,6 +1,7 @@
 #semestertable{
   border-collapse: separate;
   background-color: #88D1F0;
+  /*TODO: decrease opacity per the figma*/
   border-spacing:   10px 5px;
 }
 td{
