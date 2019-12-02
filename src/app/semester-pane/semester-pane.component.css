@@ -1,3 +1,12 @@
 semester{
   padding: 5px;
+  /*TODO:use something other than padding to create spacing; eg margin*/
+}
+#pane{
+  margin-left: 30px;
+  border-collapse: separate;
+  border-spacing: 30px
+}
+td {
+  border: 1px solid black;
 }
