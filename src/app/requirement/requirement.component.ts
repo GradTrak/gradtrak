@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Requirement } from '../requirement';
 
 @Component({
@@ -7,10 +7,7 @@ import { Requirement } from '../requirement';
   styleUrls: ['./requirement.component.css']
 })
 export class RequirementComponent implements OnInit {
-  requirement: Requirement = {
-    id: 'eecs',
-    name: 'EECS Major Requirements',
-  }
+  @Input() requirement: Requirement;
 
   constructor() { }
 
