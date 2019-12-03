@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RequirementSet } from '../requirement-set';
 
 @Component({
@@ -7,21 +7,7 @@ import { RequirementSet } from '../requirement-set';
   styleUrls: ['./requirement-set.component.css']
 })
 export class RequirementSetComponent implements OnInit {
-  requirementSet: RequirementSet = {
-    id: 'eecs',
-    name: 'EECS Major Requirements',
-    parent: null,
-    requirements: [
-      {
-        id: 'cs61a',
-        name: 'CS 61A',
-      },
-      {
-        id: 'cs61b',
-        name: 'CS 61B',
-      }
-    ]
-  }
+  @Input() requirementSet: RequirementSet;
 
   constructor() { }
 

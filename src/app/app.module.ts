@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RequirementComponent } from './requirement/requirement.component';
 import { RequirementSetComponent } from './requirement-set/requirement-set.component';
+import { RequirementsPaneComponent } from './requirements-pane/requirements-pane.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RequirementComponent,
-    RequirementSetComponent
+    RequirementSetComponent,
+    RequirementsPaneComponent
   ],
   imports: [
     BrowserModule,
