@@ -1,3 +1,5 @@
+import { Requirement } from './requirement'
+
 export class RequirementSet {
   id: string;
   name: string;
