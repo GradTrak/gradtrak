@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Requirement } from '../requirement';
 
 @Component({
-  selector: 'app-requirement',
+  selector: '[app-requirement]',
   templateUrl: './requirement.component.html',
   styleUrls: ['./requirement.component.css']
 })

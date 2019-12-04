@@ -12,33 +12,45 @@ export class RequirementsPaneComponent implements OnInit {
       id: 'coe',
       name: 'College of Engineering',
       parent: null,
-      requirements: [
+      requirementCategories: [
         {
-          id: 'math1a',
-          name: 'MATH 1A',
+          id: 'math',
+          name: 'Math',
+          requirements: [
+            {
+              id: 'math1a',
+              name: 'MATH 1A',
+            },
+            {
+              id: 'math1b',
+              name: 'MATH 1B',
+            },
+          ],
         },
-        {
-          id: 'math1b',
-          name: 'MATH 1B',
-        },
-      ]
+      ],
     },
     {
       id: 'eecs',
       name: 'EECS Major',
       parent: null,
-      requirements: [
+      requirementCategories: [
         {
-          id: 'cs61a',
-          name: 'CS 61A',
+          id: 'eecs-lower-div',
+          name: 'Lower Division Requirements',
+          requirements: [
+            {
+              id: 'cs61a',
+              name: 'CS 61A',
+            },
+            {
+              id: 'cs61b',
+              name: 'CS 61B',
+            },
+          ],
         },
-        {
-          id: 'cs61b',
-          name: 'CS 61B',
-        },
-      ]
-    }
-  ]
+      ],
+    },
+  ];
 
   constructor() { }
 

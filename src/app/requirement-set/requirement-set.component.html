@@ -1,4 +1,4 @@
 <h2>{{requirementSet.name}}</h2>
 <div>
-  <app-requirement *ngFor="let requirement of requirementSet.requirements" [requirement]="requirement"></app-requirement>
+  <app-requirement-category *ngFor="let requirementCategory of requirementSet.requirementCategories" [requirementCategory]="requirementCategory"></app-requirement-category>
 </div>

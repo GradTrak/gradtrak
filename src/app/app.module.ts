@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RequirementComponent } from './requirement/requirement.component';
 import { RequirementSetComponent } from './requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './requirements-pane/requirements-pane.component';
+import { RequirementCategoryComponent } from './requirement-category/requirement-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RequirementComponent,
     RequirementSetComponent,
-    RequirementsPaneComponent
+    RequirementsPaneComponent,
+    RequirementCategoryComponent
   ],
   imports: [
     BrowserModule,
