@@ -22,7 +22,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "html"
     ],
     "rules": {
         "import/prefer-default-export": "off",
