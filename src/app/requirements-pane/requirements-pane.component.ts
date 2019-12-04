@@ -27,6 +27,20 @@ export class RequirementsPaneComponent implements OnInit {
             },
           ],
         },
+        {
+          id: 'physics',
+          name: 'Physics',
+          requirements: [
+            {
+              id: 'physics7a',
+              name: 'PHYSICS 7A',
+            },
+            {
+              id: 'physics7b',
+              name: 'PHYSICS 7B',
+            },
+          ],
+        },
       ],
     },
     {
