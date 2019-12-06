@@ -1,4 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
+import {Semester} from '../semester'
+import {Course} from '../course'
 
 @Component({
   selector: 'app-semester-pane',
@@ -6,11 +8,18 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./semester-pane.component.css']
 })
 export class SemesterPaneComponent implements OnInit {
-  temp_semester_list = {//format: "season year": {num_classes, list_classes}
-    "Fall 2019": [11111, 11112, 11113],
-    "Spring 2020" : [11112, 11113,11113]
-  }
-  @Input() registered_courses;
+  @Input() registeredCourses;
+  semesterList: Semester[] = [ {
+      id: "1",
+      name: "Fall 2019",
+      courses: [],
+    },
+    {
+    id: "2",
+    name: "Spring 2020",
+    courses: [],
+    },
+  ]
   //TODO: if importing takes up extra space, it may be worth just using export
   // instead to find the relevant classes so that we don't store copies
 
