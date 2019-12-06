@@ -9,6 +9,9 @@ import {Course} from '../course'
 })
 export class SemesterPaneComponent implements OnInit {
   @Input() registeredCourses: Course[];
+  //TODO: if importing takes up extra space, it may be worth just using export
+  // instead to find the relevant classes so that we don't store copies
+
   semesterList: Semester[] = [ {
       id: "fa19",
       name: "Fall 2019",
@@ -31,13 +34,14 @@ export class SemesterPaneComponent implements OnInit {
       id: "sp20",
       name: "Spring 2020",
       courses: [
+        //registeredCourses[1]
+        //this doesn't work because it's not found for some reason? the html works though when interpolation
       ],
     },
   ]
-  //TODO: if importing takes up extra space, it may be worth just using export
-  // instead to find the relevant classes so that we don't store copies
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
