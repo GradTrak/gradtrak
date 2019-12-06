@@ -1,19 +1,14 @@
 <table id = "semestertable">
-<th id = "head">
-  <h3 id="title">Title</h3>
-  <button type="button" id="add">+</button>
-  <!--TODO: stylize that uglyass button yo-->
-</th>
-<tr>
-<td>
-<app-course-row></app-course-row>
-<br>
-<app-course-row></app-course-row>
-<br>
-<app-course-row></app-course-row>
-<br>
-<app-course-row></app-course-row>
-<br>
-</td>
-</tr>
+  <thead>
+    <h3 id="title">{{name}}</h3>
+    <button type="button" id="add">+</button>
+    <!--TODO: stylize that uglyass button yo-->
+  </thead>
+  <tr *ngFor="let course of courses">
+    <td id = "classid">{{course.id}}</td>
+    <td id = "unitcount">{{course.units}}</td>
+    <!--BRUH WHAT THE HELL IS THIS M8-->
+    <td><button type="button" name="button">-</button></td>
+  </tr>
+
 </table>

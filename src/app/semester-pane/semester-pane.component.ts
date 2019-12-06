@@ -8,16 +8,30 @@ import {Course} from '../course'
   styleUrls: ['./semester-pane.component.css']
 })
 export class SemesterPaneComponent implements OnInit {
-  @Input() registeredCourses;
+  @Input() registeredCourses: Course[];
   semesterList: Semester[] = [ {
-      id: "1",
+      id: "fa19",
       name: "Fall 2019",
-      courses: [],
-    },
+      courses: [
+        {id : "cs61a",
+        dept : "CS",
+        no: "61a",
+        title: "str int cmp pgrms",
+        units: 4
+      },
+      {id : "cs61b",
+      dept : "CS",
+      no: "61b",
+      title: "Data structures",
+      units: 4
+      }
+    ],
+  },
     {
-    id: "2",
-    name: "Spring 2020",
-    courses: [],
+      id: "sp20",
+      name: "Spring 2020",
+      courses: [
+      ],
     },
   ]
   //TODO: if importing takes up extra space, it may be worth just using export

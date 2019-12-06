@@ -1,37 +1,12 @@
 <table id = "pane">
-  <tr>
-    <td>
-      <app-semester></app-semester>
-    </td>
-    <td>
-      <app-semester></app-semester>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <app-semester></app-semester>
-    </td>
-    <td>
-      <app-semester></app-semester>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <app-semester></app-semester>
-    </td>
-    <td>
-      <app-semester></app-semester>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <app-semester></app-semester>
-    </td>
-    <td>
-      <app-semester></app-semester>
-    </td>
-  </tr>
-  </table>
+  <tbody>
+    <tr *ngFor="let semester of semesterList">
+      <app-semester [name] = "semester.name" [courses] = semester.courses></app-semester>
+    </tr>
+  </tbody>
+</table>
+
+
 <!--
   <div *ngFor = "let course_id of semesterList['Fall 2019']">
     {{registeredCourses[course_id]["display_name"]}} is {{registeredCourses[course_id]["dept"]}} {{registeredCourses[course_id]["course_no"]}}
