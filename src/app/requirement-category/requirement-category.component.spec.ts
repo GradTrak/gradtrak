@@ -1,14 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RequirementCategoryComponent } from './requirement-category.component';
+import { RequirementComponent } from '../requirement/requirement.component';
 
 describe('RequirementCategoryComponent', () => {
   let component: RequirementCategoryComponent;
   let fixture: ComponentFixture<RequirementCategoryComponent>;
+  let compiled: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RequirementCategoryComponent ]
+      declarations: [ RequirementCategoryComponent, RequirementComponent ]
     })
     .compileComponents();
   }));
@@ -16,10 +18,33 @@ describe('RequirementCategoryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RequirementCategoryComponent);
     component = fixture.componentInstance;
+    compiled = fixture.debugElement.nativeElement;
+    component.requirementCategory = {
+      id: 'math',
+      name: 'Math',
+      requirements: [
+        {
+          id: 'math1a',
+          name: 'MATH 1A',
+        },
+        {
+          id: 'math1b',
+          name: 'MATH 1B',
+        },
+      ],
+    };
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display the category name', () => {
+    expect(compiled.querySelector('thead th').textContent).toContain('Math');
+  });
+
+  it('should have two class rows', () => {
+    expect(compiled.querySelectorAll('tbody tr[app-requirement]').length).toBe(2);
   });
 });
