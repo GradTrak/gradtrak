@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
-import {Semester} from '../semester'
-import {Course} from '../course'
+import {Semester} from '../semester';
+import {Course} from '../course';
+import {CourseService} from '../course.service';
 
 @Component({
   selector: 'app-semester-pane',
@@ -8,7 +9,8 @@ import {Course} from '../course'
   styleUrls: ['./semester-pane.component.css']
 })
 export class SemesterPaneComponent implements OnInit {
-  @Input() registeredCourses: Course[];
+  registeredCourses: Course[] = [];
+  test = "string";
   //TODO: if importing takes up extra space, it may be worth just using export
   // instead to find the relevant classes so that we don't store copies
 
@@ -34,16 +36,17 @@ export class SemesterPaneComponent implements OnInit {
       id: "sp20",
       name: "Spring 2020",
       courses: [
-        //registeredCourses[1]
-        //this doesn't work because it's not found for some reason? the html works though when interpolation
+        //this.registeredCourses[0]
+        //this doesn't work because it's a class variable and stuff.
       ],
     },
-  ]
+  ];
 
-  constructor() {
-  }
+  constructor(private _courseService : CourseService) {
+  };
 
   ngOnInit() {
-  }
+    this.registeredCourses = this._courseService.getCourses();
+  };
 
 }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SemesterPaneComponent } from './semester-pane/semester-pane.component';
 import { SemesterComponent } from './semester-pane/semester/semester.component';
 import { CourseRowComponent } from './semester-pane/semester/course-row/course-row.component';
+import {CourseService} from './course.service'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { CourseRowComponent } from './semester-pane/semester/course-row/course-r
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
