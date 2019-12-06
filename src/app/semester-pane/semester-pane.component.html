@@ -1,11 +1,11 @@
 <table id = "pane">
   <tbody>
-    <tr *ngFor="let semester of semesterList">
+    <tr *ngFor="let semester of this.semesterList">
       <app-semester [name] = "semester.name" [courses] = semester.courses></app-semester>
     </tr>
   </tbody>
 </table>
-test {{semesterList[1].courses}}
+test {{test}}
 
 
 
