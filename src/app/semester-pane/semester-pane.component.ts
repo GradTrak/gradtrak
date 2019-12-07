@@ -23,7 +23,6 @@ export class SemesterPaneComponent implements OnInit {
     this._semesterService.getSemesters() // Returns an Observable
       .subscribe((semesters) => {
         this.semesterList = semesters;
-        this.semesterList[0].courses.push(this.semesterList[0].courses[0])
       });
   };
 
