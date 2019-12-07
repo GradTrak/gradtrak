@@ -14,16 +14,17 @@ export class SemesterPaneComponent implements OnInit {
   //TODO: if importing takes up extra space, it may be worth just using export
   // instead to find the relevant classes so that we don't store copies
 
-  semesterList: Semester[] = [];
+  semesterList: Semester[];
 
   constructor(private _courseService : CourseService, private _semesterService:SemesterService) {
   };
 
   ngOnInit() {
-    this.semesterList = this._semesterService.getSemesters();
-    this.semesterList[0].courses.push(this.semesterList[0].courses[0])
-    this.semesterList = this._semesterService.getSemesters();
-    //this.test = this.semesterList[1].courses[0].id
+    this._semesterService.getSemesters() // Returns an Observable
+      .subscribe((semesters) => {
+        this.semesterList = semesters;
+        this.semesterList[0].courses.push(this.semesterList[0].courses[0])
+      });
   };
 
 }

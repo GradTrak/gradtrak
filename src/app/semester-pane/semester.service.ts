@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {CourseService} from '../course.service';
 import {Course} from '../course'
 import {Semester} from '../semester';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +31,7 @@ export class SemesterService {
       },
     ];
   }
-  getSemesters(): Semester[]{
-    return this.semesterList;
+  getSemesters(): Observable<Semester[]> {
+    return of(this.semesterList);
   }
 }
