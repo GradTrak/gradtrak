@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {SemesterService} from '../semester-pane/semester.service';
 import {CourseService} from '../course.service';
 import {Course} from '../course';
@@ -12,6 +12,9 @@ import {Semester} from '../semester';
 })
 export class CourseAdderComponent implements OnInit {
   addableCourses : Course[];
+  selectedCourse: Course;
+  @Input() semester: Semester;
+
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
@@ -22,8 +25,8 @@ export class CourseAdderComponent implements OnInit {
       }
     )
   };
-  addCourse(course:Course, semester:Semester) : void{
-    semester.courses.push(course);
+  addCourse(course:Course) : void{
+    this.semester.courses.push(course);
   };
 
 }

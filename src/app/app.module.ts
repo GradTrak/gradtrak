@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { SemesterService } from './semester-pane/semester.service'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +19,8 @@ import { CourseAdderComponent } from './course-adder/course-adder.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [CourseService, SemesterService],
   bootstrap: [AppComponent]
