@@ -10,11 +10,12 @@ import {SemesterService} from './semester.service'
   styleUrls: ['./semester-pane.component.css']
 })
 export class SemesterPaneComponent implements OnInit {
-  test = "string";
   //TODO: if importing takes up extra space, it may be worth just using export
   // instead to find the relevant classes so that we don't store copies
 
   semesterList: Semester[];
+
+  semesterAddingTo: Semester;
 
   constructor(private _courseService : CourseService, private _semesterService:SemesterService) {
   };
