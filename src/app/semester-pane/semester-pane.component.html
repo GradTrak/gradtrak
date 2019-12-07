@@ -1,7 +1,6 @@
 <div>
   <app-semester *ngFor="let semester of semesterList" [name]="semester.name" [courses]="semester.courses"></app-semester>
 </div>
-<app-course-adder *ngIf="semesterList" [semester]="semesterList[0]"></app-course-adder>
 
 <!--
   <div *ngFor = "let course_id of semesterList['Fall 2019']">
