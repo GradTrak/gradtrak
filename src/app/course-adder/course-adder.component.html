@@ -1,0 +1,8 @@
+<h4 id = "title">Add a class to {{semester_name}}</h4>
+<select id = "class-dropdown">
+  <option *ngFor="let course of addableCourses" value="course" (keyup.enter)="addCourse()//this doesn't register yet but might when we switch?">
+    {{course.dept}} {{course.no}}
+  </option> <!-- you may be able to use <input (keydown)="onKeyup($event)"> to search everytime they type in something new.
+    see https://alligator.io/angular/binding-keyup-keydown-events/-->
+</select>
+<button type="sumbit" id = "tempSubmitButton" (click)="true//removeModal()">add</button>
