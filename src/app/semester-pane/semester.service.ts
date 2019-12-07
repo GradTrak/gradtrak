@@ -8,10 +8,10 @@ import {Semester} from '../semester';
 })
 export class SemesterService {
   registeredCourses: Course[] = [];
-  constructor(private _courseService: CourseService) { }
-  getSemesters(): Semester[]{
+  semesterList: Semester[] = [];
+  constructor(private _courseService: CourseService) {
     this.registeredCourses = this._courseService.getCourses();
-    return [ {
+    this.semesterList = [ {
         id: "fa19",
         name: "Fall 2019",
         courses: [
@@ -26,18 +26,11 @@ export class SemesterService {
           this.registeredCourses[2],
           this.registeredCourses[2],
           this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          this.registeredCourses[2],
-          
         ],
       },
     ];
+  }
+  getSemesters(): Semester[]{
+    return this.semesterList;
   }
 }

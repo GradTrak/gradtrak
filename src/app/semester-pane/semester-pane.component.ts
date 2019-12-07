@@ -21,6 +21,8 @@ export class SemesterPaneComponent implements OnInit {
 
   ngOnInit() {
     this.semesterList = this._semesterService.getSemesters();
+    this.semesterList[0].courses.push(this.semesterList[0].courses[0])
+    this.semesterList = this._semesterService.getSemesters();
     //this.test = this.semesterList[1].courses[0].id
   };
 
