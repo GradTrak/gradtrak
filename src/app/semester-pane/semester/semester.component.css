@@ -1,0 +1,21 @@
+#semestertable{
+  border-collapse: separate;
+  background-color: #88D1F0;
+  /*TODO: decrease opacity per the figma*/
+  border-spacing: 10px 5px;
+}
+td,th{
+  border: 0px black solid;
+  background-color: #E2F9FE;}
+th{
+  height: 50px;
+  /*TODO: the head is not going less that ~40 px in height. setting height to below it doesn't do anything...*/
+}
+#title{
+  display: inline-block;
+  margin-left: 10px;
+}
+#add{
+  display: inline-block;
+  margin-right: 10px;
+/*TODO: move button to the right*/}

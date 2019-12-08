@@ -1,8 +1,8 @@
-import { Requirement } from './requirement'
+import { RequirementCategory } from './requirement-category';
 
 export class RequirementSet {
   id: string;
   name: string;
   parent: RequirementSet;
-  requirements: Requirement[];
+  requirementCategories: RequirementCategory[];
 }
