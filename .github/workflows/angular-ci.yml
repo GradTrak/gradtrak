@@ -3,7 +3,7 @@ name: Angular CI
 on: [push, pull_request]
 
 jobs:
-  build-test-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
