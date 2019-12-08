@@ -1,0 +1,10 @@
+<table>
+  <thead>
+    <tr>
+      <th>{{requirementCategory.name}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr app-requirement *ngFor="let requirement of requirementCategory.requirements" [requirement]="requirement"></tr>
+  </tbody>
+</table>

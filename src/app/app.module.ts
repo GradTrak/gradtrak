@@ -9,14 +9,22 @@ import { AppComponent } from './app.component';
 import { SemesterPaneComponent } from './semester-pane/semester-pane.component';
 import { SemesterComponent } from './semester-pane/semester/semester.component';
 import { CourseService } from './course.service';
-import { CourseAdderComponent } from './course-adder/course-adder.component'
+import { CourseAdderComponent } from './course-adder/course-adder.component';
+import { RequirementComponent } from './requirement/requirement.component';
+import { RequirementSetComponent } from './requirement-set/requirement-set.component';
+import { RequirementsPaneComponent } from './requirements-pane/requirements-pane.component';
+import { RequirementCategoryComponent } from './requirement-category/requirement-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemesterPaneComponent,
     SemesterComponent,
-    CourseAdderComponent
+    CourseAdderComponent,
+    RequirementComponent,
+    RequirementSetComponent,
+    RequirementsPaneComponent,
+    RequirementCategoryComponent
   ],
   imports: [
     AppRoutingModule,
@@ -26,5 +34,5 @@ import { CourseAdderComponent } from './course-adder/course-adder.component'
   ],
   providers: [CourseService, SemesterService],
   bootstrap: [AppComponent]
-})
+
 export class AppModule { }
