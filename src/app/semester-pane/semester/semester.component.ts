@@ -8,7 +8,8 @@ import {Course} from '../../course'
 })
 export class SemesterComponent implements OnInit {
   @Input() name: string;
-  @Input() courses: Course[];
+  @Input() semester: Semester;
+
   constructor() { }
 
   ngOnInit() {

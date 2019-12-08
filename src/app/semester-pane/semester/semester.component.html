@@ -5,7 +5,7 @@
     <!--TODO: stylize that uglyass button yo-->
   </thead>
   <tbody>
-    <tr *ngFor="let course of courses">
+    <tr *ngFor="let course of semester.courses">
       <td id = "classid">{{course.id}}</td>
       <td id = "unitcount">{{course.units}}</td>
       <!--BRUH WHAT THE HELL IS THIS M8-->
@@ -13,4 +13,4 @@
     </tr>
   </tbody>
 </table>
-<app-course-adder [semester]="this"></app-course-adder>
+<app-course-adder [semester]="semester"></app-course-adder>
