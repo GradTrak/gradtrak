@@ -10,7 +10,7 @@
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:import/typescript",
-        "plugin:prettier/recommended"
+        "prettier"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -22,8 +22,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint",
-        "html"
+        "@typescript-eslint"
     ],
     "rules": {
         "import/prefer-default-export": "off",
