@@ -9,15 +9,13 @@ import { RequirementsPaneComponent } from './requirements-pane/requirements-pane
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+      imports: [RouterTestingModule],
       declarations: [
         AppComponent,
         RequirementCategoryComponent,
         RequirementComponent,
         RequirementSetComponent,
-        RequirementsPaneComponent
+        RequirementsPaneComponent,
       ],
     }).compileComponents();
   }));

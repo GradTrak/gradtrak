@@ -10,9 +10,8 @@ describe('RequirementCategoryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RequirementCategoryComponent, RequirementComponent ]
-    })
-    .compileComponents();
+      declarations: [RequirementCategoryComponent, RequirementComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

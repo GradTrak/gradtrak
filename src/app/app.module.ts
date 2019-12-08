@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SemesterService } from './semester-pane/semester.service'
+import { SemesterService } from './semester-pane/semester.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,15 +24,10 @@ import { RequirementCategoryComponent } from './requirement-category/requirement
     RequirementComponent,
     RequirementSetComponent,
     RequirementsPaneComponent,
-    RequirementCategoryComponent
+    RequirementCategoryComponent,
   ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    FormsModule,
-    NgbModule
-  ],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, NgbModule],
   providers: [CourseService, SemesterService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

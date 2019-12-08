@@ -4,14 +4,12 @@ import { RequirementCategory } from '../requirement-category';
 @Component({
   selector: 'app-requirement-category',
   templateUrl: './requirement-category.component.html',
-  styleUrls: ['./requirement-category.component.css']
+  styleUrls: ['./requirement-category.component.css'],
 })
 export class RequirementCategoryComponent implements OnInit {
   @Input() requirementCategory: RequirementCategory;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
