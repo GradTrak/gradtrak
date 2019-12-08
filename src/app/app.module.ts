@@ -34,5 +34,5 @@ import { RequirementCategoryComponent } from './requirement-category/requirement
   ],
   providers: [CourseService, SemesterService],
   bootstrap: [AppComponent]
-
+})
 export class AppModule { }
