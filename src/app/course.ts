@@ -3,4 +3,5 @@ export class Course {
   dept: string;
   no: string;
   title: string;
+  units: number;
 }
