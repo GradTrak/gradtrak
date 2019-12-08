@@ -12,7 +12,7 @@ export class RequirementsPaneComponent implements OnInit {
 
   constructor(private requirementService: RequirementService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
     });

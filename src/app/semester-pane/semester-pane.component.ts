@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Semester } from '../semester';
-import { Course } from '../course';
-import { CourseService } from '../course.service';
 import { SemesterService } from './semester.service';
 
 @Component({
@@ -13,17 +11,17 @@ export class SemesterPaneComponent implements OnInit {
   // TODO: if importing takes up extra space, it may be worth just using export
   // instead to find the relevant classes so that we don't store copies
 
-  semesterList: Semester[];
+  semesters: Semester[];
 
   semesterAddingTo: Semester;
 
-  constructor(private _courseService: CourseService, private _semesterService: SemesterService) {}
+  constructor(private semesterService: SemesterService) {}
 
-  ngOnInit() {
-    this._semesterService
+  ngOnInit(): void {
+    this.semesterService
       .getSemesters() // Returns an Observable
       .subscribe((semesters) => {
-        this.semesterList = semesters;
+        this.semesters = semesters;
       });
   }
 }

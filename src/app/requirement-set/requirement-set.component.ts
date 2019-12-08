@@ -11,5 +11,5 @@ export class RequirementSetComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 }

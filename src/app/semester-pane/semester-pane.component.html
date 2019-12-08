@@ -1,9 +1,3 @@
 <div>
-  <app-semester *ngFor="let semester of semesterList" [name]="semester.name" [semester]="semester"></app-semester>
+  <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
 </div>
-
-<!--
-  <div *ngFor = "let course_id of semesterList['Fall 2019']">
-    {{registeredCourses[course_id]["display_name"]}} is {{registeredCourses[course_id]["dept"]}} {{registeredCourses[course_id]["course_no"]}}
-    </div>
--->

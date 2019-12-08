@@ -11,5 +11,5 @@ export class RequirementCategoryComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 }
