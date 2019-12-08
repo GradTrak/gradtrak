@@ -1,5 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
-import {Course} from '../../course'
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Course} from '../../course';
+import { Semester } from '../../semester';
 
 @Component({
   selector: 'app-semester',
@@ -10,7 +12,7 @@ export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
 
-  constructor() { }
+  constructor(public modalService: NgbModal) { }
 
   ngOnInit() {
   }

@@ -1,7 +1,7 @@
 <table id = "semestertable">
   <thead>
     <th colspan="2"><h3 id="title">{{name}}</h3></th>
-    <th><button type="button" id="add">+</button></th>
+    <th><button type="button" id="add" (click)="modalService.open(courseAdder)">+</button></th>
     <!--TODO: stylize that uglyass button yo-->
   </thead>
   <tbody>
@@ -13,4 +13,9 @@
     </tr>
   </tbody>
 </table>
-<app-course-adder [semester]="semester"></app-course-adder>
+
+<ng-template #courseAdder>
+  <div class="modal-body">
+    <app-course-adder [semester]="semester"></app-course-adder>
+  </div>
+</ng-template>
