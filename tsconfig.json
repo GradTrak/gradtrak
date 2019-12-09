@@ -19,7 +19,8 @@
       "dom"
     ],
     "paths": {
-      "models/*": [ "app/models/*" ]
+      "models/*": [ "app/models/*" ],
+      "services/*": [ "app/services/*" ]
     }
   },
   "angularCompilerOptions": {

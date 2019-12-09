@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Semester } from 'models/semester.model';
-import { SemesterService } from './semester.service';
+import { SemesterService } from 'services/semester.service';
 
 @Component({
   selector: 'app-semester-pane',

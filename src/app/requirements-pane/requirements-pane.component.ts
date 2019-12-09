@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequirementSet } from 'models/requirement-set.model';
-import { RequirementService } from '../requirement.service';
+import { RequirementService } from 'services/requirement.service';
 
 @Component({
   selector: 'app-requirements-pane',
