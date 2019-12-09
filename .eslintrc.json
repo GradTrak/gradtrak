@@ -35,5 +35,12 @@
             }
         ],
         "no-useless-constructor": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            }
+        }
     }
 }

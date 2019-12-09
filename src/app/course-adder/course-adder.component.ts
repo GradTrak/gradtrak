@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CourseService } from '../course.service';
 import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-course-adder',
