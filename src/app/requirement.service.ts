@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { RequirementSet } from './requirement-set';
+import { RequirementSet } from 'models/requirement-set.model';
 
 @Injectable({
   providedIn: 'root',

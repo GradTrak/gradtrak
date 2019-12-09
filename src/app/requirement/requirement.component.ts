@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Requirement } from '../requirement';
+import { Requirement } from 'models/requirement.model';
 
 @Component({
   selector: '[app-requirement]',

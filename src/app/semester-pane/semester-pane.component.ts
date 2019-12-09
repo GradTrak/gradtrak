@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Semester } from '../semester';
+import { Semester } from 'models/semester.model';
 import { SemesterService } from './semester.service';
 
 @Component({

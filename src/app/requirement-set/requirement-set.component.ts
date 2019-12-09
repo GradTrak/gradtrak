@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RequirementSet } from '../requirement-set';
+import { RequirementSet } from 'models/requirement-set.model';
 
 @Component({
   selector: 'app-requirement-set',

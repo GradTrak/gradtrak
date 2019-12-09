@@ -1,4 +1,4 @@
-import { Requirement } from './requirement';
+import { Requirement } from 'models/requirement.model';
 
 export class RequirementCategory {
   id: string;

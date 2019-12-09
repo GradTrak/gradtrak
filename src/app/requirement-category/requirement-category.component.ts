@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RequirementCategory } from '../requirement-category';
+import { RequirementCategory } from 'models/requirement-category.model';
 
 @Component({
   selector: 'app-requirement-category',
