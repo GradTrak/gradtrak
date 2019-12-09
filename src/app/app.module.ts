@@ -5,16 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SemesterPaneComponent } from './semester-pane/semester-pane.component';
-import { SemesterComponent } from './semester-pane/semester/semester.component';
+import { SemesterPaneComponent } from './components/semester-pane/semester-pane.component';
+import { SemesterComponent } from './components/semester/semester.component';
 import { CourseService } from './services/course.service';
 import { RequirementService } from './services/requirement.service';
 import { SemesterService } from './services/semester.service';
-import { CourseAdderComponent } from './course-adder/course-adder.component';
-import { RequirementComponent } from './requirement/requirement.component';
-import { RequirementSetComponent } from './requirement-set/requirement-set.component';
-import { RequirementsPaneComponent } from './requirements-pane/requirements-pane.component';
-import { RequirementCategoryComponent } from './requirement-category/requirement-category.component';
+import { CourseAdderComponent } from './components/course-adder/course-adder.component';
+import { RequirementComponent } from './components/requirement/requirement.component';
+import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
+import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
+import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 
 @NgModule({
   declarations: [
