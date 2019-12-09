@@ -4,13 +4,11 @@
       <h3 id="title">{{ name }}</h3>
     </th>
     <th><button type="button" id="add" (click)="modalService.open(courseAdder)">+</button></th>
-    <!--TODO: stylize that uglyass button yo-->
   </thead>
   <tbody>
     <tr *ngFor="let course of semester.courses">
-      <td id="classid">{{ course.id }}</td>
+      <td id="classid">{{ course.dept + ' ' + course.no }}</td>
       <td id="unitcount">{{ course.units }}</td>
-      <!--BRUH WHAT THE HELL IS THIS M8-->
       <td><button type="button" name="button">-</button></td>
     </tr>
   </tbody>
