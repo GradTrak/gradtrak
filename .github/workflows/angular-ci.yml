@@ -11,3 +11,13 @@ jobs:
       run: npm ci
     - name: Build Angular App
       run: npm run build --prod
+  lint-and-pretty:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: npm install
+    - name: ESLint
+      run: npm run lint
+    - name: Prettier
+      run: npm run pretty

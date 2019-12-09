@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { RequirementSet } from './requirement-set';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RequirementService {
   DUMMY_REQUIREMENT_DATA: RequirementSet[] = [
@@ -65,7 +65,7 @@ export class RequirementService {
     },
   ];
 
-  constructor() { }
+  constructor() {}
 
   getRequirements(): Observable<RequirementSet[]> {
     return of(this.DUMMY_REQUIREMENT_DATA);

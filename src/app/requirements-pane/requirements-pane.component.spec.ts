@@ -16,10 +16,9 @@ describe('RequirementsPaneComponent', () => {
         RequirementCategoryComponent,
         RequirementComponent,
         RequirementSetComponent,
-        RequirementsPaneComponent
-      ]
-    })
-    .compileComponents();
+        RequirementsPaneComponent,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

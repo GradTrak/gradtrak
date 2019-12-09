@@ -9,9 +9,8 @@ describe('RequirementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RequirementComponent ]
-    })
-    .compileComponents();
+      declarations: [RequirementComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,8 +29,11 @@ describe('RequirementComponent', () => {
   });
 
   it('should display the Requirement name', () => {
-    expect(Array.prototype.slice.call(compiled.querySelectorAll('td'))
-      .map((elem) => elem.textContent)
-      .some((text) => text.includes('MATH 1A'))).toBe(true);
+    expect(
+      Array.prototype.slice
+        .call(compiled.querySelectorAll('td'))
+        .map((elem) => elem.textContent)
+        .some((text) => text.includes('MATH 1A'))
+    ).toBe(true);
   });
 });

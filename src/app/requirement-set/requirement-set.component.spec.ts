@@ -11,13 +11,8 @@ describe('RequirementSetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        RequirementCategoryComponent,
-        RequirementComponent,
-        RequirementSetComponent
-      ]
-    })
-    .compileComponents();
+      declarations: [RequirementCategoryComponent, RequirementComponent, RequirementSetComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
