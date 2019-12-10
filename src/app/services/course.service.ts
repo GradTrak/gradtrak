@@ -9,28 +9,50 @@ export class CourseService {
   DUMMY_COURSE_DATA: Course[] = [
     {
       id: 'cs61a',
-      dept: 'Computer Science',
+      dept: 'CS',
       no: '61A',
-      title: 'structure and interperetation of computer programs',
-      units: 0,
+      title: 'Structure and Interperetation of Computer Programs',
+      units: 4,
     },
     {
       id: 'cs61b',
-      dept: 'Computer Science',
+      dept: 'CS',
       no: '61B',
       title: 'Data Structures',
-      units: 0,
+      units: 4,
     },
     {
-      id: 'sample class c',
-      dept: 'Computer Science',
+      id: 'cs61c',
+      dept: 'CS',
       no: '61C',
-      title: 'ANOTHER SAMPLE CLASS, THIS TIME IN ALL CAPS',
-      units: 0,
+      title: 'Great Ideas of Computer Architecture',
+      units: 4,
+    },
+    {
+      id: 'cs70',
+      dept: 'CS',
+      no: '70',
+      title: 'Discrete Mathematics and Probability Theory',
+      units: 4,
+    },
+    {
+      id: 'eecs16a',
+      dept: 'EECS',
+      no: '16A',
+      title: 'Designing Information Devices and Systems I',
+      units: 4,
+    },
+    {
+      id: 'eecs16b',
+      dept: 'EECS',
+      no: '16B',
+      title: 'Designing Information Devices and Systems II',
+      units: 4,
     },
   ];
 
   constructor() {}
+
   getCourses(): Observable<Course[]> {
     return of(this.DUMMY_COURSE_DATA);
   }
