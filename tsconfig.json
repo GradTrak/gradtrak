@@ -19,6 +19,7 @@
       "dom"
     ],
     "paths": {
+      "components/*": [ "app/components/*" ],
       "models/*": [ "app/models/*" ],
       "services/*": [ "app/services/*" ]
     }
