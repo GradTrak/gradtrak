@@ -1,5 +1,12 @@
 app-semester-pane,
 app-requirements-pane {
   float: left;
-  width: 50%;
+}
+
+app-semester-pane {
+  width: 60%;
+}
+
+app-requirements-pane {
+  width: 40%;
 }

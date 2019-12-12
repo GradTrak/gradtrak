@@ -1,8 +1,13 @@
-div {
+.semester-pane-container {
+  padding: 1em;
+}
+
+.semester-pane-container > div {
   display: flex;
   flex-wrap: wrap;
 }
 
-div > app-semester {
+.semester-pane-container > div > app-semester {
   width: 50%;
+  margin-bottom: 1em;
 }

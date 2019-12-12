@@ -1,3 +1,18 @@
 button {
   width: 100%;
 }
+
+.semester-container {
+  display: inline-block;
+  background-color: #88d1f0;
+}
+
+table {
+  margin: 0.5em;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+table tr {
+  background-color: #e2f9fe;
+}

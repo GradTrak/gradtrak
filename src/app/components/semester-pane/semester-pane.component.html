@@ -1,4 +1,6 @@
-<h1>Semesters</h1>
-<div>
-  <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
+<div class="semester-pane-container">
+  <h1>Semesters</h1>
+  <div>
+    <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
+  </div>
 </div>
