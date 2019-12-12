@@ -1,0 +1,8 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div > app-semester {
+  width: 50%;
+}
