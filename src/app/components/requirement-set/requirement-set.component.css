@@ -1,3 +1,4 @@
-app-requirement-category {
-  display: inline-block;
+div {
+  display: flex;
+  flex-wrap: wrap;
 }
