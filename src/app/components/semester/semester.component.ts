@@ -16,7 +16,9 @@ export class SemesterComponent implements OnInit {
   ngOnInit(): void {}
 
   removeCourse(course: Course): void {
-    let courseIndex = this.semester.courses.indexOf(course);
-    this.semester.courses.splice(courseIndex, 1);
+    const courseIndex = this.semester.courses.indexOf(course);
+    if (courseIndex > -1) {
+      this.semester.courses.splice(courseIndex, 1);
+    }
   }
 }

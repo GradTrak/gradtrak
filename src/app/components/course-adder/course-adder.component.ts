@@ -22,6 +22,8 @@ export class CourseAdderComponent implements OnInit {
   }
 
   addCourse(course: Course): void {
-    this.semester.courses.push(course);
+    if (!this.semester.courses.includes(course)) {
+      this.semester.courses.push(course);
+    }
   }
 }
