@@ -4,15 +4,19 @@ button {
 
 .semester-container {
   display: inline-block;
-  background-color: #88d1f0;
+  background-color: #b3e2f7;
 }
 
 table {
   margin: 0.5em;
   border-collapse: separate;
-  border-spacing: 0 8px;
+  border-spacing: 8px 8px;
 }
 
-table tr {
+table td {
   background-color: #e2f9fe;
+}
+
+table td.button-cell {
+  background-color: unset;
 }
