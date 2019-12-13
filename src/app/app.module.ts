@@ -11,9 +11,9 @@ import { CourseService } from './services/course.service';
 import { RequirementService } from './services/requirement.service';
 import { SemesterService } from './services/semester.service';
 import { CourseAdderComponent } from './components/course-adder/course-adder.component';
-import { RequirementComponent } from './components/requirement/requirement.component';
 import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
+import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 
 @NgModule({

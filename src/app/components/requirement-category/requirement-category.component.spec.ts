@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { RequirementComponent } from 'components/requirement-category/requirement/requirement.component';
 import { RequirementCategoryComponent } from './requirement-category.component';
-import { RequirementComponent } from '../requirement/requirement.component';
 
 describe('RequirementCategoryComponent', () => {
   let component: RequirementCategoryComponent;

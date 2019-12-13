@@ -1,10 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { RequirementCategoryComponent } from 'components/requirement-category/requirement-category.component';
+import { RequirementComponent } from 'components/requirement-category/requirement/requirement.component';
+import { RequirementSetComponent } from 'components/requirement-set/requirement-set.component';
+import { RequirementsPaneComponent } from 'components/requirements-pane/requirements-pane.component';
 import { AppComponent } from './app.component';
-import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
-import { RequirementComponent } from './components/requirement/requirement.component';
-import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
-import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
