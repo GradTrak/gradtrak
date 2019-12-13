@@ -14,4 +14,9 @@ export class SemesterComponent implements OnInit {
   constructor(public modalService: NgbModal) {}
 
   ngOnInit(): void {}
+
+  removeCourse(course: Course): void {
+    let courseIndex = this.semester.courses.indexOf(course);
+    this.semester.courses.splice(courseIndex, 1);
+  }
 }
