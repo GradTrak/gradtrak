@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
 
 @Component({
