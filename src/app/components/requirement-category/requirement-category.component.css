@@ -8,6 +8,7 @@ td {
   border: 1px solid black;
 }
 
+th,
 td {
-  margin: 1em;
+  padding: 0.25em 1em;
 }
