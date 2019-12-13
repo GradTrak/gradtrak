@@ -1,9 +1,6 @@
 <div class="pane">
-  <h1>Requirements</h1>
-  <div>
-    <app-requirement-set
-      *ngFor="let requirementSet of requirementSets"
-      [requirementSet]="requirementSet"
-    ></app-requirement-set>
-  </div>
+  <app-requirement-set
+    *ngFor="let requirementSet of requirementSets"
+    [requirementSet]="requirementSet"
+  ></app-requirement-set>
 </div>
