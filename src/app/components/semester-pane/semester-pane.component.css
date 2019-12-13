@@ -1,13 +1,14 @@
-.semester-pane-container {
+.pane {
+  height: 100vh;
   padding: 1em;
 }
 
-.semester-pane-container > div {
+.pane > div {
   display: flex;
   flex-wrap: wrap;
 }
 
-.semester-pane-container > div > app-semester {
+.pane > div > app-semester {
   width: 50%;
   margin-bottom: 1em;
 }
