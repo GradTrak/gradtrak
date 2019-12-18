@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "postinstall": "(cd client && npm install) && (cd server && npm install)",
     "build": "(cd client && npm run build) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
     "start": "cd server && npm run start"
   }
