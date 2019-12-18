@@ -8,12 +8,92 @@ import { RequirementSet } from 'models/requirement-set.model';
 export class RequirementService {
   DUMMY_REQUIREMENT_DATA: RequirementSet[] = [
     {
+      id: 'uc',
+      name: 'University of California',
+      parent: null,
+      requirementCategories: [
+        {
+          id: 'uc',
+          name: 'UC Requirements',
+          requirements: [
+            {
+              id: 'elwr',
+              name: 'Entry-Level Writing',
+            },
+            {
+              id: 'ah',
+              name: 'American History',
+            },
+            {
+              id: 'ai',
+              name: 'American Instutions',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'ucb',
+      name: 'UC Berkeley',
+      parent: null,
+      requirementCategories: [
+        {
+          id: 'ac',
+          name: 'American Cultures',
+          requirements: [
+            {
+              id: 'ac',
+              name: 'American Cultures',
+            },
+          ],
+        },
+      ],
+    },
+    {
       id: 'coe',
       name: 'College of Engineering',
       parent: null,
       requirementCategories: [
         {
-          id: 'math',
+          id: 'coe-hss',
+          name: 'Humanities and Social Sciences',
+          requirements: [
+            {
+              id: 'coe-r1a',
+              name: 'R&C Part A',
+            },
+            {
+              id: 'coe-r1b',
+              name: 'R&C Part B',
+            },
+            // TODO Add multi-course-style requirements
+            {
+              id: 'coe-hss1',
+              name: 'H/SS',
+            },
+            {
+              id: 'coe-hss2',
+              name: 'H/SS',
+            },
+            {
+              id: 'coe-hss-u1',
+              name: 'H/SS Upper Division',
+            },
+            {
+              id: 'coe-hss-u2',
+              name: 'H/SS Upper Division',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'eecs',
+      name: 'EECS Major',
+      parent: null,
+      requirementCategories: [
+        {
+          id: 'eecs-math',
           name: 'Math',
           requirements: [
             {
@@ -24,10 +104,14 @@ export class RequirementService {
               id: 'math1b',
               name: 'MATH 1B',
             },
+            {
+              id: 'compsci70',
+              name: 'COMPSCI 70',
+            },
           ],
         },
         {
-          id: 'physics',
+          id: 'eecs-physics',
           name: 'Physics',
           requirements: [
             {
@@ -40,24 +124,66 @@ export class RequirementService {
             },
           ],
         },
-      ],
-    },
-    {
-      id: 'eecs',
-      name: 'EECS Major',
-      parent: null,
-      requirementCategories: [
         {
           id: 'eecs-lower-div',
-          name: 'Lower Division Requirements',
+          name: 'Lower Division',
           requirements: [
             {
-              id: 'cs61a',
-              name: 'CS 61A',
+              id: 'compsci61a',
+              name: 'COMPSCI 61A',
             },
             {
-              id: 'cs61b',
-              name: 'CS 61B',
+              id: 'compsci61b',
+              name: 'COMPSCI 61B',
+            },
+            {
+              id: 'compsci61c',
+              name: 'COMPSCI 61A',
+            },
+            {
+              id: 'eecs16a',
+              name: 'EECS 16A',
+            },
+            {
+              id: 'eecs16b',
+              name: 'EECS 16B',
+            },
+          ],
+        },
+        {
+          id: 'eecs-upper-div',
+          name: 'Upper Division',
+          requirements: [
+            // TODO Add unit-style requirements
+            {
+              id: 'eecs-upper-1',
+              name: 'Upper Division',
+            },
+            {
+              id: 'eecs-upper-2',
+              name: 'Upper Division',
+            },
+            {
+              id: 'eecs-upper-3',
+              name: 'Upper Division',
+            },
+            {
+              id: 'eecs-upper-4',
+              name: 'Upper Division',
+            },
+            {
+              id: 'eecs-upper-5',
+              name: 'Upper Division',
+            },
+          ],
+        },
+        {
+          id: 'eecs-ethics',
+          name: 'Ethics',
+          requirements: [
+            {
+              id: 'compsci195',
+              name: 'COMPSCI 195',
             },
           ],
         },
