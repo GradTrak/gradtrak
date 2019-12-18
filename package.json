@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "postinstall": "cd client && npm install && cd ../server && npm install",
-    "build": "(cd client && npm run build) && rm -rf server/client && cp -R client/dist/gradtrak server/client",
+    "build": "(cd client && npm run build) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
     "start": "cd server && npm run start"
   }
 }
