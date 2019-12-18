@@ -1,6 +1,5 @@
-app-semester-pane,
-app-requirements-pane {
-  float: left;
+div {
+  display: flex;
 }
 
 app-semester-pane {
