@@ -3,18 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "start": "node ./bin/www",
-    "lint": "cd client && npm run lint",
-    "lint-fix": "cd client && npm run lint-fix",
-    "pretty": "cd client && npm run pretty",
-    "pretty-fix": "cd client && npm run pretty-fix"
-  },
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "postinstall": "cd client && npm install && cd ../server && npm install",
+    "build": "(cd client && npm run build) && rm -rf server/client && cp -R client/dist/gradtrak server/client",
+    "start": "cd server && npm run start"
   }
 }
