@@ -5,7 +5,11 @@
   "scripts": {
     "postinstall": "cd client && npm install",
     "build": "cd client && npm run build",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "lint": "cd client && npm run lint",
+    "lint-fix": "cd client && npm run lint-fix",
+    "pretty": "cd client && npm run pretty",
+    "pretty-fix": "cd client && npm run pretty-fix"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
