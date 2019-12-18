@@ -8,16 +8,16 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install Dependencies
-      run: npm ci
+      run: cd client && npm ci
     - name: Build Angular App
-      run: npm run build --prod
+      run: cd client && npm run build
   lint-and-pretty:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Install Dependencies
-      run: npm install
+      run: cd client && npm install
     - name: ESLint
-      run: npm run lint
+      run: cd client && npm run lint
     - name: Prettier
-      run: npm run pretty
+      run: cd client && npm run pretty
