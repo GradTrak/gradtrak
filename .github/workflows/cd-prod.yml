@@ -1,0 +1,28 @@
+name: Heroku CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: npm install
+    - name: Build
+      run: npm run build
+    - name: Deploy to Heroku
+      run: |
+        cd server &&
+        git init &&
+        git add -A &&
+        git commit -m 'Deploy' &&
+        git push -f https://git:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/gradtrak.git master
+      env:
+        GIT_AUTHOR_NAME: GitHub Action
+        GIT_AUTHOR_EMAIL: gradtrak@example.com
+        GIT_COMMITTER_NAME: GitHub Action
+        GIT_COMMITTER_EMAIL: gradtrak@example.com
