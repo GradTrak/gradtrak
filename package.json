@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "(cd client && npm install) && (cd server && npm install)",
     "build": "(cd client && npm run build) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
+    "build-dev": "(cd client && npm run build-dev) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
     "start": "cd server && npm run start"
   }
 }
