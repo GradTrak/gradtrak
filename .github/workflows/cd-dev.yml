@@ -16,7 +16,7 @@ jobs:
     - name: Install Dependencies
       run: npm ci
     - name: Build
-      run: npm run build
+      run: npm run build-dev
     - name: Deploy to Heroku
       run: |
         cd server &&

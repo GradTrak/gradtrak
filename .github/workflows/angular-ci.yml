@@ -13,7 +13,7 @@ jobs:
     - name: Install Dependencies
       run: cd client && npm ci
     - name: Build Angular App
-      run: cd client && npm run build
+      run: cd client && npm run build-dev
   lint-and-pretty:
     runs-on: ubuntu-latest
     steps:
