@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { RequirementSet } from 'models/requirement-set.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RequirementService {
-  DUMMY_REQUIREMENT_DATA: RequirementSet[] = [
-    {
+  DUMMY_REQUIREMENT_DATA: object = {
+    uc: {
       id: 'uc',
       name: 'University of California',
-      parent: null,
+      parentId: null,
       requirementCategories: [
         {
           id: 'uc',
@@ -32,10 +33,10 @@ export class RequirementService {
         },
       ],
     },
-    {
+    ucb: {
       id: 'ucb',
       name: 'UC Berkeley',
-      parent: null,
+      parentId: 'uc',
       requirementCategories: [
         {
           id: 'ac',
@@ -49,10 +50,10 @@ export class RequirementService {
         },
       ],
     },
-    {
+    coe: {
       id: 'coe',
       name: 'College of Engineering',
-      parent: null,
+      parentId: 'ucb',
       requirementCategories: [
         {
           id: 'coe-hss',
@@ -87,10 +88,10 @@ export class RequirementService {
         },
       ],
     },
-    {
+    eecs: {
       id: 'eecs',
       name: 'EECS Major',
-      parent: null,
+      parentId: 'coe',
       requirementCategories: [
         {
           id: 'eecs-math',
@@ -189,11 +190,20 @@ export class RequirementService {
         },
       ],
     },
-  ];
+  };
 
   constructor() {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    return of(this.DUMMY_REQUIREMENT_DATA);
+    return of(this.DUMMY_REQUIREMENT_DATA).pipe(map(this.linkParents));
+  }
+
+  linkParents(data: object): RequirementSet[] {
+    return Object.values(data).map((value) => {
+      const requirementSet = { ...value };
+      requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
+      delete requirementSet.parentId;
+      return requirementSet;
+    });
   }
 }
