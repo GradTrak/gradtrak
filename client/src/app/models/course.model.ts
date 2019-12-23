@@ -4,4 +4,5 @@ export class Course {
   no: string;
   title: string;
   units: number;
+  tags: string[];
 }

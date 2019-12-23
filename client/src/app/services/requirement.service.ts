@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { flatMap, map } from 'rxjs/operators';
 import { RequirementSet } from 'models/requirement-set.model';
+import { CourseRequirement } from 'models/requirements/course-requirement.model';
+import { TagRequirement } from 'models/requirements/tag-requirement.model';
+import { CourseService } from 'services/course.service';
 
 @Injectable({
   providedIn: 'root',
@@ -318,18 +321,50 @@ export class RequirementService {
     },
   };
 
-  constructor() {}
+  constructor(private courseService: CourseService) {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    return of(this.DUMMY_REQUIREMENT_DATA).pipe(map(this.linkParents));
+    return of(this.DUMMY_REQUIREMENT_DATA).pipe(flatMap((data) => this.linkParents(data)));
   }
 
-  linkParents(data: object): RequirementSet[] {
-    return Object.values(data).map((value) => {
-      const requirementSet = { ...value };
-      requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
-      delete requirementSet.parentId;
-      return requirementSet;
-    });
+  linkParents(data: object): Observable<RequirementSet[]> {
+    return this.courseService.getCourses().pipe(
+      map((courses) => {
+        const coursesObj = courses.reduce((obj, course) => {
+          const next = { ...obj };
+          next[course.id] = course;
+          return course;
+        }, {});
+
+        return Object.values(data).map((rawSet) => {
+          const requirementSet = { ...rawSet };
+
+          requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
+          delete requirementSet.parentId;
+
+          requirementSet.requirementCategories = requirementSet.requirementCategories.map((rawCategory) => {
+            const requirementCategory = { ...rawCategory };
+
+            requirementCategory.requirements = requirementCategory.requirements.map((rawReq) => {
+              const requirement = { ...rawReq };
+
+              if (requirement.courseId) {
+                requirement.course = coursesObj[requirement.courseId];
+                delete requirement.courseId;
+                return new CourseRequirement(requirement);
+              }
+              if (requirement.tag) {
+                return new TagRequirement(requirement);
+              }
+              return requirement;
+            });
+
+            return requirementCategory;
+          });
+
+          return requirementSet;
+        });
+      })
+    );
   }
 }
