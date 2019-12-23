@@ -88,6 +88,69 @@ export class RequirementService {
         },
       ],
     },
+    ls: {
+      id: 'ls',
+      name: 'College of Letters and Sciences',
+      parentId: 'ucb',
+      requirementCategories: [
+        {
+          id: 'ls-essential',
+          name: 'Essential Skills',
+          requirements: [
+            {
+              id: 'ls-r1a',
+              name: 'R&C Part A',
+            },
+            {
+              id: 'ls-r1b',
+              name: 'R&C Part B',
+            },
+            {
+              id: 'ls-quant',
+              name: 'Quantitative Reasoning',
+            },
+            {
+              id: 'ls-lang',
+              name: 'Foreign Language',
+            },
+          ],
+        },
+        {
+          id: 'ls-breadth',
+          name: 'Breadth Requirements',
+          requirements: [
+            {
+              id: 'ls-arts',
+              name: 'Arts and Literature',
+            },
+            {
+              id: 'ls-bio',
+              name: 'Biological Science',
+            },
+            {
+              id: 'ls-hist',
+              name: 'Historical Studies',
+            },
+            {
+              id: 'ls-inter',
+              name: 'International Studies',
+            },
+            {
+              id: 'ls-philo',
+              name: 'Philosophy and Values',
+            },
+            {
+              id: 'ls-phys',
+              name: 'Physical Science',
+            },
+            {
+              id: 'ls-socio',
+              name: 'Social and Behavioral Science',
+            },
+          ],
+        },
+      ],
+    },
     eecs: {
       id: 'eecs',
       name: 'EECS Major',
@@ -185,6 +248,69 @@ export class RequirementService {
             {
               id: 'compsci195',
               name: 'COMPSCI 195',
+            },
+          ],
+        },
+      ],
+    },
+    ling: {
+      id: 'linguis',
+      name: 'Linguistics Major',
+      parentId: 'ls',
+      requirementCategories: [
+        {
+          id: 'linguis100',
+          name: 'LINUIGS 100',
+          requirements: [
+            {
+              id: 'linguis100',
+              name: 'LINGUIS 100',
+            },
+          ],
+        },
+        {
+          id: 'linguis-core',
+          name: 'Core',
+          requirements: [
+            // TODO Add N of set of requirements
+            {
+              id: 'linguis110',
+              name: 'LINGUIS 110',
+            },
+            {
+              id: 'linguis111',
+              name: 'LINGUIS 111',
+            },
+            {
+              id: 'linguis115',
+              name: 'LINGUIS 115',
+            },
+            {
+              id: 'linguis120',
+              name: 'LINGUIS 120',
+            },
+            {
+              id: 'linguis130',
+              name: 'LINGUIS 130',
+            },
+          ],
+        },
+        {
+          id: 'linguis-electives',
+          name: 'Electives',
+          requirements: [
+            // TODO Add unit-style requirements
+            {
+              id: 'linguis-elective-1',
+              name: 'Elective 1',
+            },
+            {
+              id: 'linguis-elective-2',
+              name: 'Elective 2',
+            },
+            {
+              id: 'linguis-elective-3',
+              name: 'Elective 3',
             },
           ],
         },
