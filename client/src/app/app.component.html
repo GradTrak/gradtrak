@@ -1,4 +1,4 @@
 <div>
-  <app-semester-pane></app-semester-pane>
-  <app-requirements-pane></app-requirements-pane>
+  <app-semester-pane [semesters]="semesters"></app-semester-pane>
+  <app-requirements-pane [courses]="getCurrentCourses()"></app-requirements-pane>
 </div>

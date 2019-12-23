@@ -5,6 +5,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr app-requirement *ngFor="let requirement of requirementCategory.requirements" [requirement]="requirement"></tr>
+    <tr
+      app-requirement
+      *ngFor="let requirement of requirementCategory.requirements"
+      [requirement]="requirement"
+      [courses]="courses"
+    ></tr>
   </tbody>
 </table>
