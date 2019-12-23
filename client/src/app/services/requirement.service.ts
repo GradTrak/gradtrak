@@ -166,14 +166,17 @@ export class RequirementService {
             {
               id: 'math1a',
               name: 'MATH 1A',
+              courseId: 'math1a',
             },
             {
               id: 'math1b',
               name: 'MATH 1B',
+              courseId: 'math1b',
             },
             {
               id: 'compsci70',
               name: 'COMPSCI 70',
+              courseId: 'compsci70',
             },
           ],
         },
@@ -184,10 +187,12 @@ export class RequirementService {
             {
               id: 'physics7a',
               name: 'PHYSICS 7A',
+              courseId: 'physics7a',
             },
             {
               id: 'physics7b',
               name: 'PHYSICS 7B',
+              courseId: 'physics7b',
             },
           ],
         },
@@ -198,22 +203,27 @@ export class RequirementService {
             {
               id: 'compsci61a',
               name: 'COMPSCI 61A',
+              courseId: 'compsci61a',
             },
             {
               id: 'compsci61b',
               name: 'COMPSCI 61B',
+              courseId: 'compsci61b',
             },
             {
               id: 'compsci61c',
               name: 'COMPSCI 61C',
+              courseId: 'compsci61c',
             },
             {
               id: 'eecs16a',
               name: 'EECS 16A',
+              courseId: 'eecs16a',
             },
             {
               id: 'eecs16b',
               name: 'EECS 16B',
+              courseId: 'eecs16b',
             },
           ],
         },
@@ -251,6 +261,7 @@ export class RequirementService {
             {
               id: 'compsci195',
               name: 'COMPSCI 195',
+              courseId: 'compsci195',
             },
           ],
         },
@@ -268,6 +279,7 @@ export class RequirementService {
             {
               id: 'linguis100',
               name: 'LINGUIS 100',
+              courseId: 'linguis100',
             },
           ],
         },
@@ -279,22 +291,27 @@ export class RequirementService {
             {
               id: 'linguis110',
               name: 'LINGUIS 110',
+              courseId: 'linguis110',
             },
             {
               id: 'linguis111',
               name: 'LINGUIS 111',
+              courseId: 'linguis111',
             },
             {
               id: 'linguis115',
               name: 'LINGUIS 115',
+              courseId: 'linguis115',
             },
             {
               id: 'linguis120',
               name: 'LINGUIS 120',
+              courseId: 'linguis120',
             },
             {
               id: 'linguis130',
               name: 'LINGUIS 130',
+              courseId: 'linguis130',
             },
           ],
         },
@@ -331,9 +348,9 @@ export class RequirementService {
     return this.courseService.getCourses().pipe(
       map((courses) => {
         const coursesObj = courses.reduce((obj, course) => {
-          const next = { ...obj };
-          next[course.id] = course;
-          return course;
+          const nextObj = { ...obj };
+          nextObj[course.id] = course;
+          return nextObj;
         }, {});
 
         return Object.values(data).map((rawSet) => {
