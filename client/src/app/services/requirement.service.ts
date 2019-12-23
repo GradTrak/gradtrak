@@ -341,18 +341,20 @@ export class RequirementService {
   constructor(private courseService: CourseService) {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    return of(this.DUMMY_REQUIREMENT_DATA).pipe(flatMap((data) => this.linkParents(data)));
+    return of(this.DUMMY_REQUIREMENT_DATA).pipe(flatMap((data) => this.prepareData(data)));
   }
 
-  linkParents(data: object): Observable<RequirementSet[]> {
+  prepareData(data: object): Observable<RequirementSet[]> {
     return this.courseService.getCourses().pipe(
       map((courses) => {
+        // Build object with course.id as keys and course as values
         const coursesObj = courses.reduce((obj, course) => {
           const nextObj = { ...obj };
           nextObj[course.id] = course;
           return nextObj;
         }, {});
 
+        // Instantiate requirement types and link courseIds to Course objects
         return Object.values(data).map((rawSet) => {
           const requirementSet = { ...rawSet };
 
