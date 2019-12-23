@@ -1,0 +1,9 @@
+<h4>Add a class to {{ semester.name }}</h4>
+<form (ngSubmit)="addCourse(selectedCourse)">
+  <select [(ngModel)]="selectedCourse" name="course">
+    <option *ngFor="let course of addableCourses" [ngValue]="course">
+      {{ course.dept }} {{ course.no }}: {{ course.title }}
+    </option>
+  </select>
+  <button *ngIf="selectedCourse" type="submit">Add</button>
+</form>

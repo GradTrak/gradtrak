@@ -1,0 +1,23 @@
+button {
+  width: 100%;
+}
+
+.semester-container {
+  display: inline-block;
+  background-color: #b3e2f7;
+}
+
+table {
+  margin: 0.5em;
+  border-collapse: separate;
+  border-spacing: 16px 8px;
+}
+
+table td:not(.button-cell) {
+  padding: 0 0.25em;
+  background-color: #e2f9fe;
+}
+
+table td.units {
+  text-align: center;
+}

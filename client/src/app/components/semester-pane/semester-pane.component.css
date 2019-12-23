@@ -1,0 +1,10 @@
+.pane {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pane > app-semester {
+  width: 50%;
+  margin-bottom: 1em;
+}
