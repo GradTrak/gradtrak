@@ -1,5 +1,6 @@
-<tr *ngFor="let requirement of getRequirementRows()">
-  <td>{{ requirement.name }}</td>
-  <!-- TODO Style row instead of using separate column -->
-  <td>{{ requirement.isFulfilled ? requirement.isFulfilled(courses) : null }}</td>
+<tr
+  *ngFor="let req of getRequirementRows()"
+  [ngClass]="req.isFulfilled && req.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+>
+  <td>{{ req.name }}</td>
 </tr>
