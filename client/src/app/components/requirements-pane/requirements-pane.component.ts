@@ -9,7 +9,7 @@ import { RequirementService } from 'services/requirement.service';
 })
 export class RequirementsPaneComponent implements OnInit {
   requirementSets: RequirementSet[];
-  selectedRequirementSets: RequirementSet[];
+  majorRequirementSets: RequirementSet[];
   selectableMajors: RequirementSet[];
 
   updateRequirementSets(baseReqSet: RequirementSet): RequirementSet[]{
@@ -20,7 +20,7 @@ export class RequirementsPaneComponent implements OnInit {
       selected.push(baseReqSet)
     }
     selected.reverse();
-    this.selectedRequirementSets = selected;
+    this.majorRequirementSets = selected;
     return selected;
   }
 
