@@ -22,4 +22,17 @@ export class RequirementComponent implements OnInit {
     }
     return [req];
   }
+
+  // TODO TSX?
+  getAnnotation(req: Requirement): string {
+    // FIXME Remove check for getAnnotation
+    if (req.getAnnotation) {
+      let annotation: string = req.getAnnotation();
+      if (annotation) {
+        annotation = annotation.replace(/\n/g, '<br />');
+      }
+      return annotation;
+    }
+    return null;
+  }
 }

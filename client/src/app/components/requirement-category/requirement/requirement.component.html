@@ -1,9 +1,14 @@
-<!-- TODO Remove check for whether isFulfilled exists -->
+<!-- FIXME Remove check for whether isFulfilled exists -->
+<!-- FIXME Remove check for getAnnotation -->
 <tr
   *ngFor="let req of getRequirementRows(requirement)"
   [ngClass]="req.isFulfilled && req.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+  [ngbPopover]="req.getAnnotation && req.getAnnotation() ? annotation : null"
+  triggers="mouseenter:mouseleave"
 >
-  <td>{{ req.name }}</td>
-  <!-- TODO Remove check for getAnnotation and make this on hover -->
-  <td *ngIf="req.getAnnotation">{{ req.getAnnotation() }}</td>
+  <!-- TODO This seems slightly janky -->
+  <ng-template #annotation>
+    <div [outerHTML]="getAnnotation(req)"></div>
+  </ng-template>
+  <td>{{ req.name }}<span *ngIf="getAnnotation(req)"> *</span></td>
 </tr>
