@@ -208,22 +208,67 @@ export class RequirementService {
           name: 'Lower Division',
           requirements: [
             {
-              type: 'course',
-              id: 'compsci61a',
+              type: 'multi',
+              id: 'compsci61a47a',
               name: 'COMPSCI 61A',
-              courseId: 'compsci61a',
+              numRequired: 1,
+              hidden: true,
+              requirements: [
+                {
+                  type: 'course',
+                  id: 'compsci61a',
+                  name: 'COMPSCI 61A',
+                  courseId: 'compsci61a',
+                },
+                {
+                  type: 'course',
+                  id: 'compsci47a',
+                  name: 'COMPSCI 47A',
+                  courseId: 'compsci47a',
+                },
+              ],
             },
             {
-              type: 'course',
-              id: 'compsci61b',
+              type: 'multi',
+              id: 'compsci61b47b',
               name: 'COMPSCI 61B',
-              courseId: 'compsci61b',
+              numRequired: 1,
+              hidden: true,
+              requirements: [
+                {
+                  type: 'course',
+                  id: 'compsci61b',
+                  name: 'COMPSCI 61B',
+                  courseId: 'compsci61b',
+                },
+                {
+                  type: 'course',
+                  id: 'compsci47b',
+                  name: 'COMPSCI 47B',
+                  courseId: 'compsci47b',
+                },
+              ],
             },
             {
-              type: 'course',
-              id: 'compsci61c',
+              type: 'multi',
+              id: 'compsci61c47c',
               name: 'COMPSCI 61C',
-              courseId: 'compsci61c',
+              numRequired: 1,
+              hidden: true,
+              requirements: [
+                {
+                  type: 'course',
+                  id: 'compsci61c',
+                  name: 'COMPSCI 61C',
+                  courseId: 'compsci61c',
+                },
+                {
+                  type: 'course',
+                  id: 'compsci47c',
+                  name: 'COMPSCI 47C',
+                  courseId: 'compsci47c',
+                },
+              ],
             },
             {
               type: 'course',

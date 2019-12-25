@@ -17,7 +17,7 @@ export class RequirementComponent implements OnInit {
   ngOnInit(): void {}
 
   getRequirementRows(req: Requirement): Requirement[] {
-    if (req instanceof MultiRequirement) {
+    if (req instanceof MultiRequirement && !req.hidden) {
       return req.requirements.flatMap(this.getRequirementRows);
     }
     return [req];

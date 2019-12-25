@@ -1,6 +1,9 @@
+<!-- TODO Remove check for whether isFulfilled exists -->
 <tr
   *ngFor="let req of getRequirementRows(requirement)"
   [ngClass]="req.isFulfilled && req.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
 >
   <td>{{ req.name }}</td>
+  <!-- TODO Remove check for getAnnotation and make this on hover -->
+  <td *ngIf="req.getAnnotation">{{ req.getAnnotation() }}</td>
 </tr>
