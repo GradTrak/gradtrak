@@ -20,6 +20,10 @@ export class RequirementComponent implements OnInit {
     return this.requirement instanceof MultiRequirement && !this.requirement.hidden;
   }
 
+  getMulti(): MultiRequirement {
+    return this.isMulti() ? (this.requirement as MultiRequirement) : null;
+  }
+
   // TODO TSX?
   getAnnotation(): string {
     // FIXME Remove check for getAnnotation

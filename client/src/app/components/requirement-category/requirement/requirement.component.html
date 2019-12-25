@@ -6,17 +6,18 @@
 </ng-template>
 <ng-template #multiReq>
   <!-- TODO Make this look better -->
+  <!-- TODO Find a better way to cast variables in HTML templates -->
   <td
     class="nested"
-    [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-    [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+    [ngClass]="getMulti().isFulfilled && getMulti().isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+    [ngbPopover]="getMulti().getAnnotation && getMulti().getAnnotation() ? annotation : null"
     triggers="mouseenter:mouseleave"
   >
-    {{ requirement.numRequired }} of:
+    {{ getMulti().numRequired }} of:
     <table>
       <tbody
         app-requirement
-        *ngFor="let childReq of requirement.requirements"
+        *ngFor="let childReq of getMulti().requirements"
         [requirement]="childReq"
         [courses]="courses"
       ></tbody>
