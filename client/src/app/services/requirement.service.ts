@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { flatMap, map } from 'rxjs/operators';
+import { Requirement } from 'models/requirement.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { CourseRequirement } from 'models/requirements/course-requirement.model';
+import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 import { CourseService } from 'services/course.service';
 
@@ -299,36 +301,43 @@ export class RequirementService {
           id: 'linguis-core',
           name: 'Core',
           requirements: [
-            // TODO Add N of set of requirements
             {
-              type: 'course',
-              id: 'linguis110',
-              name: 'LINGUIS 110',
-              courseId: 'linguis110',
-            },
-            {
-              type: 'course',
-              id: 'linguis111',
-              name: 'LINGUIS 111',
-              courseId: 'linguis111',
-            },
-            {
-              type: 'course',
-              id: 'linguis115',
-              name: 'LINGUIS 115',
-              courseId: 'linguis115',
-            },
-            {
-              type: 'course',
-              id: 'linguis120',
-              name: 'LINGUIS 120',
-              courseId: 'linguis120',
-            },
-            {
-              type: 'course',
-              id: 'linguis130',
-              name: 'LINGUIS 130',
-              courseId: 'linguis130',
+              type: 'multi',
+              id: 'linguis-core',
+              name: 'Linguistics Core',
+              numRequired: 4,
+              requirements: [
+                {
+                  type: 'course',
+                  id: 'linguis110',
+                  name: 'LINGUIS 110',
+                  courseId: 'linguis110',
+                },
+                {
+                  type: 'course',
+                  id: 'linguis111',
+                  name: 'LINGUIS 111',
+                  courseId: 'linguis111',
+                },
+                {
+                  type: 'course',
+                  id: 'linguis115',
+                  name: 'LINGUIS 115',
+                  courseId: 'linguis115',
+                },
+                {
+                  type: 'course',
+                  id: 'linguis120',
+                  name: 'LINGUIS 120',
+                  courseId: 'linguis120',
+                },
+                {
+                  type: 'course',
+                  id: 'linguis130',
+                  name: 'LINGUIS 130',
+                  courseId: 'linguis130',
+                },
+              ],
             },
           ],
         },
@@ -380,30 +389,9 @@ export class RequirementService {
 
           requirementSet.requirementCategories = requirementSet.requirementCategories.map((rawCategory) => {
             const requirementCategory = { ...rawCategory };
-
-            requirementCategory.requirements = requirementCategory.requirements.map((rawReq) => {
-              let requirement = { ...rawReq };
-
-              switch (rawReq.type) {
-                case 'course':
-                  requirement.course = coursesObj[requirement.courseId];
-                  delete requirement.courseId;
-                  requirement = new CourseRequirement(requirement);
-                  break;
-
-                case 'tag':
-                  requirement = new TagRequirement(requirement);
-                  break;
-
-                default:
-                  // Do nothing
-                  break;
-              }
-
-              delete requirement.type;
-              return requirement;
-            });
-
+            requirementCategory.requirements = requirementCategory.requirements.map((rawReq) =>
+              this.getRequirementObject(rawReq, coursesObj)
+            );
             return requirementCategory;
           });
 
@@ -411,5 +399,35 @@ export class RequirementService {
         });
       })
     );
+  }
+
+  getRequirementObject(rawReq, coursesObj): Requirement {
+    let requirement = { ...rawReq };
+
+    switch (requirement.type) {
+      case 'course':
+        requirement.course = coursesObj[requirement.courseId];
+        delete requirement.courseId;
+        requirement = new CourseRequirement(requirement);
+        break;
+
+      case 'tag':
+        requirement = new TagRequirement(requirement);
+        break;
+
+      case 'multi':
+        requirement.requirements = requirement.requirements.map((rawChildReq) =>
+          this.getRequirementObject(rawChildReq, coursesObj)
+        );
+        requirement = new MultiRequirement(requirement);
+        break;
+
+      default:
+        // Do nothing
+        break;
+    }
+
+    delete requirement.type;
+    return requirement;
   }
 }
