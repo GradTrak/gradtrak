@@ -1,8 +1,12 @@
 import { Course } from 'models/course.model';
 
-export interface Requirement {
+export abstract class Requirement {
   id: string;
   name: string;
 
-  isFulfilled(courses: Course[]): boolean;
+  constructor(obj: object) {
+    Object.assign(this, obj);
+  }
+
+  abstract isFulfilled(courses: Course[]): boolean;
 }
