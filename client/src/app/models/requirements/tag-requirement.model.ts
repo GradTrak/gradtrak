@@ -12,6 +12,6 @@ export class TagRequirement extends Requirement {
   }
 
   toString(): string {
-    return this.tag;
+    return `Category: ${this.tag}`;
   }
 }

@@ -11,6 +11,6 @@ export class CourseRequirement extends Requirement {
   }
 
   toString(): string {
-    return this.course.toString();
+    return `Course: ${this.course.toString()}`;
   }
 }
