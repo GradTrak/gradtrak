@@ -23,7 +23,7 @@ export class MultiRequirement extends Requirement {
   toString(): string {
     return this.requirements.reduce(
       (annotation, requirement) => `${annotation}\n${requirement.toString()}`,
-      `Fulfill with ${this.numRequired} of the following:`
+      `Fulfill with ${this.numRequired} of:`
     );
   }
 }

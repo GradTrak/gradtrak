@@ -6,6 +6,7 @@ import { RequirementSet } from 'models/requirement-set.model';
 import { CourseRequirement } from 'models/requirements/course-requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
+import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 import { CourseService } from 'services/course.service';
 
 @Injectable({
@@ -288,26 +289,17 @@ export class RequirementService {
           id: 'eecs-upper-div',
           name: 'Upper Division',
           requirements: [
-            // TODO Add unit-style requirements
             {
-              id: 'eecs-upper-1',
+              type: 'unit',
+              id: 'eecs-upper-div',
               name: 'Upper Division',
-            },
-            {
-              id: 'eecs-upper-2',
-              name: 'Upper Division',
-            },
-            {
-              id: 'eecs-upper-3',
-              name: 'Upper Division',
-            },
-            {
-              id: 'eecs-upper-4',
-              name: 'Upper Division',
-            },
-            {
-              id: 'eecs-upper-5',
-              name: 'Upper Division',
+              units: 20,
+              requirement: {
+                type: 'tag',
+                id: 'eecs-upper-div-course',
+                name: 'EECS Upper Division Course',
+                tag: 'eecs-upper-div',
+              },
             },
           ],
         },
@@ -473,6 +465,11 @@ export class RequirementService {
           this.getRequirementObject(rawChildReq, coursesObj)
         );
         requirement = new MultiRequirement(requirement);
+        break;
+
+      case 'unit':
+        requirement.requirement = this.getRequirementObject(requirement.requirement, coursesObj);
+        requirement = new UnitRequirement(requirement);
         break;
 
       default:
