@@ -29,6 +29,7 @@ export class RequirementsPaneComponent implements OnInit {
   ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
+      //define selectableMajors. Maybe this should be moved to a service???
       let selectableMajors: RequirementSet[] = []
       requirementSets.forEach((requirementSet)=>{
           if (requirementSet.isMajor){
