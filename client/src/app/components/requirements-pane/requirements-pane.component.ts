@@ -9,13 +9,16 @@ import { RequirementService } from 'services/requirement.service';
 })
 export class RequirementsPaneComponent implements OnInit {
   requirementSets: RequirementSet[];
-  selectedRequirementSets(baseReqSet: RequirementSet): RequirementSet[]{
+  selectedRequirementSets: RequirementSet[];
+
+  updateRequirementSets(baseReqSet: RequirementSet): RequirementSet[]{
     let selected: RequirementSet[] = [baseReqSet];
     let current: RequirementSet = baseReqSet;
-    while (typeof baseReqSet.parent !== 'undefined'){
+    while (baseReqSet.parent !== null){
       baseReqSet = baseReqSet.parent;
       selected.push(baseReqSet)
     }
+    this.selectedRequirementSets = selected;
     return selected;
   }
 

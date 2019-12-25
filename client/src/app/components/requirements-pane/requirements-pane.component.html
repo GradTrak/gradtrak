@@ -1,4 +1,12 @@
 <div class="pane">
+  <select
+    [(ngModel)]="selectedReqSet"
+    (change)="updateRequirementSets(selectedReqSet)">
+    <option
+      *ngFor="let requirementSet of requirementSets"
+      [ngValue]="requirementSet"
+      >{{requirementSet.id}}</option>
+  </select>
   <app-requirement-set
     *ngFor="let requirementSet of requirementSets"
     [requirementSet]="requirementSet"
