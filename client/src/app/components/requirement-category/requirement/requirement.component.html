@@ -1,5 +1,5 @@
 <tr
-  *ngFor="let req of getRequirementRows()"
+  *ngFor="let req of getRequirementRows(requirement)"
   [ngClass]="req.isFulfilled && req.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
 >
   <td>{{ req.name }}</td>

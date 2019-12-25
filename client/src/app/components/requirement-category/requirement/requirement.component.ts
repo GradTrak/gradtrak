@@ -16,10 +16,10 @@ export class RequirementComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getRequirementRows(): Requirement[] {
-    if (this.requirement instanceof MultiRequirement) {
-      return this.requirement.requirements;
+  getRequirementRows(req: Requirement): Requirement[] {
+    if (req instanceof MultiRequirement) {
+      return req.requirements.flatMap(this.getRequirementRows);
     }
-    return [this.requirement];
+    return [req];
   }
 }
