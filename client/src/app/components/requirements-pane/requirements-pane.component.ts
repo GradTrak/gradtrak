@@ -13,11 +13,11 @@ export class RequirementsPaneComponent implements OnInit {
   selectableMajors: RequirementSet[];
 
   updateMajorRequirements(baseReqSet: RequirementSet): RequirementSet[]{
-    let selected: RequirementSet[] = [baseReqSet];
+    const selected: RequirementSet[] = [baseReqSet];
     let current: RequirementSet = baseReqSet;
-    while (baseReqSet.parent !== null){
-      baseReqSet = baseReqSet.parent;
-      selected.push(baseReqSet)
+    while (current.parent !== null){
+      current = current.parent;
+      selected.push(current)
     }
     selected.reverse();
     this.majorRequirementSets = selected;
@@ -29,9 +29,8 @@ export class RequirementsPaneComponent implements OnInit {
   ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
-      //define selectableMajors. Maybe this should be moved to a service???
-      let selectableMajors: RequirementSet[] = [];
-      this.selectableMajors = requirementSets.filter((requirementSet)=>requirementSet.isMajor);
+      const selectableMajors: RequirementSet[] = [];
+      this.selectableMajors = requirementSets.filter((requirementSet: RequirementSet)=>requirementSet.isMajor);
       });
   }
 }
