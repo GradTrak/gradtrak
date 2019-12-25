@@ -14,23 +14,23 @@
   >
     {{ requirement.numRequired }} of:
     <table>
-      <tbody>
-        <tr
-          app-requirement
-          *ngFor="let childReq of requirement.requirements"
-          [requirement]="childReq"
-          [courses]="courses"
-        ></tr>
-      </tbody>
+      <tbody
+        app-requirement
+        *ngFor="let childReq of requirement.requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
     </table>
   </td>
 </ng-template>
-<ng-container *ngIf="!isMulti(); else multiReq">
-  <td
-    [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-    [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
-    triggers="mouseenter:mouseleave"
-  >
-    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
-  </td>
-</ng-container>
+<tr>
+  <ng-container *ngIf="!isMulti(); else multiReq">
+    <td
+      [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+      [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+      triggers="mouseenter:mouseleave"
+    >
+      {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+    </td>
+  </ng-container>
+</tr>
