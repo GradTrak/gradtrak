@@ -9,4 +9,8 @@ export class CourseRequirement extends Requirement {
   isFulfilled(courses: Course[]): boolean {
     return courses.includes(this.course);
   }
+
+  toString(): string {
+    return this.course.toString();
+  }
 }

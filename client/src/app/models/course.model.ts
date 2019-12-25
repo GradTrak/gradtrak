@@ -11,6 +11,6 @@ export class Course {
   }
 
   toString(): string {
-    return this.dept + ' ' + this.no;
+    return `${this.dept} ${this.no}`;
   }
 }

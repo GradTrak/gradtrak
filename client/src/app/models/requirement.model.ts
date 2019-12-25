@@ -13,4 +13,6 @@ export abstract class Requirement {
   getAnnotation(): string {
     return null;
   }
+
+  abstract toString(): string;
 }

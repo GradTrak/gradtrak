@@ -10,4 +10,8 @@ export class TagRequirement extends Requirement {
   isFulfilled(courses: Course[]): boolean {
     return courses.some((course) => course.tags.includes(this.tag));
   }
+
+  toString(): string {
+    return this.tag;
+  }
 }
