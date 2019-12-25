@@ -18,6 +18,7 @@ export class RequirementsPaneComponent implements OnInit {
       baseReqSet = baseReqSet.parent;
       selected.push(baseReqSet)
     }
+    selected.reverse();
     this.selectedRequirementSets = selected;
     return selected;
   }

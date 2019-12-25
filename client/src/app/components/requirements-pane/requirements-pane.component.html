@@ -8,7 +8,7 @@
       >{{requirementSet.id}}</option>
   </select>
   <app-requirement-set
-    *ngFor="let requirementSet of requirementSets"
+    *ngFor="let requirementSet of selectedRequirementSets"
     [requirementSet]="requirementSet"
   ></app-requirement-set>
 </div>
