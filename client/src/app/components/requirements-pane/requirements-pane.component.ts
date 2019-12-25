@@ -30,14 +30,8 @@ export class RequirementsPaneComponent implements OnInit {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
       //define selectableMajors. Maybe this should be moved to a service???
-      let selectableMajors: RequirementSet[] = []
-      requirementSets.forEach((requirementSet)=>{
-          if (requirementSet.isMajor){
-            selectableMajors.push(requirementSet)
-          }
-        }
-      );
-      this.selectableMajors = selectableMajors;
-    });
+      let selectableMajors: RequirementSet[] = [];
+      this.selectableMajors = requirementSets.filter((requirementSet)=>requirementSet.isMajor);
+      });
   }
 }
