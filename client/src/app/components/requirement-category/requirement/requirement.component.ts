@@ -16,18 +16,15 @@ export class RequirementComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  getRequirementRows(req: Requirement): Requirement[] {
-    if (req instanceof MultiRequirement && !req.hidden) {
-      return req.requirements.flatMap(this.getRequirementRows);
-    }
-    return [req];
+  isMulti(): boolean {
+    return this.requirement instanceof MultiRequirement && !this.requirement.hidden;
   }
 
   // TODO TSX?
-  getAnnotation(req: Requirement): string {
+  getAnnotation(): string {
     // FIXME Remove check for getAnnotation
-    if (req.getAnnotation) {
-      let annotation: string = req.getAnnotation();
+    if (this.requirement.getAnnotation) {
+      let annotation: string = this.requirement.getAnnotation();
       if (annotation) {
         annotation = annotation.replace(/\n/g, '<br />');
       }

@@ -12,3 +12,7 @@ th,
 td {
   padding: 0.25em 1em;
 }
+
+td.nested {
+  padding-right: 0;
+}

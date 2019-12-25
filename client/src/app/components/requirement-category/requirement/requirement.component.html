@@ -1,14 +1,36 @@
 <!-- FIXME Remove check for whether isFulfilled exists -->
 <!-- FIXME Remove check for getAnnotation -->
-<tr
-  *ngFor="let req of getRequirementRows(requirement)"
-  [ngClass]="req.isFulfilled && req.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-  [ngbPopover]="req.getAnnotation && req.getAnnotation() ? annotation : null"
-  triggers="mouseenter:mouseleave"
->
-  <!-- TODO This seems slightly janky -->
-  <ng-template #annotation>
-    <div [outerHTML]="getAnnotation(req)"></div>
-  </ng-template>
-  <td>{{ req.name }}<span *ngIf="getAnnotation(req)"> *</span></td>
-</tr>
+<!-- TODO This seems slightly janky -->
+<ng-template #annotation>
+  <div [outerHTML]="getAnnotation()"></div>
+</ng-template>
+<ng-template #multiReq>
+  <!-- TODO Make this look better -->
+  <td
+    class="nested"
+    [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+    [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+    triggers="mouseenter:mouseleave"
+  >
+    {{ requirement.numRequired }} of:
+    <table>
+      <tbody>
+        <tr
+          app-requirement
+          *ngFor="let childReq of requirement.requirements"
+          [requirement]="childReq"
+          [courses]="courses"
+        ></tr>
+      </tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-container *ngIf="!isMulti(); else multiReq">
+  <td
+    [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+    [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+    triggers="mouseenter:mouseleave"
+  >
+    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+  </td>
+</ng-container>
