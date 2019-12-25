@@ -5,4 +5,12 @@ export class Course {
   title: string;
   units: number;
   tags: string[];
+
+  constructor(obj: object) {
+    Object.assign(this, obj);
+  }
+
+  toString(): string {
+    return this.dept + ' ' + this.no;
+  }
 }
