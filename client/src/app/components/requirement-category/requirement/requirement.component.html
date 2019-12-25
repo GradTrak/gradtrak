@@ -4,9 +4,9 @@
 <ng-template #annotation>
   <div [outerHTML]="getAnnotation()"></div>
 </ng-template>
+<!-- TODO Find a better way to cast variables in HTML templates -->
+<!-- TODO Make these look better -->
 <ng-template #multiReq>
-  <!-- TODO Make this look better -->
-  <!-- TODO Find a better way to cast variables in HTML templates -->
   <td
     class="nested"
     [ngClass]="getMulti().isFulfilled && getMulti().isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
@@ -24,8 +24,28 @@
     </table>
   </td>
 </ng-template>
+<ng-template #unitReq>
+  <td
+    class="nested"
+    [ngClass]="getUnit().isFulfilled && getUnit().isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+    [ngbPopover]="getUnit().getAnnotation && getUnit().getAnnotation() ? annotation : null"
+    triggers="mouseenter:mouseleave"
+  >
+    {{ getUnit().units }} units of
+    <br />
+    {{ getUnit().requirement }}:
+    <table>
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getUnit().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
 <tr>
-  <ng-container *ngIf="!isMulti(); else multiReq">
+  <ng-container *ngIf="!isMulti() && !isUnit()">
     <td
       [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
       [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
@@ -34,4 +54,6 @@
       {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
     </td>
   </ng-container>
+  <ng-container *ngIf="isMulti(); then multiReq"></ng-container>
+  <ng-container *ngIf="isUnit(); then unitReq"></ng-container>
 </tr>

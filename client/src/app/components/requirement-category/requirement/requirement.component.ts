@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
+import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 
 @Component({
   selector: '[app-requirement]',
@@ -22,6 +23,14 @@ export class RequirementComponent implements OnInit {
 
   getMulti(): MultiRequirement {
     return this.isMulti() ? (this.requirement as MultiRequirement) : null;
+  }
+
+  isUnit(): boolean {
+    return this.requirement instanceof UnitRequirement;
+  }
+
+  getUnit(): UnitRequirement {
+    return this.isUnit() ? (this.requirement as UnitRequirement) : null;
   }
 
   // TODO TSX?
