@@ -164,16 +164,19 @@ export class RequirementService {
           name: 'Math',
           requirements: [
             {
+              type: 'course',
               id: 'math1a',
               name: 'MATH 1A',
               courseId: 'math1a',
             },
             {
+              type: 'course',
               id: 'math1b',
               name: 'MATH 1B',
               courseId: 'math1b',
             },
             {
+              type: 'course',
               id: 'compsci70',
               name: 'COMPSCI 70',
               courseId: 'compsci70',
@@ -185,11 +188,13 @@ export class RequirementService {
           name: 'Physics',
           requirements: [
             {
+              type: 'course',
               id: 'physics7a',
               name: 'PHYSICS 7A',
               courseId: 'physics7a',
             },
             {
+              type: 'course',
               id: 'physics7b',
               name: 'PHYSICS 7B',
               courseId: 'physics7b',
@@ -201,26 +206,31 @@ export class RequirementService {
           name: 'Lower Division',
           requirements: [
             {
+              type: 'course',
               id: 'compsci61a',
               name: 'COMPSCI 61A',
               courseId: 'compsci61a',
             },
             {
+              type: 'course',
               id: 'compsci61b',
               name: 'COMPSCI 61B',
               courseId: 'compsci61b',
             },
             {
+              type: 'course',
               id: 'compsci61c',
               name: 'COMPSCI 61C',
               courseId: 'compsci61c',
             },
             {
+              type: 'course',
               id: 'eecs16a',
               name: 'EECS 16A',
               courseId: 'eecs16a',
             },
             {
+              type: 'course',
               id: 'eecs16b',
               name: 'EECS 16B',
               courseId: 'eecs16b',
@@ -259,6 +269,7 @@ export class RequirementService {
           name: 'Ethics',
           requirements: [
             {
+              type: 'course',
               id: 'compsci195',
               name: 'COMPSCI 195',
               courseId: 'compsci195',
@@ -277,6 +288,7 @@ export class RequirementService {
           name: 'LINUIGS 100',
           requirements: [
             {
+              type: 'course',
               id: 'linguis100',
               name: 'LINGUIS 100',
               courseId: 'linguis100',
@@ -289,26 +301,31 @@ export class RequirementService {
           requirements: [
             // TODO Add N of set of requirements
             {
+              type: 'course',
               id: 'linguis110',
               name: 'LINGUIS 110',
               courseId: 'linguis110',
             },
             {
+              type: 'course',
               id: 'linguis111',
               name: 'LINGUIS 111',
               courseId: 'linguis111',
             },
             {
+              type: 'course',
               id: 'linguis115',
               name: 'LINGUIS 115',
               courseId: 'linguis115',
             },
             {
+              type: 'course',
               id: 'linguis120',
               name: 'LINGUIS 120',
               courseId: 'linguis120',
             },
             {
+              type: 'course',
               id: 'linguis130',
               name: 'LINGUIS 130',
               courseId: 'linguis130',
@@ -365,16 +382,25 @@ export class RequirementService {
             const requirementCategory = { ...rawCategory };
 
             requirementCategory.requirements = requirementCategory.requirements.map((rawReq) => {
-              const requirement = { ...rawReq };
+              let requirement = { ...rawReq };
 
-              if (requirement.courseId) {
-                requirement.course = coursesObj[requirement.courseId];
-                delete requirement.courseId;
-                return new CourseRequirement(requirement);
+              switch (rawReq.type) {
+                case 'course':
+                  requirement.course = coursesObj[requirement.courseId];
+                  delete requirement.courseId;
+                  requirement = new CourseRequirement(requirement);
+                  break;
+
+                case 'tag':
+                  requirement = new TagRequirement(requirement);
+                  break;
+
+                default:
+                  // Do nothing
+                  break;
               }
-              if (requirement.tag) {
-                return new TagRequirement(requirement);
-              }
+
+              delete requirement.type;
               return requirement;
             });
 
