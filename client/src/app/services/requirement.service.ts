@@ -325,11 +325,10 @@ export class RequirementService {
   }
 
   linkParents(data: object): RequirementSet[] {
-    return Object.values(data).map((value) => {
-      const requirementSet = { ...value };
+    Object.values(data).forEach((requirementSet) => {
       requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
       delete requirementSet.parentId;
-      return requirementSet;
     });
+    return Object.values(data);
   }
 }
