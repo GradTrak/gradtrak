@@ -10,6 +10,7 @@ import { RequirementService } from 'services/requirement.service';
 export class RequirementsPaneComponent implements OnInit {
   requirementSets: RequirementSet[];
   selectedRequirementSets: RequirementSet[];
+  selectableMajors: RequirementSet[];
 
   updateRequirementSets(baseReqSet: RequirementSet): RequirementSet[]{
     let selected: RequirementSet[] = [baseReqSet];
@@ -28,6 +29,14 @@ export class RequirementsPaneComponent implements OnInit {
   ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
+      let selectableMajors: RequirementSet[] = []
+      requirementSets.forEach((requirementSet)=>{
+          if (requirementSet.isMajor){
+            selectableMajors.push(requirementSet)
+          }
+        }
+      );
+      this.selectableMajors = selectableMajors;
     });
   }
 }

@@ -16,6 +16,7 @@ export class RequirementService {
         {
           id: 'uc',
           name: 'UC Requirements',
+          isMajor: false,
           requirements: [
             {
               id: 'elwr',
@@ -37,6 +38,7 @@ export class RequirementService {
       id: 'ucb',
       name: 'UC Berkeley',
       parentId: 'uc',
+      isMajor: false,
       requirementCategories: [
         {
           id: 'ac',
@@ -58,6 +60,7 @@ export class RequirementService {
         {
           id: 'coe-hss',
           name: 'Humanities and Social Sciences',
+          isMajor: false,
           requirements: [
             {
               id: 'coe-r1a',
@@ -92,6 +95,7 @@ export class RequirementService {
       id: 'ls',
       name: 'College of Letters and Sciences',
       parentId: 'ucb',
+      isMajor: false,
       requirementCategories: [
         {
           id: 'ls-essential',
@@ -155,6 +159,7 @@ export class RequirementService {
       id: 'eecs',
       name: 'EECS Major',
       parentId: 'coe',
+      isMajor: true,
       requirementCategories: [
         {
           id: 'eecs-math',
@@ -257,6 +262,7 @@ export class RequirementService {
       id: 'linguis',
       name: 'Linguistics Major',
       parentId: 'ls',
+      isMajor: true,
       requirementCategories: [
         {
           id: 'linguis100',
