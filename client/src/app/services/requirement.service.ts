@@ -367,10 +367,21 @@ export class RequirementService {
   constructor(private courseService: CourseService) {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    return of(this.DUMMY_REQUIREMENT_DATA).pipe(flatMap((data) => this.prepareData(data)));
+    return of(this.DUMMY_REQUIREMENT_DATA).pipe(
+      map(this.linkParents),
+      flatMap((data) => this.prepareRequirements(data))
+    );
   }
 
-  prepareData(data: object): Observable<RequirementSet[]> {
+  linkParents(data: object): RequirementSet[] {
+    Object.values(data).forEach((requirementSet) => {
+      requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
+      delete requirementSet.parentId;
+    });
+    return Object.values(data);
+  }
+
+  prepareRequirements(data: object): Observable<RequirementSet[]> {
     return this.courseService.getCourses().pipe(
       map((courses) => {
         // Build object with course.id as keys and course as values
@@ -383,9 +394,6 @@ export class RequirementService {
         // Instantiate requirement types and link courseIds to Course objects
         return Object.values(data).map((rawSet) => {
           const requirementSet = { ...rawSet };
-
-          requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
-          delete requirementSet.parentId;
 
           requirementSet.requirementCategories = requirementSet.requirementCategories.map((rawCategory) => {
             const requirementCategory = { ...rawCategory };
