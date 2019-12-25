@@ -267,7 +267,7 @@ export class RequirementService {
         },
       ],
     },
-    ling: {
+    linguis: {
       id: 'linguis',
       name: 'Linguistics Major',
       parentId: 'ls',
