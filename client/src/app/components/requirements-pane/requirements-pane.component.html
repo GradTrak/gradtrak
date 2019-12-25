@@ -1,7 +1,7 @@
 <div class="pane">
   <select
     [(ngModel)]="selectedMajor"
-    (change)="updateRequirementSets(selectedMajor)"
+    (change)="updateMajorRequirements(selectedMajor)"
     >
     <option
       *ngFor="let requirementSet of selectableMajors"

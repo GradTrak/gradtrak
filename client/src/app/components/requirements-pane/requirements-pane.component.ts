@@ -12,7 +12,7 @@ export class RequirementsPaneComponent implements OnInit {
   majorRequirementSets: RequirementSet[];
   selectableMajors: RequirementSet[];
 
-  updateRequirementSets(baseReqSet: RequirementSet): RequirementSet[]{
+  updateMajorRequirements(baseReqSet: RequirementSet): RequirementSet[]{
     let selected: RequirementSet[] = [baseReqSet];
     let current: RequirementSet = baseReqSet;
     while (baseReqSet.parent !== null){
