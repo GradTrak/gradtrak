@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
+import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 
 @Component({
   selector: '[app-requirement]',
@@ -14,4 +15,11 @@ export class RequirementComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  getRequirementRows(): Requirement[] {
+    if (this.requirement instanceof MultiRequirement) {
+      return this.requirement.requirements;
+    }
+    return [this.requirement];
+  }
 }
