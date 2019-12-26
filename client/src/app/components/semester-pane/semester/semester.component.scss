@@ -1,0 +1,23 @@
+.semester-container {
+  display: inline-block;
+  background-color: #b3e2f7;
+
+  table {
+    margin: 0.5em;
+    border-collapse: separate;
+    border-spacing: 16px 8px;
+
+    .title {
+      padding: 0 0.25em;
+      background-color: #e2f9fe;
+    }
+
+    .units {
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

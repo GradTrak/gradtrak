@@ -1,0 +1,17 @@
+div {
+  display: flex;
+
+  * {
+    height: 100vh;
+    overflow: scroll;
+  }
+
+  app-semester-pane {
+    width: 60%;
+  }
+
+  app-requirements-pane {
+    width: 40%;
+  }
+
+}

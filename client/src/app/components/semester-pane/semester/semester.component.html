@@ -8,8 +8,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let course of semester.courses">
-        <td class="name">{{ course.dept + ' ' + course.no }}</td>
-        <td class="units">{{ course.units }}</td>
+        <td class="name title">{{ course.dept + ' ' + course.no }}</td>
+        <td class="units title">{{ course.units }}</td>
         <td class="button-cell"><button (click)="removeCourse(course)">-</button></td>
       </tr>
     </tbody>

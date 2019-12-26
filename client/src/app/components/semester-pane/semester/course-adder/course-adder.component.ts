@@ -6,7 +6,7 @@ import { CourseService } from 'services/course.service';
 @Component({
   selector: 'app-course-adder',
   templateUrl: './course-adder.component.html',
-  styleUrls: ['./course-adder.component.css'],
+  styleUrls: ['./course-adder.component.scss'],
 })
 export class CourseAdderComponent implements OnInit {
   addableCourses: Course[];

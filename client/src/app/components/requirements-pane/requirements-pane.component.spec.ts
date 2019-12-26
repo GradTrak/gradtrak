@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RequirementCategoryComponent } from 'components/requirement-category/requirement-category.component';
 import { RequirementComponent } from 'components/requirement-category/requirement/requirement.component';
-import { RequirementSetComponent } from 'components/requirement-set/requirement-set.component';
+import { RequirementSetComponent } from 'components/requirements-pane/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './requirements-pane.component';
 
 describe('RequirementsPaneComponent', () => {
