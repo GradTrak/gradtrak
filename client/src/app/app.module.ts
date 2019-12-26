@@ -15,6 +15,7 @@ import { RequirementSetComponent } from './components/requirement-set/requiremen
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
 import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
+import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
 
 @NgModule({
   declarations: [
