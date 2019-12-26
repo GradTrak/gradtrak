@@ -6,7 +6,6 @@ import { Requirement } from 'models/requirement.model';
   templateUrl: './requirement.component.html',
   styleUrls: ['./requirement.component.scss', '../requirement-category.component.scss'],
 }) // I'm also not too sure why there's two stylesheets here.
-
 export class RequirementComponent implements OnInit {
   @Input() requirement: Requirement;
 

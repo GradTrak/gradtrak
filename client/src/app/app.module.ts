@@ -14,7 +14,7 @@ import { CourseAdderComponent } from './components/semester-pane/semester/course
 import { RequirementSetComponent } from './components/requirements-pane/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
 import { RequirementComponent } from './components/requirements-pane/requirement-set/requirement-category/requirement/requirement.component';
-import { RequirementCategoryComponent } from './components/requirements-pane/requirement-set/requirement-category/requirement-category.component'
+import { RequirementCategoryComponent } from './components/requirements-pane/requirement-set/requirement-category/requirement-category.component';
 
 @NgModule({
   declarations: [
