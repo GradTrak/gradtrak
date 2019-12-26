@@ -1,1 +1,9 @@
-<p>course-searcher works!</p>
+<mat-form-field>
+   <input type="text" placeholder="Enter Location" matInput [formControl]="myControl"
+        [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option}}
+       </mat-option>
+      </mat-autocomplete>
+</mat-form-field>

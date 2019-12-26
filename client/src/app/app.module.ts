@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AngularMaterialModule } from './angular-material.module';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { RequirementsPaneComponent } from './components/requirements-pane/requir
 import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,13 @@ import { CourseSearcherComponent } from './components/course-searcher/course-sea
     SemesterPaneComponent,
     SemesterComponent,
     CourseAdderComponent,
+    CourseSearcherComponent,
     RequirementComponent,
     RequirementSetComponent,
     RequirementsPaneComponent,
     RequirementCategoryComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, NgbModule],
+  imports: [AngularMaterialModule, AppRoutingModule,  BrowserAnimationsModule, BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
   providers: [CourseService, RequirementService, SemesterService],
   bootstrap: [AppComponent],
 })
