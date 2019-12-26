@@ -7,13 +7,8 @@
 <!-- TODO Find a better way to cast variables in HTML templates -->
 <!-- TODO Make these look better -->
 <ng-template #multiReq>
-  <td
-    class="nested"
-    [ngClass]="getMulti().isFulfilled && getMulti().isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-    [ngbPopover]="getMulti().getAnnotation && getMulti().getAnnotation() ? annotation : null"
-    triggers="mouseenter:mouseleave"
-  >
-    {{ getMulti().numRequired }} of:
+  <td>
+    {{ getMulti().numRequired }} of
     <table>
       <tbody
         app-requirement
@@ -25,34 +20,19 @@
   </td>
 </ng-template>
 <ng-template #unitReq>
-  <td
-    class="nested"
-    [ngClass]="getUnit().isFulfilled && getUnit().isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-    [ngbPopover]="getUnit().getAnnotation && getUnit().getAnnotation() ? annotation : null"
-    triggers="mouseenter:mouseleave"
-  >
+  <td>
     {{ getUnit().units }} units of
     <br />
-    {{ getUnit().requirement.name }}:
-    <table>
-      <tbody
-        app-requirement
-        *ngFor="let childReq of getUnit().requirements"
-        [requirement]="childReq"
-        [courses]="courses"
-      ></tbody>
-    </table>
+    {{ getUnit().requirement.name }}
   </td>
 </ng-template>
-<tr>
+<tr
+  [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+  [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+  triggers="mouseenter:mouseleave"
+>
   <ng-container *ngIf="!isMulti() && !isUnit()">
-    <td
-      [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-      [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
-      triggers="mouseenter:mouseleave"
-    >
-      {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
-    </td>
+    <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
   </ng-container>
   <ng-container *ngIf="isMulti(); then multiReq"></ng-container>
   <ng-container *ngIf="isUnit(); then unitReq"></ng-container>
