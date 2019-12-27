@@ -11,14 +11,14 @@ import { CourseService } from 'services/course.service';
   styleUrls: ['./course-searcher.component.css']
 })
 export class CourseSearcherComponent implements OnInit {
-  @Output() courseSelected: EventEmitter<Course> = new EventEmitter<Course>();
+  @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   public model: any; //figure out what model means
   allCourses: Course[];
   courseMatches: Course[];
 
   search = (text$: Observable<string>) => {
     return text$.pipe(
-      debounceTime(200),
+      debounceTime(100),
       distinctUntilChanged(),
       map(term => term.length < 2 ? []
         : this.allCourses.filter(v => v.id.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
@@ -51,7 +51,7 @@ export class CourseSearcherComponent implements OnInit {
     const selectedCourse: Course = this.allCourses.filter((course)=>{
       return course.id === this.model;
     })[0]
-    if (selectedCourse){this.courseSelected.emit(selectedCourse)}
+    if (selectedCourse){this.courseReturned.emit(selectedCourse)}
   }
   ngOnInit() {
     this.courseService.getCourses().subscribe((courses: Course[])=>{
