@@ -17,12 +17,13 @@ export class CourseSearcherComponent implements OnInit {
 
   updateAutoComplete():void{
     function searchFunction(input: string, courseList: Course[]): Course[] {
+      let processedInput = input.toLowerCase();
       return courseList.filter((course)=>{
         return (
-          course.id.includes(input) ||
-          course.title.includes(input) ||
-          course.dept.includes(input) ||
-          course.no.includes(input))
+          course.id.toLowerCase().includes(processedInput) ||
+          course.title.toLowerCase().includes(processedInput) ||
+          course.dept.toLowerCase().includes(processedInput) ||
+          course.no.toLowerCase().includes(processedInput))
       })
     }
     this.courseMatches = searchFunction(this.searchPhrase.value, this.allCourses)
