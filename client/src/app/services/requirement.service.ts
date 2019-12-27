@@ -410,7 +410,7 @@ export class RequirementService {
       this.sharedRequirementData = of(this.DUMMY_REQUIREMENT_DATA).pipe(
         map(this.linkParents),
         flatMap((data) => this.prepareRequirements(data)),
-        shareReplay()
+        shareReplay(),
       );
     }
     return this.sharedRequirementData;
@@ -441,14 +441,14 @@ export class RequirementService {
           requirementSet.requirementCategories = requirementSet.requirementCategories.map((rawCategory) => {
             const requirementCategory = { ...rawCategory };
             requirementCategory.requirements = requirementCategory.requirements.map((rawReq) =>
-              this.getRequirementObject(rawReq, coursesObj)
+              this.getRequirementObject(rawReq, coursesObj),
             );
             return requirementCategory;
           });
 
           return requirementSet;
         });
-      })
+      }),
     );
   }
 
@@ -468,7 +468,7 @@ export class RequirementService {
 
       case 'multi':
         requirement.requirements = requirement.requirements.map((rawChildReq) =>
-          this.getRequirementObject(rawChildReq, coursesObj)
+          this.getRequirementObject(rawChildReq, coursesObj),
         );
         requirement = new MultiRequirement(requirement);
         break;

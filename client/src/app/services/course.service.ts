@@ -386,7 +386,7 @@ export class CourseService {
     if (!this.sharedCourseData) {
       this.sharedCourseData = of(this.DUMMY_COURSE_DATA).pipe(
         map((rawCourses) => rawCourses.map((rawCourse) => new Course(rawCourse))),
-        shareReplay()
+        shareReplay(),
       );
     }
     return this.sharedCourseData;
