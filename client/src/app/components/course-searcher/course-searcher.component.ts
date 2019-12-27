@@ -28,7 +28,10 @@ export class CourseSearcherComponent implements OnInit {
     this.courseMatches = searchFunction(this.searchPhrase.value, this.allCourses)
   }
   returnCourse(): void{
-    this.courseSelected.emit(this.courseMatches[0])
+    const selectedCourse: Course = this.allCourses.filter((course)=>{
+      return course.id === this.searchPhrase.value
+    })[0]
+    if (selectedCourse){this.courseSelected.emit(selectedCourse)}
   }
   ngOnInit() {
     this.courseService.getCourses().subscribe((courses: Course[])=>{
