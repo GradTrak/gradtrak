@@ -6,14 +6,19 @@ export class UnitRequirement extends Requirement {
   name: string;
 
   units: number;
+  // TODO Add StandaloneRequirement interface
   requirement: Requirement;
 
   isFulfilled(courses: Course[]): boolean {
-    return (
-      courses
-        .filter((course) => this.requirement.isFulfilled([course]))
-        .reduce((sum, course) => sum + course.units, 0) >= this.units
-    );
+    return this.unitsFulfilled(courses) >= this.units;
+  }
+
+  unitsFulfilled(courses: Course[]): number {
+    return this.getFulfillingCourses(courses).reduce((sum, course) => sum + course.units, 0);
+  }
+
+  getFulfillingCourses(courses: Course[]): Course[] {
+    return courses.filter((course) => this.requirement.isFulfilled([course]));
   }
 
   toString(): string {
