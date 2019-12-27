@@ -1,14 +1,15 @@
-<mat-form-field>
-   <input type="text"
-     placeholder="Search for a class"
-     matInput [formControl]="searchPhrase"
-     [matAutocomplete]="auto"
-     (keyup)="updateAutoComplete()">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let course of courseMatches" [value]="course.id">
-          {{ course.dept }} {{ course.no }}: {{ course.title }}
-       </mat-option>
-      </mat-autocomplete>
-</mat-form-field>
-
-<button (click)="returnCourse()"> test returnCourse()</button>
+<form (ngSubmit)="returnCourse()">
+  <mat-form-field>
+     <input type="text"
+       placeholder="Search for a class"
+       matInput [formControl]="searchPhrase"
+       [matAutocomplete]="auto"
+       (keyup)="updateAutoComplete()">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let course of courseMatches" [value]="course.id">
+            {{ course.dept }} {{ course.no }}: {{ course.title }}
+         </mat-option>
+        </mat-autocomplete>
+  </mat-form-field>
+  <button type="submit">Add</button>
+</form>

@@ -1,4 +1,2 @@
 <h4>Add a class to {{ semester.name }}</h4>
-<form (ngSubmit)="addCourse(selectedCourse)">
-  <app-course-searcher (courseSelected)='addCourse($event)'></app-course-searcher>
-</form>
+<app-course-searcher (courseSelected)='addCourse($event)'></app-course-searcher>
