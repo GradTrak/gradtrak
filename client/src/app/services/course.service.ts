@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 import { Course } from 'models/course.model';
 
 @Injectable({
@@ -378,9 +378,17 @@ export class CourseService {
     },
   ];
 
+  private sharedCourseData: Observable<Course[]>;
+
   constructor() {}
 
   getCourses(): Observable<Course[]> {
-    return of(this.DUMMY_COURSE_DATA).pipe(map((rawCourses) => rawCourses.map((rawCourse) => new Course(rawCourse))));
+    if (!this.sharedCourseData) {
+      this.sharedCourseData = of(this.DUMMY_COURSE_DATA).pipe(
+        map((rawCourses) => rawCourses.map((rawCourse) => new Course(rawCourse))),
+        shareReplay()
+      );
+    }
+    return this.sharedCourseData;
   }
 }

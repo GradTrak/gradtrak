@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { flatMap, map } from 'rxjs/operators';
+import { flatMap, map, shareReplay } from 'rxjs/operators';
 import { Requirement } from 'models/requirement.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { CourseRequirement } from 'models/requirements/course-requirement.model';
@@ -401,13 +401,19 @@ export class RequirementService {
     },
   };
 
+  private sharedRequirementData: Observable<RequirementSet[]>;
+
   constructor(private courseService: CourseService) {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    return of(this.DUMMY_REQUIREMENT_DATA).pipe(
-      map(this.linkParents),
-      flatMap((data) => this.prepareRequirements(data))
-    );
+    if (!this.sharedRequirementData) {
+      this.sharedRequirementData = of(this.DUMMY_REQUIREMENT_DATA).pipe(
+        map(this.linkParents),
+        flatMap((data) => this.prepareRequirements(data)),
+        shareReplay()
+      );
+    }
+    return this.sharedRequirementData;
   }
 
   linkParents(data: object): RequirementSet[] {
