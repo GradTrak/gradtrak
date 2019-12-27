@@ -5,3 +5,7 @@
 .unfulfilled {
   background-color: #fcc3bc;
 }
+
+.nested {
+  width: 100%;
+}

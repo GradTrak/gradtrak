@@ -9,7 +9,7 @@
 <ng-template #multiReq>
   <td>
     {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
-    <table>
+    <table class="nested">
       <tbody
         app-requirement
         *ngFor="let childReq of getMulti().requirements"
@@ -24,6 +24,13 @@
     {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
     <br />
     {{ getUnit().requirement.name }}
+    <table class="nested">
+      <tbody>
+        <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+          <td>{{ course.toString() }}</td>
+        </tr>
+      </tbody>
+    </table>
   </td>
 </ng-template>
 <tr
