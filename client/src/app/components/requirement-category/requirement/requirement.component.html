@@ -8,7 +8,7 @@
 <!-- TODO Make these look better -->
 <ng-template #multiReq>
   <td>
-    {{ getMulti().numRequired }} of
+    {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
     <table>
       <tbody
         app-requirement
@@ -21,7 +21,7 @@
 </ng-template>
 <ng-template #unitReq>
   <td>
-    {{ getUnit().units }} units of
+    {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
     <br />
     {{ getUnit().requirement.name }}
   </td>
