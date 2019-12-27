@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Course } from 'models/course.model';
 import { CourseService } from 'services/course.service';
@@ -9,12 +9,11 @@ import { CourseService } from 'services/course.service';
   styleUrls: ['./course-searcher.component.css']
 })
 export class CourseSearcherComponent implements OnInit {
+  @Output() courseSelected: EventEmitter<Course> = new EventEmitter<Course>();
   searchPhrase: FormControl = new FormControl();
   allCourses: Course[];
   courseMatches: Course[];
-  testbool;
   constructor(private courseService: CourseService) { }
-
   updateAutoComplete():void{
     function searchFunction(input: string, courseList: Course[]): Course[] {
       let processedInput = input.toLowerCase();
@@ -27,6 +26,9 @@ export class CourseSearcherComponent implements OnInit {
       })
     }
     this.courseMatches = searchFunction(this.searchPhrase.value, this.allCourses)
+  }
+  returnCourse(): void{
+    this.courseSelected.emit(this.courseMatches[0])
   }
   ngOnInit() {
     this.courseService.getCourses().subscribe((courses: Course[])=>{
