@@ -5,10 +5,5 @@
        [(ngModel)]="model"
        name="name"
        [ngbTypeahead]="updateAutoComplete">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let course of courseMatches" [value]="course.id">
-            {{ course.dept }} {{ course.no }}: {{ course.title }}
-         </mat-option>
-        </mat-autocomplete>
   <button type="submit">Add</button>
 </form>
