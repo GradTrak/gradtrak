@@ -20,7 +20,12 @@
 <ng-template #multiReq>
   <ng-container *ngIf="getMulti().numRequired < getMulti().requirements.length; else multiReqAll">
     <td>
-      {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+      <ng-container *ngIf="getMulti().numRequired > 1; else multiOne">
+        {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+      </ng-container>
+      <ng-template #multiOne>
+        One of
+      </ng-template>
       <table class="nested">
         <tbody
           app-requirement
