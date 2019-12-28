@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { flatMap, map, shareReplay } from 'rxjs/operators';
 import { Requirement } from 'models/requirement.model';
+import { RequirementCategory } from 'models/requirement-category.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { CourseRequirement } from 'models/requirements/course-requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
@@ -401,58 +402,68 @@ export class RequirementService {
     },
   };
 
-  private sharedRequirementData: Observable<RequirementSet[]>;
+  private sharedRequirementsObj: Observable<object>;
 
   constructor(private courseService: CourseService) {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    if (!this.sharedRequirementData) {
-      this.sharedRequirementData = of(this.DUMMY_REQUIREMENT_DATA).pipe(
-        map(this.linkParents),
-        flatMap((data) => this.prepareRequirements(data)),
-        shareReplay(),
-      );
+    if (!this.sharedRequirementsObj) {
+      this.fetchRequirementData();
     }
-    return this.sharedRequirementData;
+    return this.sharedRequirementsObj.pipe(map(Object.values));
   }
 
-  linkParents(data: object): RequirementSet[] {
+  getRequirementsObj(): Observable<object> {
+    if (!this.sharedRequirementsObj) {
+      this.fetchRequirementData();
+    }
+    return this.sharedRequirementsObj;
+  }
+
+  private fetchRequirementData(): void {
+    this.sharedRequirementsObj = of(this.DUMMY_REQUIREMENT_DATA).pipe(
+      map(this.linkParents),
+      flatMap((data: object) => this.prepareRequirements(data)),
+      map(this.instantiateSetsAndCategories),
+      shareReplay(),
+    );
+  }
+
+  private instantiateSetsAndCategories(data: object): object {
+    Object.keys(data).forEach((setKey: string) => {
+      data[setKey].requirementCategories = data[setKey].requirementCategories.map(
+        (rawCategory: object) => new RequirementCategory(rawCategory),
+      );
+      data[setKey] = new RequirementSet(data[setKey]);
+    });
+    return data;
+  }
+
+  private linkParents(data: object): object {
     Object.values(data).forEach((requirementSet) => {
       requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
       delete requirementSet.parentId;
     });
-    return Object.values(data);
+    return data;
   }
 
-  prepareRequirements(data: object): Observable<RequirementSet[]> {
-    return this.courseService.getCourses().pipe(
-      map((courses) => {
-        // Build object with course.id as keys and course as values
-        const coursesObj = courses.reduce((obj, course) => {
-          const nextObj = { ...obj };
-          nextObj[course.id] = course;
-          return nextObj;
-        }, {});
-
+  private prepareRequirements(data: object): Observable<object> {
+    return this.courseService.getCoursesObj().pipe(
+      map((coursesObj: object) => {
         // Instantiate requirement types and link courseIds to Course objects
-        return Object.values(data).map((rawSet) => {
-          const requirementSet = { ...rawSet };
-
-          requirementSet.requirementCategories = requirementSet.requirementCategories.map((rawCategory) => {
-            const requirementCategory = { ...rawCategory };
-            requirementCategory.requirements = requirementCategory.requirements.map((rawReq) =>
+        Object.values(data).forEach((rawSet) => {
+          rawSet.requirementCategories.forEach((rawCategory) => {
+            rawCategory.requirements = rawCategory.requirements.map((rawReq) =>
               this.getRequirementObject(rawReq, coursesObj),
             );
-            return requirementCategory;
           });
-
-          return requirementSet;
         });
+        return data;
       }),
     );
   }
 
-  getRequirementObject(rawReq, coursesObj): Requirement {
+  private getRequirementObject(rawReq, coursesObj): Requirement {
     let requirement = { ...rawReq };
 
     switch (requirement.type) {

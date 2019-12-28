@@ -5,4 +5,8 @@ export class RequirementSet {
   name: string;
   parent: RequirementSet;
   requirementCategories: RequirementCategory[];
+
+  constructor(obj: object) {
+    Object.assign(this, obj);
+  }
 }

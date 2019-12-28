@@ -4,4 +4,8 @@ export class RequirementCategory {
   id: string;
   name: string;
   requirements: Requirement[];
+
+  constructor(obj: object) {
+    Object.assign(this, obj);
+  }
 }

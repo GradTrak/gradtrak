@@ -7,8 +7,8 @@ import { Course } from 'models/course.model';
   providedIn: 'root',
 })
 export class CourseService {
-  DUMMY_COURSE_DATA: Course[] = [
-    {
+  DUMMY_COURSE_DATA: object = {
+    compscic8: {
       units: 4,
       title: 'Foundations of Data Science',
       dept: 'COMPSCI',
@@ -16,7 +16,7 @@ export class CourseService {
       id: 'compscic8',
       tags: [],
     },
-    {
+    compsci10: {
       units: 4,
       title: 'The Beauty and Joy of Computing',
       dept: 'COMPSCI',
@@ -24,7 +24,7 @@ export class CourseService {
       id: 'compsci10',
       tags: [],
     },
-    {
+    compsci24: {
       units: 1,
       title: 'Freshman Seminars',
       dept: 'COMPSCI',
@@ -32,7 +32,7 @@ export class CourseService {
       id: 'compsci24',
       tags: [],
     },
-    {
+    compsci36: {
       units: 2,
       title: 'CS Scholars Seminar: The Educational Climate in CS & CS61A technical discussions',
       dept: 'COMPSCI',
@@ -40,7 +40,7 @@ export class CourseService {
       id: 'compsci36',
       tags: [],
     },
-    {
+    compsci47a: {
       units: 1,
       title: 'Completion of Work in Computer Science 61A',
       dept: 'COMPSCI',
@@ -48,7 +48,7 @@ export class CourseService {
       id: 'compsci47a',
       tags: [],
     },
-    {
+    compsci47b: {
       units: 1,
       title: 'Completion of Work in Computer Science 61B',
       dept: 'COMPSCI',
@@ -56,7 +56,7 @@ export class CourseService {
       id: 'compsci47b',
       tags: [],
     },
-    {
+    compsci47c: {
       units: 1,
       title: 'Completion of Work in Computer Science 61C',
       dept: 'COMPSCI',
@@ -64,7 +64,7 @@ export class CourseService {
       id: 'compsci47c',
       tags: [],
     },
-    {
+    compsci61a: {
       units: 4,
       title: 'The Structure and Interpretation of Computer Programs',
       dept: 'COMPSCI',
@@ -72,7 +72,7 @@ export class CourseService {
       id: 'compsci61a',
       tags: [],
     },
-    {
+    compsci61b: {
       units: 4,
       title: 'Data Structures',
       dept: 'COMPSCI',
@@ -80,7 +80,7 @@ export class CourseService {
       id: 'compsci61b',
       tags: [],
     },
-    {
+    compsci61c: {
       units: 4,
       title: 'Great Ideas of Computer Architecture (Machine Structures)',
       dept: 'COMPSCI',
@@ -88,7 +88,7 @@ export class CourseService {
       id: 'compsci61c',
       tags: [],
     },
-    {
+    compsci70: {
       units: 4,
       title: 'Discrete Mathematics and Probability Theory',
       dept: 'COMPSCI',
@@ -96,7 +96,7 @@ export class CourseService {
       id: 'compsci70',
       tags: [],
     },
-    {
+    compsci88: {
       units: 3,
       title: 'Computational Structures in Data Science',
       dept: 'COMPSCI',
@@ -104,7 +104,7 @@ export class CourseService {
       id: 'compsci88',
       tags: [],
     },
-    {
+    compsci152: {
       units: 4,
       title: 'Computer Architecture and Engineering',
       dept: 'COMPSCI',
@@ -112,7 +112,7 @@ export class CourseService {
       id: 'compsci152',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci160: {
       units: 4,
       title: 'User Interface Design and Development',
       dept: 'COMPSCI',
@@ -120,7 +120,7 @@ export class CourseService {
       id: 'compsci160',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci161: {
       units: 4,
       title: 'Computer Security',
       dept: 'COMPSCI',
@@ -128,7 +128,7 @@ export class CourseService {
       id: 'compsci161',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci162: {
       units: 4,
       title: 'Operating Systems and System Programming',
       dept: 'COMPSCI',
@@ -136,7 +136,7 @@ export class CourseService {
       id: 'compsci162',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci164: {
       units: 4,
       title: 'Programming Languages and Compilers',
       dept: 'COMPSCI',
@@ -144,7 +144,7 @@ export class CourseService {
       id: 'compsci164',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci168: {
       units: 4,
       title: 'Introduction to the Internet: Architecture and Protocols',
       dept: 'COMPSCI',
@@ -152,7 +152,7 @@ export class CourseService {
       id: 'compsci168',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci169: {
       units: 4,
       title: 'Software Engineering',
       dept: 'COMPSCI',
@@ -160,7 +160,7 @@ export class CourseService {
       id: 'compsci169',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci170: {
       units: 4,
       title: 'Efficient Algorithms and Intractable Problems',
       dept: 'COMPSCI',
@@ -168,7 +168,7 @@ export class CourseService {
       id: 'compsci170',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci174: {
       units: 4,
       title: 'Combinatorics and Discrete Probability',
       dept: 'COMPSCI',
@@ -176,7 +176,7 @@ export class CourseService {
       id: 'compsci174',
       tags: ['eecs-upper-div'],
     },
-    {
+    compscil182: {
       units: 4,
       title: 'Designing, Visualizing and Understanding Deep Neural Networks',
       dept: 'COMPSCI',
@@ -184,7 +184,7 @@ export class CourseService {
       id: 'compscil182',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsciw182: {
       units: 4,
       title: 'Designing, Visualizing and Understanding Deep Neural Networks',
       dept: 'COMPSCI',
@@ -192,7 +192,7 @@ export class CourseService {
       id: 'compsciw182',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci184: {
       units: 4,
       title: 'Foundations of Computer Graphics',
       dept: 'COMPSCI',
@@ -200,7 +200,7 @@ export class CourseService {
       id: 'compsci184',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsciw186: {
       units: 4,
       title: 'Introduction to Database Systems',
       dept: 'COMPSCI',
@@ -208,7 +208,7 @@ export class CourseService {
       id: 'compsciw186',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci188: {
       units: 4,
       title: 'Introduction to Artificial Intelligence',
       dept: 'COMPSCI',
@@ -216,7 +216,7 @@ export class CourseService {
       id: 'compsci188',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci189: {
       units: 4,
       title: 'Introduction to Machine Learning',
       dept: 'COMPSCI',
@@ -224,7 +224,7 @@ export class CourseService {
       id: 'compsci189',
       tags: ['eecs-upper-div'],
     },
-    {
+    compscic191: {
       units: 3,
       title: 'Quantum Information Science and Technology',
       dept: 'COMPSCI',
@@ -232,7 +232,7 @@ export class CourseService {
       id: 'compscic191',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci194: {
       units: 1,
       title: 'Special Topics',
       dept: 'COMPSCI',
@@ -240,7 +240,7 @@ export class CourseService {
       id: 'compsci194',
       tags: ['eecs-upper-div'],
     },
-    {
+    compsci195: {
       units: 1,
       title: 'Social Implications of Computer Technology',
       dept: 'COMPSCI',
@@ -248,7 +248,7 @@ export class CourseService {
       id: 'compsci195',
       tags: ['eecs-ethics'],
     },
-    {
+    compsci198: {
       units: 1,
       title: 'Directed Group Studies for Advanced Undergraduates',
       dept: 'COMPSCI',
@@ -256,7 +256,7 @@ export class CourseService {
       id: 'compsci198',
       tags: [],
     },
-    {
+    eecs16a: {
       units: 4,
       title: 'Designing Information Devices and Systems I',
       dept: 'EECS',
@@ -264,7 +264,7 @@ export class CourseService {
       id: 'eecs16a',
       tags: [],
     },
-    {
+    eecs16b: {
       units: 4,
       title: 'Designing Information Devices and Systems II',
       dept: 'EECS',
@@ -272,7 +272,7 @@ export class CourseService {
       id: 'eecs16b',
       tags: [],
     },
-    {
+    eecsc106a: {
       units: 4,
       title: 'Introduction to Robotics',
       dept: 'EECS',
@@ -280,7 +280,7 @@ export class CourseService {
       id: 'eecsc106a',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecsc106b: {
       units: 4,
       title: 'Robotic Manipulation and Interaction',
       dept: 'EECS',
@@ -288,7 +288,7 @@ export class CourseService {
       id: 'eecsc106b',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecs126: {
       units: 4,
       title: 'Probability and Random Processes',
       dept: 'EECS',
@@ -296,7 +296,7 @@ export class CourseService {
       id: 'eecs126',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecs127: {
       units: 4,
       title: 'Optimization Models in Engineering',
       dept: 'EECS',
@@ -304,7 +304,7 @@ export class CourseService {
       id: 'eecs127',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecs149: {
       units: 4,
       title: 'Introduction to Embedded Systems',
       dept: 'EECS',
@@ -312,7 +312,7 @@ export class CourseService {
       id: 'eecs149',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecs151: {
       units: 3,
       title: 'Introduction to Digital Design and Integrated Circuits',
       dept: 'EECS',
@@ -320,7 +320,7 @@ export class CourseService {
       id: 'eecs151',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecs151la: {
       units: 2,
       title: 'Application Specific Integrated Circuits Laboratory',
       dept: 'EECS',
@@ -328,7 +328,7 @@ export class CourseService {
       id: 'eecs151la',
       tags: ['eecs-upper-div'],
     },
-    {
+    eecs151lb: {
       units: 2,
       title: 'Field-Programmable Gate Array Laboratory',
       dept: 'EECS',
@@ -336,7 +336,7 @@ export class CourseService {
       id: 'eecs151lb',
       tags: ['eecs-upper-div'],
     },
-    {
+    englishr1a: {
       units: 4,
       title: 'Reading and Composition',
       dept: 'ENGLISH',
@@ -344,7 +344,7 @@ export class CourseService {
       id: 'englishr1a',
       tags: ['rc-a'],
     },
-    {
+    englishr1b: {
       units: 4,
       title: 'Reading and Composition',
       dept: 'ENGLISH',
@@ -352,7 +352,7 @@ export class CourseService {
       id: 'englishr1b',
       tags: ['rc-b'],
     },
-    {
+    hss1ac: {
       units: 4,
       title: 'First Humanities/Social Science',
       dept: 'H/SS',
@@ -360,7 +360,7 @@ export class CourseService {
       id: 'hss1ac',
       tags: ['ac'],
     },
-    {
+    hss2: {
       units: 4,
       title: 'Second Humanities/Social Science',
       dept: 'H/SS',
@@ -368,7 +368,7 @@ export class CourseService {
       id: 'hss2',
       tags: [],
     },
-    {
+    hss100: {
       units: 4,
       title: 'Third Humanities/Social Science',
       dept: 'H/SS',
@@ -376,7 +376,7 @@ export class CourseService {
       id: 'hss100',
       tags: [],
     },
-    {
+    hss101: {
       units: 4,
       title: 'Fourth Humanities/Social Science',
       dept: 'H/SS',
@@ -384,7 +384,7 @@ export class CourseService {
       id: 'hss101',
       tags: [],
     },
-    {
+    info159: {
       units: 4,
       title: 'Natural Language Processing',
       dept: 'INFO',
@@ -392,7 +392,7 @@ export class CourseService {
       id: 'info159',
       tags: ['eecs-upper-div', 'linguis-elective'],
     },
-    {
+    linguis1a: {
       units: 5,
       title: 'American Sign Language I',
       dept: 'LINGUIS',
@@ -400,7 +400,7 @@ export class CourseService {
       id: 'linguis1a',
       tags: [],
     },
-    {
+    linguis1b: {
       units: 5,
       title: 'American Sign Language II',
       dept: 'LINGUIS',
@@ -408,7 +408,7 @@ export class CourseService {
       id: 'linguis1b',
       tags: [],
     },
-    {
+    linguisr1b: {
       units: 4,
       title: 'Endangered Languages: Why does linguistic diversity matter?',
       dept: 'LINGUIS',
@@ -416,7 +416,7 @@ export class CourseService {
       id: 'linguisr1b',
       tags: [],
     },
-    {
+    linguis5: {
       units: 4,
       title: 'Language and Linguistics',
       dept: 'LINGUIS',
@@ -424,7 +424,7 @@ export class CourseService {
       id: 'linguis5',
       tags: [],
     },
-    {
+    linguis10: {
       units: 3,
       title: 'The Sounds of English',
       dept: 'LINGUIS',
@@ -432,7 +432,7 @@ export class CourseService {
       id: 'linguis10',
       tags: [],
     },
-    {
+    linguis24: {
       units: 1,
       title: 'Freshman Seminar',
       dept: 'LINGUIS',
@@ -440,7 +440,7 @@ export class CourseService {
       id: 'linguis24',
       tags: [],
     },
-    {
+    linguis47: {
       units: 3,
       title: 'Language and Communication Disorders',
       dept: 'LINGUIS',
@@ -448,7 +448,7 @@ export class CourseService {
       id: 'linguis47',
       tags: [],
     },
-    {
+    linguis100: {
       units: 4,
       title: 'Introduction to Linguistic Science',
       dept: 'LINGUIS',
@@ -456,7 +456,7 @@ export class CourseService {
       id: 'linguis100',
       tags: [],
     },
-    {
+    linguis106: {
       units: 4,
       title: 'Metaphor',
       dept: 'LINGUIS',
@@ -464,7 +464,7 @@ export class CourseService {
       id: 'linguis106',
       tags: ['linguis-elective'],
     },
-    {
+    linguis109: {
       units: 3,
       title: 'Bilingualism',
       dept: 'LINGUIS',
@@ -472,7 +472,7 @@ export class CourseService {
       id: 'linguis109',
       tags: ['linguis-elective'],
     },
-    {
+    linguis110: {
       units: 4,
       title: 'Phonetics',
       dept: 'LINGUIS',
@@ -480,7 +480,7 @@ export class CourseService {
       id: 'linguis110',
       tags: [],
     },
-    {
+    linguis111: {
       units: 4,
       title: 'Phonology',
       dept: 'LINGUIS',
@@ -488,7 +488,7 @@ export class CourseService {
       id: 'linguis111',
       tags: [],
     },
-    {
+    linguis115: {
       units: 4,
       title: 'Morphology',
       dept: 'LINGUIS',
@@ -496,7 +496,7 @@ export class CourseService {
       id: 'linguis115',
       tags: [],
     },
-    {
+    linguis120: {
       units: 4,
       title: 'Syntax',
       dept: 'LINGUIS',
@@ -504,7 +504,7 @@ export class CourseService {
       id: 'linguis120',
       tags: [],
     },
-    {
+    linguis121: {
       units: 4,
       title: 'Formal Semantics',
       dept: 'LINGUIS',
@@ -512,7 +512,7 @@ export class CourseService {
       id: 'linguis121',
       tags: ['linguis-elective'],
     },
-    {
+    linguis123: {
       units: 3,
       title: 'Pragmatics',
       dept: 'LINGUIS',
@@ -520,7 +520,7 @@ export class CourseService {
       id: 'linguis123',
       tags: ['linguis-elective'],
     },
-    {
+    linguis130: {
       units: 4,
       title: 'Comparative and Historical Linguistics',
       dept: 'LINGUIS',
@@ -528,7 +528,7 @@ export class CourseService {
       id: 'linguis130',
       tags: [],
     },
-    {
+    linguis140: {
       units: 3,
       title: 'Field Methods',
       dept: 'LINGUIS',
@@ -536,7 +536,7 @@ export class CourseService {
       id: 'linguis140',
       tags: ['linguis-elective'],
     },
-    {
+    linguisc142: {
       units: 3,
       title: 'Language and Thought',
       dept: 'LINGUIS',
@@ -544,7 +544,7 @@ export class CourseService {
       id: 'linguisc142',
       tags: ['linguis-elective'],
     },
-    {
+    linguisc146: {
       units: 3,
       title: 'Language Acquisition',
       dept: 'LINGUIS',
@@ -552,7 +552,7 @@ export class CourseService {
       id: 'linguisc146',
       tags: ['linguis-elective'],
     },
-    {
+    linguis148: {
       units: 3,
       title: 'Phonological Development',
       dept: 'LINGUIS',
@@ -560,7 +560,7 @@ export class CourseService {
       id: 'linguis148',
       tags: ['linguis-elective'],
     },
-    {
+    linguis150: {
       units: 3,
       title: 'Sociolinguistics',
       dept: 'LINGUIS',
@@ -568,7 +568,7 @@ export class CourseService {
       id: 'linguis150',
       tags: ['linguis-elective'],
     },
-    {
+    linguis155ac: {
       units: 4,
       title: 'Language in the United States: a Capsule History',
       dept: 'LINGUIS',
@@ -576,7 +576,7 @@ export class CourseService {
       id: 'linguis155ac',
       tags: ['ac', 'linguis-elective'],
     },
-    {
+    linguisc160: {
       units: 4,
       title: 'Quantitative Methods in Linguistics',
       dept: 'LINGUIS',
@@ -584,7 +584,7 @@ export class CourseService {
       id: 'linguisc160',
       tags: ['linguis-elective'],
     },
-    {
+    linguis170: {
       units: 3,
       title: 'History, Structure, and Sociolinguistics of a Particular Language',
       dept: 'LINGUIS',
@@ -592,7 +592,7 @@ export class CourseService {
       id: 'linguis170',
       tags: ['linguis-elective'],
     },
-    {
+    linguis197: {
       units: 1,
       title: 'Research Practicum',
       dept: 'LINGUIS',
@@ -600,7 +600,7 @@ export class CourseService {
       id: 'linguis197',
       tags: [],
     },
-    {
+    math1a: {
       units: 4,
       title: 'Calculus',
       dept: 'MATH',
@@ -608,7 +608,7 @@ export class CourseService {
       id: 'math1a',
       tags: [],
     },
-    {
+    math1b: {
       units: 4,
       title: 'Calculus',
       dept: 'MATH',
@@ -616,7 +616,7 @@ export class CourseService {
       id: 'math1b',
       tags: [],
     },
-    {
+    math53: {
       units: 4,
       title: 'Multivariable Calculus',
       dept: 'MATH',
@@ -624,7 +624,7 @@ export class CourseService {
       id: 'math53',
       tags: [],
     },
-    {
+    physics7a: {
       units: 4,
       title: 'Physics for Scientists and Engineers',
       dept: 'PHYSICS',
@@ -632,7 +632,7 @@ export class CourseService {
       id: 'physics7a',
       tags: [],
     },
-    {
+    physics7b: {
       units: 4,
       title: 'Physics for Scientists and Engineers',
       dept: 'PHYSICS',
@@ -640,19 +640,34 @@ export class CourseService {
       id: 'physics7b',
       tags: [],
     },
-  ];
+  };
 
-  private sharedCourseData: Observable<Course[]>;
+  private sharedCoursesObj: Observable<object>;
 
   constructor() {}
 
   getCourses(): Observable<Course[]> {
-    if (!this.sharedCourseData) {
-      this.sharedCourseData = of(this.DUMMY_COURSE_DATA).pipe(
-        map((rawCourses) => rawCourses.map((rawCourse) => new Course(rawCourse))),
-        shareReplay(),
-      );
+    if (!this.sharedCoursesObj) {
+      this.fetchCourseData();
     }
-    return this.sharedCourseData;
+    return this.sharedCoursesObj.pipe(map(Object.values));
+  }
+
+  getCoursesObj(): Observable<object> {
+    if (!this.sharedCoursesObj) {
+      this.fetchCourseData();
+    }
+    return this.sharedCoursesObj;
+  }
+
+  private fetchCourseData(): void {
+    this.sharedCoursesObj = of(this.DUMMY_COURSE_DATA).pipe(map(this.instantiateCourses), shareReplay());
+  }
+
+  private instantiateCourses(data: object): object {
+    Object.keys(data).forEach((key: string) => {
+      data[key] = new Course(data[key]);
+    });
+    return data;
   }
 }
