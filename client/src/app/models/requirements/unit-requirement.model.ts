@@ -1,13 +1,13 @@
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
-import { SingleRequirement } from 'models/requirements/single-requirement.model';
+import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
 export class UnitRequirement implements Requirement {
   id: string;
   name: string;
 
   units: number;
-  requirement: SingleRequirement;
+  requirement: StandaloneRequirement;
 
   constructor(obj: object) {
     Object.assign(this, obj);

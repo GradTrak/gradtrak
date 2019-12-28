@@ -1,7 +1,7 @@
 import { Course } from 'models/course.model';
-import { SingleRequirement } from 'models/requirements/single-requirement.model';
+import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
-export class CourseRequirement implements SingleRequirement {
+export class CourseRequirement implements StandaloneRequirement {
   id: string;
   name: string;
   course: Course;

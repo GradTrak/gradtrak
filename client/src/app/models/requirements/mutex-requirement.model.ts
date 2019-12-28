@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
-import { SingleRequirement } from 'models/requirements/single-requirement.model';
+import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
 export class MutexRequirement implements Requirement {
   static readonly UNFULFILLED = 0;
@@ -11,7 +11,7 @@ export class MutexRequirement implements Requirement {
   id: string;
   name: string;
 
-  requirements: SingleRequirement[];
+  requirements: StandaloneRequirement[];
 
   constructor(obj: object) {
     Object.assign(this, obj);
@@ -106,7 +106,7 @@ export class MutexRequirement implements Requirement {
    */
   // TODO This feels really janky
   private mapReqsToCourses(courses: Course[]): any[] {
-    const reqsToCourses: any[] = this.requirements.map((requirement: SingleRequirement) => {
+    const reqsToCourses: any[] = this.requirements.map((requirement: StandaloneRequirement) => {
       return {
         requirement,
         courses: courses.filter((course: Course) => requirement.isFulfillableBy(course)),
