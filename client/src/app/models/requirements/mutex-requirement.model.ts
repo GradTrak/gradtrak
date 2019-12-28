@@ -3,12 +3,19 @@ import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { SingleRequirement } from 'models/requirements/single-requirement.model';
 
-export class MutexRequirement extends Requirement {
+export class MutexRequirement implements Requirement {
   static readonly UNFULFILLED = 0;
   static readonly POTENTIAL = 1;
   static readonly FULFILLED = 2;
 
+  id: string;
+  name: string;
+
   requirements: SingleRequirement[];
+
+  constructor(obj: object) {
+    Object.assign(this, obj);
+  }
 
   isFulfilled(courses: Course[]): boolean {
     return this.getFulfillment(courses).every(
@@ -76,6 +83,10 @@ export class MutexRequirement extends Requirement {
         fulfillment,
       };
     });
+  }
+
+  getAnnotation(): string {
+    return null;
   }
 
   toString(): string {

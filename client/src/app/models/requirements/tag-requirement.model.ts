@@ -2,13 +2,25 @@ import { Course } from 'models/course.model';
 import { SingleRequirement } from 'models/requirements/single-requirement.model';
 import { Tag } from 'models/tag.model';
 
-export class TagRequirement extends SingleRequirement {
+export class TagRequirement implements SingleRequirement {
   id: string;
   name: string;
   tag: Tag;
 
+  constructor(obj: object) {
+    Object.assign(this, obj);
+  }
+
   isFulfillableBy(course: Course): boolean {
     return course.tags.includes(this.tag);
+  }
+
+  isFulfilled(courses: Course[]): boolean {
+    return courses.some((course: Course) => this.isFulfillableBy(course));
+  }
+
+  getAnnotation(): string {
+    return null;
   }
 
   toString(): string {
