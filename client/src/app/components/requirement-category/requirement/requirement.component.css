@@ -6,7 +6,12 @@
   background-color: #fcc3bc;
 }
 
-.fulfilled .unfulfilled {
+.potential {
+  background-color: #fbfcbc;
+}
+
+.fulfilled .unfulfilled,
+.fulfilled .potential {
   background-color: lightgray;
 }
 
