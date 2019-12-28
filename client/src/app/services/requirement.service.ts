@@ -4,6 +4,7 @@ import { flatMap, map, shareReplay } from 'rxjs/operators';
 import { Requirement } from 'models/requirement.model';
 import { RequirementCategory } from 'models/requirement-category.model';
 import { RequirementSet } from 'models/requirement-set.model';
+import { AlternateRequirement } from 'models/requirements/alternate-requirement.model';
 import { CourseRequirement } from 'models/requirements/course-requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
@@ -215,10 +216,9 @@ export class RequirementService {
           name: 'Physics',
           requirements: [
             {
-              type: 'multi',
+              type: 'alternate',
               id: 'eecs_physics',
               name: 'EECS Physics',
-              numRequired: 1,
               hidden: false,
               requirements: [
                 {
@@ -272,10 +272,9 @@ export class RequirementService {
           name: 'Lower Division',
           requirements: [
             {
-              type: 'multi',
+              type: 'alternate',
               id: 'compsci61a47a',
               name: 'COMPSCI 61A',
-              numRequired: 1,
               hidden: true,
               requirements: [
                 {
@@ -293,10 +292,9 @@ export class RequirementService {
               ],
             },
             {
-              type: 'multi',
+              type: 'alternate',
               id: 'compsci61b47b',
               name: 'COMPSCI 61B',
-              numRequired: 1,
               hidden: true,
               requirements: [
                 {
@@ -314,10 +312,9 @@ export class RequirementService {
               ],
             },
             {
-              type: 'multi',
+              type: 'alternate',
               id: 'compsci61c47c',
               name: 'COMPSCI 61C',
-              numRequired: 1,
               hidden: true,
               requirements: [
                 {
@@ -546,11 +543,24 @@ export class RequirementService {
         requirement = new TagRequirement(requirement);
         break;
 
+      case 'alternate':
       case 'multi':
         requirement.requirements = requirement.requirements.map((rawChildReq) =>
           this.getRequirementObject(rawChildReq, serviceObj),
         );
-        requirement = new MultiRequirement(requirement);
+        switch (requirement.type) {
+          case 'alternate':
+            requirement = new AlternateRequirement(requirement);
+            break;
+
+          case 'multi':
+            requirement = new MultiRequirement(requirement);
+            break;
+
+          default:
+            // Do nothing
+            break;
+        }
         break;
 
       case 'mutex':
