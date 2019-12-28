@@ -6,6 +6,10 @@
   background-color: #fcc3bc;
 }
 
+.fulfilled .unfulfilled {
+  background-color: lightgray;
+}
+
 .nested {
   width: 100%;
 }
