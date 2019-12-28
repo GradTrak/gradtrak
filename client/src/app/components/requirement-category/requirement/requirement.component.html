@@ -23,7 +23,7 @@
   <td>
     {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
     <br />
-    {{ getUnit().requirement.name }}
+    {{ getUnit().requirement.toString() }}
     <table class="nested">
       <tbody>
         <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">

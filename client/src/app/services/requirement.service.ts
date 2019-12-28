@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { forkJoin, Observable, of } from 'rxjs';
 import { flatMap, map, shareReplay } from 'rxjs/operators';
 import { Requirement } from 'models/requirement.model';
 import { RequirementCategory } from 'models/requirement-category.model';
@@ -9,6 +9,7 @@ import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 import { CourseService } from 'services/course.service';
+import { TagService } from 'services/tag.service';
 
 @Injectable({
   providedIn: 'root',
@@ -63,32 +64,32 @@ export class RequirementService {
       parentId: 'ucb',
       requirementCategories: [
         {
-          id: 'coe-hss',
+          id: 'coe_hss',
           name: 'Humanities and Social Sciences',
           requirements: [
             {
-              id: 'coe-r1a',
+              id: 'coe_r1a',
               name: 'R&C Part A',
             },
             {
-              id: 'coe-r1b',
+              id: 'coe_r1b',
               name: 'R&C Part B',
             },
             // TODO Add multi-course-style requirements
             {
-              id: 'coe-hss1',
+              id: 'coe_hss1',
               name: 'H/SS',
             },
             {
-              id: 'coe-hss2',
+              id: 'coe_hss2',
               name: 'H/SS',
             },
             {
-              id: 'coe-hss-u1',
+              id: 'coe_hss_u1',
               name: 'H/SS Upper Division',
             },
             {
-              id: 'coe-hss-u2',
+              id: 'coe_hss_u2',
               name: 'H/SS Upper Division',
             },
           ],
@@ -101,57 +102,57 @@ export class RequirementService {
       parentId: 'ucb',
       requirementCategories: [
         {
-          id: 'ls-essential',
+          id: 'ls_essential',
           name: 'Essential Skills',
           requirements: [
             {
-              id: 'ls-r1a',
+              id: 'ls_r1a',
               name: 'R&C Part A',
             },
             {
-              id: 'ls-r1b',
+              id: 'ls_r1b',
               name: 'R&C Part B',
             },
             {
-              id: 'ls-quant',
+              id: 'ls_quant',
               name: 'Quantitative Reasoning',
             },
             {
-              id: 'ls-lang',
+              id: 'ls_lang',
               name: 'Foreign Language',
             },
           ],
         },
         {
-          id: 'ls-breadth',
+          id: 'ls_breadth',
           name: 'Breadth Requirements',
           requirements: [
             {
-              id: 'ls-arts',
+              id: 'ls_arts',
               name: 'Arts and Literature',
             },
             {
-              id: 'ls-bio',
+              id: 'ls_bio',
               name: 'Biological Science',
             },
             {
-              id: 'ls-hist',
+              id: 'ls_hist',
               name: 'Historical Studies',
             },
             {
-              id: 'ls-inter',
+              id: 'ls_inter',
               name: 'International Studies',
             },
             {
-              id: 'ls-philo',
+              id: 'ls_philo',
               name: 'Philosophy and Values',
             },
             {
-              id: 'ls-phys',
+              id: 'ls_phys',
               name: 'Physical Science',
             },
             {
-              id: 'ls-socio',
+              id: 'ls_socio',
               name: 'Social and Behavioral Science',
             },
           ],
@@ -164,7 +165,7 @@ export class RequirementService {
       parentId: 'coe',
       requirementCategories: [
         {
-          id: 'eecs-math',
+          id: 'eecs_math',
           name: 'Math',
           requirements: [
             {
@@ -188,7 +189,7 @@ export class RequirementService {
           ],
         },
         {
-          id: 'eecs-physics',
+          id: 'eecs_physics',
           name: 'Physics',
           requirements: [
             {
@@ -206,7 +207,7 @@ export class RequirementService {
           ],
         },
         {
-          id: 'eecs-lower-div',
+          id: 'eecs_lower_div',
           name: 'Lower Division',
           requirements: [
             {
@@ -287,25 +288,25 @@ export class RequirementService {
           ],
         },
         {
-          id: 'eecs-upper-div',
+          id: 'eecs_upper_div',
           name: 'Upper Division',
           requirements: [
             {
               type: 'unit',
-              id: 'eecs-upper-div',
+              id: 'eecs_upper_div',
               name: 'Upper Division',
               units: 20,
               requirement: {
                 type: 'tag',
-                id: 'eecs-upper-div-course',
+                id: 'eecs_upper_div_course',
                 name: 'EECS Upper Division Course',
-                tag: 'eecs-upper-div',
+                tagId: 'eecs_upper_div',
               },
             },
           ],
         },
         {
-          id: 'eecs-ethics',
+          id: 'eecs_ethics',
           name: 'Ethics',
           requirements: [
             {
@@ -336,12 +337,12 @@ export class RequirementService {
           ],
         },
         {
-          id: 'linguis-core',
+          id: 'linguis_core',
           name: 'Core',
           requirements: [
             {
               type: 'multi',
-              id: 'linguis-core',
+              id: 'linguis_core',
               name: 'Linguistics Core',
               numRequired: 4,
               requirements: [
@@ -380,20 +381,20 @@ export class RequirementService {
           ],
         },
         {
-          id: 'linguis-electives',
+          id: 'linguis_electives',
           name: 'Electives',
           requirements: [
             // TODO Add unit-style requirements
             {
-              id: 'linguis-elective-1',
+              id: 'linguis_elective_1',
               name: 'Elective 1',
             },
             {
-              id: 'linguis-elective-2',
+              id: 'linguis_elective_2',
               name: 'Elective 2',
             },
             {
-              id: 'linguis-elective-3',
+              id: 'linguis_elective_3',
               name: 'Elective 3',
             },
           ],
@@ -404,7 +405,7 @@ export class RequirementService {
 
   private sharedRequirementsObj: Observable<object>;
 
-  constructor(private courseService: CourseService) {}
+  constructor(private courseService: CourseService, private tagService: TagService) {}
 
   getRequirements(): Observable<RequirementSet[]> {
     if (!this.sharedRequirementsObj) {
@@ -448,13 +449,16 @@ export class RequirementService {
   }
 
   private prepareRequirements(data: object): Observable<object> {
-    return this.courseService.getCoursesObj().pipe(
-      map((coursesObj: object) => {
+    return forkJoin({
+      coursesObj: this.courseService.getCoursesObj(),
+      tagsObj: this.tagService.getTagsObj(),
+    }).pipe(
+      map((serviceObj: { coursesObj: object; tagsObj: object }) => {
         // Instantiate requirement types and link courseIds to Course objects
         Object.values(data).forEach((rawSet) => {
           rawSet.requirementCategories.forEach((rawCategory) => {
             rawCategory.requirements = rawCategory.requirements.map((rawReq) =>
-              this.getRequirementObject(rawReq, coursesObj),
+              this.getRequirementObject(rawReq, serviceObj),
             );
           });
         });
@@ -463,7 +467,9 @@ export class RequirementService {
     );
   }
 
-  private getRequirementObject(rawReq, coursesObj): Requirement {
+  private getRequirementObject(rawReq, serviceObj: { coursesObj: object; tagsObj: object }): Requirement {
+    const { coursesObj, tagsObj } = serviceObj;
+
     let requirement = { ...rawReq };
 
     switch (requirement.type) {
@@ -474,18 +480,20 @@ export class RequirementService {
         break;
 
       case 'tag':
+        requirement.tag = tagsObj[requirement.tagId];
+        delete requirement.tagId;
         requirement = new TagRequirement(requirement);
         break;
 
       case 'multi':
         requirement.requirements = requirement.requirements.map((rawChildReq) =>
-          this.getRequirementObject(rawChildReq, coursesObj),
+          this.getRequirementObject(rawChildReq, serviceObj),
         );
         requirement = new MultiRequirement(requirement);
         break;
 
       case 'unit':
-        requirement.requirement = this.getRequirementObject(requirement.requirement, coursesObj);
+        requirement.requirement = this.getRequirementObject(requirement.requirement, serviceObj);
         requirement = new UnitRequirement(requirement);
         break;
 

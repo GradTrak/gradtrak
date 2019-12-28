@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { flatMap, map, shareReplay } from 'rxjs/operators';
 import { Course } from 'models/course.model';
+import { TagService } from 'services/tag.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: 'C8',
       id: 'compscic8',
-      tags: [],
+      tagIds: [],
     },
     compsci10: {
       units: 4,
@@ -22,7 +23,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '10',
       id: 'compsci10',
-      tags: [],
+      tagIds: [],
     },
     compsci24: {
       units: 1,
@@ -30,7 +31,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '24',
       id: 'compsci24',
-      tags: [],
+      tagIds: [],
     },
     compsci36: {
       units: 2,
@@ -38,7 +39,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '36',
       id: 'compsci36',
-      tags: [],
+      tagIds: [],
     },
     compsci47a: {
       units: 1,
@@ -46,7 +47,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '47A',
       id: 'compsci47a',
-      tags: [],
+      tagIds: [],
     },
     compsci47b: {
       units: 1,
@@ -54,7 +55,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '47B',
       id: 'compsci47b',
-      tags: [],
+      tagIds: [],
     },
     compsci47c: {
       units: 1,
@@ -62,7 +63,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '47C',
       id: 'compsci47c',
-      tags: [],
+      tagIds: [],
     },
     compsci61a: {
       units: 4,
@@ -70,7 +71,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '61A',
       id: 'compsci61a',
-      tags: [],
+      tagIds: [],
     },
     compsci61b: {
       units: 4,
@@ -78,7 +79,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '61B',
       id: 'compsci61b',
-      tags: [],
+      tagIds: [],
     },
     compsci61c: {
       units: 4,
@@ -86,7 +87,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '61C',
       id: 'compsci61c',
-      tags: [],
+      tagIds: [],
     },
     compsci70: {
       units: 4,
@@ -94,7 +95,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '70',
       id: 'compsci70',
-      tags: [],
+      tagIds: [],
     },
     compsci88: {
       units: 3,
@@ -102,7 +103,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '88',
       id: 'compsci88',
-      tags: [],
+      tagIds: [],
     },
     compsci152: {
       units: 4,
@@ -110,7 +111,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '152',
       id: 'compsci152',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci160: {
       units: 4,
@@ -118,7 +119,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '160',
       id: 'compsci160',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci161: {
       units: 4,
@@ -126,7 +127,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '161',
       id: 'compsci161',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci162: {
       units: 4,
@@ -134,7 +135,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '162',
       id: 'compsci162',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci164: {
       units: 4,
@@ -142,7 +143,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '164',
       id: 'compsci164',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci168: {
       units: 4,
@@ -150,7 +151,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '168',
       id: 'compsci168',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci169: {
       units: 4,
@@ -158,7 +159,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '169',
       id: 'compsci169',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci170: {
       units: 4,
@@ -166,7 +167,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '170',
       id: 'compsci170',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci174: {
       units: 4,
@@ -174,7 +175,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '174',
       id: 'compsci174',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compscil182: {
       units: 4,
@@ -182,7 +183,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: 'L182',
       id: 'compscil182',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsciw182: {
       units: 4,
@@ -190,7 +191,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: 'W182',
       id: 'compsciw182',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci184: {
       units: 4,
@@ -198,7 +199,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '184',
       id: 'compsci184',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsciw186: {
       units: 4,
@@ -206,7 +207,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: 'W186',
       id: 'compsciw186',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci188: {
       units: 4,
@@ -214,7 +215,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '188',
       id: 'compsci188',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci189: {
       units: 4,
@@ -222,7 +223,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '189',
       id: 'compsci189',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compscic191: {
       units: 3,
@@ -230,7 +231,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: 'C191',
       id: 'compscic191',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci194: {
       units: 1,
@@ -238,7 +239,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '194',
       id: 'compsci194',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     compsci195: {
       units: 1,
@@ -246,7 +247,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '195',
       id: 'compsci195',
-      tags: ['eecs-ethics'],
+      tagIds: ['eecs_ethics'],
     },
     compsci198: {
       units: 1,
@@ -254,7 +255,7 @@ export class CourseService {
       dept: 'COMPSCI',
       no: '198',
       id: 'compsci198',
-      tags: [],
+      tagIds: [],
     },
     eecs16a: {
       units: 4,
@@ -262,7 +263,7 @@ export class CourseService {
       dept: 'EECS',
       no: '16A',
       id: 'eecs16a',
-      tags: [],
+      tagIds: [],
     },
     eecs16b: {
       units: 4,
@@ -270,7 +271,7 @@ export class CourseService {
       dept: 'EECS',
       no: '16B',
       id: 'eecs16b',
-      tags: [],
+      tagIds: [],
     },
     eecsc106a: {
       units: 4,
@@ -278,7 +279,7 @@ export class CourseService {
       dept: 'EECS',
       no: 'C106A',
       id: 'eecsc106a',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecsc106b: {
       units: 4,
@@ -286,7 +287,7 @@ export class CourseService {
       dept: 'EECS',
       no: 'C106B',
       id: 'eecsc106b',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecs126: {
       units: 4,
@@ -294,7 +295,7 @@ export class CourseService {
       dept: 'EECS',
       no: '126',
       id: 'eecs126',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecs127: {
       units: 4,
@@ -302,7 +303,7 @@ export class CourseService {
       dept: 'EECS',
       no: '127',
       id: 'eecs127',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecs149: {
       units: 4,
@@ -310,7 +311,7 @@ export class CourseService {
       dept: 'EECS',
       no: '149',
       id: 'eecs149',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecs151: {
       units: 3,
@@ -318,7 +319,7 @@ export class CourseService {
       dept: 'EECS',
       no: '151',
       id: 'eecs151',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecs151la: {
       units: 2,
@@ -326,7 +327,7 @@ export class CourseService {
       dept: 'EECS',
       no: '151LA',
       id: 'eecs151la',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     eecs151lb: {
       units: 2,
@@ -334,7 +335,7 @@ export class CourseService {
       dept: 'EECS',
       no: '151LB',
       id: 'eecs151lb',
-      tags: ['eecs-upper-div'],
+      tagIds: ['eecs_upper_div'],
     },
     englishr1a: {
       units: 4,
@@ -342,7 +343,7 @@ export class CourseService {
       dept: 'ENGLISH',
       no: 'R1A',
       id: 'englishr1a',
-      tags: ['rc-a'],
+      tagIds: ['rc_a'],
     },
     englishr1b: {
       units: 4,
@@ -350,7 +351,7 @@ export class CourseService {
       dept: 'ENGLISH',
       no: 'R1B',
       id: 'englishr1b',
-      tags: ['rc-b'],
+      tagIds: ['rc_b'],
     },
     hss1ac: {
       units: 4,
@@ -358,7 +359,7 @@ export class CourseService {
       dept: 'H/SS',
       no: '1AC',
       id: 'hss1ac',
-      tags: ['ac'],
+      tagIds: ['ac'],
     },
     hss2: {
       units: 4,
@@ -366,7 +367,7 @@ export class CourseService {
       dept: 'H/SS',
       no: '2',
       id: 'hss2',
-      tags: [],
+      tagIds: [],
     },
     hss100: {
       units: 4,
@@ -374,7 +375,7 @@ export class CourseService {
       dept: 'H/SS',
       no: '100',
       id: 'hss100',
-      tags: [],
+      tagIds: [],
     },
     hss101: {
       units: 4,
@@ -382,7 +383,7 @@ export class CourseService {
       dept: 'H/SS',
       no: '101',
       id: 'hss101',
-      tags: [],
+      tagIds: [],
     },
     info159: {
       units: 4,
@@ -390,7 +391,7 @@ export class CourseService {
       dept: 'INFO',
       no: '159',
       id: 'info159',
-      tags: ['eecs-upper-div', 'linguis-elective'],
+      tagIds: ['eecs_upper_div', 'linguis_elective'],
     },
     linguis1a: {
       units: 5,
@@ -398,7 +399,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '1A',
       id: 'linguis1a',
-      tags: [],
+      tagIds: [],
     },
     linguis1b: {
       units: 5,
@@ -406,7 +407,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '1B',
       id: 'linguis1b',
-      tags: [],
+      tagIds: [],
     },
     linguisr1b: {
       units: 4,
@@ -414,7 +415,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'R1B',
       id: 'linguisr1b',
-      tags: [],
+      tagIds: [],
     },
     linguis5: {
       units: 4,
@@ -422,7 +423,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '5',
       id: 'linguis5',
-      tags: [],
+      tagIds: [],
     },
     linguis10: {
       units: 3,
@@ -430,7 +431,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '10',
       id: 'linguis10',
-      tags: [],
+      tagIds: [],
     },
     linguis24: {
       units: 1,
@@ -438,7 +439,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '24',
       id: 'linguis24',
-      tags: [],
+      tagIds: [],
     },
     linguis47: {
       units: 3,
@@ -446,7 +447,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '47',
       id: 'linguis47',
-      tags: [],
+      tagIds: [],
     },
     linguis100: {
       units: 4,
@@ -454,7 +455,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '100',
       id: 'linguis100',
-      tags: [],
+      tagIds: [],
     },
     linguis106: {
       units: 4,
@@ -462,7 +463,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '106',
       id: 'linguis106',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis109: {
       units: 3,
@@ -470,7 +471,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '109',
       id: 'linguis109',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis110: {
       units: 4,
@@ -478,7 +479,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '110',
       id: 'linguis110',
-      tags: [],
+      tagIds: [],
     },
     linguis111: {
       units: 4,
@@ -486,7 +487,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '111',
       id: 'linguis111',
-      tags: [],
+      tagIds: [],
     },
     linguis115: {
       units: 4,
@@ -494,7 +495,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '115',
       id: 'linguis115',
-      tags: [],
+      tagIds: [],
     },
     linguis120: {
       units: 4,
@@ -502,7 +503,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '120',
       id: 'linguis120',
-      tags: [],
+      tagIds: [],
     },
     linguis121: {
       units: 4,
@@ -510,7 +511,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '121',
       id: 'linguis121',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis123: {
       units: 3,
@@ -518,7 +519,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '123',
       id: 'linguis123',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis130: {
       units: 4,
@@ -526,7 +527,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '130',
       id: 'linguis130',
-      tags: [],
+      tagIds: [],
     },
     linguis140: {
       units: 3,
@@ -534,7 +535,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '140',
       id: 'linguis140',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguisc142: {
       units: 3,
@@ -542,7 +543,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'C142',
       id: 'linguisc142',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguisc146: {
       units: 3,
@@ -550,7 +551,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'C146',
       id: 'linguisc146',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis148: {
       units: 3,
@@ -558,7 +559,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '148',
       id: 'linguis148',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis150: {
       units: 3,
@@ -566,7 +567,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '150',
       id: 'linguis150',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis155ac: {
       units: 4,
@@ -574,7 +575,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '155AC',
       id: 'linguis155ac',
-      tags: ['ac', 'linguis-elective'],
+      tagIds: ['ac', 'linguis_elective'],
     },
     linguisc160: {
       units: 4,
@@ -582,7 +583,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'C160',
       id: 'linguisc160',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis170: {
       units: 3,
@@ -590,7 +591,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '170',
       id: 'linguis170',
-      tags: ['linguis-elective'],
+      tagIds: ['linguis_elective'],
     },
     linguis197: {
       units: 1,
@@ -598,7 +599,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '197',
       id: 'linguis197',
-      tags: [],
+      tagIds: [],
     },
     math1a: {
       units: 4,
@@ -606,7 +607,7 @@ export class CourseService {
       dept: 'MATH',
       no: '1A',
       id: 'math1a',
-      tags: [],
+      tagIds: [],
     },
     math1b: {
       units: 4,
@@ -614,7 +615,7 @@ export class CourseService {
       dept: 'MATH',
       no: '1B',
       id: 'math1b',
-      tags: [],
+      tagIds: [],
     },
     math53: {
       units: 4,
@@ -622,7 +623,7 @@ export class CourseService {
       dept: 'MATH',
       no: '53',
       id: 'math53',
-      tags: [],
+      tagIds: [],
     },
     physics7a: {
       units: 4,
@@ -630,7 +631,7 @@ export class CourseService {
       dept: 'PHYSICS',
       no: '7A',
       id: 'physics7a',
-      tags: [],
+      tagIds: [],
     },
     physics7b: {
       units: 4,
@@ -638,13 +639,13 @@ export class CourseService {
       dept: 'PHYSICS',
       no: '7B',
       id: 'physics7b',
-      tags: [],
+      tagIds: [],
     },
   };
 
   private sharedCoursesObj: Observable<object>;
 
-  constructor() {}
+  constructor(private tagService: TagService) {}
 
   getCourses(): Observable<Course[]> {
     if (!this.sharedCoursesObj) {
@@ -661,7 +662,24 @@ export class CourseService {
   }
 
   private fetchCourseData(): void {
-    this.sharedCoursesObj = of(this.DUMMY_COURSE_DATA).pipe(map(this.instantiateCourses), shareReplay());
+    this.sharedCoursesObj = of(this.DUMMY_COURSE_DATA).pipe(
+      flatMap((data: object) => this.linkTags(data)),
+      map(this.instantiateCourses),
+      shareReplay(),
+    );
+  }
+
+  private linkTags(data: object): Observable<object> {
+    return this.tagService.getTagsObj().pipe(
+      map((tagsObj: object) => {
+        Object.values(data).forEach((rawCourse) => {
+          rawCourse.tags = rawCourse.tagIds.map((tagId: string) => tagsObj[tagId]);
+          delete rawCourse.tagIds;
+          return rawCourse;
+        });
+        return data;
+      }),
+    );
   }
 
   private instantiateCourses(data: object): object {
