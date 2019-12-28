@@ -193,16 +193,55 @@ export class RequirementService {
           name: 'Physics',
           requirements: [
             {
-              type: 'course',
-              id: 'physics7a',
-              name: 'PHYSICS 7A',
-              courseId: 'physics7a',
-            },
-            {
-              type: 'course',
-              id: 'physics7b',
-              name: 'PHYSICS 7B',
-              courseId: 'physics7b',
+              type: 'multi',
+              id: 'eecs_physics',
+              name: 'EECS Physics',
+              numRequired: 1,
+              hidden: false,
+              requirements: [
+                {
+                  type: 'multi',
+                  id: 'eecs_physics7',
+                  name: 'EECS Physics 7A/B',
+                  numRequired: 2,
+                  hidden: false,
+                  requirements: [
+                    {
+                      type: 'course',
+                      id: 'physics7a',
+                      name: 'PHYSICS 7A',
+                      courseId: 'physics7a',
+                    },
+                    {
+                      type: 'course',
+                      id: 'physics7b',
+                      name: 'PHYSICS 7B',
+                      courseId: 'physics7b',
+                    },
+                  ],
+                },
+                {
+                  type: 'multi',
+                  id: 'eecs_physics5',
+                  name: 'EECS Physics 5A/B',
+                  numRequired: 2,
+                  hidden: false,
+                  requirements: [
+                    {
+                      type: 'course',
+                      id: 'physics5a',
+                      name: 'PHYSICS 5A',
+                      courseId: 'physics5a',
+                    },
+                    {
+                      type: 'course',
+                      id: 'physics5b',
+                      name: 'PHYSICS 5B',
+                      courseId: 'physics5b',
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },

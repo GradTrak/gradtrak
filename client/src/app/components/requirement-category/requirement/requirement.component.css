@@ -9,3 +9,7 @@
 .nested {
   width: 100%;
 }
+
+.transparent {
+  padding: 4px;
+}

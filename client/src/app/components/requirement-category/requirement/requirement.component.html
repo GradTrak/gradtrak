@@ -4,20 +4,45 @@
 <ng-template #annotation>
   <div [outerHTML]="getAnnotation()"></div>
 </ng-template>
+<tr
+  [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+  [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+  triggers="mouseenter:mouseleave"
+>
+  <ng-container *ngIf="!isMulti() && !isUnit()">
+    <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
+  </ng-container>
+  <ng-container *ngIf="isMulti(); then multiReq"></ng-container>
+  <ng-container *ngIf="isUnit(); then unitReq"></ng-container>
+</tr>
 <!-- TODO Find a better way to cast variables in HTML templates -->
 <!-- TODO Make these look better -->
 <ng-template #multiReq>
-  <td>
-    {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
-    <table class="nested">
-      <tbody
-        app-requirement
-        *ngFor="let childReq of getMulti().requirements"
-        [requirement]="childReq"
-        [courses]="courses"
-      ></tbody>
-    </table>
-  </td>
+  <ng-container *ngIf="getMulti().numRequired < getMulti().requirements.length; else multiReqAll">
+    <td>
+      {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+      <table class="nested">
+        <tbody
+          app-requirement
+          *ngFor="let childReq of getMulti().requirements"
+          [requirement]="childReq"
+          [courses]="courses"
+        ></tbody>
+      </table>
+    </td>
+  </ng-container>
+  <ng-template #multiReqAll>
+    <td class="transparent">
+      <table class="nested">
+        <tbody
+          app-requirement
+          *ngFor="let childReq of getMulti().requirements"
+          [requirement]="childReq"
+          [courses]="courses"
+        ></tbody>
+      </table>
+    </td>
+  </ng-template>
 </ng-template>
 <ng-template #unitReq>
   <td>
@@ -33,14 +58,3 @@
     </table>
   </td>
 </ng-template>
-<tr
-  [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-  [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
-  triggers="mouseenter:mouseleave"
->
-  <ng-container *ngIf="!isMulti() && !isUnit()">
-    <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
-  </ng-container>
-  <ng-container *ngIf="isMulti(); then multiReq"></ng-container>
-  <ng-container *ngIf="isUnit(); then unitReq"></ng-container>
-</tr>
