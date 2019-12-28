@@ -455,7 +455,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '100',
       id: 'linguis100',
-      tagIds: ['ls_socio'],
+      tagIds: ['ls_socio', 'ls_bio'],
     },
     linguis106: {
       units: 4,
@@ -463,7 +463,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '106',
       id: 'linguis106',
-      tagIds: ['linguis_elective'],
+      tagIds: ['ls_socio', 'linguis_elective'],
     },
     linguis109: {
       units: 3,
@@ -631,7 +631,7 @@ export class CourseService {
       dept: 'PHYSICS',
       no: '7A',
       id: 'physics7a',
-      tagIds: [],
+      tagIds: ['ls_phys'],
     },
     physics7b: {
       units: 4,
@@ -639,7 +639,7 @@ export class CourseService {
       dept: 'PHYSICS',
       no: '7B',
       id: 'physics7b',
-      tagIds: [],
+      tagIds: ['ls_phys'],
     },
   };
 

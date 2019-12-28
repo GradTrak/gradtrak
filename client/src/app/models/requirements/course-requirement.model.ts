@@ -1,13 +1,13 @@
 import { Course } from 'models/course.model';
-import { Requirement } from 'models/requirement.model';
+import { SingleRequirement } from 'models/requirements/single-requirement.model';
 
-export class CourseRequirement extends Requirement {
+export class CourseRequirement extends SingleRequirement {
   id: string;
   name: string;
   course: Course;
 
-  isFulfilled(courses: Course[]): boolean {
-    return courses.includes(this.course);
+  isFulfillableBy(course: Course): boolean {
+    return course === this.course;
   }
 
   toString(): string {

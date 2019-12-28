@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
+import { SingleRequirement } from 'models/requirements/single-requirement.model';
 
 export class MutexRequirement extends Requirement {
   static readonly UNFULFILLED = 0;
   static readonly POTENTIAL = 1;
   static readonly FULFILLED = 2;
 
-  requirements: Requirement[];
+  requirements: SingleRequirement[];
 
   isFulfilled(courses: Course[]): boolean {
     return this.getFulfillment(courses).every(
@@ -94,10 +95,10 @@ export class MutexRequirement extends Requirement {
    */
   // TODO This feels really janky
   private mapReqsToCourses(courses: Course[]): any[] {
-    const reqsToCourses: any[] = this.requirements.map((requirement: Requirement) => {
+    const reqsToCourses: any[] = this.requirements.map((requirement: SingleRequirement) => {
       return {
         requirement,
-        courses: courses.filter((course: Course) => requirement.isFulfilled([course])),
+        courses: courses.filter((course: Course) => requirement.isFulfillableBy(course)),
       };
     });
     const coursesToReqs: any[] = courses.map((course: Course) => {

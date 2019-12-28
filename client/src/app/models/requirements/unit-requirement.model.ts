@@ -1,13 +1,13 @@
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
+import { SingleRequirement } from 'models/requirements/single-requirement.model';
 
 export class UnitRequirement extends Requirement {
   id: string;
   name: string;
 
   units: number;
-  // TODO Add StandaloneRequirement interface
-  requirement: Requirement;
+  requirement: SingleRequirement;
 
   isFulfilled(courses: Course[]): boolean {
     return this.unitsFulfilled(courses) >= this.units;
@@ -18,7 +18,7 @@ export class UnitRequirement extends Requirement {
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {
-    return courses.filter((course) => this.requirement.isFulfilled([course]));
+    return courses.filter((course) => this.requirement.isFulfillableBy(course));
   }
 
   toString(): string {
