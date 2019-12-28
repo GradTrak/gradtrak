@@ -4,6 +4,6 @@ export class RequirementSet {
   id: string;
   name: string;
   parent: RequirementSet;
-  isMajor: boolean;
+  selectable: boolean;
   requirementCategories: RequirementCategory[];
 }

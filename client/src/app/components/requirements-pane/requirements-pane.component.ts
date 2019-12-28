@@ -31,7 +31,7 @@ export class RequirementsPaneComponent implements OnInit {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
       const selectableMajors: RequirementSet[] = [];
-      this.selectableMajors = requirementSets.filter((requirementSet: RequirementSet)=>requirementSet.isMajor);
+      this.selectableMajors = requirementSets.filter((requirementSet: RequirementSet)=>requirementSet.selectable);
       });
   }
 }
