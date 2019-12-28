@@ -11,6 +11,7 @@ export class RequirementsPaneComponent implements OnInit {
   requirementSets: RequirementSet[];
   majorRequirementSets: RequirementSet[];
   selectableMajors: RequirementSet[];
+  selectedMajor: RequirementSet;
 
   updateMajorRequirements(baseReqSet: RequirementSet): RequirementSet[]{
     const selected: RequirementSet[] = [baseReqSet];
