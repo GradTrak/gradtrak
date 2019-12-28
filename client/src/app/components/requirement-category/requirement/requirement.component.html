@@ -9,7 +9,7 @@
   [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
   triggers="mouseenter:mouseleave"
 >
-  <ng-container *ngIf="!isMulti() && !isUnit()">
+  <ng-container *ngIf="!isMulti() && !isMutex() && !isUnit()">
     <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
   </ng-container>
   <!-- TODO Find a better way to cast variables in HTML templates -->
@@ -55,6 +55,23 @@
         <tbody>
           <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
             <td>{{ course.toString() }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </ng-container>
+  <ng-container *ngIf="isMutex()">
+    <td>
+      Distinctly fulfill
+      <table class="nested">
+        <tbody>
+          <tr
+            *ngFor="let childStatus of getMutex().getFulfillment(courses)"
+            [ngClass]="getMutexFulfillment(childStatus)"
+          >
+            <td>
+              {{ childStatus.requirement.name }}
+            </td>
           </tr>
         </tbody>
       </table>

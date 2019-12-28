@@ -6,6 +6,7 @@ import { RequirementCategory } from 'models/requirement-category.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { CourseRequirement } from 'models/requirements/course-requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
+import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 import { CourseService } from 'services/course.service';
@@ -128,32 +129,53 @@ export class RequirementService {
           name: 'Breadth Requirements',
           requirements: [
             {
-              id: 'ls_arts',
-              name: 'Arts and Literature',
-            },
-            {
-              id: 'ls_bio',
-              name: 'Biological Science',
-            },
-            {
-              id: 'ls_hist',
-              name: 'Historical Studies',
-            },
-            {
-              id: 'ls_inter',
-              name: 'International Studies',
-            },
-            {
-              id: 'ls_philo',
-              name: 'Philosophy and Values',
-            },
-            {
-              id: 'ls_phys',
-              name: 'Physical Science',
-            },
-            {
-              id: 'ls_socio',
-              name: 'Social and Behavioral Science',
+              type: 'mutex',
+              id: 'ls_breadth',
+              name: 'L&S Breadth Requirements',
+              requirements: [
+                {
+                  type: 'tag',
+                  id: 'ls_arts',
+                  name: 'Arts and Literature',
+                  tagId: 'ls_arts',
+                },
+                {
+                  type: 'tag',
+                  id: 'ls_bio',
+                  name: 'Biological Science',
+                  tagId: 'ls_bio',
+                },
+                {
+                  type: 'tag',
+                  id: 'ls_hist',
+                  name: 'Historical Studies',
+                  tagId: 'ls_hist',
+                },
+                {
+                  type: 'tag',
+                  id: 'ls_inter',
+                  name: 'International Studies',
+                  tagId: 'ls_inter',
+                },
+                {
+                  type: 'tag',
+                  id: 'ls_philo',
+                  name: 'Philosophy and Values',
+                  tagId: 'ls_philo',
+                },
+                {
+                  type: 'tag',
+                  id: 'ls_phys',
+                  name: 'Physical Science',
+                  tagId: 'ls_phys',
+                },
+                {
+                  type: 'tag',
+                  id: 'ls_socio',
+                  name: 'Social and Behavioral Science',
+                  tagId: 'ls_socio',
+                },
+              ],
             },
           ],
         },
@@ -529,6 +551,13 @@ export class RequirementService {
           this.getRequirementObject(rawChildReq, serviceObj),
         );
         requirement = new MultiRequirement(requirement);
+        break;
+
+      case 'mutex':
+        requirement.requirements = requirement.requirements.map((rawChildReq) =>
+          this.getRequirementObject(rawChildReq, serviceObj),
+        );
+        requirement = new MutexRequirement(requirement);
         break;
 
       case 'unit':

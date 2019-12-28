@@ -455,7 +455,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '100',
       id: 'linguis100',
-      tagIds: [],
+      tagIds: ['ls_socio'],
     },
     linguis106: {
       units: 4,
