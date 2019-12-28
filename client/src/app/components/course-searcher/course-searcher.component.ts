@@ -42,8 +42,7 @@ export class CourseSearcherComponent implements OnInit {
       map(searchTerm=>searchTerm.length < 2? [] :
         searchFunction(searchTerm, this.allCourses)),
       map(courseList=>courseList.map((course)=>course.id))
-      ))
-      ;
+      ));
 //      return this.courseMatches.map((course: Course)=>(course.dept + ' ' + course.no));
 
   }
