@@ -12,54 +12,52 @@
   <ng-container *ngIf="!isMulti() && !isUnit()">
     <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
   </ng-container>
-  <ng-container *ngIf="isMulti(); then multiReq"></ng-container>
-  <ng-container *ngIf="isUnit(); then unitReq"></ng-container>
-</tr>
-<!-- TODO Find a better way to cast variables in HTML templates -->
-<!-- TODO Make these look better -->
-<ng-template #multiReq>
-  <ng-container *ngIf="getMulti().numRequired < getMulti().requirements.length; else multiReqAll">
+  <!-- TODO Find a better way to cast variables in HTML templates -->
+  <!-- TODO Make these look better -->
+  <ng-container *ngIf="isMulti()">
+    <ng-container *ngIf="getMulti().numRequired < getMulti().requirements.length; else multiReqAll">
+      <td>
+        <ng-container *ngIf="getMulti().numRequired > 1; else multiOne">
+          {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+        </ng-container>
+        <ng-template #multiOne>
+          One of
+        </ng-template>
+        <table class="nested">
+          <tbody
+            app-requirement
+            *ngFor="let childReq of getMulti().requirements"
+            [requirement]="childReq"
+            [courses]="courses"
+          ></tbody>
+        </table>
+      </td>
+    </ng-container>
+    <ng-template #multiReqAll>
+      <td class="transparent">
+        <table class="nested">
+          <tbody
+            app-requirement
+            *ngFor="let childReq of getMulti().requirements"
+            [requirement]="childReq"
+            [courses]="courses"
+          ></tbody>
+        </table>
+      </td>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="isUnit()">
     <td>
-      <ng-container *ngIf="getMulti().numRequired > 1; else multiOne">
-        {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
-      </ng-container>
-      <ng-template #multiOne>
-        One of
-      </ng-template>
+      {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
+      <br />
+      {{ getUnit().requirement.toString() }}
       <table class="nested">
-        <tbody
-          app-requirement
-          *ngFor="let childReq of getMulti().requirements"
-          [requirement]="childReq"
-          [courses]="courses"
-        ></tbody>
+        <tbody>
+          <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+            <td>{{ course.toString() }}</td>
+          </tr>
+        </tbody>
       </table>
     </td>
   </ng-container>
-  <ng-template #multiReqAll>
-    <td class="transparent">
-      <table class="nested">
-        <tbody
-          app-requirement
-          *ngFor="let childReq of getMulti().requirements"
-          [requirement]="childReq"
-          [courses]="courses"
-        ></tbody>
-      </table>
-    </td>
-  </ng-template>
-</ng-template>
-<ng-template #unitReq>
-  <td>
-    {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
-    <br />
-    {{ getUnit().requirement.toString() }}
-    <table class="nested">
-      <tbody>
-        <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-          <td>{{ course.toString() }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </td>
-</ng-template>
+</tr>
