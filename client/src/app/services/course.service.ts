@@ -673,7 +673,13 @@ export class CourseService {
     return this.tagService.getTagsObj().pipe(
       map((tagsObj: object) => {
         Object.values(data).forEach((rawCourse) => {
-          rawCourse.tags = rawCourse.tagIds.map((tagId: string) => tagsObj[tagId]);
+          rawCourse.tags = rawCourse.tagIds.map((tagId: string) => {
+            const tag = tagsObj[tagId];
+            if (!tag) {
+              console.error(`No Tag object found for tag ID: ${tagId}`);
+            }
+            return tag;
+          });
           delete rawCourse.tagIds;
           return rawCourse;
         });

@@ -53,8 +53,10 @@ export class RequirementService {
           name: 'American Cultures',
           requirements: [
             {
+              type: 'tag',
               id: 'ac',
               name: 'American Cultures',
+              tagId: 'ac',
             },
           ],
         },
@@ -70,29 +72,202 @@ export class RequirementService {
           name: 'Humanities and Social Sciences',
           requirements: [
             {
-              id: 'coe_r1a',
-              name: 'R&C Part A',
-            },
-            {
-              id: 'coe_r1b',
-              name: 'R&C Part B',
-            },
-            // TODO Add multi-course-style requirements
-            {
-              id: 'coe_hss1',
-              name: 'H/SS',
-            },
-            {
-              id: 'coe_hss2',
-              name: 'H/SS',
-            },
-            {
-              id: 'coe_hss_u1',
-              name: 'H/SS Upper Division',
-            },
-            {
-              id: 'coe_hss_u2',
-              name: 'H/SS Upper Division',
+              type: 'mutex',
+              name: 'CoE Humanities and Social Sciences',
+              requirements: [
+                {
+                  type: 'tag',
+                  id: 'coe_r1a',
+                  name: 'R&C Part A',
+                  tagId: 'rc_a',
+                },
+                {
+                  type: 'tag',
+                  id: 'coe_r1b',
+                  name: 'R&C Part B',
+                  tagId: 'rc_b',
+                },
+                {
+                  type: 'poly',
+                  id: 'coe_hss',
+                  name: 'H/SS',
+                  numRequired: 1,
+                  requirements: [
+                    {
+                      type: 'tag',
+                      id: 'ls_arts',
+                      name: 'Arts and Literature',
+                      tagId: 'ls_arts',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_hist',
+                      name: 'Historical Studies',
+                      tagId: 'ls_hist',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_inter',
+                      name: 'International Studies',
+                      tagId: 'ls_inter',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_philo',
+                      name: 'Philosophy and Values',
+                      tagId: 'ls_philo',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_socio',
+                      name: 'Social and Behavioral Science',
+                      tagId: 'ls_socio',
+                    },
+                  ],
+                },
+                {
+                  type: 'poly',
+                  id: 'coe_hss',
+                  name: 'H/SS',
+                  numRequired: 1,
+                  requirements: [
+                    {
+                      type: 'tag',
+                      id: 'ls_arts',
+                      name: 'Arts and Literature',
+                      tagId: 'ls_arts',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_hist',
+                      name: 'Historical Studies',
+                      tagId: 'ls_hist',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_inter',
+                      name: 'International Studies',
+                      tagId: 'ls_inter',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_philo',
+                      name: 'Philosophy and Values',
+                      tagId: 'ls_philo',
+                    },
+                    {
+                      type: 'tag',
+                      id: 'ls_socio',
+                      name: 'Social and Behavioral Science',
+                      tagId: 'ls_socio',
+                    },
+                  ],
+                },
+                {
+                  type: 'poly',
+                  id: 'coe_hss_upper_div',
+                  name: 'H/SS Upper Division',
+                  numRequired: 2,
+                  requirements: [
+                    {
+                      type: 'poly',
+                      id: 'coe_hss',
+                      name: 'H/SS',
+                      numRequired: 1,
+                      requirements: [
+                        {
+                          type: 'tag',
+                          id: 'ls_arts',
+                          name: 'Arts and Literature',
+                          tagId: 'ls_arts',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_hist',
+                          name: 'Historical Studies',
+                          tagId: 'ls_hist',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_inter',
+                          name: 'International Studies',
+                          tagId: 'ls_inter',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_philo',
+                          name: 'Philosophy and Values',
+                          tagId: 'ls_philo',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_socio',
+                          name: 'Social and Behavioral Science',
+                          tagId: 'ls_socio',
+                        },
+                      ],
+                    },
+                    {
+                      type: 'tag',
+                      id: 'upper_div',
+                      name: 'Upper Division Course',
+                      tagId: 'upper_div',
+                    },
+                  ],
+                },
+                {
+                  type: 'poly',
+                  id: 'coe_hss_upper_div',
+                  name: 'H/SS Upper Division',
+                  numRequired: 2,
+                  requirements: [
+                    {
+                      type: 'poly',
+                      id: 'coe_hss',
+                      name: 'H/SS',
+                      numRequired: 1,
+                      requirements: [
+                        {
+                          type: 'tag',
+                          id: 'ls_arts',
+                          name: 'Arts and Literature',
+                          tagId: 'ls_arts',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_hist',
+                          name: 'Historical Studies',
+                          tagId: 'ls_hist',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_inter',
+                          name: 'International Studies',
+                          tagId: 'ls_inter',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_philo',
+                          name: 'Philosophy and Values',
+                          tagId: 'ls_philo',
+                        },
+                        {
+                          type: 'tag',
+                          id: 'ls_socio',
+                          name: 'Social and Behavioral Science',
+                          tagId: 'ls_socio',
+                        },
+                      ],
+                    },
+                    {
+                      type: 'tag',
+                      id: 'upper_div',
+                      name: 'Upper Division Course',
+                      tagId: 'upper_div',
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
@@ -108,12 +283,16 @@ export class RequirementService {
           name: 'Essential Skills',
           requirements: [
             {
+              type: 'tag',
               id: 'ls_r1a',
               name: 'R&C Part A',
+              tagId: 'rc_a',
             },
             {
+              type: 'tag',
               id: 'ls_r1b',
               name: 'R&C Part B',
+              tagId: 'rc_b',
             },
             {
               id: 'ls_quant',
@@ -372,10 +551,10 @@ export class RequirementService {
           name: 'Ethics',
           requirements: [
             {
-              type: 'course',
-              id: 'compsci195',
-              name: 'COMPSCI 195',
-              courseId: 'compsci195',
+              type: 'tag',
+              id: 'eecs_ethics',
+              name: 'EECS Ethics Course',
+              tagId: 'eecs_ethics',
             },
           ],
         },
@@ -446,18 +625,17 @@ export class RequirementService {
           id: 'linguis_electives',
           name: 'Electives',
           requirements: [
-            // TODO Add unit-style requirements
             {
-              id: 'linguis_elective_1',
-              name: 'Elective 1',
-            },
-            {
-              id: 'linguis_elective_2',
-              name: 'Elective 2',
-            },
-            {
-              id: 'linguis_elective_3',
-              name: 'Elective 3',
+              type: 'unit',
+              id: 'lingius_electives',
+              name: 'Linguistics Electives',
+              units: 10,
+              requirement: {
+                type: 'tag',
+                id: 'linguis_elective',
+                name: 'Linguistics Elective',
+                tagId: 'linguis_elective',
+              },
             },
           ],
         },
@@ -504,7 +682,15 @@ export class RequirementService {
 
   private linkParents(data: object): object {
     Object.values(data).forEach((requirementSet) => {
-      requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
+      if (requirementSet.parentId) {
+        requirementSet.parent = data[requirementSet.parentId];
+        if (!requirementSet.parent) {
+          console.error(`No RequirementSet object found for parent ID: ${requirementSet.parentId}`);
+          requirementSet.parent = null;
+        }
+      } else {
+        requirementSet.parent = null;
+      }
       delete requirementSet.parentId;
     });
     return data;
@@ -537,12 +723,18 @@ export class RequirementService {
     switch (requirement.type) {
       case 'course':
         requirement.course = coursesObj[requirement.courseId];
+        if (!requirement.course) {
+          console.error(`No Course object found for course ID: ${requirement.courseId}`);
+        }
         delete requirement.courseId;
         requirement = new CourseRequirement(requirement);
         break;
 
       case 'tag':
         requirement.tag = tagsObj[requirement.tagId];
+        if (!requirement.tag) {
+          console.error(`No Tag object found for tag ID: ${requirement.tagId}`);
+        }
         delete requirement.tagId;
         requirement = new TagRequirement(requirement);
         break;
@@ -580,7 +772,7 @@ export class RequirementService {
         break;
 
       default:
-        // Do nothing
+        console.error(`Unknown Requirement type: ${requirement.type}`);
         break;
     }
 
