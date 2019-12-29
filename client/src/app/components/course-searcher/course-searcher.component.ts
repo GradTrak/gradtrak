@@ -40,16 +40,14 @@ export class CourseSearcherComponent implements OnInit {
       distinctUntilChanged(),
       map(searchTerm=>searchTerm.length < 2? [] :
         searchFunction(searchTerm, this.allCourses)),
-      map(courseList=>courseList.map((course)=>course.id))
       ));
 //      return this.courseMatches.map((course: Course)=>(course.dept + ' ' + course.no));
 
   }
   returnCourse(): void{
-    const selectedCourse: Course = this.allCourses.filter((course)=>{
-      return course.id === this.searchPhrase;
-    })[0]
-    if (selectedCourse){this.courseReturned.emit(selectedCourse)}
+    if (typeof this.searchPhrase !== 'string'){
+      this.courseReturned.emit(this.searchPhrase);
+    }
   }
   ngOnInit() {
     this.courseService.getCourses().subscribe((courses: Course[])=>{
