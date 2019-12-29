@@ -353,38 +353,6 @@ export class CourseService {
       id: 'englishr1b',
       tagIds: ['rc_b'],
     },
-    hss1ac: {
-      units: 4,
-      title: 'First Humanities/Social Science',
-      dept: 'H/SS',
-      no: '1AC',
-      id: 'hss1ac',
-      tagIds: ['ac'],
-    },
-    hss2: {
-      units: 4,
-      title: 'Second Humanities/Social Science',
-      dept: 'H/SS',
-      no: '2',
-      id: 'hss2',
-      tagIds: [],
-    },
-    hss100: {
-      units: 4,
-      title: 'Third Humanities/Social Science',
-      dept: 'H/SS',
-      no: '100',
-      id: 'hss100',
-      tagIds: [],
-    },
-    hss101: {
-      units: 4,
-      title: 'Fourth Humanities/Social Science',
-      dept: 'H/SS',
-      no: '101',
-      id: 'hss101',
-      tagIds: [],
-    },
     info159: {
       units: 4,
       title: 'Natural Language Processing',
@@ -415,7 +383,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'R1B',
       id: 'linguisr1b',
-      tagIds: [],
+      tagIds: ['rc_b'],
     },
     linguis5: {
       units: 4,
@@ -423,7 +391,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '5',
       id: 'linguis5',
-      tagIds: [],
+      tagIds: ['ls_socio'],
     },
     linguis10: {
       units: 3,
@@ -431,7 +399,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '10',
       id: 'linguis10',
-      tagIds: [],
+      tagIds: ['ls_socio'],
     },
     linguis24: {
       units: 1,
@@ -439,7 +407,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '24',
       id: 'linguis24',
-      tagIds: [],
+      tagIds: ['ls_socio'],
     },
     linguis47: {
       units: 3,
@@ -447,7 +415,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '47',
       id: 'linguis47',
-      tagIds: [],
+      tagIds: ['ls_socio'],
     },
     linguis100: {
       units: 4,
@@ -455,7 +423,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '100',
       id: 'linguis100',
-      tagIds: ['ls_socio', 'ls_bio'],
+      tagIds: ['upper_div', 'ls_socio'],
     },
     linguis106: {
       units: 4,
@@ -463,7 +431,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '106',
       id: 'linguis106',
-      tagIds: ['ls_socio', 'linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis109: {
       units: 3,
@@ -471,7 +439,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '109',
       id: 'linguis109',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis110: {
       units: 4,
@@ -479,7 +447,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '110',
       id: 'linguis110',
-      tagIds: [],
+      tagIds: ['upper_div', 'ls_socio'],
     },
     linguis111: {
       units: 4,
@@ -487,7 +455,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '111',
       id: 'linguis111',
-      tagIds: [],
+      tagIds: ['upper_div', 'ls_socio'],
     },
     linguis115: {
       units: 4,
@@ -495,7 +463,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '115',
       id: 'linguis115',
-      tagIds: [],
+      tagIds: ['upper_div', 'ls_socio'],
     },
     linguis120: {
       units: 4,
@@ -503,7 +471,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '120',
       id: 'linguis120',
-      tagIds: [],
+      tagIds: ['upper_div', 'ls_socio'],
     },
     linguis121: {
       units: 4,
@@ -511,7 +479,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '121',
       id: 'linguis121',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis123: {
       units: 3,
@@ -519,7 +487,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '123',
       id: 'linguis123',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis130: {
       units: 4,
@@ -527,7 +495,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '130',
       id: 'linguis130',
-      tagIds: [],
+      tagIds: ['upper_div', 'ls_socio'],
     },
     linguis140: {
       units: 3,
@@ -535,7 +503,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '140',
       id: 'linguis140',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguisc142: {
       units: 3,
@@ -543,7 +511,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'C142',
       id: 'linguisc142',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguisc146: {
       units: 3,
@@ -551,7 +519,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'C146',
       id: 'linguisc146',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis148: {
       units: 3,
@@ -559,7 +527,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '148',
       id: 'linguis148',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis150: {
       units: 3,
@@ -567,7 +535,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '150',
       id: 'linguis150',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis155ac: {
       units: 4,
@@ -575,7 +543,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '155AC',
       id: 'linguis155ac',
-      tagIds: ['ac', 'linguis_elective'],
+      tagIds: ['upper_div', 'ls_hist', 'ls_socio', 'ac', 'linguis_elective'],
     },
     linguisc160: {
       units: 4,
@@ -583,7 +551,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: 'C160',
       id: 'linguisc160',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis170: {
       units: 3,
@@ -591,7 +559,7 @@ export class CourseService {
       dept: 'LINGUIS',
       no: '170',
       id: 'linguis170',
-      tagIds: ['linguis_elective'],
+      tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
     },
     linguis197: {
       units: 1,
