@@ -16,7 +16,6 @@ import { RequirementsPaneComponent } from './components/requirements-pane/requir
 import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RequirementsPaneComponent,
     RequirementCategoryComponent,
   ],
-  imports: [AppRoutingModule,  BrowserAnimationsModule, BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
   providers: [CourseService, RequirementService, SemesterService],
   bootstrap: [AppComponent],
 })
