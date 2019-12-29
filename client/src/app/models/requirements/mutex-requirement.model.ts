@@ -42,8 +42,8 @@ export class MutexRequirement implements Requirement {
       const linkedCourses: Set<any> = new Set([courseWithReqs]);
       const linkedReqs: Set<any> = new Set(courseWithReqs.requirements);
 
-      let lastCourseSize: number = 0;
-      let lastReqsSize: number = 0;
+      let lastCourseSize = 0;
+      let lastReqsSize = 0;
 
       while (lastCourseSize !== linkedCourses.size || lastReqsSize !== linkedReqs.size) {
         lastCourseSize = linkedCourses.size;
