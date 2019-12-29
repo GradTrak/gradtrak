@@ -14,7 +14,6 @@ export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   public model: any; //figure out what model means
   allCourses: Course[];
-  courseMatches: Course[];
 
   search = (text$: Observable<string>) => {
     return text$.pipe(
@@ -55,7 +54,6 @@ export class CourseSearcherComponent implements OnInit {
   ngOnInit() {
     this.courseService.getCourses().subscribe((courses: Course[])=>{
       this.allCourses = courses;
-      this.courseMatches = courses;
     })
   }
 
