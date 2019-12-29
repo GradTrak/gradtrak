@@ -11,11 +11,14 @@ import { Semester } from 'models/semester.model';
 export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
-
+  modalInstance; //I don't know what type that is
   constructor(public modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
+  closeModal(): void{
+    this.modalService.dismissAll();
+  }
   removeCourse(course: Course): void {
     const courseIndex = this.semester.courses.indexOf(course);
     if (courseIndex > -1) {

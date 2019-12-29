@@ -18,6 +18,6 @@
 
 <ng-template #courseAdder>
   <div class="modal-body">
-    <app-course-adder [semester]="semester"></app-course-adder>
+    <app-course-adder [semester]="semester" (courseAdded)="closeModal()"></app-course-adder>
   </div>
 </ng-template>
