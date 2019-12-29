@@ -3,9 +3,27 @@ import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
+/**
+ * The MutexRequirement class represents a {@link Requirement} that contains a set of child
+ * {@link StandaloneRequirement}s that must each be fulfilled by distinct courses. Because the status of its child
+ * requirements must be determined by the surrounding MutexRequirement, each of its children can be in one of three
+ * states: fulfilled, potentially fulfilled, and unfulfilled.
+ */
 export class MutexRequirement implements Requirement {
+  /**
+   * No courses fulfill this child requirement.
+   */
   static readonly UNFULFILLED = 0;
+
+  /**
+   * This requirement can be fulfilled by one of the courses, but that course could also be put towards one or more
+   * other potentially fulfilled requirements.
+   */
   static readonly POTENTIAL = 1;
+
+  /**
+   * This requirement is fulfilled with certainty.
+   */
   static readonly FULFILLED = 2;
 
   id: string;

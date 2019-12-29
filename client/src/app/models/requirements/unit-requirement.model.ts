@@ -2,6 +2,11 @@ import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
+/**
+ * The UnitRequirement class represents a {@link Requirement} has one base {@link StandaloneRequirement} and is only
+ * fulfilled if sum of the number of units that fulfill its underlying base requirement is greater than a specified
+ * number of units.
+ */
 export class UnitRequirement implements Requirement {
   id: string;
   name: string;

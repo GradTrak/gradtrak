@@ -1,6 +1,10 @@
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 
+/**
+ * The MultiRequirement class represents a {@link Requirement} that contains a number of child requirements and is only
+ * fulfilled if at least a specified number of those requirements are fulfilled.
+ */
 export class MultiRequirement implements Requirement {
   id: string;
   name: string;
