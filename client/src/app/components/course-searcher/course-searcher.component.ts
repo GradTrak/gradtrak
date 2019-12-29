@@ -36,7 +36,7 @@ export class CourseSearcherComponent implements OnInit {
       })
     }
     return (searchText.pipe(
-      debounceTime(200),
+      debounceTime(150),
       distinctUntilChanged(),
       map(searchTerm=>searchTerm.length < 2? [] :
         searchFunction(searchTerm, this.allCourses)),
