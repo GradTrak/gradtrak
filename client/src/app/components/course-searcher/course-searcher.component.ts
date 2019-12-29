@@ -12,7 +12,7 @@ import { CourseService } from 'services/course.service';
 })
 export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
-  public model: any; //figure out what model means
+  public searchPhrase: any; //figure out what model means
   allCourses: Course[];
 
   search = (text$: Observable<string>) => {
@@ -47,7 +47,7 @@ export class CourseSearcherComponent implements OnInit {
   }
   returnCourse(): void{
     const selectedCourse: Course = this.allCourses.filter((course)=>{
-      return course.id === this.model;
+      return course.id === this.searchPhrase;
     })[0]
     if (selectedCourse){this.courseReturned.emit(selectedCourse)}
   }
