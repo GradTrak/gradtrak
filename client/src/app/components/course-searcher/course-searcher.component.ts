@@ -12,7 +12,7 @@ import { CourseService } from 'services/course.service';
 })
 export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
-  public searchPhrase: any; //figure out what model means
+  public searchPhrase: any;
   allCourses: Course[];
 
   search = (text$: Observable<string>) => {
