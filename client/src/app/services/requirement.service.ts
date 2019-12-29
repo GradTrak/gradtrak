@@ -138,7 +138,7 @@ export class RequirementService {
             },
             {
               id: 'compsci61c',
-              name: 'COMPSCI 61A',
+              name: 'COMPSCI 61C',
             },
             {
               id: 'eecs16a',
