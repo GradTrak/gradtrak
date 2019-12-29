@@ -8,7 +8,7 @@ import { RequirementService } from 'services/requirement.service';
   styleUrls: ['./requirements-pane.component.css'],
 })
 export class RequirementsPaneComponent implements OnInit {
-  requirementSets: RequirementSet[];
+  private requirementSets: RequirementSet[];
   majorRequirementSets: RequirementSet[];
   selectableMajors: RequirementSet[];
   selectedMajor: RequirementSet;
