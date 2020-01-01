@@ -11,17 +11,17 @@ import { Semester } from 'models/semester.model';
 export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
-  @ViewChild('courseAdder', {static: false}) courseAdderTemplate: TemplateRef<any>;// what type is the TemplateREf suppoed to be?
+  @ViewChild('courseAdder', { static: false }) courseAdderTemplate: TemplateRef<any>; // what type is the TemplateREf suppoed to be?
 
   modalInstance: any; // I don't know what type that is
   constructor(public modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
-  openModal(): void{
+  openModal(): void {
     this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
   }
-  closeModal(): void{
+  closeModal(): void {
     this.modalInstance.close();
   }
   removeCourse(course: Course): void {
