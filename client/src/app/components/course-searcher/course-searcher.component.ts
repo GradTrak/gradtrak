@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, of} from 'rxjs';
+import { Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 import { Course } from 'models/course.model';
 import { CourseService } from 'services/course.service';
@@ -24,9 +24,9 @@ export class CourseSearcherComponent implements OnInit {
     )}
 
   constructor(private courseService: CourseService) { }
-  updateAutoComplete = (searchText: Observable<string>):any =>{ //any other type and it throws errors?
+  updateAutoComplete = (searchText: Observable<string>): any =>{ // any other type and it throws errors?
     function searchFunction(input: string, courseList: Course[]): Course[] {
-      let processedInput = input.toLowerCase();
+      const processedInput = input.toLowerCase();
       return courseList.filter((course)=>{
         return (
           course.id.toLowerCase().includes(processedInput) ||
@@ -41,11 +41,9 @@ export class CourseSearcherComponent implements OnInit {
       map(searchTerm=>searchTerm.length < 2? [] :
         searchFunction(searchTerm, this.allCourses)),
       ));
-//      return this.courseMatches.map((course: Course)=>(course.dept + ' ' + course.no));
-
   }
   returnCourse(): void{
-    if (typeof this.searchPhrase !== 'string'){
+    if (typeof this.searchPhrase !== 'string'){ // if it is an object
       this.courseReturned.emit(this.searchPhrase);
     }
   }

@@ -13,7 +13,7 @@ export class SemesterComponent implements OnInit {
   @Input() semester: Semester;
   @ViewChild('courseAdder', {static: false}) courseAdderTemplate: TemplateRef<any>;
 
-  modalInstance: any; //I don't know what type that is
+  modalInstance: any; // I don't know what type that is
   constructor(public modalService: NgbModal) {}
 
   ngOnInit(): void {}
