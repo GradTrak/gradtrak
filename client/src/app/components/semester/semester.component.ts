@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
 
@@ -11,7 +11,7 @@ import { Semester } from 'models/semester.model';
 export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
-  @ViewChild('courseAdder', {static: false}) courseAdderTemplate: TemplateRef<any>;
+  @ViewChild('courseAdder', {static: false}) courseAdderTemplate: TemplateRef<any>;// what type is the TemplateREf suppoed to be?
 
   modalInstance: any; // I don't know what type that is
   constructor(public modalService: NgbModal) {}

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 import { Course } from 'models/course.model';
@@ -14,8 +13,7 @@ export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   public searchPhrase: any;
   allCourses: Course[];
-
-  search = (text$: Observable<string>) => {
+  search = (text$: Observable<string>) => { // don't know what the type returned
     return text$.pipe(
       debounceTime(100),
       distinctUntilChanged(),
