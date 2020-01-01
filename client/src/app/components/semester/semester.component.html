@@ -18,6 +18,7 @@
 
 <ng-template #courseAdder>
   <div class="modal-body">
-    <app-course-adder [semester]="semester" (keyup.esc)="closeModal()"></app-course-adder>
+    <h4>Add a class to {{ semester.name }}</h4>
+    <app-course-searcher (courseReturned)="addCourse($event)" (keyup.esc)="closeModal()"></app-course-searcher>
   </div>
 </ng-template>
