@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
 
@@ -11,13 +11,18 @@ import { Semester } from 'models/semester.model';
 export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
-  modalInstance; //I don't know what type that is
+  @ViewChild('courseAdder', {static: false}) courseAdderTemplate: TemplateRef<any>;
+
+  modalInstance: any; //I don't know what type that is
   constructor(public modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
+  openModal(): void{
+    this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
+  }
   closeModal(): void{
-    this.modalService.dismissAll();
+    this.modalInstance.close();
   }
   removeCourse(course: Course): void {
     const courseIndex = this.semester.courses.indexOf(course);
