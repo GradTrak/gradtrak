@@ -4,7 +4,7 @@
       <th colspan="2">
         <h4>{{ name }}</h4>
       </th>
-      <th><button (click)="openModal()">+</button></th>
+      <th><button (click)="openAdder()">+</button></th>
     </thead>
     <tbody>
       <tr *ngFor="let course of semester.courses">
@@ -19,6 +19,6 @@
 <ng-template #courseAdder>
   <div class="modal-body">
     <h4>Add a class to {{ semester.name }}</h4>
-    <app-course-searcher (courseReturned)="addCourse($event)" (keyup.esc)="closeModal()"></app-course-searcher>
+    <app-course-searcher (courseReturned)="addCourse($event)" (keyup.esc)="closeAdder()"></app-course-searcher>
   </div>
 </ng-template>

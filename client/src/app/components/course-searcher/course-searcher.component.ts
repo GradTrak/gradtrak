@@ -11,50 +11,38 @@ import { CourseService } from 'services/course.service';
 })
 export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
-  public searchPhrase: any;
+  searchedCourse: Course;
   allCourses: Course[];
-  search = (text$: Observable<string>) => {
-    // don't know what the type returned
-    return text$.pipe(
-      debounceTime(100),
-      distinctUntilChanged(),
-      map((term) =>
-        term.length < 2
-          ? []
-          : this.allCourses.filter((v) => v.id.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)
-      )
-    );
-  };
 
   constructor(private courseService: CourseService) {}
-  updateAutoComplete = (searchText: Observable<string>): any => {
-    // any other type and it throws errors?
-    function searchFunction(input: string, courseList: Course[]): Course[] {
-      const processedInput = input.toLowerCase();
-      return courseList.filter((course) => {
-        return (
-          course.id.toLowerCase().includes(processedInput) ||
-          course.title.toLowerCase().includes(processedInput) ||
-          course.dept.toLowerCase().includes(processedInput) ||
-          course.no.toLowerCase().includes(processedInput)
-        );
-      });
-    }
-    return searchText.pipe(
-      debounceTime(150),
-      distinctUntilChanged(),
-      map((searchTerm) => (searchTerm.length < 2 ? [] : searchFunction(searchTerm, this.allCourses)))
-    );
-  };
-  returnCourse(): void {
-    if (typeof this.searchPhrase !== 'string') {
-      // if it is an object
-      this.courseReturned.emit(this.searchPhrase);
-    }
-  }
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
       this.allCourses = courses;
     });
+  }
+
+  updateAutoComplete = (searchText: Observable<string>): Observable<Course[]> => {
+    return searchText.pipe(
+      debounceTime(150),
+      distinctUntilChanged(),
+      map((searchTerm: string) => searchTerm.toLowerCase()),
+      map((searchTerm: string) => {
+        if (searchTerm.length < 2) {
+          return [];
+        }
+        return this.allCourses.filter(
+          (course: Course) =>
+            course.id.toLowerCase().includes(searchTerm) ||
+            course.title.toLowerCase().includes(searchTerm) ||
+            course.dept.toLowerCase().includes(searchTerm) ||
+            course.no.toLowerCase().includes(searchTerm)
+        );
+      })
+    );
+  };
+
+  returnCourse(): void {
+    this.courseReturned.emit(this.searchedCourse);
   }
 }

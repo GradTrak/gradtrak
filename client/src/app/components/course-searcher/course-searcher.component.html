@@ -2,10 +2,9 @@
   <input
     type="text"
     placeholder="Search for a class"
-    [(ngModel)]="searchPhrase"
+    [(ngModel)]="searchedCourse"
     name="name"
     [ngbTypeahead]="updateAutoComplete"
-    (keyup.enter)="returnCourse()"
   />
   <button type="submit">Add</button>
 </form>
