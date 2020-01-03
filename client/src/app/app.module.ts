@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +27,7 @@ import { CourseSearcherComponent } from './components/course-searcher/course-sea
     RequirementsPaneComponent,
     RequirementCategoryComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, NgbModule, ReactiveFormsModule],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, NgbModule],
   providers: [CourseService, RequirementService, SemesterService],
   bootstrap: [AppComponent],
 })
