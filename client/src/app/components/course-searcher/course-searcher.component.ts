@@ -22,23 +22,24 @@ export class CourseSearcherComponent implements OnInit {
     });
   }
 
+  searchFunction(input: string, courseList: Course[]): Course[] {
+    const processedInput = input.toLowerCase();
+    return courseList.filter((course) => {
+      return (
+        course.id.toLowerCase().includes(processedInput) ||
+        course.title.toLowerCase().includes(processedInput) ||
+        course.dept.toLowerCase().includes(processedInput) ||
+        course.no.toLowerCase().includes(processedInput)
+      );
+    });
+  }
+
   updateAutoComplete = (searchText: Observable<string>): Observable<Course[]> => {
     return searchText.pipe(
       debounceTime(150),
       distinctUntilChanged(),
-      map((searchTerm: string) => searchTerm.toLowerCase()),
-      map((searchTerm: string) => {
-        if (searchTerm.length < 2) {
-          return [];
-        }
-        return this.allCourses.filter(
-          (course: Course) =>
-            course.id.toLowerCase().includes(searchTerm) ||
-            course.title.toLowerCase().includes(searchTerm) ||
-            course.dept.toLowerCase().includes(searchTerm) ||
-            course.no.toLowerCase().includes(searchTerm)
-        );
-      })
+      map((searchTerm) => (searchTerm.length < 2 ? [] : this.searchFunction(searchTerm, this.allCourses)))
+      // TODO: sort this by search rankings for relevance
     );
   };
 
