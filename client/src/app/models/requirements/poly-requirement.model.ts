@@ -20,7 +20,7 @@ export class PolyRequirement extends MultiRequirement implements StandaloneRequi
   toString(): string {
     return this.requirements.reduce(
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
-      `Fulfill ${this.numRequired} with one course of:`,
+      `Using one course, fulfill ${this.numRequired} of:`,
     );
   }
 }
