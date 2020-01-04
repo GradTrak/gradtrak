@@ -1,16 +1,11 @@
-div {
-  display: flex;
+:host {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
 
-div > * {
+:host > * {
   height: 100vh;
   overflow: scroll;
-}
-
-app-semester-pane {
-  width: 60%;
-}
-
-app-requirements-pane {
-  width: 40%;
 }

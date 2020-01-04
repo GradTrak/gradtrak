@@ -1,10 +1,6 @@
-.pane {
-  padding: 1em;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.pane > app-semester {
-  width: 50%;
-  margin-bottom: 1em;
+.grid-container {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
 }
