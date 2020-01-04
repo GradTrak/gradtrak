@@ -1,6 +1,7 @@
 <!-- FIXME Remove check for whether isFulfilled exists -->
 <!-- FIXME Remove check for getAnnotation -->
 <!-- TODO This seems slightly janky -->
+<!-- FIXME This can also be an XSS vector -->
 <ng-template #annotation>
   <div [outerHTML]="getAnnotation()"></div>
 </ng-template>

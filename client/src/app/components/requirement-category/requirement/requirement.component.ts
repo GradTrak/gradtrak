@@ -62,7 +62,6 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
-  // TODO TSX?
   getAnnotation(): string {
     // FIXME Remove check for getAnnotation
     if (this.requirement.getAnnotation) {
