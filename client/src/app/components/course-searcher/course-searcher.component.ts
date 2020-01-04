@@ -43,6 +43,8 @@ export class CourseSearcherComponent implements OnInit {
   };
 
   returnCourse(): void {
-    this.courseReturned.emit(this.searchedCourse);
+    if (this.searchedCourse instanceof Course) {
+      this.courseReturned.emit(this.searchedCourse);
+    }
   }
 }
