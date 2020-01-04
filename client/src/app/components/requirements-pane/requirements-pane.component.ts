@@ -12,12 +12,12 @@ export class RequirementsPaneComponent implements OnInit {
   majorRequirementSets: RequirementSet[];
   selectableMajors: RequirementSet[];
 
-  updateMajorRequirements(baseReqSet: RequirementSet): RequirementSet[]{
+  updateMajorRequirements(baseReqSet: RequirementSet): RequirementSet[] {
     const selected: RequirementSet[] = [baseReqSet];
     let current: RequirementSet = baseReqSet;
-    while (current.parent !== null){
+    while (current.parent !== null) {
       current = current.parent;
-      selected.push(current)
+      selected.push(current);
     }
     selected.reverse();
     this.majorRequirementSets = selected;
@@ -29,7 +29,7 @@ export class RequirementsPaneComponent implements OnInit {
   ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
-      this.selectableMajors = requirementSets.filter((requirementSet: RequirementSet)=>requirementSet.selectable);
-      });
+      this.selectableMajors = requirementSets.filter((requirementSet: RequirementSet) => requirementSet.selectable);
+    });
   }
 }
