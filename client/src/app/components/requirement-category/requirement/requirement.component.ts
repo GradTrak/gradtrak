@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
@@ -13,6 +13,15 @@ import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 export class RequirementComponent implements OnInit {
   @Input() requirement: Requirement;
   @Input() courses: Course[];
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
+  @ViewChild('multiReqOne', { static: true }) private multiReqOne: TemplateRef<any>;
+  @ViewChild('multiReqSome', { static: true }) private multiReqSome: TemplateRef<any>;
+  @ViewChild('multiReqAll', { static: true }) private multiReqAll: TemplateRef<any>;
+  @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
+  @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   constructor() {}
 
@@ -60,6 +69,27 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retreive non-UnitRequirement as UnitRequirement');
     }
     return this.requirement as UnitRequirement;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getReqTemplate(): TemplateRef<any> {
+    if (this.isMulti()) {
+      const multiReq = this.getMulti();
+      if (multiReq.numRequired === multiReq.requirements.length) {
+        return this.multiReqAll;
+      }
+      if (multiReq.numRequired === 1) {
+        return this.multiReqOne;
+      }
+      return this.multiReqSome;
+    }
+    if (this.isMutex()) {
+      return this.mutexReq;
+    }
+    if (this.isUnit()) {
+      return this.unitReq;
+    }
+    return this.standardReq;
   }
 
   getAnnotation(): string {

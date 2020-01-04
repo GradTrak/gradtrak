@@ -5,76 +5,81 @@
 <ng-template #annotation>
   <div [outerHTML]="getAnnotation()"></div>
 </ng-template>
+
+<ng-template #standardReq>
+  <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
+</ng-template>
+<ng-template #multiReqOne>
+  <td>
+    One of
+    <table class="nested">
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getMulti().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #multiReqSome>
+  <td>
+    {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+    <table class="nested">
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getMulti().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #multiReqAll>
+  <td class="transparent">
+    <table class="nested">
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getMulti().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #unitReq>
+  <td>
+    {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
+    <br />
+    {{ getUnit().requirement.toString() }}
+    <table class="nested">
+      <tbody>
+        <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+          <td>{{ course.toString() }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #mutexReq>
+  <td>
+    Distinctly fulfill
+    <table class="nested">
+      <tbody>
+        <tr *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
+          <td>
+            {{ childStatus.requirement.name }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</ng-template>
+
 <tr
   [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
   [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
   triggers="mouseenter:mouseleave"
 >
-  <ng-container *ngIf="!isMulti() && !isMutex() && !isUnit()">
-    <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
-  </ng-container>
-  <!-- TODO Find a better way to cast variables in HTML templates -->
-  <ng-container *ngIf="isMulti()">
-    <ng-container *ngIf="getMulti().numRequired < getMulti().requirements.length; else multiReqAll">
-      <td>
-        <ng-container *ngIf="getMulti().numRequired > 1; else multiOne">
-          {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
-        </ng-container>
-        <ng-template #multiOne>
-          One of
-        </ng-template>
-        <table class="nested">
-          <tbody
-            app-requirement
-            *ngFor="let childReq of getMulti().requirements"
-            [requirement]="childReq"
-            [courses]="courses"
-          ></tbody>
-        </table>
-      </td>
-    </ng-container>
-    <ng-template #multiReqAll>
-      <td class="transparent">
-        <table class="nested">
-          <tbody
-            app-requirement
-            *ngFor="let childReq of getMulti().requirements"
-            [requirement]="childReq"
-            [courses]="courses"
-          ></tbody>
-        </table>
-      </td>
-    </ng-template>
-  </ng-container>
-  <ng-container *ngIf="isUnit()">
-    <td>
-      {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
-      <br />
-      {{ getUnit().requirement.toString() }}
-      <table class="nested">
-        <tbody>
-          <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-            <td>{{ course.toString() }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </ng-container>
-  <ng-container *ngIf="isMutex()">
-    <td>
-      Distinctly fulfill
-      <table class="nested">
-        <tbody>
-          <tr
-            *ngFor="let childStatus of getMutex().getFulfillment(courses)"
-            [ngClass]="getMutexFulfillment(childStatus)"
-          >
-            <td>
-              {{ childStatus.requirement.name }}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
-  </ng-container>
+  <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>
 </tr>
