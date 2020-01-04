@@ -86,7 +86,7 @@ export class TagService {
     return this.sharedTagData;
   }
 
-  fetchTagData(): void {
+  private fetchTagData(): void {
     this.sharedTagData = of(this.DUMMY_TAG_DATA).pipe(map(this.instantiateTags), shareReplay());
   }
 
