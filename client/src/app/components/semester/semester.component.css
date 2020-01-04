@@ -1,0 +1,20 @@
+table {
+  display: inline-block;
+  background-color: #b3e2f7;
+  padding: 12px;
+  border-collapse: separate;
+  border-spacing: 16px 8px;
+}
+
+table td:not(.button-cell) {
+  padding: 0 0.25em;
+  background-color: #e2f9fe;
+}
+
+table td.units {
+  text-align: center;
+}
+
+table td > button {
+  width: 100%;
+}

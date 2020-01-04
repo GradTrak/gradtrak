@@ -1,0 +1,6 @@
+.semester-container {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 12px;
+}

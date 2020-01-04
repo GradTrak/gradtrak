@@ -1,15 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { RequirementCategoryComponent } from 'components/requirement-category/requirement-category.component';
+import { RequirementComponent } from 'components/requirement-category/requirement/requirement.component';
+import { RequirementSetComponent } from 'components/requirement-set/requirement-set.component';
+import { RequirementsPaneComponent } from 'components/requirements-pane/requirements-pane.component';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+      imports: [RouterTestingModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        RequirementCategoryComponent,
+        RequirementComponent,
+        RequirementSetComponent,
+        RequirementsPaneComponent,
       ],
     }).compileComponents();
   }));
@@ -24,12 +30,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('gradtrak');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('gradtrak app is running!');
   });
 });
