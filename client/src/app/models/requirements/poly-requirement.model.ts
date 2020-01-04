@@ -1,4 +1,5 @@
 import { Course } from 'models/course.model';
+import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
@@ -14,5 +15,12 @@ export class PolyRequirement extends MultiRequirement implements StandaloneRequi
 
   isFulfillableBy(course: Course): boolean {
     return super.isFulfilled([course]);
+  }
+
+  toString(): string {
+    return this.requirements.reduce(
+      (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
+      `Fulfill ${this.numRequired} with one course of:`,
+    );
   }
 }
