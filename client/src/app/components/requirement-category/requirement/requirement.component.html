@@ -13,7 +13,6 @@
     <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
   </ng-container>
   <!-- TODO Find a better way to cast variables in HTML templates -->
-  <!-- TODO Make these look better -->
   <ng-container *ngIf="isMulti()">
     <ng-container *ngIf="getMulti().numRequired < getMulti().requirements.length; else multiReqAll">
       <td>
