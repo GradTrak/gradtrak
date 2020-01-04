@@ -23,7 +23,10 @@ export class RequirementComponent implements OnInit {
   }
 
   getMulti(): MultiRequirement {
-    return this.isMulti() ? (this.requirement as MultiRequirement) : null;
+    if (!this.isMulti()) {
+      throw new Error('Attempted to retreive non-MultiRequirement as MultiRequirement');
+    }
+    return this.requirement as MultiRequirement;
   }
 
   isMutex(): boolean {
@@ -31,7 +34,10 @@ export class RequirementComponent implements OnInit {
   }
 
   getMutex(): MutexRequirement {
-    return this.isMutex() ? (this.requirement as MutexRequirement) : null;
+    if (!this.isMutex()) {
+      throw new Error('Attempted to retreive non-MutexRequirement as MutexRequirement');
+    }
+    return this.requirement as MutexRequirement;
   }
 
   getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
@@ -50,7 +56,10 @@ export class RequirementComponent implements OnInit {
   }
 
   getUnit(): UnitRequirement {
-    return this.isUnit() ? (this.requirement as UnitRequirement) : null;
+    if (!this.isUnit()) {
+      throw new Error('Attempted to retreive non-UnitRequirement as UnitRequirement');
+    }
+    return this.requirement as UnitRequirement;
   }
 
   // TODO TSX?
