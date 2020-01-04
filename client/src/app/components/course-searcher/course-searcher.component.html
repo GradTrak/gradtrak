@@ -1,0 +1,10 @@
+<form (ngSubmit)="returnCourse()">
+  <input
+    type="text"
+    name="course"
+    placeholder="Search for a class"
+    [(ngModel)]="searchedCourse"
+    [ngbTypeahead]="updateAutoComplete"
+  />
+  <button type="submit">Add</button>
+</form>
