@@ -31,5 +31,16 @@ export class RequirementSelectorComponent implements OnInit {
     });
   }
 
+  private searchFunction(prompt: string, goal: RequirementSet): boolean{
+    return goal?(goal.id.includes(prompt)||
+    goal.name.includes(prompt)||
+    this.searchFunction(prompt, goal.parent)):false;
+  }
+  // idle thought, but why nt just maje a Goal class that interits RequirementSet?
+  // maybe even a major and minot class that inherits from Goal. IsInstance makes
+  // sense that way.
+  updateGoalSearch(): void{
+
+  }
 
 }

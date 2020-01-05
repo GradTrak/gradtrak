@@ -23,5 +23,5 @@ export class GoalService {
     }),
     share());
   }
-
+  //todo: still gotta remove goals as well!
 }
