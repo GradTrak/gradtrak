@@ -13,12 +13,13 @@ export class GoalService {
   setGoals(goals: RequirementSet[]):void{
     this.selectedGoals = of(goals);
   }
-  getGoals(): Observable<RequirementSet[]> {
+  getGoals(): any {
     return this.selectedGoals;
   }
   addGoals(newGoal:RequirementSet):void{
-    this.selectedGoals.pipe(map((goals: RequirementSet[])=>{
+    this.selectedGoals = this.selectedGoals.pipe(map((goals: RequirementSet[])=>{
       goals.push(newGoal);
+      return goals
     }),
     share());
   }

@@ -12,9 +12,24 @@ export class RequirementSelectorComponent implements OnInit {
   searchedMajors: RequirementSet[];
   searchedMinors: RequirementSet[];
   searchedOthers: RequirementSet[];
-  constructor() { }
+  requirementSets: RequirementSet[];
+  currentGoals: RequirementSet[];
+  test: any = "xothing changed so far";
+  constructor(private requirementService: RequirementService, private goalService: GoalService) { }
 
   ngOnInit() {
+    this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[])=>{
+      this.requirementSets = requirementSets;
+    });
+
+
+    //stuff beflow is for testing only
+    this.goalService.setGoals([]);
+    this.goalService.addGoals(this.requirementSets[1]);
+    this.goalService.getGoals().subscribe((goalList: RequirementSet[])=>{
+      this.currentGoals = goalList;
+    });
   }
+
 
 }
