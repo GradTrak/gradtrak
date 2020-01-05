@@ -5,7 +5,8 @@
   <div class="selector" id="major-selector">
     <h4>Majors</h4>
     <!-- I feel like hoenstly copy pasting here isn't the best idea
-      but I don't want to make a new component just for this soooo-->
+      but I don't think a new component for the major and then the minor makes
+    any kind of sense, so this will do for now-->
     <select name="major-list" size="8">
       <option *ngFor="let major of searchedMajors" value="major">{{major.name}}</option>
     </select>
