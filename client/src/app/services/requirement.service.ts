@@ -12,6 +12,7 @@ export class RequirementService {
       id: 'uc',
       name: 'University of California',
       parentId: null,
+      type: 'unselectable',
       requirementCategories: [
         {
           id: 'uc',
@@ -56,6 +57,7 @@ export class RequirementService {
       id: 'coe',
       name: 'College of Engineering',
       parentId: 'ucb',
+      type: 'unselectable',
       requirementCategories: [
         {
           id: 'coe-hss',
