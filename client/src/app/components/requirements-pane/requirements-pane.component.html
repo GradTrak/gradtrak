@@ -1,11 +1,11 @@
 <div class="pane">
-  <select [(ngModel)]="selectedMajor" (change)="updateMajorRequirements(selectedMajor)">
-    <option *ngFor="let requirementSet of selectableMajors" [ngValue]="requirementSet">{{
+  <select [(ngModel)]="selectedSet" (change)="updateSelectedRequirements(selectedSet)">
+    <option *ngFor="let requirementSet of selectableRequirementSets" [ngValue]="requirementSet">{{
       requirementSet.name
     }}</option>
   </select>
   <app-requirement-set
-    *ngFor="let requirementSet of majorRequirementSets"
+    *ngFor="let requirementSet of selectedRequirementSets"
     [requirementSet]="requirementSet"
   ></app-requirement-set>
 </div>
