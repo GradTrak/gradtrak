@@ -19,7 +19,7 @@ export class RequirementSelectorComponent implements OnInit {
 
   ngOnInit() {
     this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[])=>{
-      this.requirementSets = requirementSets;
+      this.requirementSets = requirementSets.filter((requirementSet: RequirementSet) =>(requirementSet.type !== "unselectable"));
     });
 
 
@@ -40,7 +40,14 @@ export class RequirementSelectorComponent implements OnInit {
   // maybe even a major and minot class that inherits from Goal. IsInstance makes
   // sense that way.
   updateGoalSearch(): void{
-
+    this.searchedMajors = this.requirementSets.filter(
+      (potentialMajor: RequirementSet)=>(potentialMajor.type == 'major'&&
+      this.searchFunction(this.searchPrompt, potentialMajor)))
+    this.searchedMinors = this.requirementSets.filter((potentialMinor: RequirementSet)=>(potentialMinor.type === 'minor'&&
+    this.searchFunction(this.searchPrompt, potentialMinor)))
+    this.searchedOthers = this.requirementSets.filter((potentialOther: RequirementSet)=>(potentialOther.type === 'other'&&
+    this.searchFunction(this.searchPrompt, potentialOther)))
+    //might make more sense to do the major minor sorting onInit only once and store it
   }
 
 }
