@@ -40,7 +40,7 @@ export class RequirementsPaneComponent implements OnInit {
   ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets) => {
       this.requirementSets = requirementSets;
-      this.selectableRequirementSets = requirementSets.filter((requirementSet: RequirementSet) => requirementSet.selectable);
+      this.selectableRequirementSets = requirementSets.filter((requirementSet: RequirementSet) => requirementSet.type !== "unselectable");
     });
   }
 }

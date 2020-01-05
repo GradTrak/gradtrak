@@ -4,6 +4,6 @@ export class RequirementSet {
   id: string;
   name: string;
   parent: RequirementSet;
-  selectable: boolean;
+  type: string; //string id. either major, minor, other, or unselectable
   requirementCategories: RequirementCategory[];
 }
