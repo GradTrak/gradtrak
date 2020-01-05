@@ -1,1 +1,27 @@
-<p>requirement-selector works!</p>
+<form class="" action="index.html" method="post">
+  <div id="search-box">
+    <input type="text" name="search-box"[(ngModel)]="searchPrompt" (keyup)="updateDisplays()">
+  </div>
+  <div class="selector" id="major-selector">
+    <h4>Majors</h4>
+    <!-- I feel like hoenstly copy pasting here isn't the best idea
+      but I don't want to make a new component just for this soooo-->
+    <select name="major-list" size="8">
+      <option *ngFor="let major of searchedMajors" value="major">{{major.name}}</option>
+    </select>
+  </div>
+  <div class="selector" id="minor-selector">
+    <h4>Minors</h4>
+    <select name="minor-list" size="8">
+      <option *ngFor="let minor of searchedMinors" value="minor">{{minor.name}}</option>
+    </select>
+  </div>
+  <div class="selector" id="other-selector">
+    <h4>Other</h4>
+    <select name="othre-list" size="8">
+      <option *ngFor="let reqSet of searchedMajors" value="reqSet">{{reqSet.name}}</option>
+    </select>
+  </div>
+  <div id="requirement-display">
+  </div>
+</form>
