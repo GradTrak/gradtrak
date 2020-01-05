@@ -1,4 +1,5 @@
 <div class="pane">
+  <button type="button" (click)="openSelector()">open modal</button>
   <select [(ngModel)]="selectedSet" (change)="updateSelectedRequirements(selectedSet)">
     <option *ngFor="let requirementSet of selectableRequirementSets" [ngValue]="requirementSet">{{
       requirementSet.name
@@ -9,3 +10,9 @@
     [requirementSet]="requirementSet"
   ></app-requirement-set>
 </div>
+<ng-template #goalSelector>
+  <div class="">
+    <app-requirement-selector></app-requirement-selector>
+  </div>
+  <button type="button" (click)="closeSelector()">Close the selector</button>
+</ng-template>
