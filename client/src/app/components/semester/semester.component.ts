@@ -12,6 +12,7 @@ import { Semester } from 'models/semester.model';
 export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
+  @Input() currentCourses: Course[];
 
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;

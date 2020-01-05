@@ -1,3 +1,8 @@
 <div class="grid-container">
-  <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
+  <app-semester
+    *ngFor="let semester of semesters"
+    [name]="semester.name"
+    [semester]="semester"
+    [currentCourses]="currentCourses"
+  ></app-semester>
 </div>
