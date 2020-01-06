@@ -14,7 +14,12 @@
   <h3>Selected Goals</h3>
   <div *ngFor="let state of selectionStates" class="selector">
     <h4>{{ state.type | titlecase }}</h4>
-    <p *ngFor="let goal of state.chosenGoals">{{ goal.name }}</p>
+    <p>
+      <ng-container *ngFor="let goal of state.chosenGoals">
+        {{ goal.name }}
+        <br />
+      </ng-container>
+    </p>
   </div>
   <button (click)="emitGoals()">Confirm</button>
 </div>
