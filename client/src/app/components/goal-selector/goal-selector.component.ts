@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RequirementSet } from 'models/requirement-set.model';
 import { RequirementService } from 'services/requirement.service';
 
@@ -8,30 +8,36 @@ import { RequirementService } from 'services/requirement.service';
   styleUrls: ['./goal-selector.component.css'],
 })
 export class GoalSelectorComponent implements OnInit {
-  searchPrompt: string;
+  @Output() selectGoals: EventEmitter<RequirementSet[]>;
+
+  requirementSets: RequirementSet[];
+
+  searchPrompt: string = '';
+
   searchedMajors: RequirementSet[]; // feels like a lot of repeated code but again doesn't warrant a new component :(
   searchedMinors: RequirementSet[];
   searchedOthers: RequirementSet[];
-  selectedMajor: RequirementSet;
-  selectedMinor: RequirementSet;
-  selectedOther: RequirementSet;
-  requirementSets: RequirementSet[];
-  currentGoals: RequirementSet[];
+
+  selectedSearchedMajor: RequirementSet;
+  selectedSearchedMinor: RequirementSet;
+  selectedSearchedOther: RequirementSet;
+
+  chosenMajors: RequirementSet[];
+  chosenMinors: RequirementSet[];
+  chosenOthers: RequirementSet[];
+
+  selectedChosenMajor: RequirementSet;
+  selectedChosenMinor: RequirementSet;
+  selectedChosenOther: RequirementSet;
 
   constructor(private requirementService: RequirementService) {}
 
   ngOnInit(): void {
     this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[]) => {
-      this.requirementSets = requirementSets.filter(
-        (requirementSet: RequirementSet) => requirementSet.type !== 'unselectable'
-      );
+      this.requirementSets = requirementSets;
     });
-  }
 
-  private searchFunction(prompt: string, goal: RequirementSet): boolean {
-    return goal
-      ? goal.id.includes(prompt) || goal.name.includes(prompt) || this.searchFunction(prompt, goal.parent)
-      : false;
+    this.updateGoalSearch();
   }
 
   updateGoalSearch(): void {
@@ -53,5 +59,11 @@ export class GoalSelectorComponent implements OnInit {
         potentialOther.type === 'other' && this.searchFunction(this.searchPrompt, potentialOther)
     );
     // might make more sense to do the major minor sorting onInit only once and store it
+  }
+
+  private searchFunction(prompt: string, goal: RequirementSet): boolean {
+    return goal
+      ? goal.id.includes(prompt) || goal.name.includes(prompt) || this.searchFunction(prompt, goal.parent)
+      : false;
   }
 }
