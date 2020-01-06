@@ -8,9 +8,10 @@
   <tbody>
     <tr *ngFor="let course of semester.courses">
       <td class="name">
-        {{ course.dept + ' ' + course.no }}
         <ng-container *ngIf="isDuplicate(course)">
-          <span [ngbPopover]="duplicateCoursePopover" triggers="mouseenter:mouseleave">*</span>
+          <i class="material-icons" [ngbPopover]="duplicateCoursePopover" triggers="mouseenter:mouseleave">
+            error_outline
+          </i>
           <ng-template #duplicateCoursePopover>
             This course is duplicated in:
             <ng-container *ngFor="let dupSemester of getSemestersWithCourse(course)">
@@ -19,6 +20,7 @@
             </ng-container>
           </ng-template>
         </ng-container>
+        {{ course.dept + ' ' + course.no }}
       </td>
       <td class="units">{{ course.units }}</td>
       <td class="button-cell"><button (click)="removeCourse(course)">-</button></td>
