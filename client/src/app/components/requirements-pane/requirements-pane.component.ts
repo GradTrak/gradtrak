@@ -30,6 +30,12 @@ export class RequirementsPaneComponent implements OnInit {
     }
   }
 
+  /**
+   * Uses the {@link RequirementsPaneComponent#baseGoals} to return a list of all required requirement sets by
+   * recursively looking up {@link RequirementSet#parent} until it reaches the root.
+   *
+   * @return {RequirementSet[]} An array of all required requirement sets.
+   */
   getRequiredSets(): RequirementSet[] {
     const required: RequirementSet[] = [];
     this.baseGoals.forEach((baseGoal: RequirementSet) => {
