@@ -14,17 +14,17 @@ export class GoalSelectorComponent implements OnInit {
 
   searchPrompt: string = '';
 
-  searchedMajors: RequirementSet[]; // feels like a lot of repeated code but again doesn't warrant a new component :(
-  searchedMinors: RequirementSet[];
-  searchedOthers: RequirementSet[];
+  searchedMajors: RequirementSet[] = [];
+  searchedMinors: RequirementSet[] = [];
+  searchedOthers: RequirementSet[] = [];
 
   selectedSearchedMajor: RequirementSet;
   selectedSearchedMinor: RequirementSet;
   selectedSearchedOther: RequirementSet;
 
-  chosenMajors: RequirementSet[];
-  chosenMinors: RequirementSet[];
-  chosenOthers: RequirementSet[];
+  chosenMajors: Set<RequirementSet> = new Set<RequirementSet>();
+  chosenMinors: Set<RequirementSet> = new Set<RequirementSet>();
+  chosenOthers: Set<RequirementSet> = new Set<RequirementSet>();
 
   selectedChosenMajor: RequirementSet;
   selectedChosenMinor: RequirementSet;
@@ -48,17 +48,59 @@ export class GoalSelectorComponent implements OnInit {
      */
     this.searchedMajors = this.requirementSets.filter(
       (potentialMajor: RequirementSet) =>
-        potentialMajor.type === 'major' && this.searchFunction(this.searchPrompt, potentialMajor)
+        potentialMajor.type === 'major' &&
+        this.searchFunction(this.searchPrompt, potentialMajor) &&
+        !this.chosenMajors.has(potentialMajor)
     );
     this.searchedMinors = this.requirementSets.filter(
       (potentialMinor: RequirementSet) =>
-        potentialMinor.type === 'minor' && this.searchFunction(this.searchPrompt, potentialMinor)
+        potentialMinor.type === 'minor' &&
+        this.searchFunction(this.searchPrompt, potentialMinor) &&
+        !this.chosenMinors.has(potentialMinor)
     );
     this.searchedOthers = this.requirementSets.filter(
       (potentialOther: RequirementSet) =>
-        potentialOther.type === 'other' && this.searchFunction(this.searchPrompt, potentialOther)
+        potentialOther.type === 'other' &&
+        this.searchFunction(this.searchPrompt, potentialOther) &&
+        !this.chosenOthers.has(potentialOther)
     );
     // might make more sense to do the major minor sorting onInit only once and store it
+  }
+
+  addMajor(major: RequirementSet): void {
+    this.chosenMajors.add(major);
+    this.selectedSearchedMajor = undefined;
+    this.updateGoalSearch();
+  }
+
+  addMinor(minor: RequirementSet): void {
+    this.chosenMinors.add(minor);
+    this.selectedSearchedMinor = undefined;
+    this.updateGoalSearch();
+  }
+
+  addOther(other: RequirementSet): void {
+    this.chosenOthers.add(other);
+    this.selectedSearchedOther = undefined;
+    this.updateGoalSearch();
+  }
+
+  removeMajor(major: RequirementSet): void {
+    this.chosenMajors.delete(major);
+    this.selectedChosenMajor = undefined;
+    this.updateGoalSearch();
+  }
+
+  removeMinor(minor: RequirementSet): void {
+    this.chosenMinors.delete(minor);
+    this.selectedChosenMinor = undefined;
+    this.updateGoalSearch();
+  }
+
+  removeOther(other: RequirementSet): void {
+    this.chosenOthers.delete(other);
+    this.selectedChosenOther = undefined;
+    this.updateGoalSearch();
   }
 
   private searchFunction(prompt: string, goal: RequirementSet): boolean {
