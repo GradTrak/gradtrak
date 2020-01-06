@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  padding: 16px;
+  grid-template-columns: 60% 40%;
+}
+
+.selector-container {
+  display: flex;
+}
+
+.selector-container > * {
+  margin: 12px;
+  width: 100%;
+}
