@@ -16,4 +16,5 @@
     <h4>{{ state.type | titlecase }}</h4>
     <p *ngFor="let goal of state.chosenGoals">{{ goal.name }}</p>
   </div>
+  <button (click)="emitGoals()">Confirm</button>
 </div>

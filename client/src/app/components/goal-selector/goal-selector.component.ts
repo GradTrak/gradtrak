@@ -21,6 +21,7 @@ export class GoalSelectorComponent implements OnInit {
   selectionStates: GoalSelectionState[];
 
   constructor(private requirementService: RequirementService) {
+    this.selectGoals = new EventEmitter<RequirementSet[]>();
     this.searchPrompt = '';
   }
 
@@ -57,6 +58,10 @@ export class GoalSelectorComponent implements OnInit {
     state.chosenGoals.delete(goal);
     state.selectedChosenGoal = null;
     this.updateGoalSearch();
+  }
+
+  emitGoals(): void {
+    this.selectGoals.emit(this.selectionStates.flatMap((state: GoalSelectionState) => Array.from(state.chosenGoals)));
   }
 
   private searchFunction(prompt: string, goal: RequirementSet): boolean {
