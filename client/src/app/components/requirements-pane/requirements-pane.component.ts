@@ -33,13 +33,16 @@ export class RequirementsPaneComponent implements OnInit {
   getRequiredSets(): RequirementSet[] {
     const required: RequirementSet[] = [];
     this.baseGoals.forEach((baseGoal: RequirementSet) => {
+      const path = [];
       let current: RequirementSet = baseGoal;
       while (current !== null && !required.includes(current)) {
-        required.push(current);
+        path.push(current);
         current = current.parent;
       }
+
+      path.reverse();
+      required.push(...path);
     });
-    required.reverse();
     return required;
   }
 
