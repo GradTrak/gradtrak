@@ -1,3 +1,16 @@
+<p>Add a Semester</p>
+<form (ngSubmit) ="addSemester(selectedSemester)">
+  <select [(ngModel)]="selectedSemester" name="semester">
+    <option> semester1
+    </option>
+    <option> semester2
+    </option>
+    <option> semester3
+    </option>
+  </select>
+  <button *ngIf="selectedSemester" type="submit">Add</button>
+</form>
+
 <div class="pane">
   <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
 </div>

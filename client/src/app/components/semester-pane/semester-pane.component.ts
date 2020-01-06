@@ -24,4 +24,8 @@ export class SemesterPaneComponent implements OnInit {
         this.semesters = semesters;
       });
   }
+
+  addSemester(semester: Semester): void {
+    this.semesters.push(semester);
+    }
 }
