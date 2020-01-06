@@ -12,3 +12,11 @@
   margin: 12px;
   width: 100%;
 }
+
+.material-icons {
+  position: absolute;
+  transform: translateX(-20px);
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}

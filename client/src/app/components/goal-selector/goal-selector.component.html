@@ -15,10 +15,11 @@
   <div *ngFor="let state of selectionStates" class="selector">
     <h4>{{ state.type | titlecase }}</h4>
     <p>
-      <ng-container *ngFor="let goal of state.chosenGoals">
+      <span *ngFor="let goal of state.chosenGoals">
+        <i class="material-icons" (click)="removeGoal(goal, state)">close</i>
         {{ goal.name }}
         <br />
-      </ng-container>
+      </span>
     </p>
   </div>
   <button (click)="emitGoals()">Confirm</button>
