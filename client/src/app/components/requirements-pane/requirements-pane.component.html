@@ -1,11 +1,11 @@
 <div class="pane">
+  <button (click)="openSelector()">Edit Goals</button>
   <app-requirement-set
     *ngFor="let requirementSet of getRequiredSets()"
     [requirementSet]="requirementSet"
   ></app-requirement-set>
 </div>
 
-<button type="button" (click)="openSelector()">open modal</button>
 <ng-template #goalSelector>
   <div class="">
     <app-goal-selector (selectGoals)="setBaseGoals($event)"></app-goal-selector>
