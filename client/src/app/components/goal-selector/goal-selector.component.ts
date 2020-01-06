@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RequirementSet } from 'models/requirement-set.model';
 import { RequirementService } from 'services/requirement.service';
 
@@ -12,6 +12,7 @@ import { GoalSelectionState } from './selection-state';
 export class GoalSelectorComponent implements OnInit {
   private static DUMMY_GOAL_TYPES = ['major', 'minor', 'other']; // TODO Make this dynamic based on school
 
+  @Input() initialGoals: RequirementSet[]; // Optional
   @Output() selectGoals: EventEmitter<RequirementSet[]>;
 
   requirementSets: RequirementSet[];
@@ -28,7 +29,15 @@ export class GoalSelectorComponent implements OnInit {
   ngOnInit(): void {
     this.selectionStates = [];
     GoalSelectorComponent.DUMMY_GOAL_TYPES.forEach((goalType: string) => {
-      this.selectionStates.push(new GoalSelectionState(goalType));
+      const state = new GoalSelectionState(goalType);
+      this.selectionStates.push(state);
+
+      if (this.initialGoals) {
+        // Add initial goals to each chosen goals state
+        state.chosenGoals = new Set<RequirementSet>(
+          this.initialGoals.filter((initialGoal: RequirementSet) => initialGoal.type === goalType)
+        );
+      }
     });
 
     this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[]) => {

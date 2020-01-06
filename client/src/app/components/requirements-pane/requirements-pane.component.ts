@@ -9,7 +9,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./requirements-pane.component.css'],
 })
 export class RequirementsPaneComponent implements OnInit {
-  private baseGoals: RequirementSet[];
+  baseGoals: RequirementSet[];
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
