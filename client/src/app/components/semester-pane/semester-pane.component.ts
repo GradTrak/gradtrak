@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
 import { SemesterService } from 'services/semester.service';
 
@@ -10,7 +9,6 @@ import { SemesterService } from 'services/semester.service';
 })
 export class SemesterPaneComponent implements OnInit {
   @Input() semesters: Semester[];
-  @Input() currentCourses: Course[];
 
   constructor(private semesterService: SemesterService) {}
 

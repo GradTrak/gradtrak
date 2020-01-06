@@ -11,7 +11,7 @@ import { Semester } from 'models/semester.model';
 })
 export class SemesterComponent implements OnInit {
   @Input() semester: Semester;
-  @Input() currentCourses: Course[];
+  @Input() currentSemesters: Semester[]; // Optional
 
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
@@ -19,6 +19,17 @@ export class SemesterComponent implements OnInit {
   constructor(private modalService: NgbModal, private courseService: CourseService) {}
 
   ngOnInit(): void {}
+
+  isDuplicate(course: Course): boolean {
+    return this.getSemestersWithCourse(course).length > 1;
+  }
+
+  getSemestersWithCourse(course: Course): Semester[] {
+    if (this.currentSemesters) {
+      return this.currentSemesters.filter((semester: Semester) => semester.courses.includes(course));
+    }
+    return [];
+  }
 
   openAdder(): void {
     this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
