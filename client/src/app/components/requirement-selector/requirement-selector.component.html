@@ -1,4 +1,4 @@
-<form class="" action="index.html" method="post">
+<form (ngSubmit)="addSelectedGoals()">
   <div id="search-box">
     <input type="text" name="search-box"[(ngModel)]="searchPrompt" (keyup)="updateGoalSearch()">
   </div>
@@ -7,25 +7,30 @@
     <!-- I feel like hoenstly copy pasting here isn't the best idea
       but I don't think a new component for the major and then the minor makes
     any kind of sense, so this will do for now-->
-    <select name="major-list" size="8">
-      <option *ngFor="let major of searchedMajors" value="major">{{major.name}}</option>
+    <select name="major-list" size="8" [(ngModel)]="selectedMajor">
+      <option *ngFor="let major of searchedMajors" [ngValue]="major">{{major.name}}</option>
     </select>
   </div>
-  <div class="selector" id="minor-selector">
+
+
+  <div name=""class="selector" id="minor-selector">
     <h4>Minors</h4>
-    <select name="minor-list" size="8">
-      <option *ngFor="let minor of searchedMinors" value="minor">{{minor.name}}</option>
+    <select name="minor-list" size="8" [(ngModel)]="selectedMinor">
+      <option *ngFor="let minor of searchedMinors" [ngValue]="minor">{{minor.name}}</option>
     </select>
   </div>
+
+
   <div class="selector" id="other-selector">
     <h4>Other</h4>
-    <select name="othre-list" size="8">
-      <option *ngFor="let reqSet of searchedOthers" value="reqSet">{{reqSet.name}}</option>
+    <select name="othre-list" size="8" [(ngModel)]="selectedOther">
+      <option *ngFor="let other of searchedOthers" [ngValue]="other">{{other.name}}</option>
     </select>
   </div>
-  <div id="requirement-display">
-  </div>
+
+  <button type="submit">submit</button>
+
 </form>
 
-test below:
-{{test}}
+<div id="requirement-display">
+</div>
