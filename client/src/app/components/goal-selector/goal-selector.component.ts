@@ -2,37 +2,34 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RequirementSet } from 'models/requirement-set.model';
 import { RequirementService } from 'services/requirement.service';
 
+import { GoalSelectionState } from './selection-state';
+
 @Component({
   selector: 'app-goal-selector',
   templateUrl: './goal-selector.component.html',
   styleUrls: ['./goal-selector.component.css'],
 })
 export class GoalSelectorComponent implements OnInit {
+  private static DUMMY_GOAL_TYPES = ['major', 'minor', 'other']; // TODO Make this dynamic based on school
+
   @Output() selectGoals: EventEmitter<RequirementSet[]>;
 
   requirementSets: RequirementSet[];
 
-  searchPrompt: string = '';
+  searchPrompt: string;
 
-  searchedMajors: RequirementSet[] = [];
-  searchedMinors: RequirementSet[] = [];
-  searchedOthers: RequirementSet[] = [];
+  selectionStates: GoalSelectionState[];
 
-  selectedSearchedMajor: RequirementSet;
-  selectedSearchedMinor: RequirementSet;
-  selectedSearchedOther: RequirementSet;
-
-  chosenMajors: Set<RequirementSet> = new Set<RequirementSet>();
-  chosenMinors: Set<RequirementSet> = new Set<RequirementSet>();
-  chosenOthers: Set<RequirementSet> = new Set<RequirementSet>();
-
-  selectedChosenMajor: RequirementSet;
-  selectedChosenMinor: RequirementSet;
-  selectedChosenOther: RequirementSet;
-
-  constructor(private requirementService: RequirementService) {}
+  constructor(private requirementService: RequirementService) {
+    this.searchPrompt = '';
+  }
 
   ngOnInit(): void {
+    this.selectionStates = [];
+    GoalSelectorComponent.DUMMY_GOAL_TYPES.forEach((goalType: string) => {
+      this.selectionStates.push(new GoalSelectionState(goalType));
+    });
+
     this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[]) => {
       this.requirementSets = requirementSets;
     });
@@ -41,65 +38,24 @@ export class GoalSelectorComponent implements OnInit {
   }
 
   updateGoalSearch(): void {
-    /*
-     * idle thought, but why nt just maje a Goal class that interits RequirementSet?
-     * maybe even a major and minot class that inherits from Goal. IsInstance makes
-     * sense that way.
-     */
-    this.searchedMajors = this.requirementSets.filter(
-      (potentialMajor: RequirementSet) =>
-        potentialMajor.type === 'major' &&
-        this.searchFunction(this.searchPrompt, potentialMajor) &&
-        !this.chosenMajors.has(potentialMajor)
-    );
-    this.searchedMinors = this.requirementSets.filter(
-      (potentialMinor: RequirementSet) =>
-        potentialMinor.type === 'minor' &&
-        this.searchFunction(this.searchPrompt, potentialMinor) &&
-        !this.chosenMinors.has(potentialMinor)
-    );
-    this.searchedOthers = this.requirementSets.filter(
-      (potentialOther: RequirementSet) =>
-        potentialOther.type === 'other' &&
-        this.searchFunction(this.searchPrompt, potentialOther) &&
-        !this.chosenOthers.has(potentialOther)
-    );
+    this.selectionStates.forEach((state: GoalSelectionState) => {
+      state.searchedGoals = this.requirementSets.filter(
+        (goal: RequirementSet) =>
+          goal.type === state.type && this.searchFunction(this.searchPrompt, goal) && !state.chosenGoals.has(goal)
+      );
+    });
     // might make more sense to do the major minor sorting onInit only once and store it
   }
 
-  addMajor(major: RequirementSet): void {
-    this.chosenMajors.add(major);
-    this.selectedSearchedMajor = undefined;
+  addGoal(goal: RequirementSet, state: GoalSelectionState): void {
+    state.chosenGoals.add(goal);
+    state.selectedSearchedGoal = null;
     this.updateGoalSearch();
   }
 
-  addMinor(minor: RequirementSet): void {
-    this.chosenMinors.add(minor);
-    this.selectedSearchedMinor = undefined;
-    this.updateGoalSearch();
-  }
-
-  addOther(other: RequirementSet): void {
-    this.chosenOthers.add(other);
-    this.selectedSearchedOther = undefined;
-    this.updateGoalSearch();
-  }
-
-  removeMajor(major: RequirementSet): void {
-    this.chosenMajors.delete(major);
-    this.selectedChosenMajor = undefined;
-    this.updateGoalSearch();
-  }
-
-  removeMinor(minor: RequirementSet): void {
-    this.chosenMinors.delete(minor);
-    this.selectedChosenMinor = undefined;
-    this.updateGoalSearch();
-  }
-
-  removeOther(other: RequirementSet): void {
-    this.chosenOthers.delete(other);
-    this.selectedChosenOther = undefined;
+  removeGoal(goal: RequirementSet, state: GoalSelectionState): void {
+    state.chosenGoals.delete(goal);
+    state.selectedChosenGoal = null;
     this.updateGoalSearch();
   }
 

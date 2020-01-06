@@ -1,46 +1,17 @@
 <input type="text" name="search-box" [(ngModel)]="searchPrompt" (keyup)="updateGoalSearch()" />
-<div class="selector">
-  <h4>Majors</h4>
-  <select name="major-list" size="8" [(ngModel)]="selectedSearchedMajor">
-    <option *ngFor="let major of searchedMajors" [ngValue]="major">{{ major.name }}</option>
-  </select>
-  <button *ngIf="selectedSearchedMajor" (click)="addMajor(selectedSearchedMajor)">Add</button>
+<div *ngFor="let state of selectionStates">
+  <div class="selector">
+    <h4>{{ state.type | titlecase }}</h4>
+    <select size="8" [(ngModel)]="state.selectedSearchedGoal">
+      <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
+    </select>
+    <button *ngIf="state.selectedSearchedGoal" (click)="addGoal(state.selectedSearchedGoal, state)">Add</button>
+  </div>
+  <div class="selector">
+    <h4>{{ state.type | titlecase }}</h4>
+    <select size="8" [(ngModel)]="state.selectedChosenGoal">
+      <option *ngFor="let goal of state.chosenGoals" [ngValue]="goal">{{ goal.name }}</option>
+    </select>
+    <button *ngIf="state.selectedChosenGoal" (click)="removeGoal(state.selectedChosenGoal, state)">Remove</button>
+  </div>
 </div>
-<div class="selector">
-  <h4>Minors</h4>
-  <select name="minor-list" size="8" [(ngModel)]="selectedSearchedMinor">
-    <option *ngFor="let minor of searchedMinors" [ngValue]="minor">{{ minor.name }}</option>
-  </select>
-  <button *ngIf="selectedSearchedMinor" (click)="addMinor(selectedSearchedMinor)">Add</button>
-</div>
-<div class="selector">
-  <h4>Other</h4>
-  <select name="other-list" size="8" [(ngModel)]="selectedSearchedOther">
-    <option *ngFor="let other of searchedOthers" [ngValue]="other">{{ other.name }}</option>
-  </select>
-  <button *ngIf="selectedSearchedOther" (click)="addOther(selectedSearchedOther)">Add</button>
-</div>
-<button type="submit">Submit</button>
-
-<div class="selector">
-  <h4>Majors</h4>
-  <select name="major-list" size="8" [(ngModel)]="selectedChosenMajor">
-    <option *ngFor="let major of chosenMajors" [ngValue]="major">{{ major.name }}</option>
-  </select>
-  <button *ngIf="selectedChosenMajor" (click)="removeMajor(selectedChosenMajor)">Remove</button>
-</div>
-<div class="selector">
-  <h4>Minors</h4>
-  <select name="minor-list" size="8" [(ngModel)]="selectedChosenMinor">
-    <option *ngFor="let minor of chosenMinors" [ngValue]="minor">{{ minor.name }}</option>
-  </select>
-  <button *ngIf="selectedChosenMinor" (click)="removeMinor(selectedChosenMinor)">Remove</button>
-</div>
-<div class="selector">
-  <h4>Other</h4>
-  <select name="other-list" size="8" [(ngModel)]="selectedChosenOther">
-    <option *ngFor="let other of chosenOthers" [ngValue]="other">{{ other.name }}</option>
-  </select>
-  <button *ngIf="selectedChosenOther" (click)="removeOther(selectedChosenOther)">Remove</button>
-</div>
-<button type="submit">Submit</button>
