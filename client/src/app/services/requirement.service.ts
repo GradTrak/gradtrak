@@ -335,7 +335,8 @@ export class RequirementService {
   linkParents(data: object): RequirementSet[] {
     Object.values(data).forEach((requirementSet) => {
       requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
-      delete requirementSet.parentId;
+      // Temporarily commented until memoization from other branch is merged in
+      // delete requirementSet.parentId;
     });
     return Object.values(data);
   }

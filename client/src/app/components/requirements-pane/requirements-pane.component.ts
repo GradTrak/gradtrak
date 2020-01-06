@@ -9,12 +9,16 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./requirements-pane.component.css'],
 })
 export class RequirementsPaneComponent implements OnInit {
-  private requirementSets: RequirementSet[];
-  selectedRequirementSets: RequirementSet[];
-  selectableRequirementSets: RequirementSet[];
+  private baseGoals: RequirementSet[];
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
+
+  constructor(private modalService: NgbModal, private requirementService: RequirementService) {
+    this.baseGoals = [];
+  }
+
+  ngOnInit(): void {}
 
   openSelector(): void {
     this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
@@ -26,26 +30,20 @@ export class RequirementsPaneComponent implements OnInit {
     }
   }
 
-  updateSelectedRequirements(baseReqSet: RequirementSet): RequirementSet[] {
-    const selected: RequirementSet[] = [baseReqSet];
-    let current: RequirementSet = baseReqSet;
-    while (current.parent !== null) {
-      current = current.parent;
-      selected.push(current);
-    }
-    selected.reverse();
-    this.selectedRequirementSets = selected;
-    return selected;
+  getRequiredSets(): RequirementSet[] {
+    const required: RequirementSet[] = [];
+    this.baseGoals.forEach((baseGoal: RequirementSet) => {
+      let current: RequirementSet = baseGoal;
+      while (current !== null && !required.includes(current)) {
+        required.push(current);
+        current = current.parent;
+      }
+    });
+    required.reverse();
+    return required;
   }
 
-  constructor(private modalService: NgbModal, private requirementService: RequirementService) {}
-
-  ngOnInit(): void {
-    this.requirementService.getRequirements().subscribe((requirementSets) => {
-      this.requirementSets = requirementSets;
-      this.selectableRequirementSets = requirementSets.filter(
-        (requirementSet: RequirementSet) => requirementSet.type !== 'unselectable'
-      );
-    });
+  setBaseGoals(baseGoals: RequirementSet[]): void {
+    this.baseGoals = baseGoals;
   }
 }
