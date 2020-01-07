@@ -1,8 +1,8 @@
-div {
+.flexbox {
   display: flex;
   flex-wrap: wrap;
 }
 
-app-requirement-category {
-  margin: 0.5em;
+.flexbox > * {
+  margin: 8px;
 }
