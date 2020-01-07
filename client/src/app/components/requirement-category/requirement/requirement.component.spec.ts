@@ -33,7 +33,7 @@ describe('RequirementComponent', () => {
       Array.prototype.slice
         .call(compiled.querySelectorAll('td'))
         .map((elem) => elem.textContent)
-        .some((text) => text.includes('MATH 1A'))
+        .some((text) => text.includes('MATH 1A')),
     ).toBe(true);
   });
 });

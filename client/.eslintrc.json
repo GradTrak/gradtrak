@@ -33,6 +33,7 @@
                 "exceptAfterSingleLine": true
             }
         ],
+        "no-console": "off",
         "no-param-reassign": [
             "error",
             {
