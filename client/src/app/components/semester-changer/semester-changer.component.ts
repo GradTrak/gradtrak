@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
 import { Semester } from 'models/semester.model';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-semester-changer',
@@ -11,6 +11,7 @@ export class SemesterChangerComponent implements OnInit {
   @Input() semesters: Semester[];
   @ViewChild('semesterAdder', { static: false }) referenceToTemplate: TemplateRef<any>;
   semesterName: string;
+  semesterAdderModal: NgbModalRef;
 
   test;
   constructor(private modalRef: NgbModal) {}
@@ -18,9 +19,11 @@ export class SemesterChangerComponent implements OnInit {
   ngOnInit() {}
 
   openSemesterAdder() {
-    //there is no way to close the modal except the default
-    //option provided by ngb since it's rather insignificant for now.
-    this.modalRef.open(this.referenceToTemplate, { size: 'sm' });
+    this.semesterAdderModal = this.modalRef.open(this.referenceToTemplate, { size: 'sm' });
+  }
+
+  closeSemesterAdder():void{
+    this.semesterAdderModal.close()
   }
 
   addSemester(semesterName: string): void {
@@ -31,6 +34,7 @@ export class SemesterChangerComponent implements OnInit {
     });
     this.test = typeof this.semesters;
     this.semesters.push(newSemester);
+    this.closeSemesterAdder(); //optional. We can decide if this is needed.
   }
   removeSemester(semester: Semester): void {
     const index = this.semesters.indexOf(semester);

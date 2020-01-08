@@ -8,12 +8,13 @@
   </div>
 </div>
 
-<button (click)="openModal()">Add a Semester</button>
+<button (click)="openSemesterAdder()">Add a Semester</button>
 
 <ng-template #semesterAdder>
-  <h5>Semester Name:</h5>
+  <h5>Add a semester</h5>
+  <p>Semester name</p>
   <form (ngSubmit)="addSemester(semesterName)">
     <input type="text" name="name-input" [(ngModel)]="semesterName" />
-    <button type="submit">submit</button>
+    <button type="submit">add</button>
   </form>
 </ng-template>
