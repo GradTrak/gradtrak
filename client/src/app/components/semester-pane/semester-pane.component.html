@@ -14,3 +14,7 @@
 <div class="grid-container">
   <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
 </div>
+
+<ng-template #semesterChangerTemplate>
+  <app-semester-changer></app-semester-changer>
+</ng-template>
