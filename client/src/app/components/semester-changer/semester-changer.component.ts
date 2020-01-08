@@ -5,35 +5,29 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-semester-changer',
   templateUrl: './semester-changer.component.html',
-  styleUrls: ['./semester-changer.component.css']
+  styleUrls: ['./semester-changer.component.css'],
 })
 export class SemesterChangerComponent implements OnInit {
-
   @Input() semesters: Semester[];
-  @ViewChild('modalinsidemodal', {static: false} ) referenceToTemplate: TemplateRef<any>;
+  @ViewChild('modalinsidemodal', { static: false }) referenceToTemplate: TemplateRef<any>;
   semesterName: string;
 
   test;
-  constructor(private modalRef: NgbModal) { }
+  constructor(private modalRef: NgbModal) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  openModal(){
-    this.modalRef.open(this.referenceToTemplate, {size:'sm'})
+  openModal() {
+    this.modalRef.open(this.referenceToTemplate, { size: 'sm' });
   }
 
   addSemester(semesterName: string): void {
-    let newSemester = new Semester({
-      id: 'something', //TODO: figure out the ID of semesters being added
+    const newSemester = new Semester({
+      id: 'something', // TODO: figure out the ID of semesters being added
       name: semesterName,
       courses: [],
-    })
-    this.test = typeof this.semesters
+    });
+    this.test = typeof this.semesters;
     this.semesters.push(newSemester);
-    }
-
-
-
-
+  }
 }

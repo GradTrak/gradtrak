@@ -26,14 +26,11 @@ export class SemesterPaneComponent implements OnInit {
       });
   }
 
-
-
-
-  openSemesterChanger(): void{
-    this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size:'lg' })
+  openSemesterChanger(): void {
+    this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
     // don't know what type this is
   }
-  closeSemesterChanger(): void{
+  closeSemesterChanger(): void {
     this.semesterChangerModalReference.close();
   }
 }

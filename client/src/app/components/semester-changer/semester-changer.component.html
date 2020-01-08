@@ -1,11 +1,9 @@
-
 <button (click)="openModal()">add a semester</button>
-
 
 <ng-template #modalinsidemodal>
   <h5>what is the name of the semester being added?</h5>
-  <form (ngSubmit) ="addSemester(semesterName)">
-    <input type="text" name="name-input"[(ngModel)]="semesterName">
+  <form (ngSubmit)="addSemester(semesterName)">
+    <input type="text" name="name-input" [(ngModel)]="semesterName" />
     <button type="submit">submit</button>
   </form>
 </ng-template>

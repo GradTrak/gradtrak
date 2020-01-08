@@ -8,9 +8,8 @@ describe('SemesterChangerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SemesterChangerComponent ]
-    })
-    .compileComponents();
+      declarations: [SemesterChangerComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
