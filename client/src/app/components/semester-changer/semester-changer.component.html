@@ -1,10 +1,10 @@
-<p>Add a Semester</p>
-<button (click)="openModal()">open inner modal!</button>
+
+<button (click)="openModal()">add a semester</button>
 
 
 <ng-template #modalinsidemodal>
   <h5>what is the name of the semester being added?</h5>
-  <form (ngSubmit) ="addSemester(semeseterName)">
+  <form (ngSubmit) ="addSemester(semesterName)">
     <input type="text" name="name-input"[(ngModel)]="semesterName">
     <button type="submit">submit</button>
   </form>

@@ -10,7 +10,6 @@ import { Semester } from 'models/semester.model';
   styleUrls: ['./semester.component.css'],
 })
 export class SemesterComponent implements OnInit {
-  @Input() name: string;
   @Input() semester: Semester;
 
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
