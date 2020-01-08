@@ -1,3 +1,7 @@
+button {
+  top: 16px;
+  left: 16px;
+}
 .grid-container {
   padding: 16px;
   display: grid;

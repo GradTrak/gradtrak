@@ -1,3 +1,5 @@
+<button (click)="openSemesterChanger()">Add/Remove Semesters</button>
+
 <div class="grid-container">
   <app-semester *ngFor="let semester of semesters" [semester]="semester"></app-semester>
 </div>
@@ -5,5 +7,3 @@
 <ng-template #semesterChangerTemplate>
   <app-semester-changer [semesters]="semesters"></app-semester-changer>
 </ng-template>
-
-<button (click)="openSemesterChanger()">open the semester changer!</button>

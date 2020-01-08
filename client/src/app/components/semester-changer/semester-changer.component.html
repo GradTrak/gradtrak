@@ -1,7 +1,9 @@
-<button (click)="openModal()">add a semester</button>
+<div *ngFor= "let semester of semesters">{{semester.name}}</div>
+
+  <button (click)="openModal()">Add a Semester</button>
 
 <ng-template #modalinsidemodal>
-  <h5>what is the name of the semester being added?</h5>
+  <h5>Semester Name:</h5>
   <form (ngSubmit)="addSemester(semesterName)">
     <input type="text" name="name-input" [(ngModel)]="semesterName" />
     <button type="submit">submit</button>
