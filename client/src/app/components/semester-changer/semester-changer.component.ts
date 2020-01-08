@@ -9,7 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class SemesterChangerComponent implements OnInit {
   @Input() semesters: Semester[];
-  @ViewChild('modalinsidemodal', { static: false }) referenceToTemplate: TemplateRef<any>;
+  @ViewChild('semesterAdder', { static: false }) referenceToTemplate: TemplateRef<any>;
   semesterName: string;
 
   test;
@@ -17,7 +17,9 @@ export class SemesterChangerComponent implements OnInit {
 
   ngOnInit() {}
 
-  openModal() {
+  openSemesterAdder() {
+    //there is no way to close the modal except the default
+    //option provided by ngb since it's rather insignificant for now.
     this.modalRef.open(this.referenceToTemplate, { size: 'sm' });
   }
 
