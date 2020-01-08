@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import '~material-design-icons/iconfont/material-icons.css';
 
 body {
   font-family: 'Roboto Condensed', sans-serif;

@@ -1,0 +1,22 @@
+:host {
+  display: grid;
+  padding: 16px;
+  grid-template-columns: 60% 40%;
+}
+
+.selector-container {
+  display: flex;
+}
+
+.selector-container > * {
+  margin: 12px;
+  width: 100%;
+}
+
+.material-icons {
+  position: absolute;
+  transform: translateX(-20px);
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}

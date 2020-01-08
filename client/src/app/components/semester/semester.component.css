@@ -1,14 +1,7 @@
-button {
-  width: 100%;
-}
-
-.semester-container {
+table {
   display: inline-block;
   background-color: #b3e2f7;
-}
-
-table {
-  margin: 0.5em;
+  padding: 12px;
   border-collapse: separate;
   border-spacing: 16px 8px;
 }
@@ -20,4 +13,8 @@ table td:not(.button-cell) {
 
 table td.units {
   text-align: center;
+}
+
+table td > button {
+  width: 100%;
 }

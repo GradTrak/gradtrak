@@ -1,4 +1,4 @@
-.pane {
-  padding: 1em;
+:host {
+  padding: 16px;
   background-color: #a4e4ff;
 }

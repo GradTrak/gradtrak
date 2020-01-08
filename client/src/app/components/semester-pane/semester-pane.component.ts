@@ -13,8 +13,6 @@ export class SemesterPaneComponent implements OnInit {
 
   semesters: Semester[];
 
-  semesterAddingTo: Semester;
-
   constructor(private semesterService: SemesterService) {}
 
   ngOnInit(): void {

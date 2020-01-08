@@ -1,20 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { RequirementSet } from 'models/requirement-set.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RequirementService {
-  DUMMY_REQUIREMENT_DATA: RequirementSet[] = [
-    {
+  DUMMY_REQUIREMENT_DATA: object = {
+    uc: {
       id: 'uc',
       name: 'University of California',
-      parent: null,
+      parentId: null,
+      type: 'unselectable',
       requirementCategories: [
         {
           id: 'uc',
           name: 'UC Requirements',
+          type: 'unselectable',
           requirements: [
             {
               id: 'elwr',
@@ -32,10 +35,11 @@ export class RequirementService {
         },
       ],
     },
-    {
+    ucb: {
       id: 'ucb',
       name: 'UC Berkeley',
-      parent: null,
+      parentId: 'uc',
+      type: 'unselectable',
       requirementCategories: [
         {
           id: 'ac',
@@ -49,14 +53,16 @@ export class RequirementService {
         },
       ],
     },
-    {
+    coe: {
       id: 'coe',
       name: 'College of Engineering',
-      parent: null,
+      parentId: 'ucb',
+      type: 'unselectable',
       requirementCategories: [
         {
           id: 'coe-hss',
           name: 'Humanities and Social Sciences',
+          type: 'unselectable',
           requirements: [
             {
               id: 'coe-r1a',
@@ -87,10 +93,75 @@ export class RequirementService {
         },
       ],
     },
-    {
+    ls: {
+      id: 'ls',
+      name: 'College of Letters and Sciences',
+      parentId: 'ucb',
+      type: 'unselectable',
+      requirementCategories: [
+        {
+          id: 'ls-essential',
+          name: 'Essential Skills',
+          requirements: [
+            {
+              id: 'ls-r1a',
+              name: 'R&C Part A',
+            },
+            {
+              id: 'ls-r1b',
+              name: 'R&C Part B',
+            },
+            {
+              id: 'ls-quant',
+              name: 'Quantitative Reasoning',
+            },
+            {
+              id: 'ls-lang',
+              name: 'Foreign Language',
+            },
+          ],
+        },
+        {
+          id: 'ls-breadth',
+          name: 'Breadth Requirements',
+          requirements: [
+            {
+              id: 'ls-arts',
+              name: 'Arts and Literature',
+            },
+            {
+              id: 'ls-bio',
+              name: 'Biological Science',
+            },
+            {
+              id: 'ls-hist',
+              name: 'Historical Studies',
+            },
+            {
+              id: 'ls-inter',
+              name: 'International Studies',
+            },
+            {
+              id: 'ls-philo',
+              name: 'Philosophy and Values',
+            },
+            {
+              id: 'ls-phys',
+              name: 'Physical Science',
+            },
+            {
+              id: 'ls-socio',
+              name: 'Social and Behavioral Science',
+            },
+          ],
+        },
+      ],
+    },
+    eecs: {
       id: 'eecs',
       name: 'EECS Major',
-      parent: null,
+      parentId: 'coe',
+      type: 'major',
       requirementCategories: [
         {
           id: 'eecs-math',
@@ -138,7 +209,7 @@ export class RequirementService {
             },
             {
               id: 'compsci61c',
-              name: 'COMPSCI 61A',
+              name: 'COMPSCI 61C',
             },
             {
               id: 'eecs16a',
@@ -189,11 +260,84 @@ export class RequirementService {
         },
       ],
     },
-  ];
+    linguis: {
+      id: 'linguis',
+      name: 'Linguistics Major',
+      parentId: 'ls',
+      type: 'major',
+      requirementCategories: [
+        {
+          id: 'linguis100',
+          name: 'LINUIGS 100',
+          requirements: [
+            {
+              id: 'linguis100',
+              name: 'LINGUIS 100',
+            },
+          ],
+        },
+        {
+          id: 'linguis-core',
+          name: 'Core',
+          requirements: [
+            // TODO Add N of set of requirements
+            {
+              id: 'linguis110',
+              name: 'LINGUIS 110',
+            },
+            {
+              id: 'linguis111',
+              name: 'LINGUIS 111',
+            },
+            {
+              id: 'linguis115',
+              name: 'LINGUIS 115',
+            },
+            {
+              id: 'linguis120',
+              name: 'LINGUIS 120',
+            },
+            {
+              id: 'linguis130',
+              name: 'LINGUIS 130',
+            },
+          ],
+        },
+        {
+          id: 'linguis-electives',
+          name: 'Electives',
+          requirements: [
+            // TODO Add unit-style requirements
+            {
+              id: 'linguis-elective-1',
+              name: 'Elective 1',
+            },
+            {
+              id: 'linguis-elective-2',
+              name: 'Elective 2',
+            },
+            {
+              id: 'linguis-elective-3',
+              name: 'Elective 3',
+            },
+          ],
+        },
+      ],
+    },
+  };
 
   constructor() {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    return of(this.DUMMY_REQUIREMENT_DATA);
+    return of(this.DUMMY_REQUIREMENT_DATA).pipe(map(this.linkParents));
+  }
+
+  linkParents(data: object): RequirementSet[] {
+    Object.values(data).forEach((requirementSet) => {
+      requirementSet.parent = requirementSet.parentId ? data[requirementSet.parentId] : null;
+      // Temporarily commented until memoization from other branch is merged in
+      // delete requirementSet.parentId;
+    });
+    return Object.values(data);
   }
 }

@@ -10,22 +10,26 @@ import { SemesterComponent } from './components/semester/semester.component';
 import { CourseService } from './services/course.service';
 import { RequirementService } from './services/requirement.service';
 import { SemesterService } from './services/semester.service';
-import { CourseAdderComponent } from './components/course-adder/course-adder.component';
 import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
 import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
+import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
+import { GoalSelectorComponent } from './components/goal-selector/goal-selector.component';
+import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SemesterPaneComponent,
     SemesterComponent,
-    CourseAdderComponent,
+    CourseSearcherComponent,
+    GoalSelectorComponent,
     RequirementComponent,
     RequirementSetComponent,
     RequirementsPaneComponent,
     RequirementCategoryComponent,
+    SemesterChangerComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, NgbModule],
   providers: [CourseService, RequirementService, SemesterService],

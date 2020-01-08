@@ -11,6 +11,6 @@
   <button *ngIf="selectedSemester" type="submit">Add</button>
 </form>
 
-<div class="pane">
+<div class="grid-container">
   <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
 </div>

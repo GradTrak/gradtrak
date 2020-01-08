@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
+import { CourseService } from 'services/course.service';
 import { Semester } from 'models/semester.model';
 
 @Component({
@@ -12,9 +13,26 @@ export class SemesterComponent implements OnInit {
   @Input() name: string;
   @Input() semester: Semester;
 
-  constructor(public modalService: NgbModal) {}
+  @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  private modalInstance: NgbModalRef;
+
+  constructor(private modalService: NgbModal, private courseService: CourseService) {}
 
   ngOnInit(): void {}
+
+  openAdder(): void {
+    this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
+  }
+
+  closeAdder(): void {
+    this.modalInstance.close();
+  }
+
+  addCourse(course: Course): void {
+    if (!this.semester.courses.includes(course)) {
+      this.semester.courses.push(course);
+    }
+  }
 
   removeCourse(course: Course): void {
     const courseIndex = this.semester.courses.indexOf(course);
