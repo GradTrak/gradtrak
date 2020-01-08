@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Semester } from 'models/semester.model'
 
 @Component({
   selector: 'app-semester-changer',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SemesterChangerComponent implements OnInit {
 
+  @Input() semesters: Semester[];
   constructor() { }
 
   ngOnInit() {

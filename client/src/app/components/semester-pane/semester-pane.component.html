@@ -1,22 +1,9 @@
-<p>Add a Semester</p>
-<form (ngSubmit) ="addSemester(selectedSemester)">
-  <select [(ngModel)]="selectedSemester" name="semester">
-    <option> semester1
-    </option>
-    <option> semester2
-    </option>
-    <option> semester3
-    </option>
-  </select>
-  <button *ngIf="selectedSemester" type="submit">Add</button>
-</form>
-
 <div class="grid-container">
   <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
 </div>
 
 <ng-template #semesterChangerTemplate>
-  <app-semester-changer></app-semester-changer>
+  <app-semester-changer semesters="semesters"></app-semester-changer>
 </ng-template>
 
 <button (click)="openSemesterChanger()">open the semester changer!</button>
