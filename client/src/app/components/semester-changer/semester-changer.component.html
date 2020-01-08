@@ -1,6 +1,6 @@
-<div *ngFor= "let semester of semesters">{{semester.name}}</div>
+<div *ngFor="let semester of semesters">{{ semester.name }}</div>
 
-  <button (click)="openModal()">Add a Semester</button>
+<button (click)="openModal()">Add a Semester</button>
 
 <ng-template #modalinsidemodal>
   <h5>Semester Name:</h5>
