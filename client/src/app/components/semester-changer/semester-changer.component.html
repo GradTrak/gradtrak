@@ -1,17 +1,11 @@
 <p>Add a Semester</p>
+<button (click)="openModal()">open inner modal!</button>
 
 
-
-<!--
-<form (ngSubmit) ="addSemester(selectedSemester)">
-  <select [(ngModel)]="selectedSemester" name="semester">
-    <option> semester1
-    </option>
-    <option> semester2
-    </option>
-    <option> semester3
-    </option>
-  </select>
-  <button *ngIf="selectedSemester" type="submit">Add</button>
-</form>
--->
+<ng-template #modalinsidemodal>
+  <h5>what is the name of the semester being added?</h5>
+  <form (ngSubmit) ="addSemester(semeseterName)">
+    <input type="text" name="name-input"[(ngModel)]="semesterName">
+    <button type="submit">submit</button>
+  </form>
+</ng-template>

@@ -26,9 +26,7 @@ export class SemesterPaneComponent implements OnInit {
       });
   }
 
-  addSemester(semester: Semester): void {
-    this.semesters.push(semester);
-    }
+
 
 
   openSemesterChanger(): void{

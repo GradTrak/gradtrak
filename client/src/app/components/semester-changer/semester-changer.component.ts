@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Semester } from 'models/semester.model'
+import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
+import { Semester } from 'models/semester.model';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-semester-changer',
@@ -9,11 +10,28 @@ import { Semester } from 'models/semester.model'
 export class SemesterChangerComponent implements OnInit {
 
   @Input() semesters: Semester[];
-  constructor() { }
+  @ViewChild('modalinsidemodal', {static: false} ) referenceToTemplate: TemplateRef<any>;
+  semesterName: string;
+
+  test;
+  constructor(private modalRef: NgbModal) { }
 
   ngOnInit() {
   }
 
+  openModal(){
+    this.modalRef.open(this.referenceToTemplate, {size:'sm'})
+  }
+
+  addSemester(semesterName: string): void {
+    let newSemester = new Semester({
+      id: 'something', //TODO: figure out the ID of semesters being added
+      name: semesterName,
+      courses: [],
+    })
+    this.test = typeof this.semesters
+    this.semesters.push(newSemester);
+    }
 
 
 

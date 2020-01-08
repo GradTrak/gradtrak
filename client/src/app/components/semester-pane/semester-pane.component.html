@@ -2,8 +2,9 @@
   <app-semester *ngFor="let semester of semesters" [name]="semester.name" [semester]="semester"></app-semester>
 </div>
 
+
 <ng-template #semesterChangerTemplate>
-  <app-semester-changer semesters="semesters"></app-semester-changer>
+  <app-semester-changer [semesters]="semesters"></app-semester-changer>
 </ng-template>
 
 <button (click)="openSemesterChanger()">open the semester changer!</button>
