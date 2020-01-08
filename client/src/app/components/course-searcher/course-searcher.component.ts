@@ -38,7 +38,7 @@ export class CourseSearcherComponent implements OnInit {
     return searchText.pipe(
       debounceTime(150),
       distinctUntilChanged(),
-      map((searchTerm) => (searchTerm.length < 2 ? [] : this.searchFunction(searchTerm, this.allCourses)))
+      map((searchTerm) => (searchTerm.length < 2 ? [] : this.searchFunction(searchTerm, this.allCourses))),
       // TODO: sort this by search rankings for relevance
     );
   };

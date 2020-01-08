@@ -35,7 +35,7 @@ export class GoalSelectorComponent implements OnInit {
       if (this.initialGoals) {
         // Add initial goals to each chosen goals state
         state.chosenGoals = new Set<RequirementSet>(
-          this.initialGoals.filter((initialGoal: RequirementSet) => initialGoal.type === goalType)
+          this.initialGoals.filter((initialGoal: RequirementSet) => initialGoal.type === goalType),
         );
       }
     });
@@ -51,7 +51,7 @@ export class GoalSelectorComponent implements OnInit {
     this.selectionStates.forEach((state: GoalSelectionState) => {
       state.searchedGoals = this.requirementSets.filter(
         (goal: RequirementSet) =>
-          goal.type === state.type && this.searchFunction(this.searchPrompt, goal) && !state.chosenGoals.has(goal)
+          goal.type === state.type && this.searchFunction(this.searchPrompt, goal) && !state.chosenGoals.has(goal),
       );
     });
     // might make more sense to do the major minor sorting onInit only once and store it
