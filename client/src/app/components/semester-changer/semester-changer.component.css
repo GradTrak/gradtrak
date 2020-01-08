@@ -1,0 +1,15 @@
+button {
+  margin: 16px;
+}
+
+div {
+  margin: 16px;
+}
+
+.material-icons {
+  position: absolute;
+  transform: translateX(-20px);
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}

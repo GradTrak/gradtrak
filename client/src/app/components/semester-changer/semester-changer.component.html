@@ -1,4 +1,12 @@
-<div *ngFor="let semester of semesters">{{ semester.name }}</div>
+<div class="semesterChanger">
+  <h3>Add/Remove a Semester</h3>
+  <div *ngFor="let semester of semesters">
+    <h4>
+      <i class="material-icons" (click)="removeSemester(semester)">close</i> {{ semester.name }}
+      <br />
+    </h4>
+  </div>
+</div>
 
 <button (click)="openModal()">Add a Semester</button>
 

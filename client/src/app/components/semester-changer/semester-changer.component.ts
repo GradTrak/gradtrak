@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
 import { Semester } from 'models/semester.model';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-semester-changer',
@@ -29,5 +29,9 @@ export class SemesterChangerComponent implements OnInit {
     });
     this.test = typeof this.semesters;
     this.semesters.push(newSemester);
+  }
+  removeSemester(semester: Semester): void {
+    const index = this.semesters.indexOf(semester);
+    this.semesters.splice(index, 1);
   }
 }
