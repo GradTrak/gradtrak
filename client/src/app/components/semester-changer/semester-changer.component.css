@@ -1,4 +1,4 @@
-.semester-adder {
+.table {
   margin: 16px;
 }
 
@@ -7,6 +7,26 @@
 }
 
 .semester-changer {
+  margin: 16px;
+}
+
+.confirmation {
+  margin-left: 16px;
+}
+
+.title {
+  margin: 16px;
+}
+
+.prompt {
+  margin: 16px;
+}
+
+.text-input {
+  margin: 16px;
+}
+
+.add-button {
   margin: 16px;
 }
 

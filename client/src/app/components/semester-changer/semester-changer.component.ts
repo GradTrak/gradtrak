@@ -41,7 +41,6 @@ export class SemesterChangerComponent implements OnInit {
       courses: [],
     });
     this.semesters.push(newSemester);
-    this.returnSemesters();
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
 
