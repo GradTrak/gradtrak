@@ -24,13 +24,12 @@ export class CourseSearcherComponent implements OnInit {
 
   searchFunction(input: string, courseList: Course[]): Course[] {
     const processedInput = input.toLowerCase();
-    return courseList.filter((course) => {
-      return (
-        course.id.toLowerCase().includes(processedInput) ||
-        course.title.toLowerCase().includes(processedInput) ||
-        course.toString().toLowerCase().includes(processedInput)
-      );
-    });
+    return courseList.filter((course) =>
+      course
+        .toString()
+        .toLowerCase()
+        .includes(processedInput),
+    );
   }
 
   updateAutoComplete = (searchText: Observable<string>): Observable<Course[]> => {
