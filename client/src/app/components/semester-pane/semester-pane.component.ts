@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { Semester } from 'models/semester.model';
 import { SemesterService } from 'services/semester.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -14,7 +14,7 @@ export class SemesterPaneComponent implements OnInit {
 
   semesters: Semester[];
   private semesterChangerModalReference: NgbModalRef;
-  @ViewChild('semesterChangerTemplate', { static: false }) semesterChangerTemplate: TemplateRef<any>;
+  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
 
   constructor(private semesterService: SemesterService, private modalService: NgbModal) {}
 
@@ -28,7 +28,6 @@ export class SemesterPaneComponent implements OnInit {
 
   openSemesterChanger(): void {
     this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
-    // don't know what type this is
   }
   closeSemesterChanger(): void {
     this.semesterChangerModalReference.close();

@@ -1,6 +1,7 @@
-button {
+.semester-changer {
   margin: 16px;
 }
+
 .grid-container {
   padding: 16px;
   display: grid;

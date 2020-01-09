@@ -1,6 +1,6 @@
-<div class="semesterChanger">
+<div class="semester-changer">
   <h3>Add/Remove a Semester</h3>
-  <div *ngFor="let semester of semesters">
+  <div class="current-semesters" *ngFor="let semester of semesters">
     <h4>
       <i class="material-icons" (click)="removeSemester(semester)">close</i> {{ semester.name }}
       <br />
@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<button (click)="openSemesterAdder()">Add a Semester</button>
+<button class="semester-adder" (click)="openSemesterAdder()">Add a Semester</button>
 
 <ng-template #semesterAdder>
   <h5>Add a semester</h5>
