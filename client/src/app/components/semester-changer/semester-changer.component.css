@@ -1,8 +1,12 @@
-button {
+.semester-adder {
   margin: 16px;
 }
 
-div {
+.current-semesters {
+  margin: 16px;
+}
+
+.semester-changer {
   margin: 16px;
 }
 

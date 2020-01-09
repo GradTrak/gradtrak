@@ -9,13 +9,12 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 })
 export class SemesterChangerComponent implements OnInit {
   @Input() semestersInput: Semester[];
-  @ViewChild('semesterAdder', { static: false }) referenceToTemplate: TemplateRef<any>;
+  @ViewChild('semesterAdder', { static: false }) private referenceToTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @Output() semesterChanged: EventEmitter<Semester[]>;
   semesters: Semester[];
   semesterName: string;
-  semesterAdderModal: NgbModalRef;
+  private semesterAdderModal: NgbModalRef;
 
-  test;
   constructor(private modalRef: NgbModal) {
     this.semesterChanged = new EventEmitter<Semester[]>();
   }
@@ -40,7 +39,6 @@ export class SemesterChangerComponent implements OnInit {
       name: semesterName,
       courses: [],
     });
-    this.test = typeof this.semesters;
     this.semesters.push(newSemester);
     this.returnSemesters();
     this.closeSemesterAdder(); // optional. We can decide if this is needed.

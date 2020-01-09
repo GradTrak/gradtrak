@@ -13,7 +13,7 @@ export class SemesterPaneComponent implements OnInit {
   // instead to find the relevant classes so that we don't store copies
 
   private semesterChangerModalReference: NgbModalRef;
-  @ViewChild('semesterChangerTemplate', { static: false }) semesterChangerTemplate: TemplateRef<any>;
+  @ViewChild('semesterChangerTemplate', { static: false }) semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @Input() semesters: Semester[];
 
   constructor(private semesterService: SemesterService, private modalService: NgbModal) {}
@@ -22,7 +22,6 @@ export class SemesterPaneComponent implements OnInit {
 
   openSemesterChanger(): void {
     this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
-    // don't know what type this is
   }
   closeSemesterChanger(): void {
     this.semesterChangerModalReference.close();
