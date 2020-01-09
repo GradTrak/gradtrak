@@ -1,0 +1,16 @@
+:host,
+.semester-adder {
+  padding: 16px;
+}
+
+.table {
+  margin: 32px;
+}
+
+.material-icons {
+  position: absolute;
+  transform: translateX(-20px);
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}

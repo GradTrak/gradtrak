@@ -1,5 +1,12 @@
-.grid-container {
+:host {
   padding: 16px;
+}
+
+.semester-changer {
+  margin-bottom: 16px;
+}
+
+.grid-container {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 12px;
