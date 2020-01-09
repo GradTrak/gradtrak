@@ -23,11 +23,12 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   searchFunction(input: string, courseList: Course[]): Course[] {
-    const processedInput = input.toLowerCase();
+    const processedInput = input.toLowerCase().replace(/[^\w]/g, '');
     return courseList.filter((course) =>
       course
         .toString()
         .toLowerCase()
+        .replace(/[^\w]/g, '')
         .includes(processedInput),
     );
   }
