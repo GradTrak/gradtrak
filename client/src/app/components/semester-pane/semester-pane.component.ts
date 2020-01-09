@@ -18,7 +18,7 @@ export class SemesterPaneComponent implements OnInit {
 
   constructor(private semesterService: SemesterService, private modalService: NgbModal) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
   openSemesterChanger(): void {
     this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
