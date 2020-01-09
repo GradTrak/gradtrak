@@ -21,8 +21,8 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.semestersInput){
-      this.semesters = this.semestersInput.filter(()=>true);
+    if (this.semestersInput) {
+      this.semesters = this.semestersInput.filter(() => true);
     }
   }
 
@@ -42,7 +42,7 @@ export class SemesterChangerComponent implements OnInit {
     });
     this.test = typeof this.semesters;
     this.semesters.push(newSemester);
-    this.returnSemesters()
+    this.returnSemesters();
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
   removeSemester(semester: Semester): void {
@@ -52,7 +52,7 @@ export class SemesterChangerComponent implements OnInit {
     // just in case they delete a semester that's important.
   }
 
-  returnSemesters(): void{
-    this.semesterChanged.emit(this.semesters)
+  returnSemesters(): void {
+    this.semesterChanged.emit(this.semesters);
   }
 }

@@ -33,7 +33,7 @@ export class SemesterPaneComponent implements OnInit {
   closeSemesterChanger(): void {
     this.semesterChangerModalReference.close();
   }
-  setSemesters(semestersOutput: Semester[]): void{
+  setSemesters(semestersOutput: Semester[]): void {
     this.semesters = semestersOutput;
   }
 }
