@@ -16,10 +16,11 @@ export class SemesterChangerComponent implements OnInit {
   private semesterAdderModal: NgbModalRef;
 
   constructor(private modalRef: NgbModal) {
+    this.semesters = [];
     this.semesterChanged = new EventEmitter<Semester[]>();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     if (this.semestersInput) {
       this.semesters = this.semestersInput.filter(() => true);
     }
@@ -43,6 +44,7 @@ export class SemesterChangerComponent implements OnInit {
     this.returnSemesters();
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
+
   removeSemester(semester: Semester): void {
     const index = this.semesters.indexOf(semester);
     this.semesters.splice(index, 1);
