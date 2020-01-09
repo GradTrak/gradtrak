@@ -616,7 +616,7 @@ export class CourseService {
       title: 'Introductory Mechanics and Relativity',
       dept: 'PHYSICS',
       no: '5A',
-      id: 'physics7a',
+      id: 'physics5a',
       tagIds: ['ls_phys'],
     },
     physics5b: {
