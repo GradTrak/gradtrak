@@ -1,9 +1,12 @@
+:host {
+  padding: 16px;
+}
+
 .semester-changer {
-  margin: 16px;
+  margin-bottom: 16px;
 }
 
 .grid-container {
-  padding: 16px;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 12px;
