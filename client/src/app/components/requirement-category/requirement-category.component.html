@@ -4,7 +4,11 @@
       <th>{{ requirementCategory.name }}</th>
     </tr>
   </thead>
-  <tbody>
-    <tr app-requirement *ngFor="let requirement of requirementCategory.requirements" [requirement]="requirement"></tr>
-  </tbody>
+  <!-- TODO If Angular ever discovers fragments, make this less janky than relying on multiple tbody's -->
+  <tbody
+    app-requirement
+    *ngFor="let requirement of requirementCategory.requirements"
+    [requirement]="requirement"
+    [courses]="courses"
+  ></tbody>
 </table>

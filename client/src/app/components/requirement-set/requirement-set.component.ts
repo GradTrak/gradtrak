@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 
 @Component({
@@ -8,6 +9,7 @@ import { RequirementSet } from 'models/requirement-set.model';
 })
 export class RequirementSetComponent implements OnInit {
   @Input() requirementSet: RequirementSet;
+  @Input() courses: Course[];
 
   constructor() {}
 
