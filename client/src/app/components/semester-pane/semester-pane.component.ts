@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { Semester } from 'models/semester.model';
 import { SemesterService } from 'services/semester.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -32,5 +32,8 @@ export class SemesterPaneComponent implements OnInit {
   }
   closeSemesterChanger(): void {
     this.semesterChangerModalReference.close();
+  }
+  setSemesters(semestersOutput: Semester[]): void{
+    this.semesters = semestersOutput;
   }
 }

@@ -5,5 +5,5 @@
 </div>
 
 <ng-template #semesterChangerTemplate>
-  <app-semester-changer [semesters]="semesters"></app-semester-changer>
+  <app-semester-changer [semestersInput]="semesters" (semesterChanged)="setSemesters($event)"></app-semester-changer>
 </ng-template>
