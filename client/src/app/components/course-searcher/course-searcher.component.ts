@@ -28,8 +28,7 @@ export class CourseSearcherComponent implements OnInit {
       return (
         course.id.toLowerCase().includes(processedInput) ||
         course.title.toLowerCase().includes(processedInput) ||
-        course.dept.toLowerCase().includes(processedInput) ||
-        course.no.toLowerCase().includes(processedInput)
+        course.toString().toLowerCase().includes(processedInput)
       );
     });
   }
