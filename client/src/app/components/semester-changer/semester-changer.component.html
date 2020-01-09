@@ -1,20 +1,20 @@
 <div class="semester-changer">
   <h3>Add/Remove a Semester</h3>
   <div class="table">
-  <div class="current-semesters" *ngFor="let semester of semesters">
-    <h4>
-      <i class="material-icons" (click)="removeSemester(semester)">close</i> {{ semester.name }}
-      <br />
-    </h4>
-  </div>
-  <button class="semester-adder" (click)="openSemesterAdder()">Add a Semester</button>
+    <div class="current-semesters" *ngFor="let semester of semesters">
+      <h4>
+        <i class="material-icons" (click)="removeSemester(semester)">close</i> {{ semester.name }}
+        <br />
+      </h4>
+    </div>
+    <button class="semester-adder" (click)="openSemesterAdder()">Add a Semester</button>
   </div>
   <button class="confirmation" (click)="returnSemesters()">Confirm</button>
 </div>
 
 <ng-template #semesterAdder>
   <h5 class="title">Add a semester</h5>
-  <p class = "prompt">Semester name</p>
+  <p class="prompt">Semester name</p>
   <form class="semester-input" (ngSubmit)="addSemester(semesterName)">
     <input class="text-input" type="text" name="name-input" [(ngModel)]="semesterName" />
     <button class="add-button" type="submit">add</button>
