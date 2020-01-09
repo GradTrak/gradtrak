@@ -609,6 +609,22 @@ export class CourseService {
       id: 'physics7b',
       tagIds: ['ls_phys'],
     },
+    physics5a: {
+      units: 4,
+      title: 'Introductory Mechanics and Relativity',
+      dept: 'PHYSICS',
+      no: '5A',
+      id: 'physics7a',
+      tagIds: ['ls_phys'],
+    },
+    physics5b: {
+      units: 4,
+      title: 'Introductory Electromagnetism, Waves, and Optics',
+      dept: 'PHYSICS',
+      no: '5B',
+      id: 'physics5b',
+      tagIds: ['ls_phys'],
+    },
   };
 
   private sharedCoursesObj: Observable<object>;
