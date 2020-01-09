@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -7,7 +8,7 @@ import { Semester } from 'models/semester.model';
   providedIn: 'root',
 })
 export class SemesterService {
-  DUMMY_SEMESTER_DATA: object = {
+  DUMMY_SEMESTER_DATA: any = {
     fa2019: {
       id: 'fa2019',
       name: 'Fall 2019',
@@ -50,28 +51,32 @@ export class SemesterService {
     },
   };
 
-  private sharedSemestersObj: Observable<object>;
+  private sharedSemestersMap: Observable<Map<string, Semester>>;
 
   constructor() {}
 
   getSemesters(): Observable<Semester[]> {
-    if (!this.sharedSemestersObj) {
+    if (!this.sharedSemestersMap) {
       this.fetchSemesterData();
     }
-    return this.sharedSemestersObj.pipe(map(Object.values));
+    return this.sharedSemestersMap.pipe(map((data: Map<string, Semester>) => Array.from(data.values())));
   }
 
-  getSemestersObj(): Observable<object> {
-    return this.sharedSemestersObj;
+  getSemestersMap(): Observable<Map<string, Semester>> {
+    return this.sharedSemestersMap;
   }
 
   private fetchSemesterData(): void {
-    this.sharedSemestersObj = of(this.DUMMY_SEMESTER_DATA).pipe(map(this.instantiateSemesters), shareReplay());
+    this.sharedSemestersMap = of(this.DUMMY_SEMESTER_DATA).pipe(
+      map((data: any) => new Map<string, any>(Object.entries(data))),
+      map(this.instantiateSemesters),
+      shareReplay(),
+    );
   }
 
-  private instantiateSemesters(data: object): object {
-    Object.keys(data).forEach((key: string) => {
-      data[key] = new Semester(data[key]);
+  private instantiateSemesters(data: Map<string, any>): Map<string, Semester> {
+    data.forEach((rawSemester: any, key: string) => {
+      data.set(key, new Semester(rawSemester));
     });
     return data;
   }

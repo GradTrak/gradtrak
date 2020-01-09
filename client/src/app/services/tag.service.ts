@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -8,7 +9,7 @@ import { Tag } from 'models/tag.model';
 })
 export class TagService {
   /* eslint-disable @typescript-eslint/camelcase */
-  DUMMY_TAG_DATA: object = {
+  DUMMY_TAG_DATA: any = {
     upper_div: {
       id: 'upper_div',
       name: 'Upper Division Course',
@@ -68,31 +69,35 @@ export class TagService {
   };
   /* eslint-enable @typescript-eslint/camelcase */
 
-  private sharedTagData: Observable<object>;
+  private sharedTagMap: Observable<Map<string, Tag>>;
 
   constructor() {}
 
   getTags(): Observable<Tag[]> {
-    if (!this.sharedTagData) {
+    if (!this.sharedTagMap) {
       this.fetchTagData();
     }
-    return this.sharedTagData.pipe(map(Object.values));
+    return this.sharedTagMap.pipe(map((data: any) => Array.from(data.values())));
   }
 
-  getTagsObj(): Observable<object> {
-    if (!this.sharedTagData) {
+  getTagsMap(): Observable<Map<string, Tag>> {
+    if (!this.sharedTagMap) {
       this.fetchTagData();
     }
-    return this.sharedTagData;
+    return this.sharedTagMap;
   }
 
   private fetchTagData(): void {
-    this.sharedTagData = of(this.DUMMY_TAG_DATA).pipe(map(this.instantiateTags), shareReplay());
+    this.sharedTagMap = of(this.DUMMY_TAG_DATA).pipe(
+      map((data: any) => new Map<string, any>(Object.entries(data))),
+      map(this.instantiateTags),
+      shareReplay(),
+    );
   }
 
-  private instantiateTags(data: object): object {
-    Object.keys(data).forEach((key: string) => {
-      data[key] = new Tag(data[key]);
+  private instantiateTags(data: Map<string, any>): Map<string, Tag> {
+    data.forEach((rawTag: any, key: string) => {
+      data.set(key, new Tag(rawTag));
     });
     return data;
   }
