@@ -780,7 +780,7 @@ export class RequirementService {
         break;
 
       default:
-        console.error(`Unknown Requirement type: ${requirement.type}`);
+        console.error(`Requirement ${requirement.id} has unknown Requirement type: ${requirement.type}`);
         break;
     }
 
