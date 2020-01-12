@@ -8,7 +8,23 @@ export class Semester {
   name: string;
   courses: Course[];
 
-  constructor(obj: object) {
-    Object.assign(this, obj);
+  constructor(name: string);
+  constructor(obj: object);
+
+  constructor(obj: unknown) {
+    switch (typeof obj) {
+      case 'object':
+        Object.assign(this, obj);
+        break;
+
+      case 'string':
+        this.id = obj.toLowerCase().replace(/[^\w]/g, '');
+        this.name = obj;
+        this.courses = [];
+        break;
+
+      default:
+        throw new Error('Semester constructor can only take string or object');
+    }
   }
 }

@@ -36,11 +36,7 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   addSemester(semesterName: string): void {
-    const newSemester = new Semester({
-      id: 'something', // TODO: figure out the ID of semesters being added
-      name: semesterName,
-      courses: [],
-    });
+    const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
