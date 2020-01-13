@@ -9,8 +9,6 @@ import { SemesterService } from 'services/semester.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'gradtrak';
-
   semesters: Semester[];
 
   constructor(private semesterService: SemesterService) {}
