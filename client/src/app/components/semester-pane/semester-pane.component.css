@@ -6,7 +6,7 @@
   margin-bottom: 16px;
 }
 
-.grid-container {
+.semester-container {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 12px;
