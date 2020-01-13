@@ -578,7 +578,7 @@ export class RequirementService {
       requirementCategories: [
         {
           id: 'linguis100',
-          name: 'LINUIGS 100',
+          name: 'LINGUIS 100',
           requirements: [
             {
               type: 'course',
