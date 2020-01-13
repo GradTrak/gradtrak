@@ -1,0 +1,18 @@
+name: Express CI
+
+on: [push, pull_request]
+
+jobs:
+  lint-and-pretty:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install Dependencies
+      run: cd server && npm ci
+    - name: ESLint
+      run: cd server && npm run lint
+    - name: Prettier
+      run: cd server && npm run pretty
