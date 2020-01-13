@@ -16,7 +16,7 @@ export class RequirementsPaneComponent implements OnInit {
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
 
-  constructor(private modalService: NgbModal, private requirementService: RequirementService) {
+  constructor(private modalService: NgbModal) {
     this.baseGoals = [];
   }
 
