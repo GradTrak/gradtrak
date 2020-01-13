@@ -8,7 +8,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./semester-changer.component.css'],
 })
 export class SemesterChangerComponent implements OnInit {
-  @Input() semestersInput: Semester[]; // optional
+  @Input() readonly semestersInput: Semester[]; // optional
   @Output() semesterChanged: EventEmitter<Semester[]>;
   semesters: Semester[];
   semesterName: string;

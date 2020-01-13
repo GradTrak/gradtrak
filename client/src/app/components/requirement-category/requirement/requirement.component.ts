@@ -11,8 +11,8 @@ import { UnitRequirement } from 'models/requirements/unit-requirement.model';
   styleUrls: ['./requirement.component.css', '../requirement-category.component.css'],
 })
 export class RequirementComponent implements OnInit {
-  @Input() requirement: Requirement;
-  @Input() courses: Course[];
+  @Input() readonly requirement: Requirement;
+  @Input() readonly courses: Course[];
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;

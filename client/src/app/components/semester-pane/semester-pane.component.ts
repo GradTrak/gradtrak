@@ -14,7 +14,7 @@ export class SemesterPaneComponent implements OnInit {
 
   private semesterChangerModalReference: NgbModalRef;
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-  @Input() semesters: Semester[];
+  @Input() readonly semesters: Semester[];
   @Output() updateSemesters: EventEmitter<Semester[]>;
 
   constructor(private semesterService: SemesterService, private modalService: NgbModal) {

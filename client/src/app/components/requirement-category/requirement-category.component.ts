@@ -8,8 +8,8 @@ import { RequirementCategory } from 'models/requirement-category.model';
   styleUrls: ['./requirement-category.component.css'],
 })
 export class RequirementCategoryComponent implements OnInit {
-  @Input() requirementCategory: RequirementCategory;
-  @Input() courses: Course[];
+  @Input() readonly requirementCategory: RequirementCategory;
+  @Input() readonly courses: Course[];
 
   constructor() {}
 
