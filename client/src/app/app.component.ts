@@ -26,4 +26,8 @@ export class AppComponent {
   getCurrentCourses(): Course[] {
     return this.semesters.flatMap((semester) => semester.courses);
   }
+
+  setSemesters(semesters: Semester[]): void {
+    this.semesters = semesters;
+  }
 }
