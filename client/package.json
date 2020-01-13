@@ -10,8 +10,8 @@
     "e2e": "ng e2e",
     "lint": "eslint \"src/app/**/*.ts\"",
     "lint-fix": "eslint --fix \"src/app/**/*.ts\"",
-    "pretty": "prettier --check \"src/app/**/*.{css,html,ts}\"",
-    "pretty-fix": "prettier --check --write \"src/app/**/*.{css,html,ts}\""
+    "pretty": "prettier --check \"src/app/**/*.{html,scss,ts}\"",
+    "pretty-fix": "prettier --check --write \"src/app/**/*.{html,scss,ts}\""
   },
   "private": true,
   "dependencies": {
