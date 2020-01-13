@@ -7,7 +7,7 @@ import { Semester } from 'models/semester.model';
 @Component({
   selector: 'app-semester',
   templateUrl: './semester.component.html',
-  styleUrls: ['./semester.component.css'],
+  styleUrls: ['./semester.component.scss'],
 })
 export class SemesterComponent implements OnInit {
   @Input() semester: Semester;

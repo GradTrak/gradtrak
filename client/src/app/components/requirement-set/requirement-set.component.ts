@@ -5,7 +5,7 @@ import { RequirementSet } from 'models/requirement-set.model';
 @Component({
   selector: 'app-requirement-set',
   templateUrl: './requirement-set.component.html',
-  styleUrls: ['./requirement-set.component.css'],
+  styleUrls: ['./requirement-set.component.scss'],
 })
 export class RequirementSetComponent implements OnInit {
   @Input() requirementSet: RequirementSet;
