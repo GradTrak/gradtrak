@@ -3,6 +3,15 @@ name: Express CI
 on: [push, pull_request]
 
 jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Check Syntax
+      run: find . -not -path './node_modules/*' -name '*.js' -exec node -c {} \;
   lint-and-pretty:
     runs-on: ubuntu-latest
     steps:
