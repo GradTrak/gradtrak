@@ -1,5 +1,10 @@
 .fulfilled {
   background-color: #d8fcbc;
+
+  .unfulfilled,
+  .potential {
+    background-color: lightgray;
+  }
 }
 
 .unfulfilled {
@@ -8,11 +13,6 @@
 
 .potential {
   background-color: #fbfcbc;
-}
-
-.fulfilled .unfulfilled,
-.fulfilled .potential {
-  background-color: lightgray;
 }
 
 .nested {
