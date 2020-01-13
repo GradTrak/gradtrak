@@ -12,10 +12,11 @@ export class SemesterPaneComponent implements OnInit {
   // TODO: if importing takes up extra space, it may be worth just using export
   // instead to find the relevant classes so that we don't store copies
 
-  private semesterChangerModalReference: NgbModalRef;
-  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @Input() readonly semesters: Semester[];
   @Output() updateSemesters: EventEmitter<Semester[]>;
+
+  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  private semesterChangerModalReference: NgbModalRef;
 
   constructor(private semesterService: SemesterService, private modalService: NgbModal) {
     this.updateSemesters = new EventEmitter<Semester[]>();
