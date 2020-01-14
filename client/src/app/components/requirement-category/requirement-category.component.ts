@@ -5,7 +5,7 @@ import { RequirementCategory } from 'models/requirement-category.model';
 @Component({
   selector: 'app-requirement-category',
   templateUrl: './requirement-category.component.html',
-  styleUrls: ['./requirement-category.component.css'],
+  styleUrls: ['./requirement-category.component.scss'],
 })
 export class RequirementCategoryComponent implements OnInit {
   @Input() requirementCategory: RequirementCategory;

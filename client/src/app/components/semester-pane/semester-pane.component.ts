@@ -6,7 +6,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-semester-pane',
   templateUrl: './semester-pane.component.html',
-  styleUrls: ['./semester-pane.component.css'],
+  styleUrls: ['./semester-pane.component.scss'],
 })
 export class SemesterPaneComponent implements OnInit {
   // TODO: if importing takes up extra space, it may be worth just using export

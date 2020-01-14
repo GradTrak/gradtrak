@@ -7,7 +7,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-requirements-pane',
   templateUrl: './requirements-pane.component.html',
-  styleUrls: ['./requirements-pane.component.css'],
+  styleUrls: ['./requirements-pane.component.scss'],
 })
 export class RequirementsPaneComponent implements OnInit {
   baseGoals: RequirementSet[];

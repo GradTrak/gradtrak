@@ -6,11 +6,11 @@
 
 .selector-container {
   display: flex;
-}
 
-.selector-container > * {
-  margin: 12px;
-  width: 100%;
+  > * {
+    margin: 12px;
+    width: 100%;
+  }
 }
 
 .material-icons {

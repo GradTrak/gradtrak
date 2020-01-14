@@ -7,7 +7,7 @@ import { GoalSelectionState } from './selection-state';
 @Component({
   selector: 'app-goal-selector',
   templateUrl: './goal-selector.component.html',
-  styleUrls: ['./goal-selector.component.css'],
+  styleUrls: ['./goal-selector.component.scss'],
 })
 export class GoalSelectorComponent implements OnInit {
   private static DUMMY_GOAL_TYPES = ['major', 'minor', 'other']; // TODO Make this dynamic based on school

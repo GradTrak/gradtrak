@@ -8,7 +8,7 @@ import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 @Component({
   selector: '[app-requirement]',
   templateUrl: './requirement.component.html',
-  styleUrls: ['./requirement.component.css', '../requirement-category.component.css'],
+  styleUrls: ['./requirement.component.scss', '../requirement-category.component.scss'],
 })
 export class RequirementComponent implements OnInit {
   @Input() requirement: Requirement;

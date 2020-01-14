@@ -7,7 +7,7 @@ import { CourseService } from 'services/course.service';
 @Component({
   selector: 'app-course-searcher',
   templateUrl: './course-searcher.component.html',
-  styleUrls: ['./course-searcher.component.css'],
+  styleUrls: ['./course-searcher.component.scss'],
 })
 export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
