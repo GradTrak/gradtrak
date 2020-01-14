@@ -27,10 +27,8 @@ export class GoalSelectorComponent implements OnInit {
   }
 
   /**
-   * For each of the goal types (Major, Minor, and Other), create a state that
-   * tracks whether anything has been selected by the user and then import
-   * any goals that have been selected previously.
-   *
+   * For each of the goal types, create a state that tracks whether anything has been selected by the user and then
+   * import any goals that have been selected previously.
    */
   ngOnInit(): void {
     this.selectionStates = [];
@@ -54,8 +52,8 @@ export class GoalSelectorComponent implements OnInit {
   }
 
   /**
-   * Updates the searchedGoals for each state so that searchedGoal contains only
-   * goals that match the specifications of searchFunction
+   * Updates {@link GoalSelectionState#searchedGoals} for each state so that ir contains only goals that match the
+   * specifications of {@link GoalSelectorComponent#searchFunction}.
    */
   updateGoalSearch(): void {
     this.selectionStates.forEach((state: GoalSelectionState) => {

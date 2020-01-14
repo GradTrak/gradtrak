@@ -34,8 +34,8 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   /**
-   * Given a string observable, return all courses that match the specifications
-   * of searchFunction in the form of an observable.
+   * Given a string observable, return all courses that match the specification of searchFunction in the form of an
+   * Observable.
    *
    * @param {Observable<string>} searchText An observable containing the text that the user has inputted.
    */

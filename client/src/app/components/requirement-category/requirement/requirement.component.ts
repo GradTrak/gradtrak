@@ -49,10 +49,13 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MutexRequirement;
   }
 
-    /**
-     * Determines whether a mutex is fulfilled, partially fulfilled, or unfullfilled
-     *
-     */
+  /**
+   * Returns the CSS class name based on the fulfillment status of sub-requirements of a {@link MutexRequirement}, which
+   * can be fulfilled, potentially fulfilled, or unfullfilled.
+   *
+   * @param object reqFulfillment An object containing each requirement and its fulfillment status.
+   * @return string A CSS class based on the fulfillment status of the requirement.
+   */
   getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
     switch (reqFulfillment.fulfillment) {
       case MutexRequirement.FULFILLED:
@@ -75,9 +78,8 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
-
   /**
-   * returns the HTML template of the requirement based on its type.
+   * Returns the HTML template of the requirement based on its type.
    *
    * @return {TemplateRef<any>} The template of the requirement.
    */
