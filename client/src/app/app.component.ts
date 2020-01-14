@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
-import { SemesterService } from 'services/semester.service';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent {
 
   semesters: Semester[];
 
-  constructor(private semesterService: SemesterService) {}
+  constructor(private semesterService: UserService ) {}
 
   ngOnInit(): void {
     this.semesterService

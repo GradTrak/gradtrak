@@ -10,7 +10,7 @@ import { SemesterPaneComponent } from './components/semester-pane/semester-pane.
 import { SemesterComponent } from './components/semester/semester.component';
 import { CourseService } from './services/course.service';
 import { RequirementService } from './services/requirement.service';
-import { SemesterService } from './services/semester.service';
+import { UserService } from './services/user.service';
 import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
 import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
@@ -33,7 +33,7 @@ import { SemesterChangerComponent } from './components/semester-changer/semester
     SemesterChangerComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, NgbModule],
-  providers: [CourseService, RequirementService, SemesterService],
+  providers: [CourseService, RequirementService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

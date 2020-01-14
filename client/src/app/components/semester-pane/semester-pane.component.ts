@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { Semester } from 'models/semester.model';
-import { SemesterService } from 'services/semester.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -16,7 +15,7 @@ export class SemesterPaneComponent implements OnInit {
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @Input() semesters: Semester[];
 
-  constructor(private semesterService: SemesterService, private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
