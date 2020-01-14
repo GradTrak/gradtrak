@@ -9,6 +9,9 @@
 <ng-template #standardReq>
   <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
 </ng-template>
+<ng-template #tagReq>
+  <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
+</ng-template>
 <ng-template #multiReqOne>
   <td>
     One of
@@ -65,7 +68,7 @@
   <td>
     Distinctly fulfill
     <table class="nested">
-      <tbody>
+      <tbody (click)="openRequirementDisplay()">
         <tr *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
           <td>
             {{ childStatus.requirement.name }}
@@ -83,3 +86,9 @@
 >
   <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>
 </tr>
+
+<ng-template #requirementDisplay>
+  <div class="semester-adder">
+    Semester name
+  </div>
+</ng-template>

@@ -4,6 +4,8 @@ import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
+import { TagRequirement } from 'models/requirements/tag-requirement.model';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: '[app-requirement]',
@@ -21,9 +23,12 @@ export class RequirementComponent implements OnInit {
   @ViewChild('multiReqAll', { static: true }) private multiReqAll: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
-  /* eslint-enable @typescript-eslint/no-explicit-any */
+  @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
+  @ViewChild('requirementDisplay', { static: false }) private referenceToTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  private requirementDisplayModal: NgbModalRef;
 
-  constructor() {}
+  constructor(private modalRef: NgbModal) {}
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   ngOnInit(): void {}
 
@@ -71,6 +76,16 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
+  isTag(): boolean {
+    return this.requirement instanceof TagRequirement;
+  }
+
+  getTag(): TagRequirement {
+    if (!this.isTag()) {
+      throw new Error('Attempted to retreive non-TagRequirement as TagRequirement');
+    }
+    return this.requirement as TagRequirement;
+  }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
@@ -89,6 +104,9 @@ export class RequirementComponent implements OnInit {
     if (this.isUnit()) {
       return this.unitReq;
     }
+    if (this.isTag()) {
+      return this.tagReq;
+    }
     return this.standardReq;
   }
 
@@ -102,5 +120,13 @@ export class RequirementComponent implements OnInit {
       return annotation;
     }
     return null;
+  }
+
+  openRequirementDisplay(): void {
+    this.requirementDisplayModal = this.modalRef.open(this.referenceToTemplate, { size: 'sm' });
+  }
+
+  closeRequirementDisplay(): void {
+    this.requirementDisplayModal.close();
   }
 }
