@@ -25,8 +25,7 @@ const DUMMY_COURSE_DATA = {
   },
   compsci36: {
     units: 2,
-    title:
-      'CS Scholars Seminar: The Educational Climate in CS & CS61A technical discussions',
+    title: 'CS Scholars Seminar: The Educational Climate in CS & CS61A technical discussions',
     dept: 'COMPSCI',
     no: '36',
     id: 'compsci36',
