@@ -33,6 +33,12 @@ export class CourseSearcherComponent implements OnInit {
     );
   }
 
+  /**
+   * Given a string observable, return all courses that match the specifications
+   * of searchFunction in the form of an observable.
+   *
+   * @param {Observable<string>} searchText An observable containing the text that the user has inputted.
+   */
   updateAutoComplete = (searchText: Observable<string>): Observable<Course[]> => {
     return searchText.pipe(
       debounceTime(150),

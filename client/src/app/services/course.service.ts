@@ -647,6 +647,10 @@ export class CourseService {
     return this.sharedCoursesMap;
   }
 
+  /**
+     * Takes in data, map linkTags to it, and turns all objects in the data
+     * into an instance of the Course class.
+     */
   private fetchCourseData(): void {
     this.sharedCoursesMap = of(this.DUMMY_COURSE_DATA).pipe(
       map((data: any) => new Map<string, any>(Object.entries(data))),
@@ -656,6 +660,13 @@ export class CourseService {
     );
   }
 
+
+  /**
+   * Replaces all the IDs of the data with references to their appropriate objects.
+   *
+   * @param {Map<string, any>} data A mapping of ids to their respective objects.
+   * @return {Observable<Map<string, any>>} An observable with a map of ids to their respective courses
+   */
   private linkTags(data: Map<string, any>): Observable<Map<string, any>> {
     return this.tagService.getTagsMap().pipe(
       map((tagsMap: Map<string, Tag>) => {

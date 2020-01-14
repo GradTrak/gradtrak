@@ -35,11 +35,18 @@ export class SemesterChangerComponent implements OnInit {
     this.semesterAdderModal.close();
   }
 
+  /**
+   * Adds a semester to semesters.
+   *
+   * @param {string} semesterName The intended name of the new semester object being initialized.
+   *
+   */
   addSemester(semesterName: string): void {
     const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
+
 
   removeSemester(semester: Semester): void {
     const index = this.semesters.indexOf(semester);

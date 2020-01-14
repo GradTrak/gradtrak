@@ -49,6 +49,10 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MutexRequirement;
   }
 
+    /**
+     * Determines whether a mutex is fulfilled, partially fulfilled, or unfullfilled
+     *
+     */
   getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
     switch (reqFulfillment.fulfillment) {
       case MutexRequirement.FULFILLED:
@@ -71,6 +75,12 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
+
+  /**
+   * returns the HTML template of the requirement based on its type.
+   *
+   * @return {TemplateRef<any>} The template of the requirement.
+   */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {

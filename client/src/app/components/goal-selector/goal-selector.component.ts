@@ -26,6 +26,12 @@ export class GoalSelectorComponent implements OnInit {
     this.searchPrompt = '';
   }
 
+  /**
+   * For each of the goal types (Major, Minor, and Other), create a state that
+   * tracks whether anything has been selected by the user and then import
+   * any goals that have been selected previously.
+   *
+   */
   ngOnInit(): void {
     this.selectionStates = [];
     GoalSelectorComponent.DUMMY_GOAL_TYPES.forEach((goalType: string) => {
@@ -47,6 +53,10 @@ export class GoalSelectorComponent implements OnInit {
     this.updateGoalSearch();
   }
 
+  /**
+   * Updates the searchedGoals for each state so that searchedGoal contains only
+   * goals that match the specifications of searchFunction
+   */
   updateGoalSearch(): void {
     this.selectionStates.forEach((state: GoalSelectionState) => {
       state.searchedGoals = this.requirementSets.filter(
