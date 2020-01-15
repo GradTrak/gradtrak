@@ -23,7 +23,7 @@ export class AppComponent {
       this.semesters = userData.semesters;
       this.baseGoals = userData.goals;
     });
-    this.baseGoals = [];
+    this.baseGoals = [];//shouldn't this come before teh subscription?
   }
 
   getCurrentCourses(): Course[] {
@@ -32,5 +32,13 @@ export class AppComponent {
 
   setBaseGoals(baseGoals: RequirementSet[]): void {
     this.baseGoals = baseGoals;
+    this.saveState();
+  }
+  setSemesters(semesters: Semester[]): void { //these are kind of parallel so maybe consider a naming convention that works for both? eg setBaseSemesters or setGoals.
+    this.semesters = semesters;
+    this.saveState();
+  }
+  saveState(): void{
+    this.userService.saveUserData(this.semesters, this.baseGoals);
   }
 }

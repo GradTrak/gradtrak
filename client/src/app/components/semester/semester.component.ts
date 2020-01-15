@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { CourseService } from 'services/course.service';
@@ -12,11 +12,14 @@ import { Semester } from 'models/semester.model';
 export class SemesterComponent implements OnInit {
   @Input() semester: Semester;
   @Input() currentSemesters: Semester[]; // Optional
+  @Output() stateChanged: EventEmitter<any>;
 
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
 
-  constructor(private modalService: NgbModal, private courseService: CourseService) {}
+  constructor(private modalService: NgbModal, private courseService: CourseService) {
+    this.stateChanged = new EventEmitter<any>()
+  }
 
   ngOnInit(): void {}
 
@@ -43,6 +46,7 @@ export class SemesterComponent implements OnInit {
     if (!this.semester.courses.includes(course)) {
       this.semester.courses.push(course);
     }
+    this.stateChanged.emit();
   }
 
   removeCourse(course: Course): void {
@@ -50,5 +54,6 @@ export class SemesterComponent implements OnInit {
     if (courseIndex > -1) {
       this.semester.courses.splice(courseIndex, 1);
     }
+    this.stateChanged.emit();
   }
 }
