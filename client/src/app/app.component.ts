@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Course } from 'models/course.model';
 import { Semester } from 'models/semester.model';
 import { UserService } from './services/user.service';
+import { RequirementSet } from './models/requirement-set.model'
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ export class AppComponent {
   getCurrentCourses(): Course[] {
     return this.semesters.flatMap((semester) => semester.courses);
   }
-  
+
   setBaseGoals(baseGoals: RequirementSet[]): void {
     this.baseGoals = baseGoals;
   }
