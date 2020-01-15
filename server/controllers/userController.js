@@ -51,10 +51,11 @@ exports.getUserData = (req, res) => {
 };
 
 exports.setUserData = (req, res) => {
-  if (req.body.goals) {DUMMY_GOAL_DATA = req.body.goals};
-  if (req.body.semesters) {DUMMY_SEMESTER_DATA = req.body.semesters}
+  if (req.body.goals !== null) {DUMMY_GOAL_DATA = req.body.goals};
+  if (req.body.semesters !== null) {DUMMY_SEMESTER_DATA = req.body.semesters}
   res.json({
     goal: DUMMY_GOAL_DATA,
     semesters: DUMMY_SEMESTER_DATA,
   })
+  console.log("stored user data");
 }

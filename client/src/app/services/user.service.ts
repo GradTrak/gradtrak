@@ -24,12 +24,14 @@ export class UserService {
   }
 
   saveUserData(semesters:Semester[] = null, goals: RequirementSet[] = null): void{
-    const sentData = {};
-    if (! (semesters === null)){sentData['semesters'] = semesters}
-    if (! (goals === null)){sentData['goals'] = goals} //is sendData[goals] preferred over sentData.goals? or vice versa?
-    console.log('the object', sentData, 'is being saved')
-    this.http.post(UserService.SEMESTER_API_ENDPOINT, sentData)
+    const sentData = {
+      'semesters': semesters,
+      'goals': goals,
+    };
+    this.http.post(UserService.SEMESTER_API_ENDPOINT, sentData).subscribe();
   }
+  saveSemesters(semesters: Semester[]): void{this.saveUserData(semesters, undefined)}
+  saveGoals(goals: RequirementSet[]): void{this.saveUserData(undefined, goals)}
 
   /**
   * Fetches the user data from the backend, instantiates the semesters,
