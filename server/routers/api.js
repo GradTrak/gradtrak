@@ -10,5 +10,6 @@ api.get('/courses', courseController.getCourses);
 api.get('/requirements', requirementController.getRequirements);
 api.get('/user', userController.getUserData);
 api.get('/tags', tagController.getTags);
+api.post('/user', userController.setUserData);
 
 exports.api = api;
