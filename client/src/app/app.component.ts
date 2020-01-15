@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Course } from 'models/course.model';
+import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
-import { UserService } from './services/user.service';
-import { RequirementSet } from './models/requirement-set.model'
+import { UserService } from 'services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
   baseGoals: RequirementSet[];
   semesters: Semester[];
 
-  constructor(private semesterService: UserService ) {}
+  constructor(private semesterService: UserService) {}
 
   ngOnInit(): void {
     this.semesterService
@@ -22,7 +22,7 @@ export class AppComponent {
       .subscribe((semesters) => {
         this.semesters = semesters;
       });
-    this.baseGoals = []
+    this.baseGoals = [];
   }
 
   getCurrentCourses(): Course[] {

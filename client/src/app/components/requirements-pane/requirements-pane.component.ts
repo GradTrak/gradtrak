@@ -54,7 +54,7 @@ export class RequirementsPaneComponent implements OnInit {
     });
     return required;
   }
-  passEventToParent(baseGoals: RequirementSet[]): void{
+  passEventToParent(baseGoals: RequirementSet[]): void {
     this.updateGoals.emit(baseGoals);
   }
 }

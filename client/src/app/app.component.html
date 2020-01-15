@@ -1,2 +1,6 @@
 <app-semester-pane [semesters]="semesters"></app-semester-pane>
-<app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals" (updateGoals)="setBaseGoals($event)"></app-requirements-pane>
+<app-requirements-pane
+  [courses]="getCurrentCourses()"
+  [goals]="baseGoals"
+  (updateGoals)="setBaseGoals($event)"
+></app-requirements-pane>
