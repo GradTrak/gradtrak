@@ -41,6 +41,11 @@ const DUMMY_SEMESTER_DATA = {
   },
 };
 
-exports.getSemesters = (req, res) => {
-  res.json(DUMMY_SEMESTER_DATA);
+const DUMMY_GOAL_DATA = [];
+
+exports.getUserData = (req, res) => {
+  res.json({
+    semesters: DUMMY_SEMESTER_DATA,
+    goals: DUMMY_GOAL_DATA,
+  });
 };

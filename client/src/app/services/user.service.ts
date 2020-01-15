@@ -8,27 +8,30 @@ import { Semester } from 'models/semester.model';
   providedIn: 'root',
 })
 export class UserService {
-  private static readonly SEMESTER_API_ENDPOINT = '/api/semesters';
+  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
-  private sharedSemestersObj: Observable<object>;
+  // FIXME Create interface for user data
+  private sharedUserData: Observable<any>;
 
   constructor(private http: HttpClient) {}
 
-  getSemesters(): Observable<Semester[]> {
-    if (!this.sharedSemestersObj) {
-      this.fetchSemesterData();
+  getUserData(): Observable<any> {
+    if (!this.sharedUserData) {
+      this.fetchUserData();
     }
-    return this.sharedSemestersObj.pipe(map(Object.values));
+    return this.sharedUserData;
   }
 
-  getSemestersObj(): Observable<object> {
-    return this.sharedSemestersObj;
-  }
-
-  private fetchSemesterData(): void {
-    this.sharedSemestersObj = this.http
-      .get(UserService.SEMESTER_API_ENDPOINT)
-      .pipe(map(this.instantiateSemesters), shareReplay());
+  private fetchUserData(): void {
+    this.sharedUserData = this.http.get(UserService.SEMESTER_API_ENDPOINT).pipe(
+      map((data: any) => {
+        return { ...data, semesters: this.instantiateSemesters(data.semesters) };
+      }),
+      map((data: any) => {
+        return { ...data, semesters: Object.values(data.semesters) };
+      }),
+      shareReplay(),
+    );
   }
 
   private instantiateSemesters(data: object): object {

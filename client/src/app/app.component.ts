@@ -14,14 +14,15 @@ export class AppComponent {
   baseGoals: RequirementSet[];
   semesters: Semester[];
 
-  constructor(private semesterService: UserService) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.semesterService
-      .getSemesters() // Returns an Observable
-      .subscribe((semesters) => {
-        this.semesters = semesters;
-      });
+    this.userService.getUserData().subscribe((userData: any) => {
+      console.log(userData);
+      // FIXME Create interface for user data
+      this.semesters = userData.semesters;
+      this.baseGoals = userData.goals;
+    });
     this.baseGoals = [];
   }
 
