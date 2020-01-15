@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild, TemplateRef } from '@angular/core';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { RequirementService } from 'services/requirement.service';
@@ -10,14 +10,15 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./requirements-pane.component.scss'],
 })
 export class RequirementsPaneComponent implements OnInit {
-  baseGoals: RequirementSet[];
+  @Input() goals: RequirementSet[];
   @Input() courses: Course[];
+  @Output() updateGoals: EventEmitter<RequirementSet[]>;
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
 
   constructor(private modalService: NgbModal, private requirementService: RequirementService) {
-    this.baseGoals = [];
+    this.updateGoals = new EventEmitter<RequirementSet[]>();
   }
 
   ngOnInit(): void {}
@@ -40,7 +41,7 @@ export class RequirementsPaneComponent implements OnInit {
    */
   getRequiredSets(): RequirementSet[] {
     const required: RequirementSet[] = [];
-    this.baseGoals.forEach((baseGoal: RequirementSet) => {
+    this.goals.forEach((baseGoal: RequirementSet) => {
       const path = [];
       let current: RequirementSet = baseGoal;
       while (current !== null && !required.includes(current)) {
@@ -53,8 +54,7 @@ export class RequirementsPaneComponent implements OnInit {
     });
     return required;
   }
-
-  setBaseGoals(baseGoals: RequirementSet[]): void {
-    this.baseGoals = baseGoals;
+  passEventToParent(baseGoals: RequriementSet[]): void{
+    this.updateGoals.emit(baseGoals);
   }
 }

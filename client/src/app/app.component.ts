@@ -10,7 +10,7 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
   title = 'gradtrak';
-
+  baseGoals: RequirementSet[];
   semesters: Semester[];
 
   constructor(private semesterService: UserService ) {}
@@ -21,9 +21,14 @@ export class AppComponent {
       .subscribe((semesters) => {
         this.semesters = semesters;
       });
+    this.baseGoals = []
   }
 
   getCurrentCourses(): Course[] {
     return this.semesters.flatMap((semester) => semester.courses);
+  }
+  
+  setBaseGoals(baseGoals: RequirementSet[]): void {
+    this.baseGoals = baseGoals;
   }
 }
