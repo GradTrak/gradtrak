@@ -9,6 +9,6 @@ const api = express.Router();
 api.get('/courses', courseController.getCourses);
 api.get('/requirements', requirementController.getRequirements);
 api.get('/user', userController.getUserData);
-api.use('/tags', tagController.getTags);
+api.get('/tags', tagController.getTags);
 
 exports.api = api;
