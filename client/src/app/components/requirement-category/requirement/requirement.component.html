@@ -7,7 +7,7 @@
 </ng-template>
 
 <ng-template #standardReq>
-  <td (click)="openRequirementDisplay()">{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
+  <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
 </ng-template>
 <ng-template #tagReq>
   <td (click)="openRequirementDisplay()">{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
@@ -88,7 +88,6 @@
 </tr>
 
 <ng-template #requirementDisplay>
-  <div class="semester-adder">
-    Semester name
+  <div class="semester-adder">stuff
   </div>
 </ng-template>
