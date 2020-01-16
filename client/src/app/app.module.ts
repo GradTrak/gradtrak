@@ -13,11 +13,11 @@ import { SemesterService } from './services/semester.service';
 import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
 import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
+import { RequirementDisplayComponent } from './components/requirement-category/requirement-display/requirement-display.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
 import { GoalSelectorComponent } from './components/goal-selector/goal-selector.component';
 import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
-import { RequirementDisplayComponent } from './components/requirement-category/requirement/requirement-display/requirement-display.component';
 
 @NgModule({
   declarations: [

@@ -24,10 +24,10 @@ export class RequirementComponent implements OnInit {
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
-  @ViewChild('requirementDisplay', { static: false }) private referenceToTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-  private requirementDisplayModal: NgbModalRef;
+  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  private requirementDisplayModalReference: NgbModalRef;
 
-  constructor(private modalRef: NgbModal) {}
+  constructor(private modalService: NgbModal) {}
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   ngOnInit(): void {}
@@ -123,10 +123,10 @@ export class RequirementComponent implements OnInit {
   }
 
   openRequirementDisplay(): void {
-    this.requirementDisplayModal = this.modalRef.open(this.referenceToTemplate, { size: 'sm' });
+    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
   }
 
   closeRequirementDisplay(): void {
-    this.requirementDisplayModal.close();
+    this.requirementDisplayModalReference.close();
   }
 }
