@@ -20,9 +20,12 @@ export class AppComponent {
   ngOnInit(): void {
     this.userService.fetchUserData();
     this.userService.getUserData().subscribe((userData: UserData) => {
-      console.log(userData);
       this.semesters = userData.semesters;
       this.baseGoals = userData.goals;
+
+      this.userService.saveUserData();
+
+      console.log(userData);
     });
     this.baseGoals = [];
   }

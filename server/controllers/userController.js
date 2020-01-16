@@ -1,4 +1,4 @@
-let DUMMY_SEMESTER_DATA = {
+const DUMMY_SEMESTER_DATA = {
   fa2019: {
     id: 'fa2019',
     name: 'Fall 2019',
@@ -41,21 +41,18 @@ let DUMMY_SEMESTER_DATA = {
   },
 };
 
-let DUMMY_GOAL_DATA = [];
+const DUMMY_GOAL_DATA = [];
+
+let userData = {
+  semesters: DUMMY_SEMESTER_DATA,
+  goals: DUMMY_GOAL_DATA,
+};
 
 exports.getUserData = (req, res) => {
-  res.json({
-    semesters: DUMMY_SEMESTER_DATA,
-    goals: DUMMY_GOAL_DATA,
-  });
+  res.json(userData);
 };
 
 exports.setUserData = (req, res) => {
-  if (req.body.goals !== null) {DUMMY_GOAL_DATA = req.body.goals};
-  if (req.body.semesters !== null) {DUMMY_SEMESTER_DATA = req.body.semesters}
-  res.json({
-    goal: DUMMY_GOAL_DATA,
-    semesters: DUMMY_SEMESTER_DATA,
-  })
-  console.log("stored user data");
-}
+  userData = req.body;
+  res.status(204).send();
+};
