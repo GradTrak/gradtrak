@@ -41,8 +41,7 @@ export class UserService {
   }
 
   /**
-   * Fetches the user data from the backend, instantiates the semesters,
-   * and takes the object and make it a list
+   * Fetches the user data from the backend, instantiates the semesters, and takes the object and make it a list.
    */
   private fetchUserData(): void {
     this.sharedUserData = this.http.get(UserService.SEMESTER_API_ENDPOINT).pipe(
