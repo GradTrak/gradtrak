@@ -55,20 +55,36 @@ export class UserService {
     this.http.post(UserService.SEMESTER_API_ENDPOINT, this.userDataState).subscribe();
   }
 
-  updateSemesters(semesters: Semester[]): void {
+  /**
+   * Updates the list of semesters to a new list of given semesters.
+   *
+   * @param {Semester[]} newSemesters The new semesters.
+   */
+  updateSemesters(newSemesters: Semester[]): void {
     this.userData.next({
       ...this.userDataState,
-      semesters: [...semesters],
+      semesters: [...newSemesters],
     });
   }
 
-  updateGoals(goals: RequirementSet[]): void {
+  /**
+   * Updates the list of goals to a new list of given goals.
+   *
+   * @param {RequiremnetSet[]} newGoals The new goals.
+   */
+  updateGoals(newGoals: RequirementSet[]): void {
     this.userData.next({
       ...this.userDataState,
-      goals: [...goals],
+      goals: [...newGoals],
     });
   }
 
+  /**
+   * Adds a course to a given semester.
+   *
+   * @param {Course} course The course to add.
+   * @param {Semester} semester The semester to which to add the course.
+   */
   addCourse(course: Course, semester: Semester): void {
     this.userData.next({
       ...this.userDataState,
@@ -83,6 +99,12 @@ export class UserService {
     });
   }
 
+  /**
+   * Removes a course from a given semester.
+   *
+   * @param {Course} course The course to remove.
+   * @param {Semester} semester The semester from which to remove the course.
+   */
   removeCourse(course: Course, semester: Semester): void {
     this.userData.next({
       ...this.userDataState,
