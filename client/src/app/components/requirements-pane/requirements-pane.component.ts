@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild, TemplateRef } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { RequirementService } from 'services/requirement.service';
+import { UserService } from 'services/user.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -12,14 +13,15 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 export class RequirementsPaneComponent implements OnInit {
   @Input() goals: RequirementSet[];
   @Input() courses: Course[];
-  @Output() updateGoals: EventEmitter<RequirementSet[]>;
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
 
-  constructor(private modalService: NgbModal, private requirementService: RequirementService) {
-    this.updateGoals = new EventEmitter<RequirementSet[]>();
-  }
+  constructor(
+    private modalService: NgbModal,
+    private requirementService: RequirementService,
+    private userService: UserService,
+  ) {}
 
   ngOnInit(): void {}
 
@@ -55,7 +57,7 @@ export class RequirementsPaneComponent implements OnInit {
     return required;
   }
 
-  passEventToParent(baseGoals: RequirementSet[]): void {
-    this.updateGoals.emit(baseGoals);
+  setGoals(goals: RequirementSet[]) {
+    this.userService.updateGoals(goals);
   }
 }

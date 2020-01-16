@@ -1,12 +1,2 @@
-<app-semester-pane
-  [semesters]="semesters"
-  (semestersChanged)="setSemesters($event)"
-  (stateChanged)="saveState()"
-></app-semester-pane>
-<!--still annoying that semestersChanged and updateGoals are different. Is it fine to just GoalsChanged or updateSemesters?-->
-<app-requirements-pane
-  [courses]="getCurrentCourses()"
-  [goals]="baseGoals"
-  (updateGoals)="setBaseGoals($event)"
-  (stateChanged)="saveState()"
-></app-requirements-pane>
+<app-semester-pane [semesters]="semesters"></app-semester-pane>
+<app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>

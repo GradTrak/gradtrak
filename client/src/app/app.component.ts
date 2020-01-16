@@ -18,6 +18,7 @@ export class AppComponent {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
+    this.userService.fetchUserData();
     this.userService.getUserData().subscribe((userData: UserData) => {
       console.log(userData);
       this.semesters = userData.semesters;
@@ -32,15 +33,11 @@ export class AppComponent {
 
   setBaseGoals(baseGoals: RequirementSet[]): void {
     this.baseGoals = baseGoals;
-    this.saveState();
+    this.userService.saveUserData();
   }
 
   setSemesters(semesters: Semester[]): void {
     this.semesters = semesters;
-    this.saveState();
-  }
-
-  saveState(): void {
-    this.userService.saveUserData(this.semesters, this.baseGoals);
+    this.userService.saveUserData();
   }
 }
