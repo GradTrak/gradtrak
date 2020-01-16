@@ -13,7 +13,6 @@ export class AppComponent {
   title = 'gradtrak';
   baseGoals: RequirementSet[];
   semesters: Semester[];
-  courses: Course[];
 
   constructor(private userService: UserService) {}
 
@@ -25,7 +24,6 @@ export class AppComponent {
       this.baseGoals = userData.goals;
     });
     this.baseGoals = [];//shouldn't this come before teh subscription?
-    this.courses = this.getCurrentCourses();
   }
 
   getCurrentCourses(): Course[] {
@@ -38,7 +36,6 @@ export class AppComponent {
   }
   setSemesters(semesters: Semester[]): void { //these are kind of parallel so maybe consider a naming convention that works for both? eg setBaseSemesters or setGoals.
     this.semesters = semesters;
-    this.courses = this.getCurrentCourses();
     this.saveState();
   }
   saveState(): void{
