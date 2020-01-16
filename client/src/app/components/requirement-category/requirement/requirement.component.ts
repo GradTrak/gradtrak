@@ -77,15 +77,15 @@ export class RequirementComponent implements OnInit {
   }
 
   isTag(): boolean {
-     return this.requirement instanceof TagRequirement;
-   }
+    return this.requirement instanceof TagRequirement;
+  }
 
-   getTag(): TagRequirement {
-     if (!this.isTag()) {
-       throw new Error('Attempted to retreive non-TagRequirement as TagRequirement');
-     }
-     return this.requirement as TagRequirement;
-   }
+  getTag(): TagRequirement {
+    if (!this.isTag()) {
+      throw new Error('Attempted to retreive non-TagRequirement as TagRequirement');
+    }
+    return this.requirement as TagRequirement;
+  }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
