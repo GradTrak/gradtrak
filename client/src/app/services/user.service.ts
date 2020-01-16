@@ -24,20 +24,12 @@ export class UserService {
     return this.sharedUserData;
   }
 
-  saveUserData(semesters: Semester[] = null, goals: RequirementSet[] = null): void {
+  saveUserData(semesters: Semester[], goals: RequirementSet[]): void {
     const sentData = {
       semesters,
       goals,
     };
     this.http.post(UserService.SEMESTER_API_ENDPOINT, sentData).subscribe();
-  }
-
-  saveSemesters(semesters: Semester[]): void {
-    this.saveUserData(semesters, undefined);
-  }
-
-  saveGoals(goals: RequirementSet[]): void {
-    this.saveUserData(undefined, goals);
   }
 
   /**

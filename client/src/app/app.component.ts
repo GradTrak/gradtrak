@@ -27,7 +27,7 @@ export class AppComponent {
   }
 
   getCurrentCourses(): Course[] {
-    return this.semesters.flatMap((semester) => semester.courses);
+    return this.semesters.flatMap((semester: Semester) => semester.courses);
   }
 
   setBaseGoals(baseGoals: RequirementSet[]): void {
