@@ -1,9 +1,22 @@
 table {
   display: inline-block;
+  width: 100%;
   background-color: #b3e2f7;
   padding: 12px;
   border-collapse: separate;
   border-spacing: 16px 8px;
+}
+
+table col.name {
+  width: 80%;
+}
+
+table col.units {
+  width: 10%;
+}
+
+table col.button-cell {
+  width: 10%;
 }
 
 table td:not(.button-cell) {
