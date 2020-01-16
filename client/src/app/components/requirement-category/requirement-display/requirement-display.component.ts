@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from 'models/course.model';
+import { CourseService } from 'services/course.service';
 
 @Component({
   selector: 'app-requirement-display',
@@ -6,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./requirement-display.component.scss'],
 })
 export class RequirementDisplayComponent implements OnInit {
-  constructor() {}
+  allCourses: Course[];
 
-  ngOnInit(): void {}
+  constructor(private courseService: CourseService) {}
+
+  ngOnInit(): void {
+    this.courseService.getCourses().subscribe((courses: Course[]) => {
+      this.allCourses = courses;
+    });
+  }
 }
