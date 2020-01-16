@@ -31,42 +31,15 @@ export class RequirementService {
           requirements: [
             {
               id: 'elwr',
-              type: 'tag',
               name: 'Entry-Level Writing',
-              requirements: [
-                {
-                  type: 'tag',
-                  id: 'elwr',
-                  name: 'Entry-Level Writing',
-                  tagId: 'elwr',
-                },
-              ],
             },
             {
               id: 'ah',
-              type: 'tag',
               name: 'American History',
-              requirements: [
-                {
-                  type: 'tag',
-                  id: 'ah',
-                  name: 'American History',
-                  tagId: 'ah',
-                },
-              ],
             },
             {
               id: 'ai',
-              type: 'tag',
               name: 'American Institutions',
-              requirements: [
-                {
-                  type: 'tag',
-                  id: 'ai',
-                  name: 'American Institutions',
-                  tagId: 'ai',
-                },
-              ],
             },
           ],
         },
@@ -329,29 +302,11 @@ export class RequirementService {
             },
             {
               id: 'ls_quant',
-              type: 'tag',
               name: 'Quantitative Reasoning',
-              requirements: [
-                {
-                  type: 'tag',
-                  id: 'ls_quant',
-                  name: 'Quantitative Reasoning',
-                  tagId: 'ls_quant',
-                },
-              ],
             },
             {
               id: 'ls_lang',
-              type: 'tag',
               name: 'Foreign Language',
-              requirements: [
-                {
-                  type: 'tag',
-                  id: 'ls_lang',
-                  name: 'Foreign Language',
-                  tagId: 'ls_lang',
-                },
-              ],
             },
           ],
         },
