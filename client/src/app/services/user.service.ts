@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
+import { flatMap, map } from 'rxjs/operators';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { UserData } from 'models/user-data.model';
+import { CourseService } from 'services/course.service';
+import { RequirementService } from 'services/requirement.service';
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +25,11 @@ export class UserService {
 
   private userDataState: UserData;
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private courseService: CourseService,
+    private requirementService: RequirementService,
+    private http: HttpClient,
+  ) {
     this.userData = new BehaviorSubject<UserData>(UserService.INITIAL_STATE);
     this.userData.subscribe((userData: UserData) => {
       this.userDataState = userData;
@@ -40,19 +46,12 @@ export class UserService {
   fetchUserData(): void {
     this.http
       .get(UserService.SEMESTER_API_ENDPOINT)
-      .pipe(
-        map((data: any) => {
-          return { ...data, semesters: this.instantiateSemesters(data.semesters) };
-        }),
-        map((data: any) => {
-          return { ...data, semesters: Object.values(data.semesters) };
-        }),
-      )
+      .pipe(flatMap((userData: any) => this.getUserDataFromPrototype(userData)))
       .subscribe((userData: UserData) => this.userData.next(userData));
   }
 
   saveUserData(): void {
-    this.http.put(UserService.SEMESTER_API_ENDPOINT, this.userDataState).subscribe();
+    this.http.put(UserService.SEMESTER_API_ENDPOINT, this.getPrototypeFromUserData(this.userDataState)).subscribe();
   }
 
   /**
@@ -119,10 +118,40 @@ export class UserService {
     });
   }
 
-  private instantiateSemesters(data: object): object {
-    Object.keys(data).forEach((key: string) => {
-      data[key] = new Semester(data[key]);
-    });
-    return data;
+  private getPrototypeFromUserData(userData: UserData): any {
+    return {
+      semesters: userData.semesters.map((semester: Semester) => {
+        const semesterPrototype = {
+          ...semester,
+          courseIds: semester.courses.map((course: Course) => course.id),
+        };
+        delete semesterPrototype.courses;
+        return semesterPrototype;
+      }),
+      goalIds: userData.goals.map((goal: RequirementSet) => goal.id),
+    };
+  }
+
+  private getUserDataFromPrototype(prototype: any): Observable<UserData> {
+    return forkJoin({
+      coursesObj: this.courseService.getCoursesObj(),
+      reqsObj: this.requirementService.getRequirementsObj(),
+    }).pipe(
+      map((serviceObj) => ({
+        semesters: prototype.semesters.map((rawSemester: any) =>
+          this.instantiateSemester(rawSemester, serviceObj.coursesObj),
+        ),
+        goals: prototype.goalIds.map((goalId: string) => serviceObj.reqsObj[goalId]),
+      })),
+    );
+  }
+
+  private instantiateSemester(semesterPrototype: any, coursesObj: object): Semester {
+    const semester = {
+      ...semesterPrototype,
+      courses: semesterPrototype.courseIds.map((courseId: string) => coursesObj[courseId]),
+    };
+    delete semester.courseIds;
+    return semester;
   }
 }
