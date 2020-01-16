@@ -57,7 +57,7 @@ export class RequirementsPaneComponent implements OnInit {
     return required;
   }
 
-  setGoals(goals: RequirementSet[]) {
+  setGoals(goals: RequirementSet[]): void {
     this.userService.updateGoals(goals);
   }
 }

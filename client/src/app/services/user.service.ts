@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { UserData } from 'models/user-data.model';
@@ -24,7 +25,9 @@ export class UserService {
 
   constructor(private http: HttpClient) {
     this.userData = new BehaviorSubject<UserData>(UserService.INITIAL_STATE);
-    this.userData.subscribe((userData: UserData) => (this.userDataState = userData));
+    this.userData.subscribe((userData: UserData) => {
+      this.userDataState = userData;
+    });
   }
 
   getUserData(): Observable<UserData> {
@@ -63,6 +66,34 @@ export class UserService {
     this.userData.next({
       ...this.userDataState,
       goals: [...goals],
+    });
+  }
+
+  addCourse(course: Course, semester: Semester): void {
+    this.userData.next({
+      ...this.userDataState,
+      semesters: this.userDataState.semesters.map((s: Semester) =>
+        s === semester
+          ? {
+              ...s,
+              courses: [...s.courses, course],
+            }
+          : s,
+      ),
+    });
+  }
+
+  removeCourse(course: Course, semester: Semester): void {
+    this.userData.next({
+      ...this.userDataState,
+      semesters: this.userDataState.semesters.map((s: Semester) =>
+        s === semester
+          ? {
+              ...s,
+              courses: s.courses.filter((c: Course) => c !== course),
+            }
+          : s,
+      ),
     });
   }
 
