@@ -18,7 +18,7 @@ export class SemesterComponent implements OnInit {
   private modalInstance: NgbModalRef;
 
   constructor(private modalService: NgbModal, private courseService: CourseService) {
-    this.stateChanged = new EventEmitter<any>()
+    this.stateChanged = new EventEmitter<any>();
   }
 
   ngOnInit(): void {}

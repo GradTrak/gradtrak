@@ -16,11 +16,11 @@ export class SemesterPaneComponent implements OnInit {
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @Input() semesters: Semester[];
   @Output() semestersChanged: EventEmitter<Semester[]>;
-  @Output() stateChanged: EventEmitter<any>;//a generic catch-all to update the user ingo
+  @Output() stateChanged: EventEmitter<any>; // a generic catch-all to update the user ingo
 
   constructor(private modalService: NgbModal, private userService: UserService) {
     this.semestersChanged = new EventEmitter<Semester[]>();
-    this.stateChanged = new EventEmitter<any>()
+    this.stateChanged = new EventEmitter<any>();
   }
 
   ngOnInit(): void {}
@@ -35,9 +35,9 @@ export class SemesterPaneComponent implements OnInit {
 
   setSemesters(semestersOutput: Semester[]): void {
     this.semestersChanged.emit(semestersOutput);
-    //this.userService.saveSemesters(this.semesters);
+    // this.userService.saveSemesters(this.semesters);
   }
   emitChange(): void {
-    this.stateChanged.emit(); //again if there was a way to bubble it it would be better
+    this.stateChanged.emit(); // again if there was a way to bubble it it would be better
   }
 }

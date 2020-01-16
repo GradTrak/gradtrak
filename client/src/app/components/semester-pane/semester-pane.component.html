@@ -4,12 +4,10 @@
     *ngFor="let semester of semesters"
     [semester]="semester"
     [currentSemesters]="semesters"
-    (stateChanged) = "emitChange()"
-    ></app-semester>
+    (stateChanged)="emitChange()"
+  ></app-semester>
 </div>
 
 <ng-template #semesterChangerTemplate>
-  <app-semester-changer
-    [semestersInput]="semesters"
-    (semesterChanged)="setSemesters($event)"></app-semester-changer>
+  <app-semester-changer [semestersInput]="semesters" (semesterChanged)="setSemesters($event)"></app-semester-changer>
 </ng-template>

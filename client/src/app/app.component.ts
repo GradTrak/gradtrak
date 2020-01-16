@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
+import { UserData } from 'models/user-data.model';
 import { UserService } from 'services/user.service';
 
 @Component({
@@ -17,13 +18,12 @@ export class AppComponent {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.getUserData().subscribe((userData: any) => {
+    this.userService.getUserData().subscribe((userData: UserData) => {
       console.log(userData);
-      // FIXME Create interface for user data
       this.semesters = userData.semesters;
       this.baseGoals = userData.goals;
     });
-    this.baseGoals = [];//shouldn't this come before teh subscription?
+    this.baseGoals = [];
   }
 
   getCurrentCourses(): Course[] {
@@ -34,11 +34,13 @@ export class AppComponent {
     this.baseGoals = baseGoals;
     this.saveState();
   }
-  setSemesters(semesters: Semester[]): void { //these are kind of parallel so maybe consider a naming convention that works for both? eg setBaseSemesters or setGoals.
+
+  setSemesters(semesters: Semester[]): void {
     this.semesters = semesters;
     this.saveState();
   }
-  saveState(): void{
+
+  saveState(): void {
     this.userService.saveUserData(this.semesters, this.baseGoals);
   }
 }
