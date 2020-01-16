@@ -52,7 +52,7 @@ export class UserService {
   }
 
   saveUserData(): void {
-    this.http.post(UserService.SEMESTER_API_ENDPOINT, this.userDataState).subscribe();
+    this.http.put(UserService.SEMESTER_API_ENDPOINT, this.userDataState).subscribe();
   }
 
   /**
