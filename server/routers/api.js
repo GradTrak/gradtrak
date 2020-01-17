@@ -10,6 +10,6 @@ api.get('/courses', courseController.getCourses);
 api.get('/requirements', requirementController.getRequirements);
 api.get('/user', userController.getUserData);
 api.get('/tags', tagController.getTags);
-api.put('/user', userController.setUserData); //TODO we should figure out whether we use put or post
+api.put('/user', userController.setUserData);
 
 exports.api = api;
