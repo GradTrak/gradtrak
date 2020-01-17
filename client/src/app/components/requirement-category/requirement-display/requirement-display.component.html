@@ -1,6 +1,4 @@
 <h3 class="display-title">Eligible Courses</h3>
 <div class="course-list">
-  <h4 class="courses" *ngFor="let course of requirementCourses">
-    {{ course.dept }} {{ course.no }}: {{ course.title }} <br />
-  </h4>
+  <h4 class="courses" *ngFor="let course of requirementCourses">{{ course.toString() }} <br /></h4>
 </div>
