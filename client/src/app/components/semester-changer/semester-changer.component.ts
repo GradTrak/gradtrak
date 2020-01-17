@@ -8,7 +8,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./semester-changer.component.scss'],
 })
 export class SemesterChangerComponent implements OnInit {
-  @Input() semestersInput: Semester[]; // optional
+  @Input() readonly semestersInput: Semester[]; // optional
   @Output() semesterChanged: EventEmitter<Semester[]>;
   semesters: Semester[];
   semesterName: string;
@@ -35,12 +35,13 @@ export class SemesterChangerComponent implements OnInit {
     this.semesterAdderModal.close();
   }
 
+  /**
+   * Adds a semester to the current list of semesters.
+   *
+   * @param {string} semesterName The intended name of the new semester object being initialized.
+   */
   addSemester(semesterName: string): void {
-    const newSemester = new Semester({
-      id: 'something', // TODO: figure out the ID of semesters being added
-      name: semesterName,
-      courses: [],
-    });
+    const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }

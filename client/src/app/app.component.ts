@@ -9,8 +9,6 @@ import { SemesterService } from 'services/semester.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'gradtrak';
-
   semesters: Semester[];
 
   constructor(private semesterService: SemesterService) {}
@@ -25,5 +23,9 @@ export class AppComponent {
 
   getCurrentCourses(): Course[] {
     return this.semesters.flatMap((semester) => semester.courses);
+  }
+
+  setSemesters(semesters: Semester[]): void {
+    this.semesters = semesters;
   }
 }

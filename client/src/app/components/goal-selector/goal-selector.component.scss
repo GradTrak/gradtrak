@@ -2,6 +2,7 @@
   display: grid;
   padding: 16px;
   grid-template-columns: 60% 40%;
+  grid-gap: 16px;
 }
 
 .selector-container {
@@ -11,6 +12,10 @@
     margin: 12px;
     width: 100%;
   }
+}
+
+.selector > select {
+  width: 100%;
 }
 
 .material-icons {

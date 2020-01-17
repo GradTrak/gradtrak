@@ -8,8 +8,8 @@ import { RequirementSet } from 'models/requirement-set.model';
   styleUrls: ['./requirement-set.component.scss'],
 })
 export class RequirementSetComponent implements OnInit {
-  @Input() requirementSet: RequirementSet;
-  @Input() courses: Course[];
+  @Input() readonly requirementSet: RequirementSet;
+  @Input() readonly courses: Course[];
 
   constructor() {}
 

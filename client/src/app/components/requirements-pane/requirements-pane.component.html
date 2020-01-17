@@ -9,6 +9,10 @@
 
 <ng-template #goalSelector>
   <div class="">
-    <app-goal-selector [initialGoals]="baseGoals" (selectGoals)="setBaseGoals($event)"></app-goal-selector>
+    <app-goal-selector
+      [initialGoals]="baseGoals"
+      (selectGoals)="setBaseGoals($event)"
+      (selectGoals)="closeSelector()"
+    ></app-goal-selector>
   </div>
 </ng-template>

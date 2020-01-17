@@ -12,7 +12,7 @@ import { GoalSelectionState } from './selection-state';
 export class GoalSelectorComponent implements OnInit {
   private static DUMMY_GOAL_TYPES = ['major', 'minor', 'other']; // TODO Make this dynamic based on school
 
-  @Input() initialGoals: RequirementSet[]; // Optional
+  @Input() readonly initialGoals: RequirementSet[]; // Optional
   @Output() selectGoals: EventEmitter<RequirementSet[]>;
 
   requirementSets: RequirementSet[];
@@ -26,6 +26,10 @@ export class GoalSelectorComponent implements OnInit {
     this.searchPrompt = '';
   }
 
+  /**
+   * For each of the goal types, create a state that tracks whether anything has been selected by the user and then
+   * import any goals that have been selected previously.
+   */
   ngOnInit(): void {
     this.selectionStates = [];
     GoalSelectorComponent.DUMMY_GOAL_TYPES.forEach((goalType: string) => {
@@ -47,6 +51,10 @@ export class GoalSelectorComponent implements OnInit {
     this.updateGoalSearch();
   }
 
+  /**
+   * Updates {@link GoalSelectionState#searchedGoals} for each state so that ir contains only goals that match the
+   * specifications of {@link GoalSelectorComponent#searchFunction}.
+   */
   updateGoalSearch(): void {
     this.selectionStates.forEach((state: GoalSelectionState) => {
       state.searchedGoals = this.requirementSets.filter(
