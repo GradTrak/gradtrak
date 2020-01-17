@@ -9,7 +9,6 @@ import { CourseService } from 'services/course.service';
   styleUrls: ['./requirement-display.component.scss'],
 })
 export class RequirementDisplayComponent implements OnInit {
-  allCourses: Course[];
   requirementCourses: Course[];
   @Input() requirementInput: StandaloneRequirement;
 
@@ -17,8 +16,7 @@ export class RequirementDisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
-      this.allCourses = courses;
-      this.requirementCourses = this.allCourses.filter((course) => {
+      this.requirementCourses = courses.filter((course) => {
         return this.requirementInput.isFulfillableBy(course);
       });
     });
