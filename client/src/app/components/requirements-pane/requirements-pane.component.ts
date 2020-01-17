@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
-import { RequirementService } from 'services/requirement.service';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
