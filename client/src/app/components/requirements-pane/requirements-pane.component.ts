@@ -11,8 +11,8 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./requirements-pane.component.scss'],
 })
 export class RequirementsPaneComponent implements OnInit {
-  @Input() goals: RequirementSet[];
-  @Input() courses: Course[];
+  @Input() readonly goals: RequirementSet[];
+  @Input() readonly courses: Course[];
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;

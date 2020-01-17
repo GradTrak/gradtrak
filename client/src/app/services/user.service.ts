@@ -134,22 +134,22 @@ export class UserService {
 
   private getUserDataFromPrototype(prototype: any): Observable<UserData> {
     return forkJoin({
-      coursesObj: this.courseService.getCoursesObj(),
-      reqsObj: this.requirementService.getRequirementsObj(),
+      coursesMap: this.courseService.getCoursesMap(),
+      reqsMap: this.requirementService.getRequirementsMap(),
     }).pipe(
       map((serviceObj) => ({
         semesters: prototype.semesters.map((rawSemester: any) =>
-          this.instantiateSemester(rawSemester, serviceObj.coursesObj),
+          this.instantiateSemester(rawSemester, serviceObj.coursesMap),
         ),
-        goals: prototype.goalIds.map((goalId: string) => serviceObj.reqsObj[goalId]),
+        goals: prototype.goalIds.map((goalId: string) => serviceObj.reqsMap.get(goalId)),
       })),
     );
   }
 
-  private instantiateSemester(semesterPrototype: any, coursesObj: object): Semester {
+  private instantiateSemester(semesterPrototype: any, coursesObj: Map<string, Course>): Semester {
     const semester = {
       ...semesterPrototype,
-      courses: semesterPrototype.courseIds.map((courseId: string) => coursesObj[courseId]),
+      courses: semesterPrototype.courseIds.map((courseId: string) => coursesObj.get(courseId)),
     };
     delete semester.courseIds;
     return semester;

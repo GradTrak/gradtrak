@@ -9,9 +9,10 @@ import { UserService } from 'services/user.service';
   styleUrls: ['./semester-pane.component.scss'],
 })
 export class SemesterPaneComponent implements OnInit {
-  private semesterChangerModalReference: NgbModalRef;
+  @Input() readonly semesters: Semester[];
+
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-  @Input() semesters: Semester[];
+  private semesterChangerModalReference: NgbModalRef;
 
   constructor(private modalService: NgbModal, private userService: UserService) {}
 

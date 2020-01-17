@@ -23,22 +23,28 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   searchFunction(input: string, courseList: Course[]): Course[] {
-    const processedInput = input.toLowerCase();
-    return courseList.filter((course) => {
-      return (
-        course.id.toLowerCase().includes(processedInput) ||
-        course.title.toLowerCase().includes(processedInput) ||
-        course.dept.toLowerCase().includes(processedInput) ||
-        course.no.toLowerCase().includes(processedInput)
-      );
-    });
+    const processedInput = input.toLowerCase().replace(/[^\w]/g, '');
+    return courseList.filter((course) =>
+      course
+        .toString()
+        .toLowerCase()
+        .replace(/[^\w]/g, '')
+        .includes(processedInput),
+    );
   }
 
+  /**
+   * Given a string observable, return all courses that match the specification of searchFunction in the form of an
+   * Observable.
+   *
+   * @param {Observable<string>} searchText An observable containing the text that the user has inputted.
+   */
   updateAutoComplete = (searchText: Observable<string>): Observable<Course[]> => {
     return searchText.pipe(
       debounceTime(150),
       distinctUntilChanged(),
       map((searchTerm) => (searchTerm.length < 2 ? [] : this.searchFunction(searchTerm, this.allCourses))),
+      map((results: Course[]) => results.slice(0, 8)),
       // TODO: sort this by search rankings for relevance
     );
   };

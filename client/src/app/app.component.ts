@@ -11,9 +11,8 @@ import { UserService } from 'services/user.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'gradtrak';
-  baseGoals: RequirementSet[];
   semesters: Semester[];
+  baseGoals: RequirementSet[];
 
   constructor(private userService: UserService) {}
 
@@ -27,20 +26,9 @@ export class AppComponent {
 
       console.log(userData);
     });
-    this.baseGoals = [];
   }
 
   getCurrentCourses(): Course[] {
     return this.semesters.flatMap((semester: Semester) => semester.courses);
-  }
-
-  setBaseGoals(baseGoals: RequirementSet[]): void {
-    this.baseGoals = baseGoals;
-    this.userService.saveUserData();
-  }
-
-  setSemesters(semesters: Semester[]): void {
-    this.semesters = semesters;
-    this.userService.saveUserData();
   }
 }

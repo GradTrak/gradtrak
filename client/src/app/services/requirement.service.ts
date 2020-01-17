@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin, Observable } from 'rxjs';
 import { flatMap, map, shareReplay } from 'rxjs/operators';
+import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { RequirementCategory } from 'models/requirement-category.model';
 import { RequirementSet } from 'models/requirement-set.model';
@@ -11,6 +13,7 @@ import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
+import { Tag } from 'models/tag.model';
 import { CourseService } from 'services/course.service';
 import { TagService } from 'services/tag.service';
 
@@ -20,69 +23,71 @@ import { TagService } from 'services/tag.service';
 export class RequirementService {
   private static readonly REQUIREMENT_API_ENDPOINT = '/api/requirements';
 
-  private sharedRequirementsObj: Observable<object>;
+  private sharedRequirementsMap: Observable<Map<string, RequirementSet>>;
 
   constructor(private courseService: CourseService, private tagService: TagService, private http: HttpClient) {}
 
   getRequirements(): Observable<RequirementSet[]> {
-    if (!this.sharedRequirementsObj) {
+    if (!this.sharedRequirementsMap) {
       this.fetchRequirementData();
     }
-    return this.sharedRequirementsObj.pipe(map(Object.values));
+    return this.sharedRequirementsMap.pipe(map((data: Map<string, RequirementSet>) => Array.from(data.values())));
   }
 
-  getRequirementsObj(): Observable<object> {
-    if (!this.sharedRequirementsObj) {
+  getRequirementsMap(): Observable<Map<string, RequirementSet>> {
+    if (!this.sharedRequirementsMap) {
       this.fetchRequirementData();
     }
-    return this.sharedRequirementsObj;
+    return this.sharedRequirementsMap;
   }
 
   private fetchRequirementData(): void {
-    this.sharedRequirementsObj = this.http.get(RequirementService.REQUIREMENT_API_ENDPOINT).pipe(
+    this.sharedRequirementsMap = this.http.get(RequirementService.REQUIREMENT_API_ENDPOINT).pipe(
+      map((data: any) => new Map<string, any>(Object.entries(data))),
       map(this.linkParents),
-      flatMap((data: object) => this.prepareRequirements(data)),
+      flatMap((data: Map<string, any>) => this.prepareRequirements(data)),
       map(this.instantiateSetsAndCategories),
       shareReplay(),
     );
   }
 
-  private instantiateSetsAndCategories(data: object): object {
-    Object.keys(data).forEach((setKey: string) => {
-      data[setKey].requirementCategories = data[setKey].requirementCategories.map(
-        (rawCategory: object) => new RequirementCategory(rawCategory),
+  private instantiateSetsAndCategories(data: Map<string, any>): Map<string, RequirementSet> {
+    data.forEach((rawSet: any, setKey: string) => {
+      rawSet.requirementCategories = rawSet.requirementCategories.map(
+        (rawCategory: any) => new RequirementCategory(rawCategory),
       );
-      data[setKey] = new RequirementSet(data[setKey]);
+      data.set(setKey, new RequirementSet(rawSet));
     });
     return data;
   }
 
-  private linkParents(data: object): object {
-    Object.values(data).forEach((requirementSet) => {
-      if (requirementSet.parentId) {
-        requirementSet.parent = data[requirementSet.parentId];
-        if (!requirementSet.parent) {
-          console.error(`No RequirementSet object found for parent ID: ${requirementSet.parentId}`);
-          requirementSet.parent = null;
+  // FIXME Linked parents are not instances
+  private linkParents(data: Map<string, any>): Map<string, any> {
+    data.forEach((rawSet: any) => {
+      if (rawSet.parentId) {
+        rawSet.parent = data.get(rawSet.parentId);
+        if (!rawSet.parent) {
+          console.error(`No RequirementSet object found for parent ID: ${rawSet.parentId}`);
+          rawSet.parent = null;
         }
       } else {
-        requirementSet.parent = null;
+        rawSet.parent = null;
       }
-      delete requirementSet.parentId;
+      delete rawSet.parentId;
     });
     return data;
   }
 
-  private prepareRequirements(data: object): Observable<object> {
+  private prepareRequirements(data: Map<string, any>): Observable<Map<string, any>> {
     return forkJoin({
-      coursesObj: this.courseService.getCoursesObj(),
-      tagsObj: this.tagService.getTagsObj(),
+      coursesMap: this.courseService.getCoursesMap(),
+      tagsMap: this.tagService.getTagsMap(),
     }).pipe(
-      map((serviceObj: { coursesObj: object; tagsObj: object }) => {
+      map((serviceObj: { coursesMap: Map<string, Course>; tagsMap: Map<string, Tag> }) => {
         // Instantiate requirement types and link courseIds to Course objects
-        Object.values(data).forEach((rawSet) => {
-          rawSet.requirementCategories.forEach((rawCategory) => {
-            rawCategory.requirements = rawCategory.requirements.map((rawReq) =>
+        data.forEach((rawSet: any) => {
+          rawSet.requirementCategories.forEach((rawCategory: any) => {
+            rawCategory.requirements = rawCategory.requirements.map((rawReq: any) =>
               this.getRequirementObject(rawReq, serviceObj),
             );
           });
@@ -92,14 +97,17 @@ export class RequirementService {
     );
   }
 
-  private getRequirementObject(rawReq, serviceObj: { coursesObj: object; tagsObj: object }): Requirement {
-    const { coursesObj, tagsObj } = serviceObj;
+  private getRequirementObject(
+    rawReq: any,
+    serviceObj: { coursesMap: Map<string, Course>; tagsMap: Map<string, Tag> },
+  ): Requirement {
+    const { coursesMap, tagsMap } = serviceObj;
 
-    let requirement = { ...rawReq };
+    let requirement: any = { ...rawReq };
 
     switch (requirement.type) {
       case 'course':
-        requirement.course = coursesObj[requirement.courseId];
+        requirement.course = coursesMap.get(requirement.courseId);
         if (!requirement.course) {
           console.error(`No Course object found for course ID: ${requirement.courseId}`);
         }
@@ -108,7 +116,7 @@ export class RequirementService {
         break;
 
       case 'tag':
-        requirement.tag = tagsObj[requirement.tagId];
+        requirement.tag = tagsMap.get(requirement.tagId);
         if (!requirement.tag) {
           console.error(`No Tag object found for tag ID: ${requirement.tagId}`);
         }
@@ -149,7 +157,7 @@ export class RequirementService {
         break;
 
       default:
-        console.error(`Unknown Requirement type: ${requirement.type}`);
+        console.error(`Requirement ${requirement.id} has unknown Requirement type: ${requirement.type}`);
         break;
     }
 
