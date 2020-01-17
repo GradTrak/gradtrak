@@ -18,7 +18,6 @@ export class RequirementDisplayComponent implements OnInit {
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
       this.allCourses = courses;
-      console.log(this.requirementInput);
       this.requirementCourses = this.allCourses.filter((course) => {
         return this.requirementInput.isFulfillableBy(course);
       });

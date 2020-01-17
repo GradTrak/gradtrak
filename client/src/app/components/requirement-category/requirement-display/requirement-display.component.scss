@@ -2,10 +2,10 @@
 .display-title {
   margin: 16px;
 }
+
 .course-list {
-  margin: 16px;
-}
-.courses {
-  margin: 16px;
-  font-size: 18px;
+  margin-left: 32px;
+  .courses {
+    font-size: 18px;
+  }
 }
