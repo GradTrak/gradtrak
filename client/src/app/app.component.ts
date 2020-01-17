@@ -23,8 +23,6 @@ export class AppComponent {
       this.baseGoals = userData.goals;
 
       this.userService.saveUserData();
-
-      console.log(userData);
     });
   }
 
