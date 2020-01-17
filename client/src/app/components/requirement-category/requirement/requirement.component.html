@@ -10,7 +10,9 @@
   <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
 </ng-template>
 <ng-template #tagReq>
-  <td (click)="openRequirementDisplay()">{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
+  <td (click)="openRequirementDisplay(requirementDisplayTemplate)">
+    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+  </td>
 </ng-template>
 <ng-template #multiReqOne>
   <td>
@@ -51,7 +53,7 @@
   </td>
 </ng-template>
 <ng-template #unitReq>
-  <td (click)="openRequirementDisplay()">
+  <td (click)="openRequirementDisplay(unitDisplayTemplate)">
     {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
     <br />
     {{ getUnit().requirement.toString() }}
@@ -63,16 +65,22 @@
       </tbody>
     </table>
   </td>
+  <ng-template #unitDisplayTemplate>
+    <app-requirement-display [requirementInput]="getUnit().requirement"></app-requirement-display>
+  </ng-template>
 </ng-template>
 <ng-template #mutexReq>
-  <td (click)="openRequirementDisplay()">
+  <td>
     Distinctly fulfill
     <table class="nested">
       <tbody>
         <tr *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
-          <td>
+          <td (click)="openRequirementDisplay(mutexDisplayTemplate)">
             {{ childStatus.requirement.name }}
           </td>
+          <ng-template #mutexDisplayTemplate>
+            <app-requirement-display [requirementInput]="childStatus.requirement"></app-requirement-display>
+          </ng-template>
         </tr>
       </tbody>
     </table>

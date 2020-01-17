@@ -122,8 +122,9 @@ export class RequirementComponent implements OnInit {
     return null;
   }
 
-  openRequirementDisplay(): void {
-    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  openRequirementDisplay(content: TemplateRef<any>): void {
+    this.requirementDisplayModalReference = this.modalService.open(content, { size: 'lg' });
   }
 
   closeRequirementDisplay(): void {
