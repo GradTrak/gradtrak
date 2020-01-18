@@ -1,3 +1,4 @@
+import { SemesterPrototype } from 'common/prototypes/semester.prototype';
 import { Course } from 'models/course.model';
 
 /**
@@ -9,22 +10,29 @@ export class Semester {
   courses: Course[];
 
   constructor(name: string);
-  constructor(obj: object);
+  constructor(proto: SemesterPrototype, coursesMap: Map<string, Course>);
 
-  constructor(obj: unknown) {
+  constructor(obj: string | SemesterPrototype, coursesMap?: Map<string, Course>) {
     switch (typeof obj) {
-      case 'object':
-        Object.assign(this, obj);
+      case 'object': {
+        const proto: SemesterPrototype = obj as SemesterPrototype;
+        this.id = proto.id;
+        this.name = proto.name;
+        this.courses = proto.courseIds.map((courseId: string) => coursesMap.get(courseId));
         break;
+      }
 
-      case 'string':
-        this.id = obj.toLowerCase().replace(/[^\w]/g, '');
-        this.name = obj;
+      case 'string': {
+        const name: string = obj as string;
+        this.id = name.toLowerCase().replace(/[^\w]/g, '');
+        this.name = name;
         this.courses = [];
         break;
+      }
 
-      default:
+      default: {
         throw new Error('Semester constructor can only take string or object');
+      }
     }
   }
 }
