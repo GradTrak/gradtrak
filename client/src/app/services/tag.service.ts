@@ -31,7 +31,6 @@ export class TagService {
 
   private fetchTagData(): void {
     this.sharedTagMap = this.http.get(TagService.API_TAG_ENDPOINT).pipe(
-      map((data: unknown) => Object.values(data)),
       map((data: TagPrototype[]) => data.map((tagProto: TagPrototype) => new Tag(tagProto))),
       map((data: Tag[]) => {
         const tagMap = new Map<string, Tag>();

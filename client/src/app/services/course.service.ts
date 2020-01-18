@@ -36,7 +36,6 @@ export class CourseService {
    */
   private fetchCourseData(): void {
     this.sharedCoursesMap = this.http.get(CourseService.COURSE_API_ENDPOINT).pipe(
-      map((data: unknown) => Object.values(data)),
       // Instantiate courses
       flatMap((data: CoursePrototype[]) =>
         this.tagService

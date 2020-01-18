@@ -33,7 +33,6 @@ export class RequirementService {
 
   private fetchRequirementData(): void {
     this.sharedRequirementsMap = this.http.get(RequirementService.REQUIREMENT_API_ENDPOINT).pipe(
-      map((data: unknown) => Object.values(data)),
       flatMap((data: RequirementSetPrototype[]) => this.prepareRequirements(data)),
       shareReplay(),
     );

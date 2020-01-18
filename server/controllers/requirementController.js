@@ -1,5 +1,5 @@
-const DUMMY_REQUIREMENT_DATA = {
-  uc: {
+const DUMMY_REQUIREMENT_DATA = [
+  {
     id: 'uc',
     name: 'University of California',
     parentId: null,
@@ -26,7 +26,7 @@ const DUMMY_REQUIREMENT_DATA = {
       },
     ],
   },
-  ucb: {
+  {
     id: 'ucb',
     name: 'UC Berkeley',
     parentId: 'uc',
@@ -46,7 +46,7 @@ const DUMMY_REQUIREMENT_DATA = {
       },
     ],
   },
-  coe: {
+  {
     id: 'coe',
     name: 'College of Engineering',
     parentId: 'ucb',
@@ -259,7 +259,7 @@ const DUMMY_REQUIREMENT_DATA = {
       },
     ],
   },
-  ls: {
+  {
     id: 'ls',
     name: 'College of Letters and Sciences',
     parentId: 'ucb',
@@ -348,7 +348,7 @@ const DUMMY_REQUIREMENT_DATA = {
       },
     ],
   },
-  eecs: {
+  {
     id: 'eecs',
     name: 'EECS Major',
     parentId: 'coe',
@@ -548,7 +548,7 @@ const DUMMY_REQUIREMENT_DATA = {
       },
     ],
   },
-  linguis: {
+  {
     id: 'linguis',
     name: 'Linguistics Major',
     parentId: 'ls',
@@ -630,7 +630,7 @@ const DUMMY_REQUIREMENT_DATA = {
       },
     ],
   },
-};
+];
 
 exports.getRequirements = (req, res) => {
   res.json(DUMMY_REQUIREMENT_DATA);
