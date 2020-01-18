@@ -28,7 +28,6 @@ export class RequirementComponent implements OnInit {
   private requirementDisplayModalReference: NgbModalRef;
 
   constructor(private modalService: NgbModal) {}
-  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   ngOnInit(): void {}
 
