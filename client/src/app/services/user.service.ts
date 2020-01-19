@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map } from 'rxjs/operators';
+import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
@@ -46,7 +46,14 @@ export class UserService {
   fetchUserData(): void {
     this.http
       .get(UserService.SEMESTER_API_ENDPOINT)
-      .pipe(flatMap((userData: any) => this.getUserDataFromPrototype(userData)))
+      .pipe(
+        flatMap((userDataProto: UserDataPrototype) =>
+          forkJoin({
+            coursesMap: this.courseService.getCoursesMap(),
+            reqsMap: this.requirementService.getRequirementsMap(),
+          }).pipe(map(({ coursesMap, reqsMap }) => new UserData(userDataProto, coursesMap, reqsMap))),
+        ),
+      )
       .subscribe((userData: UserData) => this.userData.next(userData));
   }
 
@@ -118,7 +125,7 @@ export class UserService {
     });
   }
 
-  private getPrototypeFromUserData(userData: UserData): any {
+  private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
     return {
       semesters: userData.semesters.map((semester: Semester) => {
         const semesterPrototype = {
@@ -130,28 +137,5 @@ export class UserService {
       }),
       goalIds: userData.goals.map((goal: RequirementSet) => goal.id),
     };
-  }
-
-  private getUserDataFromPrototype(prototype: any): Observable<UserData> {
-    return forkJoin({
-      coursesMap: this.courseService.getCoursesMap(),
-      reqsMap: this.requirementService.getRequirementsMap(),
-    }).pipe(
-      map((serviceObj) => ({
-        semesters: prototype.semesters.map((rawSemester: any) =>
-          this.instantiateSemester(rawSemester, serviceObj.coursesMap),
-        ),
-        goals: prototype.goalIds.map((goalId: string) => serviceObj.reqsMap.get(goalId)),
-      })),
-    );
-  }
-
-  private instantiateSemester(semesterPrototype: any, coursesObj: Map<string, Course>): Semester {
-    const semester = {
-      ...semesterPrototype,
-      courses: semesterPrototype.courseIds.map((courseId: string) => coursesObj.get(courseId)),
-    };
-    delete semester.courseIds;
-    return semester;
   }
 }

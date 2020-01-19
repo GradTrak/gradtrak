@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { Semester } from 'models/semester.model';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Semester } from 'models/semester.model';
 import { UserService } from 'services/user.service';
 
 @Component({

@@ -7,7 +7,7 @@
     "build": "(cd client && npm run build) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
     "build-dev": "(cd client && npm run build-dev) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
     "start": "cd server && npm run start",
-    "start-dev": "concurrently -n client,server \"cd client && npm run start\" \"cd server && npm run start-dev\""
+    "start-dev": "concurrently -n client,server --handle-input \"cd client && npm run start\" \"cd server && npm run start-dev\""
   },
   "devDependencies": {
     "concurrently": "^5.0.2"

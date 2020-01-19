@@ -1,5 +1,5 @@
-const DUMMY_COURSE_DATA = {
-  compscic8: {
+const DUMMY_COURSE_DATA = [
+  {
     units: 4,
     title: 'Foundations of Data Science',
     dept: 'COMPSCI',
@@ -7,7 +7,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compscic8',
     tagIds: [],
   },
-  compsci10: {
+  {
     units: 4,
     title: 'The Beauty and Joy of Computing',
     dept: 'COMPSCI',
@@ -15,7 +15,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci10',
     tagIds: [],
   },
-  compsci24: {
+  {
     units: 1,
     title: 'Freshman Seminars',
     dept: 'COMPSCI',
@@ -23,7 +23,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci24',
     tagIds: [],
   },
-  compsci36: {
+  {
     units: 2,
     title: 'CS Scholars Seminar: The Educational Climate in CS & CS61A technical discussions',
     dept: 'COMPSCI',
@@ -31,7 +31,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci36',
     tagIds: [],
   },
-  compsci47a: {
+  {
     units: 1,
     title: 'Completion of Work in Computer Science 61A',
     dept: 'COMPSCI',
@@ -39,7 +39,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci47a',
     tagIds: [],
   },
-  compsci47b: {
+  {
     units: 1,
     title: 'Completion of Work in Computer Science 61B',
     dept: 'COMPSCI',
@@ -47,7 +47,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci47b',
     tagIds: [],
   },
-  compsci47c: {
+  {
     units: 1,
     title: 'Completion of Work in Computer Science 61C',
     dept: 'COMPSCI',
@@ -55,7 +55,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci47c',
     tagIds: [],
   },
-  compsci61a: {
+  {
     units: 4,
     title: 'The Structure and Interpretation of Computer Programs',
     dept: 'COMPSCI',
@@ -63,7 +63,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci61a',
     tagIds: [],
   },
-  compsci61b: {
+  {
     units: 4,
     title: 'Data Structures',
     dept: 'COMPSCI',
@@ -71,7 +71,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci61b',
     tagIds: [],
   },
-  compsci61c: {
+  {
     units: 4,
     title: 'Great Ideas of Computer Architecture (Machine Structures)',
     dept: 'COMPSCI',
@@ -79,7 +79,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci61c',
     tagIds: [],
   },
-  compsci70: {
+  {
     units: 4,
     title: 'Discrete Mathematics and Probability Theory',
     dept: 'COMPSCI',
@@ -87,7 +87,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci70',
     tagIds: [],
   },
-  compsci88: {
+  {
     units: 3,
     title: 'Computational Structures in Data Science',
     dept: 'COMPSCI',
@@ -95,7 +95,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci88',
     tagIds: [],
   },
-  compsci152: {
+  {
     units: 4,
     title: 'Computer Architecture and Engineering',
     dept: 'COMPSCI',
@@ -103,7 +103,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci152',
     tagIds: ['eecs_upper_div'],
   },
-  compsci160: {
+  {
     units: 4,
     title: 'User Interface Design and Development',
     dept: 'COMPSCI',
@@ -111,7 +111,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci160',
     tagIds: ['eecs_upper_div'],
   },
-  compsci161: {
+  {
     units: 4,
     title: 'Computer Security',
     dept: 'COMPSCI',
@@ -119,7 +119,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci161',
     tagIds: ['eecs_upper_div'],
   },
-  compsci162: {
+  {
     units: 4,
     title: 'Operating Systems and System Programming',
     dept: 'COMPSCI',
@@ -127,7 +127,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci162',
     tagIds: ['eecs_upper_div'],
   },
-  compsci164: {
+  {
     units: 4,
     title: 'Programming Languages and Compilers',
     dept: 'COMPSCI',
@@ -135,7 +135,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci164',
     tagIds: ['eecs_upper_div'],
   },
-  compsci168: {
+  {
     units: 4,
     title: 'Introduction to the Internet: Architecture and Protocols',
     dept: 'COMPSCI',
@@ -143,7 +143,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci168',
     tagIds: ['eecs_upper_div'],
   },
-  compsci169: {
+  {
     units: 4,
     title: 'Software Engineering',
     dept: 'COMPSCI',
@@ -151,7 +151,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci169',
     tagIds: ['eecs_upper_div'],
   },
-  compsci170: {
+  {
     units: 4,
     title: 'Efficient Algorithms and Intractable Problems',
     dept: 'COMPSCI',
@@ -159,7 +159,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci170',
     tagIds: ['eecs_upper_div'],
   },
-  compsci174: {
+  {
     units: 4,
     title: 'Combinatorics and Discrete Probability',
     dept: 'COMPSCI',
@@ -167,7 +167,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci174',
     tagIds: ['eecs_upper_div'],
   },
-  compscil182: {
+  {
     units: 4,
     title: 'Designing, Visualizing and Understanding Deep Neural Networks',
     dept: 'COMPSCI',
@@ -175,7 +175,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compscil182',
     tagIds: ['eecs_upper_div'],
   },
-  compsciw182: {
+  {
     units: 4,
     title: 'Designing, Visualizing and Understanding Deep Neural Networks',
     dept: 'COMPSCI',
@@ -183,7 +183,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsciw182',
     tagIds: ['eecs_upper_div'],
   },
-  compsci184: {
+  {
     units: 4,
     title: 'Foundations of Computer Graphics',
     dept: 'COMPSCI',
@@ -191,7 +191,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci184',
     tagIds: ['eecs_upper_div'],
   },
-  compsciw186: {
+  {
     units: 4,
     title: 'Introduction to Database Systems',
     dept: 'COMPSCI',
@@ -199,7 +199,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsciw186',
     tagIds: ['eecs_upper_div'],
   },
-  compsci188: {
+  {
     units: 4,
     title: 'Introduction to Artificial Intelligence',
     dept: 'COMPSCI',
@@ -207,7 +207,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci188',
     tagIds: ['eecs_upper_div'],
   },
-  compsci189: {
+  {
     units: 4,
     title: 'Introduction to Machine Learning',
     dept: 'COMPSCI',
@@ -215,7 +215,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci189',
     tagIds: ['eecs_upper_div'],
   },
-  compscic191: {
+  {
     units: 3,
     title: 'Quantum Information Science and Technology',
     dept: 'COMPSCI',
@@ -223,7 +223,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compscic191',
     tagIds: ['eecs_upper_div'],
   },
-  compsci194: {
+  {
     units: 1,
     title: 'Special Topics',
     dept: 'COMPSCI',
@@ -231,7 +231,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci194',
     tagIds: ['eecs_upper_div'],
   },
-  compsci195: {
+  {
     units: 1,
     title: 'Social Implications of Computer Technology',
     dept: 'COMPSCI',
@@ -239,7 +239,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci195',
     tagIds: ['eecs_ethics'],
   },
-  compsci198: {
+  {
     units: 1,
     title: 'Directed Group Studies for Advanced Undergraduates',
     dept: 'COMPSCI',
@@ -247,7 +247,7 @@ const DUMMY_COURSE_DATA = {
     id: 'compsci198',
     tagIds: [],
   },
-  eecs16a: {
+  {
     units: 4,
     title: 'Designing Information Devices and Systems I',
     dept: 'EECS',
@@ -255,7 +255,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs16a',
     tagIds: [],
   },
-  eecs16b: {
+  {
     units: 4,
     title: 'Designing Information Devices and Systems II',
     dept: 'EECS',
@@ -263,7 +263,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs16b',
     tagIds: [],
   },
-  eecsc106a: {
+  {
     units: 4,
     title: 'Introduction to Robotics',
     dept: 'EECS',
@@ -271,7 +271,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecsc106a',
     tagIds: ['eecs_upper_div'],
   },
-  eecsc106b: {
+  {
     units: 4,
     title: 'Robotic Manipulation and Interaction',
     dept: 'EECS',
@@ -279,7 +279,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecsc106b',
     tagIds: ['eecs_upper_div'],
   },
-  eecs126: {
+  {
     units: 4,
     title: 'Probability and Random Processes',
     dept: 'EECS',
@@ -287,7 +287,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs126',
     tagIds: ['eecs_upper_div'],
   },
-  eecs127: {
+  {
     units: 4,
     title: 'Optimization Models in Engineering',
     dept: 'EECS',
@@ -295,7 +295,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs127',
     tagIds: ['eecs_upper_div'],
   },
-  eecs149: {
+  {
     units: 4,
     title: 'Introduction to Embedded Systems',
     dept: 'EECS',
@@ -303,7 +303,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs149',
     tagIds: ['eecs_upper_div'],
   },
-  eecs151: {
+  {
     units: 3,
     title: 'Introduction to Digital Design and Integrated Circuits',
     dept: 'EECS',
@@ -311,7 +311,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs151',
     tagIds: ['eecs_upper_div'],
   },
-  eecs151la: {
+  {
     units: 2,
     title: 'Application Specific Integrated Circuits Laboratory',
     dept: 'EECS',
@@ -319,7 +319,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs151la',
     tagIds: ['eecs_upper_div'],
   },
-  eecs151lb: {
+  {
     units: 2,
     title: 'Field-Programmable Gate Array Laboratory',
     dept: 'EECS',
@@ -327,7 +327,7 @@ const DUMMY_COURSE_DATA = {
     id: 'eecs151lb',
     tagIds: ['eecs_upper_div'],
   },
-  englishr1a: {
+  {
     units: 4,
     title: 'Reading and Composition',
     dept: 'ENGLISH',
@@ -335,7 +335,7 @@ const DUMMY_COURSE_DATA = {
     id: 'englishr1a',
     tagIds: ['rc_a'],
   },
-  englishr1b: {
+  {
     units: 4,
     title: 'Reading and Composition',
     dept: 'ENGLISH',
@@ -343,7 +343,7 @@ const DUMMY_COURSE_DATA = {
     id: 'englishr1b',
     tagIds: ['rc_b'],
   },
-  info159: {
+  {
     units: 4,
     title: 'Natural Language Processing',
     dept: 'INFO',
@@ -351,7 +351,7 @@ const DUMMY_COURSE_DATA = {
     id: 'info159',
     tagIds: ['eecs_upper_div', 'linguis_elective'],
   },
-  linguis1a: {
+  {
     units: 5,
     title: 'American Sign Language I',
     dept: 'LINGUIS',
@@ -359,7 +359,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis1a',
     tagIds: [],
   },
-  linguis1b: {
+  {
     units: 5,
     title: 'American Sign Language II',
     dept: 'LINGUIS',
@@ -367,7 +367,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis1b',
     tagIds: [],
   },
-  linguisr1b: {
+  {
     units: 4,
     title: 'Endangered Languages: Why does linguistic diversity matter?',
     dept: 'LINGUIS',
@@ -375,7 +375,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguisr1b',
     tagIds: ['rc_b'],
   },
-  linguis5: {
+  {
     units: 4,
     title: 'Language and Linguistics',
     dept: 'LINGUIS',
@@ -383,7 +383,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis5',
     tagIds: ['ls_socio'],
   },
-  linguis10: {
+  {
     units: 3,
     title: 'The Sounds of English',
     dept: 'LINGUIS',
@@ -391,7 +391,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis10',
     tagIds: ['ls_socio'],
   },
-  linguis24: {
+  {
     units: 1,
     title: 'Freshman Seminar',
     dept: 'LINGUIS',
@@ -399,7 +399,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis24',
     tagIds: ['ls_socio'],
   },
-  linguis47: {
+  {
     units: 3,
     title: 'Language and Communication Disorders',
     dept: 'LINGUIS',
@@ -407,7 +407,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis47',
     tagIds: ['ls_socio'],
   },
-  linguis100: {
+  {
     units: 4,
     title: 'Introduction to Linguistic Science',
     dept: 'LINGUIS',
@@ -415,7 +415,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis100',
     tagIds: ['upper_div', 'ls_socio'],
   },
-  linguis106: {
+  {
     units: 4,
     title: 'Metaphor',
     dept: 'LINGUIS',
@@ -423,7 +423,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis106',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis109: {
+  {
     units: 3,
     title: 'Bilingualism',
     dept: 'LINGUIS',
@@ -431,7 +431,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis109',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis110: {
+  {
     units: 4,
     title: 'Phonetics',
     dept: 'LINGUIS',
@@ -439,7 +439,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis110',
     tagIds: ['upper_div', 'ls_socio'],
   },
-  linguis111: {
+  {
     units: 4,
     title: 'Phonology',
     dept: 'LINGUIS',
@@ -447,7 +447,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis111',
     tagIds: ['upper_div', 'ls_socio'],
   },
-  linguis115: {
+  {
     units: 4,
     title: 'Morphology',
     dept: 'LINGUIS',
@@ -455,7 +455,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis115',
     tagIds: ['upper_div', 'ls_socio'],
   },
-  linguis120: {
+  {
     units: 4,
     title: 'Syntax',
     dept: 'LINGUIS',
@@ -463,7 +463,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis120',
     tagIds: ['upper_div', 'ls_socio'],
   },
-  linguis121: {
+  {
     units: 4,
     title: 'Formal Semantics',
     dept: 'LINGUIS',
@@ -471,7 +471,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis121',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis123: {
+  {
     units: 3,
     title: 'Pragmatics',
     dept: 'LINGUIS',
@@ -479,7 +479,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis123',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis130: {
+  {
     units: 4,
     title: 'Comparative and Historical Linguistics',
     dept: 'LINGUIS',
@@ -487,7 +487,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis130',
     tagIds: ['upper_div', 'ls_socio'],
   },
-  linguis140: {
+  {
     units: 3,
     title: 'Field Methods',
     dept: 'LINGUIS',
@@ -495,7 +495,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis140',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguisc142: {
+  {
     units: 3,
     title: 'Language and Thought',
     dept: 'LINGUIS',
@@ -503,7 +503,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguisc142',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguisc146: {
+  {
     units: 3,
     title: 'Language Acquisition',
     dept: 'LINGUIS',
@@ -511,7 +511,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguisc146',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis148: {
+  {
     units: 3,
     title: 'Phonological Development',
     dept: 'LINGUIS',
@@ -519,7 +519,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis148',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis150: {
+  {
     units: 3,
     title: 'Sociolinguistics',
     dept: 'LINGUIS',
@@ -527,7 +527,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis150',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis155ac: {
+  {
     units: 4,
     title: 'Language in the United States: a Capsule History',
     dept: 'LINGUIS',
@@ -535,7 +535,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis155ac',
     tagIds: ['upper_div', 'ls_hist', 'ls_socio', 'ac', 'linguis_elective'],
   },
-  linguisc160: {
+  {
     units: 4,
     title: 'Quantitative Methods in Linguistics',
     dept: 'LINGUIS',
@@ -543,7 +543,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguisc160',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis170: {
+  {
     units: 3,
     title: 'History, Structure, and Sociolinguistics of a Particular Language',
     dept: 'LINGUIS',
@@ -551,7 +551,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis170',
     tagIds: ['upper_div', 'ls_socio', 'linguis_elective'],
   },
-  linguis197: {
+  {
     units: 1,
     title: 'Research Practicum',
     dept: 'LINGUIS',
@@ -559,7 +559,7 @@ const DUMMY_COURSE_DATA = {
     id: 'linguis197',
     tagIds: [],
   },
-  math1a: {
+  {
     units: 4,
     title: 'Calculus',
     dept: 'MATH',
@@ -567,7 +567,7 @@ const DUMMY_COURSE_DATA = {
     id: 'math1a',
     tagIds: [],
   },
-  math1b: {
+  {
     units: 4,
     title: 'Calculus',
     dept: 'MATH',
@@ -575,7 +575,7 @@ const DUMMY_COURSE_DATA = {
     id: 'math1b',
     tagIds: [],
   },
-  math53: {
+  {
     units: 4,
     title: 'Multivariable Calculus',
     dept: 'MATH',
@@ -583,7 +583,7 @@ const DUMMY_COURSE_DATA = {
     id: 'math53',
     tagIds: [],
   },
-  physics7a: {
+  {
     units: 4,
     title: 'Physics for Scientists and Engineers',
     dept: 'PHYSICS',
@@ -591,7 +591,7 @@ const DUMMY_COURSE_DATA = {
     id: 'physics7a',
     tagIds: ['ls_phys'],
   },
-  physics7b: {
+  {
     units: 4,
     title: 'Physics for Scientists and Engineers',
     dept: 'PHYSICS',
@@ -599,7 +599,7 @@ const DUMMY_COURSE_DATA = {
     id: 'physics7b',
     tagIds: ['ls_phys'],
   },
-};
+];
 
 exports.getCourses = (req, res) => {
   res.json(DUMMY_COURSE_DATA);

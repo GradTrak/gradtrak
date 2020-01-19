@@ -1,3 +1,4 @@
+import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Tag } from 'models/tag.model';
 
 /**
@@ -11,8 +12,13 @@ export class Course {
   units: number;
   tags: Tag[];
 
-  constructor(obj: object) {
-    Object.assign(this, obj);
+  constructor(proto: CoursePrototype, tagMap: Map<string, Tag>) {
+    this.id = proto.id;
+    this.dept = proto.dept;
+    this.no = proto.no;
+    this.title = proto.title;
+    this.units = proto.units;
+    this.tags = proto.tagIds.map((tagId: string) => tagMap.get(tagId));
   }
 
   toString(): string {
