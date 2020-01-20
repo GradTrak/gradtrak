@@ -15,6 +15,6 @@ app.use(cookieParser());
 app.use('/api', api);
 app.use(express.static('dist'));
 
-mongoose.connect('mongodb://55.55.55.5/mongo')
+mongoose.connect('mongodb://localhost:27017')//default mongod port
 
 module.exports = app;
