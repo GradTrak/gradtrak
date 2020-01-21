@@ -20,6 +20,7 @@ jobs:
     - name: Deploy to Heroku
       run: |
         cd server &&
+        rm -rf .git &&
         git init &&
         git add -A &&
         git commit -m 'Deploy' &&

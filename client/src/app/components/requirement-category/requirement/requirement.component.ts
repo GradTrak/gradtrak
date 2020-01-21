@@ -13,8 +13,8 @@ import { TagRequirement } from 'models/requirements/tag-requirement.model';
   styleUrls: ['./requirement.component.scss', '../requirement-category.component.scss'],
 })
 export class RequirementComponent implements OnInit {
-  @Input() requirement: Requirement;
-  @Input() courses: Course[];
+  @Input() readonly requirement: Requirement;
+  @Input() readonly courses: Course[];
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
@@ -53,6 +53,13 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MutexRequirement;
   }
 
+  /**
+   * Returns the CSS class name based on the fulfillment status of sub-requirements of a {@link MutexRequirement}, which
+   * can be fulfilled, potentially fulfilled, or unfullfilled.
+   *
+   * @param object reqFulfillment An object containing each requirement and its fulfillment status.
+   * @return string A CSS class based on the fulfillment status of the requirement.
+   */
   getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
     switch (reqFulfillment.fulfillment) {
       case MutexRequirement.FULFILLED:
@@ -85,6 +92,13 @@ export class RequirementComponent implements OnInit {
     }
     return this.requirement as TagRequirement;
   }
+  
+  /**
+   * Returns the HTML template of the requirement based on its type.
+   *
+   * @return {TemplateRef<any>} The template of the requirement.
+   */
+  
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {

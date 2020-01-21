@@ -1,14 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { flatMap, map, shareReplay } from 'rxjs/operators';
 import { Course } from 'models/course.model';
+import { Tag } from 'models/tag.model';
 import { TagService } from 'services/tag.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CourseService {
-  DUMMY_COURSE_DATA: object = {
+  DUMMY_COURSE_DATA: any = {
     compscic8: {
       units: 4,
       title: 'Foundations of Data Science',
@@ -609,40 +611,66 @@ export class CourseService {
       id: 'physics7b',
       tagIds: ['ls_phys'],
     },
+    physics5a: {
+      units: 4,
+      title: 'Introductory Mechanics and Relativity',
+      dept: 'PHYSICS',
+      no: '5A',
+      id: 'physics5a',
+      tagIds: ['ls_phys'],
+    },
+    physics5b: {
+      units: 4,
+      title: 'Introductory Electromagnetism, Waves, and Optics',
+      dept: 'PHYSICS',
+      no: '5B',
+      id: 'physics5b',
+      tagIds: ['ls_phys'],
+    },
   };
 
-  private sharedCoursesObj: Observable<object>;
+  private sharedCoursesMap: Observable<Map<string, Course>>;
 
   constructor(private tagService: TagService) {}
 
   getCourses(): Observable<Course[]> {
-    if (!this.sharedCoursesObj) {
+    if (!this.sharedCoursesMap) {
       this.fetchCourseData();
     }
-    return this.sharedCoursesObj.pipe(map(Object.values));
+    return this.sharedCoursesMap.pipe(map((data: Map<string, Course>) => Array.from(data.values())));
   }
 
-  getCoursesObj(): Observable<object> {
-    if (!this.sharedCoursesObj) {
+  getCoursesMap(): Observable<Map<string, Course>> {
+    if (!this.sharedCoursesMap) {
       this.fetchCourseData();
     }
-    return this.sharedCoursesObj;
+    return this.sharedCoursesMap;
   }
 
+  /**
+   * Takes in data, map linkTags to it, and turns all objects in the data into an instance of the Course class.
+   */
   private fetchCourseData(): void {
-    this.sharedCoursesObj = of(this.DUMMY_COURSE_DATA).pipe(
-      flatMap((data: object) => this.linkTags(data)),
+    this.sharedCoursesMap = of(this.DUMMY_COURSE_DATA).pipe(
+      map((data: any) => new Map<string, any>(Object.entries(data))),
+      flatMap((data: Map<string, any>) => this.linkTags(data)),
       map(this.instantiateCourses),
       shareReplay(),
     );
   }
 
-  private linkTags(data: object): Observable<object> {
-    return this.tagService.getTagsObj().pipe(
-      map((tagsObj: object) => {
-        Object.values(data).forEach((rawCourse) => {
+  /**
+   * Replaces all the IDs of the data with references to their appropriate objects.
+   *
+   * @param {Map<string, any>} data A mapping of IDs to their respective objects.
+   * @return {Observable<Map<string, any>>} An Observable with a map of IDs to their respective courses.
+   */
+  private linkTags(data: Map<string, any>): Observable<Map<string, any>> {
+    return this.tagService.getTagsMap().pipe(
+      map((tagsMap: Map<string, Tag>) => {
+        data.forEach((rawCourse) => {
           rawCourse.tags = rawCourse.tagIds.map((tagId: string) => {
-            const tag = tagsObj[tagId];
+            const tag = tagsMap.get(tagId);
             if (!tag) {
               console.error(`No Tag object found for tag ID: ${tagId}`);
             }
@@ -656,9 +684,9 @@ export class CourseService {
     );
   }
 
-  private instantiateCourses(data: object): object {
-    Object.keys(data).forEach((key: string) => {
-      data[key] = new Course(data[key]);
+  private instantiateCourses(data: Map<string, any>): Map<string, Course> {
+    data.forEach((rawCourse: any, key: string) => {
+      data.set(key, new Course(rawCourse));
     });
     return data;
   }

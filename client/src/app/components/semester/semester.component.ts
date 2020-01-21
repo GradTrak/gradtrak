@@ -10,8 +10,8 @@ import { Semester } from 'models/semester.model';
   styleUrls: ['./semester.component.scss'],
 })
 export class SemesterComponent implements OnInit {
-  @Input() semester: Semester;
-  @Input() currentSemesters: Semester[]; // Optional
+  @Input() readonly semester: Semester;
+  @Input() readonly currentSemesters: Semester[]; // Optional
 
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;

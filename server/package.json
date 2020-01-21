@@ -14,7 +14,9 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "mongoose": "^5.8.7",
+    "morgan": "~1.9.1",
+    "passport": "^0.4.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
