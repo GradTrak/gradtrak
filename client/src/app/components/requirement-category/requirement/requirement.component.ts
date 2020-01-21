@@ -92,13 +92,13 @@ export class RequirementComponent implements OnInit {
     }
     return this.requirement as TagRequirement;
   }
-  
+
   /**
    * Returns the HTML template of the requirement based on its type.
    *
    * @return {TemplateRef<any>} The template of the requirement.
    */
-  
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
