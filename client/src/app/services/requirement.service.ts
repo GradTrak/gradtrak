@@ -42,7 +42,7 @@ export class RequirementService {
             },
             {
               id: 'ai',
-              name: 'American Instutions',
+              name: 'American Institutions',
             },
           ],
         },
