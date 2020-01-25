@@ -94,14 +94,12 @@ export class UserService {
   addCourse(course: Course, semester: Semester): void {
     this.userData.next({
       ...this.userDataState,
-      semesters: this.userDataState.semesters.map((s: Semester) =>
-        s === semester
-          ? {
-              ...s,
-              courses: [...s.courses, course],
-            }
-          : s,
-      ),
+      semesters: this.userDataState.semesters.map((s: Semester) => {
+        if (s === semester) {
+          return { ...s, courses: [...s.courses, course] };
+        }
+        return s;
+      }),
     });
   }
 
