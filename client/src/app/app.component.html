@@ -1,2 +1,2 @@
-<app-semester-pane [semesters]="semesters" (updateSemesters)="setSemesters($event)"></app-semester-pane>
-<app-requirements-pane [courses]="getCurrentCourses()"></app-requirements-pane>
+<app-semester-pane [semesters]="semesters"></app-semester-pane>
+<app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>

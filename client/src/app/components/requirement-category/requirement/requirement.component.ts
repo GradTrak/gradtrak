@@ -62,12 +62,15 @@ export class RequirementComponent implements OnInit {
    */
   getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
     switch (reqFulfillment.fulfillment) {
-      case MutexRequirement.FULFILLED:
+      case MutexRequirement.FULFILLED: {
         return 'fulfilled';
-      case MutexRequirement.POTENTIAL:
+      }
+      case MutexRequirement.POTENTIAL: {
         return 'potential';
-      default:
+      }
+      default: {
         return 'unfulfilled';
+      }
     }
   }
 

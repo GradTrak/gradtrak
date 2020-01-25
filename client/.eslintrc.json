@@ -33,7 +33,12 @@
                 "exceptAfterSingleLine": true
             }
         ],
-        "no-console": "off",
+        "no-console": [
+            "error",
+            {
+                "allow": ["warn", "error"]
+            }
+        ],
         "no-param-reassign": [
             "error",
             {
