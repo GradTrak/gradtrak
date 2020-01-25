@@ -6,7 +6,6 @@
     },
     "extends": [
         "airbnb-base",
-        "angular",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:import/typescript",
@@ -32,6 +31,13 @@
             "off",
             {
                 "exceptAfterSingleLine": true
+            }
+        ],
+        "no-console": "off",
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
             }
         ],
         "no-useless-constructor": "off"

@@ -1,6 +1,13 @@
+:host {
+  padding: 16px 144px 16px 16px;
+}
+
+.semester-changer {
+  margin-bottom: 48px;
+}
+
 .semester-container {
-  padding: 16px;
   display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 48px 144px;
 }

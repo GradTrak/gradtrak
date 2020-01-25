@@ -4,3 +4,8 @@
   display: grid;
   grid-template-columns: 60% 40%;
 }
+
+:host > * {
+  height: 100vh;
+  overflow-y: scroll;
+}

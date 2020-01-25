@@ -1,1 +1,85 @@
-<td>{{ requirement.name }}</td>
+<!-- FIXME Remove check for whether isFulfilled exists -->
+<!-- FIXME Remove check for getAnnotation -->
+<!-- TODO This seems slightly janky -->
+<!-- FIXME This can also be an XSS vector -->
+<ng-template #annotation>
+  <div [outerHTML]="getAnnotation()"></div>
+</ng-template>
+
+<ng-template #standardReq>
+  <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
+</ng-template>
+<ng-template #multiReqOne>
+  <td>
+    One of
+    <table class="nested">
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getMulti().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #multiReqSome>
+  <td>
+    {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+    <table class="nested">
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getMulti().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #multiReqAll>
+  <td class="transparent">
+    <table class="nested">
+      <tbody
+        app-requirement
+        *ngFor="let childReq of getMulti().requirements"
+        [requirement]="childReq"
+        [courses]="courses"
+      ></tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #unitReq>
+  <td>
+    {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
+    <br />
+    {{ getUnit().requirement.toString() }}
+    <table class="nested">
+      <tbody>
+        <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+          <td>{{ course.toString() }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</ng-template>
+<ng-template #mutexReq>
+  <td>
+    Distinctly fulfill
+    <table class="nested">
+      <tbody>
+        <tr *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
+          <td>
+            {{ childStatus.requirement.name }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</ng-template>
+
+<tr
+  [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+  [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+  triggers="mouseenter:mouseleave"
+>
+  <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>
+</tr>

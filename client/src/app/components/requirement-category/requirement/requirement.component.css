@@ -1,0 +1,24 @@
+.fulfilled {
+  background-color: #d8fcbc;
+}
+
+.unfulfilled {
+  background-color: #fcc3bc;
+}
+
+.potential {
+  background-color: #fbfcbc;
+}
+
+.fulfilled .unfulfilled,
+.fulfilled .potential {
+  background-color: lightgray;
+}
+
+.nested {
+  width: 100%;
+}
+
+.transparent {
+  padding: 4px;
+}
