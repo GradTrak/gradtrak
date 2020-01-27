@@ -608,14 +608,16 @@ const DUMMY_COURSE_DATA = [
 //This probably is a development only thing because once we get a db we shouldn't
 //need to do this often
 initializeDBCourses = ()=>{
-  DUMMY_COURSE_DATA.forEach((dataPoint)=>{
+  DUMMY_COURSE_DATA.some((dataPoint)=>{
     course = Course(dataPoint);
-    course.save(function (err, course) {
+    duplicate = false;
+    course.save((err, course) => {
       if (err) {
         console.log(err.errmsg)
         return console.log("One of the courses being saved is saved already! Aborting...")};
       console.log("course saved successfully");
     });
+    return false; //find a way to make this return true only when err.
   });
 }
 
