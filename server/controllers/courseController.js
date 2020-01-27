@@ -601,6 +601,9 @@ const DUMMY_COURSE_DATA = [
   },
 ];
 
+newGetCourses = (req, res) => {
+  res.json(DUMMY_COURSE_DATA);
+};
 exports.getCourses = (req, res) => {
   res.json(DUMMY_COURSE_DATA);
 };
