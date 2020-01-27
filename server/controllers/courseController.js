@@ -1,3 +1,7 @@
+const mongooseHost = require('../mongooseHost');
+db = mongooseHost.db;
+const Course = require('../models/course.model');
+
 const DUMMY_COURSE_DATA = [
   {
     units: 4,
@@ -601,9 +605,24 @@ const DUMMY_COURSE_DATA = [
   },
 ];
 
+//This probably is a development only thing because once we get a db we shouldn't
+//need to do this often
+initializeDBCourses = ()=>{
+  DUMMY_COURSE_DATA.forEach((dataPoint)=>{
+    course = Course(dataPoint);
+    course.save(function (err, course) {
+      if (err) {
+        console.log(err.errmsg)
+        return console.log("One of the courses being saved is saved already! Aborting...")};
+      console.log("course saved successfully");
+    });
+  });
+}
+
 newGetCourses = (req, res) => {
   res.json(DUMMY_COURSE_DATA);
 };
 exports.getCourses = (req, res) => {
   res.json(DUMMY_COURSE_DATA);
 };
+exports.initializeDBCourses = initializeDBCourses;
