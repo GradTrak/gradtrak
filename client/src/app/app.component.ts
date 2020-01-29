@@ -14,6 +14,8 @@ export class AppComponent {
   semesters: Semester[];
   baseGoals: RequirementSet[];
 
+  username: String = "someone"; // TODO get username
+
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
