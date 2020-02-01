@@ -43,7 +43,7 @@
     {{ getUnit().requirement.toString() }}
     <table class="courses">
       <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-        <td>{{ course.toString() }}</td>
+        <td>{{ course.getName() }}</td>
       </tr>
     </table>
   </div>
