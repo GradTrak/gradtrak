@@ -1,7 +1,8 @@
+:host,
 table {
   display: inline-block;
   width: 100%;
-  background-color: #b3e2f7;
+  background-color: white;
   padding: 12px;
   border-collapse: separate;
   border-spacing: 16px 8px;
@@ -18,6 +19,17 @@ table {
     width: 10%;
   }
 
+  thead.semester-name {
+    color: #1337F1;
+  }
+
+  hr {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  border-top: 0.2rem solid #F0F0F0;
+}
+
   td:not(.button-cell) {
     padding: 0 4px;
     background-color: #e2f9fe;
@@ -25,7 +37,6 @@ table {
 
   td.units {
     text-align: center;
-
     > button {
       width: 100%;
     }

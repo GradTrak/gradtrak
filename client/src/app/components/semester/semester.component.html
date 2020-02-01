@@ -1,15 +1,16 @@
-<table>
+<div>
   <colgroup>
     <col class="name" />
     <col class="units" />
     <col class="button-cell" />
   </colgroup>
-  <thead>
+  <thead class = "semester-name">
     <th colspan="2">
       <h4>{{ semester.name }}</h4>
     </th>
     <th><button (click)="openAdder()">+</button></th>
   </thead>
+  <hr>
   <tbody>
     <tr *ngFor="let course of semester.courses">
       <td class="name">
@@ -31,7 +32,7 @@
       <td class="button-cell"><button (click)="removeCourse(course)">-</button></td>
     </tr>
   </tbody>
-</table>
+</div>
 
 <ng-template #courseAdder>
   <div class="modal-body">
