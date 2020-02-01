@@ -24,7 +24,8 @@
   top: 5rem;
   width: 100%;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-gap: 4px;
+  grid-template-columns: 0.6fr 0.4fr;
 
   > * {
     height: calc(100vh - 5rem);
