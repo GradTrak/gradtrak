@@ -1,7 +1,11 @@
 .header {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
   color: white;
 
   .title {
+    height: 60%;
     background-color: #283adc;
     text-align: center;
     font-size: 1.25rem;
@@ -9,19 +13,21 @@
   }
 
   .name {
+    height: 40%;
     background-color: #417fdc;
     padding: 4px;
   }
 }
 
 .body {
+  position: absolute;
+  top: 5rem;
   width: 100%;
-  height: 100vh;
   display: grid;
   grid-template-columns: 60% 40%;
 
   > * {
-    height: 100vh;
+    height: calc(100vh - 5rem);
     overflow-y: scroll;
   }
 }
