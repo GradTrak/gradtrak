@@ -25,11 +25,19 @@
             </ng-container>
           </ng-template>
         </ng-container>
-        {{ course.dept + ' ' + course.no + ' ' + course.title + ' ' + course.units }}
+        {{ course.dept + ' ' + course.no + ' '}}
+      </td>
+      <td>
+        {{ course.title }}
+      </td>
+      <td>
+        {{ course.units }}
       </td>
       <td class="button-cell"><button class="course-remover" (click)="removeCourse(course)">-</button></td>
     </tr>
-    <tr><button class="course-adder" (click)="openAdder()">+</button></tr>
+    <tr>
+      <td colspan=4><button class="course-adder" (click)="openAdder()">+</button></td>
+    </tr>
   </tbody>
 </div>
 

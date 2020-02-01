@@ -1,12 +1,12 @@
 :host {
-  padding: 16px 144px 16px 16px;
+  padding: 24px;
   background-color: #F0F0F0;
 }
 
 .semester-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 48px 144px;
+  grid-gap: 24px 24px;
 }
 
 .semester-changer {
@@ -17,7 +17,7 @@
   color: #2A26EA;
   border: none;
   background-color: white;
-  font-size: 1.25rem;
+  font-size: 1rem;
   width: 80%;
   position: relative;
   top: 12%;

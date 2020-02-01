@@ -6,6 +6,7 @@ table {
   padding: 8px;
   border-collapse: separate;
   border-spacing: 8px 4px;
+  font-size: 0.65rem;
 
   col.name {
     width: 100%;
@@ -24,11 +25,13 @@ table {
   }
 
   hr {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: none;
+  margin-right: none;
   background: #F0F0F0;
   height: 0.2rem;
-  border: 0;
+  border: none;
+  padding: none;
+  border-spacing: none;
 }
 
 .course-adder, .course-remover {
