@@ -8,7 +8,6 @@
     <th colspan="2">
       <h4>{{ semester.name }}</h4>
     </th>
-    <th><button (click)="openAdder()">+</button></th>
   </thead>
   <hr>
   <tbody>
@@ -26,11 +25,11 @@
             </ng-container>
           </ng-template>
         </ng-container>
-        {{ course.dept + ' ' + course.no }}
+        {{ course.dept + ' ' + course.no + ' ' + ' ' + '' + course.units }}
       </td>
-      <td class="units">{{ course.units }}</td>
       <td class="button-cell"><button (click)="removeCourse(course)">-</button></td>
     </tr>
+    <tr><button class="course-adder" (click)="openAdder()">+</button></tr>
   </tbody>
 </div>
 

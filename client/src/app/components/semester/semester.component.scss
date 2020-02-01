@@ -3,16 +3,16 @@ table {
   display: inline-block;
   width: 100%;
   background-color: white;
-  padding: 12px;
+  padding: 8px;
   border-collapse: separate;
-  border-spacing: 16px 8px;
+  border-spacing: 8px 4px;
 
   col.name {
-    width: 80%;
+    width: 100%;
   }
 
   col.units {
-    width: 10%;
+    width: 10%
   }
 
   col.button-cell {
@@ -24,15 +24,26 @@ table {
   }
 
   hr {
-  display: block;
   margin-left: 0;
   margin-right: 0;
-  border-top: 0.2rem solid #F0F0F0;
+  background: #F0F0F0;
+  height: 0.2rem;
+  border: 0;
+}
+
+.course-adder {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 24px 144px;
+  border: none;
+  font-size: 1.25rem;
+  width: 100%;
+  background-color: #F0F0F0;
 }
 
   td:not(.button-cell) {
     padding: 0 4px;
-    background-color: #e2f9fe;
+    background-color: #F0F0F0;
   }
 
   td.units {
