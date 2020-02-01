@@ -1,3 +1,8 @@
+.requirement,
+.nested > * {
+  padding-left: 16px;
+}
+
 .fulfilled {
   background-color: #d8fcbc;
 
@@ -15,10 +20,7 @@
   background-color: #fbfcbc;
 }
 
-.nested {
-  width: 100%;
-}
-
-.transparent {
-  padding: 4px;
+.courses {
+  margin: 16px;
+  background-color: white;
 }
