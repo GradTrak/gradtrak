@@ -41,11 +41,11 @@
     {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
     <br />
     {{ getUnit().requirement.toString() }}
-    <table class="courses">
-      <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-        <td>{{ course.getName() }}</td>
-      </tr>
-    </table>
+    <div class="nested">
+      <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+        {{ course.getName() }}
+      </div>
+    </div>
   </div>
   <ng-template #unitDisplayTemplate>
     <app-requirement-display [requirementInput]="getUnit().requirement"></app-requirement-display>

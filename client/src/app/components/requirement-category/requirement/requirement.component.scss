@@ -1,5 +1,6 @@
 .requirement,
-.nested > * {
+.nested > *,
+.course {
   padding-left: 16px;
 }
 
@@ -20,7 +21,6 @@
   background-color: #fbfcbc;
 }
 
-.courses {
-  margin: 16px;
+.course {
   background-color: white;
 }
