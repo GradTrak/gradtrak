@@ -33,6 +33,10 @@ export class UserService {
     this.userData = new BehaviorSubject<UserData>(UserService.INITIAL_STATE);
     this.userData.subscribe((userData: UserData) => {
       this.userDataState = userData;
+
+      if (userData !== UserService.INITIAL_STATE) {
+        this.saveUserData();
+      }
     });
   }
 

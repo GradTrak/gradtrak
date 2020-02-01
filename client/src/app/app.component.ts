@@ -21,8 +21,6 @@ export class AppComponent {
     this.userService.getUserData().subscribe((userData: UserData) => {
       this.semesters = userData.semesters;
       this.baseGoals = userData.goals;
-
-      this.userService.saveUserData();
     });
   }
 
