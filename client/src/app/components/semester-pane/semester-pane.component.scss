@@ -3,12 +3,23 @@
   background-color: #F0F0F0;
 }
 
-.semester-changer {
-  margin-bottom: 48px;
-}
-
 .semester-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 48px 144px;
+}
+
+.semester-changer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 24px 144px;
+  margin-bottom: 48px;
+  color: #2A26EA;
+  border: none;
+  background-color: white;
+  font-size: 1.25rem;
+  width: 80%;
+  position: relative;
+  top: 12%;
+  left: 22.5%;
 }
