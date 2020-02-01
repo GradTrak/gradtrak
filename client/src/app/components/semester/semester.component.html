@@ -4,12 +4,12 @@
     <col class="units" />
     <col class="button-cell" />
   </colgroup>
-  <thead class = "semester-name">
+  <thead class="semester-name">
     <th colspan="2">
       <h4>{{ semester.name }}</h4>
     </th>
   </thead>
-  <hr>
+  <hr />
   <tbody>
     <tr *ngFor="let course of semester.courses">
       <td class="name">
@@ -25,7 +25,7 @@
             </ng-container>
           </ng-template>
         </ng-container>
-        {{ course.dept + ' ' + course.no + ' '}}
+        {{ course.dept + ' ' + course.no + ' ' }}
       </td>
       <td>
         {{ course.title }}
@@ -36,7 +36,7 @@
       <td class="button-cell"><button class="course-remover" (click)="removeCourse(course)">-</button></td>
     </tr>
     <tr>
-      <td colspan=4><button class="course-adder" (click)="openAdder()">+</button></td>
+      <td colspan="4"><button class="course-adder" (click)="openAdder()">+</button></td>
     </tr>
   </tbody>
 </div>

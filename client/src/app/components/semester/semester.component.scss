@@ -13,7 +13,7 @@ table {
   }
 
   col.units {
-    width: 10%
+    width: 10%;
   }
 
   col.button-cell {
@@ -21,32 +21,33 @@ table {
   }
 
   thead.semester-name {
-    color: #1337F1;
+    color: #1337f1;
   }
 
   hr {
-  margin-left: none;
-  margin-right: none;
-  background: #F0F0F0;
-  height: 0.2rem;
-  border: none;
-  padding: none;
-  border-spacing: none;
-}
+    margin-left: none;
+    margin-right: none;
+    background: #f0f0f0;
+    height: 0.2rem;
+    border: none;
+    padding: none;
+    border-spacing: none;
+  }
 
-.course-adder, .course-remover {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 24px 144px;
-  border: none;
-  font-size: 1.25rem;
-  width: 100%;
-  background-color: #F0F0F0;
-}
+  .course-adder,
+  .course-remover {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 24px 144px;
+    border: none;
+    font-size: 1.25rem;
+    width: 100%;
+    background-color: #f0f0f0;
+  }
 
   td:not(.button-cell) {
     padding: 0 4px;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
   }
 
   td.units {
