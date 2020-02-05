@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Requirement = require('../models/requirement.model');
 
 const requirementSchema = new Schema({
   id: {
@@ -12,6 +13,21 @@ const requirementSchema = new Schema({
     required: true,
     unique: true,
   },
+  type: {
+    type: String,
+    required: false,
+    unqiue: false,
+  },
+  parentId: {
+    type: String,
+    required: false,
+    unqiue: false,
+  },
+  requirementCategories: {
+    type: Requirement[],
+    required: false,
+    unqiue: false,
+  }
 })
 
 module.exports = mongoose.model('requirement', requirementSchema)
