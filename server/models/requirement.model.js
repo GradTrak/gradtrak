@@ -27,6 +27,11 @@ const requirementSchema = new Schema({
     type: Requirement[],
     required: false,
     unqiue: false,
+  },
+  requirements: {
+    type: Requirement[],
+    required: false,
+    unique: false,
   }
 })
 
