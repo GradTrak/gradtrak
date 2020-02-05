@@ -4,10 +4,12 @@ const logger = require('morgan');
 const { api } = require('./routers/api');
 const mongooseHost = require('./mongooseHost');
 const courseController = require('./controllers/courseController')
-const requirementController = require('./controllers/requirementcontroller')
+const requirementController = require('./controllers/requirementController')
+const tagController = require('./controllers/tagController')
 connectDB = mongooseHost.connectDB;
 initializeDBCourses = courseController.initializeDBCourses;
 initializeDBReqs = requirementController.initializeDBReqs;
+initializeDBTags = tagController.initializeDBTags;
 const app = express();
 
 app.use(logger('dev'));
@@ -20,4 +22,5 @@ app.use(express.static('dist'));
 connectDB();
 initializeDBReqs();
 initializeDBCourses();
+initializeDBTags();
 module.exports = app;

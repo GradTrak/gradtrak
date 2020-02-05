@@ -10,7 +10,6 @@ const tagSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
 })
 

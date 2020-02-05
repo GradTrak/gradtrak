@@ -1,3 +1,7 @@
+const mongooseHost = require('../mongooseHost');
+db = mongooseHost.db;
+const Tag = require('../models/tag.model');
+
 const DUMMY_TAG_DATA = [
   {
     id: 'upper_div',
@@ -56,6 +60,22 @@ const DUMMY_TAG_DATA = [
     name: 'Linguistics Elective',
   },
 ];
+
+
+initializeDBTags = ()=>{
+  DUMMY_TAG_DATA.some((dataPoint)=>{
+    tag = Tag(dataPoint);
+    tag.save((err, course) => {
+      if (err) {
+        console.log(err.errmsg)
+        return console.log("One of the tags being saved is saved already! Aborting...")};
+      console.log("Tag saved successfully");
+    });
+    return false; //find a way to make this return true only when err.
+  });
+}
+
+exports.initializeDBTags = initializeDBTags;
 
 exports.getTags = (req, res) => {
   res.json(DUMMY_TAG_DATA);
