@@ -638,8 +638,8 @@ const DUMMY_REQUIREMENT_DATA = [
 
 initializeDBReqs = ()=>{
   DUMMY_REQUIREMENT_DATA.some((dataPoint)=>{
-    reqs = Requirement(dataPoint);
-    course.save((err, course) => {
+    req = Requirement(dataPoint);
+    req.save((err, course) => {
       if (err) {
         console.log(err.errmsg)
         return console.log("One of the requirements being saved is saved already! Aborting...")};
