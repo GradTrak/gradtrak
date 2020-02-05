@@ -1,3 +1,4 @@
+const User = require('../models/user.model');
 const DUMMY_SEMESTER_DATA = [
   {
     id: 'fa2019',
@@ -55,4 +56,26 @@ exports.getUserData = (req, res) => {
 exports.setUserData = (req, res) => {
   userData = req.body;
   res.status(204).send();
+};
+
+//function that saves individual user data
+initializeDBUsers = (updatedSem, updatedGoals)=>{
+  (user = User(dataPoint);
+  user.save(err, updatedGoals) => {
+      if (err) {
+        console.log(err.errmsg)
+        return console.log("One of the goals being saved is saved already! Aborting...")};
+      console.log("Goal saved successfully");
+  user.save((err, updatedSem) => {
+      if (err) {
+        console.log(err.errmsg)
+        return console.log("One of the semesters being saved is saved already! Aborting...")};
+      console.log("Semester saved successfully");
+    });
+    return false; //find a way to make this return true only when err.
+}
+
+exports.initializeDBUsers = initializeDBUsers;
+exports.getRequirements = (req, res) => {
+  res.json(DUMMY_REQUIREMENT_DATA);
 };
