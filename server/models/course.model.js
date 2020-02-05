@@ -10,12 +10,12 @@ const courseSchema = new Schema({
   dept: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
   no: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
   },
   title: {
     type: String,
