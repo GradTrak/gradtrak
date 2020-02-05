@@ -24,12 +24,12 @@ const requirementSchema = new Schema({
     unqiue: false,
   },
   requirementCategories: {
-    type: Requirement[],
+    type: [Requirement],
     required: false,
     unqiue: false,
   },
   requirements: {
-    type: Requirement[],
+    type: [Requirement],
     required: false,
     unique: false,
   }
