@@ -1,3 +1,7 @@
+const mongooseHost = require('../mongooseHost');
+db = mongooseHost.db;
+const Requirement = require('../models/requirement.model');
+
 const DUMMY_REQUIREMENT_DATA = [
   {
     id: 'uc',
@@ -631,6 +635,20 @@ const DUMMY_REQUIREMENT_DATA = [
     ],
   },
 ];
+
+initializeDBCourses = ()=>{
+  DUMMY_REQUIREMENT_DATA.some((dataPoint)=>{
+    reqs = Requirement(dataPoint);
+    course.save((err, course) => {
+      if (err) {
+        console.log(err.errmsg)
+        return console.log("One of the courses being saved is saved already! Aborting...")};
+      console.log("course saved successfully");
+    });
+    return false; //find a way to make this return true only when err.
+  });
+}
+
 
 exports.getRequirements = (req, res) => {
   res.json(DUMMY_REQUIREMENT_DATA);
