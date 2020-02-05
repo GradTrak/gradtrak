@@ -636,20 +636,20 @@ const DUMMY_REQUIREMENT_DATA = [
   },
 ];
 
-initializeDBCourses = ()=>{
+initializeDBReqs = ()=>{
   DUMMY_REQUIREMENT_DATA.some((dataPoint)=>{
     reqs = Requirement(dataPoint);
     course.save((err, course) => {
       if (err) {
         console.log(err.errmsg)
-        return console.log("One of the courses being saved is saved already! Aborting...")};
-      console.log("course saved successfully");
+        return console.log("One of the requirements being saved is saved already! Aborting...")};
+      console.log("Requirement saved successfully");
     });
     return false; //find a way to make this return true only when err.
   });
 }
 
-
+exports.initializeDBReqs = initializeDBReqs;
 exports.getRequirements = (req, res) => {
   res.json(DUMMY_REQUIREMENT_DATA);
 };
