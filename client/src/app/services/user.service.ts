@@ -91,15 +91,16 @@ export class UserService {
    * @param {Course} course The course to add.
    * @param {Semester} semester The semester to which to add the course.
    */
+  // TODO Making this a function that returns a clone breaks the course-changer
   addCourse(course: Course, semester: Semester): void {
+    if (semester.courses.includes(course)) {
+      console.error(`Tried to add course ${course.id} to semester ${semester.id}, which it already has`);
+      return;
+    }
+
+    semester.courses = [...semester.courses, course];
     this.userData.next({
       ...this.userDataState,
-      semesters: this.userDataState.semesters.map((s: Semester) => {
-        if (s === semester) {
-          return { ...s, courses: [...s.courses, course] };
-        }
-        return s;
-      }),
     });
   }
 
@@ -109,17 +110,15 @@ export class UserService {
    * @param {Course} course The course to remove.
    * @param {Semester} semester The semester from which to remove the course.
    */
+  // TODO Making this a function that returns a clone breaks the course-changer
   removeCourse(course: Course, semester: Semester): void {
+    if (!semester.courses.includes(course)) {
+      console.error(`Tried to remove course ${course.id} from semester ${semester.id}, which it doesn't have`);
+    }
+
+    semester.courses = semester.courses.filter((c: Course) => c !== course);
     this.userData.next({
       ...this.userDataState,
-      semesters: this.userDataState.semesters.map((s: Semester) =>
-        s === semester
-          ? {
-              ...s,
-              courses: s.courses.filter((c: Course) => c !== course),
-            }
-          : s,
-      ),
     });
   }
 
