@@ -45,8 +45,8 @@ const DUMMY_SEMESTER_DATA = [
 const DUMMY_GOAL_DATA = [];
 
 let userData = {
-  semesters: DUMMY_SEMESTER_DATA,
-  goals: DUMMY_GOAL_DATA,
+  semesters: DUMMY_SEMESTER_DATA.map((obj)=>obj.id),
+  goals: DUMMY_GOAL_DATA.map((obj => obj.id)),
 };
 
 exports.getUserData = (req, res) => {
@@ -60,17 +60,16 @@ exports.setUserData = (req, res) => {
 
 //function that saves individual user data
 initializeDBUsers = (updatedSem, updatedGoals)=>{
-  user = User(dataPoint);
+  user = User({
+    id: "BryanWasHere1",
+    semesters: updatedSem,
+    goals: updatedGoals,
+  });
   user.save((err, updatedUser) => {
       if (err) {
-        console.log(err.errmsg)
+        console.log(err.errmsg);
         return console.log("This user is already in the database")};
-      console.log("User information saved.");
-  user.save((err, updatedSem) => {
-      if (err) {
-        console.log(err.errmsg)
-        return console.log("One of the semesters being saved is saved already! Aborting...")};
-      console.log("Semester saved successfully");
+      console.log(`User '${updatedUser.id}' information saved.`);
     });
     return false; //find a way to make this return true only when err.
 }

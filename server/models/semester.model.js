@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Course = require('../models/course.model');
 
 const semesterSchema = new Schema({
   id: {
@@ -12,8 +11,8 @@ const semesterSchema = new Schema({
     type: String,
     required: true,
   },
-  courses: {
-    type: [Course],
+  courseIds: {
+    type: [String], //courseIds
   }
 })
 

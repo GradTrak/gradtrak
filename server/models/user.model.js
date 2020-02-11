@@ -9,11 +9,11 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  semesters: {
-    type: [Semester],
+  semesterIds: {
+    type: [String],//semesterIDs
   },
-  goals: {
-    type: [Requirement],
+  goalIds: {
+    type: [String],//requirementIDs
   }
 })
 
