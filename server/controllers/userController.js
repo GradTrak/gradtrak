@@ -46,7 +46,7 @@ const DUMMY_GOAL_DATA = [];
 
 let userData = {
   semesters: DUMMY_SEMESTER_DATA,
-  goalIds: DUMMY_GOAL_DATA,
+  goals: DUMMY_GOAL_DATA,
 };
 
 exports.getUserData = (req, res) => {
@@ -60,12 +60,12 @@ exports.setUserData = (req, res) => {
 
 //function that saves individual user data
 initializeDBUsers = (updatedSem, updatedGoals)=>{
-  (user = User(dataPoint);
-  user.save(err, updatedGoals) => {
+  user = User(dataPoint);
+  user.save((err, updatedUser) => {
       if (err) {
         console.log(err.errmsg)
-        return console.log("One of the goals being saved is saved already! Aborting...")};
-      console.log("Goal saved successfully");
+        return console.log("This user is already in the database")};
+      console.log("User information saved.");
   user.save((err, updatedSem) => {
       if (err) {
         console.log(err.errmsg)

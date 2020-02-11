@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Semester = require('../models/semester.model');
+const Requirement = require('../models/requirement.model');
 
 const userSchema = new Schema({
   id: {
@@ -7,26 +9,12 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  dept: {
-    type: String,
-    required: true,
-    unique: true,
+  semesters: {
+    type: [Semester],
   },
-  no: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  title: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  units: {
-    type: Number,
-    required: true,
-  },
-  tags: Array,
+  goals: {
+    type: [Requirement],
+  }
 })
 
 module.exports = mongoose.model('user', userSchema)
