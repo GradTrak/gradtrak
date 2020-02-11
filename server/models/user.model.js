@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Semester = require('../models/semester.model');
 const Requirement = require('../models/requirement.model');
 
 const userSchema = new Schema({
@@ -9,11 +8,11 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  semesterIds: {
-    type: [String],//semesterIDs
+  semesters: {
+    type: [Object],
   },
-  goalIds: {
-    type: [String],//requirementIDs
+  goals: {
+    type: [Object],
   }
 })
 

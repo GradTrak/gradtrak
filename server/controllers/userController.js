@@ -45,8 +45,8 @@ const DUMMY_SEMESTER_DATA = [
 const DUMMY_GOAL_DATA = [];
 
 let userData = {
-  semesters: DUMMY_SEMESTER_DATA.map((obj)=>obj.id),
-  goals: DUMMY_GOAL_DATA.map((obj => obj.id)),
+  semesters: DUMMY_SEMESTER_DATA,
+  goals: DUMMY_GOAL_DATA,
 };
 
 exports.getUserData = (req, res) => {
@@ -59,9 +59,9 @@ exports.setUserData = (req, res) => {
 };
 
 //function that saves individual user data
-initializeDBUsers = (updatedSem, updatedGoals)=>{
+initializeDBUsers = (id, updatedSem, updatedGoals)=>{
   user = User({
-    id: "BryanWasHere1",
+    id: id,
     semesters: updatedSem,
     goals: updatedGoals,
   });
