@@ -74,9 +74,20 @@ initializeDBTags = ()=>{
     return false; //find a way to make this return true only when err.
   });
 }
+retriveTagByID = (id) =>{
+  Tag.find({id: id}, (err, tagObject) =>{
+    if (err) {
+      console.log(err.errmsg);
+    }
+    console.log(`queried successful! here is the tag: ${tagObject}`)
+  });
+}
+retrieveAllTags = ()=>{
+  Tag.find();
+}
 
 exports.initializeDBTags = initializeDBTags;
-
+exports.retriveTagByID = retriveTagByID;
 exports.getTags = (req, res) => {
   res.json(DUMMY_TAG_DATA);
 };

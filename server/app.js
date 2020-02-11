@@ -26,4 +26,6 @@ initializeDBReqs();
 initializeDBCourses();
 initializeDBTags();
 addUser("BryanWasHere", {}, {})
+console.log("KDJFGHDKFJGHKDFJHGDKFJGHDKFJHGDKFJH");
+console.log(retriveTagByID("ls_arts"));
 module.exports = app;
