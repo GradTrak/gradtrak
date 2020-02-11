@@ -59,7 +59,7 @@ exports.setUserData = (req, res) => {
 };
 
 //function that saves individual user data
-initializeDBUsers = (id, updatedSem, updatedGoals)=>{
+addUser = (id, updatedSem, updatedGoals)=>{
   user = User({
     id: id,
     semesters: updatedSem,
@@ -74,7 +74,7 @@ initializeDBUsers = (id, updatedSem, updatedGoals)=>{
     return false; //find a way to make this return true only when err.
 }
 
-exports.initializeDBUsers = initializeDBUsers;
+exports.addUser = addUser;
 exports.getRequirements = (req, res) => {
   res.json(DUMMY_REQUIREMENT_DATA);
 };

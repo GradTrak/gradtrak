@@ -6,10 +6,12 @@ const mongooseHost = require('./mongooseHost');
 const courseController = require('./controllers/courseController')
 const requirementController = require('./controllers/requirementController')
 const tagController = require('./controllers/tagController')
+const userController = require('./controllers/userController');
 connectDB = mongooseHost.connectDB;
 initializeDBCourses = courseController.initializeDBCourses;
 initializeDBReqs = requirementController.initializeDBReqs;
 initializeDBTags = tagController.initializeDBTags;
+addUser = userController.addUser;
 const app = express();
 
 app.use(logger('dev'));
@@ -23,4 +25,5 @@ connectDB();
 initializeDBReqs();
 initializeDBCourses();
 initializeDBTags();
+addUser("BryanWasHere", {}, {})
 module.exports = app;
