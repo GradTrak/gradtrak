@@ -26,7 +26,7 @@ const courseSchema = new Schema({
     type: Number,
     required: true,
   },
-  tags: Array,
+  tagIds: [String],
 })
 
 module.exports = mongoose.model('course', courseSchema)
