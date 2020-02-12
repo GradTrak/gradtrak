@@ -626,18 +626,24 @@ queries mongo for any course models and calls successCallback on what is returne
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
 queryCourse = (successCallback)=>{
-  return User.find().exec((err, courseList) => {
+  return Course.find().exec((err, courseList) => {
     if (err) {
       console.log(err.errmsg);
     }
+    console.log();
+    console.log();
+    console.log()
+    console.log()
+    console.log()
+    console.log()
+    console.log()
+    console.log(courseList)
     successCallback(courseList);
   });
 }
 
-newGetCourses = (req, res) => {
-  res.json(DUMMY_COURSE_DATA);
-};
 exports.getCourses = (req, res) => {
-  res.json(DUMMY_COURSE_DATA);
+  queryCourse((courses) => (res.json(courses)));
+  //for some reason simply putting res.json doesn't work but this lambda does sooooo
 };
 exports.initializeDBCourses = initializeDBCourses;

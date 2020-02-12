@@ -23,12 +23,9 @@ app.use(cookieParser());
 app.use('/api', api);
 app.use(express.static('dist'));
 connectDB();
-initializeDBReqs();
-initializeDBCourses();
-initializeDBTags();
-addUser("BryanWasHere", {}, {})
+//initializeDBReqs();
+//initializeDBCourses();
+//initializeDBTags();
+//addUser("BryanWasHere", {}, {})
 console.log("KDJFGHDKFJGHKDFJHGDKFJGHDKFJHGDKFJH");
-queryTags((tags) => {
-  console.log(tags);
-})
 module.exports = app;
