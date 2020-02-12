@@ -621,6 +621,19 @@ initializeDBCourses = ()=>{
   });
 }
 
+/**
+queries mongo for any course models and calls successCallback on what is returned
+@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
+*/
+queryCourse = (successCallback)=>{
+  return User.find().exec((err, courseList) => {
+    if (err) {
+      console.log(err.errmsg);
+    }
+    successCallback(courseList);
+  });
+}
+
 newGetCourses = (req, res) => {
   res.json(DUMMY_COURSE_DATA);
 };
