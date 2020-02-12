@@ -74,20 +74,30 @@ initializeDBTags = ()=>{
     return false; //find a way to make this return true only when err.
   });
 }
-retriveTagByID = (id) =>{
+
+/**
+@param callback a one-argument function which will be called when the query returns, assuming it is successful
+*/
+retriveTagByID = (id, successCallback) =>{
   Tag.find({id: id}, (err, tagObject) =>{
     if (err) {
       console.log(err.errmsg);
     }
-    console.log(`queried successful! here is the tag: ${tagObject}`)
+    successCallback(tagObject);
   });
 }
-retrieveAllTags = ()=>{
-  Tag.find();
+retrieveAllTags = (successCallback)=>{
+  return Tag.find().exec((err, tagList) => {
+    if (err) {
+      console.log(err.errmsg);
+    }
+    successCallback(tagList);
+  });
 }
 
 exports.initializeDBTags = initializeDBTags;
 exports.retriveTagByID = retriveTagByID;
+exports.retrieveAllTags = retrieveAllTags;
 exports.getTags = (req, res) => {
   res.json(DUMMY_TAG_DATA);
 };

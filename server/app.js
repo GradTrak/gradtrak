@@ -12,6 +12,7 @@ initializeDBCourses = courseController.initializeDBCourses;
 initializeDBReqs = requirementController.initializeDBReqs;
 initializeDBTags = tagController.initializeDBTags;
 addUser = userController.addUser;
+retrieveAllTags = tagController.retrieveAllTags;
 const app = express();
 
 app.use(logger('dev'));
@@ -27,5 +28,7 @@ initializeDBCourses();
 initializeDBTags();
 addUser("BryanWasHere", {}, {})
 console.log("KDJFGHDKFJGHKDFJHGDKFJGHDKFJHGDKFJH");
-console.log(retriveTagByID("ls_arts"));
+retrieveAllTags((tags) => {
+  console.log(tags);
+})
 module.exports = app;
