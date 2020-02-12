@@ -74,6 +74,19 @@ addUser = (id, updatedSem, updatedGoals)=>{
     return false; //find a way to make this return true only when err.
 }
 
+/**
+queries mongo for any users models and calls successCallback on what is returned
+@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
+*/
+queryUsers = (successCallback)=>{
+  return User.find().exec((err, userList) => {
+    if (err) {
+      console.log(err.errmsg);
+    }
+    successCallback(userList);
+  });
+}
+
 exports.addUser = addUser;
 exports.getRequirements = (req, res) => {
   res.json(DUMMY_REQUIREMENT_DATA);

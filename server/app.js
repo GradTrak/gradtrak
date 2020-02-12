@@ -28,7 +28,7 @@ initializeDBCourses();
 initializeDBTags();
 addUser("BryanWasHere", {}, {})
 console.log("KDJFGHDKFJGHKDFJHGDKFJGHDKFJHGDKFJH");
-retrieveAllTags((tags) => {
+queryTags((tags) => {
   console.log(tags);
 })
 module.exports = app;

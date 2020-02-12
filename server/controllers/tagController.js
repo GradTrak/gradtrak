@@ -76,7 +76,8 @@ initializeDBTags = ()=>{
 }
 
 /**
-@param callback a one-argument function which will be called when the query returns, assuming it is successful
+@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
+@alert this is a completely useless function. Vestigial, if you will. even though it was actually never useful to begin with.
 */
 retriveTagByID = (id, successCallback) =>{
   Tag.find({id: id}, (err, tagObject) =>{
@@ -86,7 +87,12 @@ retriveTagByID = (id, successCallback) =>{
     successCallback(tagObject);
   });
 }
-retrieveAllTags = (successCallback)=>{
+
+/**
+queries mongo for any tag models and calls successCallback on what is returned
+@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
+*/
+queryTags = (successCallback)=>{
   return Tag.find().exec((err, tagList) => {
     if (err) {
       console.log(err.errmsg);
@@ -97,7 +103,7 @@ retrieveAllTags = (successCallback)=>{
 
 exports.initializeDBTags = initializeDBTags;
 exports.retriveTagByID = retriveTagByID;
-exports.retrieveAllTags = retrieveAllTags;
+exports.queryTags = queryTags;
 exports.getTags = (req, res) => {
   res.json(DUMMY_TAG_DATA);
 };
