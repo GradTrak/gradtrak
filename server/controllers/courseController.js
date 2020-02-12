@@ -1,4 +1,5 @@
 const mongooseHost = require('../mongooseHost');
+
 db = mongooseHost.db;
 const Course = require('../models/course.model');
 
@@ -605,38 +606,39 @@ const DUMMY_COURSE_DATA = [
   },
 ];
 
-//This probably is a development only thing because once we get a db we shouldn't
-//need to do this often
-initializeDBCourses = ()=>{
-  DUMMY_COURSE_DATA.some((dataPoint)=>{
+// This probably is a development only thing because once we get a db we shouldn't
+// need to do this often
+initializeDBCourses = () => {
+  DUMMY_COURSE_DATA.some((dataPoint) => {
     course = Course(dataPoint);
     duplicate = false;
     course.save((err, course) => {
       if (err) {
-        console.log(err.errmsg)
-        return console.log("One of the courses being saved is saved already! Aborting...")};
-      console.log("course saved successfully");
+        console.log(err.errmsg);
+        return console.log('One of the courses being saved is saved already! Aborting...');
+      }
+      console.log('course saved successfully');
     });
-    return false; //find a way to make this return true only when err.
+    return false; // find a way to make this return true only when err.
   });
-}
+};
 
 /**
 queries mongo for any course models and calls successCallback on what is returned
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-queryCourse = (successCallback)=>{
+queryCourse = (successCallback) => {
   return Course.find().exec((err, courseList) => {
     if (err) {
       console.log(err.errmsg);
     }
     successCallback(courseList);
   });
-}
+};
 
 exports.getCourses = (req, res) => {
-  //res.json(DUMMY_COURSE_DATA);
-  queryCourse((courses) => (res.json(courses)));
-  //for some reason simply putting res.json doesn't work but this lambda does sooooo
+  // res.json(DUMMY_COURSE_DATA);
+  queryCourse((courses) => res.json(courses));
+  // for some reason simply putting res.json doesn't work but this lambda does sooooo
 };
 exports.initializeDBCourses = initializeDBCourses;

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+
+const {Schema} = mongoose;
 const Requirement = require('../models/requirement.model');
 
 const userSchema = new Schema({
@@ -13,7 +14,7 @@ const userSchema = new Schema({
   },
   goals: {
     type: [Object],
-  }
-})
+  },
+});
 
-module.exports = mongoose.model('user', userSchema)
+module.exports = mongoose.model('user', userSchema);

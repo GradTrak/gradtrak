@@ -1,4 +1,5 @@
 const mongooseHost = require('../mongooseHost');
+
 db = mongooseHost.db;
 const Tag = require('../models/tag.model');
 
@@ -61,50 +62,50 @@ const DUMMY_TAG_DATA = [
   },
 ];
 
-
-initializeDBTags = ()=>{
-  DUMMY_TAG_DATA.some((dataPoint)=>{
+initializeDBTags = () => {
+  DUMMY_TAG_DATA.some((dataPoint) => {
     tag = Tag(dataPoint);
     tag.save((err, course) => {
       if (err) {
-        console.log(err.errmsg)
-        return console.log("One of the tags being saved is saved already! Aborting...")};
-      console.log("Tag saved successfully");
+        console.log(err.errmsg);
+        return console.log('One of the tags being saved is saved already! Aborting...');
+      }
+      console.log('Tag saved successfully');
     });
-    return false; //find a way to make this return true only when err.
+    return false; // find a way to make this return true only when err.
   });
-}
+};
 
 /**
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 @alert this is a completely useless function. Vestigial, if you will. even though it was actually never useful to begin with.
 */
-retriveTagByID = (id, successCallback) =>{
-  Tag.find({id: id}, (err, tagObject) =>{
+retriveTagByID = (id, successCallback) => {
+  Tag.find({ id }, (err, tagObject) => {
     if (err) {
       console.log(err.errmsg);
     }
     successCallback(tagObject);
   });
-}
+};
 
 /**
 queries mongo for any tag models and calls successCallback on what is returned
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-queryTags = (successCallback)=>{
+queryTags = (successCallback) => {
   return Tag.find().exec((err, tagList) => {
     if (err) {
       console.log(err.errmsg);
     }
     successCallback(tagList);
   });
-}
+};
 
 exports.initializeDBTags = initializeDBTags;
 exports.retriveTagByID = retriveTagByID;
 exports.queryTags = queryTags;
 exports.getTags = (req, res) => {
-  queryTags((tags) => (res.json(tags)));
-  //res.json(DUMMY_TAG_DATA);
+  queryTags((tags) => res.json(tags));
+  // res.json(DUMMY_TAG_DATA);
 };

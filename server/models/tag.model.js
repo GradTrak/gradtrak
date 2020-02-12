@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+
+const {Schema} = mongoose;
 
 const tagSchema = new Schema({
   id: {
@@ -11,6 +12,6 @@ const tagSchema = new Schema({
     type: String,
     required: true,
   },
-})
+});
 
-module.exports = mongoose.model('tag', tagSchema)
+module.exports = mongoose.model('tag', tagSchema);

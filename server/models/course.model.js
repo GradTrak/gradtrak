@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+
+const {Schema} = mongoose;
 
 const courseSchema = new Schema({
   id: {
@@ -27,6 +28,6 @@ const courseSchema = new Schema({
     required: true,
   },
   tagIds: [String],
-})
+});
 
-module.exports = mongoose.model('course', courseSchema)
+module.exports = mongoose.model('course', courseSchema);

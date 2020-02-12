@@ -1,4 +1,5 @@
 const mongooseHost = require('../mongooseHost');
+
 db = mongooseHost.db;
 const Requirement = require('../models/requirement.model');
 
@@ -636,36 +637,35 @@ const DUMMY_REQUIREMENT_DATA = [
   },
 ];
 
-initializeDBReqs = ()=>{
-  DUMMY_REQUIREMENT_DATA.some((dataPoint)=>{
+initializeDBReqs = () => {
+  DUMMY_REQUIREMENT_DATA.some((dataPoint) => {
     req = Requirement(dataPoint);
     req.save((err, course) => {
       if (err) {
-        console.log(err.errmsg)
-        return console.log("One of the requirements being saved is saved already! Aborting...")};
-      console.log("Requirement saved successfully");
+        console.log(err.errmsg);
+        return console.log('One of the requirements being saved is saved already! Aborting...');
+      }
+      console.log('Requirement saved successfully');
     });
-    return false; //find a way to make this return true only when err.
+    return false; // find a way to make this return true only when err.
   });
-}
-
+};
 
 /**
 queries mongo for any requirement models and calls successCallback on what is returned
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-queryRequirements = (successCallback)=>{
+queryRequirements = (successCallback) => {
   return User.find().exec((err, requirementList) => {
     if (err) {
       console.log(err.errmsg);
     }
     successCallback(requirementList);
   });
-}
-
+};
 
 exports.initializeDBReqs = initializeDBReqs;
 exports.getRequirements = (req, res) => {
-  queryRequirements((reqs) => (res.json(reqs)));
-  //res.json(DUMMY_REQUIREMENT_DATA);
+  queryRequirements((reqs) => res.json(reqs));
+  // res.json(DUMMY_REQUIREMENT_DATA);
 };

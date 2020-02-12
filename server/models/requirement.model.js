@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+
+const {Schema} = mongoose;
 
 const requirementSchema = new Schema({
   id: {
@@ -23,15 +24,15 @@ const requirementSchema = new Schema({
     unqiue: false,
   },
   requirementCategories: {
-    type: [Object],//requirement groups
+    type: [Object], // requirement groups
     required: false,
     unqiue: false,
   },
   requirements: {
-    type: [Object],//requirements
+    type: [Object], // requirements
     required: false,
     unique: false,
-  }
-})
+  },
+});
 
-module.exports = mongoose.model('requirement', requirementSchema)
+module.exports = mongoose.model('requirement', requirementSchema);
