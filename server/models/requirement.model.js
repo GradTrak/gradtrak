@@ -23,12 +23,12 @@ const requirementSchema = new Schema({
     unqiue: false,
   },
   requirementCategories: {
-    type: [Object],//ids of requirement groups
+    type: [Object],//requirement groups
     required: false,
     unqiue: false,
   },
   requirements: {
-    type: [Object],//ids of requirements
+    type: [Object],//requirements
     required: false,
     unique: false,
   }

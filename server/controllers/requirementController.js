@@ -666,5 +666,6 @@ queryRequirements = (successCallback)=>{
 
 exports.initializeDBReqs = initializeDBReqs;
 exports.getRequirements = (req, res) => {
-  res.json(DUMMY_REQUIREMENT_DATA);
+  queryRequirements((reqs) => (res.json(reqs)));
+  //res.json(DUMMY_REQUIREMENT_DATA);
 };

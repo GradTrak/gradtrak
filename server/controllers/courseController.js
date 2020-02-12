@@ -630,21 +630,13 @@ queryCourse = (successCallback)=>{
     if (err) {
       console.log(err.errmsg);
     }
-    console.log();
-    console.log();
-    console.log()
-    console.log()
-    console.log()
-    console.log()
-    console.log()
-    console.log(courseList)
     successCallback(courseList);
   });
 }
 
 exports.getCourses = (req, res) => {
-  res.json(DUMMY_COURSE_DATA);
-  //queryCourse((courses) => (res.json(courses)));
+  //res.json(DUMMY_COURSE_DATA);
+  queryCourse((courses) => (res.json(courses)));
   //for some reason simply putting res.json doesn't work but this lambda does sooooo
 };
 exports.initializeDBCourses = initializeDBCourses;

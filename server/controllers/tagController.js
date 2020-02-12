@@ -105,5 +105,6 @@ exports.initializeDBTags = initializeDBTags;
 exports.retriveTagByID = retriveTagByID;
 exports.queryTags = queryTags;
 exports.getTags = (req, res) => {
-  res.json(DUMMY_TAG_DATA);
+  queryTags((tags) => (res.json(tags)));
+  //res.json(DUMMY_TAG_DATA);
 };

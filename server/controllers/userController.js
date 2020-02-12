@@ -89,5 +89,6 @@ queryUsers = (successCallback)=>{
 
 exports.addUser = addUser;
 exports.getRequirements = (req, res) => {
-  res.json(DUMMY_REQUIREMENT_DATA);
+  queryUsers((user) => (user.json(reqs)));
+  //res.json(DUMMY_REQUIREMENT_DATA);
 };
