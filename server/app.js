@@ -1,14 +1,14 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
 
+const db = require('./config/db');
+const { authStrategy, deserializeUser, serializeUser } = require('./config/passport');
 const { api } = require('./routers/api');
-const { authStrategy, deserializeUser, serializeUser } = require('./libs/passport');
 
-mongoose.connect('mongodb://localhost/gradtrak', { useNewUrlParser: true, useUnifiedTopology: true });
+db.connect();
 
 const app = express();
 
