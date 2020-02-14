@@ -23,6 +23,7 @@ api.post(
       username: req.user.username,
     });
   },
+  // eslint-disable-next-line no-unused-vars
   (err, req, res, next) => {
     res.status(200).json({
       success: false,
