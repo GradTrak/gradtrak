@@ -12,8 +12,7 @@ import { UserService } from 'services/user.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  semesters: Semester[];
-  baseGoals: RequirementSet[];
+  state: State;
 
   @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private loginModalInstance: NgbModalRef;
@@ -23,8 +22,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.userService.fetchUserData();
     this.userService.getState().subscribe((state: State) => {
-      this.semesters = state.userData.semesters;
-      this.baseGoals = state.userData.goals;
+      this.state = state;
 
       if (state.loggedIn) {
         this.userService.saveUserData();
@@ -33,7 +31,7 @@ export class AppComponent {
   }
 
   getCurrentCourses(): Course[] {
-    return this.semesters.flatMap((semester: Semester) => semester.courses);
+    return this.state.userData.semesters.flatMap((semester: Semester) => semester.courses);
   }
 
   openLogin(): void {

@@ -4,6 +4,6 @@
 
 <button (click)="openLogin()">Login</button>
 <div class="body">
-  <app-semester-pane [semesters]="semesters"></app-semester-pane>
-  <app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>
+  <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+  <app-requirements-pane [courses]="getCurrentCourses()" [goals]="state.userData.goals"></app-requirements-pane>
 </div>
