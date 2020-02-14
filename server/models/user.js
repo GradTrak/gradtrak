@@ -13,9 +13,8 @@ const userSchema = mongoose.Schema({
   },
 });
 
-function verifyPassword(inputPassword) {
+userSchema.methods.verifyPassword = function verifyPassword(inputPassword) {
   return this.password === inputPassword;
 };
-userSchema.methods.verifyPassword = verifyPassword;
 
 module.exports = mongoose.model('User', userSchema);
