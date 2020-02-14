@@ -6,6 +6,7 @@ import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
+import { State } from 'models/state.model';
 import { UserData } from 'models/user-data.model';
 import { CourseService } from 'services/course.service';
 import { RequirementService } from 'services/requirement.service';
@@ -16,28 +17,32 @@ import { RequirementService } from 'services/requirement.service';
 export class UserService {
   private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
-  private static readonly INITIAL_STATE: UserData = {
-    semesters: [],
-    goals: [],
+  private static readonly INITIAL_STATE: State = {
+    loggedIn: false,
+    username: null,
+    userData: {
+      semesters: [],
+      goals: [],
+    },
   };
 
-  private readonly userData: BehaviorSubject<UserData>;
+  private readonly state: BehaviorSubject<State>;
 
-  private userDataState: UserData;
+  private currentState: State;
 
   constructor(
     private courseService: CourseService,
     private requirementService: RequirementService,
     private http: HttpClient,
   ) {
-    this.userData = new BehaviorSubject<UserData>(UserService.INITIAL_STATE);
-    this.userData.subscribe((userData: UserData) => {
-      this.userDataState = userData;
+    this.state = new BehaviorSubject<State>(UserService.INITIAL_STATE);
+    this.state.subscribe((state: State) => {
+      this.currentState = state;
     });
   }
 
-  getUserData(): Observable<UserData> {
-    return this.userData.asObservable();
+  getState(): Observable<State> {
+    return this.state.asObservable();
   }
 
   /**
@@ -54,11 +59,18 @@ export class UserService {
           }).pipe(map(({ coursesMap, reqsMap }) => new UserData(userDataProto, coursesMap, reqsMap))),
         ),
       )
-      .subscribe((userData: UserData) => this.userData.next(userData));
+      .subscribe((userData: UserData) =>
+        this.state.next({
+          ...this.currentState,
+          userData,
+        }),
+      );
   }
 
   saveUserData(): void {
-    this.http.put(UserService.SEMESTER_API_ENDPOINT, this.getPrototypeFromUserData(this.userDataState)).subscribe();
+    this.http
+      .put(UserService.SEMESTER_API_ENDPOINT, this.getPrototypeFromUserData(this.currentState.userData))
+      .subscribe();
   }
 
   /**
@@ -67,9 +79,12 @@ export class UserService {
    * @param {Semester[]} newSemesters The new semesters.
    */
   updateSemesters(newSemesters: Semester[]): void {
-    this.userData.next({
-      ...this.userDataState,
-      semesters: [...newSemesters],
+    this.state.next({
+      ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: [...newSemesters],
+      },
     });
   }
 
@@ -79,9 +94,12 @@ export class UserService {
    * @param {RequiremnetSet[]} newGoals The new goals.
    */
   updateGoals(newGoals: RequirementSet[]): void {
-    this.userData.next({
-      ...this.userDataState,
-      goals: [...newGoals],
+    this.state.next({
+      ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        goals: [...newGoals],
+      },
     });
   }
 
@@ -92,14 +110,17 @@ export class UserService {
    * @param {Semester} semester The semester to which to add the course.
    */
   addCourse(course: Course, semester: Semester): void {
-    this.userData.next({
-      ...this.userDataState,
-      semesters: this.userDataState.semesters.map((s: Semester) => {
-        if (s === semester) {
-          return { ...s, courses: [...s.courses, course] };
-        }
-        return s;
-      }),
+    this.state.next({
+      ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: this.currentState.userData.semesters.map((s: Semester) => {
+          if (s === semester) {
+            return { ...s, courses: [...s.courses, course] };
+          }
+          return s;
+        }),
+      },
     });
   }
 
@@ -110,16 +131,19 @@ export class UserService {
    * @param {Semester} semester The semester from which to remove the course.
    */
   removeCourse(course: Course, semester: Semester): void {
-    this.userData.next({
-      ...this.userDataState,
-      semesters: this.userDataState.semesters.map((s: Semester) =>
-        s === semester
-          ? {
-              ...s,
-              courses: s.courses.filter((c: Course) => c !== course),
-            }
-          : s,
-      ),
+    this.state.next({
+      ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: this.currentState.userData.semesters.map((s: Semester) =>
+          s === semester
+            ? {
+                ...s,
+                courses: s.courses.filter((c: Course) => c !== course),
+              }
+            : s,
+        ),
+      },
     });
   }
 
