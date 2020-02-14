@@ -15,6 +15,7 @@ import { RequirementService } from 'services/requirement.service';
   providedIn: 'root',
 })
 export class UserService {
+  private static readonly LOGIN_ENDPOINT = '/api/login';
   private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private static readonly INITIAL_STATE: State = {
@@ -43,6 +44,18 @@ export class UserService {
 
   getState(): Observable<State> {
     return this.state.asObservable();
+  }
+
+  /**
+   * Logs into the application with the given username and password.
+   *
+   * @param {string} username The user's username.
+   * @param {string} password The user's password.
+   */
+  login(username: string, password: string): Observable<boolean> {
+    return this.http
+      .post(UserService.LOGIN_ENDPOINT, { username, password })
+      .pipe(map((response: { success: boolean; username?: string }) => response.success));
   }
 
   /**

@@ -1,2 +1,9 @@
-<app-semester-pane [semesters]="semesters"></app-semester-pane>
-<app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>
+<ng-template #login>
+  <app-login></app-login>
+</ng-template>
+
+<button (click)="openLogin()">Login</button>
+<div class="body">
+  <app-semester-pane [semesters]="semesters"></app-semester-pane>
+  <app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>
+</div>

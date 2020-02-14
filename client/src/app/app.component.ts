@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
@@ -14,7 +15,10 @@ export class AppComponent {
   semesters: Semester[];
   baseGoals: RequirementSet[];
 
-  constructor(private userService: UserService) {}
+  @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  private loginModalInstance: NgbModalRef;
+
+  constructor(private userService: UserService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     this.userService.fetchUserData();
@@ -22,11 +26,23 @@ export class AppComponent {
       this.semesters = state.userData.semesters;
       this.baseGoals = state.userData.goals;
 
-      this.userService.saveUserData();
+      if (state.loggedIn) {
+        this.userService.saveUserData();
+      }
     });
   }
 
   getCurrentCourses(): Course[] {
     return this.semesters.flatMap((semester: Semester) => semester.courses);
+  }
+
+  openLogin(): void {
+    this.loginModalInstance = this.modalService.open(this.loginModalContent);
+  }
+
+  closeLogin(): void {
+    if (this.loginModalInstance) {
+      this.loginModalInstance.close();
+    }
   }
 }
