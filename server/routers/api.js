@@ -39,5 +39,17 @@ api.post('/logout', (req, res) => {
     });
   }
 });
+api.get('/whoami', (req, res) => {
+  if (req.user) {
+    res.json({
+      loggedIn: true,
+      username: req.user.username,
+    });
+  } else {
+    res.json({
+      loggedIn: false,
+    });
+  }
+});
 
 exports.api = api;

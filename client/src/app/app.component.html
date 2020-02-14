@@ -9,7 +9,14 @@
   <button (click)="logout()">Logout</button>
   Current User: {{ state.username }}
 </ng-template>
-<div class="body">
-  <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
-  <app-requirements-pane [courses]="getCurrentCourses()" [goals]="state.userData.goals"></app-requirements-pane>
-</div>
+<ng-container *ngIf="!state.loading; else loading">
+  <div class="body">
+    <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+    <app-requirements-pane [courses]="getCurrentCourses()" [goals]="state.userData.goals"></app-requirements-pane>
+  </div>
+</ng-container>
+<ng-template #loading>
+  <div>
+    Loading...
+  </div>
+</ng-template>

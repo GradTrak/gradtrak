@@ -17,9 +17,11 @@ import { RequirementService } from 'services/requirement.service';
 export class UserService {
   private static readonly LOGIN_ENDPOINT = '/api/login';
   private static readonly LOGOUT_ENDPOINT = '/api/logout';
+  private static readonly WHOAMI_ENDPOINT = '/api/whoami';
   private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private static readonly INITIAL_STATE: State = {
+    loading: true,
     loggedIn: false,
     username: null,
     userData: {
@@ -64,6 +66,7 @@ export class UserService {
         if (response.success) {
           this.state.next({
             ...this.currentState,
+            loading: true,
             loggedIn: true,
             username,
           });
@@ -91,6 +94,28 @@ export class UserService {
   }
 
   /**
+   * Queries the server to detect current login status and updates state accordingly.
+   */
+  queryWhoami(): void {
+    this.http.get(UserService.WHOAMI_ENDPOINT).subscribe((response: { loggedIn: boolean; username?: string }) => {
+      if (response.loggedIn) {
+        this.state.next({
+          ...this.currentState,
+          loggedIn: true,
+          username: response.username,
+        });
+      } else {
+        this.state.next({
+          ...this.currentState,
+          loading: false,
+          loggedIn: false,
+          username: null,
+        });
+      }
+    });
+  }
+
+  /**
    * Fetches the user data from the backend, instantiates the semesters, and takes the object and make it a list.
    */
   fetchUserData(): void {
@@ -107,6 +132,7 @@ export class UserService {
       .subscribe((userData: UserData) =>
         this.state.next({
           ...this.currentState,
+          loading: false,
           userData,
         }),
       );

@@ -19,13 +19,19 @@ export class AppComponent {
   constructor(private userService: UserService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.userService.fetchUserData();
+    this.userService.queryWhoami();
     this.userService.getState().subscribe((state: State) => {
-      this.state = state;
+      /* Fetch user data if just logged in */
+      if (state.loggedIn && !this.state.loggedIn) {
+        this.userService.fetchUserData();
+      }
 
-      if (state.loggedIn) {
+      /* Save user data if logged in and not just loaded */
+      if (!state.loading && !this.state.loading && state.loggedIn) {
         this.userService.saveUserData();
       }
+
+      this.state = state;
     });
   }
 
