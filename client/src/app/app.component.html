@@ -1,5 +1,5 @@
 <ng-template #login>
-  <app-login></app-login>
+  <app-login (success)="closeLogin()"></app-login>
 </ng-template>
 
 <button (click)="openLogin()">Login</button>

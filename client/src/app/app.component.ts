@@ -37,7 +37,7 @@ export class AppComponent {
   }
 
   openLogin(): void {
-    this.loginModalInstance = this.modalService.open(this.loginModalContent);
+    this.loginModalInstance = this.modalService.open(this.loginModalContent, { size: 'sm' });
   }
 
   closeLogin(): void {
