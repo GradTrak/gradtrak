@@ -656,7 +656,7 @@ queries mongo for any requirement models and calls successCallback on what is re
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
 queryRequirements = (successCallback) => {
-  return User.find().exec((err, requirementList) => {
+  return Requirement.find().exec((err, requirementList) => {
     if (err) {
       console.log(err.errmsg);
     }
