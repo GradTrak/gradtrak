@@ -29,5 +29,15 @@ api.post(
     });
   },
 );
+api.post('/logout', (req, res) => {
+  if (req.user) {
+    req.logout();
+    res.status(204).send();
+  } else {
+    res.status(400).json({
+      error: 'Not logged in',
+    });
+  }
+});
 
 exports.api = api;

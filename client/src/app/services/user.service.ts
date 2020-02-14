@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
-import { flatMap, map } from 'rxjs/operators';
+import { flatMap, map, tap } from 'rxjs/operators';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
 import { RequirementSet } from 'models/requirement-set.model';
@@ -16,6 +16,7 @@ import { RequirementService } from 'services/requirement.service';
 })
 export class UserService {
   private static readonly LOGIN_ENDPOINT = '/api/login';
+  private static readonly LOGOUT_ENDPOINT = '/api/logout';
   private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private static readonly INITIAL_STATE: State = {
@@ -51,11 +52,42 @@ export class UserService {
    *
    * @param {string} username The user's username.
    * @param {string} password The user's password.
+   * @return {Observable<boolean>} An Observable that will emit whether the login was successful.
    */
   login(username: string, password: string): Observable<boolean> {
-    return this.http
-      .post(UserService.LOGIN_ENDPOINT, { username, password })
-      .pipe(map((response: { success: boolean; username?: string }) => response.success));
+    if (this.currentState.loggedIn) {
+      throw new Error('Tried to log in when already logged in');
+    }
+
+    return this.http.post(UserService.LOGIN_ENDPOINT, { username, password }).pipe(
+      tap((response: { success: boolean; username?: string }) => {
+        if (response.success) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username,
+          });
+        }
+      }),
+      map((response: { success: boolean; username?: string }) => response.success),
+    );
+  }
+
+  /**
+   * Logs the user out of the application.
+   */
+  logout(): void {
+    if (!this.currentState.loggedIn) {
+      throw new Error('Tried to log out when not logged in');
+    }
+
+    this.http.post(UserService.LOGOUT_ENDPOINT, null).subscribe(() => {
+      this.state.next({
+        ...this.currentState,
+        loggedIn: false,
+        username: null,
+      });
+    });
   }
 
   /**

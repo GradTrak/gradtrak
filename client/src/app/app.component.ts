@@ -1,7 +1,6 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
-import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { State } from 'models/state.model';
 import { UserService } from 'services/user.service';
@@ -42,5 +41,9 @@ export class AppComponent {
     if (this.loginModalInstance) {
       this.loginModalInstance.close();
     }
+  }
+
+  logout(): void {
+    this.userService.logout();
   }
 }
