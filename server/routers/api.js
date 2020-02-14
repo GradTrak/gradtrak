@@ -15,7 +15,10 @@ api.get('/user', userController.getUserData);
 api.put('/user', userController.setUserData);
 
 api.post('/login', passport.authenticate('local'), (req, res) => {
-  res.status(204).send();
+  res.status(200).json({
+    success: true,
+    username: req.user.username,
+  });
 });
 
 exports.api = api;
