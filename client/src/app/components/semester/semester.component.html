@@ -3,6 +3,7 @@
 <table>
   <colgroup>
     <col class="name" />
+    <col class="title" />
     <col class="units" />
     <col class="button-cell" />
   </colgroup>
@@ -23,19 +24,18 @@
         </ng-container>
         {{ course.dept + ' ' + course.no + ' ' }}
       </td>
-      <td>
+      <td class="title">
         {{ course.title }}
       </td>
-      <td>
+      <td class="units">
         {{ course.units }}
       </td>
       <td class="button-cell"><button class="course-remover" (click)="removeCourse(course)">-</button></td>
     </tr>
-    <tr>
-      <td colspan="4"><button class="course-adder" (click)="openAdder()">+</button></td>
-    </tr>
+    <tr></tr>
   </tbody>
 </table>
+<button class="course-adder" (click)="openAdder()">+</button>
 
 <ng-template #courseAdder>
   <div class="modal-body">

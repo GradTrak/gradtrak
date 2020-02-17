@@ -1,6 +1,6 @@
 :host {
   display: block;
-  padding: 8px;
+  padding: 12px;
   background-color: white;
 }
 
@@ -15,48 +15,44 @@ hr {
 }
 
 table {
-  width: 100%;
   border-collapse: separate;
-  border-spacing: 8px 4px;
-  font-size: 0.65rem;
+  border-spacing: 0 4px;
+  font-size: 0.6rem;
+
+  tr {
+    background-color: #f0f0f0;
+  }
 
   col.name {
-    width: 100%;
+    width: 5rem;
+  }
+
+  col.title {
+    width: calc(100% - 7rem);
   }
 
   col.units {
-    width: 10%;
+    width: 1rem;
   }
 
   col.button-cell {
-    width: 10%;
+    width: 1rem;
   }
 
-  thead.semester-name {
-  }
-
-  .course-adder,
-  .course-remover {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 24px 144px;
-    border: none;
-    font-size: 1.25rem;
-    width: 100%;
-    background-color: #f0f0f0;
-  }
-
-  td:not(.button-cell) {
+  td {
     padding: 0 4px;
-    background-color: #f0f0f0;
   }
 
   td.units {
     text-align: center;
-    > button {
-      width: 100%;
-    }
   }
+}
+
+.course-adder,
+.course-remover {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
 }
 
 .material-icons {
