@@ -10,16 +10,12 @@
 }
 
 .semester-changer {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 24px 144px;
-  margin-bottom: 48px;
-  color: #2a26ea;
-  border: none;
-  background-color: white;
-  font-size: 1rem;
   width: 80%;
   position: relative;
-  top: 12%;
-  left: 22.5%;
+  left: 10%;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  color: #2a26ea;
+  background-color: white;
+  border: none;
 }
