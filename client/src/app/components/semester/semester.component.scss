@@ -1,9 +1,21 @@
-:host,
-table {
-  display: inline-block;
-  width: 100%;
-  background-color: white;
+:host {
+  display: block;
   padding: 8px;
+  background-color: white;
+}
+
+.semester-name {
+  color: #1337f1;
+  font-size: 1rem;
+  text-align: center;
+}
+
+hr {
+  margin: 12px;
+}
+
+table {
+  width: 100%;
   border-collapse: separate;
   border-spacing: 8px 4px;
   font-size: 0.65rem;
@@ -21,17 +33,6 @@ table {
   }
 
   thead.semester-name {
-    color: #1337f1;
-  }
-
-  hr {
-    margin-left: none;
-    margin-right: none;
-    background: #f0f0f0;
-    height: 0.2rem;
-    border: none;
-    padding: none;
-    border-spacing: none;
   }
 
   .course-adder,
