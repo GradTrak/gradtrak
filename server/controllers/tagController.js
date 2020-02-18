@@ -1,6 +1,3 @@
-// const mongooseHost = require('../mongooseHost');
-
-// db = mongooseHost.db;
 const Tag = require('../models/tag.model');
 
 const DUMMY_TAG_DATA = [

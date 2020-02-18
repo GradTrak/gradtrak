@@ -1,6 +1,3 @@
-// const mongooseHost = require('../mongooseHost');
-
-// const db = mongooseHost.db;
 const Requirement = require('../models/requirement.model');
 
 const DUMMY_REQUIREMENT_DATA = [
