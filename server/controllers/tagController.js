@@ -26,8 +26,9 @@ function queryTags(successCallback) {
   });
 }
 
-module.exports.retriveTagByID = retriveTagByID;
-module.exports.queryTags = queryTags;
 module.exports.getTags = (req, res) => {
   queryTags((tags) => res.json(tags));
 };
+
+module.exports.retriveTagByID = retriveTagByID;
+module.exports.queryTags = queryTags;
