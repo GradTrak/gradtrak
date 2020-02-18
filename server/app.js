@@ -1,12 +1,9 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+
 const { api } = require('./routers/api');
 const db = require('./config/db');
-const courseController = require('./controllers/courseController');
-const requirementController = require('./controllers/requirementController');
-const tagController = require('./controllers/tagController');
-const userController = require('./controllers/userController');
 
 db.connect();
 
