@@ -1,20 +1,43 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
-// const Requirement = require('../models/requirement.model');
-
 const userSchema = new mongoose.Schema({
-  id: {
-    type: String,
-    required: true,
-    unique: true,
-  },
   semesters: {
-    type: [Object],
+    type: [
+      {
+        id: {
+          type: String,
+          required: true,
+          unique: true,
+        },
+        name: {
+          type: String,
+          required: true,
+        },
+        courses: {
+          type: [
+            {
+              type: String,
+              ref: 'Course',
+            },
+          ],
+          required: true,
+          default: [],
+        },
+      },
+    ],
+    required: true,
+    default: [],
   },
   goals: {
-    type: [Object],
+    type: [
+      {
+        type: String,
+        ref: 'Goal',
+      },
+    ],
+    required: true,
+    default: [],
   },
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('User', userSchema);

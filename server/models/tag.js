@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const tagSchema = new mongoose.Schema({
   id: {
     type: String,
+    index: true,
     required: true,
     unique: true,
   },
@@ -12,4 +13,4 @@ const tagSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('tag', tagSchema);
+module.exports = mongoose.model('Tag', tagSchema);

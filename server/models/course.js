@@ -3,29 +3,32 @@ const mongoose = require('mongoose');
 const courseSchema = new mongoose.Schema({
   id: {
     type: String,
+    index: true,
     required: true,
     unique: true,
   },
   dept: {
     type: String,
     required: true,
-    unique: false,
   },
   no: {
     type: String,
     required: true,
-    unique: false,
   },
   title: {
     type: String,
     required: true,
-    unique: true,
   },
   units: {
     type: Number,
     required: true,
   },
-  tagIds: [String],
+  tagIds: {
+    type: [mongoose.Types.ObjectId],
+    ref: 'Tag',
+    required: true,
+    default: [],
+  },
 });
 
-module.exports = mongoose.model('course', courseSchema);
+module.exports = mongoose.model('Course', courseSchema);

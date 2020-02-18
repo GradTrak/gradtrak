@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
+const db = require('../config/db');
 const mongoose = require('mongoose');
+
+const Course = require('../models/course.model');
+const Tag = require('../models/tag.model');
 
 const DUMMY_COURSE_DATA = [
   {
@@ -1342,3 +1346,7 @@ const DUMMY_SEMESTER_DATA = [
 ];
 
 const DUMMY_GOAL_DATA = [];
+
+db.connect((err) => {
+  if (err) throw err;
+});

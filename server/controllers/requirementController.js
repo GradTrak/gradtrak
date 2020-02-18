@@ -1,4 +1,4 @@
-const Requirement = require('../models/requirement');
+const RequirementSet = require('../models/requirement-set');
 
 /**
 queries mongo for any requirement models and calls successCallback on what is returned
