@@ -1,4 +1,4 @@
-const Course = require('../models/course.model');
+const Course = require('../models/course');
 
 /**
 queries mongo for any course models and calls successCallback on what is returned

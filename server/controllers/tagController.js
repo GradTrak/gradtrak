@@ -1,4 +1,4 @@
-const Tag = require('../models/tag.model');
+const Tag = require('../models/tag');
 
 /**
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
