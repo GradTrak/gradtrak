@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 const db = require('../config/db');
-const mongoose = require('mongoose');
 
-const Course = require('../models/course.model');
-const Tag = require('../models/tag.model');
+const Course = require('../models/course');
+const RequirementSet = require('../models/requirement-set');
+const Tag = require('../models/tag');
+const User = require('../models/user');
 
 const DUMMY_COURSE_DATA = [
   {
@@ -1349,4 +1350,27 @@ const DUMMY_GOAL_DATA = [];
 
 db.connect((err) => {
   if (err) throw err;
+
+  Tag.remove({}, (err) => {
+    if (err) throw err;
+
+    const tags = DUMMY_TAG_DATA.map((rawTag) => new Tag(rawTag));
+    Tag.insertMany(tags, (err) => {
+      if (err) throw err;
+
+      Course.remove({}).then(() => {
+        const courses = DUMMY_COURSE_DATA.map((rawCourse) => {
+          const courseData = { ...rawCourse };
+          courseData.tagIds = courseData.tagIds.map((tagId) => tags.find((tag) => tag.id === tagId));
+
+          return new Course(courseData);
+        });
+
+        Course.insertMany(courses).then(() => {
+          Course.findOne({ id: 'compsci161' }, (course) => console.log(course));
+          Course.findOne({}, (course) => console.log(course));
+        });
+      });
+    });
+  });
 });
