@@ -1,26 +1,20 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild, TemplateRef } from '@angular/core';
-import { Semester } from 'models/semester.model';
-import { SemesterService } from 'services/semester.service';
+import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Semester } from 'models/semester.model';
+import { UserService } from 'services/user.service';
 
 @Component({
   selector: 'app-semester-pane',
   templateUrl: './semester-pane.component.html',
-  styleUrls: ['./semester-pane.component.css'],
+  styleUrls: ['./semester-pane.component.scss'],
 })
 export class SemesterPaneComponent implements OnInit {
-  // TODO: if importing takes up extra space, it may be worth just using export
-  // instead to find the relevant classes so that we don't store copies
-
   @Input() readonly semesters: Semester[];
-  @Output() updateSemesters: EventEmitter<Semester[]>;
 
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private semesterChangerModalReference: NgbModalRef;
 
-  constructor(private semesterService: SemesterService, private modalService: NgbModal) {
-    this.updateSemesters = new EventEmitter<Semester[]>();
-  }
+  constructor(private modalService: NgbModal, private userService: UserService) {}
 
   ngOnInit(): void {}
 
@@ -33,6 +27,6 @@ export class SemesterPaneComponent implements OnInit {
   }
 
   setSemesters(semestersOutput: Semester[]): void {
-    this.updateSemesters.emit(semestersOutput);
+    this.userService.updateSemesters(semestersOutput);
   }
 }

@@ -7,11 +7,11 @@
 
 .selector-container {
   display: flex;
-}
 
-.selector-container > * {
-  margin: 12px;
-  width: 100%;
+  > * {
+    margin: 12px;
+    width: 100%;
+  }
 }
 
 .selector > select {
@@ -21,7 +21,7 @@
 .material-icons {
   position: absolute;
   transform: translateX(-20px);
-  font-size: 18px;
+  font-size: 1.25rem;
   color: red;
   cursor: pointer;
 }

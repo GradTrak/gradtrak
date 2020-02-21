@@ -1,15 +1,17 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var app = express();
+const { api } = require('./routers/api');
+
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use('/api', api);
 app.use(express.static('dist'));
 
 module.exports = app;

@@ -5,7 +5,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-semester-changer',
   templateUrl: './semester-changer.component.html',
-  styleUrls: ['./semester-changer.component.css'],
+  styleUrls: ['./semester-changer.component.scss'],
 })
 export class SemesterChangerComponent implements OnInit {
   @Input() readonly semestersInput: Semester[]; // optional
