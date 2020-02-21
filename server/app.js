@@ -8,12 +8,12 @@ const requirementController = require('./controllers/requirementController');
 const tagController = require('./controllers/tagController');
 const userController = require('./controllers/userController');
 
-const {connectDB} = mongooseHost;
-const {initializeDBCourses} = courseController; // eslint-disable-line no-unused-vars
-const {initializeDBReqs} = requirementController; // eslint-disable-line no-unused-vars
-const {initializeDBTags} = tagController; // eslint-disable-line no-unused-vars
-const {addUser} = userController; // eslint-disable-line no-unused-vars
-const {retrieveAllTags} = tagController; // eslint-disable-line no-unused-vars
+const { connectDB } = mongooseHost;
+const { initializeDBCourses } = courseController; // eslint-disable-line no-unused-vars
+const { initializeDBReqs } = requirementController; // eslint-disable-line no-unused-vars
+const { initializeDBTags } = tagController; // eslint-disable-line no-unused-vars
+const { addUser } = userController; // eslint-disable-line no-unused-vars
+const { retrieveAllTags } = tagController; // eslint-disable-line no-unused-vars
 const app = express();
 
 app.use(logger('dev'));

@@ -90,7 +90,7 @@ const queryUsers = (successCallback) => {
 };
 
 exports.addUser = addUser;
-exports.getRequirements = (req, res) => {
+exports.getUser = (req, res) => {
   console.log(req);
   queryUsers((user) => res.json(user));
   // res.json(DUMMY_REQUIREMENT_DATA);
