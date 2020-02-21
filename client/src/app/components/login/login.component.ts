@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   @Output() private success: EventEmitter<void>;
 
   username: string;
+  // FIXME Look into how to securely handle passwords in JS/Angular
   password: string;
 
   loading: boolean;
