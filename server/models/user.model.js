@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const {Schema} = mongoose;
-const Requirement = require('../models/requirement.model');
+// const Requirement = require('../models/requirement.model');
 
 const userSchema = new Schema({
   id: {

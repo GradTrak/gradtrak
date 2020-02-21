@@ -1,6 +1,6 @@
-const mongooseHost = require('../mongooseHost');
+// const mongooseHost = require('../mongooseHost');
 
-db = mongooseHost.db;
+// db = mongooseHost.db;
 const Tag = require('../models/tag.model');
 
 const DUMMY_TAG_DATA = [
@@ -62,15 +62,15 @@ const DUMMY_TAG_DATA = [
   },
 ];
 
-initializeDBTags = () => {
+const initializeDBTags = () => {
   DUMMY_TAG_DATA.some((dataPoint) => {
-    tag = Tag(dataPoint);
-    tag.save((err, course) => {
+    const tag = Tag(dataPoint);
+    tag.save((err, _tag) => {
       if (err) {
         console.log(err.errmsg);
         return console.log('One of the tags being saved is saved already! Aborting...');
       }
-      console.log('Tag saved successfully');
+      return console.log(`Tag ${_tag.id}saved successfully`);
     });
     return false; // find a way to make this return true only when err.
   });
@@ -80,12 +80,12 @@ initializeDBTags = () => {
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 @alert this is a completely useless function. Vestigial, if you will. even though it was actually never useful to begin with.
 */
-retriveTagByID = (id, successCallback) => {
+const retriveTagByID = (id, successCallback) => {
   Tag.find({ id }, (err, tagObject) => {
     if (err) {
-      console.log(err.errmsg);
+      return console.log(err.errmsg);
     }
-    successCallback(tagObject);
+    return successCallback(tagObject);
   });
 };
 
@@ -93,12 +93,12 @@ retriveTagByID = (id, successCallback) => {
 queries mongo for any tag models and calls successCallback on what is returned
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-queryTags = (successCallback) => {
+const queryTags = (successCallback) => {
   return Tag.find().exec((err, tagList) => {
     if (err) {
-      console.log(err.errmsg);
+      return console.log(err.errmsg);
     }
-    successCallback(tagList);
+    return successCallback(tagList);
   });
 };
 

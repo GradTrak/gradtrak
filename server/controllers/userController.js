@@ -60,8 +60,8 @@ exports.setUserData = (req, res) => {
 };
 
 // function that saves individual user data
-addUser = (id, updatedSem, updatedGoals) => {
-  user = User({
+const addUser = (id, updatedSem, updatedGoals) => {
+  const user = User({
     id,
     semesters: updatedSem,
     goals: updatedGoals,
@@ -71,7 +71,7 @@ addUser = (id, updatedSem, updatedGoals) => {
       console.log(err.errmsg);
       return console.log('This user is already in the database');
     }
-    console.log(`User '${updatedUser.id}' information saved.`);
+    return console.log(`User '${updatedUser.id}' information saved.`);
   });
   return false; // find a way to make this return true only when err.
 };
@@ -80,17 +80,18 @@ addUser = (id, updatedSem, updatedGoals) => {
 queries mongo for any users models and calls successCallback on what is returned
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-queryUsers = (successCallback) => {
+const queryUsers = (successCallback) => {
   return User.find().exec((err, userList) => {
     if (err) {
-      console.log(err.errmsg);
+      return console.log(err.errmsg);
     }
-    successCallback(userList);
+    return successCallback(userList);
   });
 };
 
 exports.addUser = addUser;
 exports.getRequirements = (req, res) => {
-  queryUsers((user) => user.json(reqs));
+  console.log(req);
+  queryUsers((user) => res.json(user));
   // res.json(DUMMY_REQUIREMENT_DATA);
 };

@@ -1,6 +1,6 @@
-const mongooseHost = require('../mongooseHost');
+// const mongooseHost = require('../mongooseHost');
 
-db = mongooseHost.db;
+// const {db} = mongooseHost;
 const Course = require('../models/course.model');
 
 const DUMMY_COURSE_DATA = [
@@ -608,16 +608,16 @@ const DUMMY_COURSE_DATA = [
 
 // This probably is a development only thing because once we get a db we shouldn't
 // need to do this often
-initializeDBCourses = () => {
+const initializeDBCourses = () => {
   DUMMY_COURSE_DATA.some((dataPoint) => {
-    course = Course(dataPoint);
-    duplicate = false;
-    course.save((err, course) => {
+    const course = Course(dataPoint);
+    // const duplicate = false;
+    course.save((err, savedCourse) => {
       if (err) {
         console.log(err.errmsg);
         return console.log('One of the courses being saved is saved already! Aborting...');
       }
-      console.log('course saved successfully');
+      return console.log(`course ${savedCourse} saved successfully`);
     });
     return false; // find a way to make this return true only when err.
   });
@@ -627,7 +627,7 @@ initializeDBCourses = () => {
 queries mongo for any course models and calls successCallback on what is returned
 @param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-queryCourse = (successCallback) => {
+const queryCourse = (successCallback) => {
   return Course.find().exec((err, courseList) => {
     if (err) {
       console.log(err.errmsg);
