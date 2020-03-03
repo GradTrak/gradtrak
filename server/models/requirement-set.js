@@ -69,7 +69,7 @@ const requirementSetSchema = new mongoose.Schema({
     ref: 'RequirementSet',
   },
   requirementCategories: {
-    type: [],
+    type: [requirementCategorySchema],
     required: true,
     default: [],
   },

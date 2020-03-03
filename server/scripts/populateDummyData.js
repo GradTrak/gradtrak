@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable no-console, no-param-reassign */
+
 const db = require('../config/db');
 
 const Course = require('../models/course');
@@ -671,6 +673,7 @@ const DUMMY_REQUIREMENT_DATA = [
         requirements: [
           {
             type: 'mutex',
+            id: 'coe_hss',
             name: 'CoE Humanities and Social Sciences',
             requirements: [
               {
@@ -1346,14 +1349,26 @@ const DUMMY_SEMESTER_DATA = [
   },
 ];
 
-const DUMMY_GOAL_DATA = [];
-
 function linkCourses(rawCourses, tags) {
   return rawCourses.map((rawCourse) => {
     rawCourse.tagIds = rawCourse.tagIds.map((tagId) => tags.find((tag) => tag.id === tagId));
 
     return new Course(rawCourse);
   });
+}
+
+function linkRequirement(rawReq, courses, tags) {
+  if (rawReq.courseId) {
+    rawReq.courseId = courses.find((course) => course.id === rawReq.courseId);
+  }
+
+  if (rawReq.tagId) {
+    rawReq.tagId = tags.find((tag) => tag.id === rawReq.tagId);
+  }
+
+  if (rawReq.requirements) {
+    rawReq.requirements.forEach((rawNestedReq) => linkRequirement(rawNestedReq, courses, tags));
+  }
 }
 
 function linkRequirementSets(rawSets, courses, tags) {
@@ -1378,43 +1393,37 @@ function linkRequirementSets(rawSets, courses, tags) {
   return [...reqSets.values()];
 }
 
-function linkRequirement(rawReq, courses, tags) {
-  if (rawReq.courseId) {
-    rawReq.courseId = courses.find((course) => course.id === rawReq.courseId);
-  }
+let conn;
+let tags;
+let courses;
+let requirementSets;
 
-  if (rawReq.tagId) {
-    rawReq.tagId = tags.find((tag) => tag.id === rawReq.tagId);
-  }
-
-  if (rawReq.requirements) {
-    rawReq.requirements.forEach((rawNestedReq) => linkRequirement(rawNestedReq, courses, tags));
-  }
-}
-
-db.connect((err, conn) => {
-  if (err) throw err;
-
-  Tag.deleteMany({}, (err) => {
-    if (err) throw err;
-
-    const tags = DUMMY_TAG_DATA.map((rawTag) => new Tag(rawTag));
-    Tag.insertMany(tags, (err) => {
-      if (err) throw err;
-
-      Course.deleteMany({}).then(() => {
-        const courses = linkCourses(DUMMY_COURSE_DATA, tags);
-
-        Course.insertMany(courses).then((err) => {
-          RequirementSet.deleteMany({}).then((err) => {
-            const requirementSets = linkRequirementSets(DUMMY_REQUIREMENT_DATA, courses, tags);
-
-            RequirementSet.insertMany(requirementSets).then(() => {
-              conn.close();
-            });
-          });
-        });
-      });
-    });
+db.connect()
+  .then((c) => {
+    conn = c;
+    return Tag.deleteMany({});
+  })
+  .then(() => {
+    tags = DUMMY_TAG_DATA.map((rawTag) => new Tag(rawTag));
+    return Tag.insertMany(tags);
+  })
+  .then(() => {
+    return Course.deleteMany({});
+  })
+  .then(() => {
+    courses = linkCourses(DUMMY_COURSE_DATA, tags);
+    return Course.insertMany(courses);
+  })
+  .then(() => {
+    return RequirementSet.deleteMany({});
+  })
+  .then(() => {
+    requirementSets = linkRequirementSets(DUMMY_REQUIREMENT_DATA, courses, tags);
+    return RequirementSet.insertMany(requirementSets);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    conn.close();
   });
-});
