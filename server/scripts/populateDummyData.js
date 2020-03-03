@@ -1349,77 +1349,25 @@ const DUMMY_SEMESTER_DATA = [
   },
 ];
 
-function linkCourses(rawCourses, tags) {
-  return rawCourses.map((rawCourse) => {
-    rawCourse.tagIds = rawCourse.tagIds.map((tagId) => tags.find((tag) => tag.id === tagId));
-
-    return new Course(rawCourse);
-  });
-}
-
-function linkRequirement(rawReq, courses, tags) {
-  if (rawReq.courseId) {
-    rawReq.courseId = courses.find((course) => course.id === rawReq.courseId);
-  }
-
-  if (rawReq.tagId) {
-    rawReq.tagId = tags.find((tag) => tag.id === rawReq.tagId);
-  }
-
-  if (rawReq.requirements) {
-    rawReq.requirements.forEach((rawNestedReq) => linkRequirement(rawNestedReq, courses, tags));
-  }
-}
-
-function linkRequirementSets(rawSets, courses, tags) {
-  const reqSets = new Map();
-
-  let lastSize = -1;
-  while (lastSize !== reqSets.size) {
-    lastSize = reqSets.size;
-
-    rawSets.forEach((rawSet) => {
-      if (!reqSets.has(rawSet.id) && (rawSet.parentId === null || reqSets.has(rawSet.parentId))) {
-        rawSet.parentId = rawSet.parentId !== null ? reqSets.get(rawSet.parentId) : null;
-        rawSet.requirementCategories.forEach((rawCategory) => {
-          rawCategory.requirements.forEach((rawReq) => linkRequirement(rawReq, courses, tags));
-        });
-
-        reqSets.set(rawSet.id, new RequirementSet(rawSet));
-      }
-    });
-  }
-
-  return [...reqSets.values()];
-}
-
-let conn;
-let tags;
-let courses;
-let requirementSets;
-
 db.connect()
   .then((c) => {
     conn = c;
     return Tag.deleteMany({});
   })
   .then(() => {
-    tags = DUMMY_TAG_DATA.map((rawTag) => new Tag(rawTag));
-    return Tag.insertMany(tags);
+    return Tag.insertMany(DUMMY_TAG_DATA);
   })
   .then(() => {
     return Course.deleteMany({});
   })
   .then(() => {
-    courses = linkCourses(DUMMY_COURSE_DATA, tags);
-    return Course.insertMany(courses);
+    return Course.insertMany(DUMMY_COURSE_DATA);
   })
   .then(() => {
     return RequirementSet.deleteMany({});
   })
   .then(() => {
-    requirementSets = linkRequirementSets(DUMMY_REQUIREMENT_DATA, courses, tags);
-    return RequirementSet.insertMany(requirementSets);
+    return RequirementSet.insertMany(DUMMY_REQUIREMENT_DATA);
   })
   .catch((err) => {
     console.error(err);

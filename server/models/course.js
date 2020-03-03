@@ -24,8 +24,7 @@ const courseSchema = new mongoose.Schema({
     required: true,
   },
   tagIds: {
-    type: [mongoose.Types.ObjectId],
-    ref: 'Tag',
+    type: [String],
     required: true,
     default: [],
   },

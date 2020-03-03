@@ -17,16 +17,19 @@ const requirementSchema = new mongoose.Schema({
     required: false, // TODO Make this true
   },
   courseId: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Course',
+    type: String,
   },
   numRequired: {
     type: Number,
   },
-  requirements: [Object],
+  requirements: {
+    type: [Object],
+  },
+  hidden: {
+    type: Boolean,
+  },
   tagId: {
-    type: mongoose.Types.ObjectId,
-    ref: 'Tag',
+    type: String,
   },
   units: {
     type: Number,
@@ -64,10 +67,12 @@ const requirementSetSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  parentId: {
-    type: mongoose.Types.ObjectId,
-    ref: 'RequirementSet',
+  type: {
+    type: String,
+    enum: ['unselectable', 'major', 'minor', 'other'],
+    required: true,
   },
+  parentId: String,
   requirementCategories: {
     type: [requirementCategorySchema],
     required: true,
