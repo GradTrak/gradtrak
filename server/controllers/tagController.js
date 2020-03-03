@@ -1,33 +1,21 @@
 const Tag = require('../models/tag');
 
 /**
-@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 @alert this is a completely useless function. Vestigial, if you will. even though it was actually never useful to begin with.
 */
-function retriveTagByID(id, successCallback) {
-  Tag.find({ id }, (err, tagObject) => {
-    if (err) {
-      return console.log(err.errmsg);
-    }
-    return successCallback(tagObject);
-  });
+function retriveTagByID(id) {
+  return Tag.find({ id });
 }
 
 /**
 queries mongo for any tag models and calls successCallback on what is returned
-@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
 */
-function queryTags(successCallback) {
-  return Tag.find().exec((err, tagList) => {
-    if (err) {
-      return console.log(err.errmsg);
-    }
-    return successCallback(tagList);
-  });
+function queryTags() {
+  return Tag.find();
 }
 
 module.exports.getTags = (req, res) => {
-  queryTags((tags) => res.json(tags));
+  queryTags().then((tags) => res.json(tags));
 };
 
 module.exports.retriveTagByID = retriveTagByID;
