@@ -17,7 +17,7 @@ const requirementSchema = new mongoose.Schema({
     required: false, // TODO Make this true
   },
   courseId: {
-    type: String,
+    type: mongoose.Types.ObjectId,
     ref: 'Course',
   },
   numRequired: {
@@ -25,13 +25,14 @@ const requirementSchema = new mongoose.Schema({
   },
   requirements: [Object],
   tagId: {
-    type: String,
+    type: mongoose.Types.ObjectId,
     ref: 'Tag',
   },
   units: {
     type: Number,
   },
 });
+requirementSchema.requirements = [requirementSchema];
 
 const requirementCategorySchema = new mongoose.Schema({
   id: {
@@ -64,8 +65,8 @@ const requirementSetSchema = new mongoose.Schema({
     unique: true,
   },
   parentId: {
-    type: String,
-    ref: 'Requirement',
+    type: mongoose.Types.ObjectId,
+    ref: 'RequirementSet',
   },
   requirementCategories: {
     type: [],
