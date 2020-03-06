@@ -49,10 +49,20 @@ let userData = {
 };
 
 exports.getUserData = (req, res) => {
+  if (!req.user) {
+    res.status(401).send();
+    return;
+  }
+
   res.json(userData);
 };
 
 exports.setUserData = (req, res) => {
+  if (!req.user) {
+    res.status(401).send();
+    return;
+  }
+
   userData = req.body;
   res.status(204).send();
 };
