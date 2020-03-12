@@ -30,7 +30,14 @@
       <td class="units">
         {{ course.units }}
       </td>
-      <td class="button-cell"><button class="course-remover" (click)="removeCourse(course)">-</button></td>
+      <td class="button-cell">
+        <div ngbDropdown class="course-more">
+          <button ngbDropdownToggle class="course-more-button"></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem (click)="removeCourse(course)">Remove</button>
+          </div>
+        </div>
+      </td>
     </tr>
     <tr></tr>
   </tbody>

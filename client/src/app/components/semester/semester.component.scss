@@ -43,6 +43,12 @@ table {
     padding: 0 4px;
   }
 
+  td.name .material-icons {
+    position: absolute;
+    transform: translateX(-24px);
+    color: #dfae00;
+  }
+
   td.units {
     text-align: center;
   }
@@ -55,15 +61,16 @@ table,
   margin-right: 12px;
 }
 
+.course-more .dropdown-item {
+  font-size: 1rem;
+}
+
 .course-adder,
-.course-remover {
+.course-more-button {
   border: none;
   font-size: 1rem;
 }
 
 .material-icons {
-  position: absolute;
-  transform: translateX(-24px);
-  color: #dfae00;
   font-size: 16px;
 }
