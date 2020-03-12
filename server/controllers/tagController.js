@@ -17,6 +17,3 @@ function queryTags() {
 module.exports.getTags = (req, res) => {
   queryTags().then((tags) => res.json(tags));
 };
-
-module.exports.retriveTagByID = retriveTagByID;
-module.exports.queryTags = queryTags;

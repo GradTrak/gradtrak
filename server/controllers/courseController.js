@@ -10,5 +10,3 @@ function queryCourses() {
 module.exports.getCourses = (req, res) => {
   queryCourses().then((courses) => res.json(courses));
 };
-
-module.exports.queryCourses = queryCourses;

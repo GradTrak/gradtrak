@@ -50,17 +50,8 @@ let userData = {
   goals: DUMMY_GOAL_DATA,
 };
 
-exports.getUserData = (req, res) => {
-  res.json(userData);
-};
-
-exports.setUserData = (req, res) => {
-  userData = req.body;
-  res.status(204).send();
-};
-
 // function that saves individual user data
-const addUser = (id, updatedSem, updatedGoals) => {
+function addUser(id, updatedSem, updatedGoals) {
   const user = User({
     id,
     semesters: updatedSem,
@@ -74,24 +65,13 @@ const addUser = (id, updatedSem, updatedGoals) => {
     return console.log(`User '${updatedUser.id}' information saved.`);
   });
   return false; // find a way to make this return true only when err.
+}
+
+exports.getUserData = (req, res) => {
+  res.json(userData);
 };
 
-/**
-queries mongo for any users models and calls successCallback on what is returned
-@param successCallback a one-argument function which will be called when the query returns, assuming it is successful
-*/
-const queryUsers = (successCallback) => {
-  return User.find().exec((err, userList) => {
-    if (err) {
-      return console.log(err.errmsg);
-    }
-    return successCallback(userList);
-  });
-};
-
-exports.addUser = addUser;
-exports.getUser = (req, res) => {
-  console.log(req);
-  queryUsers((user) => res.json(user));
-  // res.json(DUMMY_REQUIREMENT_DATA);
+exports.setUserData = (req, res) => {
+  userData = req.body;
+  res.status(204).send();
 };

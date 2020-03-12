@@ -10,5 +10,3 @@ function queryRequirements() {
 module.exports.getRequirements = (req, res) => {
   queryRequirements().then((reqs) => res.json(reqs));
 };
-
-module.exports.queryRequirements = queryRequirements;
