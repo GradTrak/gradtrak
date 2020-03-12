@@ -1,8 +1,28 @@
 <div class="header">
   <div class="title">GradTrak</div>
-  <div class="name">Name: {{ username }}</div>
+  <div class="name">
+    <ng-container *ngIf="!state.loggedIn; else loggedIn">
+      <button (click)="openLogin()">Login</button>
+    </ng-container>
+    <ng-template #loggedIn>
+      Name: {{ state.username }}
+      <button (click)="logout()">Logout</button>
+    </ng-template>
+  </div>
 </div>
-<div class="body">
-  <app-semester-pane [semesters]="semesters"></app-semester-pane>
-  <app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>
-</div>
+<ng-container *ngIf="!state.loading; else loading">
+  <div class="body">
+    <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+    <app-requirements-pane [courses]="getCurrentCourses()" [goals]="state.userData.goals"></app-requirements-pane>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div>
+    Loading...
+  </div>
+</ng-template>
+
+<ng-template #login>
+  <app-login (success)="closeLogin()"></app-login>
+</ng-template>
