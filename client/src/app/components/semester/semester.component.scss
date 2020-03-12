@@ -19,10 +19,6 @@ table {
   border-spacing: 0 4px;
   font-size: 0.6rem;
 
-  tr {
-    background-color: #f0f0f0;
-  }
-
   col.name {
     width: 5rem;
   }
@@ -37,6 +33,14 @@ table {
 
   col.button-cell {
     width: 1rem;
+  }
+
+  tr {
+    background-color: #f0f0f0;
+  }
+
+  .header {
+    background-color: transparent;
   }
 
   td {

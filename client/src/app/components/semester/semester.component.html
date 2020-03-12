@@ -8,6 +8,12 @@
     <col class="button-cell" />
   </colgroup>
   <tbody>
+    <tr class="header">
+      <td>Class</td>
+      <td>Title</td>
+      <td>Units</td>
+      <td></td>
+    </tr>
     <tr *ngFor="let course of semester.courses">
       <td class="name">
         <ng-container *ngIf="isDuplicate(course)">
