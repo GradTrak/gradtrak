@@ -2,11 +2,16 @@
   <div class="title">GradTrak</div>
   <div class="name">
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
-      <button (click)="openLogin()">Login</button>
+      <div class="left">Guest User</div>
+      <div class="right">
+        <button (click)="openLogin()">Login</button>
+      </div>
     </ng-container>
     <ng-template #loggedIn>
-      Name: {{ state.username }}
-      <button (click)="logout()">Logout</button>
+      <div class="left">Name: {{ state.username }}</div>
+      <div class="right">
+        <button (click)="logout()">Logout</button>
+      </div>
     </ng-template>
   </div>
 </div>
