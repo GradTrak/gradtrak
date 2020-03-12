@@ -2,6 +2,15 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
   {
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
     semesters: {
       type: [
         {
@@ -14,13 +23,8 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true,
           },
-          courses: {
-            type: [
-              {
-                type: String,
-                ref: 'Course',
-              },
-            ],
+          courseIds: {
+            type: [String],
             required: true,
             default: [],
           },
@@ -30,12 +34,7 @@ const userSchema = new mongoose.Schema(
       default: [],
     },
     goals: {
-      type: [
-        {
-          type: String,
-          ref: 'Goal',
-        },
-      ],
+      type: [String],
       required: true,
       default: [],
     },

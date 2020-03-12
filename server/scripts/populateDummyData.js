@@ -1306,46 +1306,52 @@ const DUMMY_TAG_DATA = [
   },
 ];
 
-const DUMMY_SEMESTER_DATA = [
+const DUMMY_USERS = [
   {
-    id: 'fa2019',
-    name: 'Fall 2019',
-    courseIds: [],
-  },
-  {
-    id: 'sp2020',
-    name: 'Spring 2020',
-    courseIds: [],
-  },
-  {
-    id: 'fa20',
-    name: 'Fall 2020',
-    courseIds: [],
-  },
-  {
-    id: 'sp2021',
-    name: 'Spring 2021',
-    courseIds: [],
-  },
-  {
-    id: 'fa21',
-    name: 'Fall 2021',
-    courseIds: [],
-  },
-  {
-    id: 'sp2022',
-    name: 'Spring 2022',
-    courseIds: [],
-  },
-  {
-    id: 'fa22',
-    name: 'Fall 2022',
-    courseIds: [],
-  },
-  {
-    id: 'sp2023',
-    name: 'Spring 2023',
-    courseIds: [],
+    username: 'admin',
+    password: 'admin',
+    semesters: [
+      {
+        id: 'fa2019',
+        name: 'Fall 2019',
+        courseIds: [],
+      },
+      {
+        id: 'sp2020',
+        name: 'Spring 2020',
+        courseIds: [],
+      },
+      {
+        id: 'fa20',
+        name: 'Fall 2020',
+        courseIds: [],
+      },
+      {
+        id: 'sp2021',
+        name: 'Spring 2021',
+        courseIds: [],
+      },
+      {
+        id: 'fa21',
+        name: 'Fall 2021',
+        courseIds: [],
+      },
+      {
+        id: 'sp2022',
+        name: 'Spring 2022',
+        courseIds: [],
+      },
+      {
+        id: 'fa22',
+        name: 'Fall 2022',
+        courseIds: [],
+      },
+      {
+        id: 'sp2023',
+        name: 'Spring 2023',
+        courseIds: [],
+      },
+    ],
   },
 ];
 
@@ -1368,6 +1374,12 @@ db.connect()
   })
   .then(() => {
     return RequirementSet.insertMany(DUMMY_REQUIREMENT_DATA);
+  })
+  .then(() => {
+    return User.deleteMany({});
+  })
+  .then(() => {
+    return User.insertMany(DUMMY_USERS);
   })
   .catch((err) => {
     console.error(err);
