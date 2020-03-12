@@ -50,23 +50,6 @@ let userData = {
   goals: DUMMY_GOAL_DATA,
 };
 
-// function that saves individual user data
-function addUser(id, updatedSem, updatedGoals) {
-  const user = User({
-    id,
-    semesters: updatedSem,
-    goals: updatedGoals,
-  });
-  user.save((err, updatedUser) => {
-    if (err) {
-      console.log(err.errmsg);
-      return console.log('This user is already in the database');
-    }
-    return console.log(`User '${updatedUser.id}' information saved.`);
-  });
-  return false; // find a way to make this return true only when err.
-}
-
 exports.getUserData = (req, res) => {
   res.json(userData);
 };
