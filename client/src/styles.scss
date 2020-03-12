@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import '~material-design-icons/iconfont/material-icons.css';
 
-
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-sm {
+  .dropdown-item {
+    padding: 0.1rem 1rem;
+    font-size: 0.75rem;
+  }
 }
