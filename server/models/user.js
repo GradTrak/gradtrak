@@ -1,5 +1,34 @@
 const mongoose = require('mongoose');
 
+const semesterSchema = new mongoose.Schema({
+  id: {
+    type: String,
+    required: true,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  courseIds: {
+    type: [String],
+    required: true,
+    default: [],
+  },
+});
+
+const userDataSchema = new mongoose.Schema({
+  semesters: {
+    type: [semesterSchema],
+    required: true,
+    default: [],
+  },
+  goals: {
+    type: [String],
+    required: true,
+    default: [],
+  },
+});
+
 const userSchema = new mongoose.Schema(
   {
     username: {
@@ -11,32 +40,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    semesters: {
-      type: [
-        {
-          id: {
-            type: String,
-            required: true,
-            unique: true,
-          },
-          name: {
-            type: String,
-            required: true,
-          },
-          courseIds: {
-            type: [String],
-            required: true,
-            default: [],
-          },
-        },
-      ],
+    userdata: {
+      type: userDataSchema,
       required: true,
-      default: [],
-    },
-    goals: {
-      type: [String],
-      required: true,
-      default: [],
+      default: {
+        semesters: [],
+        goals: [],
+      },
     },
   },
   { strict: 'throw' },

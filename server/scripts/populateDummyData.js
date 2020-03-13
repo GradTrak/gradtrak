@@ -1310,48 +1310,50 @@ const DUMMY_USERS = [
   {
     username: 'admin',
     password: 'admin',
-    semesters: [
-      {
-        id: 'fa2019',
-        name: 'Fall 2019',
-        courseIds: [],
-      },
-      {
-        id: 'sp2020',
-        name: 'Spring 2020',
-        courseIds: [],
-      },
-      {
-        id: 'fa20',
-        name: 'Fall 2020',
-        courseIds: [],
-      },
-      {
-        id: 'sp2021',
-        name: 'Spring 2021',
-        courseIds: [],
-      },
-      {
-        id: 'fa21',
-        name: 'Fall 2021',
-        courseIds: [],
-      },
-      {
-        id: 'sp2022',
-        name: 'Spring 2022',
-        courseIds: [],
-      },
-      {
-        id: 'fa22',
-        name: 'Fall 2022',
-        courseIds: [],
-      },
-      {
-        id: 'sp2023',
-        name: 'Spring 2023',
-        courseIds: [],
-      },
-    ],
+    userdata: {
+      semesters: [
+        {
+          id: 'fa2019',
+          name: 'Fall 2019',
+          courseIds: [],
+        },
+        {
+          id: 'sp2020',
+          name: 'Spring 2020',
+          courseIds: [],
+        },
+        {
+          id: 'fa20',
+          name: 'Fall 2020',
+          courseIds: [],
+        },
+        {
+          id: 'sp2021',
+          name: 'Spring 2021',
+          courseIds: [],
+        },
+        {
+          id: 'fa21',
+          name: 'Fall 2021',
+          courseIds: [],
+        },
+        {
+          id: 'sp2022',
+          name: 'Spring 2022',
+          courseIds: [],
+        },
+        {
+          id: 'fa22',
+          name: 'Fall 2022',
+          courseIds: [],
+        },
+        {
+          id: 'sp2023',
+          name: 'Spring 2023',
+          courseIds: [],
+        },
+      ],
+    },
   },
 ];
 
