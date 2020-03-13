@@ -1357,6 +1357,8 @@ const DUMMY_USERS = [
   },
 ];
 
+let conn;
+
 db.connect()
   .then((c) => {
     conn = c;
