@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
-const dbUrl = process.env.MONGODB_URL || 'mongodb://localhost/gradtrak';
+const dbUrl = process.env.MONGO_URL || 'mongodb://localhost/gradtrak';
+
+const CONFIG = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
 
 module.exports.connect = (done) => {
   if (!done) {
@@ -15,7 +20,7 @@ module.exports.connect = (done) => {
     });
   }
 
-  mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+  mongoose.connect(dbUrl, CONFIG);
 
   const db = mongoose.connection;
 

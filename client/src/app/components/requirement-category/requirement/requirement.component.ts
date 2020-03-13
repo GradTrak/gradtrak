@@ -1,9 +1,11 @@
 import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
+import { TagRequirement } from 'models/requirements/tag-requirement.model';
 
 @Component({
   selector: '[app-requirement]',
@@ -21,9 +23,11 @@ export class RequirementComponent implements OnInit {
   @ViewChild('multiReqAll', { static: true }) private multiReqAll: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
-  /* eslint-enable @typescript-eslint/no-explicit-any */
+  @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
+  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  private requirementDisplayModalReference: NgbModalRef;
 
-  constructor() {}
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
@@ -81,11 +85,23 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
+  isTag(): boolean {
+    return this.requirement instanceof TagRequirement;
+  }
+
+  getTag(): TagRequirement {
+    if (!this.isTag()) {
+      throw new Error('Attempted to retreive non-TagRequirement as TagRequirement');
+    }
+    return this.requirement as TagRequirement;
+  }
+
   /**
    * Returns the HTML template of the requirement based on its type.
    *
    * @return {TemplateRef<any>} The template of the requirement.
    */
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
@@ -104,6 +120,9 @@ export class RequirementComponent implements OnInit {
     if (this.isUnit()) {
       return this.unitReq;
     }
+    if (this.isTag()) {
+      return this.tagReq;
+    }
     return this.standardReq;
   }
 
@@ -117,5 +136,14 @@ export class RequirementComponent implements OnInit {
       return annotation;
     }
     return null;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  openRequirementDisplay(content: TemplateRef<any>): void {
+    this.requirementDisplayModalReference = this.modalService.open(content, { size: 'lg' });
+  }
+
+  closeRequirementDisplay(): void {
+    this.requirementDisplayModalReference.close();
   }
 }

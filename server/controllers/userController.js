@@ -47,14 +47,24 @@ const DUMMY_GOAL_DATA = [];
 
 let userData = {
   semesters: DUMMY_SEMESTER_DATA,
-  goals: DUMMY_GOAL_DATA,
+  goalIds: DUMMY_GOAL_DATA,
 };
 
 exports.getUserData = (req, res) => {
+  if (!req.user) {
+    res.status(401).send();
+    return;
+  }
+
   res.json(userData);
 };
 
 exports.setUserData = (req, res) => {
+  if (!req.user) {
+    res.status(401).send();
+    return;
+  }
+
   userData = req.body;
   res.status(204).send();
 };

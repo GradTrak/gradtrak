@@ -22,7 +22,7 @@ const userDataSchema = new mongoose.Schema({
     required: true,
     default: [],
   },
-  goals: {
+  goalIds: {
     type: [String],
     required: true,
     default: [],
@@ -45,11 +45,15 @@ const userSchema = new mongoose.Schema(
       required: true,
       default: {
         semesters: [],
-        goals: [],
+        goalIds: [],
       },
     },
   },
   { strict: 'throw' },
 );
+
+userSchema.methods.verifyPassword = function verifyPassword(inputPassword) {
+  return this.password === inputPassword;
+};
 
 module.exports = mongoose.model('User', userSchema);
