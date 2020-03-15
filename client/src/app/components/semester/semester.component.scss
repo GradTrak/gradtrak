@@ -1,40 +1,80 @@
-table {
-  display: inline-block;
-  width: 100%;
-  background-color: #b3e2f7;
+:host {
+  display: block;
   padding: 12px;
+  background-color: white;
+}
+
+.semester-name {
+  color: #1337f1;
+  font-size: 1rem;
+  text-align: center;
+}
+
+hr {
+  margin: 8px;
+}
+
+table {
   border-collapse: separate;
-  border-spacing: 16px 8px;
+  border-spacing: 0 4px;
+  font-size: 0.6rem;
 
   col.name {
-    width: 80%;
+    width: 5rem;
   }
 
   col.units {
-    width: 10%;
+    width: 2rem;
   }
 
   col.button-cell {
-    width: 10%;
+    width: 2.25rem;
   }
 
-  td:not(.button-cell) {
+  tr {
+    background-color: #f0f0f0;
+  }
+
+  .header {
+    background-color: transparent;
+  }
+
+  td {
     padding: 0 4px;
-    background-color: #e2f9fe;
+  }
+
+  td.name .material-icons {
+    position: absolute;
+    transform: translateX(-24px);
+    color: #dfae00;
   }
 
   td.units {
     text-align: center;
-
-    > button {
-      width: 100%;
-    }
   }
 }
 
+table,
+.course-adder {
+  width: calc(100% - 24px);
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.course-adder,
+.course-more-button {
+  border: none;
+  font-size: 1rem;
+}
+
+.course-adder {
+  background-color: #f0f0f0;
+}
+
+.course-more-button {
+  background-color: transparent;
+}
+
 .material-icons {
-  position: absolute;
-  transform: translateX(-26px);
-  color: #dfae00;
-  font-size: 1.25rem;
+  font-size: 16px;
 }

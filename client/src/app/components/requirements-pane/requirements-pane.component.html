@@ -1,10 +1,10 @@
 <div class="pane">
-  <button (click)="openSelector()">Edit Goals</button>
   <app-requirement-set
     *ngFor="let requirementSet of getRequiredSets()"
     [requirementSet]="requirementSet"
     [courses]="courses"
   ></app-requirement-set>
+  <button class="goal-editor" (click)="openSelector()">Edit Goals</button>
 </div>
 
 <ng-template #goalSelector>
