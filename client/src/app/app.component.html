@@ -1,2 +1,22 @@
-<app-semester-pane [semesters]="semesters"></app-semester-pane>
-<app-requirements-pane [courses]="getCurrentCourses()" [goals]="baseGoals"></app-requirements-pane>
+<ng-template #login>
+  <app-login (success)="closeLogin()"></app-login>
+</ng-template>
+
+<ng-container *ngIf="!state.loggedIn; else loggedIn">
+  <button (click)="openLogin()">Login</button>
+</ng-container>
+<ng-template #loggedIn>
+  <button (click)="logout()">Logout</button>
+  Current User: {{ state.username }}
+</ng-template>
+<ng-container *ngIf="!state.loading; else loading">
+  <div class="body">
+    <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+    <app-requirements-pane [courses]="getCurrentCourses()" [goals]="state.userData.goals"></app-requirements-pane>
+  </div>
+</ng-container>
+<ng-template #loading>
+  <div>
+    Loading...
+  </div>
+</ng-template>

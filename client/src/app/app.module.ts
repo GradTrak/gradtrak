@@ -19,6 +19,7 @@ import { CourseSearcherComponent } from './components/course-searcher/course-sea
 import { GoalSelectorComponent } from './components/goal-selector/goal-selector.component';
 import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
 import { RequirementDisplayComponent } from './components/requirement-category/requirement-display/requirement-display.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { RequirementDisplayComponent } from './components/requirement-category/r
     RequirementCategoryComponent,
     SemesterChangerComponent,
     RequirementDisplayComponent,
+    LoginComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, NgbModule],
   providers: [CourseService, RequirementService, UserService],
