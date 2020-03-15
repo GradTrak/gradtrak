@@ -26,5 +26,4 @@ passport.deserializeUser(deserializeUser);
 
 app.use('/api', api);
 app.use(express.static('dist'));
-
 module.exports = app;
