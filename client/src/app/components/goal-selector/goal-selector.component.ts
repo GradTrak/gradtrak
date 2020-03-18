@@ -46,6 +46,7 @@ export class GoalSelectorComponent implements OnInit {
 
     this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[]) => {
       this.requirementSets = requirementSets;
+      this.updateGoalSearch();
     });
 
     this.updateGoalSearch();
