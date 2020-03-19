@@ -12,8 +12,10 @@
     <h5>Add a semester</h5>
     <form class="semester-input" (ngSubmit)="addSemester(semesterName)">
       <label>Semester name</label>
+      <br />
       <input type="text" name="name-input" [(ngModel)]="semesterName" />
-      <button type="submit">add</button>
+      <br />
+      <button type="submit">Add</button>
     </form>
   </div>
 </ng-template>

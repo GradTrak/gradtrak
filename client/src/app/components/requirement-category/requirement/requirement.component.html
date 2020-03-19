@@ -6,94 +6,73 @@
   <div [outerHTML]="getAnnotation()"></div>
 </ng-template>
 
-<ng-template #standardReq>
-  <td>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></td>
-</ng-template>
+<ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></ng-template>
 <ng-template #tagReq>
-  <td (click)="openRequirementDisplay(requirementDisplayTemplate)">
+  <div (click)="openRequirementDisplay(requirementDisplayTemplate)">
     {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
-  </td>
+  </div>
 </ng-template>
 <ng-template #multiReqOne>
-  <td>
-    One of
-    <table class="nested">
-      <tbody
-        app-requirement
-        *ngFor="let childReq of getMulti().requirements"
-        [requirement]="childReq"
-        [courses]="courses"
-      ></tbody>
-    </table>
-  </td>
+  One of
+  <app-requirement
+    *ngFor="let childReq of getMulti().requirements"
+    [requirement]="childReq"
+    [courses]="courses"
+  ></app-requirement>
 </ng-template>
 <ng-template #multiReqSome>
-  <td>
-    {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
-    <table class="nested">
-      <tbody
-        app-requirement
-        *ngFor="let childReq of getMulti().requirements"
-        [requirement]="childReq"
-        [courses]="courses"
-      ></tbody>
-    </table>
-  </td>
+  {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
+  <app-requirement
+    *ngFor="let childReq of getMulti().requirements"
+    [requirement]="childReq"
+    [courses]="courses"
+  ></app-requirement>
 </ng-template>
 <ng-template #multiReqAll>
-  <td class="transparent">
-    <table class="nested">
-      <tbody
-        app-requirement
-        *ngFor="let childReq of getMulti().requirements"
-        [requirement]="childReq"
-        [courses]="courses"
-      ></tbody>
-    </table>
-  </td>
+  All of
+  <app-requirement
+    *ngFor="let childReq of getMulti().requirements"
+    [requirement]="childReq"
+    [courses]="courses"
+  ></app-requirement>
 </ng-template>
 <ng-template #unitReq>
-  <td (click)="openRequirementDisplay(unitDisplayTemplate)">
+  <div (click)="openRequirementDisplay(unitDisplayTemplate)">
     {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
     <br />
     {{ getUnit().requirement.toString() }}
-    <table class="nested">
-      <tbody>
-        <tr *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-          <td>{{ course.toString() }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </td>
+    <div class="nested">
+      <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+        {{ course.getName() }}
+      </div>
+    </div>
+  </div>
   <ng-template #unitDisplayTemplate>
     <app-requirement-display [requirementInput]="getUnit().requirement"></app-requirement-display>
   </ng-template>
 </ng-template>
 <ng-template #mutexReq>
-  <td>
-    Distinctly fulfill
-    <table class="nested">
-      <tbody>
-        <tr *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
-          <td (click)="openRequirementDisplay(mutexDisplayTemplate)">
-            {{ childStatus.requirement.name }}
-          </td>
-          <ng-template #mutexDisplayTemplate>
-            <app-requirement-display [requirementInput]="childStatus.requirement"></app-requirement-display>
-          </ng-template>
-        </tr>
-      </tbody>
-    </table>
-  </td>
+  Distinctly fulfill
+  <div class="nested">
+    <div *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
+      <div (click)="openRequirementDisplay(mutexDisplayTemplate)">
+        {{ childStatus.requirement.name }}
+      </div>
+      <ng-template #mutexDisplayTemplate>
+        <app-requirement-display [requirementInput]="childStatus.requirement"></app-requirement-display>
+      </ng-template>
+    </div>
+  </div>
 </ng-template>
 
-<tr
+<div
+  class="requirement"
   [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
   [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
   triggers="mouseenter:mouseleave"
 >
   <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>
-</tr>
+</div>
 
 <ng-template #requirementDisplayTemplate>
   <app-requirement-display [requirementInput]="requirement"></app-requirement-display>
