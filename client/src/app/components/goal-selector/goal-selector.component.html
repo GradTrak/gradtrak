@@ -1,26 +1,31 @@
-<div class="chooser">
-  <input type="text" name="search-box" [(ngModel)]="searchPrompt" (keyup)="updateGoalSearch()" />
-  <div class="selector-container">
-    <div *ngFor="let state of selectionStates" class="selector">
-      <h4>{{ state.type | titlecase }}</h4>
-      <select size="8" [(ngModel)]="state.selectedSearchedGoal">
-        <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
-      </select>
-      <button *ngIf="state.selectedSearchedGoal" (click)="addGoal(state.selectedSearchedGoal, state)">Add</button>
+<ng-container *ngIf="requirementSets; else loading">
+  <div class="chooser">
+    <input type="text" name="search-box" [(ngModel)]="searchPrompt" (keyup)="updateGoalSearch()" />
+    <div class="selector-container">
+      <div *ngFor="let state of selectionStates" class="selector">
+        <h4>{{ state.type | titlecase }}</h4>
+        <select size="8" [(ngModel)]="state.selectedSearchedGoal">
+          <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
+        </select>
+        <button *ngIf="state.selectedSearchedGoal" (click)="addGoal(state.selectedSearchedGoal, state)">Add</button>
+      </div>
     </div>
   </div>
-</div>
-<div class="cart">
-  <h3>Selected Goals</h3>
-  <div *ngFor="let state of selectionStates" class="selector">
-    <h4>{{ state.type | titlecase }}</h4>
-    <p>
-      <span *ngFor="let goal of state.chosenGoals">
-        <i class="material-icons" (click)="removeGoal(goal, state)">close</i>
-        {{ goal.name }}
-        <br />
-      </span>
-    </p>
+  <div class="cart">
+    <h3>Selected Goals</h3>
+    <div *ngFor="let state of selectionStates" class="selector">
+      <h4>{{ state.type | titlecase }}</h4>
+      <p>
+        <span *ngFor="let goal of state.chosenGoals">
+          <i class="material-icons" (click)="removeGoal(goal, state)">close</i>
+          {{ goal.name }}
+          <br />
+        </span>
+      </p>
+    </div>
+    <button (click)="emitGoals()">Confirm</button>
   </div>
-  <button (click)="emitGoals()">Confirm</button>
-</div>
+</ng-container>
+<ng-template #loading>
+  Loading...
+</ng-template>
