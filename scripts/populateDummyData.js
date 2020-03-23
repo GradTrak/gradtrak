@@ -2,12 +2,12 @@
 
 /* eslint-disable no-console, no-param-reassign */
 
-const db = require('../config/db');
+const db = require('../server/config/db');
 
-const Course = require('../models/course');
-const RequirementSet = require('../models/requirement-set');
-const Tag = require('../models/tag');
-const User = require('../models/user');
+const Course = require('../server/models/course');
+const RequirementSet = require('../server/models/requirement-set');
+const Tag = require('../server/models/tag');
+const User = require('../server/models/user');
 
 const DUMMY_COURSE_DATA = [
   {
