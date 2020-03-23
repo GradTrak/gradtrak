@@ -7,6 +7,16 @@ const LIST_ENDPOINT = 'https://berkeleytime.com/api/catalog/filter/?filters=2262
 
 const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog_json/course_box/?course_id=';
 
+const TAG_MAP = new Map([
+  ['Arts and Literature', 'ls_arts'],
+  ['Biological Science', 'ls_bio'],
+  ['Historial Studies', 'ls_hist'],
+  ['International Studies', 'ls_inter'],
+  ['Philosophy and Values', 'ls_philo'],
+  ['Physical Science', 'ls_phys'],
+  ['Social and Behavior Sciences', 'ls_socio'],
+]);
+
 https.get(LIST_ENDPOINT, (res) => {
   let rawData = '';
 
@@ -28,7 +38,6 @@ https.get(LIST_ENDPOINT, (res) => {
       delete course.waitlisted;
       delete course.enrolled;
       delete course.grade_average;
-      delete course.id;
       delete course.letter_average;
 
       course.dept = course.abbreviation;
@@ -36,13 +45,14 @@ https.get(LIST_ENDPOINT, (res) => {
       delete course.abbreviation;
       delete course.course_number;
 
+      let btCourseId = course.id;
       course.id = course.dept.replace('\\s', '').toLowerCase() + course.no.replace('\\s', '').toLowerCase();
 
       // Convert units to number
       course.units = parseFloat(course.units);
 
-      if (i < 1) {
-        https.get(COURSE_ENDPOINT + course.id, (res) => {
+      if (i < 10) {
+        https.get(COURSE_ENDPOINT + btCourseId, (res) => {
           let rawData = '';
 
           res.on('data', (d) => {
@@ -50,9 +60,14 @@ https.get(LIST_ENDPOINT, (res) => {
           });
 
           res.on('end', () => {
+            console.log(rawData);
             const courseData = JSON.parse(rawData);
 
-            console.log(courseData);
+            course.tagIds = courseData.requirements
+              .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
+              .map((reqName) => TAG_MAP.get(reqName));
+
+            console.log(course);
           });
         });
         i++;
