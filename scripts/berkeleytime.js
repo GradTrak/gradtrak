@@ -29,49 +29,51 @@ https.get(LIST_ENDPOINT, (res) => {
 
     const validCourses = data.filter((course) => !course.units || course.units.match('^\\d+\\.\\d+$'));
 
-    let i = 0;
-    data.forEach((course) => {
-      delete course.open_seats;
-      delete course.description;
-      delete course.enrolled_percentage;
-      delete course.favorite_count;
-      delete course.waitlisted;
-      delete course.enrolled;
-      delete course.grade_average;
-      delete course.letter_average;
+    Promise.all(
+      data.map((course) => {
+        delete course.open_seats;
+        delete course.description;
+        delete course.enrolled_percentage;
+        delete course.favorite_count;
+        delete course.waitlisted;
+        delete course.enrolled;
+        delete course.grade_average;
+        delete course.letter_average;
 
-      course.dept = course.abbreviation;
-      course.no = course.course_number;
-      delete course.abbreviation;
-      delete course.course_number;
+        course.dept = course.abbreviation;
+        course.no = course.course_number;
+        delete course.abbreviation;
+        delete course.course_number;
 
-      let btCourseId = course.id;
-      course.id = course.dept.replace('\\s', '').toLowerCase() + course.no.replace('\\s', '').toLowerCase();
+        let btCourseId = course.id;
+        course.id = course.dept.replace('\\s', '').toLowerCase() + course.no.replace('\\s', '').toLowerCase();
 
-      // Convert units to number
-      course.units = parseFloat(course.units);
+        // Convert units to number
+        course.units = parseFloat(course.units);
 
-      if (i < 10) {
-        https.get(COURSE_ENDPOINT + btCourseId, (res) => {
-          let rawData = '';
+        // Fetch course data from BerkeleyTime
+        return new Promise((resolve, reject) => {
+          https.get(COURSE_ENDPOINT + btCourseId, (res) => {
+            let rawData = '';
 
-          res.on('data', (d) => {
-            rawData += d;
-          });
+            res.on('data', (d) => {
+              rawData += d;
+            });
 
-          res.on('end', () => {
-            console.log(rawData);
-            const courseData = JSON.parse(rawData);
+            res.on('end', () => {
+              const courseData = JSON.parse(rawData);
 
-            course.tagIds = courseData.requirements
-              .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
-              .map((reqName) => TAG_MAP.get(reqName));
+              course.tagIds = courseData.requirements
+                .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
+                .map((reqName) => TAG_MAP.get(reqName));
 
-            console.log(course);
+              resolve(course);
+            });
           });
         });
-        i++;
-      }
+      }),
+    ).then((rawCourses) => {
+      console.log(rawCourses);
     });
   });
 });
