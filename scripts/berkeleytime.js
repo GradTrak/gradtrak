@@ -17,37 +17,47 @@ const TAG_MAP = new Map([
   ['Social and Behavior Sciences', 'ls_socio'],
 ]);
 
+if (!fs.existsSync('cache')) {
+  fs.mkdirSync('cache');
+}
+
+function fetchCourse(courseId) {
+  return new Promise((resolve, reject) => {
+    if (fs.existsSync(`cache/${courseId}.json`)) {
+      resolve(fs.readFileSync(`cache/${courseId}.json`));
+    }
+
+    const courseUrl = COURSE_ENDPOINT + courseId;
+    https.get(courseUrl, (res) => {
+      let rawData = '';
+
+      res.on('data', (d) => {
+        rawData += d;
+      });
+
+      res.on('end', () => resolve(rawData));
+    });
+  }).then((rawData) => {
+    let course = JSON.parse(rawData);
+
+    fs.writeFile(`cache/${courseId}.json`, rawData, (err) => {
+      if (err) {
+        console.error(err);
+      }
+    });
+
+    return course;
+  });
+}
+
 async function fetchCourseTags(courses) {
   for (let i = 0; i < courses.length; i++) {
     const course = courses[i];
 
-    course.tagIds = await new Promise((resolve, reject) => {
-      const courseUrl = COURSE_ENDPOINT + course._id;
-
-      https.get(courseUrl, (res) => {
-        let rawData = '';
-
-        res.on('data', (d) => {
-          rawData += d;
-        });
-
-        res.on('end', () => {
-          let courseData;
-          try {
-            courseData = JSON.parse(rawData);
-          } catch (e) {
-            console.error(courseUrl);
-            reject(e);
-            return;
-          }
-
-          const tagIds = courseData.requirements
-            .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
-            .map((reqName) => TAG_MAP.get(reqName));
-
-          resolve(tagIds);
-        });
-      });
+    course.tagIds = await fetchCourse(course._id).then((courseData) => {
+      return courseData.requirements
+        .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
+        .map((reqName) => TAG_MAP.get(reqName));
     });
 
     delete course._id;
