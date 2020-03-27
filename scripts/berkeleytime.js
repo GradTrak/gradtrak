@@ -8,6 +8,11 @@ const LIST_ENDPOINT = 'https://berkeleytime.com/api/catalog/filter/?filters=2262
 const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog_json/course_box/?course_id=';
 
 const TAG_MAP = new Map([
+  ['American Cultures', 'ac'],
+  ['American History', 'ah'],
+  ['American Institutions', 'ai'],
+  ['College Writing', 'cw'],
+  ['Quantitative Reasoning', 'qr'],
   ['Arts and Literature', 'ls_arts'],
   ['Biological Science', 'ls_bio'],
   ['Historial Studies', 'ls_hist'],
