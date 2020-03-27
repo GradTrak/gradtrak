@@ -13,6 +13,8 @@ const TAG_MAP = new Map([
   ['American Institutions', 'ai'],
   ['College Writing', 'cw'],
   ['Quantitative Reasoning', 'qr'],
+  ['Reading and Composition A', 'rc_a'],
+  ['Reading and Composition B', 'rc_b'],
   ['Arts and Literature', 'ls_arts'],
   ['Biological Science', 'ls_bio'],
   ['Historial Studies', 'ls_hist'],
