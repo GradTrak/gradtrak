@@ -13,10 +13,10 @@ const User = require('../server/models/user');
 
 const DUMMY_DIR = 'dummy';
 
-const DUMMY_COURSE_DATA = JSON.parse(fs.readFileSync(`${DUMMY_DIR}/course.json`));
-const DUMMY_REQUIREMENT_DATA = JSON.parse(fs.readFileSync(`${DUMMY_DIR}/requirement.json`));
-const DUMMY_TAG_DATA = JSON.parse(fs.readFileSync(`${DUMMY_DIR}/tag.json`));
-const DUMMY_USERS = JSON.parse(fs.readFileSync(`${DUMMY_DIR}/user.json`));
+const DUMMY_COURSE_DATA = JSON.parse(fs.readFileSync(`./${DUMMY_DIR}/course.json`));
+const DUMMY_REQUIREMENT_DATA = JSON.parse(fs.readFileSync(`./${DUMMY_DIR}/requirement.json`));
+const DUMMY_TAG_DATA = JSON.parse(fs.readFileSync(`./${DUMMY_DIR}/tag.json`));
+const DUMMY_USERS = JSON.parse(fs.readFileSync(`./${DUMMY_DIR}/user.json`));
 
 let conn;
 

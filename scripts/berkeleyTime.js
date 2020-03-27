@@ -117,7 +117,7 @@ https.get(LIST_ENDPOINT, (res) => {
     });
 
     fetchCourseTags(validCourses).then(() => {
-      fs.writeFileSync('./courses.json', JSON.stringify(validCourses));
+      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(validCourses));
     });
   });
 });
