@@ -4,6 +4,18 @@
     "name": "Upper Division Course"
   },
   {
+    "id": "cw",
+    "name": "Entry-Level Writing"
+  },
+  {
+    "id": "ah",
+    "name": "American History"
+  },
+  {
+    "id": "ai",
+    "name": "American Institutions"
+  },
+  {
     "id": "ac",
     "name": "American Cultures"
   },
