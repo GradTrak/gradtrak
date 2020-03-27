@@ -24,7 +24,11 @@ if (!fs.existsSync('cache')) {
 function fetchCourse(courseId) {
   return new Promise((resolve, reject) => {
     if (fs.existsSync(`cache/${courseId}.json`)) {
-      resolve(fs.readFileSync(`cache/${courseId}.json`));
+      resolve({
+        cached: true,
+        data: fs.readFileSync(`cache/${courseId}.json`),
+      });
+      return;
     }
 
     const courseUrl = COURSE_ENDPOINT + courseId;
@@ -35,16 +39,23 @@ function fetchCourse(courseId) {
         rawData += d;
       });
 
-      res.on('end', () => resolve(rawData));
+      res.on('end', () => {
+        resolve({
+          cached: false,
+          data: rawData,
+        });
+      });
     });
-  }).then((rawData) => {
-    let course = JSON.parse(rawData);
+  }).then((result) => {
+    let course = JSON.parse(result.data);
 
-    fs.writeFile(`cache/${courseId}.json`, rawData, (err) => {
-      if (err) {
-        console.error(err);
-      }
-    });
+    if (!result.cached) {
+      fs.writeFile(`cache/${courseId}.json`, result.data, (err) => {
+        if (err) {
+          console.error(err);
+        }
+      });
+    }
 
     return course;
   });
