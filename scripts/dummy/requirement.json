@@ -11,16 +11,22 @@
         "type": "unselectable",
         "requirements": [
           {
-            "id": "elwr",
-            "name": "Entry-Level Writing"
+            "type": "tag",
+            "id": "cw",
+            "name": "Entry-Level Writing",
+            "tagId": "cw"
           },
           {
+            "type": "tag",
             "id": "ah",
-            "name": "American History"
+            "name": "American History",
+            "tagId": "ah"
           },
           {
+            "type": "tag",
             "id": "ai",
-            "name": "American Instutions"
+            "name": "American Institutions",
+            "tagId": "ai"
           }
         ]
       }
