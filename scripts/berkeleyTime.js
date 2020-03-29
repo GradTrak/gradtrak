@@ -3,7 +3,8 @@
 const fs = require('fs');
 const https = require('https');
 
-const LIST_ENDPOINT = 'https://berkeleytime.com/api/catalog/filter/?filters=22623,22626,32259,32036';
+const LIST_ENDPOINT =
+  'https://berkeleytime.com/api/catalog/filter/?filters=22619,22620,22621,22622,22623,22624,22625,22626';
 
 const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog_json/course_box/?course_id=';
 
