@@ -510,6 +510,12 @@
           },
           {
             "type": "course",
+            "id": "math53",
+            "name": "MATH 53",
+            "courseId": "math53"
+          },
+          {
+            "type": "course",
             "id": "compsci70",
             "name": "COMPSCI 70",
             "courseId": "compsci70"
