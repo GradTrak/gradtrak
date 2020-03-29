@@ -77,11 +77,17 @@ async function fetchCourseTags(courses) {
   for (let i = 0; i < courses.length; i++) {
     const course = courses[i];
 
-    course.tagIds = await fetchCourse(course._id).then((courseData) => {
-      return courseData.requirements
-        .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
-        .map((reqName) => TAG_MAP.get(reqName));
-    });
+    course.tagIds = await fetchCourse(course._id)
+      .then((courseData) => {
+        return courseData.requirements
+          .filter((reqName) => Array.from(TAG_MAP.keys()).includes(reqName))
+          .map((reqName) => TAG_MAP.get(reqName));
+      })
+      .catch((err) => {
+        console.error(`Error getting course with ID ${course._id}:`);
+        console.error(err);
+        return [];
+      });
 
     delete course._id;
 
