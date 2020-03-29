@@ -356,6 +356,137 @@
     ]
   },
   {
+    "id": "cs",
+    "name": "L&S CS Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "id": "cs_math",
+        "name": "Math",
+        "requirements": [
+          {
+            "type": "course",
+            "id": "math1a",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "type": "course",
+            "id": "math1b",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
+            "type": "course",
+            "id": "compsci70",
+            "name": "COMPSCI 70",
+            "courseId": "compsci70"
+          }
+        ]
+      },
+      {
+        "id": "cs_lower_div",
+        "name": "Lower Division",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "compsci61a47a",
+            "name": "COMPSCI 61A",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "compsci61a",
+                "name": "COMPSCI 61A",
+                "courseId": "compsci61a"
+              },
+              {
+                "type": "course",
+                "id": "compsci47a",
+                "name": "COMPSCI 47A",
+                "courseId": "compsci47a"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "id": "compsci61b47b",
+            "name": "COMPSCI 61B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "compsci61b",
+                "name": "COMPSCI 61B",
+                "courseId": "compsci61b"
+              },
+              {
+                "type": "course",
+                "id": "compsci47b",
+                "name": "COMPSCI 47B",
+                "courseId": "compsci47b"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "id": "compsci61c47c",
+            "name": "COMPSCI 61C",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "compsci61c",
+                "name": "COMPSCI 61C",
+                "courseId": "compsci61c"
+              },
+              {
+                "type": "course",
+                "id": "compsci47c",
+                "name": "COMPSCI 47C",
+                "courseId": "compsci47c"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "id": "eecs16a",
+            "name": "EECS 16A",
+            "courseId": "eecs16a"
+          },
+          {
+            "type": "course",
+            "id": "eecs16b",
+            "name": "EECS 16B",
+            "courseId": "eecs16b"
+          }
+        ]
+      },
+      {
+        "id": "cs_upper_div",
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "type": "unit",
+            "id": "cs_upper_div",
+            "name": "Upper Division",
+            "units": 20,
+            "requirement": {
+              "type": "tag",
+              "id": "cs_upper_div_course",
+              "name": "EECS Upper Division Course",
+              "tagId": "eecs_upper_div"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eecs",
     "name": "EECS Major",
     "parentId": "coe",
