@@ -29,6 +29,10 @@ if (!fs.existsSync('cache')) {
   fs.mkdirSync('cache');
 }
 
+const agent = new https.Agent({
+  keepAlive: true,
+});
+
 function fetchCourse(courseId) {
   return new Promise((resolve, reject) => {
     if (fs.existsSync(`cache/${courseId}.json`)) {
@@ -40,7 +44,7 @@ function fetchCourse(courseId) {
     }
 
     const courseUrl = COURSE_ENDPOINT + courseId;
-    https.get(courseUrl, (res) => {
+    https.get(courseUrl, { agent: agent }, (res) => {
       let rawData = '';
 
       res.on('data', (d) => {
@@ -85,7 +89,7 @@ async function fetchCourseTags(courses) {
   }
 }
 
-https.get(LIST_ENDPOINT, (res) => {
+https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
   let rawData = '';
 
   res.on('data', (d) => {
