@@ -105,7 +105,7 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
   res.on('end', () => {
     const data = JSON.parse(rawData);
 
-    const validCourses = data.filter((course) => !course.units || course.units.match('^\\d+\\.\\d+$'));
+    const validCourses = data.filter((course) => course.units && course.units.match('^\\d+\\.\\d+$'));
 
     validCourses.forEach((course) => {
       delete course.open_seats;
