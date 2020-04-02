@@ -773,5 +773,284 @@
         ]
       }
     ]
+  },
+  {
+    "id": "bio eng",
+    "name": "Bioengineering Major",
+    "parentId": "coe",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "id": "bioe_math",
+        "name": "Math",
+        "requirements": [
+          {
+            "type": "course",
+            "id": "math1a",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "type": "course",
+            "id": "math1b",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
+            "type": "course",
+            "id": "math53",
+            "name": "MATH 53",
+            "courseId": "math53"
+          },
+          {
+            "type": "course",
+            "id": "math54",
+            "name": "MATH 54",
+            "courseId": "math54"
+          }
+        ]
+      },
+      {
+        "id": "bioe_physics",
+        "name": "Physics",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "bioe_physics",
+            "name": "bioe Physics 7A/B",
+            "numRequired": 2,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "physics7a",
+                "name": "PHYSICS 7A",
+                "courseId": "physics7a"
+              },
+              {
+                "type": "course",
+                "id": "physics7b",
+                "name": "PHYSICS 7B",
+                "courseId": "physics7b"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bioe_chem",
+        "name": "Chemistry",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "bioe_chem",
+            "name": "Chemistry",
+            "numRequired": 2,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "multi",
+                "id": "chem1al4",
+                "name": "CHEM 1A/L",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "multi",
+                    "id": "chem1a",
+                    "name": "Chem 1A/L",
+                    "numRequired": 2,
+                    "hidden": true,
+                    "requirements": [
+                      {
+                        "type": "course",
+                        "id": "chem1a",
+                        "name": "CHEM 1A",
+                        "courseId": "chem1a"
+                      },
+                      {
+                        "type": "course",
+                        "id": "chem1al",
+                        "name": "CHEM 1AL",
+                        "courseId": "chem1al"
+                      },
+                    ]
+                  },
+                  {
+                    "type": "course",
+                    "id": "chem4a",
+                    "name": "CHEM 4A",
+                    "courseId": "chem4a"
+                  }
+                ]
+              },
+              {
+                "type": "multi",
+                "id": "chem3al12",
+                "name": "CHEM 3A/L",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "multi",
+                    "id": "chem3a",
+                    "name": "Chem 3A/L",
+                    "numRequired": 2,
+                    "hidden": true,
+                    "requirements": [
+                      {
+                        "type": "course",
+                        "id": "chem3a",
+                        "name": "CHEM 3A",
+                        "courseId": "chem3a"
+                      },
+                      {
+                        "type": "course",
+                        "id": "chem3al",
+                        "name": "CHEM 3AL",
+                        "courseId": "chem3al"
+                      },
+                    ]
+                  },
+                  {
+                    "type": "course",
+                    "id": "chem12a",
+                    "name": "CHEM 12A",
+                    "courseId": "chem12a"
+                  }
+                ]
+              },
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bioe_lower_div",
+        "name": "Lower Division",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "engin7",
+            "name": "E7/CS61A",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "compsci61a",
+                "name": "COMPSCI 61A",
+                "courseId": "compsci61a"
+              },
+              {
+                "type": "course",
+                "id": "engin7",
+                "name": "ENGIN 7",
+                "courseId": "engin7"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "id": "bio eng10",
+            "name": "BIO ENG 10",
+            "courseId": "bio eng10"
+          },
+          {
+            "type": "course",
+            "id": "bio eng11",
+            "name": "BIO ENG 11",
+            "courseId": "bio eng11"
+          },
+          {
+            "type": "course",
+            "id": "bio eng26",
+            "name": "BIO ENG 26",
+            "courseId": "bio eng26"
+          },
+          {
+            "type": "course",
+            "id": "bio eng25",
+            "name": "BIO ENG 25",
+            "courseId": "bio eng25"
+          }
+        ]
+      },
+      {
+        "id": "bioe_upper_div",
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "type": "mutex",
+            "id": "bioe_upper_div_unit_requirement",
+            "name": "Minimum 36 units, including 24 BioE courses",
+            "requirements": [
+              {
+                "type": "unit",
+                "id": "bioe_upper_div",
+                "name": "Upper Division",
+                "units": 24,
+                "requirement": {
+                  "type": "tag",
+                  "id": "bio eng_upper_div_course",
+                  "name": "BioE Upper Division Course",
+                  "tagId": "bio eng_upper_div"
+                }
+              },
+              {
+                "type": "unit",
+                "id": "bioe_technical_topics",
+                "name": "Technical Topics",
+                "units": 12,
+                "requirement": {
+                  "type": "tag",
+                  "id": "bio eng_technical_topics",
+                  "name": "BioE Technical Topic",
+                  "tagId": "bio eng_technical_topics"
+                }
+              },
+            ],
+          },
+          {
+            "type": "multi",
+            "id": "bioe_fundamentals",
+            "name": "BioE Fundamentals",
+            "numRequired": 2,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "tag",
+                "id": "bioe_fundamental",
+                "name": "BioE Fundamental",
+                "tagId": "bio eng_fundamentals",
+              },
+            ]
+          },
+          {
+            "type": "tag",
+            "id": "bioe_lab_course",
+            "name": "BioE Lab Course",
+            "tagId": "bio eng_lab_course",
+          },
+          {
+            "type": "tag",
+            "id": "bioe_design_research",
+            "name": "BioE Design Project or Research",
+            "tagId": "bio eng_design_research",
+          },
+        ]
+      },
+      {
+        "id": "bioe_ethics",
+        "name": "Ethics",
+        "requirements": [
+          {
+            "type": "tag",
+            "id": "bioe_ethics",
+            "name": "Bioengineering Ethics Course",
+            "tagId": "bio eng_ethics"
+          },
+        ]
+      }
+    ]
   }
 ]
