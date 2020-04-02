@@ -26,6 +26,6 @@ export class CourseRequirement implements StandaloneRequirement {
   }
 
   toString(): string {
-    return `Course: ${this.course.toString()}`;
+    return `Course: ${this.course.getName()}`;
   }
 }

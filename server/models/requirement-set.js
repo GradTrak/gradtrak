@@ -6,7 +6,6 @@ const requirementSchema = new mongoose.Schema(
       type: String,
       index: true,
       required: true,
-      unique: true,
     },
     name: {
       type: String,
@@ -49,7 +48,6 @@ const requirementCategorySchema = new mongoose.Schema({
     type: String,
     index: true,
     required: true,
-    unique: true,
   },
   name: {
     type: String,

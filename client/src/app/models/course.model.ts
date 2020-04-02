@@ -21,7 +21,15 @@ export class Course {
     this.tags = proto.tagIds.map((tagId: string) => tagMap.get(tagId));
   }
 
+  getName(): string {
+    return `${this.dept} ${this.no}`;
+  }
+
   toString(): string {
-    return `${this.dept} ${this.no}: ${this.title}`;
+    return `${this.getName()}: ${this.title}`;
+  }
+
+  getBareNumber(): number {
+    return parseInt(this.no.replace(/[^\d]/g, ''), 10);
   }
 }

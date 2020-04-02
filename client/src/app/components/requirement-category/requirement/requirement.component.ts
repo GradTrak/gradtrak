@@ -8,7 +8,7 @@ import { UnitRequirement } from 'models/requirements/unit-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 
 @Component({
-  selector: '[app-requirement]',
+  selector: 'app-requirement',
   templateUrl: './requirement.component.html',
   styleUrls: ['./requirement.component.scss', '../requirement-category.component.scss'],
 })
