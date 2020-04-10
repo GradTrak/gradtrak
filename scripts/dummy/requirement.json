@@ -289,12 +289,16 @@
             "tagId": "rc_b"
           },
           {
+            "type": "tag",
             "id": "ls_quant",
-            "name": "Quantitative Reasoning"
+            "name": "Quantitative Reasoning",
+            "tagId": "ls_quant"
           },
           {
+            "type": "tag",
             "id": "ls_lang",
-            "name": "Foreign Language"
+            "name": "Foreign Language",
+            "tagId": "ls_lang"
           }
         ]
       },

@@ -1,5 +1,3 @@
-<!-- FIXME Remove check for whether isFulfilled exists -->
-<!-- FIXME Remove check for getAnnotation -->
 <!-- TODO This seems slightly janky -->
 <!-- FIXME This can also be an XSS vector -->
 <ng-template #annotation>
@@ -7,11 +5,17 @@
 </ng-template>
 
 <ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></ng-template>
+
 <ng-template #tagReq>
-  <div (click)="openRequirementDisplay(requirementDisplayTemplate)">
-    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+  {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+  <div ngbDropdownclass="req-more">
+    <button ngbDropdownToggle></button>
+    <div ngbDropdownMenu>
+      <button (click)="openRequirementDisplay(requirementDisplayTemplate)">Show Fulfilling Courses</button>
+    </div>
   </div>
 </ng-template>
+
 <ng-template #multiReqOne>
   One of
   <app-requirement
@@ -20,6 +24,7 @@
     [courses]="courses"
   ></app-requirement>
 </ng-template>
+
 <ng-template #multiReqSome>
   {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
   <app-requirement
@@ -28,6 +33,7 @@
     [courses]="courses"
   ></app-requirement>
 </ng-template>
+
 <ng-template #multiReqAll>
   All of
   <app-requirement
@@ -36,27 +42,37 @@
     [courses]="courses"
   ></app-requirement>
 </ng-template>
+
 <ng-template #unitReq>
-  <div (click)="openRequirementDisplay(unitDisplayTemplate)">
-    {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
-    <br />
-    {{ getUnit().requirement.toString() }}
-    <div class="nested">
-      <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-        {{ course.getName() }}
-      </div>
+  {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
+  <br />
+  {{ getUnit().requirement.toString() }}
+  <div ngbDropdownclass="req-more">
+    <button ngbDropdownToggle></button>
+    <div ngbDropdownMenu>
+      <button (click)="openRequirementDisplay(unitDisplayTemplate)">Show Fulfilling Courses</button>
+    </div>
+  </div>
+  <div class="nested">
+    <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+      {{ course.getName() }}
     </div>
   </div>
   <ng-template #unitDisplayTemplate>
     <app-requirement-display [requirementInput]="getUnit().requirement"></app-requirement-display>
   </ng-template>
 </ng-template>
+
 <ng-template #mutexReq>
   Distinctly fulfill
   <div class="nested">
     <div *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
-      <div (click)="openRequirementDisplay(mutexDisplayTemplate)">
-        {{ childStatus.requirement.name }}
+      {{ childStatus.requirement.name }}
+      <div ngbDropdownclass="req-more">
+        <button ngbDropdownToggle></button>
+        <div ngbDropdownMenu>
+          <button (click)="openRequirementDisplay(mutexDisplayTemplate)">Show Fulfilling Courses</button>
+        </div>
       </div>
       <ng-template #mutexDisplayTemplate>
         <app-requirement-display [requirementInput]="childStatus.requirement"></app-requirement-display>
@@ -67,8 +83,8 @@
 
 <div
   class="requirement"
-  [ngClass]="requirement.isFulfilled && requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
-  [ngbPopover]="requirement.getAnnotation && requirement.getAnnotation() ? annotation : null"
+  [ngClass]="requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+  [ngbPopover]="requirement.getAnnotation() ? annotation : null"
   triggers="mouseenter:mouseleave"
 >
   <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>

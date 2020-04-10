@@ -28,6 +28,14 @@
     "name": "Reading and Composition Part B"
   },
   {
+    "id": "ls_quant",
+    "name": "Quantitative Reasoning"
+  },
+  {
+    "id": "ls_lang",
+    "name": "Foreign Language"
+  },
+  {
     "id": "ls_arts",
     "name": "L&S Arts and Literature"
   },
