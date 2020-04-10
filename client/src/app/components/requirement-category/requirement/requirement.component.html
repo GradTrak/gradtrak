@@ -14,26 +14,14 @@
   </div>
 </ng-template>
 
-<ng-template #multiReqOne>
-  One of
-  <app-requirement
-    *ngFor="let childReq of getMulti().requirements"
-    [requirement]="childReq"
-    [courses]="courses"
-  ></app-requirement>
-</ng-template>
-
-<ng-template #multiReqSome>
-  {{ getMulti().numFulfilled(courses) }}/{{ getMulti().numRequired }} of
-  <app-requirement
-    *ngFor="let childReq of getMulti().requirements"
-    [requirement]="childReq"
-    [courses]="courses"
-  ></app-requirement>
-</ng-template>
-
-<ng-template #multiReqAll>
-  All of
+<ng-template #multiReq>
+  {{
+    getMulti().numRequired === 1
+      ? 'One of'
+      : getMulti().numRequired === getMulti().requirements.length
+      ? 'All of'
+      : getMulti().numFulfilled(courses) + '/' + getMulti().numRequired + ' of'
+  }}
   <app-requirement
     *ngFor="let childReq of getMulti().requirements"
     [requirement]="childReq"

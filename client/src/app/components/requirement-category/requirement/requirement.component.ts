@@ -20,13 +20,12 @@ export class RequirementComponent implements OnInit {
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
-  @ViewChild('multiReqOne', { static: true }) private multiReqOne: TemplateRef<any>;
-  @ViewChild('multiReqSome', { static: true }) private multiReqSome: TemplateRef<any>;
-  @ViewChild('multiReqAll', { static: true }) private multiReqAll: TemplateRef<any>;
+  @ViewChild('multiReq', { static: true }) private multiReq: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
-  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private requirementDisplayModalReference: NgbModalRef;
 
@@ -108,14 +107,7 @@ export class RequirementComponent implements OnInit {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
-      const multiReq = this.getMulti();
-      if (multiReq.numRequired === multiReq.requirements.length) {
-        return this.multiReqAll;
-      }
-      if (multiReq.numRequired === 1) {
-        return this.multiReqOne;
-      }
-      return this.multiReqSome;
+      return this.multiReq;
     }
     if (this.isMutex()) {
       return this.mutexReq;
