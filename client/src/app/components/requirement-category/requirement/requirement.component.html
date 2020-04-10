@@ -1,8 +1,4 @@
 <!-- TODO This seems slightly janky -->
-<!-- FIXME This can also be an XSS vector -->
-<ng-template #annotation>
-  <div [outerHTML]="getAnnotation()"></div>
-</ng-template>
 
 <ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></ng-template>
 
@@ -83,10 +79,15 @@
   class="requirement"
   [ngClass]="requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
   [ngbPopover]="requirement.getAnnotation() ? annotation : null"
-  triggers="mouseenter:mouseleave"
+  [triggers]="requirement.getAnnotation() ? 'mouseenter:mouseleave' : null"
 >
   <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>
 </div>
+
+<!-- FIXME This can also be an XSS vector -->
+<ng-template #annotation>
+  <div [outerHTML]="getAnnotation()"></div>
+</ng-template>
 
 <ng-template #requirementDisplayTemplate>
   <app-requirement-display [requirementInput]="requirement"></app-requirement-display>
