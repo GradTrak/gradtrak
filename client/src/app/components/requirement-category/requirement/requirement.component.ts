@@ -16,6 +16,8 @@ export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
   @Input() readonly courses: Course[];
 
+  displayedRequirement: Requirement;
+
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
   @ViewChild('multiReqOne', { static: true }) private multiReqOne: TemplateRef<any>;
@@ -25,6 +27,7 @@ export class RequirementComponent implements OnInit {
   @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
   @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+
   private requirementDisplayModalReference: NgbModalRef;
 
   constructor(private modalService: NgbModal) {}
@@ -138,9 +141,9 @@ export class RequirementComponent implements OnInit {
     return null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  openRequirementDisplay(content: TemplateRef<any>): void {
-    this.requirementDisplayModalReference = this.modalService.open(content, { size: 'lg' });
+  openRequirementDisplay(requirement: Requirement): void {
+    this.displayedRequirement = requirement;
+    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
   }
 
   closeRequirementDisplay(): void {

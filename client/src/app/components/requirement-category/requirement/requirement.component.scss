@@ -26,6 +26,10 @@
 }
 
 .req-more {
+  float: right;
+
   > button {
+    background-color: transparent;
+    border: none;
   }
 }

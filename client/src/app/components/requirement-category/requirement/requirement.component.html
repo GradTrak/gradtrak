@@ -8,10 +8,12 @@
 
 <ng-template #tagReq>
   {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
-  <div ngbDropdownclass="req-more">
+  <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
-      <button (click)="openRequirementDisplay(requirementDisplayTemplate)">Show Fulfilling Courses</button>
+      <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+        Show Fulfilling Courses
+      </button>
     </div>
   </div>
 </ng-template>
@@ -47,10 +49,10 @@
   {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
   <br />
   {{ getUnit().requirement.toString() }}
-  <div ngbDropdownclass="req-more">
+  <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
-      <button (click)="openRequirementDisplay(unitDisplayTemplate)">Show Fulfilling Courses</button>
+      <button ngbDropdownItem (click)="openRequirementDisplay(getUnit().requirement)">Show Fulfilling Courses</button>
     </div>
   </div>
   <div class="nested">
@@ -58,9 +60,6 @@
       {{ course.getName() }}
     </div>
   </div>
-  <ng-template #unitDisplayTemplate>
-    <app-requirement-display [requirementInput]="getUnit().requirement"></app-requirement-display>
-  </ng-template>
 </ng-template>
 
 <ng-template #mutexReq>
@@ -68,15 +67,14 @@
   <div class="nested">
     <div *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
       {{ childStatus.requirement.name }}
-      <div ngbDropdownclass="req-more">
+      <div ngbDropdown class="req-more">
         <button ngbDropdownToggle></button>
         <div ngbDropdownMenu>
-          <button (click)="openRequirementDisplay(mutexDisplayTemplate)">Show Fulfilling Courses</button>
+          <button ngbDropdownItem (click)="openRequirementDisplay(childStatus.requirement)">
+            Show Fulfilling Courses
+          </button>
         </div>
       </div>
-      <ng-template #mutexDisplayTemplate>
-        <app-requirement-display [requirementInput]="childStatus.requirement"></app-requirement-display>
-      </ng-template>
     </div>
   </div>
 </ng-template>
