@@ -109,7 +109,7 @@
     "dept": "COMPSCI",
     "no": "160",
     "id": "compsci160",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -117,7 +117,7 @@
     "dept": "COMPSCI",
     "no": "161",
     "id": "compsci161",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -149,7 +149,7 @@
     "dept": "COMPSCI",
     "no": "169",
     "id": "compsci169",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -221,7 +221,7 @@
     "dept": "COMPSCI",
     "no": "C191",
     "id": "compscic191",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 1,
@@ -598,5 +598,69 @@
     "no": "7B",
     "id": "physics7b",
     "tagIds": ["ls_phys"]
+  },
+  {
+    "units": 4,
+    "title": "Instrumentation in Biology and Medicine",
+    "dept": "BIO ENG",
+    "no": "101",
+    "id": "bio eng101",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals", "bio eng_design_research"]
+  },
+  {
+    "units": 4,
+    "title": "Biomechanics: Analysis and Design",
+    "dept": "BIO ENG",
+    "no": "102",
+    "id": "bio eng102",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+  },
+  {
+    "units": 4,
+    "title": "Engineering Molecules 2",
+    "dept": "BIO ENG",
+    "no": "103",
+    "id": "bio eng103",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+  },
+  {
+    "units": 4,
+    "title": "Biological Transport Phenomena",
+    "dept": "BIO ENG",
+    "no": "104",
+    "id": "bio eng104",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+  },
+  {
+    "units": 4,
+    "title": "Engineering Devices 1",
+    "dept": "BIO ENG",
+    "no": "105",
+    "id": "bio eng105",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+  },
+  {
+    "units": 4,
+    "title": "Biomedical Physiology for Engineers",
+    "dept": "BIO ENG",
+    "no": "110",
+    "id": "bio eng110",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+  },
+  {
+    "units": 4,
+    "title": "Introduction to Computational Molecular and Cell Biology",
+    "dept": "BIO ENG",
+    "no": "131",
+    "id": "bio eng131",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+  },
+  {
+    "units": 4,
+    "title": "Protein Informatics Laboratory",
+    "dept": "BIO ENG",
+    "no": "144l",
+    "id": "bio eng144l",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
   }
 ]
