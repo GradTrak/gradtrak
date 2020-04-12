@@ -157,7 +157,7 @@
     "dept": "COMPSCI",
     "no": "170",
     "id": "compsci170",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -166,6 +166,14 @@
     "no": "174",
     "id": "compsci174",
     "tagIds": ["eecs_upper_div"]
+  },
+  {
+    "units": 4,
+    "title": "Algorithms for Computational Biology",
+    "dept": "COMPSCI",
+    "no": "176",
+    "id": "compsci176",
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -197,7 +205,7 @@
     "dept": "COMPSCI",
     "no": "W186",
     "id": "compsciw186",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -205,7 +213,7 @@
     "dept": "COMPSCI",
     "no": "188",
     "id": "compsci188",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 4,
@@ -213,7 +221,7 @@
     "dept": "COMPSCI",
     "no": "189",
     "id": "compsci189",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
   },
   {
     "units": 3,
@@ -641,6 +649,22 @@
   },
   {
     "units": 4,
+    "title": "Introduction to Robotics",
+    "dept": "BIO ENG",
+    "no": "C106a",
+    "id": "bio engc106a",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+  },
+  {
+    "units": 4,
+    "title": "Robotic Manipulation and Interaction",
+    "dept": "BIO ENG",
+    "no": "C106b",
+    "id": "bio engc106b",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+  },
+  {
+    "units": 4,
     "title": "Biomedical Physiology for Engineers",
     "dept": "BIO ENG",
     "no": "110",
@@ -649,11 +673,43 @@
   },
   {
     "units": 4,
+    "title": "Functional Biomaterials Development and Characterization",
+    "dept": "BIO ENG",
+    "no": "111",
+    "id": "bio eng111",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+  },
+  {
+    "units": 4,
+    "title": "Molecular Biomechanics and Mechanobiology of the Cell",
+    "dept": "BIO ENG",
+    "no": "112",
+    "id": "bio eng112",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+  },
+  {
+    "units": 4,
+    "title": "STEM Cells and Technologies",
+    "dept": "BIO ENG",
+    "no": "113",
+    "id": "bio eng113",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+  },
+  {
+    "units": 4,
+    "title": "Cell Engineering",
+    "dept": "BIO ENG",
+    "no": "114",
+    "id": "bio eng114",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+  },
+  {
+    "units": 4,
     "title": "Introduction to Computational Molecular and Cell Biology",
     "dept": "BIO ENG",
     "no": "131",
     "id": "bio eng131",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals", "bio eng_lab_course"]
   },
   {
     "units": 4,
@@ -661,6 +717,86 @@
     "dept": "BIO ENG",
     "no": "144l",
     "id": "bio eng144l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals",  "bio eng_lab_course"]
+  },
+  {
+    "units": 4,
+    "title": "Cell Biology for Engineers",
+    "dept": "BIO ENG",
+    "no": "115",
+    "id": "bio eng115",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course"]
+  },
+  {
+    "units": 4,
+    "title": "BioMEMS and Bionanotechnology Laboratory",
+    "dept": "BIO ENG",
+    "no": "121l",
+    "id": "bio eng121l",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course", "bio eng_design_research"]
+  },
+  {
+    "units": 4,
+    "title": "Laboratory in the Mechanics of Organisms",
+    "dept": "BIO ENG",
+    "no": "136l",
+    "id": "bio eng136l",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course"]
+  },
+  {
+    "units": 4,
+    "title": "Synthetic Biology Laboratory",
+    "dept": "BIO ENG",
+    "no": "140l",
+    "id": "bio eng140l",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course", "bio eng_design_research"]
+  },
+  {
+    "units": 4,
+    "title": "Molecular and Cellular Biophotonics Laboratory",
+    "dept": "BIO ENG",
+    "no": "163l",
+    "id": "bio eng163l",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course"]
+  },
+  {
+    "units": 4,
+    "title": "Practical Light Microscopy",
+    "dept": "BIO ENG",
+    "no": "168l",
+    "id": "bio eng168l",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course", "bio eng_design_research"]
+  },
+  {
+    "units": 4,
+    "title": "Senior Design Project",
+    "dept": "BIO ENG",
+    "no": "192",
+    "id": "bio eng192",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_design_research"]
+  },
+  {
+    "units": 4,
+    "title": "Honors Undergraduate Research",
+    "dept": "BIO ENG",
+    "no": "H194",
+    "id": "bio engH194",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_design_research"]
+  },
+  {
+    "units": 4,
+    "title": "Undergraduate Design Research",
+    "dept": "BIO ENG",
+    "no": "196",
+    "id": "bio eng196",
+    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_design_research"]
+  },
+  {
+    "units": 3,
+    "title": "Ethics in Science and Engneering",
+    "dept": "BIO ENG",
+    "no": "100",
+    "id": "bio eng100",
+    "tagIds": ["bio eng_ethics", "eecs_ethics"]
   }
 ]
