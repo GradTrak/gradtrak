@@ -8,7 +8,6 @@
       {
         "id": "uc",
         "name": "UC Requirements",
-        "type": "unselectable",
         "requirements": [
           {
             "type": "tag",
@@ -61,7 +60,6 @@
       {
         "id": "coe_hss",
         "name": "Humanities and Social Sciences",
-        "type": "unselectable",
         "requirements": [
           {
             "type": "mutex",
