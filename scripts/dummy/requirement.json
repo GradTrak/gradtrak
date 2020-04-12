@@ -773,5 +773,260 @@
         ]
       }
     ]
+  },
+  {
+    "id": "statistics",
+    "name": "Statistics Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "id": "genmath",
+        "name": "General Math",
+        "requirements": [
+          {
+            "type": "course",
+            "id": "math1a",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "type": "course",
+            "id": "math1b",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
+            "type": "course",
+            "id": "math53",
+            "name": "MATH 53",
+            "courseId": "math53"
+          },
+          {
+            "type": "course",
+            "id": "math54",
+            "name": "MATH 54",
+            "courseId": "math54"
+          }
+        ]
+      },
+      {
+        "id": "statc8",
+        "name": "Lower Division Statistics",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "lowerdiv",
+            "name": "Lower Division Statistics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "statc8",
+                "name": "STAT C8",
+                "courseId": "statc8"
+              },
+              {
+                "type": "course",
+                "id": "compscic8",
+                "name": "COMPSCI C8",
+                "courseId": "compscic8"
+              },
+              {
+                "type": "course",
+                "id": "infoc8",
+                "name": "INFO C8",
+                "courseId": "infoc8"
+              },
+              {
+                "type": "course",
+                "id": "stat20",
+                "name": "STAT 20",
+                "courseId": "stat20"
+              },
+              {
+                "type": "course",
+                "id": "stat28",
+                "name": "STAT 28",
+                "courseId": "stat28"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "core",
+        "name": "Core Statistics Courses",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "data",
+            "name": "Data",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "stat133",
+                "name": "STAT 134",
+                "courseId": "stat134"
+              },
+              {
+                "type": "course",
+                "id": "statc100",
+                "name": "STAT C100",
+                "courseId": "statc100"
+              },
+              {
+                "type": "course",
+                "id": "compscic100",
+                "name": "COMPSCI C100",
+                "courseId": "compscic100"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "id": "probability",
+            "name": "Probability",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "stat134",
+                "name": "STAT 134",
+                "courseId": "stat134"
+              },
+              {
+                "type": "course",
+                "id": "stat140",
+                "name": "STAT 140",
+                "courseId": "stat140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "id": "stat135",
+            "name": "STAT 135",
+            "courseId": "stat135"
+          }
+        ]
+      },
+      {
+        "id": "electives",
+        "name": "Statistics Electives",
+        "requirements": [
+          {
+            "type": "multi",
+            "id": "electives",
+            "name": "Statistics Electives",
+            "numRequired": 3,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "stat102",
+                "name": "STAT 102",
+                "courseId": "stat102"
+              },
+              {
+                "type": "course",
+                "id": "stat150",
+                "name": "STAT 150",
+                "courseId": "stat150"
+              },
+              {
+                "type": "course",
+                "id": "stat151a",
+                "name": "STAT 151A",
+                "courseId": "stat151a"
+              },
+              {
+                "type": "course",
+                "id": "stat152",
+                "name": "STAT 152",
+                "courseId": "stat152"
+              },
+              {
+                "type": "course",
+                "id": "stat153",
+                "name": "STAT 153",
+                "courseId": "stat153"
+              },
+              {
+                "type": "course",
+                "id": "stat154",
+                "name": "STAT 154",
+                "courseId": "stat154"
+              },
+              {
+                "type": "course",
+                "id": "stat155",
+                "name": "STAT 155",
+                "courseId": "stat155"
+              },
+              {
+                "type": "course",
+                "id": "stat156",
+                "name": "STAT 156",
+                "courseId": "stat156"
+              },
+              {
+                "type": "course",
+                "id": "stat157",
+                "name": "STAT 157",
+                "courseId": "stat157"
+              },
+              {
+                "type": "course",
+                "id": "stat158",
+                "name": "STAT 158",
+                "courseId": "stat158"
+              },
+              {
+                "type": "course",
+                "id": "stat159",
+                "name": "STAT 159",
+                "courseId": "stat159"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cluster",
+        "name": "Cluster Courses",
+        "requirements": [
+          {
+            "type": "mutex",
+            "id": "cluster",
+            "name": "Cluster Courses",
+            "requirements": [
+              {
+                "type": "tag",
+                "id": "statcluster",
+                "name": "Cluster Course",
+                "tagId": "statcluster"
+              },
+              {
+                "type": "tag",
+                "id": "statcluster",
+                "name": "Cluster Course",
+                "tagId": "statcluster"
+              },
+              {
+                "type": "tag",
+                "id": "statcluster",
+                "name": "Cluster Course",
+                "tagId": "statcluster"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
