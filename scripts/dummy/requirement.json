@@ -1426,5 +1426,117 @@
         ]
       }
     ]
+  },
+  {
+    "id": "mcb_imm_imm",
+    "name": "MCB - IMM - IMM Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 104",
+                "courseId": "mcellbi104"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 110",
+            "courseId": "mcellbi110"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150",
+            "courseId": "mcellbi150"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150L",
+            "courseId": "mcellbi150l"
+          },
+          {
+            "type": "tag",
+            "name": "IMM Elective C",
+            "tagId": "mcb_imm_elective_c"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_imm_id",
+    "name": "MCB - IMM - Disease Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 104",
+                "courseId": "mcellbi104"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150",
+            "courseId": "mcellbi150"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150L",
+            "courseId": "mcellbi150l"
+          },
+          {
+            "type": "tag",
+            "name": "IMM Elective A",
+            "tagId": "mcb_imm_elective_a"
+          },
+          {
+            "type": "tag",
+            "name": "IMM Elective B",
+            "tagId": "mcb_imm_elective_b"
+          }
+        ]
+      }
+    ]
   }
 ]
