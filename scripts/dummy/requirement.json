@@ -877,7 +877,8 @@
   },
   {
     "id": "mcb_lower_div",
-    "name": "Molecular and Cell Biology - Lower Division",
+    "name": "MCELLBI - Lower Division",
+    "parentId": "ls",
     "type": "major",
     "requirementCategories": [
       {
@@ -1022,6 +1023,144 @@
                 "courseId": "physics7b"
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_bmb_bmb",
+    "name": "MCELLBI - BMB - BMB Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 100B",
+            "courseId": "mcellbi100b"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 110",
+            "courseId": "mcellbi110"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI C148",
+                "courseId": "mcellbic148"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI C110L",
+                "courseId": "mcellbic110l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "tag",
+            "name": "BMB Elective",
+            "tagId": "mcb_bmb_elective"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_bmb_biochem",
+    "name": "MCELLBI - BMB - BioChem Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "course",
+            "name": "CHEM 130B",
+            "courseId": "chem130b"
+          },
+          {
+            "type": "course",
+            "name": "CHEM 135",
+            "courseId": "chem135"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 130",
+                "courseId": "mcellbi130"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI C110L",
+                "courseId": "mcellbic110l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "tag",
+            "name": "BMB Elective",
+            "tagId": "mcb_bmb_elective"
           }
         ]
       }
