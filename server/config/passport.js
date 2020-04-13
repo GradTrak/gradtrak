@@ -1,21 +1,31 @@
+const argon2 = require('argon2');
 const { Strategy } = require('passport-local');
 
 const User = require('../models/user');
 
-const localStrategy = new Strategy((username, password, done) => {
-  User.findOne({ username }, (err, user) => {
-    if (err) {
-      done(err);
-      return;
-    }
+async function verifyUser(user, inputPassword) {
+  if (!user) {
+    /* Verify dummy password to prevent timing attack enumerating user */
+    /* This is the hash of 'password' if anyone is curious */
+    const dummy = '$argon2id$v=19$m=4096,t=3,p=1$bPaz0G0LK/r5aSoCQsU8Bg$8mbAff+svZA0QV3XH5i5vSPTYBE5xd4rmVZEDF0umvA';
+    await argon2.verify(dummy, inputPassword);
+    return null;
+  } else if (!(await argon2.verify(user.passwordHash, inputPassword))) {
+    return null;
+  }
+  return user;
+}
 
-    if (!user || !user.verifyPassword(password)) {
-      done(null, false, { message: 'Incorrect username or password' });
-      return;
-    }
-
-    done(null, user);
-  });
+const localStrategy = new Strategy((username, inputPassword, done) => {
+  User.findOne({ username })
+    .then((user) => verifyUser(user, inputPassword))
+    .then((user) => {
+      if (user) {
+        done(null, user);
+      } else {
+        done(null, false, { message: 'Incorrect username or password' });
+      }
+    });
 });
 
 /* eslint-disable no-underscore-dangle */

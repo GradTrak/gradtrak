@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    password: {
+    passwordHash: {
       type: String,
       required: true,
     },
@@ -53,9 +53,5 @@ const userSchema = new mongoose.Schema(
   },
   { strict: 'throw' },
 );
-
-userSchema.methods.verifyPassword = function verifyPassword(inputPassword) {
-  return this.password === inputPassword;
-};
 
 module.exports = mongoose.model('User', userSchema);
