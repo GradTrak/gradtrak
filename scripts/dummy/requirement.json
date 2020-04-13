@@ -1289,5 +1289,142 @@
         ]
       }
     ]
+  },
+  {
+    "id": "mcb_ggd_ggd",
+    "name": "MCB - GGD - GGD Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 110",
+            "courseId": "mcellbi110"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 140",
+            "courseId": "mcellbi140"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 140L",
+            "courseId": "mcellbi140l"
+          },
+          {
+            "type": "mutex",
+            "name": "GGD Electives",
+            "requirements": [
+              {
+                "type": "poly",
+                "name": "GGD Elective A or B",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective A",
+                    "tagId": "mcb_ggd_elective_a"
+                  },
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective B",
+                    "tagId": "mcb_ggd_elective_b"
+                  }
+                ]
+              },
+              {
+                "type": "tag",
+                "name": "GGD Elective B",
+                "tagId": "mcb_ggd_elective_b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_ggd_devgen",
+    "name": "MCB - GGD - DevGen Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 104",
+                "courseId": "mcellbi104"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 141",
+            "courseId": "mcellbi141"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 140L",
+            "courseId": "mcellbi140l"
+          },
+          {
+            "type": "mutex",
+            "name": "GGD Electives",
+            "requirements": [
+              {
+                "type": "poly",
+                "name": "GGD Elective A or B",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective A",
+                    "tagId": "mcb_ggd_elective_a"
+                  },
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective B",
+                    "tagId": "mcb_ggd_elective_b"
+                  }
+                ]
+              },
+              {
+                "type": "tag",
+                "name": "GGD Elective B",
+                "tagId": "mcb_ggd_elective_b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
