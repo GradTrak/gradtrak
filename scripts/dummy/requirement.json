@@ -1538,5 +1538,61 @@
         ]
       }
     ]
+  },
+  {
+    "id": "mcb_neu",
+    "name": "MCB - NEU",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 104",
+            "courseId": "mcellbi104"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 160",
+            "courseId": "mcellbi160"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 161",
+            "courseId": "mcellbi161"
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 160L",
+                "courseId": "mcellbi160l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 163L",
+                "courseId": "mcellbi163l"
+              }
+            ]
+          },
+          {
+            "type": "tag",
+            "name": "NEU Elective",
+            "tagId": "mcb_neu_elective"
+          }
+        ]
+      }
+    ]
   }
 ]

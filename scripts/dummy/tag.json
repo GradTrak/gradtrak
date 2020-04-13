@@ -102,5 +102,9 @@
   {
     "id": "mcb_imm_elective_c",
     "name": "MCB IMM Elective C"
+  },
+  {
+    "id": "mcb_neu_elective",
+    "name": "MCB NEU Elective"
   }
 ]
