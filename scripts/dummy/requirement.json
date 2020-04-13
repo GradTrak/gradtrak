@@ -857,19 +857,739 @@
               {
                 "type": "tag",
                 "name": "Cluster Course",
-                "tagId": "statcluster"
+                "tagId": "stat_cluster"
               },
               {
                 "type": "tag",
                 "name": "Cluster Course",
-                "tagId": "statcluster"
+                "tagId": "stat_cluster"
               },
               {
                 "type": "tag",
                 "name": "Cluster Course",
-                "tagId": "statcluster"
+                "tagId": "stat_cluster"
               }
             ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_lower_div",
+    "name": "MCB - Lower Division",
+    "parentId": "ls",
+    "type": "unselectable",
+    "requirementCategories": [
+      {
+        "name": "Math",
+        "requirements": [
+          {
+            "type": "multi",
+            "name": "MATH 10A",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MATH 10A",
+                "courseId": "math10a"
+              },
+              {
+                "type": "course",
+                "name": "MATH 1A",
+                "courseId": "math1a"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "name": "MATH 10B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MATH 10B",
+                "courseId": "math10b"
+              },
+              {
+                "type": "course",
+                "name": "MATH 1B",
+                "courseId": "math1b"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chemistry",
+        "requirements": [
+          {
+            "type": "multi",
+            "name": "CHEM 1A",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "CHEM 1A",
+                "courseId": "chem1a"
+              },
+              {
+                "type": "course",
+                "name": "CHEM 4A",
+                "courseId": "chem4a"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "CHEM 3A",
+            "courseId": "chem3a"
+          },
+          {
+            "type": "course",
+            "name": "CHEM 3B",
+            "courseId": "chem3b"
+          }
+        ]
+      },
+      {
+        "name": "Biology",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "BIOLOGY 1A",
+            "courseId": "biology1a"
+          },
+          {
+            "type": "course",
+            "name": "BIOLOGY 1B",
+            "courseId": "biology1b"
+          }
+        ]
+      },
+      {
+        "name": "Biology",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "BIOLOGY 1A",
+            "courseId": "biology1a"
+          },
+          {
+            "type": "course",
+            "name": "BIOLOGY 1B",
+            "courseId": "biology1b"
+          }
+        ]
+      },
+      {
+        "name": "Physics",
+        "requirements": [
+          {
+            "type": "multi",
+            "name": "PHYSICS 8A",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "PHYSICS 8A",
+                "courseId": "physics8a"
+              },
+              {
+                "type": "course",
+                "name": "PHYSICS 7A",
+                "courseId": "physics7a"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "name": "PHYSICS 8B",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "PHYSICS 8B",
+                "courseId": "physics8b"
+              },
+              {
+                "type": "course",
+                "name": "PHYSICS 7B",
+                "courseId": "physics7b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_bmb_bmb",
+    "name": "MCB - BMB - BMB Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 100B",
+            "courseId": "mcellbi100b"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 110",
+            "courseId": "mcellbi110"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI C148",
+                "courseId": "mcellbic148"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI C110L",
+                "courseId": "mcellbic110l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "tag",
+            "name": "BMB Elective",
+            "tagId": "mcb_bmb_elective"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_bmb_biochem",
+    "name": "MCB - BMB - BioChem Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "course",
+            "name": "CHEM 130B",
+            "courseId": "chem130b"
+          },
+          {
+            "type": "course",
+            "name": "CHEM 135",
+            "courseId": "chem135"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 130",
+                "courseId": "mcellbi130"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI C110L",
+                "courseId": "mcellbic110l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "tag",
+            "name": "BMB Elective",
+            "tagId": "mcb_bmb_elective"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_cdb_csb",
+    "name": "MCB - CDB - CSB Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 104",
+            "courseId": "mcellbi104"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 130",
+            "courseId": "mcellbi130"
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 133L",
+                "courseId": "mcellbi133l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "mutex",
+            "name": "CDB Electives",
+            "requirements": [
+              {
+                "type": "tag",
+                "name": "CDB Elective A",
+                "tagId": "mcb_cdb_elective_a"
+              },
+              {
+                "type": "tag",
+                "name": "CDB Elective A",
+                "tagId": "mcb_cdb_elective_a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_cdb_mbp",
+    "name": "MCB - CDB - MBP Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 104",
+            "courseId": "mcellbi104"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 136",
+            "courseId": "mcellbi136"
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 133L",
+                "courseId": "mcellbi133l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "mutex",
+            "name": "CDB Electives",
+            "requirements": [
+              {
+                "type": "tag",
+                "name": "CDB Elective B",
+                "tagId": "mcb_cdb_elective_b"
+              },
+              {
+                "type": "tag",
+                "name": "CDB Elective B",
+                "tagId": "mcb_cdb_elective_b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_ggd_ggd",
+    "name": "MCB - GGD - GGD Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 110",
+            "courseId": "mcellbi110"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 140",
+            "courseId": "mcellbi140"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 140L",
+            "courseId": "mcellbi140l"
+          },
+          {
+            "type": "mutex",
+            "name": "GGD Electives",
+            "requirements": [
+              {
+                "type": "poly",
+                "name": "GGD Elective A or B",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective A",
+                    "tagId": "mcb_ggd_elective_a"
+                  },
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective B",
+                    "tagId": "mcb_ggd_elective_b"
+                  }
+                ]
+              },
+              {
+                "type": "tag",
+                "name": "GGD Elective B",
+                "tagId": "mcb_ggd_elective_b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_ggd_devgen",
+    "name": "MCB - GGD - DevGen Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 104",
+                "courseId": "mcellbi104"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 141",
+            "courseId": "mcellbi141"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 140L",
+            "courseId": "mcellbi140l"
+          },
+          {
+            "type": "mutex",
+            "name": "GGD Electives",
+            "requirements": [
+              {
+                "type": "poly",
+                "name": "GGD Elective A or B",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective A",
+                    "tagId": "mcb_ggd_elective_a"
+                  },
+                  {
+                    "type": "tag",
+                    "name": "GGD Elective B",
+                    "tagId": "mcb_ggd_elective_b"
+                  }
+                ]
+              },
+              {
+                "type": "tag",
+                "name": "GGD Elective B",
+                "tagId": "mcb_ggd_elective_b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_imm_imm",
+    "name": "MCB - IMM - IMM Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI C100A",
+            "courseId": "mcellbic100a"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 104",
+                "courseId": "mcellbi104"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 110",
+            "courseId": "mcellbi110"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150",
+            "courseId": "mcellbi150"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150L",
+            "courseId": "mcellbi150l"
+          },
+          {
+            "type": "tag",
+            "name": "IMM Elective C",
+            "tagId": "mcb_imm_elective_c"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_imm_id",
+    "name": "MCB - IMM - Disease Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "multi",
+            "name": "Genetics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 104",
+                "courseId": "mcellbi104"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 140",
+                "courseId": "mcellbi140"
+              }
+            ]
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150",
+            "courseId": "mcellbi150"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 150L",
+            "courseId": "mcellbi150l"
+          },
+          {
+            "type": "tag",
+            "name": "IMM Elective A",
+            "tagId": "mcb_imm_elective_a"
+          },
+          {
+            "type": "tag",
+            "name": "IMM Elective B",
+            "tagId": "mcb_imm_elective_b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_neu",
+    "name": "MCB - NEU",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 104",
+            "courseId": "mcellbi104"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 160",
+            "courseId": "mcellbi160"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 161",
+            "courseId": "mcellbi161"
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 160L",
+                "courseId": "mcellbi160l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 163L",
+                "courseId": "mcellbi163l"
+              }
+            ]
+          },
+          {
+            "type": "tag",
+            "name": "NEU Elective",
+            "tagId": "mcb_neu_elective"
           }
         ]
       }
