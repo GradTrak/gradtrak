@@ -10,7 +10,7 @@ import { GoalSelectionState } from './selection-state';
   styleUrls: ['./goal-selector.component.scss'],
 })
 export class GoalSelectorComponent implements OnInit {
-  private static DUMMY_GOAL_TYPES = ['major', 'minor', 'other']; // TODO Make this dynamic based on school
+  private static DUMMY_GOAL_TYPES = ['major']; // TODO Make this dynamic based on school
 
   @Input() readonly initialGoals: RequirementSet[]; // Optional
   @Output() selectGoals: EventEmitter<RequirementSet[]>;
