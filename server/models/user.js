@@ -1,33 +1,35 @@
 const mongoose = require('mongoose');
 
-const semesterSchema = new mongoose.Schema({
-  id: {
-    type: String,
-    required: true,
+const semesterSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    courseIds: {
+      type: [String],
+      required: true,
+      default: [],
+    },
   },
-  name: {
-    type: String,
-    required: true,
-  },
-  courseIds: {
-    type: [String],
-    required: true,
-    default: [],
-  },
-});
+  { strict: 'throw' },
+);
 
-const userDataSchema = new mongoose.Schema({
-  semesters: {
-    type: [semesterSchema],
-    required: true,
-    default: [],
+const userDataSchema = new mongoose.Schema(
+  {
+    semesters: {
+      type: [semesterSchema],
+      required: true,
+      default: [],
+    },
+    goalIds: {
+      type: [String],
+      required: true,
+      default: [],
+    },
   },
-  goalIds: {
-    type: [String],
-    required: true,
-    default: [],
-  },
-});
+  { strict: 'throw' },
+);
 
 const userSchema = new mongoose.Schema(
   {
