@@ -105,7 +105,9 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
   res.on('end', () => {
     const data = JSON.parse(rawData);
 
-    const validCourses = data.filter((course) => course.units && course.units.match('^\\d+\\.\\d+$'));
+    const validCourses = data.filter(
+      (course) => course.units && (course.units.match(/^\d+\.\d+$/) || course.units.match(/^\d+$/)),
+    );
 
     validCourses.forEach((course) => {
       delete course.open_seats;
@@ -123,7 +125,7 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
       delete course.course_number;
 
       course._id = course.id;
-      course.id = course.dept.replace('\\s', '').toLowerCase() + course.no.replace('\\s', '').toLowerCase();
+      course.id = (course.dept + course.no).replace(/[^A-Za-z\d]/, '').toLowerCase();
 
       // Convert units to number
       course.units = parseFloat(course.units);
