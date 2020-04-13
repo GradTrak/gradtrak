@@ -857,17 +857,17 @@
               {
                 "type": "tag",
                 "name": "Cluster Course",
-                "tagId": "statcluster"
+                "tagId": "stat_cluster"
               },
               {
                 "type": "tag",
                 "name": "Cluster Course",
-                "tagId": "statcluster"
+                "tagId": "stat_cluster"
               },
               {
                 "type": "tag",
                 "name": "Cluster Course",
-                "tagId": "statcluster"
+                "tagId": "stat_cluster"
               }
             ]
           }
@@ -877,9 +877,9 @@
   },
   {
     "id": "mcb_lower_div",
-    "name": "MCELLBI - Lower Division",
+    "name": "MCB - Lower Division",
     "parentId": "ls",
-    "type": "major",
+    "type": "unselectable",
     "requirementCategories": [
       {
         "name": "Math",
@@ -1030,7 +1030,7 @@
   },
   {
     "id": "mcb_bmb_bmb",
-    "name": "MCELLBI - BMB - BMB Track",
+    "name": "MCB - BMB - BMB Track",
     "parentId": "mcb_lower_div",
     "type": "major",
     "requirementCategories": [
@@ -1099,7 +1099,7 @@
   },
   {
     "id": "mcb_bmb_biochem",
-    "name": "MCELLBI - BMB - BioChem Track",
+    "name": "MCB - BMB - BioChem Track",
     "parentId": "mcb_lower_div",
     "type": "major",
     "requirementCategories": [
@@ -1161,6 +1161,130 @@
             "type": "tag",
             "name": "BMB Elective",
             "tagId": "mcb_bmb_elective"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_cdb_csb",
+    "name": "MCB - CDB - CSB Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 104",
+            "courseId": "mcellbi104"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 130",
+            "courseId": "mcellbi130"
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 133L",
+                "courseId": "mcellbi133l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "mutex",
+            "name": "CDB Electives",
+            "requirements": [
+              {
+                "type": "tag",
+                "name": "CDB Elective A",
+                "tagId": "mcb_cdb_elective_a"
+              },
+              {
+                "type": "tag",
+                "name": "CDB Elective A",
+                "tagId": "mcb_cdb_elective_a"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mcb_cdb_mbp",
+    "name": "MCB - CDB - MBP Track",
+    "parentId": "mcb_lower_div",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "type": "course",
+            "name": "MCELLBI 102",
+            "courseId": "mcellbi102"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 104",
+            "courseId": "mcellbi104"
+          },
+          {
+            "type": "course",
+            "name": "MCELLBI 136",
+            "courseId": "mcellbi136"
+          },
+          {
+            "type": "multi",
+            "name": "Laboratory",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "type": "course",
+                "name": "MCELLBI 133L",
+                "courseId": "mcellbi133l"
+              },
+              {
+                "type": "course",
+                "name": "MCELLBI 170L",
+                "courseId": "mcellbi170l"
+              }
+            ]
+          },
+          {
+            "type": "mutex",
+            "name": "CDB Electives",
+            "requirements": [
+              {
+                "type": "tag",
+                "name": "CDB Elective B",
+                "tagId": "mcb_cdb_elective_b"
+              },
+              {
+                "type": "tag",
+                "name": "CDB Elective B",
+                "tagId": "mcb_cdb_elective_b"
+              }
+            ]
           }
         ]
       }

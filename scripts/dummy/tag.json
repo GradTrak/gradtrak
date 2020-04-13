@@ -66,5 +66,21 @@
   {
     "id": "linguis_elective",
     "name": "Linguistics Elective"
+  },
+  {
+    "id": "stat_cluster",
+    "name": "Statistics Cluster Course"
+  },
+  {
+    "id": "mcb_bmb_elective",
+    "name": "MCB BMB Elective"
+  },
+  {
+    "id": "mcb_cdb_elective_a",
+    "name": "MCB CDB Elective A"
+  },
+  {
+    "id": "mcb_cdb_elective_b",
+    "name": "MCB CDB Elective B"
   }
 ]
