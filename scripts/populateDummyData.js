@@ -41,10 +41,7 @@ db.connect()
     return RequirementSet.insertMany(DUMMY_REQUIREMENT_DATA);
   })
   .then(() => {
-    return User.deleteMany({});
-  })
-  .then(() => {
-    return User.insertMany(DUMMY_USERS);
+    return Promise.all(DUMMY_USERS.map((user) => User.updateOne({ username: user.username }, user, { upsert: true })));
   })
   .catch((err) => {
     console.error(err);
