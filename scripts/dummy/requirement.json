@@ -971,21 +971,6 @@
         ]
       },
       {
-        "name": "Biology",
-        "requirements": [
-          {
-            "type": "course",
-            "name": "BIOLOGY 1A",
-            "courseId": "biology1a"
-          },
-          {
-            "type": "course",
-            "name": "BIOLOGY 1B",
-            "courseId": "biology1b"
-          }
-        ]
-      },
-      {
         "name": "Physics",
         "requirements": [
           {
