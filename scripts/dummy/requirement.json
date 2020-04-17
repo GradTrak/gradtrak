@@ -927,32 +927,82 @@
         "requirements": [
           {
             "type": "multi",
-            "name": "CHEM 1A",
+            "id": "chem1al4",
+            "name": "CHEM 1A/L",
             "numRequired": 1,
-            "hidden": false,
+            "hidden": true,
             "requirements": [
               {
-                "type": "course",
-                "name": "CHEM 1A",
-                "courseId": "chem1a"
+                "type": "multi",
+                "id": "chem1a",
+                "name": "Chem 1A/L",
+                "numRequired": 2,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "type": "course",
+                    "id": "chem1a",
+                    "name": "CHEM 1A",
+                    "courseId": "chem1a"
+                  },
+                  {
+                    "type": "course",
+                    "id": "chem1al",
+                    "name": "CHEM 1AL",
+                    "courseId": "chem1al"
+                  }
+                ]
               },
               {
                 "type": "course",
+                "id": "chem4a",
                 "name": "CHEM 4A",
                 "courseId": "chem4a"
               }
             ]
           },
           {
-            "type": "course",
-            "name": "CHEM 3A",
-            "courseId": "chem3a"
+            "type": "multi",
+            "id": "chem3a",
+            "name": "Chem 3A/L",
+            "numRequired": 2,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "chem3a",
+                "name": "CHEM 3A",
+                "courseId": "chem3a"
+              },
+              {
+                "type": "course",
+                "id": "chem3al",
+                "name": "CHEM 3AL",
+                "courseId": "chem3al"
+              }
+            ]
           },
           {
-            "type": "course",
-            "name": "CHEM 3B",
-            "courseId": "chem3b"
-          }
+            "type": "multi",
+            "id": "chem3b",
+            "name": "Chem 3B/L",
+            "numRequired": 2,
+            "hidden": true,
+            "requirements": [
+              {
+                "type": "course",
+                "id": "chem3b",
+                "name": "CHEM 3B",
+                "courseId": "chem3b"
+              },
+              {
+                "type": "course",
+                "id": "chem3bl",
+                "name": "CHEM 3BL",
+                "courseId": "chem3bl"
+              }
+            ]
+          },
         ]
       },
       {
