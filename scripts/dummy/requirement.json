@@ -1002,7 +1002,7 @@
                 "courseId": "chem3bl"
               }
             ]
-          },
+          }
         ]
       },
       {
@@ -1678,7 +1678,7 @@
                     "type": "course",
                     "name": "STAT 2",
                     "courseId": "stat2"
-                  },
+                  }
                 ]
               },
               {
@@ -1700,7 +1700,7 @@
                     "type": "course",
                     "name": "STAT 2",
                     "courseId": "stat2"
-                  },
+                  }
                 ]
               },
               {
@@ -1717,7 +1717,7 @@
                     "type": "course",
                     "name": "MATH 10B",
                     "courseId": "math16b"
-                  },
+                  }
                 ]
               }
             ]
@@ -1892,5 +1892,5 @@
         ]
       }
     ]
-  },
+  }
 ]
