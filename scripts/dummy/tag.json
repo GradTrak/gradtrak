@@ -106,5 +106,9 @@
   {
     "id": "mcb_neu_elective",
     "name": "MCB NEU Elective"
+  },
+  {
+    "id": "nutrisci_pm_elective",
+    "name": "Nutritional Science - Physiology & Metabolism Elective"
   }
 ]
