@@ -17,12 +17,12 @@ const TAG_MAP = new Map([
   ['Reading and Composition A', 'rc_a'],
   ['Reading and Composition B', 'rc_b'],
   ['Arts and Literature', 'ls_arts'],
-  ['Biological Science', 'ls_bio'],
-  ['Historial Studies', 'ls_hist'],
+  ['Biological Sciences', 'ls_bio'],
+  ['Historical Studies', 'ls_hist'],
   ['International Studies', 'ls_inter'],
   ['Philosophy and Values', 'ls_philo'],
   ['Physical Science', 'ls_phys'],
-  ['Social and Behavior Sciences', 'ls_socio'],
+  ['Social and Behavioral Sciences', 'ls_socio'],
 ]);
 
 if (!fs.existsSync('cache')) {
