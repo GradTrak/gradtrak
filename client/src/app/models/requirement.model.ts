@@ -5,7 +5,6 @@ import { Course } from 'models/course.model';
  * and is either fulfilled or unfulfilled based on the input {@link Course}s.
  */
 export interface Requirement {
-  id: string;
   name: string;
 
   isFulfilled(courses: Course[]): boolean;

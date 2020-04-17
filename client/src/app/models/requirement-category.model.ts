@@ -15,12 +15,10 @@ import { Tag } from 'models/tag.model';
  * representing categories such as upper-division courses or breadth requirements of a college.
  */
 export class RequirementCategory {
-  id: string;
   name: string;
   requirements: Requirement[];
 
   constructor(proto: RequirementCategoryPrototype, coursesMap: Map<string, Course>, tagsMap: Map<string, Tag>) {
-    this.id = proto.id;
     this.name = proto.name;
     this.requirements = proto.requirements.map((reqProto: RequirementPrototype) =>
       RequirementCategory.getRequirementObjectFromPrototype(reqProto, coursesMap, tagsMap),
@@ -95,7 +93,7 @@ export class RequirementCategory {
       }
 
       default: {
-        console.error(`Requirement ${requirement.id} has unknown Requirement type: ${requirement.type}`);
+        console.error(`Requirement ${requirement.name} has unknown Requirement type: ${requirement.type}`);
         break;
       }
     }

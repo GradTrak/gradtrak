@@ -8,7 +8,6 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
  * number of units.
  */
 export class UnitRequirement implements Requirement {
-  id: string;
   name: string;
 
   units: number;

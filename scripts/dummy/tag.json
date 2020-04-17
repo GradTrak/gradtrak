@@ -66,5 +66,45 @@
   {
     "id": "linguis_elective",
     "name": "Linguistics Elective"
+  },
+  {
+    "id": "stat_cluster",
+    "name": "Statistics Cluster Course"
+  },
+  {
+    "id": "mcb_bmb_elective",
+    "name": "MCB BMB Elective"
+  },
+  {
+    "id": "mcb_cdb_elective_a",
+    "name": "MCB CDB Elective A"
+  },
+  {
+    "id": "mcb_cdb_elective_b",
+    "name": "MCB CDB Elective B"
+  },
+  {
+    "id": "mcb_ggd_elective_a",
+    "name": "MCB GGD Elective A"
+  },
+  {
+    "id": "mcb_ggd_elective_b",
+    "name": "MCB GGD Elective B"
+  },
+  {
+    "id": "mcb_imm_elective_a",
+    "name": "MCB IMM Elective A"
+  },
+  {
+    "id": "mcb_imm_elective_b",
+    "name": "MCB IMM Elective B"
+  },
+  {
+    "id": "mcb_imm_elective_c",
+    "name": "MCB IMM Elective C"
+  },
+  {
+    "id": "mcb_neu_elective",
+    "name": "MCB NEU Elective"
   }
 ]
