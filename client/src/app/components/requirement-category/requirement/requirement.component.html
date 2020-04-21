@@ -49,10 +49,10 @@
 <ng-template #mutexReq>
   Distinctly fulfill
   <app-requirement
-    *ngFor="let childStatus of getMutex().getFulfillment(courses)"
-    [requirement]="childStatus.requirement"
+    *ngFor="let childReq of getMutex().requirements; index as i"
+    [requirement]="childReq"
     [courses]="[]"
-    [override]="getMutexFulfillment(childStatus)"
+    [override]="getMutexFulfillment(getMutex().getFulfillment(courses)[i])"
   ></app-requirement>
 </ng-template>
 
