@@ -36,19 +36,17 @@ export class MutexRequirement implements Requirement {
 
   isFulfilled(courses: Course[]): boolean {
     return this.getFulfillment(courses).every(
-      (reqFulfillment: { requirement: Requirement; fulfillment: number }) =>
-        reqFulfillment.fulfillment === MutexRequirement.FULFILLED,
+      (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
     );
   }
 
   /**
-   * Returns an array of objects containing each sub-Requirement and its current fulfillment status based on the given
-   * Courses.
+   * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
    *
    * @param {Course[]} courses The input Courses that are currently being taken.
-   * @return {} An array of objects each containing a Requirement and a fulfillment status.
+   * @return {number[]} An array of fulfillment status corresponding to each child requirement.
    */
-  getFulfillment(courses: Course[]): { requirement: Requirement; fulfillment: number }[] {
+  getFulfillment(courses: Course[]): number[] {
     let mappings: Course[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses);
     const maxFulfilled: number = Math.max(
       ...mappings.map((mapping: Course[]) => mapping.filter((course: Course) => course).length),
@@ -59,11 +57,11 @@ export class MutexRequirement implements Requirement {
     return this.requirements.map((requirement: Requirement, i: number) => {
       const fulfillingWays = mappings.map((mapping: Course[]) => mapping[i]);
       if (fulfillingWays.every((course: Course) => course)) {
-        return { requirement: requirement, fulfillment: MutexRequirement.FULFILLED };
+        return MutexRequirement.FULFILLED;
       } else if (fulfillingWays.some((course: Course) => course)) {
-        return { requirement: requirement, fulfillment: MutexRequirement.POTENTIAL };
+        return MutexRequirement.POTENTIAL;
       } else {
-        return { requirement: requirement, fulfillment: MutexRequirement.UNFULFILLED };
+        return MutexRequirement.UNFULFILLED;
       }
     });
   }

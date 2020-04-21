@@ -75,20 +75,17 @@ export class RequirementComponent implements OnInit {
    * Returns the CSS class name based on the fulfillment status of sub-requirements of a {@link MutexRequirement}, which
    * can be fulfilled, potentially fulfilled, or unfullfilled.
    *
-   * @param object reqFulfillment An object containing each requirement and its fulfillment status.
+   * @param number reqFulfillment A fulfillment status as output by {@link MutexRequirement#getFulfillment}.
    * @return string A CSS class based on the fulfillment status of the requirement.
    */
-  getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
-    switch (reqFulfillment.fulfillment) {
-      case MutexRequirement.FULFILLED: {
+  getMutexFulfillment(reqFulfillment: number): string {
+    switch (reqFulfillment) {
+      case MutexRequirement.FULFILLED:
         return 'fulfilled';
-      }
-      case MutexRequirement.POTENTIAL: {
+      case MutexRequirement.POTENTIAL:
         return 'potential';
-      }
-      default: {
+      default:
         return 'unfulfilled';
-      }
     }
   }
 
