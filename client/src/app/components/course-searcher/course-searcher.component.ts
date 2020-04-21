@@ -52,6 +52,7 @@ export class CourseSearcherComponent implements OnInit {
   returnCourse(): void {
     if (this.searchedCourse instanceof Course) {
       this.courseReturned.emit(this.searchedCourse);
+      this.searchedCourse = null;
     }
   }
 }
