@@ -85,6 +85,7 @@
                 "id": "coe_hss",
                 "name": "H/SS",
                 "numRequired": 1,
+                "hidden": true,
                 "requirements": [
                   {
                     "type": "tag",
@@ -123,6 +124,7 @@
                 "id": "coe_hss",
                 "name": "H/SS",
                 "numRequired": 1,
+                "hidden": true,
                 "requirements": [
                   {
                     "type": "tag",
@@ -161,6 +163,7 @@
                 "id": "coe_hss_upper_div",
                 "name": "H/SS Upper Division",
                 "numRequired": 2,
+                "hidden": true,
                 "requirements": [
                   {
                     "type": "poly",
@@ -213,6 +216,7 @@
                 "id": "coe_hss_upper_div",
                 "name": "H/SS Upper Division",
                 "numRequired": 2,
+                "hidden": true,
                 "requirements": [
                   {
                     "type": "poly",

@@ -15,6 +15,7 @@ import { TagRequirement } from 'models/requirements/tag-requirement.model';
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
   @Input() readonly courses: Course[];
+  @Input() readonly override: string;
 
   displayedRequirement: Requirement;
 
@@ -53,6 +54,16 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retreive non-MutexRequirement as MutexRequirement');
     }
     return this.requirement as MutexRequirement;
+  }
+
+  getFulfillment(): string {
+    if (this.override) {
+      return this.override;
+    } else if (this.requirement.isFulfilled(this.courses)) {
+      return 'fulfilled';
+    } else {
+      return 'unfulfilled';
+    }
   }
 
   /**

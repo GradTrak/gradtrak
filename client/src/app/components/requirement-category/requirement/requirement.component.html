@@ -48,24 +48,17 @@
 
 <ng-template #mutexReq>
   Distinctly fulfill
-  <div class="nested">
-    <div *ngFor="let childStatus of getMutex().getFulfillment(courses)" [ngClass]="getMutexFulfillment(childStatus)">
-      {{ childStatus.requirement.name }}
-      <div ngbDropdown class="req-more">
-        <button ngbDropdownToggle></button>
-        <div ngbDropdownMenu>
-          <button ngbDropdownItem (click)="openRequirementDisplay(childStatus.requirement)">
-            Show Fulfilling Courses
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-requirement
+    *ngFor="let childStatus of getMutex().getFulfillment(courses)"
+    [requirement]="childStatus.requirement"
+    [courses]="[]"
+    [override]="getMutexFulfillment(childStatus)"
+  ></app-requirement>
 </ng-template>
 
 <div
   class="requirement"
-  [ngClass]="requirement.isFulfilled(courses) ? 'fulfilled' : 'unfulfilled'"
+  [ngClass]="getFulfillment()"
   [ngbPopover]="requirement.getAnnotation() ? annotation : null"
   [triggers]="requirement.getAnnotation() ? 'mouseenter:mouseleave' : null"
 >
