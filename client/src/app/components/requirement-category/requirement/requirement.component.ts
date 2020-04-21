@@ -5,6 +5,7 @@ import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
+import { PolyRequirement } from 'models/requirements/poly-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 
 @Component({
@@ -35,7 +36,11 @@ export class RequirementComponent implements OnInit {
   ngOnInit(): void {}
 
   isMulti(): boolean {
-    return this.requirement instanceof MultiRequirement && !this.requirement.hidden;
+    return this.requirement instanceof MultiRequirement;
+  }
+
+  isPoly(): boolean {
+    return this.requirement instanceof PolyRequirement;
   }
 
   getMulti(): MultiRequirement {

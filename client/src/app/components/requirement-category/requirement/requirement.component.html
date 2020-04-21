@@ -15,18 +15,31 @@
 </ng-template>
 
 <ng-template #multiReq>
-  {{
-    getMulti().numRequired === 1
-      ? 'One of'
-      : getMulti().numRequired === getMulti().requirements.length
-      ? 'All of'
-      : getMulti().numFulfilled(courses) + '/' + getMulti().numRequired + ' of'
-  }}
-  <app-requirement
-    *ngFor="let childReq of getMulti().requirements"
-    [requirement]="childReq"
-    [courses]="courses"
-  ></app-requirement>
+  <ng-container *ngIf="!getMulti().hidden; else multiReqHidden">
+    {{
+      getMulti().numRequired === 1
+        ? 'One of'
+        : getMulti().numRequired === getMulti().requirements.length
+        ? 'All of'
+        : getMulti().numFulfilled(courses) + '/' + getMulti().numRequired + ' of'
+    }}
+    <app-requirement
+      *ngFor="let childReq of getMulti().requirements"
+      [requirement]="childReq"
+      [courses]="courses"
+    ></app-requirement>
+  </ng-container>
+  <ng-template #multiReqHidden>
+    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+    <div *ngIf="isPoly()" ngbDropdown class="req-more">
+      <button ngbDropdownToggle></button>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+          Show Fulfilling Courses
+        </button>
+      </div>
+    </div>
+  </ng-template>
 </ng-template>
 
 <ng-template #unitReq>
