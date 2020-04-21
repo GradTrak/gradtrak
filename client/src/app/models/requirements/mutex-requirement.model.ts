@@ -74,11 +74,11 @@ export class MutexRequirement implements Requirement {
    * requirements by index.
    */
   private static getFulfillmentMapping(requirements: StandaloneRequirement[], courses: Course[]): Course[][] {
-    if (requirements.length == 0) {
+    if (requirements.length === 0) {
       return [[]];
     }
     const firstReq: StandaloneRequirement = requirements[0];
-    let fulfillingCourses: Course[] = [null, ...courses.filter((course: Course) => firstReq.isFulfillableBy(course))];
+    const fulfillingCourses: Course[] = [null, ...courses.filter((course: Course) => firstReq.isFulfillableBy(course))];
     return fulfillingCourses.flatMap((course: Course) =>
       MutexRequirement.getFulfillmentMapping(
         requirements.slice(1),
