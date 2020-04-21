@@ -17,12 +17,12 @@ const TAG_MAP = new Map([
   ['Reading and Composition A', 'rc_a'],
   ['Reading and Composition B', 'rc_b'],
   ['Arts and Literature', 'ls_arts'],
-  ['Biological Science', 'ls_bio'],
-  ['Historial Studies', 'ls_hist'],
+  ['Biological Sciences', 'ls_bio'],
+  ['Historical Studies', 'ls_hist'],
   ['International Studies', 'ls_inter'],
   ['Philosophy and Values', 'ls_philo'],
   ['Physical Science', 'ls_phys'],
-  ['Social and Behavior Sciences', 'ls_socio'],
+  ['Social and Behavioral Sciences', 'ls_socio'],
 ]);
 
 if (!fs.existsSync('cache')) {
@@ -91,7 +91,9 @@ async function fetchCourseTags(courses) {
 
     delete course._id;
 
-    console.log(`Done: ${i} / ${courses.length}`);
+    if (i % 100 === 0) {
+      console.log(`Done: ${i} / ${courses.length}`);
+    }
   }
 }
 
@@ -108,6 +110,8 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
     const validCourses = data.filter(
       (course) => course.units && (course.units.match(/^\d+\.\d+$/) || course.units.match(/^\d+$/)),
     );
+
+    const courseMap = new Map();
 
     validCourses.forEach((course) => {
       delete course.open_seats;
@@ -129,10 +133,16 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
 
       // Convert units to number
       course.units = parseFloat(course.units);
+
+      if (courseMap.has(course.id)) {
+        console.error(`Warning: Course with id ${course.id} has conflict`);
+      } else {
+        courseMap.set(course.id, course);
+      }
     });
 
     fetchCourseTags(validCourses).then(() => {
-      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(validCourses));
+      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(Array.from(courseMap.values())));
     });
   });
 });
