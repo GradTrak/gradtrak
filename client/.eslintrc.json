@@ -1,5 +1,6 @@
 {
-    "env": { "browser": true,
+    "env": {
+        "browser": true,
         "es6": true
     },
     "extends": [
@@ -39,16 +40,11 @@
                 "allow": ["warn", "error"]
             }
         ],
+        "no-else-return": "off",
         "no-param-reassign": [
             "error",
             {
                 "props": false
-            }
-        ],
-        "no-else-return": [
-            "error",
-            {
-                "allowElseIf": true
             }
         ],
         "no-useless-constructor": "off"
