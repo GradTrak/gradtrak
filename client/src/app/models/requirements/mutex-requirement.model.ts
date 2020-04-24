@@ -36,55 +36,70 @@ export class MutexRequirement implements Requirement {
 
   isFulfilled(courses: Course[]): boolean {
     return this.getFulfillment(courses).every(
-      (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
+      (reqFulfillment: { requirement: Requirement; fulfillment: number }) =>
+        reqFulfillment.fulfillment === MutexRequirement.FULFILLED,
     );
   }
 
   /**
-   * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
+   * Returns an array of objects containing each sub-Requirement and its current fulfillment status based on the given
+   * Courses.
    *
-   * @param {Course[]} courses The input Courses that are currently being taken.
-   * @return {number[]} An array of fulfillment status corresponding to each child requirement.
+   * @param {Course[]} courses - The input Courses that are currently being taken.
+   * @return - An array of objects each containing a Requirement and a fulfillment status.
    */
-  getFulfillment(courses: Course[]): number[] {
-    let mappings: Course[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses);
-    const maxFulfilled: number = Math.max(
-      ...mappings.map((mapping: Course[]) => mapping.filter((course: Course) => course).length),
-    );
-    mappings = mappings.filter(
-      (mapping: Course[]) => mapping.filter((course: Course) => course).length === maxFulfilled,
-    );
-    return this.requirements.map((requirement: Requirement, i: number) => {
-      const fulfillingWays = mappings.map((mapping: Course[]) => mapping[i]);
-      if (fulfillingWays.every((course: Course) => course)) {
-        return MutexRequirement.FULFILLED;
-      } else if (fulfillingWays.some((course: Course) => course)) {
-        return MutexRequirement.POTENTIAL;
-      } else {
-        return MutexRequirement.UNFULFILLED;
+  getFulfillment(courses: Course[]): { requirement: Requirement; fulfillment: number }[] {
+    const fulfilled: Set<Requirement> = new Set();
+    const potential: Set<Requirement> = new Set();
+
+    const coursesWithReqs: any[] = this.mapReqsToCourses(courses);
+
+    coursesWithReqs.forEach((courseWithReqs: any) => {
+      // Exclude Requirements already guarenteed fulfilled
+      const linkedCourses: Set<any> = new Set([courseWithReqs]);
+      const linkedReqs: Set<any> = new Set(courseWithReqs.requirements);
+
+      let lastCourseSize = 0;
+      let lastReqsSize = 0;
+
+      while (lastCourseSize !== linkedCourses.size || lastReqsSize !== linkedReqs.size) {
+        lastCourseSize = linkedCourses.size;
+        lastReqsSize = linkedReqs.size;
+
+        Array.from(linkedReqs)
+          .flatMap((linkedReq: any) => linkedReq.courses)
+          .forEach((linkedCourse: any) => linkedCourses.add(linkedCourse));
+        Array.from(linkedCourses)
+          .flatMap((linkedCourse: any) => linkedCourse.requirements)
+          .forEach((linkedReq: any) => linkedReqs.add(linkedReq));
+      }
+
+      if (linkedCourses.size >= linkedReqs.size) {
+        Array.from(linkedReqs)
+          .map((linkedReq: any) => linkedReq.requirement)
+          .forEach((req: Requirement) => fulfilled.add(req));
+      } else if (linkedCourses.size > 0) {
+        Array.from(linkedReqs)
+          .map((linkedReq: any) => linkedReq.requirement)
+          .forEach((req: Requirement) => potential.add(req));
       }
     });
-  }
 
-  /**
-   * Returns an array of possible arrangements to fulfill the given requirements given the set of courses.
-   *
-   * @param {Course[]} courses The courses that will fulfill the requirement.
-   * @return {Course[][]} An array of arrays of courses, each of which is one possible mapping of courses to fulfill
-   * requirements by index.
-   */
-  private static getFulfillmentMapping(requirements: StandaloneRequirement[], courses: Course[]): Course[][] {
-    if (requirements.length === 0) {
-      return [[]];
-    }
-    const firstReq: StandaloneRequirement = requirements[0];
-    const fulfillingCourses: Course[] = [null, ...courses.filter((course: Course) => firstReq.isFulfillableBy(course))];
-    return fulfillingCourses.flatMap((course: Course) =>
-      MutexRequirement.getFulfillmentMapping(
-        requirements.slice(1),
-        courses.filter((c: Course) => c !== course),
-      ).map((fulfillment: Course[]) => [course, ...fulfillment]),
-    );
+    return this.requirements.map((requirement: Requirement) => {
+      let fulfillment: number;
+      if (fulfilled.has(requirement)) {
+        fulfillment = MutexRequirement.FULFILLED;
+      } else if (potential.has(requirement)) {
+        fulfillment = MutexRequirement.POTENTIAL;
+      } else {
+        fulfillment = MutexRequirement.UNFULFILLED;
+      }
+
+      return {
+        requirement,
+        fulfillment,
+      };
+    });
   }
 
   getAnnotation(): string {
@@ -96,5 +111,39 @@ export class MutexRequirement implements Requirement {
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
       'Uniquely fulfill:',
     );
+  }
+
+  /**
+   * Returns an array of objects containing circular references between each Requirement and the Courses that fulfill
+   * it and each Course and the Requirements it fulfills, used to determine the fulfillment status of each individual
+   * requirement of the MutexRequirement.
+   *
+   * @param {Course[]} courses - The input Courses that will be mapped with the instance {@link MutexRequirement#requirements}.
+   * @return - An array of objects which each contain a Course and an array of objects with Requirements and backreferences.
+   */
+  // TODO This feels really janky
+  private mapReqsToCourses(courses: Course[]): any[] {
+    const reqsToCourses: any[] = this.requirements.map((requirement: StandaloneRequirement) => {
+      return {
+        requirement,
+        courses: courses.filter((course: Course) => requirement.isFulfillableBy(course)),
+      };
+    });
+    const coursesToReqs: any[] = courses.map((course: Course) => {
+      return {
+        course,
+        requirements: this.requirements
+          .filter((requirement: Requirement) => requirement.isFulfilled([course]))
+          .map((req: Requirement) => reqsToCourses.find((reqWithCourses: any) => reqWithCourses.requirement === req)),
+      };
+    });
+
+    coursesToReqs.forEach((courseWithReqs: any) => {
+      courseWithReqs.requirements.forEach((req: any) => {
+        req.courses = req.courses.map((course: Course) => (course === courseWithReqs.course ? courseWithReqs : course));
+      });
+    });
+
+    return coursesToReqs.filter((courseWithReqs: any) => courseWithReqs.requirements.length > 0);
   }
 }

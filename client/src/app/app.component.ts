@@ -12,7 +12,6 @@ import { UserService } from 'services/user.service';
 })
 export class AppComponent {
   state: State;
-  currentCourses: Course[];
 
   @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private loginModalInstance: NgbModalRef;
@@ -33,8 +32,11 @@ export class AppComponent {
       }
 
       this.state = state;
-      this.currentCourses = this.getCurrentCourses();
     });
+  }
+
+  getCurrentCourses(): Course[] {
+    return this.state.userData.semesters.flatMap((semester: Semester) => semester.courses);
   }
 
   openLogin(): void {
@@ -49,9 +51,5 @@ export class AppComponent {
 
   logout(): void {
     this.userService.logout();
-  }
-
-  private getCurrentCourses(): Course[] {
-    return this.state.userData.semesters.flatMap((semester: Semester) => semester.courses);
   }
 }

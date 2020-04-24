@@ -5,7 +5,6 @@ import { Requirement } from 'models/requirement.model';
 import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { MutexRequirement } from 'models/requirements/mutex-requirement.model';
 import { UnitRequirement } from 'models/requirements/unit-requirement.model';
-import { PolyRequirement } from 'models/requirements/poly-requirement.model';
 import { TagRequirement } from 'models/requirements/tag-requirement.model';
 
 @Component({
@@ -16,19 +15,16 @@ import { TagRequirement } from 'models/requirements/tag-requirement.model';
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
   @Input() readonly courses: Course[];
-  @Input() readonly override: string;
-
-  displayedRequirement: Requirement;
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
-  @ViewChild('multiReq', { static: true }) private multiReq: TemplateRef<any>;
+  @ViewChild('multiReqOne', { static: true }) private multiReqOne: TemplateRef<any>;
+  @ViewChild('multiReqSome', { static: true }) private multiReqSome: TemplateRef<any>;
+  @ViewChild('multiReqAll', { static: true }) private multiReqAll: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('mutexReq', { static: true }) private mutexReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
-  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
-  /* eslint-enable @typescript-eslint/no-explicit-any */
-
+  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private requirementDisplayModalReference: NgbModalRef;
 
   constructor(private modalService: NgbModal) {}
@@ -36,11 +32,7 @@ export class RequirementComponent implements OnInit {
   ngOnInit(): void {}
 
   isMulti(): boolean {
-    return this.requirement instanceof MultiRequirement;
-  }
-
-  isPoly(): boolean {
-    return this.requirement instanceof PolyRequirement;
+    return this.requirement instanceof MultiRequirement && !this.requirement.hidden;
   }
 
   getMulti(): MultiRequirement {
@@ -61,31 +53,24 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MutexRequirement;
   }
 
-  getFulfillment(): string {
-    if (this.override) {
-      return this.override;
-    } else if (this.requirement.isFulfilled(this.courses)) {
-      return 'fulfilled';
-    } else {
-      return 'unfulfilled';
-    }
-  }
-
   /**
    * Returns the CSS class name based on the fulfillment status of sub-requirements of a {@link MutexRequirement}, which
    * can be fulfilled, potentially fulfilled, or unfullfilled.
    *
-   * @param number reqFulfillment A fulfillment status as output by {@link MutexRequirement#getFulfillment}.
+   * @param object reqFulfillment An object containing each requirement and its fulfillment status.
    * @return string A CSS class based on the fulfillment status of the requirement.
    */
-  getMutexFulfillment(reqFulfillment: number): string {
-    switch (reqFulfillment) {
-      case MutexRequirement.FULFILLED:
+  getMutexFulfillment(reqFulfillment: { requirement: Requirement; fulfillment: number }): string {
+    switch (reqFulfillment.fulfillment) {
+      case MutexRequirement.FULFILLED: {
         return 'fulfilled';
-      case MutexRequirement.POTENTIAL:
+      }
+      case MutexRequirement.POTENTIAL: {
         return 'potential';
-      default:
+      }
+      default: {
         return 'unfulfilled';
+      }
     }
   }
 
@@ -120,7 +105,14 @@ export class RequirementComponent implements OnInit {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
-      return this.multiReq;
+      const multiReq = this.getMulti();
+      if (multiReq.numRequired === multiReq.requirements.length) {
+        return this.multiReqAll;
+      }
+      if (multiReq.numRequired === 1) {
+        return this.multiReqOne;
+      }
+      return this.multiReqSome;
     }
     if (this.isMutex()) {
       return this.mutexReq;
@@ -146,9 +138,9 @@ export class RequirementComponent implements OnInit {
     return null;
   }
 
-  openRequirementDisplay(requirement: Requirement): void {
-    this.displayedRequirement = requirement;
-    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  openRequirementDisplay(content: TemplateRef<any>): void {
+    this.requirementDisplayModalReference = this.modalService.open(content, { size: 'lg' });
   }
 
   closeRequirementDisplay(): void {
