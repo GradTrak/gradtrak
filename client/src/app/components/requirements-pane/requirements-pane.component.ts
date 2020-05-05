@@ -26,7 +26,7 @@ export class RequirementsPaneComponent implements OnInit {
   ngOnInit(): void {}
 
   openSelector(): void {
-    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
+    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'xl' });
   }
 
   closeSelector(): void {

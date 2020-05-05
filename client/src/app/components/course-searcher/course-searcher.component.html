@@ -1,6 +1,7 @@
 <ng-container *ngIf="allCourses; else loading">
-  <form (ngSubmit)="returnCourse()">
+  <form class="searcher" (ngSubmit)="returnCourse()">
     <input
+      class="search-bar"
       type="text"
       name="course"
       placeholder="Search for a class"

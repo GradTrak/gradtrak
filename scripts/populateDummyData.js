@@ -5,6 +5,7 @@
 const fs = require('fs');
 
 const db = require('../server/config/db');
+const cache = require('../server/config/cache');
 
 const Course = require('../server/models/course');
 const RequirementSet = require('../server/models/requirement-set');
@@ -29,10 +30,9 @@ db.connect()
     return Tag.insertMany(DUMMY_TAG_DATA);
   })
   .then(() => {
-    return Course.deleteMany({});
-  })
-  .then(() => {
-    return Course.insertMany(DUMMY_COURSE_DATA);
+    return Promise.all(
+      DUMMY_COURSE_DATA.map((course) => Course.updateOne({ id: course.id }, course, { upsert: true })),
+    );
   })
   .then(() => {
     return RequirementSet.deleteMany({});
@@ -41,14 +41,18 @@ db.connect()
     return RequirementSet.insertMany(DUMMY_REQUIREMENT_DATA);
   })
   .then(() => {
-    return User.deleteMany({});
-  })
-  .then(() => {
-    return User.insertMany(DUMMY_USERS);
+    return Promise.all(DUMMY_USERS.map((user) => User.updateOne({ username: user.username }, user, { upsert: true })));
   })
   .catch((err) => {
     console.error(err);
   })
   .finally(() => {
     conn.close();
+    cache.del('*', (err, deleted) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`Cache flushed: ${deleted} keys deleted`);
+      }
+    });
   });

@@ -40,4 +40,11 @@ db.connect()
   })
   .finally(() => {
     conn.close();
+    cache.del('*', (err, deleted) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`Cache flushed: ${deleted} keys deleted`);
+      }
+    });
   });
