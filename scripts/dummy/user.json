@@ -41,7 +41,7 @@
   },
   {
     "username": "bryan",
-    "password": "wu",
+    "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$H36GSnM8QJ7fLf8Smq2dsw$Ys4ABKl980gzghQuYaUbD0dbkWiiqGxQDeBnl3la6d0",
     "userdata": {
       "semesters": [
         {
