@@ -109,7 +109,7 @@
     "dept": "COMPSCI",
     "no": "160",
     "id": "compsci160",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -117,7 +117,7 @@
     "dept": "COMPSCI",
     "no": "161",
     "id": "compsci161",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -149,7 +149,7 @@
     "dept": "COMPSCI",
     "no": "169",
     "id": "compsci169",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -157,7 +157,7 @@
     "dept": "COMPSCI",
     "no": "170",
     "id": "compsci170",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -173,7 +173,7 @@
     "dept": "COMPSCI",
     "no": "176",
     "id": "compsci176",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -205,7 +205,7 @@
     "dept": "COMPSCI",
     "no": "W186",
     "id": "compsciw186",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -213,7 +213,7 @@
     "dept": "COMPSCI",
     "no": "188",
     "id": "compsci188",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -221,7 +221,7 @@
     "dept": "COMPSCI",
     "no": "189",
     "id": "compsci189",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 3,
@@ -229,7 +229,7 @@
     "dept": "COMPSCI",
     "no": "C191",
     "id": "compscic191",
-    "tagIds": ["eecs_upper_div", "bio eng_technical_topics"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 1,
@@ -612,191 +612,191 @@
     "title": "Instrumentation in Biology and Medicine",
     "dept": "BIO ENG",
     "no": "101",
-    "id": "bio eng101",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals", "bio eng_design_research"]
+    "id": "bioeng101",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals", "bioeng_design_research"]
   },
   {
     "units": 4,
     "title": "Biomechanics: Analysis and Design",
     "dept": "BIO ENG",
     "no": "102",
-    "id": "bio eng102",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "id": "bioeng102",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals"]
   },
   {
     "units": 4,
     "title": "Engineering Molecules 2",
     "dept": "BIO ENG",
     "no": "103",
-    "id": "bio eng103",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "id": "bioeng103",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals"]
   },
   {
     "units": 4,
     "title": "Biological Transport Phenomena",
     "dept": "BIO ENG",
     "no": "104",
-    "id": "bio eng104",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "id": "bioeng104",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals"]
   },
   {
     "units": 4,
     "title": "Engineering Devices 1",
     "dept": "BIO ENG",
     "no": "105",
-    "id": "bio eng105",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "id": "bioeng105",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals"]
   },
   {
     "units": 4,
     "title": "Introduction to Robotics",
     "dept": "BIO ENG",
     "no": "C106a",
-    "id": "bio engc106a",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+    "id": "bioengc106a",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
     "title": "Robotic Manipulation and Interaction",
     "dept": "BIO ENG",
     "no": "C106b",
-    "id": "bio engc106b",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+    "id": "bioengc106b",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
     "title": "Biomedical Physiology for Engineers",
     "dept": "BIO ENG",
     "no": "110",
-    "id": "bio eng110",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals"]
+    "id": "bioeng110",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals"]
   },
   {
     "units": 4,
     "title": "Functional Biomaterials Development and Characterization",
     "dept": "BIO ENG",
     "no": "111",
-    "id": "bio eng111",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+    "id": "bioeng111",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
     "title": "Molecular Biomechanics and Mechanobiology of the Cell",
     "dept": "BIO ENG",
     "no": "112",
-    "id": "bio eng112",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+    "id": "bioeng112",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
     "title": "STEM Cells and Technologies",
     "dept": "BIO ENG",
     "no": "113",
-    "id": "bio eng113",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+    "id": "bioeng113",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
     "title": "Cell Engineering",
     "dept": "BIO ENG",
     "no": "114",
-    "id": "bio eng114",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics"]
+    "id": "bioeng114",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
     "title": "Introduction to Computational Molecular and Cell Biology",
     "dept": "BIO ENG",
     "no": "131",
-    "id": "bio eng131",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals", "bio eng_lab_course"]
+    "id": "bioeng131",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals", "bioeng_lab_course"]
   },
   {
     "units": 4,
     "title": "Protein Informatics Laboratory",
     "dept": "BIO ENG",
     "no": "144l",
-    "id": "bio eng144l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_fundamentals",  "bio eng_lab_course"]
+    "id": "bioeng144l",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals",  "bioeng_lab_course"]
   },
   {
     "units": 4,
     "title": "Cell Biology for Engineers",
     "dept": "BIO ENG",
     "no": "115",
-    "id": "bio eng115",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course"]
+    "id": "bioeng115",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_lab_course"]
   },
   {
     "units": 4,
     "title": "BioMEMS and Bionanotechnology Laboratory",
     "dept": "BIO ENG",
     "no": "121l",
-    "id": "bio eng121l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course", "bio eng_design_research"]
+    "id": "bioeng121l",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_lab_course", "bioeng_design_research"]
   },
   {
     "units": 4,
     "title": "Laboratory in the Mechanics of Organisms",
     "dept": "BIO ENG",
     "no": "136l",
-    "id": "bio eng136l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course"]
+    "id": "bioeng136l",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_lab_course"]
   },
   {
     "units": 4,
     "title": "Synthetic Biology Laboratory",
     "dept": "BIO ENG",
     "no": "140l",
-    "id": "bio eng140l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course", "bio eng_design_research"]
+    "id": "bioeng140l",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_lab_course", "bioeng_design_research"]
   },
   {
     "units": 4,
     "title": "Molecular and Cellular Biophotonics Laboratory",
     "dept": "BIO ENG",
     "no": "163l",
-    "id": "bio eng163l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course"]
+    "id": "bioeng163l",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_lab_course"]
   },
   {
     "units": 4,
     "title": "Practical Light Microscopy",
     "dept": "BIO ENG",
     "no": "168l",
-    "id": "bio eng168l",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_lab_course", "bio eng_design_research"]
+    "id": "bioeng168l",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_lab_course", "bioeng_design_research"]
   },
   {
     "units": 4,
     "title": "Senior Design Project",
     "dept": "BIO ENG",
     "no": "192",
-    "id": "bio eng192",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_design_research"]
+    "id": "bioeng192",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_design_research"]
   },
   {
     "units": 4,
     "title": "Honors Undergraduate Research",
     "dept": "BIO ENG",
     "no": "H194",
-    "id": "bio engH194",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_design_research"]
+    "id": "bioengH194",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_design_research"]
   },
   {
     "units": 4,
     "title": "Undergraduate Design Research",
     "dept": "BIO ENG",
     "no": "196",
-    "id": "bio eng196",
-    "tagIds": ["bio eng_upper_div", "bio eng_technical_topics", "bio eng_design_research"]
+    "id": "bioeng196",
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_design_research"]
   },
   {
     "units": 3,
     "title": "Ethics in Science and Engneering",
     "dept": "BIO ENG",
     "no": "100",
-    "id": "bio eng100",
-    "tagIds": ["bio eng_ethics", "eecs_ethics"]
+    "id": "bioeng100",
+    "tagIds": ["bioeng_ethics", "eecs_ethics"]
   }
 ]

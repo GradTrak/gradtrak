@@ -1591,7 +1591,7 @@
     ]
   },
   {
-    "id": "bio eng",
+    "id": "bioeng",
     "name": "Bioengineering Major",
     "parentId": "coe",
     "type": "major",
@@ -1767,27 +1767,27 @@
           },
           {
             "type": "course",
-            "id": "bio eng10",
+            "id": "bioeng10",
             "name": "BIO ENG 10",
-            "courseId": "bio eng10"
+            "courseId": "bioeng10"
           },
           {
             "type": "course",
-            "id": "bio eng11",
+            "id": "bioeng11",
             "name": "BIO ENG 11",
-            "courseId": "bio eng11"
+            "courseId": "bioeng11"
           },
           {
             "type": "course",
-            "id": "bio eng26",
+            "id": "bioeng26",
             "name": "BIO ENG 26",
-            "courseId": "bio eng26"
+            "courseId": "bioeng26"
           },
           {
             "type": "course",
-            "id": "bio eng25",
+            "id": "bioeng25",
             "name": "BIO ENG 25",
-            "courseId": "bio eng25"
+            "courseId": "bioeng25"
           }
         ]
       },
@@ -1809,9 +1809,9 @@
                 "units": 24,
                 "requirement": {
                   "type": "tag",
-                  "id": "bio eng_upper_div_course",
+                  "id": "bioeng_upper_div_course",
                   "name": "BioE Upper Division Course",
-                  "tagId": "bio eng_upper_div"
+                  "tagId": "bioeng_upper_div"
                 }
               },
               {
@@ -1821,9 +1821,9 @@
                 "units": 36,
                 "requirement": {
                   "type": "tag",
-                  "id": "bio eng_technical_topics",
+                  "id": "bioeng_technical_topics",
                   "name": "BioE Technical Topic",
-                  "tagId": "bio eng_technical_topics"
+                  "tagId": "bioeng_technical_topics"
                 }
               }
             ]
@@ -1839,7 +1839,7 @@
                 "type": "tag",
                 "id": "bioe_fundamental",
                 "name": "BioE Fundamental",
-                "tagId": "bio eng_fundamentals"
+                "tagId": "bioeng_fundamentals"
               }
             ]
           },
@@ -1847,13 +1847,13 @@
             "type": "tag",
             "id": "bioe_lab_course",
             "name": "BioE Lab Course",
-            "tagId": "bio eng_lab_course"
+            "tagId": "bioeng_lab_course"
           },
           {
             "type": "tag",
             "id": "bioe_design_research",
             "name": "BioE Design Project or Research",
-            "tagId": "bio eng_design_research"
+            "tagId": "bioeng_design_research"
           }
         ]
       },
@@ -1865,7 +1865,7 @@
             "type": "tag",
             "id": "bioe_ethics",
             "name": "Bioengineering Ethics Course",
-            "tagId": "bio eng_ethics"
+            "tagId": "bioeng_ethics"
           }
         ]
       }
