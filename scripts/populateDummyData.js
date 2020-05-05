@@ -4,8 +4,8 @@
 
 const fs = require('fs');
 
-const db = require('../server/config/db');
 const { cache } = require('../server/config/cache');
+const db = require('../server/config/db');
 
 const Course = require('../server/models/course');
 const RequirementSet = require('../server/models/requirement-set');
