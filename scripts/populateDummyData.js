@@ -5,7 +5,7 @@
 const fs = require('fs');
 
 const db = require('../server/config/db');
-const cache = require('../server/config/cache');
+const { cache } = require('../server/config/cache');
 
 const Course = require('../server/models/course');
 const RequirementSet = require('../server/models/requirement-set');
@@ -54,5 +54,6 @@ db.connect()
       } else {
         console.log(`Cache flushed: ${deleted} keys deleted`);
       }
+      cache.client.quit();
     });
   });
