@@ -109,7 +109,7 @@
     "dept": "COMPSCI",
     "no": "160",
     "id": "compsci160",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -117,7 +117,7 @@
     "dept": "COMPSCI",
     "no": "161",
     "id": "compsci161",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -149,7 +149,7 @@
     "dept": "COMPSCI",
     "no": "169",
     "id": "compsci169",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -157,7 +157,7 @@
     "dept": "COMPSCI",
     "no": "170",
     "id": "compsci170",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -166,6 +166,14 @@
     "no": "174",
     "id": "compsci174",
     "tagIds": ["eecs_upper_div"]
+  },
+  {
+    "units": 4,
+    "title": "Algorithms for Computational Biology",
+    "dept": "COMPSCI",
+    "no": "176",
+    "id": "compsci176",
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -197,7 +205,7 @@
     "dept": "COMPSCI",
     "no": "W186",
     "id": "compsciw186",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -205,7 +213,7 @@
     "dept": "COMPSCI",
     "no": "188",
     "id": "compsci188",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 4,
@@ -213,7 +221,7 @@
     "dept": "COMPSCI",
     "no": "189",
     "id": "compsci189",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 3,
@@ -221,7 +229,7 @@
     "dept": "COMPSCI",
     "no": "C191",
     "id": "compscic191",
-    "tagIds": ["eecs_upper_div"]
+    "tagIds": ["eecs_upper_div", "bioeng_technical_topics"]
   },
   {
     "units": 1,
