@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 
+const { cache } = require('../server/config/cache');
 const db = require('../server/config/db');
 
 const Course = require('../server/models/course');
@@ -46,5 +47,6 @@ db.connect()
       } else {
         console.log(`Cache flushed: ${deleted} keys deleted`);
       }
+      cache.client.quit();
     });
   });

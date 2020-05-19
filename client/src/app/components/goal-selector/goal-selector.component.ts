@@ -53,7 +53,7 @@ export class GoalSelectorComponent implements OnInit {
   }
 
   /**
-   * Updates {@link GoalSelectionState#searchedGoals} for each state so that ir contains only goals that match the
+   * Updates {@link GoalSelectionState#searchedGoals} for each state so that it contains only goals that match the
    * specifications of {@link GoalSelectorComponent#searchFunction}.
    */
   updateGoalSearch(): void {

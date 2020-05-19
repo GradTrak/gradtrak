@@ -114,5 +114,29 @@
   {
     "id": "mcb_neu_elective",
     "name": "MCB NEU Elective"
+  },
+  {
+    "id": "bioeng_ethics",
+    "name": "Bioengineering Ethics Course"
+  },
+  {
+    "id": "bioeng_design_research",
+    "name": "BioE Design Project or Research"
+  },
+  {
+    "id": "bioeng_lab_course",
+    "name": "BioE Lab Course"
+  },
+  {
+    "id": "bioeng_fundamentals",
+    "name": "BioE Fundamental"
+  },
+  {
+    "id": "bioeng_technical_topics",
+    "name": "BioE Technical Topic"
+  },
+  {
+    "id": "bioeng_upper_div",
+    "name": "BioE Upper Division Course"
   }
 ]
