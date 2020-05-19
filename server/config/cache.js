@@ -7,4 +7,3 @@ const cache = redisCache({
 cache.on('error', console.error.bind(console));
 
 module.exports.cache = cache;
-//Bryan was here. Just cuz.
