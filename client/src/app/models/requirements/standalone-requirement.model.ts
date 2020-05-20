@@ -10,12 +10,23 @@ export abstract class StandaloneRequirement extends Requirement {
 
   isFulfilled(courses: Course[]): boolean {
     return courses.some((course: Course) => {
+      return this.equivIsFulfillableBy(course, new Set<Course>());
+    });
+  }
+
+  /**
+   * Performs a graph traversal of the graph of equivalent courses starting at the given course, returning true if any
+   * equivalent course fulfills the requirement.
+   */
+  private equivIsFulfillableBy(course: Course, visited: Set<Course>): boolean {
+    if (!visited.has(course)) {
+      visited.add(course);
       if (this.isFulfillableBy(course)) {
         return true;
-      } else if (course.equiv.some((equivCourse) => this.isFulfillableBy(equivCourse))) {
+      } else if (course.equiv.some((equivCourse) => this.equivIsFulfillableBy(equivCourse, visited))) {
         return true;
       }
-      return false;
-    });
+    }
+    return false;
   }
 }
