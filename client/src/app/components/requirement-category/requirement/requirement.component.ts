@@ -147,6 +147,10 @@ export class RequirementComponent implements OnInit {
     return null;
   }
 
+  isManuallyFulfilled(requirement: Requirement): boolean {
+    return this.manuallyFulfilled && this.manuallyFulfilled.includes(requirement.id);
+  }
+
   openRequirementDisplay(requirement: Requirement): void {
     this.displayedRequirement = requirement;
     this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
