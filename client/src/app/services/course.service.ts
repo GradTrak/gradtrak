@@ -62,7 +62,8 @@ export class CourseService {
         return coursesMap;
       }),
       map((data: Map<string, Course>) => {
-        
+        data.forEach((course: Course) => course.mapEquiv(data));
+        return data;
       }
 
       )

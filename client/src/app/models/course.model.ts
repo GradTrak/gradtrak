@@ -22,6 +22,7 @@ export class Course {
     this.units = proto.units;
     this.tags = proto.tagIds.map((tagId: string) => tagMap.get(tagId));
     this.equivIds = proto.equivIds;
+    this.equiv = null;
   }
 
   getName(): string {
@@ -34,5 +35,9 @@ export class Course {
 
   getBareNumber(): number {
     return parseInt(this.no.replace(/[^\d]/g, ''), 10);
+  }
+
+  mapEquiv(map: Map<string, Course>): void {
+    this.equiv = this.equivIds.map((id: string) => map.get(id));
   }
 }
