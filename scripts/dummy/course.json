@@ -37,7 +37,8 @@
     "dept": "COMPSCI",
     "no": "47A",
     "id": "compsci47a",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": ["compsci61a"]
   },
   {
     "units": 1,
@@ -45,7 +46,8 @@
     "dept": "COMPSCI",
     "no": "47B",
     "id": "compsci47b",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": ["compsci61b"]
   },
   {
     "units": 1,
@@ -53,7 +55,8 @@
     "dept": "COMPSCI",
     "no": "47C",
     "id": "compsci47c",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": ["compsci61c"]
   },
   {
     "units": 4,
@@ -254,6 +257,24 @@
     "no": "198",
     "id": "compsci198",
     "tagIds": []
+  },
+  {
+    "units": 4,
+    "title": "Designing Information Devices and Systems I",
+    "dept": "EE",
+    "no": "16A",
+    "id": "ee16a",
+    "tagIds": [],
+    "equivIds": ["eecs16a"]
+  },
+  {
+    "units": 4,
+    "title": "Designing Information Devices and Systems II",
+    "dept": "EE",
+    "no": "16B",
+    "id": "ee16b",
+    "tagIds": [],
+    "equivIds": ["eecs16b"]
   },
   {
     "units": 4,
@@ -717,7 +738,7 @@
     "dept": "BIO ENG",
     "no": "144l",
     "id": "bioeng144l",
-    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals",  "bioeng_lab_course"]
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals", "bioeng_lab_course"]
   },
   {
     "units": 4,

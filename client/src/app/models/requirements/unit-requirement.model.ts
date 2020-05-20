@@ -7,16 +7,9 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
  * fulfilled if sum of the number of units that fulfill its underlying base requirement is greater than a specified
  * number of units.
  */
-export class UnitRequirement implements Requirement {
-  id: string;
-  name: string;
-
+export class UnitRequirement extends Requirement {
   units: number;
   requirement: StandaloneRequirement;
-
-  constructor(obj: object) {
-    Object.assign(this, obj);
-  }
 
   isFulfilled(courses: Course[]): boolean {
     return this.unitsFulfilled(courses) >= this.units;

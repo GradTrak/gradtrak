@@ -1,6 +1,5 @@
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
-import { MultiRequirement } from 'models/requirements/multi-requirement.model';
 import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
 /**
@@ -8,13 +7,24 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
  * specified number of its child requirements. This is used for a {@link StandaloneRequirement} that must fulfill
  * Requirement A or Requirement B or Requirement A and Requirement B.
  */
-export class PolyRequirement extends MultiRequirement implements StandaloneRequirement {
-  isFulfilled(courses: Course[]): boolean {
-    return courses.some((course: Course) => this.isFulfillableBy(course));
-  }
+export class PolyRequirement extends StandaloneRequirement {
+  requirements: Requirement[];
+  numRequired: number;
+  hidden: boolean;
 
   isFulfillableBy(course: Course): boolean {
-    return super.isFulfilled([course]);
+    return this.numFulfilled(course) >= this.numRequired;
+  }
+
+  numFulfilled(course: Course): number {
+    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled([course])).length;
+  }
+
+  getAnnotation(): string {
+    if (this.hidden) {
+      return this.toString();
+    }
+    return null;
   }
 
   toString(): string {
