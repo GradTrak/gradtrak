@@ -11,6 +11,7 @@ export class UnitRequirement extends Requirement {
   units: number;
   requirement: StandaloneRequirement;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override: string[]): boolean {
     return this.unitsFulfilled(courses) >= this.units;
   }
