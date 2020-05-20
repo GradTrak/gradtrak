@@ -11,7 +11,7 @@ export class UnitRequirement extends Requirement {
   units: number;
   requirement: StandaloneRequirement;
 
-  isFulfilled(courses: Course[]): boolean {
+  isFulfilledWith(courses: Course[], override: string[]): boolean {
     return this.unitsFulfilled(courses) >= this.units;
   }
 

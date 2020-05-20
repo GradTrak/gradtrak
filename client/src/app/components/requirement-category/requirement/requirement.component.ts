@@ -17,6 +17,7 @@ export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
+  @Input() readonly manuallyFulfilled: string[];
 
   displayedRequirement: Requirement;
 
@@ -64,7 +65,7 @@ export class RequirementComponent implements OnInit {
   getFulfillment(): string {
     if (this.override) {
       return this.override;
-    } else if (this.requirement.isFulfilled(this.courses)) {
+    } else if (this.requirement.isFulfilled(this.courses, this.manuallyFulfilled)) {
       return 'fulfilled';
     } else {
       return 'unfulfilled';

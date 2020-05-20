@@ -10,6 +10,7 @@ import { RequirementSet } from 'models/requirement-set.model';
 export class RequirementSetComponent implements OnInit {
   @Input() readonly requirementSet: RequirementSet;
   @Input() readonly courses: Course[];
+  @Input() readonly manuallyFulfilled: Map<string, string[]>;
 
   constructor() {}
 

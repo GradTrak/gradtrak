@@ -18,7 +18,7 @@
 <ng-container *ngIf="!state.loading; else loading">
   <div class="body">
     <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
-    <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals"></app-requirements-pane>
+    <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals" [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"></app-requirements-pane>
   </div>
 </ng-container>
 

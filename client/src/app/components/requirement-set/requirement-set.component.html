@@ -3,4 +3,5 @@
   *ngFor="let requirementCategory of requirementSet.requirementCategories"
   [requirementCategory]="requirementCategory"
   [courses]="courses"
+  [manuallyFulfilled]="manuallyFulfilled.get(requirementSet.id)"
 ></app-requirement-category>

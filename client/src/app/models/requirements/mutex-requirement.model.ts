@@ -27,8 +27,9 @@ export class MutexRequirement extends Requirement {
   static readonly FULFILLED = 2;
 
   requirements: StandaloneRequirement[];
-
-  isFulfilled(courses: Course[]): boolean {
+  
+  // FIXME pass override to all necessary methods
+  isFulfilledWith(courses: Course[], override: string[]): boolean {
     return this.getFulfillment(courses).every(
       (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
     );

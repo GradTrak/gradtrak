@@ -8,7 +8,7 @@ import { Requirement } from 'models/requirement.model';
 export abstract class StandaloneRequirement extends Requirement {
   abstract isFulfillableBy(course: Course): boolean;
 
-  isFulfilled(courses: Course[]): boolean {
+  isFulfilledWith(courses: Course[], override: string[]): boolean {
     return courses.some((course: Course) => {
       return this.equivIsFulfillableBy(course, new Set<Course>());
     });

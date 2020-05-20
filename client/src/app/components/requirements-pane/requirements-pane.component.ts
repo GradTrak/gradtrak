@@ -13,6 +13,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 export class RequirementsPaneComponent implements OnInit {
   @Input() readonly goals: RequirementSet[];
   @Input() readonly courses: Course[];
+  @Input() readonly manuallyFulfilled: Map<string, string[]>;
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;

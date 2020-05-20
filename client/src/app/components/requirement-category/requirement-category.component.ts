@@ -10,6 +10,7 @@ import { RequirementCategory } from 'models/requirement-category.model';
 export class RequirementCategoryComponent implements OnInit {
   @Input() readonly requirementCategory: RequirementCategory;
   @Input() readonly courses: Course[];
+  @Input() readonly manuallyFulfilled: string[];
 
   constructor() {}
 

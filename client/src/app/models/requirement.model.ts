@@ -12,7 +12,14 @@ export abstract class Requirement {
     Object.assign(this, obj);
   }
 
-  abstract isFulfilled(courses: Course[]): boolean;
+  isFulfilled(courses: Course[], override: string[]): boolean {
+    if (override && override.includes(this.id)) {
+      return true;
+    }
+    return this.isFulfilledWith(courses, override);
+  }
+
+  abstract isFulfilledWith(courses: Course[], override: string[]): boolean;
 
   abstract getAnnotation(): string;
 
