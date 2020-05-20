@@ -9,16 +9,19 @@
         "name": "UC Requirements",
         "requirements": [
           {
+            "id": "cw",
             "type": "tag",
             "name": "Entry-Level Writing",
             "tagId": "cw"
           },
           {
+            "id": "ah",
             "type": "tag",
             "name": "American History",
             "tagId": "ah"
           },
           {
+            "id": "ai",
             "type": "tag",
             "name": "American Institutions",
             "tagId": "ai"
@@ -37,6 +40,7 @@
         "name": "American Cultures",
         "requirements": [
           {
+            "id": "ac",
             "type": "tag",
             "name": "American Cultures",
             "tagId": "ac"
@@ -55,46 +59,55 @@
         "name": "Humanities and Social Sciences",
         "requirements": [
           {
+            "id": "hss",
             "type": "mutex",
             "name": "CoE Humanities and Social Sciences",
             "requirements": [
               {
+                "id": "rc_a",
                 "type": "tag",
                 "name": "R&C Part A",
                 "tagId": "rc_a"
               },
               {
+                "id": "rc_b",
                 "type": "tag",
                 "name": "R&C Part B",
                 "tagId": "rc_b"
               },
               {
+                "id": "hss_1",
                 "type": "poly",
                 "name": "H/SS",
                 "numRequired": 1,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "hss_1_arts",
                     "type": "tag",
                     "name": "Arts and Literature",
                     "tagId": "ls_arts"
                   },
                   {
+                    "id": "hss_1_hist",
                     "type": "tag",
                     "name": "Historical Studies",
                     "tagId": "ls_hist"
                   },
                   {
+                    "id": "hss_1_inter",
                     "type": "tag",
                     "name": "International Studies",
                     "tagId": "ls_inter"
                   },
                   {
+                    "id": "hss_1_philo",
                     "type": "tag",
                     "name": "Philosophy and Values",
                     "tagId": "ls_philo"
                   },
                   {
+                    "id": "hss_1_socio",
                     "type": "tag",
                     "name": "Social and Behavioral Science",
                     "tagId": "ls_socio"
@@ -102,32 +115,38 @@
                 ]
               },
               {
+                "id": "hss_2",
                 "type": "poly",
                 "name": "H/SS",
                 "numRequired": 1,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "hss_2_arts",
                     "type": "tag",
                     "name": "Arts and Literature",
                     "tagId": "ls_arts"
                   },
                   {
+                    "id": "hss_2_hist",
                     "type": "tag",
                     "name": "Historical Studies",
                     "tagId": "ls_hist"
                   },
                   {
+                    "id": "hss_2_inter",
                     "type": "tag",
                     "name": "International Studies",
                     "tagId": "ls_inter"
                   },
                   {
+                    "id": "hss_2_philo",
                     "type": "tag",
                     "name": "Philosophy and Values",
                     "tagId": "ls_philo"
                   },
                   {
+                    "id": "hss_2_socio",
                     "type": "tag",
                     "name": "Social and Behavioral Science",
                     "tagId": "ls_socio"
@@ -135,37 +154,44 @@
                 ]
               },
               {
+                "id": "hssupper_1",
                 "type": "poly",
                 "name": "H/SS Upper Division",
                 "numRequired": 2,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "hssupper_1_poly",
                     "type": "poly",
                     "name": "H/SS",
                     "numRequired": 1,
                     "requirements": [
                       {
+                        "id": "hssupper_1_arts",
                         "type": "tag",
                         "name": "Arts and Literature",
                         "tagId": "ls_arts"
                       },
                       {
+                        "id": "hssupper_1_hist",
                         "type": "tag",
                         "name": "Historical Studies",
                         "tagId": "ls_hist"
                       },
                       {
+                        "id": "hssupper_1_inter",
                         "type": "tag",
                         "name": "International Studies",
                         "tagId": "ls_inter"
                       },
                       {
+                        "id": "hssupper_1_philo",
                         "type": "tag",
                         "name": "Philosophy and Values",
                         "tagId": "ls_philo"
                       },
                       {
+                        "id": "hssupper_1_socio",
                         "type": "tag",
                         "name": "Social and Behavioral Science",
                         "tagId": "ls_socio"
@@ -173,6 +199,7 @@
                     ]
                   },
                   {
+                    "id": "hssupper_1_upper",
                     "type": "tag",
                     "name": "Upper Division Course",
                     "tagId": "upper_div"
@@ -180,37 +207,44 @@
                 ]
               },
               {
+                "id": "hssupper_2",
                 "type": "poly",
                 "name": "H/SS Upper Division",
                 "numRequired": 2,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "hssupper_2_poly",
                     "type": "poly",
                     "name": "H/SS",
                     "numRequired": 1,
                     "requirements": [
                       {
+                        "id": "hssupper_2_arts",
                         "type": "tag",
                         "name": "Arts and Literature",
                         "tagId": "ls_arts"
                       },
                       {
+                        "id": "hssupper_2_hist",
                         "type": "tag",
                         "name": "Historical Studies",
                         "tagId": "ls_hist"
                       },
                       {
+                        "id": "hssupper_2_inter",
                         "type": "tag",
                         "name": "International Studies",
                         "tagId": "ls_inter"
                       },
                       {
+                        "id": "hssupper_2_philo",
                         "type": "tag",
                         "name": "Philosophy and Values",
                         "tagId": "ls_philo"
                       },
                       {
+                        "id": "hssupper_2_socio",
                         "type": "tag",
                         "name": "Social and Behavioral Science",
                         "tagId": "ls_socio"
@@ -218,6 +252,7 @@
                     ]
                   },
                   {
+                    "id": "hssupper_2_upper",
                     "type": "tag",
                     "name": "Upper Division Course",
                     "tagId": "upper_div"
@@ -240,24 +275,26 @@
         "name": "Essential Skills",
         "requirements": [
           {
+            "id": "rc_a",
             "type": "tag",
             "name": "R&C Part A",
             "tagId": "rc_a"
           },
           {
+            "id": "rc_a",
             "type": "tag",
             "name": "R&C Part B",
             "tagId": "rc_b"
           },
           {
+            "id": "quant",
             "type": "tag",
-            "id": "ls_quant",
             "name": "Quantitative Reasoning",
             "tagId": "ls_quant"
           },
           {
+            "id": "lang",
             "type": "tag",
-            "id": "ls_lang",
             "name": "Foreign Language",
             "tagId": "ls_lang"
           }
@@ -267,40 +304,48 @@
         "name": "Breadth Requirements",
         "requirements": [
           {
+            "id": "breadth",
             "type": "mutex",
             "name": "L&S Breadth Requirements",
             "requirements": [
               {
+                "id": "ls_arts",
                 "type": "tag",
                 "name": "Arts and Literature",
                 "tagId": "ls_arts"
               },
               {
+                "id": "ls_bio",
                 "type": "tag",
                 "name": "Biological Science",
                 "tagId": "ls_bio"
               },
               {
+                "id": "ls_hist",
                 "type": "tag",
                 "name": "Historical Studies",
                 "tagId": "ls_hist"
               },
               {
+                "id": "ls_inter",
                 "type": "tag",
                 "name": "International Studies",
                 "tagId": "ls_inter"
               },
               {
+                "id": "ls_philo",
                 "type": "tag",
                 "name": "Philosophy and Values",
                 "tagId": "ls_philo"
               },
               {
+                "id": "ls_phys",
                 "type": "tag",
                 "name": "Physical Science",
                 "tagId": "ls_phys"
               },
               {
+                "id": "ls_socio",
                 "type": "tag",
                 "name": "Social and Behavioral Science",
                 "tagId": "ls_socio"
@@ -321,16 +366,19 @@
         "name": "Math",
         "requirements": [
           {
+            "id": "math1a",
             "type": "course",
             "name": "MATH 1A",
             "courseId": "math1a"
           },
           {
+            "id": "math1b",
             "type": "course",
             "name": "MATH 1B",
             "courseId": "math1b"
           },
           {
+            "id": "compsci70",
             "type": "course",
             "name": "COMPSCI 70",
             "courseId": "compsci70"
@@ -341,65 +389,31 @@
         "name": "Lower Division",
         "requirements": [
           {
-            "type": "multi",
+            "id": "compsci61a",
+            "type": "course",
             "name": "COMPSCI 61A",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61A",
-                "courseId": "compsci61a"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47A",
-                "courseId": "compsci47a"
-              }
-            ]
+            "courseId": "compsci61a"
           },
           {
-            "type": "multi",
+            "id": "compsci61b",
+            "type": "course",
             "name": "COMPSCI 61B",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61B",
-                "courseId": "compsci61b"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47B",
-                "courseId": "compsci47b"
-              }
-            ]
+            "courseId": "compsci61b"
           },
           {
-            "type": "multi",
+            "id": "compsci61c",
+            "type": "course",
             "name": "COMPSCI 61C",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61C",
-                "courseId": "compsci61c"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47C",
-                "courseId": "compsci47c"
-              }
-            ]
+            "courseId": "compsci61c"
           },
           {
+            "id": "eecs16a",
             "type": "course",
             "name": "EECS 16A",
             "courseId": "eecs16a"
           },
           {
+            "id": "eecs16b",
             "type": "course",
             "name": "EECS 16B",
             "courseId": "eecs16b"
@@ -410,10 +424,12 @@
         "name": "Upper Division",
         "requirements": [
           {
+            "id": "upper_div",
             "type": "unit",
             "name": "Upper Division",
             "units": 20,
             "requirement": {
+              "id": "eecs_upper_div",
               "type": "tag",
               "name": "EECS Upper Division Course",
               "tagId": "eecs_upper_div"
@@ -433,21 +449,25 @@
         "name": "Math",
         "requirements": [
           {
+            "id": "math1a",
             "type": "course",
             "name": "MATH 1A",
             "courseId": "math1a"
           },
           {
+            "id": "math1b",
             "type": "course",
             "name": "MATH 1B",
             "courseId": "math1b"
           },
           {
+            "id": "math53",
             "type": "course",
             "name": "MATH 53",
             "courseId": "math53"
           },
           {
+            "id": "compsci70",
             "type": "course",
             "name": "COMPSCI 70",
             "courseId": "compsci70"
@@ -458,23 +478,27 @@
         "name": "Physics",
         "requirements": [
           {
+            "id": "physics",
             "type": "multi",
             "name": "EECS Physics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "physics7",
                 "type": "multi",
                 "name": "EECS Physics 7A/B",
                 "numRequired": 2,
                 "hidden": false,
                 "requirements": [
                   {
+                    "id": "physics7a",
                     "type": "course",
                     "name": "PHYSICS 7A",
                     "courseId": "physics7a"
                   },
                   {
+                    "id": "physics7b",
                     "type": "course",
                     "name": "PHYSICS 7B",
                     "courseId": "physics7b"
@@ -482,17 +506,20 @@
                 ]
               },
               {
+                "id": "physics5",
                 "type": "multi",
                 "name": "EECS Physics 5A/B",
                 "numRequired": 2,
                 "hidden": false,
                 "requirements": [
                   {
+                    "id": "physics5a",
                     "type": "course",
                     "name": "PHYSICS 5A",
                     "courseId": "physics5a"
                   },
                   {
+                    "id": "physics5b",
                     "type": "course",
                     "name": "PHYSICS 5B",
                     "courseId": "physics5b"
@@ -507,65 +534,31 @@
         "name": "Lower Division",
         "requirements": [
           {
-            "type": "multi",
+            "id": "compsci61a",
+            "type": "course",
             "name": "COMPSCI 61A",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61A",
-                "courseId": "compsci61a"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47A",
-                "courseId": "compsci47a"
-              }
-            ]
+            "courseId": "compsci61a"
           },
           {
-            "type": "multi",
+            "id": "compsci61b",
+            "type": "course",
             "name": "COMPSCI 61B",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61B",
-                "courseId": "compsci61b"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47B",
-                "courseId": "compsci47b"
-              }
-            ]
+            "courseId": "compsci61b"
           },
           {
-            "type": "multi",
+            "id": "compsci61c",
+            "type": "course",
             "name": "COMPSCI 61C",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61C",
-                "courseId": "compsci61c"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47C",
-                "courseId": "compsci47c"
-              }
-            ]
+            "courseId": "compsci61c"
           },
           {
+            "id": "eecs16a",
             "type": "course",
             "name": "EECS 16A",
             "courseId": "eecs16a"
           },
           {
+            "id": "eecs16b",
             "type": "course",
             "name": "EECS 16B",
             "courseId": "eecs16b"
@@ -576,10 +569,12 @@
         "name": "Upper Division",
         "requirements": [
           {
+            "id": "upper_div",
             "type": "unit",
             "name": "Upper Division",
             "units": 20,
             "requirement": {
+              "id": "eecs_upper_div",
               "type": "tag",
               "name": "EECS Upper Division Course",
               "tagId": "eecs_upper_div"
@@ -591,6 +586,7 @@
         "name": "Ethics",
         "requirements": [
           {
+            "id": "eecs_ethics",
             "type": "tag",
             "name": "EECS Ethics Course",
             "tagId": "eecs_ethics"
@@ -606,44 +602,46 @@
     "type": "major",
     "requirementCategories": [
       {
-        "name": "LINUIGS 100",
-        "requirements": [
-          {
-            "type": "course",
-            "name": "LINGUIS 100",
-            "courseId": "linguis100"
-          }
-        ]
-      },
-      {
         "name": "Core",
         "requirements": [
           {
+            "id": "linguis100",
+            "type": "course",
+            "name": "LINGUIS 100",
+            "courseId": "linguis100"
+          },
+          {
+            "id": "core",
             "type": "multi",
             "name": "Linguistics Core",
             "numRequired": 4,
             "requirements": [
               {
+                "id": "linguis110",
                 "type": "course",
                 "name": "LINGUIS 110",
                 "courseId": "linguis110"
               },
               {
+                "id": "linguis111",
                 "type": "course",
                 "name": "LINGUIS 111",
                 "courseId": "linguis111"
               },
               {
+                "id": "linguis115",
                 "type": "course",
                 "name": "LINGUIS 115",
                 "courseId": "linguis115"
               },
               {
+                "id": "linguis120",
                 "type": "course",
                 "name": "LINGUIS 120",
                 "courseId": "linguis120"
               },
               {
+                "id": "linguis130",
                 "type": "course",
                 "name": "LINGUIS 130",
                 "courseId": "linguis130"
@@ -656,10 +654,12 @@
         "name": "Electives",
         "requirements": [
           {
+            "id": "electives",
             "type": "unit",
             "name": "Linguistics Electives",
             "units": 10,
             "requirement": {
+              "id": "linguis_elective",
               "type": "tag",
               "name": "Linguistics Elective",
               "tagId": "linguis_elective"
@@ -679,21 +679,25 @@
         "name": "General Math",
         "requirements": [
           {
+            "id": "math1a",
             "type": "course",
             "name": "MATH 1A",
             "courseId": "math1a"
           },
           {
+            "id": "math1b",
             "type": "course",
             "name": "MATH 1B",
             "courseId": "math1b"
           },
           {
+            "id": "math53",
             "type": "course",
             "name": "MATH 53",
             "courseId": "math53"
           },
           {
+            "id": "math54",
             "type": "course",
             "name": "MATH 54",
             "courseId": "math54"
@@ -704,32 +708,38 @@
         "name": "Lower Division Statistics",
         "requirements": [
           {
+            "id": "lower_division",
             "type": "multi",
             "name": "Lower Division Statistics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "statc8",
                 "type": "course",
                 "name": "STAT C8",
                 "courseId": "statc8"
               },
               {
+                "id": "compscic8",
                 "type": "course",
                 "name": "COMPSCI C8",
                 "courseId": "compscic8"
               },
               {
+                "id": "infoc8",
                 "type": "course",
                 "name": "INFO C8",
                 "courseId": "infoc8"
               },
               {
+                "id": "stat20",
                 "type": "course",
                 "name": "STAT 20",
                 "courseId": "stat20"
               },
               {
+                "id": "stat28",
                 "type": "course",
                 "name": "STAT 28",
                 "courseId": "stat28"
@@ -742,22 +752,26 @@
         "name": "Core Statistics Courses",
         "requirements": [
           {
+            "id": "data",
             "type": "multi",
             "name": "Data",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "stat134",
                 "type": "course",
                 "name": "STAT 134",
                 "courseId": "stat134"
               },
               {
+                "id": "statc100",
                 "type": "course",
                 "name": "STAT C100",
                 "courseId": "statc100"
               },
               {
+                "id": "compscic100",
                 "type": "course",
                 "name": "COMPSCI C100",
                 "courseId": "compscic100"
@@ -765,17 +779,20 @@
             ]
           },
           {
+            "id": "probability",
             "type": "multi",
             "name": "Probability",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "stat134",
                 "type": "course",
                 "name": "STAT 134",
                 "courseId": "stat134"
               },
               {
+                "id": "stat140",
                 "type": "course",
                 "name": "STAT 140",
                 "courseId": "stat140"
@@ -783,6 +800,7 @@
             ]
           },
           {
+            "id": "stat135",
             "type": "course",
             "name": "STAT 135",
             "courseId": "stat135"
@@ -793,62 +811,74 @@
         "name": "Statistics Electives",
         "requirements": [
           {
+            "id": "electives",
             "type": "multi",
             "name": "Statistics Electives",
             "numRequired": 3,
             "hidden": false,
             "requirements": [
               {
+                "id": "stat102",
                 "type": "course",
                 "name": "STAT 102",
                 "courseId": "stat102"
               },
               {
+                "id": "stat150",
                 "type": "course",
                 "name": "STAT 150",
                 "courseId": "stat150"
               },
               {
+                "id": "stat151a",
                 "type": "course",
                 "name": "STAT 151A",
                 "courseId": "stat151a"
               },
               {
+                "id": "stat152",
                 "type": "course",
                 "name": "STAT 152",
                 "courseId": "stat152"
               },
               {
+                "id": "stat153",
                 "type": "course",
                 "name": "STAT 153",
                 "courseId": "stat153"
               },
               {
+                "id": "stat154",
                 "type": "course",
                 "name": "STAT 154",
                 "courseId": "stat154"
               },
               {
+                "id": "stat155",
                 "type": "course",
                 "name": "STAT 155",
                 "courseId": "stat155"
               },
               {
+                "id": "stat156",
                 "type": "course",
                 "name": "STAT 156",
                 "courseId": "stat156"
               },
               {
+                "id": "stat157",
                 "type": "course",
                 "name": "STAT 157",
                 "courseId": "stat157"
               },
               {
+                "id": "stat158",
                 "type": "course",
                 "name": "STAT 158",
                 "courseId": "stat158"
               },
               {
+                "id": "stat159",
                 "type": "course",
                 "name": "STAT 159",
                 "courseId": "stat159"
@@ -861,20 +891,24 @@
         "name": "Cluster Courses",
         "requirements": [
           {
+            "id": "cluster",
             "type": "mutex",
             "name": "Cluster Courses",
             "requirements": [
               {
+                "id": "stat_cluster_1",
                 "type": "tag",
                 "name": "Cluster Course",
                 "tagId": "stat_cluster"
               },
               {
+                "id": "stat_cluster_2",
                 "type": "tag",
                 "name": "Cluster Course",
                 "tagId": "stat_cluster"
               },
               {
+                "id": "stat_cluster_3",
                 "type": "tag",
                 "name": "Cluster Course",
                 "tagId": "stat_cluster"
@@ -895,17 +929,20 @@
         "name": "Math",
         "requirements": [
           {
+            "id": "math10a1a",
             "type": "multi",
             "name": "MATH 10A",
             "numRequired": 1,
             "hidden": true,
             "requirements": [
               {
+                "id": "math10a",
                 "type": "course",
                 "name": "MATH 10A",
                 "courseId": "math10a"
               },
               {
+                "id": "math1a",
                 "type": "course",
                 "name": "MATH 1A",
                 "courseId": "math1a"
@@ -913,17 +950,20 @@
             ]
           },
           {
+            "id": "math10b1b",
             "type": "multi",
             "name": "MATH 10B",
             "numRequired": 1,
             "hidden": true,
             "requirements": [
               {
+                "id": "math10b",
                 "type": "course",
                 "name": "MATH 10B",
                 "courseId": "math10b"
               },
               {
+                "id": "math1b",
                 "type": "course",
                 "name": "MATH 1B",
                 "courseId": "math1b"
@@ -936,17 +976,20 @@
         "name": "Chemistry",
         "requirements": [
           {
+            "id": "chem1a4a",
             "type": "multi",
             "name": "CHEM 1A",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "chem1a",
                 "type": "course",
                 "name": "CHEM 1A",
                 "courseId": "chem1a"
               },
               {
+                "id": "chem4a",
                 "type": "course",
                 "name": "CHEM 4A",
                 "courseId": "chem4a"
@@ -954,11 +997,13 @@
             ]
           },
           {
+            "id": "chem3a",
             "type": "course",
             "name": "CHEM 3A",
             "courseId": "chem3a"
           },
           {
+            "id": "chem3b",
             "type": "course",
             "name": "CHEM 3B",
             "courseId": "chem3b"
@@ -969,11 +1014,13 @@
         "name": "Biology",
         "requirements": [
           {
+            "id": "biology1a",
             "type": "course",
             "name": "BIOLOGY 1A",
             "courseId": "biology1a"
           },
           {
+            "id": "biology1b",
             "type": "course",
             "name": "BIOLOGY 1B",
             "courseId": "biology1b"
@@ -984,17 +1031,20 @@
         "name": "Physics",
         "requirements": [
           {
+            "id": "physics8a7a",
             "type": "multi",
             "name": "PHYSICS 8A",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "physics8a",
                 "type": "course",
                 "name": "PHYSICS 8A",
                 "courseId": "physics8a"
               },
               {
+                "id": "physics7a",
                 "type": "course",
                 "name": "PHYSICS 7A",
                 "courseId": "physics7a"
@@ -1002,17 +1052,20 @@
             ]
           },
           {
+            "id": "physics8b7b",
             "type": "multi",
             "name": "PHYSICS 8B",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "physics8b",
                 "type": "course",
                 "name": "PHYSICS 8B",
                 "courseId": "physics8b"
               },
               {
+                "id": "physics7b",
                 "type": "course",
                 "name": "PHYSICS 7B",
                 "courseId": "physics7b"
@@ -1033,32 +1086,38 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbic100a",
             "type": "course",
             "name": "MCELLBI C100A",
             "courseId": "mcellbic100a"
           },
           {
+            "id": "mcellbi100b",
             "type": "course",
             "name": "MCELLBI 100B",
             "courseId": "mcellbi100b"
           },
           {
+            "id": "mcellbi110",
             "type": "course",
             "name": "MCELLBI 110",
             "courseId": "mcellbi110"
           },
           {
+            "id": "genetics",
             "type": "multi",
             "name": "Genetics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi140",
                 "type": "course",
                 "name": "MCELLBI 140",
                 "courseId": "mcellbi140"
               },
               {
+                "id": "mcellbic148",
                 "type": "course",
                 "name": "MCELLBI C148",
                 "courseId": "mcellbic148"
@@ -1066,17 +1125,20 @@
             ]
           },
           {
+            "id": "lab",
             "type": "multi",
             "name": "Laboratory",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbic110l",
                 "type": "course",
                 "name": "MCELLBI C110L",
                 "courseId": "mcellbic110l"
               },
               {
+                "id": "mcellbi170l",
                 "type": "course",
                 "name": "MCELLBI 170L",
                 "courseId": "mcellbi170l"
@@ -1084,6 +1146,7 @@
             ]
           },
           {
+            "id": "mcb_bmb_elective",
             "type": "tag",
             "name": "BMB Elective",
             "tagId": "mcb_bmb_elective"
@@ -1102,32 +1165,38 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbic100a",
             "type": "course",
             "name": "MCELLBI C100A",
             "courseId": "mcellbic100a"
           },
           {
+            "id": "chem130b",
             "type": "course",
             "name": "CHEM 130B",
             "courseId": "chem130b"
           },
           {
+            "id": "chem135",
             "type": "course",
             "name": "CHEM 135",
             "courseId": "chem135"
           },
           {
+            "id": "genetics",
             "type": "multi",
             "name": "Genetics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi130",
                 "type": "course",
                 "name": "MCELLBI 130",
                 "courseId": "mcellbi130"
               },
               {
+                "id": "mcellbi140",
                 "type": "course",
                 "name": "MCELLBI 140",
                 "courseId": "mcellbi140"
@@ -1135,17 +1204,20 @@
             ]
           },
           {
+            "id": "lab",
             "type": "multi",
             "name": "Laboratory",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbic110l",
                 "type": "course",
                 "name": "MCELLBI C110L",
                 "courseId": "mcellbic110l"
               },
               {
+                "id": "mcellbi170l",
                 "type": "course",
                 "name": "MCELLBI 170L",
                 "courseId": "mcellbi170l"
@@ -1153,6 +1225,7 @@
             ]
           },
           {
+            "id": "mcb_bmb_elective",
             "type": "tag",
             "name": "BMB Elective",
             "tagId": "mcb_bmb_elective"
@@ -1171,32 +1244,38 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbi102",
             "type": "course",
             "name": "MCELLBI 102",
             "courseId": "mcellbi102"
           },
           {
+            "id": "mcellbi104",
             "type": "course",
             "name": "MCELLBI 104",
             "courseId": "mcellbi104"
           },
           {
+            "id": "mcellbi130",
             "type": "course",
             "name": "MCELLBI 130",
             "courseId": "mcellbi130"
           },
           {
+            "id": "lab",
             "type": "multi",
             "name": "Laboratory",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi133l",
                 "type": "course",
                 "name": "MCELLBI 133L",
                 "courseId": "mcellbi133l"
               },
               {
+                "id": "mcellbi170l",
                 "type": "course",
                 "name": "MCELLBI 170L",
                 "courseId": "mcellbi170l"
@@ -1204,15 +1283,18 @@
             ]
           },
           {
+            "id": "electives",
             "type": "mutex",
             "name": "CDB Electives",
             "requirements": [
               {
+                "id": "mcb_cdb_elective_a_1",
                 "type": "tag",
                 "name": "CDB Elective A",
                 "tagId": "mcb_cdb_elective_a"
               },
               {
+                "id": "mcb_cdb_elective_a_2",
                 "type": "tag",
                 "name": "CDB Elective A",
                 "tagId": "mcb_cdb_elective_a"
@@ -1233,32 +1315,38 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbi102",
             "type": "course",
             "name": "MCELLBI 102",
             "courseId": "mcellbi102"
           },
           {
+            "id": "mcellbi104",
             "type": "course",
             "name": "MCELLBI 104",
             "courseId": "mcellbi104"
           },
           {
+            "id": "mcellbi136",
             "type": "course",
             "name": "MCELLBI 136",
             "courseId": "mcellbi136"
           },
           {
+            "id": "lab",
             "type": "multi",
             "name": "Laboratory",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi133l",
                 "type": "course",
                 "name": "MCELLBI 133L",
                 "courseId": "mcellbi133l"
               },
               {
+                "id": "mcellbi170l",
                 "type": "course",
                 "name": "MCELLBI 170L",
                 "courseId": "mcellbi170l"
@@ -1266,15 +1354,18 @@
             ]
           },
           {
+            "id": "electives",
             "type": "mutex",
             "name": "CDB Electives",
             "requirements": [
               {
+                "id": "mcb_cdb_elective_b_1",
                 "type": "tag",
                 "name": "CDB Elective B",
                 "tagId": "mcb_cdb_elective_b"
               },
               {
+                "id": "mcb_cdb_elective_b_2",
                 "type": "tag",
                 "name": "CDB Elective B",
                 "tagId": "mcb_cdb_elective_b"
@@ -1295,41 +1386,49 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbic100a",
             "type": "course",
             "name": "MCELLBI C100A",
             "courseId": "mcellbic100a"
           },
           {
+            "id": "mcellbi110",
             "type": "course",
             "name": "MCELLBI 110",
             "courseId": "mcellbi110"
           },
           {
+            "id": "mcellbi140",
             "type": "course",
             "name": "MCELLBI 140",
             "courseId": "mcellbi140"
           },
           {
+            "id": "mcellbi140l",
             "type": "course",
             "name": "MCELLBI 140L",
             "courseId": "mcellbi140l"
           },
           {
+            "id": "electives",
             "type": "mutex",
             "name": "GGD Electives",
             "requirements": [
               {
+                "id": "elective_1",
                 "type": "poly",
                 "name": "GGD Elective A or B",
                 "numRequired": 1,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "mcb_ggd_elective_a_1",
                     "type": "tag",
                     "name": "GGD Elective A",
                     "tagId": "mcb_ggd_elective_a"
                   },
                   {
+                    "id": "mcb_ggd_elective_b_1",
                     "type": "tag",
                     "name": "GGD Elective B",
                     "tagId": "mcb_ggd_elective_b"
@@ -1337,6 +1436,7 @@
                 ]
               },
               {
+                "id": "mcb_ggd_elective_b_2",
                 "type": "tag",
                 "name": "GGD Elective B",
                 "tagId": "mcb_ggd_elective_b"
@@ -1357,22 +1457,26 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbi102",
             "type": "course",
             "name": "MCELLBI 102",
             "courseId": "mcellbi102"
           },
           {
+            "id": "genetics",
             "type": "multi",
             "name": "Genetics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi104",
                 "type": "course",
                 "name": "MCELLBI 104",
                 "courseId": "mcellbi104"
               },
               {
+                "id": "mcellbi140",
                 "type": "course",
                 "name": "MCELLBI 140",
                 "courseId": "mcellbi140"
@@ -1380,31 +1484,37 @@
             ]
           },
           {
+            "id": "mcellbi141",
             "type": "course",
             "name": "MCELLBI 141",
             "courseId": "mcellbi141"
           },
           {
+            "id": "mcellbi140l",
             "type": "course",
             "name": "MCELLBI 140L",
             "courseId": "mcellbi140l"
           },
           {
+            "id": "electives",
             "type": "mutex",
             "name": "GGD Electives",
             "requirements": [
               {
+                "id": "elective_1",
                 "type": "poly",
                 "name": "GGD Elective A or B",
                 "numRequired": 1,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "mcb_ggd_elective_a_1",
                     "type": "tag",
                     "name": "GGD Elective A",
                     "tagId": "mcb_ggd_elective_a"
                   },
                   {
+                    "id": "mcb_ggd_elective_b_1",
                     "type": "tag",
                     "name": "GGD Elective B",
                     "tagId": "mcb_ggd_elective_b"
@@ -1412,6 +1522,7 @@
                 ]
               },
               {
+                "id": "mcb_ggd_elective_b_2",
                 "type": "tag",
                 "name": "GGD Elective B",
                 "tagId": "mcb_ggd_elective_b"
@@ -1432,22 +1543,26 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbic100a",
             "type": "course",
             "name": "MCELLBI C100A",
             "courseId": "mcellbic100a"
           },
           {
+            "id": "genetics",
             "type": "multi",
             "name": "Genetics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi104",
                 "type": "course",
                 "name": "MCELLBI 104",
                 "courseId": "mcellbi104"
               },
               {
+                "id": "mcellbi140",
                 "type": "course",
                 "name": "MCELLBI 140",
                 "courseId": "mcellbi140"
@@ -1455,21 +1570,25 @@
             ]
           },
           {
+            "id": "mcellbi110",
             "type": "course",
             "name": "MCELLBI 110",
             "courseId": "mcellbi110"
           },
           {
+            "id": "mcellbi150",
             "type": "course",
             "name": "MCELLBI 150",
             "courseId": "mcellbi150"
           },
           {
+            "id": "mcellbi150l",
             "type": "course",
             "name": "MCELLBI 150L",
             "courseId": "mcellbi150l"
           },
           {
+            "id": "mcb_imm_elective_c",
             "type": "tag",
             "name": "IMM Elective C",
             "tagId": "mcb_imm_elective_c"
@@ -1488,22 +1607,26 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbi102",
             "type": "course",
             "name": "MCELLBI 102",
             "courseId": "mcellbi102"
           },
           {
+            "id": "genetics",
             "type": "multi",
             "name": "Genetics",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi104",
                 "type": "course",
                 "name": "MCELLBI 104",
                 "courseId": "mcellbi104"
               },
               {
+                "id": "mcellbi140",
                 "type": "course",
                 "name": "MCELLBI 140",
                 "courseId": "mcellbi140"
@@ -1511,21 +1634,25 @@
             ]
           },
           {
+            "id": "mcellbi150",
             "type": "course",
             "name": "MCELLBI 150",
             "courseId": "mcellbi150"
           },
           {
+            "id": "mcellbi150l",
             "type": "course",
             "name": "MCELLBI 150L",
             "courseId": "mcellbi150l"
           },
           {
+            "id": "mcb_imm_elective_a",
             "type": "tag",
             "name": "IMM Elective A",
             "tagId": "mcb_imm_elective_a"
           },
           {
+            "id": "mcb_imm_elective_b",
             "type": "tag",
             "name": "IMM Elective B",
             "tagId": "mcb_imm_elective_b"
@@ -1544,37 +1671,44 @@
         "name": "Upper Division Requirements",
         "requirements": [
           {
+            "id": "mcellbi102",
             "type": "course",
             "name": "MCELLBI 102",
             "courseId": "mcellbi102"
           },
           {
+            "id": "mcellbi104",
             "type": "course",
             "name": "MCELLBI 104",
             "courseId": "mcellbi104"
           },
           {
+            "id": "mcellbi160",
             "type": "course",
             "name": "MCELLBI 160",
             "courseId": "mcellbi160"
           },
           {
+            "id": "mcellbi161",
             "type": "course",
             "name": "MCELLBI 161",
             "courseId": "mcellbi161"
           },
           {
+            "id": "lab",
             "type": "multi",
             "name": "Laboratory",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
+                "id": "mcellbi160l",
                 "type": "course",
                 "name": "MCELLBI 160L",
                 "courseId": "mcellbi160l"
               },
               {
+                "id": "mcellbi163l",
                 "type": "course",
                 "name": "MCELLBI 163L",
                 "courseId": "mcellbi163l"
@@ -1582,6 +1716,7 @@
             ]
           },
           {
+            "id": "mcb_neu_elective",
             "type": "tag",
             "name": "NEU Elective",
             "tagId": "mcb_neu_elective"
@@ -1597,28 +1732,31 @@
     "type": "major",
     "requirementCategories": [
       {
-        "id": "bioe_math",
         "name": "Math",
         "requirements": [
           {
+            "id": "math1a",
             "type": "course",
             "id": "math1a",
             "name": "MATH 1A",
             "courseId": "math1a"
           },
           {
+            "id": "math1b",
             "type": "course",
             "id": "math1b",
             "name": "MATH 1B",
             "courseId": "math1b"
           },
           {
+            "id": "math53",
             "type": "course",
             "id": "math53",
             "name": "MATH 53",
             "courseId": "math53"
           },
           {
+            "id": "math54",
             "type": "course",
             "id": "math54",
             "name": "MATH 54",
@@ -1627,25 +1765,24 @@
         ]
       },
       {
-        "id": "bioe_physics",
         "name": "Physics",
         "requirements": [
           {
+            "id": "physics",
             "type": "multi",
-            "id": "bioe_physics",
-            "name": "bioe Physics 7A/B",
+            "name": "Physics 7A/B",
             "numRequired": 2,
             "hidden": false,
             "requirements": [
               {
-                "type": "course",
                 "id": "physics7a",
+                "type": "course",
                 "name": "PHYSICS 7A",
                 "courseId": "physics7a"
               },
               {
-                "type": "course",
                 "id": "physics7b",
+                "type": "course",
                 "name": "PHYSICS 7B",
                 "courseId": "physics7b"
               }
@@ -1654,83 +1791,82 @@
         ]
       },
       {
-        "id": "bioe_chem",
         "name": "Chemistry",
         "requirements": [
           {
+            "id": "chem",
             "type": "multi",
-            "id": "bioe_chem",
             "name": "Chemistry",
             "numRequired": 2,
             "hidden": false,
             "requirements": [
               {
-                "type": "multi",
                 "id": "chem1al4",
+                "type": "multi",
                 "name": "CHEM 1A/L",
                 "numRequired": 1,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "chem1a1al",
                     "type": "multi",
-                    "id": "chem1a",
                     "name": "Chem 1A/L",
                     "numRequired": 2,
                     "hidden": true,
                     "requirements": [
                       {
-                        "type": "course",
                         "id": "chem1a",
+                        "type": "course",
                         "name": "CHEM 1A",
                         "courseId": "chem1a"
                       },
                       {
-                        "type": "course",
                         "id": "chem1al",
+                        "type": "course",
                         "name": "CHEM 1AL",
                         "courseId": "chem1al"
                       }
                     ]
                   },
                   {
-                    "type": "course",
                     "id": "chem4a",
+                    "type": "course",
                     "name": "CHEM 4A",
                     "courseId": "chem4a"
                   }
                 ]
               },
               {
-                "type": "multi",
                 "id": "chem3al12",
+                "type": "multi",
                 "name": "CHEM 3A/L",
                 "numRequired": 1,
                 "hidden": true,
                 "requirements": [
                   {
+                    "id": "chem3a3al",
                     "type": "multi",
-                    "id": "chem3a",
                     "name": "Chem 3A/L",
                     "numRequired": 2,
                     "hidden": true,
                     "requirements": [
                       {
-                        "type": "course",
                         "id": "chem3a",
+                        "type": "course",
                         "name": "CHEM 3A",
                         "courseId": "chem3a"
                       },
                       {
-                        "type": "course",
                         "id": "chem3al",
+                        "type": "course",
                         "name": "CHEM 3AL",
                         "courseId": "chem3al"
                       }
                     ]
                   },
                   {
-                    "type": "course",
                     "id": "chem12a",
+                    "type": "course",
                     "name": "CHEM 12A",
                     "courseId": "chem12a"
                   }
@@ -1741,87 +1877,85 @@
         ]
       },
       {
-        "id": "bioe_lower_div",
         "name": "Lower Division",
         "requirements": [
           {
+            "id": "engin7comspci61a",
             "type": "multi",
-            "id": "engin7",
-            "name": "E7/CS61A",
+            "name": "ENGIN 7 / COMPSCI 61A",
             "numRequired": 1,
             "hidden": true,
             "requirements": [
               {
-                "type": "course",
                 "id": "compsci61a",
+                "type": "course",
                 "name": "COMPSCI 61A",
                 "courseId": "compsci61a"
               },
               {
-                "type": "course",
                 "id": "engin7",
+                "type": "course",
                 "name": "ENGIN 7",
                 "courseId": "engin7"
               }
             ]
           },
           {
-            "type": "course",
             "id": "bioeng10",
+            "type": "course",
             "name": "BIO ENG 10",
             "courseId": "bioeng10"
           },
           {
-            "type": "course",
             "id": "bioeng11",
+            "type": "course",
             "name": "BIO ENG 11",
             "courseId": "bioeng11"
           },
           {
-            "type": "course",
             "id": "bioeng26",
+            "type": "course",
             "name": "BIO ENG 26",
             "courseId": "bioeng26"
           },
           {
-            "type": "course",
             "id": "bioeng25",
+            "type": "course",
             "name": "BIO ENG 25",
             "courseId": "bioeng25"
           }
         ]
       },
       {
-        "id": "bioe_upper_div",
         "name": "Upper Division",
         "requirements": [
           {
+            "id": "upper_div_units",
             "type": "multi",
-            "id": "bioe_upper_div_unit_requirement",
             "name": "Minimum 36 units, including 24 BioE courses",
             "numRequired": 2,
             "hidden": false,
             "requirements": [
               {
+                "id": "upper_div_units_bioe",
                 "type": "unit",
-                "id": "bioe_upper_div",
                 "name": "24 Upper Division Units",
                 "units": 24,
                 "requirement": {
+                  "id": "bioeng_upper_div",
                   "type": "tag",
-                  "id": "bioeng_upper_div_course",
                   "name": "BioE Upper Division Course",
                   "tagId": "bioeng_upper_div"
                 }
               },
               {
+                "id": "upper_div_units_technical",
                 "type": "unit",
-                "id": "bioe_technical_topics",
                 "name": "12 Technical Topics Units",
                 "units": 36,
                 "requirement": {
-                  "type": "tag",
                   "id": "bioeng_technical_topics",
+                  "type": "tag",
                   "name": "BioE Technical Topic",
                   "tagId": "bioeng_technical_topics"
                 }
@@ -1829,41 +1963,40 @@
             ]
           },
           {
+            "id": "fundamentals",
             "type": "multi",
-            "id": "bioe_fundamentals",
             "name": "BioE Fundamentals",
             "numRequired": 2,
             "hidden": false,
             "requirements": [
               {
+                "id": "bioeng_fundamentals",
                 "type": "tag",
-                "id": "bioe_fundamental",
                 "name": "BioE Fundamental",
                 "tagId": "bioeng_fundamentals"
               }
             ]
           },
           {
+            "id": "lab",
             "type": "tag",
-            "id": "bioe_lab_course",
             "name": "BioE Lab Course",
             "tagId": "bioeng_lab_course"
           },
           {
+            "id": "design_research",
             "type": "tag",
-            "id": "bioe_design_research",
             "name": "BioE Design Project or Research",
             "tagId": "bioeng_design_research"
           }
         ]
       },
       {
-        "id": "bioe_ethics",
         "name": "Ethics",
         "requirements": [
           {
+            "id": "ethics",
             "type": "tag",
-            "id": "bioe_ethics",
             "name": "Bioengineering Ethics Course",
             "tagId": "bioeng_ethics"
           }

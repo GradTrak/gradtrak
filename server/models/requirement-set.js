@@ -4,7 +4,7 @@ const requirementSchema = new mongoose.Schema(
   {
     id: {
       type: String,
-      required: false, // FIXME Make this true
+      required: true,
     },
     name: {
       type: String,
