@@ -41,6 +41,20 @@
         ? 'All of'
         : getMulti().numFulfilled(courses) + '/' + getMulti().numRequired + ' of'
     }}
+    <div ngbDropdown class="req-more">
+      <button ngbDropdownToggle></button>
+      <div ngbDropdownMenu>
+        <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+          Show Fulfilling Courses
+        </button>
+        <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+          Mark as Fulfilled
+        </button>
+        <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+          Mark as Unfulfilled
+        </button>
+      </div>
+    </div>
     <app-requirement
       *ngFor="let childReq of getMulti().requirements"
       [requirement]="childReq"
@@ -91,14 +105,6 @@
 
 <ng-template #mutexReq>
   Distinctly fulfill
-  <ng-container *ngIf="getMutex().getFulfillment(courses) as fulfillments">
-    <app-requirement
-      *ngFor="let childReq of getMutex().requirements; index as i"
-      [requirement]="childReq"
-      [courses]="[]"
-      [override]="getMutexFulfillment(fulfillments[i])"
-    ></app-requirement>
-  </ng-container>
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
@@ -110,6 +116,14 @@
       </button>
     </div>
   </div>
+  <ng-container *ngIf="getMutex().getFulfillment(courses) as fulfillments">
+    <app-requirement
+      *ngFor="let childReq of getMutex().requirements; index as i"
+      [requirement]="childReq"
+      [courses]="[]"
+      [override]="getMutexFulfillment(fulfillments[i])"
+    ></app-requirement>
+  </ng-container>
 </ng-template>
 
 <div

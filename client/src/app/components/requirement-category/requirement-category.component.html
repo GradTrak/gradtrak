@@ -5,5 +5,7 @@
     [requirement]="requirement"
     [courses]="courses"
     [manuallyFulfilled]="manuallyFulfilled"
+    (onManualFulfill)="onManualFulfill.emit($event)"
+    (onManualUnfulfill)="onManualUnfulfill.emit($event)"
   ></app-requirement>
 </div>

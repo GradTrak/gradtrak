@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map, tap } from 'rxjs/operators';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
+import { Requirement } from 'models/requirement.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { State } from 'models/state.model';
@@ -243,6 +244,20 @@ export class UserService {
     this.state.next({
       ...this.currentState,
     });
+  }
+
+  manuallyFulfill(requirement: Requirement, requirementSet: RequirementSet): void {
+    this.state.next({
+      ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: [...this.currentState.userData.manuallyFulfilledReqs, requirement.id],
+      },
+    });
+  }
+
+  manuallyUnfulfill(requirement: Requirement, requirementSet: RequirementSet): void {
+
   }
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {

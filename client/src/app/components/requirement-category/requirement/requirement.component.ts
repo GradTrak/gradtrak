@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
@@ -18,6 +18,8 @@ export class RequirementComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
   @Input() readonly manuallyFulfilled: string[];
+  @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   displayedRequirement: Requirement;
 
@@ -149,6 +151,14 @@ export class RequirementComponent implements OnInit {
 
   isManuallyFulfilled(requirement: Requirement): boolean {
     return this.manuallyFulfilled && this.manuallyFulfilled.includes(requirement.id);
+  }
+
+  manuallyFulfill(requirement: Requirement): void {
+    this.onManualFulfill.emit(requirement);
+  }
+
+  manuallyUnfulfill(requirement: Requirement): void {
+    this.onManualUnfulfill.emit(requirement);
   }
 
   openRequirementDisplay(requirement: Requirement): void {
