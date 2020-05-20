@@ -66,7 +66,7 @@ export class CourseService {
         return data;
       }
 
-      )
+    ),
       shareReplay(),
     );
   }

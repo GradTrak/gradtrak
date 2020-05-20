@@ -13,7 +13,11 @@ export class CourseRequirement implements StandaloneRequirement {
   }
 
   isFulfillableBy(course: Course): boolean {
-    return course === this.course;
+    if (course === this.course) {
+      return true;
+    } else {
+      return course.equiv.some((course: Course) => this.isFulfillableBy(course));
+    }
   }
 
   isFulfilled(courses: Course[]): boolean {
