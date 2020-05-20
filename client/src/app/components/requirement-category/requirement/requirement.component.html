@@ -1,6 +1,7 @@
 <!-- TODO This seems slightly janky -->
 
-<ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+<ng-template #standardReq>
+  {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
