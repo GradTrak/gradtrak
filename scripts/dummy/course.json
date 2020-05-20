@@ -37,7 +37,8 @@
     "dept": "COMPSCI",
     "no": "47A",
     "id": "compsci47a",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": ["compsci61a"]
   },
   {
     "units": 1,
@@ -45,7 +46,8 @@
     "dept": "COMPSCI",
     "no": "47B",
     "id": "compsci47b",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": ["compsci61b"]
   },
   {
     "units": 1,
@@ -53,7 +55,8 @@
     "dept": "COMPSCI",
     "no": "47C",
     "id": "compsci47c",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": ["compsci61c"]
   },
   {
     "units": 4,
