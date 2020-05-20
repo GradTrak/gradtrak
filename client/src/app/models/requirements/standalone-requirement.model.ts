@@ -23,7 +23,7 @@ export abstract class StandaloneRequirement extends Requirement {
       visited.add(course);
       if (this.isFulfillableBy(course)) {
         return true;
-      } else if (course.equiv.some((equivCourse) => this.equivIsFulfillableBy(equivCourse, visited))) {
+      } else if (course.equiv.some((equivCourse: Course) => this.equivIsFulfillableBy(equivCourse, visited))) {
         return true;
       }
     }
