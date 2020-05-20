@@ -11,6 +11,8 @@ export class Course {
   title: string;
   units: number;
   tags: Tag[];
+  equivIds: string[];
+  equiv: Course[];
 
   constructor(proto: CoursePrototype, tagMap: Map<string, Tag>) {
     this.id = proto.id;
@@ -19,6 +21,7 @@ export class Course {
     this.title = proto.title;
     this.units = proto.units;
     this.tags = proto.tagIds.map((tagId: string) => tagMap.get(tagId));
+    this.equivIds = proto.equivIds;
   }
 
   getName(): string {
