@@ -26,6 +26,7 @@ export class MutexRequirement implements Requirement {
    */
   static readonly FULFILLED = 2;
 
+  id: string;
   name: string;
 
   requirements: StandaloneRequirement[];

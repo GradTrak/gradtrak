@@ -5,7 +5,9 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
  * The CourseRequirement class represents a {@link Requirement} that is fulfilled by taking a specified {@link Course}.
  */
 export class CourseRequirement implements StandaloneRequirement {
+  id: string;
   name: string;
+
   course: Course;
 
   constructor(obj: object) {

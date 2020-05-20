@@ -6,6 +6,7 @@ import { Requirement } from 'models/requirement.model';
  * fulfilled if at least a specified number of those requirements are fulfilled.
  */
 export class MultiRequirement implements Requirement {
+  id: string;
   name: string;
 
   requirements: Requirement[];
