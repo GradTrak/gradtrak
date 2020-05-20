@@ -36,7 +36,8 @@
           "name": "Spring 2023",
           "courseIds": []
         }
-      ]
+      ],
+      "manuallyFulfilledReqs": {"eecs":["compsci61a"]}
     }
   },
   {
