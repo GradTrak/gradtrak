@@ -38,6 +38,14 @@ export class Course {
   }
 
   mapEquiv(map: Map<string, Course>): void {
-    this.equiv = this.equivIds.map((id: string) => map.get(id));
+    this.equiv = this.equivIds
+      .filter((id: string) => {
+        if (!map.has(id)) {
+          console.error(`No equivalent course with ID ${id} found for course ${this.id}`);
+          return false;
+        }
+        return true;
+      })
+      .map((id: string) => map.get(id));
   }
 }
