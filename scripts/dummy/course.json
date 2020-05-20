@@ -262,7 +262,7 @@
     "no": "16A",
     "id": "ee16a",
     "tagIds": [],
-    "equivIds": "eecs16a"
+    "equivIds": ["eecs16a"]
   },
   {
     "units": 4,
@@ -271,7 +271,7 @@
     "no": "16B",
     "id": "ee16b",
     "tagIds": [],
-    "equivIds": "eecs16b"
+    "equivIds": ["eecs16b"]
   },
   {
     "units": 4,
