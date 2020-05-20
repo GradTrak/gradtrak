@@ -9,7 +9,7 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
  * requirements must be determined by the surrounding MutexRequirement, each of its children can be in one of three
  * states: fulfilled, potentially fulfilled, and unfulfilled.
  */
-export class MutexRequirement implements Requirement {
+export class MutexRequirement extends Requirement {
   /**
    * No courses fulfill this child requirement.
    */
@@ -26,13 +26,7 @@ export class MutexRequirement implements Requirement {
    */
   static readonly FULFILLED = 2;
 
-  name: string;
-
   requirements: StandaloneRequirement[];
-
-  constructor(obj: object) {
-    Object.assign(this, obj);
-  }
 
   isFulfilled(courses: Course[]): boolean {
     return this.getFulfillment(courses).every(
