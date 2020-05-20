@@ -64,9 +64,7 @@ export class CourseService {
       map((data: Map<string, Course>) => {
         data.forEach((course: Course) => course.mapEquiv(data));
         return data;
-      }
-
-    ),
+      }),
       shareReplay(),
     );
   }

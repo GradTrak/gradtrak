@@ -738,7 +738,7 @@
     "dept": "BIO ENG",
     "no": "144l",
     "id": "bioeng144l",
-    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals",  "bioeng_lab_course"]
+    "tagIds": ["bioeng_upper_div", "bioeng_technical_topics", "bioeng_fundamentals", "bioeng_lab_course"]
   },
   {
     "units": 4,
