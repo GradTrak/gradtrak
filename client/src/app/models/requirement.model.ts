@@ -13,7 +13,9 @@ export abstract class Requirement {
 
   abstract isFulfilled(courses: Course[]): boolean;
 
-  abstract getAnnotation(): string;
+  getAnnotation(): string {
+    return null;
+  }
 
   abstract toString(): string;
 }

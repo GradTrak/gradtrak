@@ -11,10 +11,6 @@ export class CourseRequirement extends StandaloneRequirement {
     return course === this.course;
   }
 
-  getAnnotation(): string {
-    return null;
-  }
-
   toString(): string {
     return `Course: ${this.course.getName()}`;
   }
