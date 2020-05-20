@@ -258,6 +258,24 @@
   {
     "units": 4,
     "title": "Designing Information Devices and Systems I",
+    "dept": "EE",
+    "no": "16A",
+    "id": "ee16a",
+    "tagIds": [],
+    "equivIds": "eecs16a"
+  },
+  {
+    "units": 4,
+    "title": "Designing Information Devices and Systems II",
+    "dept": "EE",
+    "no": "16B",
+    "id": "ee16b",
+    "tagIds": [],
+    "equivIds": "eecs16b"
+  },
+  {
+    "units": 4,
+    "title": "Designing Information Devices and Systems I",
     "dept": "EECS",
     "no": "16A",
     "id": "eecs16a",
