@@ -5,6 +5,7 @@ import { flatMap, map, tap } from 'rxjs/operators';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
+import { RequirementCategory } from 'models/requirement-category.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { State } from 'models/state.model';
@@ -238,6 +239,7 @@ export class UserService {
   removeCourse(course: Course, semester: Semester): void {
     if (!semester.courses.includes(course)) {
       console.error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
+      return;
     }
 
     semester.courses = semester.courses.filter((c: Course) => c !== course);
@@ -247,17 +249,58 @@ export class UserService {
   }
 
   manuallyFulfill(requirement: Requirement, requirementSet: RequirementSet): void {
+    const manuallyFulfilledReqs: Map<string, string[]> = this.currentState.userData.manuallyFulfilledReqs;
+    const reqId: string = requirement.id;
+    const reqSetId: string = requirementSet.id;
+
+    if (
+      !requirementSet.requirementCategories
+        .flatMap((category: RequirementCategory) => category.requirements)
+        .includes(requirement)
+    ) {
+      console.error(`Tried to mark fulfilled requirement ${reqId} from set ${reqSetId}, which it doesn't have`);
+      return;
+    } else if (manuallyFulfilledReqs.has(reqSetId) && manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
+      console.error(`Tried to mark fulfilled requirement ${reqId} from set ${reqSetId}, which it already is`);
+      return;
+    }
+
+    if (manuallyFulfilledReqs.has(reqSetId)) {
+      manuallyFulfilledReqs.get(reqSetId).push(reqId);
+    } else {
+      manuallyFulfilledReqs.set(reqSetId, [reqId]);
+    }
     this.state.next({
       ...this.currentState,
-      userData: {
-        ...this.currentState.userData,
-        manuallyFulfilledReqs: [...this.currentState.userData.manuallyFulfilledReqs, requirement.id],
-      },
     });
   }
 
   manuallyUnfulfill(requirement: Requirement, requirementSet: RequirementSet): void {
+    const manuallyFulfilledReqs: Map<string, string[]> = this.currentState.userData.manuallyFulfilledReqs;
+    const reqId: string = requirement.id;
+    const reqSetId: string = requirementSet.id;
 
+    if (
+      !requirementSet.requirementCategories
+        .flatMap((category: RequirementCategory) => category.requirements)
+        .includes(requirement)
+    ) {
+      console.error(`Tried to unmark fulfilled requirement ${reqId} from set ${reqSetId}, which it doesn't have`);
+      return;
+    } else if (!manuallyFulfilledReqs.has(reqSetId) || !manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
+      console.error(`Tried to unmark fulfilled requirement ${reqId} from set ${reqSetId}, which it already isn't`);
+      return;
+    }
+
+    const fulfilledSet: string[] = manuallyFulfilledReqs.get(reqSetId).filter((id: string) => id !== reqId);
+    if (fulfilledSet.length > 0) {
+      manuallyFulfilledReqs.set(reqSetId, fulfilledSet);
+    } else {
+      manuallyFulfilledReqs.delete(reqSetId);
+    }
+    this.state.next({
+      ...this.currentState,
+    });
   }
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {

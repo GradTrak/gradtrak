@@ -23,6 +23,6 @@ export class RequirementSetComponent implements OnInit {
   }
 
   manuallyUnfulfill(requirement: Requirement): void {
-    this.userService.manuallyFulfill(requirement, this.requirementSet);
+    this.userService.manuallyUnfulfill(requirement, this.requirementSet);
   }
 }

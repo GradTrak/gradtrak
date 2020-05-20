@@ -119,7 +119,6 @@ export class RequirementComponent implements OnInit {
    *
    * @return {TemplateRef<any>} The template of the requirement.
    */
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
