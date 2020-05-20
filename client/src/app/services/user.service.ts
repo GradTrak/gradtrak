@@ -60,6 +60,7 @@ export class UserService {
         },
       ],
       goals: [],
+      manuallyFulfilledReqs: new Map<string, string[]>(),
     },
   };
 
@@ -255,6 +256,7 @@ export class UserService {
         return semesterPrototype;
       }),
       goalIds: userData.goals.map((goal: RequirementSet) => goal.id),
+      manuallyFulfilledReqs: Object.fromEntries(userData.manuallyFulfilledReqs.entries()),
     };
   }
 }
