@@ -37,7 +37,7 @@ export class RequirementComponent implements OnInit {
   ngOnInit(): void {}
 
   isMulti(): boolean {
-    return this.requirement instanceof MultiRequirement;
+    return this.requirement instanceof MultiRequirement || this.isPoly();
   }
 
   isPoly(): boolean {
