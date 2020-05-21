@@ -20,6 +20,8 @@ import { GoalSelectorComponent } from './components/goal-selector/goal-selector.
 import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
 import { RequirementDisplayComponent } from './components/requirement-category/requirement-display/requirement-display.component';
 import { LoginComponent } from './components/login/login.component';
+import { ReportButtonComponent } from './components/report-button/report-button.component';
+import { ReportPaneComponent } from './components/report-pane/report-pane.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { LoginComponent } from './components/login/login.component';
     SemesterChangerComponent,
     RequirementDisplayComponent,
     LoginComponent,
+    ReportPaneComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule, NgbModule],
   providers: [CourseService, RequirementService, UserService],
