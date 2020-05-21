@@ -64,14 +64,19 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MutexRequirement;
   }
 
-  getFulfillment(): string {
+  getFulfillment(): string[] {
+    const fulfillments: string[] = [];
     if (this.override) {
-      return this.override;
+      fulfillments.push(this.override);
     } else if (this.requirement.isFulfilled(this.courses, this.manuallyFulfilled)) {
-      return 'fulfilled';
+      fulfillments.push('fulfilled');
     } else {
-      return 'unfulfilled';
+      fulfillments.push('unfulfilled');
     }
+    if (this.isManuallyFulfilled()) {
+      fulfillments.push('manual');
+    }
+    return fulfillments;
   }
 
   /**
