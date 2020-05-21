@@ -44,3 +44,17 @@
 app-login {
   padding: 16px;
 }
+
+.reportButton {
+  position: fixed;
+  left: 85%;
+  top: 50%;
+  width: 10%;
+  color: white;
+  height: 10%;
+  border-radius: 0px;
+  font-size: .9rem;
+  background-color: #417fdc;
+  padding: 0px;
+  float: right;
+}
