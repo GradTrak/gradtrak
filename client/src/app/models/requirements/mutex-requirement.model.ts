@@ -28,9 +28,8 @@ export class MutexRequirement extends Requirement {
 
   requirements: StandaloneRequirement[];
 
-  // FIXME pass override to all necessary methods
   isFulfilledWith(courses: Course[], override: string[]): boolean {
-    return this.getFulfillment(courses).every(
+    return this.getFulfillment(courses, override).every(
       (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
     );
   }
@@ -39,21 +38,22 @@ export class MutexRequirement extends Requirement {
    * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
    *
    * @param {Course[]} courses The input Courses that are currently being taken.
+   * @param {string[]} override The IDs of requirements that have been manually marked as fulfilled.
    * @return {number[]} An array of fulfillment status corresponding to each child requirement.
    */
-  getFulfillment(courses: Course[]): number[] {
-    let mappings: Course[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses);
+  getFulfillment(courses: Course[], override: string[]): number[] {
+    let mappings: (Course | boolean)[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses, override);
     const maxFulfilled: number = Math.max(
-      ...mappings.map((mapping: Course[]) => mapping.filter((course: Course) => course).length),
+      ...mappings.map((mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length),
     );
     mappings = mappings.filter(
-      (mapping: Course[]) => mapping.filter((course: Course) => course).length === maxFulfilled,
+      (mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length === maxFulfilled,
     );
     return this.requirements.map((requirement: Requirement, i: number) => {
       const fulfillingWays = mappings.map((mapping: Course[]) => mapping[i]);
-      if (fulfillingWays.every((course: Course) => course)) {
+      if (fulfillingWays.every((course: Course | boolean) => course)) {
         return MutexRequirement.FULFILLED;
-      } else if (fulfillingWays.some((course: Course) => course)) {
+      } else if (fulfillingWays.some((course: Course | boolean) => course)) {
         return MutexRequirement.POTENTIAL;
       } else {
         return MutexRequirement.UNFULFILLED;
@@ -64,20 +64,33 @@ export class MutexRequirement extends Requirement {
   /**
    * Returns an array of possible arrangements to fulfill the given requirements given the set of courses.
    *
+   * @param {StandaloneRequirement[]} requirements The requirements being fulfilled.
    * @param {Course[]} courses The courses that will fulfill the requirement.
+   * @param {string[]} override The IDs of requirements that have been manually marked as fulfilled.
    * @return {Course[][]} An array of arrays of courses, each of which is one possible mapping of courses to fulfill
    * requirements by index.
    */
-  private static getFulfillmentMapping(requirements: StandaloneRequirement[], courses: Course[]): Course[][] {
+  private static getFulfillmentMapping(
+    requirements: StandaloneRequirement[],
+    courses: Course[],
+    override: string[],
+  ): (Course | boolean)[][] {
     if (requirements.length === 0) {
       return [[]];
     }
     const firstReq: StandaloneRequirement = requirements[0];
-    const fulfillingCourses: Course[] = [null, ...courses.filter((course: Course) => firstReq.isFulfillableBy(course))];
+    const fulfillingCourses: (Course | boolean)[] = [
+      null,
+      ...courses.filter((course: Course) => firstReq.isFulfillableBy(course)),
+    ];
+    if (override && override.includes(firstReq.id)) {
+      fulfillingCourses[0] = true;
+    }
     return fulfillingCourses.flatMap((course: Course) =>
       MutexRequirement.getFulfillmentMapping(
         requirements.slice(1),
         courses.filter((c: Course) => c !== course),
+        override,
       ).map((fulfillment: Course[]) => [course, ...fulfillment]),
     );
   }

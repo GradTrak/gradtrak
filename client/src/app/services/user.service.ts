@@ -253,14 +253,7 @@ export class UserService {
     const reqId: string = requirement.id;
     const reqSetId: string = requirementSet.id;
 
-    if (
-      !requirementSet.requirementCategories
-        .flatMap((category: RequirementCategory) => category.requirements)
-        .includes(requirement)
-    ) {
-      console.error(`Tried to mark fulfilled requirement ${reqId} from set ${reqSetId}, which it doesn't have`);
-      return;
-    } else if (manuallyFulfilledReqs.has(reqSetId) && manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
+    if (manuallyFulfilledReqs.has(reqSetId) && manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
       console.error(`Tried to mark fulfilled requirement ${reqId} from set ${reqSetId}, which it already is`);
       return;
     }
@@ -280,14 +273,7 @@ export class UserService {
     const reqId: string = requirement.id;
     const reqSetId: string = requirementSet.id;
 
-    if (
-      !requirementSet.requirementCategories
-        .flatMap((category: RequirementCategory) => category.requirements)
-        .includes(requirement)
-    ) {
-      console.error(`Tried to unmark fulfilled requirement ${reqId} from set ${reqSetId}, which it doesn't have`);
-      return;
-    } else if (!manuallyFulfilledReqs.has(reqSetId) || !manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
+    if (!manuallyFulfilledReqs.has(reqSetId) || !manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
       console.error(`Tried to unmark fulfilled requirement ${reqId} from set ${reqSetId}, which it already isn't`);
       return;
     }
