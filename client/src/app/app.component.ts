@@ -15,7 +15,9 @@ export class AppComponent {
   currentCourses: Course[];
 
   @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private loginModalInstance: NgbModalRef;
+  private reportFormModalReference: NgbModalRef;
 
   constructor(private userService: UserService, private modalService: NgbModal) {}
 
@@ -45,6 +47,10 @@ export class AppComponent {
     if (this.loginModalInstance) {
       this.loginModalInstance.close();
     }
+  }
+
+  showReportForm(): void {
+    this.reportFormModalReference = this.modalService.open(this.reportFormTemplate, { size: 'lg' });
   }
 
   logout(): void {
