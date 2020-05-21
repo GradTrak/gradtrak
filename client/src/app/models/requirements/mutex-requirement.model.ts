@@ -28,7 +28,7 @@ export class MutexRequirement extends Requirement {
 
   requirements: StandaloneRequirement[];
 
-  isFulfilledWith(courses: Course[], override: string[]): boolean {
+  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
     return this.getFulfillment(courses, override).every(
       (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
     );
@@ -38,10 +38,10 @@ export class MutexRequirement extends Requirement {
    * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
    *
    * @param {Course[]} courses The input Courses that are currently being taken.
-   * @param {string[]} override The IDs of requirements that have been manually marked as fulfilled.
+   * @param {Set<string>} override The IDs of requirements that have been manually marked as fulfilled.
    * @return {number[]} An array of fulfillment status corresponding to each child requirement.
    */
-  getFulfillment(courses: Course[], override: string[]): number[] {
+  getFulfillment(courses: Course[], override: Set<string>): number[] {
     let mappings: (Course | boolean)[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses, override);
     const maxFulfilled: number = Math.max(
       ...mappings.map((mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length),
@@ -66,14 +66,14 @@ export class MutexRequirement extends Requirement {
    *
    * @param {StandaloneRequirement[]} requirements The requirements being fulfilled.
    * @param {Course[]} courses The courses that will fulfill the requirement.
-   * @param {string[]} override The IDs of requirements that have been manually marked as fulfilled.
+   * @param {Set<string>} override The IDs of requirements that have been manually marked as fulfilled.
    * @return {Course[][]} An array of arrays of courses, each of which is one possible mapping of courses to fulfill
    * requirements by index.
    */
   private static getFulfillmentMapping(
     requirements: StandaloneRequirement[],
     courses: Course[],
-    override: string[],
+    override: Set<string>,
   ): (Course | boolean)[][] {
     if (requirements.length === 0) {
       return [[]];
@@ -83,7 +83,7 @@ export class MutexRequirement extends Requirement {
       null,
       ...courses.filter((course: Course) => firstReq.isFulfillableBy(course)),
     ];
-    if (override && override.includes(firstReq.id)) {
+    if (override && override.has(firstReq.id)) {
       fulfillingCourses[0] = true;
     }
     return fulfillingCourses.flatMap((course: Course) =>

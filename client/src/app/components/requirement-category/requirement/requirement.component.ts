@@ -17,7 +17,7 @@ export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
-  @Input() readonly manuallyFulfilled: string[];
+  @Input() readonly manuallyFulfilled: Set<string>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
@@ -154,7 +154,7 @@ export class RequirementComponent implements OnInit {
   }
 
   isManuallyFulfilled(): boolean {
-    return this.manuallyFulfilled && this.manuallyFulfilled.includes(this.requirement.id);
+    return this.manuallyFulfilled && this.manuallyFulfilled.has(this.requirement.id);
   }
 
   manuallyFulfill(requirement: Requirement): void {

@@ -12,7 +12,7 @@ import { UserService } from 'services/user.service';
 export class RequirementSetComponent implements OnInit {
   @Input() readonly requirementSet: RequirementSet;
   @Input() readonly courses: Course[];
-  @Input() readonly manuallyFulfilled: Map<string, string[]>;
+  @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
 
   constructor(private userService: UserService) {}
 

@@ -9,7 +9,7 @@ export abstract class StandaloneRequirement extends Requirement {
   abstract isFulfillableBy(course: Course): boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  isFulfilledWith(courses: Course[], override: string[]): boolean {
+  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
     return courses.some((course: Course) => {
       return this.equivIsFulfillableBy(course, new Set<Course>());
     });

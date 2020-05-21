@@ -11,7 +11,7 @@ import { RequirementCategory } from 'models/requirement-category.model';
 export class RequirementCategoryComponent implements OnInit {
   @Input() readonly requirementCategory: RequirementCategory;
   @Input() readonly courses: Course[];
-  @Input() readonly manuallyFulfilled: string[];
+  @Input() readonly manuallyFulfilled: Set<string>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
