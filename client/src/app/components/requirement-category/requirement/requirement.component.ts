@@ -148,8 +148,8 @@ export class RequirementComponent implements OnInit {
     return null;
   }
 
-  isManuallyFulfilled(requirement: Requirement): boolean {
-    return this.manuallyFulfilled && this.manuallyFulfilled.includes(requirement.id);
+  isManuallyFulfilled(): boolean {
+    return this.manuallyFulfilled && this.manuallyFulfilled.includes(this.requirement.id);
   }
 
   manuallyFulfill(requirement: Requirement): void {

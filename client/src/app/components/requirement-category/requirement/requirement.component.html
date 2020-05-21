@@ -5,10 +5,10 @@
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
-      <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
         Mark as Fulfilled
       </button>
-      <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
         Mark as Unfulfilled
       </button>
     </div>
@@ -23,10 +23,10 @@
       <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
         Show Fulfilling Courses
       </button>
-      <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
         Mark as Fulfilled
       </button>
-      <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
         Mark as Unfulfilled
       </button>
     </div>
@@ -48,10 +48,10 @@
         <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
           Show Fulfilling Courses
         </button>
-        <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
           Mark as Fulfilled
         </button>
-        <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
           Mark as Unfulfilled
         </button>
       </div>
@@ -73,10 +73,10 @@
         <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
           Show Fulfilling Courses
         </button>
-        <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
           Mark as Fulfilled
         </button>
-        <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
           Mark as Unfulfilled
         </button>
       </div>
@@ -92,10 +92,10 @@
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
       <button ngbDropdownItem (click)="openRequirementDisplay(getUnit().requirement)">Show Fulfilling Courses</button>
-      <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
         Mark as Fulfilled
       </button>
-      <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
         Mark as Unfulfilled
       </button>
     </div>
@@ -112,10 +112,10 @@
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
-      <button *ngIf="!isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
         Mark as Fulfilled
       </button>
-      <button *ngIf="isManuallyFulfilled(requirement)" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
         Mark as Unfulfilled
       </button>
     </div>
