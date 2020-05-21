@@ -8,9 +8,8 @@ describe('ReportPaneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReportPaneComponent ]
-    })
-    .compileComponents();
+      declarations: [ReportPaneComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

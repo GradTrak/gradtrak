@@ -27,6 +27,10 @@
   }
 }
 
+.login {
+  border: 0px;
+}
+
 .body {
   position: absolute;
   top: 5rem;
@@ -47,14 +51,14 @@ app-login {
 
 .reportButton {
   position: fixed;
-  left: 93.5%;
+  left: 94%;
   top: 50%;
-  width: 7.8%;
-  height: 6.5%;
+  width: 6.8%;
+  height: 5.9%;
   padding: 0px;
   background-color: #417fdc;
   color: white;
-  font-size: .82rem;
+  font-size: 0.73rem;
   border: 0px;
   -webkit-transform: rotate(-90deg);
 }
