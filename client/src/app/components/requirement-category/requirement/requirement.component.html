@@ -40,7 +40,7 @@
         ? 'One of'
         : getMulti().numRequired === getMulti().requirements.length
         ? 'All of'
-        : getMulti().numFulfilled(courses) + '/' + getMulti().numRequired + ' of'
+        : getMulti().numFulfilled(courses, manuallyFulfilled) + '/' + getMulti().numRequired + ' of'
     }}
     <div ngbDropdown class="req-more">
       <button ngbDropdownToggle></button>
@@ -101,7 +101,7 @@
     </div>
   </div>
   <div class="nested">
-    <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses, override)">
+    <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
       {{ course.getName() }}
     </div>
   </div>

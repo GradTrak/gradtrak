@@ -5,7 +5,6 @@ import { flatMap, map, tap } from 'rxjs/operators';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
-import { RequirementCategory } from 'models/requirement-category.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { State } from 'models/state.model';
@@ -249,19 +248,20 @@ export class UserService {
   }
 
   manuallyFulfill(requirement: Requirement, requirementSet: RequirementSet): void {
-    const manuallyFulfilledReqs: Map<string, string[]> = this.currentState.userData.manuallyFulfilledReqs;
-    const reqId: string = requirement.id;
-    const reqSetId: string = requirementSet.id;
-
-    if (manuallyFulfilledReqs.has(reqSetId) && manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
-      console.error(`Tried to mark fulfilled requirement ${reqId} from set ${reqSetId}, which it already is`);
+    if (
+      this.currentState.userData.manuallyFulfilledReqs.has(requirementSet.id) &&
+      this.currentState.userData.manuallyFulfilledReqs.get(requirementSet.id).includes(requirement.id)
+    ) {
+      console.error(
+        `Tried to mark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already is`,
+      );
       return;
     }
 
-    if (manuallyFulfilledReqs.has(reqSetId)) {
-      manuallyFulfilledReqs.get(reqSetId).push(reqId);
+    if (this.currentState.userData.manuallyFulfilledReqs.has(requirementSet.id)) {
+      this.currentState.userData.manuallyFulfilledReqs.get(requirementSet.id).push(requirement.id);
     } else {
-      manuallyFulfilledReqs.set(reqSetId, [reqId]);
+      this.currentState.userData.manuallyFulfilledReqs.set(requirementSet.id, [requirement.id]);
     }
     this.state.next({
       ...this.currentState,
@@ -269,20 +269,23 @@ export class UserService {
   }
 
   manuallyUnfulfill(requirement: Requirement, requirementSet: RequirementSet): void {
-    const manuallyFulfilledReqs: Map<string, string[]> = this.currentState.userData.manuallyFulfilledReqs;
-    const reqId: string = requirement.id;
-    const reqSetId: string = requirementSet.id;
-
-    if (!manuallyFulfilledReqs.has(reqSetId) || !manuallyFulfilledReqs.get(reqSetId).includes(reqId)) {
-      console.error(`Tried to unmark fulfilled requirement ${reqId} from set ${reqSetId}, which it already isn't`);
+    if (
+      !this.currentState.userData.manuallyFulfilledReqs.has(requirementSet.id) ||
+      !this.currentState.userData.manuallyFulfilledReqs.get(requirementSet.id).includes(requirement.id)
+    ) {
+      console.error(
+        `Tried to unmark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already isn't`,
+      );
       return;
     }
 
-    const fulfilledSet: string[] = manuallyFulfilledReqs.get(reqSetId).filter((id: string) => id !== reqId);
+    const fulfilledSet: string[] = this.currentState.userData.manuallyFulfilledReqs
+      .get(requirementSet.id)
+      .filter((id: string) => id !== requirement.id);
     if (fulfilledSet.length > 0) {
-      manuallyFulfilledReqs.set(reqSetId, fulfilledSet);
+      this.currentState.userData.manuallyFulfilledReqs.set(requirementSet.id, fulfilledSet);
     } else {
-      manuallyFulfilledReqs.delete(reqSetId);
+      this.currentState.userData.manuallyFulfilledReqs.delete(requirementSet.id);
     }
     this.state.next({
       ...this.currentState,

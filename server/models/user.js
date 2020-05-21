@@ -32,7 +32,7 @@ const userDataSchema = new mongoose.Schema(
       of: [String],
       required: true,
       default: {},
-    }
+    },
   },
   { strict: 'throw' },
 );
