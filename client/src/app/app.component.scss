@@ -47,14 +47,18 @@ app-login {
 
 .reportButton {
   position: fixed;
-  left: 85%;
+  left: 92%;
   top: 50%;
   width: 10%;
   color: white;
-  height: 10%;
+  height: 8%;
   border-radius: 0px;
-  font-size: .9rem;
+  font-size: .93rem;
   background-color: #417fdc;
   padding: 0px;
   float: right;
+  -webkit-transform: rotate(-90deg);
+  -moz-border-radius: 0px;
+  border:0px;
+  -webkit-border-radius: 0px;
 }
