@@ -51,6 +51,7 @@ export class AppComponent {
 
   showReportForm(): void {
     this.reportFormModalReference = this.modalService.open(this.reportFormTemplate, { size: 'lg' });
+    //possibly change size depending on style 
   }
 
   logout(): void {
