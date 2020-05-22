@@ -15,7 +15,48 @@ export class CourseSearcherComponent implements OnInit {
   allCourses: Course[];
 
   // TODO Put this somewhere more reasonable
-  private static readonly DEPT_ALIASES = new Map<string, string[]>([['COMPSCI', ['CS']]]);
+  private static readonly DEPT_ALIASES = new Map<string, string[]>([
+    ['ASTRON', ['ASTRO']],
+    ['BIO ENG', ['BIOE']],
+    ['BIO PHY', ['BIO P']],
+    ['BIOLOGY', ['BIO']],
+    ['CHM ENG', ['CHEME']],
+    ['CIV ENG', ['CIVE']],
+    ['CLASSIC', ['CLASSICS']],
+    ['COLWRIT', ['COLLEGE WRITING']],
+    ['COM LIT', ['COMPLIT']],
+    ['COMPSCI', ['CS']],
+    ['CY PLAN', ['CP']],
+    ['DATASCI', ['DS']],
+    ['DES INV', ['DESIGN']],
+    ['EL ENG', ['EE']],
+    ['ENE,RES', ['ER', 'ERG']],
+    ['ENGIN', ['E', 'ENGINEERING']],
+    ['ENV DES', ['ED']],
+    ['GEOG', ['GEOLOGY']],
+    ['IND ENG', ['IE', 'IEOR']],
+    ['INTEGBI', ['IB']],
+    ['LINGUIS', ['LING']],
+    ['M E STU', ['MIDDLE EASTERN STUDIES']],
+    ['MAT SCI', ['MS', 'MSE']],
+    ['MCELLBI', ['MCB']],
+    ['MEC ENG', ['ME', 'MECHE']],
+    ['MEDIAST', ['MEDIA']],
+    ['NEUROSC', ['NEUROSCI']],
+    ['NUC ENG', ['NE']],
+    ['NUSCTX', ['NUTRISCI']],
+    ['PHILOS', ['PHIL', 'PHILO', 'PHILOSPOHY']],
+    ['PHYS ED', ['PE']],
+    ['PLANTBI', ['PMB']],
+    ['POL SCI', ['POLI', 'POLISCI', 'PS']],
+    ['POLECON', ['POLIECON']],
+    ['PSYCH', ['PSYCHOLOGY']],
+    ['PUB POL', ['PP', 'PUBLIC POLICY']],
+    ['STAT', ['STATS']],
+    ['THEATER', ['TDPS']],
+    ['UGBA', ['HAAS']],
+    ['VIETNMS', ['VIETNAMESE']],
+  ]);
 
   constructor(private courseService: CourseService) {}
 
