@@ -5,4 +5,5 @@ export interface CoursePrototype {
   title: string;
   units: number;
   tagIds: string[];
+  equivIds: string[];
 }

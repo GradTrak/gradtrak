@@ -341,58 +341,19 @@
         "name": "Lower Division",
         "requirements": [
           {
-            "type": "multi",
+            "type": "course",
             "name": "COMPSCI 61A",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61A",
-                "courseId": "compsci61a"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47A",
-                "courseId": "compsci47a"
-              }
-            ]
+            "courseId": "compsci61a"
           },
           {
-            "type": "multi",
+            "type": "course",
             "name": "COMPSCI 61B",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61B",
-                "courseId": "compsci61b"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47B",
-                "courseId": "compsci47b"
-              }
-            ]
+            "courseId": "compsci61b"
           },
           {
-            "type": "multi",
+            "type": "course",
             "name": "COMPSCI 61C",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61C",
-                "courseId": "compsci61c"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47C",
-                "courseId": "compsci47c"
-              }
-            ]
+            "courseId": "compsci61c"
           },
           {
             "type": "course",
@@ -507,58 +468,19 @@
         "name": "Lower Division",
         "requirements": [
           {
-            "type": "multi",
+            "type": "course",
             "name": "COMPSCI 61A",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61A",
-                "courseId": "compsci61a"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47A",
-                "courseId": "compsci47a"
-              }
-            ]
+            "courseId": "compsci61a"
           },
           {
-            "type": "multi",
+            "type": "course",
             "name": "COMPSCI 61B",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61B",
-                "courseId": "compsci61b"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47B",
-                "courseId": "compsci47b"
-              }
-            ]
+            "courseId": "compsci61b"
           },
           {
-            "type": "multi",
+            "type": "course",
             "name": "COMPSCI 61C",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "type": "course",
-                "name": "COMPSCI 61C",
-                "courseId": "compsci61c"
-              },
-              {
-                "type": "course",
-                "name": "COMPSCI 47C",
-                "courseId": "compsci47c"
-              }
-            ]
+            "courseId": "compsci61c"
           },
           {
             "type": "course",
