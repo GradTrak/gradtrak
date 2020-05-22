@@ -142,7 +142,16 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
     });
 
     fetchCourseTags(validCourses).then(() => {
-      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(Array.from(courseMap.values())));
+      const courses = Array.from(courseMap.values());
+      courses.sort((a, b) => {
+        if (a.dept === b.dept) {
+          const aNo = parseInt(a.no.replace(/[^\d]/g, ''));
+          const bNo = parseInt(b.no.replace(/[^\d]/g, ''));
+          return aNo > bNo ? 1 : -1;
+        }
+        return a.dept > b.dept ? 1 : -1;
+      });
+      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(courses));
     });
   });
 });
