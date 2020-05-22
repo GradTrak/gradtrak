@@ -10,6 +10,6 @@
     "start-dev": "concurrently -n client,server --handle-input \"cd client && npm run start\" \"cd server && npm run start-dev\""
   },
   "devDependencies": {
-    "concurrently": "^5.0.2"
+    "concurrently": "^5.2.0"
   }
 }

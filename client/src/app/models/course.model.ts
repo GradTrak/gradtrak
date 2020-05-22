@@ -28,4 +28,8 @@ export class Course {
   toString(): string {
     return `${this.getName()}: ${this.title}`;
   }
+
+  getBareNumber(): number {
+    return parseInt(this.no.replace(/[^\d]/g, ''), 10);
+  }
 }

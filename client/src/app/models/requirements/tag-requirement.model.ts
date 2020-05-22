@@ -7,7 +7,6 @@ import { Tag } from 'models/tag.model';
  * specified {@link Tag}.
  */
 export class TagRequirement implements StandaloneRequirement {
-  id: string;
   name: string;
   tag: Tag;
 

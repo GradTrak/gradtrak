@@ -46,6 +46,15 @@ export class CourseService {
             ),
           ),
       ),
+      // Sort
+      map((data: Course[]) =>
+        data.sort((a: Course, b: Course) => {
+          if (a.dept === b.dept) {
+            return a.getBareNumber() < b.getBareNumber() ? -1 : 1;
+          }
+          return a.dept < b.dept ? -1 : 1;
+        }),
+      ),
       // Create Map
       map((data: Course[]) => {
         const coursesMap = new Map<string, Course>();

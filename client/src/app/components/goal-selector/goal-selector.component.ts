@@ -10,7 +10,7 @@ import { GoalSelectionState } from './selection-state';
   styleUrls: ['./goal-selector.component.scss'],
 })
 export class GoalSelectorComponent implements OnInit {
-  private static DUMMY_GOAL_TYPES = ['major', 'minor', 'other']; // TODO Make this dynamic based on school
+  private static DUMMY_GOAL_TYPES = ['major']; // TODO Make this dynamic based on school
 
   @Input() readonly initialGoals: RequirementSet[]; // Optional
   @Output() selectGoals: EventEmitter<RequirementSet[]>;
@@ -53,7 +53,7 @@ export class GoalSelectorComponent implements OnInit {
   }
 
   /**
-   * Updates {@link GoalSelectionState#searchedGoals} for each state so that ir contains only goals that match the
+   * Updates {@link GoalSelectionState#searchedGoals} for each state so that it contains only goals that match the
    * specifications of {@link GoalSelectorComponent#searchFunction}.
    */
   updateGoalSearch(): void {

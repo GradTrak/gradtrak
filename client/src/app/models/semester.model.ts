@@ -5,7 +5,6 @@ import { Course } from 'models/course.model';
  * The Semester class represents a single term in which a certain number of {@link Course}s can be taken.
  */
 export class Semester {
-  id: string;
   name: string;
   courses: Course[];
 
@@ -16,7 +15,6 @@ export class Semester {
     switch (typeof obj) {
       case 'object': {
         const proto: SemesterPrototype = obj as SemesterPrototype;
-        this.id = proto.id;
         this.name = proto.name;
         this.courses = proto.courseIds.map((courseId: string) => coursesMap.get(courseId));
         break;
@@ -24,7 +22,6 @@ export class Semester {
 
       case 'string': {
         const name: string = obj as string;
-        this.id = name.toLowerCase().replace(/[^\w]/g, '');
         this.name = name;
         this.courses = [];
         break;

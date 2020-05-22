@@ -1,15 +1,17 @@
 const express = require('express');
 const passport = require('passport');
 
+const { cache } = require('../config/cache');
+
 const courseController = require('../controllers/courseController');
 const requirementController = require('../controllers/requirementController');
 const tagController = require('../controllers/tagController');
 const userController = require('../controllers/userController');
 
 const api = express.Router();
-api.get('/courses', courseController.getCourses);
-api.get('/requirements', requirementController.getRequirements);
-api.get('/tags', tagController.getTags);
+api.get('/courses', cache.route(), courseController.getCourses);
+api.get('/requirements', cache.route(), requirementController.getRequirements);
+api.get('/tags', cache.route(), tagController.getTags);
 
 api.get('/user', userController.getUserData);
 api.put('/user', userController.setUserData);
