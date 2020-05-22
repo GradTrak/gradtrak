@@ -8,7 +8,21 @@
   font-size: 1.2rem;
 }
 
-.name,
+.button {
+  cursor: pointer;
+  user-select: none;
+}
+
 .requirements {
   padding-left: 24px;
+}
+
+.collapsed {
+  .button {
+    transform: rotate(-90deg);
+  }
+
+  .requirements {
+    display: none;
+  }
 }

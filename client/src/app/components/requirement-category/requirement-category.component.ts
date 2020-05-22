@@ -11,7 +11,15 @@ export class RequirementCategoryComponent implements OnInit {
   @Input() readonly requirementCategory: RequirementCategory;
   @Input() readonly courses: Course[];
 
-  constructor() {}
+  collapsed: boolean;
+
+  constructor() {
+    this.collapsed = false;
+  }
 
   ngOnInit(): void {}
+
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
 }
