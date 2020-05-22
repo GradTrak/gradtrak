@@ -1,9 +1,9 @@
 <!-- TODO This seems slightly janky -->
 
-<ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()"> *</span></ng-template>
+<ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span></ng-template>
 
 <ng-template #tagReq>
-  {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+  {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
@@ -30,7 +30,7 @@
     ></app-requirement>
   </ng-container>
   <ng-template #multiReqHidden>
-    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
+    {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
     <div *ngIf="isPoly()" ngbDropdown class="req-more">
       <button ngbDropdownToggle></button>
       <div ngbDropdownMenu>
