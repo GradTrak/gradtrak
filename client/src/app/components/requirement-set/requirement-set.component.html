@@ -1,6 +1,11 @@
-<div class="name">{{ requirementSet.name }}</div>
-<app-requirement-category
-  *ngFor="let requirementCategory of requirementSet.requirementCategories"
-  [requirementCategory]="requirementCategory"
-  [courses]="courses"
-></app-requirement-category>
+<div [ngClass]="collapsed ? 'collapsed' : null">
+  <i class="button material-icons" (click)="toggleCollapsed()">arrow_drop_down</i>
+  <span class="name">{{ requirementSet.name }}</span>
+  <div class="requirement-categories">
+    <app-requirement-category
+      *ngFor="let requirementCategory of requirementSet.requirementCategories"
+      [requirementCategory]="requirementCategory"
+      [courses]="courses"
+    ></app-requirement-category>
+  </div>
+</div>

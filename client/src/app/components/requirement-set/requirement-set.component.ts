@@ -11,7 +11,15 @@ export class RequirementSetComponent implements OnInit {
   @Input() readonly requirementSet: RequirementSet;
   @Input() readonly courses: Course[];
 
-  constructor() {}
+  collapsed: boolean;
+
+  constructor() {
+    this.collapsed = false;
+  }
 
   ngOnInit(): void {}
+
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
 }

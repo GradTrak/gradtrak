@@ -1,5 +1,24 @@
+:host {
+  display: block;
+}
+
 .name {
   font-size: 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapsed {
+  .button {
+    transform: rotate(-90deg);
+  }
+
+  .requirement-categories {
+    display: none;
+  }
 }
 
 app-requirement-category {
