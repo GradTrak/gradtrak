@@ -14,6 +14,9 @@ export class CourseSearcherComponent implements OnInit {
   searchedCourse: Course;
   allCourses: Course[];
 
+  // TODO Put this somewhere more reasonable
+  private static readonly DEPT_ALIASES = new Map<string, string[]>([['COMPSCI', ['CS']]]);
+
   constructor(private courseService: CourseService) {}
 
   ngOnInit(): void {
@@ -24,13 +27,17 @@ export class CourseSearcherComponent implements OnInit {
 
   searchFunction(input: string, courseList: Course[]): Course[] {
     const processedInput = input.toLowerCase().replace(/[^\w]/g, '');
-    return courseList.filter((course) =>
-      course
-        .toString()
-        .toLowerCase()
-        .replace(/[^\w]/g, '')
-        .includes(processedInput),
-    );
+    return courseList.filter((course) => {
+      const canonicalName: string = course.toString();
+      const names: string[] = [canonicalName];
+      const deptAlises: string[] = CourseSearcherComponent.DEPT_ALIASES.get(course.dept);
+      if (deptAlises) {
+        names.push(...deptAlises.map((alias: string) => `${alias} ${course.no}`));
+      }
+      return names
+        .map((name: string) => name.toLowerCase().replace(/[^\w]/g, ''))
+        .some((name: string) => name.includes(processedInput));
+    });
   }
 
   /**
