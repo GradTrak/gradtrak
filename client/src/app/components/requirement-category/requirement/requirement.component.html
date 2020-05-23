@@ -61,8 +61,8 @@
       [requirement]="childReq"
       [courses]="courses"
       [manuallyFulfilled]="manuallyFulfilled"
-      (onManualFulfill)="manuallyFulfill(requirement)"
-      (onManualUnfulfill)="manuallyUnfulfill(requirement)"
+      (onManualFulfill)="manuallyFulfill($event)"
+      (onManualUnfulfill)="manuallyUnfulfill($event)"
     ></app-requirement>
   </ng-container>
   <ng-template #multiReqHidden>
