@@ -17,8 +17,11 @@
 </div>
 <ng-container *ngIf="!state.loading; else loading">
   <div class="body">
-    <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
-    <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals"></app-requirements-pane>
+    <div class="main">
+      <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+      <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals"></app-requirements-pane>
+    </div>
+    <button class="report-button" (click)="showReportForm()">Feedback</button>
   </div>
 </ng-container>
 
@@ -30,4 +33,8 @@
 
 <ng-template #login>
   <app-login (success)="closeLogin()"></app-login>
+</ng-template>
+
+<ng-template #reportFormTemplate>
+  <app-report-pane></app-report-pane>
 </ng-template>
