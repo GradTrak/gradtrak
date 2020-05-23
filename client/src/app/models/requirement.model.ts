@@ -21,7 +21,9 @@ export abstract class Requirement {
 
   abstract isFulfilledWith(courses: Course[], override: Set<string>): boolean;
 
-  abstract getAnnotation(): string;
+  getAnnotation(): string {
+    return null;
+  }
 
   abstract toString(): string;
 }

@@ -24,10 +24,6 @@ export class UnitRequirement extends Requirement {
     return courses.filter((course) => this.requirement.isFulfillableBy(course));
   }
 
-  getAnnotation(): string {
-    return null;
-  }
-
   toString(): string {
     return `${this.units} units of \n${this.requirement.name}`;
   }

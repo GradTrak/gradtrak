@@ -95,10 +95,6 @@ export class MutexRequirement extends Requirement {
     );
   }
 
-  getAnnotation(): string {
-    return null;
-  }
-
   toString(): string {
     return this.requirements.reduce(
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,

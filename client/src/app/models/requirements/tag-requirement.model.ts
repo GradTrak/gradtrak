@@ -13,10 +13,6 @@ export class TagRequirement extends StandaloneRequirement {
     return course.tags.includes(this.tag);
   }
 
-  getAnnotation(): string {
-    return null;
-  }
-
   toString(): string {
     return `Category: ${this.tag.name}`;
   }

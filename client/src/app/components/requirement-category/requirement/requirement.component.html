@@ -1,7 +1,6 @@
 <!-- TODO This seems slightly janky -->
 
 <ng-template #standardReq>
-  {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
@@ -13,10 +12,10 @@
       </button>
     </div>
   </div>
+  {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
 </ng-template>
 
 <ng-template #tagReq>
-  {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
@@ -31,17 +30,11 @@
       </button>
     </div>
   </div>
+  {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
 </ng-template>
 
 <ng-template #multiReq>
   <ng-container *ngIf="!getMulti().hidden; else multiReqHidden">
-    {{
-      getMulti().numRequired === 1
-        ? 'One of'
-        : getMulti().numRequired === getMulti().requirements.length
-        ? 'All of'
-        : getMulti().numFulfilled(courses, manuallyFulfilled) + '/' + getMulti().numRequired + ' of'
-    }}
     <div ngbDropdown class="req-more">
       <button ngbDropdownToggle></button>
       <div ngbDropdownMenu>
@@ -56,6 +49,13 @@
         </button>
       </div>
     </div>
+    {{
+      getMulti().numRequired === 1
+        ? 'One of'
+        : getMulti().numRequired === getMulti().requirements.length
+        ? 'All of'
+        : getMulti().numFulfilled(courses, manuallyFulfilled) + '/' + getMulti().numRequired + ' of'
+    }}
     <app-requirement
       *ngFor="let childReq of getMulti().requirements"
       [requirement]="childReq"
@@ -66,7 +66,6 @@
     ></app-requirement>
   </ng-container>
   <ng-template #multiReqHidden>
-    {{ requirement.name }}<span *ngIf="getAnnotation()"> *</span>
     <div ngbDropdown class="req-more">
       <button ngbDropdownToggle></button>
       <div ngbDropdownMenu>
@@ -81,13 +80,11 @@
         </button>
       </div>
     </div>
+    {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
   </ng-template>
 </ng-template>
 
 <ng-template #unitReq>
-  {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
-  <br />
-  {{ getUnit().requirement.toString() }}
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
@@ -100,6 +97,9 @@
       </button>
     </div>
   </div>
+  {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
+  <br />
+  {{ getUnit().requirement.toString() }}
   <div class="nested">
     <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
       {{ course.getName() }}
@@ -108,7 +108,6 @@
 </ng-template>
 
 <ng-template #mutexReq>
-  Distinctly fulfill
   <div ngbDropdown class="req-more">
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
@@ -120,6 +119,7 @@
       </button>
     </div>
   </div>
+  Distinctly fulfill
   <ng-container *ngIf="getMutex().getFulfillment(courses, manuallyFulfilled) as fulfillments">
     <app-requirement
       *ngFor="let childReq of getMutex().requirements; index as i"
