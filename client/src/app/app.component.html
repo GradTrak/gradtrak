@@ -19,7 +19,11 @@
   <div class="body">
     <div class="main">
       <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
-      <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals"></app-requirements-pane>
+      <app-requirements-pane
+        [courses]="currentCourses"
+        [goals]="state.userData.goals"
+        [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
+      ></app-requirements-pane>
     </div>
     <button class="report-button" (click)="showReportForm()">Feedback</button>
   </div>

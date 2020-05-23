@@ -5,13 +5,21 @@ import { Course } from 'models/course.model';
  * either fulfilled or unfulfilled based on the input {@link Course}s.
  */
 export abstract class Requirement {
+  id: string;
+  name: string;
+
   constructor(obj: object) {
     Object.assign(this, obj);
   }
 
-  name: string;
+  isFulfilled(courses: Course[], override: Set<string>): boolean {
+    if (override && override.has(this.id)) {
+      return true;
+    }
+    return this.isFulfilledWith(courses, override);
+  }
 
-  abstract isFulfilled(courses: Course[]): boolean;
+  abstract isFulfilledWith(courses: Course[], override: Set<string>): boolean;
 
   getAnnotation(): string {
     return null;

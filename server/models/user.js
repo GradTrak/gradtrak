@@ -27,6 +27,12 @@ const userDataSchema = new mongoose.Schema(
       required: true,
       default: [],
     },
+    manuallyFulfilledReqs: {
+      type: Map,
+      of: [String],
+      required: true,
+      default: {},
+    },
   },
   { strict: 'throw' },
 );

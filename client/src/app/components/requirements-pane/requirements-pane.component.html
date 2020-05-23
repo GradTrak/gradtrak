@@ -3,6 +3,7 @@
     *ngFor="let requirementSet of getRequiredSets()"
     [requirementSet]="requirementSet"
     [courses]="courses"
+    [manuallyFulfilled]="manuallyFulfilled"
   ></app-requirement-set>
   <button class="goal-editor" (click)="openSelector()">Edit Majors</button>
 </div>

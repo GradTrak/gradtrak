@@ -1,6 +1,19 @@
 <!-- TODO This seems slightly janky -->
 
-<ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span></ng-template>
+<ng-template #standardReq>
+  <div ngbDropdown class="req-more">
+    <button ngbDropdownToggle></button>
+    <div ngbDropdownMenu>
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        Mark as Fulfilled
+      </button>
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        Mark as Unfulfilled
+      </button>
+    </div>
+  </div>
+  {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
+</ng-template>
 
 <ng-template #tagReq>
   <div ngbDropdown class="req-more">
@@ -9,6 +22,12 @@
       <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
         Show Fulfilling Courses
       </button>
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        Mark as Fulfilled
+      </button>
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        Mark as Unfulfilled
+      </button>
     </div>
   </div>
   {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
@@ -16,25 +35,48 @@
 
 <ng-template #multiReq>
   <ng-container *ngIf="!getMulti().hidden; else multiReqHidden">
+    <div ngbDropdown class="req-more">
+      <button ngbDropdownToggle></button>
+      <div ngbDropdownMenu>
+        <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+          Show Fulfilling Courses
+        </button>
+        <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+          Mark as Fulfilled
+        </button>
+        <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+          Mark as Unfulfilled
+        </button>
+      </div>
+    </div>
     {{
       getMulti().numRequired === 1
         ? 'One of'
         : getMulti().numRequired === getMulti().requirements.length
         ? 'All of'
-        : getMulti().numFulfilled(courses) + '/' + getMulti().numRequired + ' of'
+        : getMulti().numFulfilled(courses, manuallyFulfilled) + '/' + getMulti().numRequired + ' of'
     }}
     <app-requirement
       *ngFor="let childReq of getMulti().requirements"
       [requirement]="childReq"
       [courses]="courses"
+      [manuallyFulfilled]="manuallyFulfilled"
+      (onManualFulfill)="manuallyFulfill($event)"
+      (onManualUnfulfill)="manuallyUnfulfill($event)"
     ></app-requirement>
   </ng-container>
   <ng-template #multiReqHidden>
-    <div *ngIf="isPoly()" ngbDropdown class="req-more">
+    <div ngbDropdown class="req-more">
       <button ngbDropdownToggle></button>
       <div ngbDropdownMenu>
-        <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+        <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
           Show Fulfilling Courses
+        </button>
+        <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+          Mark as Fulfilled
+        </button>
+        <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+          Mark as Unfulfilled
         </button>
       </div>
     </div>
@@ -47,6 +89,12 @@
     <button ngbDropdownToggle></button>
     <div ngbDropdownMenu>
       <button ngbDropdownItem (click)="openRequirementDisplay(getUnit().requirement)">Show Fulfilling Courses</button>
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        Mark as Fulfilled
+      </button>
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        Mark as Unfulfilled
+      </button>
     </div>
   </div>
   {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
@@ -60,13 +108,27 @@
 </ng-template>
 
 <ng-template #mutexReq>
+  <div ngbDropdown class="req-more">
+    <button ngbDropdownToggle></button>
+    <div ngbDropdownMenu>
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        Mark as Fulfilled
+      </button>
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        Mark as Unfulfilled
+      </button>
+    </div>
+  </div>
   Distinctly fulfill
-  <ng-container *ngIf="getMutex().getFulfillment(courses) as fulfillments">
+  <ng-container *ngIf="getMutex().getFulfillment(courses, manuallyFulfilled) as fulfillments">
     <app-requirement
       *ngFor="let childReq of getMutex().requirements; index as i"
       [requirement]="childReq"
       [courses]="[]"
       [override]="getMutexFulfillment(fulfillments[i])"
+      [manuallyFulfilled]="manuallyFulfilled"
+      (onManualFulfill)="manuallyFulfill($event)"
+      (onManualUnfulfill)="manuallyUnfulfill($event)"
     ></app-requirement>
   </ng-container>
 </ng-template>

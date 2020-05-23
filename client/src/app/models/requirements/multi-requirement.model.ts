@@ -10,12 +10,12 @@ export class MultiRequirement extends Requirement {
   numRequired: number;
   hidden: boolean;
 
-  isFulfilled(courses: Course[]): boolean {
-    return this.numFulfilled(courses) >= this.numRequired;
+  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
+    return this.numFulfilled(courses, override) >= this.numRequired;
   }
 
-  numFulfilled(courses: Course[]): number {
-    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses)).length;
+  numFulfilled(courses: Course[], override: Set<string>): number {
+    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses, override)).length;
   }
 
   getAnnotation(): string {
