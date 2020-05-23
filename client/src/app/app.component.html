@@ -4,21 +4,24 @@
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
       <div class="left">Guest User</div>
       <div class="right">
-        <button class="login" (click)="openLogin()">Login</button>
+        <button (click)="openLogin()">Login</button>
       </div>
     </ng-container>
     <ng-template #loggedIn>
       <div class="left">Name: {{ state.username }}</div>
       <div class="right">
-        <button class="login" (click)="logout()">Logout</button>
+        <button (click)="logout()">Logout</button>
       </div>
     </ng-template>
   </div>
 </div>
 <ng-container *ngIf="!state.loading; else loading">
   <div class="body">
-    <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
-    <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals"></app-requirements-pane>
+    <div class="main">
+      <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+      <app-requirements-pane [courses]="currentCourses" [goals]="state.userData.goals"></app-requirements-pane>
+    </div>
+    <button class="report-button" (click)="showReportForm()">Feedback</button>
   </div>
 </ng-container>
 
@@ -31,8 +34,6 @@
 <ng-template #login>
   <app-login (success)="closeLogin()"></app-login>
 </ng-template>
-
-<button class="report-button" (click)="showReportForm()">Feedback</button>
 
 <ng-template #reportFormTemplate>
   <app-report-pane></app-report-pane>
