@@ -48,8 +48,6 @@ export class GoalSelectorComponent implements OnInit {
       this.requirementSets = requirementSets;
       this.updateGoalSearch();
     });
-
-    this.updateGoalSearch();
   }
 
   /**
