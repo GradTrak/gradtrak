@@ -7,7 +7,7 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
 export class CourseRequirement extends StandaloneRequirement {
   course: Course;
 
-  isFulfillableBy(course: Course): boolean {
+  protected isFulfillableBy(course: Course): boolean {
     return course === this.course;
   }
 

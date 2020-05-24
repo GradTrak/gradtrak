@@ -6,10 +6,16 @@ import { Requirement } from 'models/requirement.model';
  * opposed to a set of courses.
  */
 export abstract class StandaloneRequirement extends Requirement {
-  protected abstract isFulfillableBy(course: Course): boolean;
+  isFulfilled(courses: Course | Course[], override?: Set<string>): boolean {
+    if (courses instanceof Course) {
+      return super.isFulfilled([courses], override);
+    } else {
+      return super.isFulfilled(courses, override);
+    }
+  }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  isFulfilledWith(courses: Course | Course[], override?: Set<string>): boolean {
+  protected isFulfilledWith(courses: Course | Course[], override?: Set<string>): boolean {
     if (courses instanceof Course) {
       return this.equivIsFulfillableBy(courses, new Set<Course>());
     } else {
@@ -18,6 +24,8 @@ export abstract class StandaloneRequirement extends Requirement {
       });
     }
   }
+
+  protected abstract isFulfillableBy(course: Course): boolean;
 
   /**
    * Performs a graph traversal of the graph of equivalent courses starting at the given course, returning true if any

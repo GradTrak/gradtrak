@@ -21,7 +21,7 @@ export class RequirementDisplayComponent implements OnInit {
     return this.courseService.getCourses().pipe(
       map((courses: Course[]) =>
         courses.filter((course) => {
-          return this.requirementInput.isFulfilledWith(course);
+          return this.requirementInput.isFulfilled(course);
         }),
       ),
     );

@@ -28,39 +28,6 @@ export class MutexRequirement extends Requirement {
 
   requirements: StandaloneRequirement[];
 
-  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
-    return this.getFulfillment(courses, override).every(
-      (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
-    );
-  }
-
-  /**
-   * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
-   *
-   * @param {Course[]} courses The input Courses that are currently being taken.
-   * @param {Set<string>} override The IDs of requirements that have been manually marked as fulfilled.
-   * @return {number[]} An array of fulfillment status corresponding to each child requirement.
-   */
-  getFulfillment(courses: Course[], override: Set<string>): number[] {
-    let mappings: (Course | boolean)[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses, override);
-    const maxFulfilled: number = Math.max(
-      ...mappings.map((mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length),
-    );
-    mappings = mappings.filter(
-      (mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length === maxFulfilled,
-    );
-    return this.requirements.map((requirement: Requirement, i: number) => {
-      const fulfillingWays = mappings.map((mapping: Course[]) => mapping[i]);
-      if (fulfillingWays.every((course: Course | boolean) => course)) {
-        return MutexRequirement.FULFILLED;
-      } else if (fulfillingWays.some((course: Course | boolean) => course)) {
-        return MutexRequirement.POTENTIAL;
-      } else {
-        return MutexRequirement.UNFULFILLED;
-      }
-    });
-  }
-
   /**
    * Returns an array of possible arrangements to fulfill the given requirements given the set of courses.
    *
@@ -81,7 +48,7 @@ export class MutexRequirement extends Requirement {
     const firstReq: StandaloneRequirement = requirements[0];
     const fulfillingCourses: (Course | boolean)[] = [
       null,
-      ...courses.filter((course: Course) => firstReq.isFulfilledWith(course)),
+      ...courses.filter((course: Course) => firstReq.isFulfilled(course, override)),
     ];
     if (override && override.has(firstReq.id)) {
       fulfillingCourses[0] = true;
@@ -100,5 +67,38 @@ export class MutexRequirement extends Requirement {
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
       'Uniquely fulfill:',
     );
+  }
+
+  protected isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
+    return this.getFulfillment(courses, override).every(
+      (reqFulfillment: number) => reqFulfillment === MutexRequirement.FULFILLED,
+    );
+  }
+
+  /**
+   * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
+   *
+   * @param {Course[]} courses The input Courses that are currently being taken.
+   * @param {Set<string>} override The IDs of requirements that have been manually marked as fulfilled.
+   * @return {number[]} An array of fulfillment status corresponding to each child requirement.
+   */
+  getFulfillment(courses: Course[], override?: Set<string>): number[] {
+    let mappings: (Course | boolean)[][] = MutexRequirement.getFulfillmentMapping(this.requirements, courses, override);
+    const maxFulfilled: number = Math.max(
+      ...mappings.map((mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length),
+    );
+    mappings = mappings.filter(
+      (mapping: (Course | boolean)[]) => mapping.filter((course: Course) => course).length === maxFulfilled,
+    );
+    return this.requirements.map((requirement: Requirement, i: number) => {
+      const fulfillingWays = mappings.map((mapping: Course[]) => mapping[i]);
+      if (fulfillingWays.every((course: Course | boolean) => course)) {
+        return MutexRequirement.FULFILLED;
+      } else if (fulfillingWays.some((course: Course | boolean) => course)) {
+        return MutexRequirement.POTENTIAL;
+      } else {
+        return MutexRequirement.UNFULFILLED;
+      }
+    });
   }
 }

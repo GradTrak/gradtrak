@@ -1,5 +1,4 @@
 import { Course } from 'models/course.model';
-import { Requirement } from 'models/requirement.model';
 import { StandaloneRequirement } from 'models/requirements/standalone-requirement.model';
 
 /**
@@ -8,16 +7,12 @@ import { StandaloneRequirement } from 'models/requirements/standalone-requiremen
  * Requirement A or Requirement B or Requirement A and Requirement B.
  */
 export class PolyRequirement extends StandaloneRequirement {
-  requirements: Requirement[];
+  requirements: StandaloneRequirement[];
   numRequired: number;
   hidden: boolean;
 
-  isFulfillableBy(course: Course): boolean {
-    return this.numFulfilled(course) >= this.numRequired;
-  }
-
   numFulfilled(course: Course): number {
-    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilledWith([course], null)).length;
+    return this.requirements.filter((requirement: StandaloneRequirement) => requirement.isFulfilled(course)).length;
   }
 
   getAnnotation(): string {
@@ -29,8 +24,12 @@ export class PolyRequirement extends StandaloneRequirement {
 
   toString(): string {
     return this.requirements.reduce(
-      (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
+      (annotation: string, requirement: StandaloneRequirement) => `${annotation}\n${requirement.toString()}`,
       `Using one course, fulfill ${this.numRequired} of:`,
     );
+  }
+
+  protected isFulfillableBy(course: Course): boolean {
+    return this.numFulfilled(course) >= this.numRequired;
   }
 }
