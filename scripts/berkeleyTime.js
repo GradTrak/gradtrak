@@ -147,6 +147,10 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
         if (a.dept === b.dept) {
           const aNo = parseInt(a.no.replace(/[^\d]/g, ''));
           const bNo = parseInt(b.no.replace(/[^\d]/g, ''));
+
+          if (aNo === bNo) {
+            return a.no > b.no ? 1 : -1;
+          }
           return aNo > bNo ? 1 : -1;
         }
         return a.dept > b.dept ? 1 : -1;
