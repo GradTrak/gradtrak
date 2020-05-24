@@ -23,6 +23,7 @@ import { ReportPaneComponent } from './components/report-pane/report-pane.compon
 
 @NgModule({
   declarations: [
+    PlannerComponent, //
     SemesterPaneComponent,
     SemesterComponent,
     CourseSearcherComponent,
@@ -35,10 +36,20 @@ import { ReportPaneComponent } from './components/report-pane/report-pane.compon
     RequirementDisplayComponent,
     LoginComponent,
     ReportPaneComponent,
-    PlannerComponent,
   ],
-  exports: [PlannerComponent],
-  imports: [CommonModule, FormsModule, HttpClientModule, NgbModule],
-  providers: [CourseService, RequirementService, UserService],
+  exports: [
+    PlannerComponent, //
+  ],
+  imports: [
+    CommonModule, //
+    FormsModule,
+    HttpClientModule,
+    NgbModule,
+  ],
+  providers: [
+    CourseService, //
+    RequirementService,
+    UserService,
+  ],
 })
 export class PlannerModule {}
