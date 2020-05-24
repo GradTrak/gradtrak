@@ -6,13 +6,17 @@ import { Requirement } from 'models/requirement.model';
  * opposed to a set of courses.
  */
 export abstract class StandaloneRequirement extends Requirement {
-  abstract isFulfillableBy(course: Course): boolean;
+  protected abstract isFulfillableBy(course: Course): boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
-    return courses.some((course: Course) => {
-      return this.equivIsFulfillableBy(course, new Set<Course>());
-    });
+  isFulfilledWith(courses: Course | Course[], override?: Set<string>): boolean {
+    if (courses instanceof Course) {
+      return this.equivIsFulfillableBy(courses, new Set<Course>());
+    } else {
+      return courses.some((course: Course) => {
+        return this.equivIsFulfillableBy(course, new Set<Course>());
+      });
+    }
   }
 
   /**

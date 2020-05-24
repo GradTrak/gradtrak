@@ -21,7 +21,7 @@ export class UnitRequirement extends Requirement {
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {
-    return courses.filter((course) => this.requirement.isFulfillableBy(course));
+    return courses.filter((course) => this.requirement.isFulfilledWith(course));
   }
 
   toString(): string {

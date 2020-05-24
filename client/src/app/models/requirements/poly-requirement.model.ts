@@ -17,7 +17,7 @@ export class PolyRequirement extends StandaloneRequirement {
   }
 
   numFulfilled(course: Course): number {
-    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled([course], null)).length;
+    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilledWith([course], null)).length;
   }
 
   getAnnotation(): string {

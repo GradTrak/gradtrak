@@ -81,7 +81,7 @@ export class MutexRequirement extends Requirement {
     const firstReq: StandaloneRequirement = requirements[0];
     const fulfillingCourses: (Course | boolean)[] = [
       null,
-      ...courses.filter((course: Course) => firstReq.isFulfillableBy(course)),
+      ...courses.filter((course: Course) => firstReq.isFulfilledWith(course)),
     ];
     if (override && override.has(firstReq.id)) {
       fulfillingCourses[0] = true;
