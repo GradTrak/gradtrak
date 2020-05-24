@@ -12,7 +12,9 @@ export class UnitRequirement extends Requirement {
   requirement: StandaloneRequirement;
 
   unitsFulfilled(courses: Course[]): number {
-    return this.getFulfillingCourses(courses).reduce((sum, course) => sum + course.units, 0);
+    return this.getFulfillingCourses(courses)
+      .map((course: Course) => course.units)
+      .reduce((sum: number, units: number) => sum + units, 0);
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {
