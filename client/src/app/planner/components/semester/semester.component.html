@@ -38,7 +38,7 @@
       </td>
       <td class="button-cell">
         <div ngbDropdown class="dropdown-sm">
-          <button ngbDropdownToggle class="course-more-button"></button>
+          <button ngbDropdownToggle class="gt-button course-more-button"></button>
           <div ngbDropdownMenu>
             <button ngbDropdownItem (click)="removeCourse(course)">Remove</button>
           </div>
@@ -48,7 +48,7 @@
     <tr></tr>
   </tbody>
 </table>
-<button class="course-adder" (click)="openAdder()">+</button>
+<button class="gt-button course-adder" (click)="openAdder()">+</button>
 
 <ng-template #courseAdder>
   <div class="modal-body">
