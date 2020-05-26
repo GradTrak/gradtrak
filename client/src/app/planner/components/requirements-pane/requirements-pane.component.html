@@ -5,15 +5,13 @@
     [courses]="courses"
     [manuallyFulfilled]="manuallyFulfilled"
   ></app-requirement-set>
-  <button class="goal-editor" (click)="openSelector()">Edit Majors</button>
+  <button class="gt-button gt-button-primary goal-editor" (click)="openSelector()">Edit Majors</button>
 </div>
 
 <ng-template #goalSelector>
-  <div class="">
-    <app-goal-selector
-      [initialGoals]="goals"
-      (selectGoals)="setGoals($event)"
-      (selectGoals)="closeSelector()"
-    ></app-goal-selector>
-  </div>
+  <app-goal-selector
+    [initialGoals]="goals"
+    (selectGoals)="setGoals($event)"
+    (selectGoals)="closeSelector()"
+  ></app-goal-selector>
 </ng-template>
