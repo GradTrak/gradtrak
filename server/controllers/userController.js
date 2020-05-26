@@ -10,13 +10,12 @@ async function changePassword(user, oldPassword, newPassword) {
     return 'New password is invalid';
   }
   const verify = await verifyUser(user, oldPassword);
-  if (verify) {
-    user.passwordHash = await argon2.hash(newPassword, { mode: argon2.argon2id });
-    user.save();
-    return null;
-  } else {
+  if (!verify) {
     return 'Incorrect password';
   }
+  user.passwordHash = await argon2.hash(newPassword, { mode: argon2.argon2id });
+  user.save();
+  return null;
 }
 
 exports.changePassword = (req, res) => {
