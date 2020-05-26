@@ -41,6 +41,12 @@
       <br />
       <input type="password" name="password2" [(ngModel)]="password2" />
       <br />
+      <input type="checkbox" id="email-marketing" name="email-marketing" [(ngModel)]="regEmailMarketing" />
+      <label for="email-marketing">I would like to receive updates on new features!</label>
+      <br />
+      <input type="checkbox" id="user-testing" name="user-testing" [(ngModel)]="regUserTesting" />
+      <label for="user-testing">I would like to be contacted to help with user testing!</label>
+      <br />
       <button class="submit" type="submit" [disabled]="loading">Register</button>
       <ng-container *ngIf="regError">
         <br />

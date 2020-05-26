@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
   password: string;
   password2: string;
 
+  regEmailMarketing: boolean;
+  regUserTesting: boolean;
+
   loading: boolean;
   failed: boolean;
   registering: boolean;
