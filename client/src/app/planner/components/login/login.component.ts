@@ -13,21 +13,27 @@ export class LoginComponent implements OnInit {
   username: string;
   // FIXME Look into how to securely handle passwords in JS/Angular
   password: string;
+  password2: string;
 
   loading: boolean;
   failed: boolean;
+  registering: boolean;
 
   constructor(private userService: UserService) {
     this.success = new EventEmitter<void>();
     this.dismiss = new EventEmitter<void>();
     this.loading = false;
     this.failed = false;
+    this.registering = false;
+    this.username = "";
+    this.password = "";
+    this.password2 = "";
   }
 
   ngOnInit(): void {}
 
   onSignUp(): void {
-
+    this.registering = true;
   }
 
   submitLogin(): void {

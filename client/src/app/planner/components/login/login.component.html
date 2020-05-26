@@ -1,26 +1,60 @@
-<form (ngSubmit)="submitLogin()">
-  <div class="modal-body">
-    <label>Username</label>
-    <br />
-    <input type="text" name="username" [(ngModel)]="username" />
-    <br />
-    <label>Password</label>
-    <br />
-    <input type="password" name="password" [(ngModel)]="password" />
-    <br />
-    <button class="submit" type="submit" [disabled]="loading">Login</button>
-    <ng-container *ngIf="failed">
+<ng-container *ngIf="!registering; else regTemplate">
+  <form (ngSubmit)="submitLogin()">
+    <div class="modal-body">
+      <label>Email</label>
       <br />
-      <span class="failure">Incorrect username or password.</span>
-    </ng-container>
-  </div>
-  <div class="modal-footer">
-    <div class="register">
-      Don't have an account?
-      <a href="#" (click)="onSignUp()">Sign Up</a>
+      <input type="text" name="username" [(ngModel)]="username" />
+      <br />
+      <label>Password</label>
+      <br />
+      <input type="password" name="password" [(ngModel)]="password" />
+      <br />
+      <button class="submit" type="submit" [disabled]="loading">Login</button>
+      <ng-container *ngIf="failed">
+        <br />
+        <span class="failure">Incorrect username or password.</span>
+      </ng-container>
     </div>
-    <div class="skip">
-      <a href="#" (click)="dismiss.emit()">Continue as guest</a>
+    <div class="modal-footer">
+      <div class="register">
+        Don't have an account?
+        <a href="#" (click)="onSignUp()">Sign Up</a>
+      </div>
+      <div class="skip">
+        <a href="#" (click)="dismiss.emit()">Continue as guest</a>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</ng-container>
+<ng-template #regTemplate>
+  <form (ngSubmit)="submitRegistration()">
+    <div class="modal-body">
+      <label>Email</label>
+      <br />
+      <input type="text" name="username" [(ngModel)]="username" />
+      <br />
+      <label>Password</label>
+      <br />
+      <input type="password" name="password" [(ngModel)]="password" />
+      <br />
+      <label>Confirm Password</label>
+      <br />
+      <input type="password" name="password2" [(ngModel)]="password2" />
+      <br />
+      <button class="submit" type="submit" [disabled]="loading">Login</button>
+      <ng-container *ngIf="regError">
+        <br />
+        <span class="failure">{{regError}}</span>
+      </ng-container>
+    </div>
+    <div class="modal-footer">
+      <div class="register">
+        Already have an account?
+        <a href="#" (click)="registering = false">Log In</a>
+      </div>
+      <div class="skip">
+        <a href="#" (click)="dismiss.emit()">Continue as guest</a>
+      </div>
+    </div>
+  </form>
+</ng-template>
