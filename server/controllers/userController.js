@@ -6,9 +6,7 @@ function validPassword(password) {
 }
 
 async function changePassword(user, oldPassword, newPassword) {
-  if (oldPassword === newPassword) {
-    return 'New password cannot be same as old';
-  } else if (!validPassword(newPassword)) {
+  if (!validPassword(newPassword)) {
     return 'New password is invalid';
   }
   const verify = await verifyUser(user, oldPassword);
@@ -28,7 +26,7 @@ exports.changePassword = (req, res) => {
   }
 
   const { oldPassword, newPassword } = req.body;
-  if (!oldPassword || !newPassword) {
+  if (oldPassword === undefined || oldPassword === null || newPassword === undefined || newPassword === null) {
     res.status(400).json({
       error: 'Old password or new password not provided',
     });
