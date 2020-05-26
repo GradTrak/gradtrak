@@ -40,4 +40,5 @@ module.exports.deserializeUser = (_id, done) => {
 
 /* eslint-enable no-underscore-dangle */
 
+module.exports.verifyUser = verifyUser;
 module.exports.authStrategy = localStrategy;

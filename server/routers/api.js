@@ -54,5 +54,6 @@ api.get('/whoami', (req, res) => {
     });
   }
 });
+api.post('/account/password', userController.changePassword);
 
 exports.api = api;
