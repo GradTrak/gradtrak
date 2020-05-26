@@ -14,6 +14,18 @@ hr {
   margin: 8px;
 }
 
+table,
+.course-adder {
+  width: calc(100% - 24px);
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+table tr,
+.course-adder {
+  background-color: #f0f0f0;
+}
+
 table {
   border-collapse: separate;
   border-spacing: 0 4px;
@@ -28,11 +40,7 @@ table {
   }
 
   col.button-cell {
-    width: 2.25rem;
-  }
-
-  tr {
-    background-color: #f0f0f0;
+    width: 2rem;
   }
 
   .header {
@@ -46,35 +54,15 @@ table {
   td.name .material-icons {
     position: absolute;
     transform: translateX(-24px);
+    font-size: 16px;
     color: #dfae00;
   }
 
   td.units {
     text-align: center;
   }
-}
 
-table,
-.course-adder {
-  width: calc(100% - 24px);
-  margin-left: 12px;
-  margin-right: 12px;
-}
-
-.course-adder,
-.course-more-button {
-  border: none;
-  font-size: 1rem;
-}
-
-.course-adder {
-  background-color: #f0f0f0;
-}
-
-.course-more-button {
-  background-color: transparent;
-}
-
-.material-icons {
-  font-size: 16px;
+  .course-more-button {
+    font-size: 1rem;
+  }
 }
