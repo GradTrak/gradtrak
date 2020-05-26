@@ -10,7 +10,7 @@
     <ng-template #loggedIn>
       <div class="left">Name: {{ state.username }}</div>
       <div class="right">
-        <button (click)="logout()">Logout</button>
+        <button (click)="openAccountEditor()">Account</button>
       </div>
     </ng-template>
   </div>
@@ -41,4 +41,8 @@
 
 <ng-template #reportFormTemplate>
   <app-report-pane></app-report-pane>
+</ng-template>
+
+<ng-template #accountEditor>
+  <app-account-editor></app-account-editor>
 </ng-template>

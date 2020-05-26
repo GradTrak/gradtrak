@@ -1,0 +1,40 @@
+<div *ngIf="!isLoading; else loading" class="container">
+  <h4>Account Settings</h4>
+  <div class="section">
+    <div class="row">
+      <div class="col col-6">
+        <span>Email</span>
+      </div>
+      <div class="col col-6">
+        {{ username }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-6">
+        <span>Password</span>
+      </div>
+      <div class="col col-6">
+        ********
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="row">
+      <div class="col col-6">
+        Current password:
+      </div>
+      <div class="col col-6">
+        <input class="expand" type="text" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-12">
+        <button class="expand">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
