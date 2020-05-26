@@ -36,7 +36,7 @@
 </ng-template>
 
 <ng-template #login>
-  <app-login (success)="closeLogin()"></app-login>
+  <app-login (success)="closeLogin()" (dismiss)="closeLogin()"></app-login>
 </ng-template>
 
 <ng-template #reportFormTemplate>
