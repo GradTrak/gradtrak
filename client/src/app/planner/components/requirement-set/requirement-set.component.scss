@@ -1,8 +1,15 @@
+:host {
+  display: block;
+}
+
 .name {
   font-size: 1.5rem;
 }
 
-app-requirement-category {
+.requirement-categories {
   margin-left: 16px;
+}
+
+app-requirement-category {
   margin-bottom: 16px;
 }
