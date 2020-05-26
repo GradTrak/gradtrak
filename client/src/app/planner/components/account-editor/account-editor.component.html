@@ -6,7 +6,7 @@
         <span>Email</span>
       </div>
       <div class="col col-6">
-        {{ username }}
+        {{ email }}
       </div>
     </div>
     <div class="row">
@@ -14,7 +14,14 @@
         <span>Password</span>
       </div>
       <div class="col col-6">
-        ********
+        <ng-container *ngIf="!isChangingPassword; else passwordChange">
+          ********&nbsp;<button class="edit-button" (click)="isChangingPassword = true">
+            <i class="material-icons">edit</i>
+          </button>
+        </ng-container>
+        <ng-template #passwordChange>
+          <input class="expand" type="password" [(ngModel)]="newPassword" />
+        </ng-template>
       </div>
     </div>
   </div>
@@ -24,12 +31,19 @@
         Current password:
       </div>
       <div class="col col-6">
-        <input class="expand" type="text" />
+        <input class="expand" type="password" [(ngModel)]="currentPassword" />
       </div>
     </div>
+  </div>
+  <div class="section">
     <div class="row">
       <div class="col col-12">
-        <button class="expand">Save Changes</button>
+        <button class="expand" (click)="submit()" [disabled]="isSubmitting">Save Changes</button>
+      </div>
+    </div>
+    <div *ngIf="error" class="row">
+      <div class="error col col-12">
+        {{ error }}
       </div>
     </div>
   </div>
