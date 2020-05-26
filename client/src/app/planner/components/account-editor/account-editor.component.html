@@ -15,7 +15,7 @@
       </div>
       <div class="col col-6">
         <ng-container *ngIf="!isChangingPassword; else passwordChange">
-          ********&nbsp;<button class="edit-button" (click)="isChangingPassword = true">
+          ********&nbsp;<button class="edit-button" (click)="changePassword()">
             <i class="material-icons">edit</i>
           </button>
         </ng-container>
@@ -38,7 +38,7 @@
   <div class="section">
     <div class="row">
       <div class="col col-12">
-        <button class="expand" (click)="submit()" [disabled]="isSubmitting">Save Changes</button>
+        <button class="expand" (click)="submit()" [disabled]="!changesMade || isSubmitting">Save Changes</button>
       </div>
     </div>
     <div *ngIf="error" class="row">

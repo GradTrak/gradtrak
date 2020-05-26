@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -7,19 +7,25 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./account-editor.component.scss'],
 })
 export class AccountEditorComponent implements OnInit {
+  @Output() onClose: EventEmitter<void>;
+
   isLoading: boolean;
   isSubmitting: boolean;
-  isChangingPassword: boolean;
+  changesMade: boolean;
   email: string;
+  isChangingPassword: boolean;
   newPassword: string;
   currentPassword: string;
   error: string;
 
   constructor(private userService: UserService) {
+    this.onClose = new EventEmitter<void>();
+
     this.isLoading = true;
     this.isSubmitting = false;
-    this.isChangingPassword = false;
+    this.changesMade = false;
     this.email = null;
+    this.isChangingPassword = false;
     this.newPassword = '';
     this.currentPassword = '';
     this.error = null;
@@ -32,10 +38,19 @@ export class AccountEditorComponent implements OnInit {
     });
   }
 
+  changePassword(): void {
+    this.isChangingPassword = true;
+    this.changesMade = true;
+  }
+
   submit(): void {
     if (this.isChangingPassword) {
       this.userService.changePassword(this.currentPassword, this.newPassword).subscribe((err: string) => {
-        this.error = err;
+        if (err) {
+          this.error = err;
+        } else {
+          this.onClose.emit();
+        }
         this.isSubmitting = false;
       });
       this.isSubmitting = true;
