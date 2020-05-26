@@ -41,10 +41,10 @@
       <br />
       <input type="password" name="password2" [(ngModel)]="password2" />
       <br />
-      <button class="submit" type="submit" [disabled]="loading">Login</button>
+      <button class="submit" type="submit" [disabled]="loading">Register</button>
       <ng-container *ngIf="regError">
         <br />
-        <span class="failure">{{regError}}</span>
+        <span class="failure">{{ regError }}</span>
       </ng-container>
     </div>
     <div class="modal-footer">

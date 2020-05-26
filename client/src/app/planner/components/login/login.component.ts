@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
     this.loading = false;
     this.failed = false;
     this.registering = false;
-    this.username = "";
-    this.password = "";
-    this.password2 = "";
+    this.username = '';
+    this.password = '';
+    this.password2 = '';
   }
 
   ngOnInit(): void {}

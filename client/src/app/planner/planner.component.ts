@@ -49,9 +49,7 @@ export class PlannerComponent implements OnInit {
     this.loginModalInstance = this.modalService.open(this.loginModalContent);
   }
 
-  onSignUp(): void {
-
-  }
+  onSignUp(): void {}
 
   closeLogin(): void {
     if (this.loginModalInstance) {
