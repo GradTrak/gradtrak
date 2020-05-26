@@ -1,15 +1,26 @@
 <form (ngSubmit)="submitLogin()">
-  <label>Username</label>
-  <br />
-  <input type="text" name="username" [(ngModel)]="username" />
-  <br />
-  <label>Password</label>
-  <br />
-  <input type="password" name="password" [(ngModel)]="password" />
-  <br />
-  <button type="submit" [disabled]="loading">Login</button>
-  <ng-container *ngIf="failed">
+  <div class="modal-body">
+    <label>Username</label>
     <br />
-    <span class="failure">Incorrect username or password.</span>
-  </ng-container>
+    <input type="text" name="username" [(ngModel)]="username" />
+    <br />
+    <label>Password</label>
+    <br />
+    <input type="password" name="password" [(ngModel)]="password" />
+    <br />
+    <button class="submit" type="submit" [disabled]="loading">Login</button>
+    <ng-container *ngIf="failed">
+      <br />
+      <span class="failure">Incorrect username or password.</span>
+    </ng-container>
+  </div>
+  <div class="modal-footer">
+    <div class="register">
+      Don't have an account?
+      <a href="#" (click)="onSignUp()">Sign Up</a>
+    </div>
+    <div class="skip">
+      <a href="#" (click)="closeLogin()">Continue as guest</a>
+    </div>
+  </div>
 </form>

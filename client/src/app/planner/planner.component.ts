@@ -31,9 +31,9 @@ export class PlannerComponent implements OnInit {
 
       /* Open login modal if not opened previously */
       if (!nextState.loggedIn && !this.loginPrompted) {
-          this.loginPrompted = true;
-          this.modalService.open(this.loginModalContent);
-        }
+        this.loginPrompted = true;
+        this.openLogin();
+      }
 
       /* Save user data if logged in and not just loaded */
       if (!nextState.loading && !this.state.loading && nextState.loggedIn) {
@@ -46,7 +46,7 @@ export class PlannerComponent implements OnInit {
   }
 
   openLogin(): void {
-    this.loginModalInstance = this.modalService.open(this.loginModalContent, { size: 'sm' });
+    this.loginModalInstance = this.modalService.open(this.loginModalContent);
   }
 
   closeLogin(): void {
