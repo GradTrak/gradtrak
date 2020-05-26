@@ -17,23 +17,30 @@ export class PlannerComponent implements OnInit {
   @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private loginModalInstance: NgbModalRef;
+  private loginPrompted: boolean;
 
   constructor(private userService: UserService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
     this.userService.queryWhoami();
-    this.userService.getState().subscribe((state: State) => {
+    this.userService.getState().subscribe((nextState: State) => {
       /* Fetch user data if just logged in */
-      if (state.loggedIn && !this.state.loggedIn) {
+      if (nextState.loggedIn && !this.state.loggedIn) {
         this.userService.fetchUserData();
       }
 
+      /* Open login modal if not opened previously */
+      if (!nextState.loggedIn && !this.loginPrompted) {
+          this.loginPrompted = true;
+          this.modalService.open(this.loginModalContent);
+        }
+
       /* Save user data if logged in and not just loaded */
-      if (!state.loading && !this.state.loading && state.loggedIn) {
+      if (!nextState.loading && !this.state.loading && nextState.loggedIn) {
         this.userService.saveUserData();
       }
 
-      this.state = state;
+      this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
     });
   }
