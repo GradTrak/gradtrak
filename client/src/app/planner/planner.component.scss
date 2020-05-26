@@ -5,28 +5,20 @@ $header-height: 5rem;
   height: $header-height;
   position: fixed;
   color: white;
+}
 
-  .title {
-    height: 60%;
-    background-color: #283adc;
-    text-align: center;
-    font-size: 1.25rem;
-    padding: 8px;
-  }
+.title {
+  height: 60%;
+  background-color: #283adc;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 8px;
+}
 
-  .name {
-    height: 40%;
-    background-color: #417fdc;
-    padding: 4px;
-
-    .left {
-      float: left;
-    }
-
-    .right {
-      float: right;
-    }
-  }
+.name {
+  height: 40%;
+  background-color: #417fdc;
+  padding: 4px;
 }
 
 .body {
@@ -66,6 +58,13 @@ $report-button-height: 2rem;
   background-color: #417fdc;
   color: white;
   font-size: 0.75rem;
-  border: 0px;
   transform: rotate(-90deg);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
