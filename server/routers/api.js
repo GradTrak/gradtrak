@@ -16,6 +16,7 @@ api.get('/tags', cache.route(), tagController.getTags);
 api.get('/user', userController.getUserData);
 api.put('/user', userController.setUserData);
 
+api.post('/account/register', userController.register);
 api.post(
   '/login',
   passport.authenticate('local', { failWithError: true }),
