@@ -13,6 +13,7 @@ export class SemesterChangerComponent implements OnInit {
   semesters: Semester[];
   yearNum: number;
   seasonInput: string;
+  errorMessage: string = '';
 
   @ViewChild('semesterAdder', { static: false }) private referenceToTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private semesterAdderModal: NgbModalRef;
