@@ -32,10 +32,7 @@ export class Constraint {
   * to which this constraint might apply, determines if the specific case given will
   */
   checkConstraint(course, requirement: Requirement, RequirementSet, or RequirementCategory, mapping): boolean {
-
-
-
-
+    if (exec(constraint.))
     return
   }
 }
