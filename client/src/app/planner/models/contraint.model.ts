@@ -21,10 +21,13 @@ export class Constraint {
     return this.requirements;
   }
 
+  /**
+  * 
+  */
   isApplicable(Object: candidate): boolean {
     return (this.requirements.contains(candidate) ||
     (this.requirementSets.contains(candidate)||
-    (this.requirementCategories.contains(candidate))
+    (this.requirementCategories.contains(candidate));
   }
 
   checkConstraint(requirement: string[]): boolean {
