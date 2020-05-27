@@ -46,6 +46,9 @@ export class SemesterChangerComponent implements OnInit {
       return;
     }
     console.log(semesterName);
+    if (this.semesters.map(semester => semester.name).includes(semesterName)) {
+      return;
+    }
     const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
     this.semesters.sort(this.semesterCompare);
