@@ -27,7 +27,7 @@ jobs:
         git init &&
         git add -A &&
         git commit -m 'Deploy' &&
-        git push -f git@app.gradtrak.m/gradtrak.git master
+        git push -f git@app.gradtrak.me/gradtrak.git master
       env:
         GIT_AUTHOR_NAME: GitHub Action
         GIT_AUTHOR_EMAIL: gradtrak@example.com
