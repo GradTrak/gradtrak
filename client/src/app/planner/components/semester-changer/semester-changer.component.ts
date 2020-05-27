@@ -41,6 +41,7 @@ export class SemesterChangerComponent implements OnInit {
    * @param {string} semesterName The intended name of the new semester object being initialized.
    */
   addSemester(semesterName: string): void {
+    console.log(semesterName);
     const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
