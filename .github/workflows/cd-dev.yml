@@ -27,6 +27,6 @@ jobs:
         git push -f https://git:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/gradtrak-dev.git master
       env:
         GIT_AUTHOR_NAME: GitHub Action
-        GIT_AUTHOR_EMAIL: gradtrak@example.com
+        GIT_AUTHOR_EMAIL: info@gradtrak.me
         GIT_COMMITTER_NAME: GitHub Action
-        GIT_COMMITTER_EMAIL: gradtrak@example.com
+        GIT_COMMITTER_EMAIL: info@gradtrak.me
