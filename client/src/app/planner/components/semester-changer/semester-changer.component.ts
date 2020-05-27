@@ -45,7 +45,7 @@ export class SemesterChangerComponent implements OnInit {
     console.log(semesterName);
     const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
-    this.semesters.sort(semesterCompare);
+    this.semesters.sort(this.semesterCompare);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
   /**
@@ -55,21 +55,24 @@ export class SemesterChangerComponent implements OnInit {
   * "Season 20xx" where season is fall, spring, or summer.
   * @return a numerical value representing the diff.
   */
-  const semesterCompare = (s1, s2) => {
+  semesterCompare(sem1: Semester, sem2: Semester) {
+    const s1 = sem1.name;
+    const s2 = sem2.name;
     if (!(s1.includes(' ') || s2.includes(' '))) {
-      console.err('a semester is not properly formatted');
+      console.error('a semester is not properly formatted');
       return 0;
     }
     const calcValue = (sem) => {
       const arr = sem.split(' ');
       if (arr.length != 2) {
-        console.err('a semester is not properly formatted');
+        console.log(arr);
+        console.error('a semester is not properly formatted');
         return 0; //don't know what else I can do here. Crash the app?
       }
       const seasonVal = ({ //sorry. Just assigning points to each season.
-        'spring' : '0',
-        'summer' : '1',
-        'fall' : '2',
+        'Spring' : '0',
+        'Summer' : '1',
+        'Fall' : '2',
       }[arr[0]]) || '3';
       return (arr[1] + seasonVal) - 0; //sorry nicholas, it's a good meme ok
     }
