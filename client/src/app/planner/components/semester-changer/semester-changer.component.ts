@@ -65,11 +65,11 @@ export class SemesterChangerComponent implements OnInit {
         return 0; //don't know what else I can do here. Crash the app?
       }
       const seasonVal = ({ //sorry. Just assigning points to each season.
-        'spring' : 0,
-        'summer' : 1,
-        'fall' : 2
-      }[arr[0]]) || 3;
-      return parseInt(arr[1] + seasonVal); //sorry nicholas, it's a good meme ok
+        'spring' : '0',
+        'summer' : '1',
+        'fall' : '2',
+      }[arr[0]]) || '3';
+      return (arr[1] + seasonVal) - 0; //sorry nicholas, it's a good meme ok
     }
     return (calcValue(s1) - calcValue(s2));
   }
