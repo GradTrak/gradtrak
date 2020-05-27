@@ -10,7 +10,7 @@
 <ng-template #semesterAdder>
   <div class="semester-adder">
     <h5>Add a semester</h5>
-    <form class="semesterInput" (ngSubmit)="addSemester(seasonInput + yearNum)">
+    <form class="semesterInput" (ngSubmit)="addSemester(seasonInput + ' ' + yearNum)">
       <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
         <option ngValue="Fall">Fall</option>
         <option ngValue="Spring">Spring</option>

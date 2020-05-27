@@ -11,7 +11,8 @@ export class SemesterChangerComponent implements OnInit {
   @Input() readonly semestersInput: Semester[]; // optional
   @Output() semesterChanged: EventEmitter<Semester[]>;
   semesters: Semester[];
-  semesterName: string;
+  yearNum: number;
+  seasonInput: string;
 
   @ViewChild('semesterAdder', { static: false }) private referenceToTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private semesterAdderModal: NgbModalRef;
