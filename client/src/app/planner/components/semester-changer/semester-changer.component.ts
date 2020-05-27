@@ -42,7 +42,7 @@ export class SemesterChangerComponent implements OnInit {
    * @param {string} semesterName The intended name of the new semester object being initialized.
    */
   addSemester(semesterName: string): void {
-    if (semesterName.contains('undefined')) {
+    if (semesterName.includes('undefined')) {
       return;
     }
     console.log(semesterName);
