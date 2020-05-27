@@ -21,16 +21,17 @@ export class Constraint {
     return this.requirements;
   }
 
-  /**
-  * 
-  */
-  isApplicable(Object: candidate): boolean {
+  isApplicable(candidate: Object): boolean {
     return (this.requirements.contains(candidate) ||
-    (this.requirementSets.contains(candidate)||
-    (this.requirementCategories.contains(candidate));
+    this.requirementSets.contains(candidate)||
+    this.requirementCategories.contains(candidate));
   }
 
-  checkConstraint(requirement: string[]): boolean {
+  /**
+  * Given a list of requirements, requirementSets, or requirementCategories
+  * to which this constraint might apply, determines if the specific case given will
+  */
+  checkConstraint(course, requirement: Requirement, RequirementSet, or RequirementCategory, mapping): boolean {
 
 
 
@@ -38,3 +39,16 @@ export class Constraint {
     return
   }
 }
+
+
+/*
+mapping {
+  bioe: cs189, bio134, bioe133
+  eecs: cs170, ...
+}
+course = cs189
+'if mapping.bioe.includes(course){
+  return calculateOverlap(bioe, eecs) > 5
+}'
+
+*/
