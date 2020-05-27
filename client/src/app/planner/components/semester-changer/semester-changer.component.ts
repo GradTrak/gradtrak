@@ -43,6 +43,7 @@ export class SemesterChangerComponent implements OnInit {
   addSemester(semesterName: string): void {
     const newSemester = new Semester(semesterName);
     this.semesters.push(newSemester);
+    this.semesters.sort(semesterCompare);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
   /**
