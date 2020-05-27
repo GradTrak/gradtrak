@@ -58,7 +58,7 @@ export class SemesterChangerComponent implements OnInit {
       console.err('a semester is not properly formatted');
       return 0;
     }
-    const calcValue (sem) => {
+    const calcValue = (sem) => {
       const arr = sem.split(' ');
       if (arr.length != 2) {
         console.err('a semester is not properly formatted');
