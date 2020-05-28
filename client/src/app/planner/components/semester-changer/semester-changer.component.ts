@@ -64,17 +64,16 @@ export class SemesterChangerComponent implements OnInit {
    * "Season 20xx" where season is fall, spring, or summer.
    * @return a numerical value representing the diff.
    */
-  semesterCompare(sem1: Semester, sem2: Semester) {
+  semesterCompare(sem1: Semester, sem2: Semester): number {
     const s1 = sem1.name;
     const s2 = sem2.name;
     if (!(s1.includes(' ') || s2.includes(' '))) {
       console.error('a semester is not properly formatted');
       return 0;
     }
-    const calcValue = (sem) => {
+    const calcValue = (sem): number => {
       const arr = sem.split(' ');
-      if (arr.length != 2) {
-        console.log(arr);
+      if (arr.length !== 2) {
         console.error('a semester is not properly formatted');
         return 0; // don't know what else I can do here. Crash the app?
       }
