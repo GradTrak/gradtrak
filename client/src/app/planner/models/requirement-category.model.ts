@@ -1,9 +1,12 @@
 import { RequirementPrototype } from 'common/prototypes/requirement.prototype';
 import { RequirementCategoryPrototype } from 'common/prototypes/requirement-category.prototype';
+import { ConstraintPrototype } from 'common/prototypes/constraint.prototype';
+import { Constraint } from './constraint.model';
 import { Course } from './course.model';
 import { Requirement } from './requirement.model';
 import { PolyRequirement } from './requirements/poly-requirement.model';
 import { CourseRequirement } from './requirements/course-requirement.model';
+import { MutexConstraint } from './constraints/mutex-constraint.model';
 import { MultiRequirement } from './requirements/multi-requirement.model';
 import { MutexRequirement } from './requirements/mutex-requirement.model';
 import { TagRequirement } from './requirements/tag-requirement.model';
@@ -17,12 +20,28 @@ import { Tag } from './tag.model';
 export class RequirementCategory {
   name: string;
   requirements: Requirement[];
+  universalConstraints: Constraint[];
+  selfConstraints: Constraint[];
 
   constructor(proto: RequirementCategoryPrototype, coursesMap: Map<string, Course>, tagsMap: Map<string, Tag>) {
     this.name = proto.name;
     this.requirements = proto.requirements.map((reqProto: RequirementPrototype) =>
       RequirementCategory.getRequirementObjectFromPrototype(reqProto, coursesMap, tagsMap),
     );
+    this.universalConstraints = proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
+      switch (universalConstraintProto.type) {
+        case 'mutex':
+          return new MutexConstraint(universalConstraintProto);
+          break;
+      }
+    });
+    this.selfConstraints = proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
+      switch (selfConstraintProto.type) {
+        case 'mutex':
+          return new MutexConstraint(selfConstraintProto);
+          break;
+      }
+    });
   }
 
   private static getRequirementObjectFromPrototype(

@@ -36,14 +36,14 @@ export class RequirementSet {
     this.universalConstraints = proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
       switch (universalConstraintProto.type) {
         case 'mutex':
-          return new MutexConstraint(proto);
+          return new MutexConstraint(universalConstraintProto);
           break;
       }
     });
-    this.universalConstraints = proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
-      switch (universalConstraintProto.type) {
+    this.selfConstraints = proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
+      switch (selfConstraintProto.type) {
         case 'mutex':
-          return new MutexConstraint(proto);
+          return new MutexConstraint(selfConstraintProto);
           break;
       }
     });

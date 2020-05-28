@@ -36,6 +36,12 @@ const requirementSchema = new mongoose.Schema(
     units: {
       type: Number,
     },
+    universalConstraints: {
+      type: Constraint,
+    },
+    selfConstraints: {
+      type: Constraint,
+    },
   },
   { strict: 'throw' },
 );
@@ -52,6 +58,12 @@ const requirementCategorySchema = new mongoose.Schema(
       type: [requirementSchema],
       required: true,
       default: [],
+    },
+    universalConstraints: {
+      type: Constraint,
+    },
+    selfConstraints: {
+      type: Constraint,
     },
   },
   { strict: 'throw' },
@@ -80,6 +92,12 @@ const requirementSetSchema = new mongoose.Schema(
       type: [requirementCategorySchema],
       required: true,
       default: [],
+    },
+    universalConstraints: {
+      type: Constraint,
+    },
+    selfConstraints: {
+      type: Constraint,
     },
   },
   { strict: 'throw' },
