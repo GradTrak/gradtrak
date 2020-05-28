@@ -47,7 +47,7 @@ export class SemesterChangerComponent implements OnInit {
       this.errorMessage = 'Please select a season and a valid year.';
       return;
     }
-    if (this.semesters.map(semester => semester.name).includes(semesterName)) {
+    if (this.semesters.map((semester) => semester.name).includes(semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
@@ -56,13 +56,14 @@ export class SemesterChangerComponent implements OnInit {
     this.semesters.sort(this.semesterCompare);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
+
   /**
-  * A helper function that is used to compare two semesters, S1, and S2.
-  * semesters that are earlier in time will be smaller than semesters
-  * that are later in time. Assumes that semesters are named in the format of
-  * "Season 20xx" where season is fall, spring, or summer.
-  * @return a numerical value representing the diff.
-  */
+   * A helper function that is used to compare two semesters, S1, and S2.
+   * semesters that are earlier in time will be smaller than semesters
+   * that are later in time. Assumes that semesters are named in the format of
+   * "Season 20xx" where season is fall, spring, or summer.
+   * @return a numerical value representing the diff.
+   */
   semesterCompare(sem1: Semester, sem2: Semester) {
     const s1 = sem1.name;
     const s2 = sem2.name;
@@ -75,17 +76,20 @@ export class SemesterChangerComponent implements OnInit {
       if (arr.length != 2) {
         console.log(arr);
         console.error('a semester is not properly formatted');
-        return 0; //don't know what else I can do here. Crash the app?
+        return 0; // don't know what else I can do here. Crash the app?
       }
-      const seasonVal = ({ //sorry. Just assigning points to each season.
-        'Spring' : '0',
-        'Summer' : '1',
-        'Fall' : '2',
-      }[arr[0]]) || '3';
-      return (arr[1] + seasonVal) - 0; //sorry nicholas, it's a good meme ok
-    }
-    return (calcValue(s1) - calcValue(s2));
+      const seasonVal =
+        {
+          // sorry. Just assigning points to each season.
+          Spring: '0',
+          Summer: '1',
+          Fall: '2',
+        }[arr[0]] || '3';
+      return arr[1] + seasonVal - 0; // sorry nicholas, it's a good meme ok
+    };
+    return calcValue(s1) - calcValue(s2);
   }
+
   removeSemester(semester: Semester): void {
     const index = this.semesters.indexOf(semester);
     this.semesters.splice(index, 1);
