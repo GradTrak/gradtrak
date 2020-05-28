@@ -1,8 +1,10 @@
+import { ConstraintPrototype } from 'common/prototypes/constraint.prototype';
 import { RequirementCategoryPrototype } from 'common/prototypes/requirement-category.prototype';
 import { RequirementSetPrototype } from 'common/prototypes/requirement-set.prototype';
 import { RequirementCategory } from './requirement-category.model';
 import { Course } from './course.model';
 import { Tag } from './tag.model';
+import { Constraint } from './constraint.model';
 
 /**
  * The RequirementSet class represents a set of cohesive requirements composed of {@link RequirementCategory}s such as
@@ -14,6 +16,8 @@ export class RequirementSet {
   parent: RequirementSet;
   type: string; // string id. either major, minor, other, or unselectable
   requirementCategories: RequirementCategory[];
+  universalConstraints: Constraint[];
+  selfConstraints: Constraint[];
 
   constructor(
     proto: RequirementSetPrototype,
@@ -27,6 +31,14 @@ export class RequirementSet {
     this.requirementCategories = proto.requirementCategories.map(
       (reqCategoryProto: RequirementCategoryPrototype) =>
         new RequirementCategory(reqCategoryProto, coursesMap, tagsMap),
+    );
+    this.universalConstraints = proto.universalConstraints.map(
+      (universalConstraintProto: ConstraintPrototype) =>
+        new ConstraintPrototype(universalConstraintProto),
+    );
+    this.selfConstraints = proto.selfConstraints.map(
+      (selfConstraintProto: ConstraintPrototype) =>
+        new ConstraintPrototype(selfConstraintProto),
     );
 
     if (proto.parentId) {

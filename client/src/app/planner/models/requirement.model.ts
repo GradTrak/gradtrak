@@ -1,4 +1,5 @@
 import { Course } from './course.model';
+import { Constraint } from './constraint.model';
 
 /**
  * The Requirement class represents a single requirement that can be fulfilled by taking certain {@link Course}s and is
@@ -7,6 +8,8 @@ import { Course } from './course.model';
 export abstract class Requirement {
   id: string;
   name: string;
+  universalConstraints: Constraint[];
+  selfConstraints: Constraint[];
 
   constructor(obj: object) {
     Object.assign(this, obj);
