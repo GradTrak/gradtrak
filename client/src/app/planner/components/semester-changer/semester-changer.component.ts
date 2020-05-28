@@ -44,10 +44,11 @@ export class SemesterChangerComponent implements OnInit {
    */
   addSemester(semesterName: string): void {
     if (semesterName.includes('undefined')) {
+      this.errorMessage = 'Please select a season and a valid year.';
       return;
     }
-    console.log(semesterName);
     if (this.semesters.map(semester => semester.name).includes(semesterName)) {
+      this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
     const newSemester = new Semester(semesterName);
