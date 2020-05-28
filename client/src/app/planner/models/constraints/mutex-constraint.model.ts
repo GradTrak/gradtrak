@@ -10,9 +10,25 @@ export class MutexConstraint extends Constraint {
   /**
    * The requirements that are mutually exclusive in terms of classes.
    */
-  private manuallyFulfilledReqs: Set<Requirement>;
+  private mutexReqs: Set<Requirement>;
 
+  /**
+   * Returns true if and only if the requirements in {@link MutexConstraint#mutexReqs} are fulfilled with unique
+   * courses.
+   */
   isValidMapping(mapping: Map<Requirement, Set<Course>>): boolean {
-    return true; // FIXME Actually implement this
+    const mutexCourses: Set<Course> = new Set<Course>();
+    let valid: boolean = true;
+    this.mutexReqs.forEach((req: Requirement) => {
+      if (mapping.has(req)) {
+        mapping.get(req).forEach((course: Course) => {
+          if (mutexCourses.has(course)) {
+            valid = false;
+          }
+          mutexCourses.add(course);
+        });
+      }
+    });
+    return valid;
   }
 }
