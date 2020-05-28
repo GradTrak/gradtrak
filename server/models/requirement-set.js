@@ -1,3 +1,4 @@
+const Constraint = require('./constraint.js');
 const mongoose = require('mongoose');
 
 const requirementSchema = new mongoose.Schema(
