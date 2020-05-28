@@ -43,10 +43,14 @@ table {
     padding: 0 4px;
   }
 
-  td.name .material-icons {
-    position: absolute;
-    transform: translateX(-24px);
-    color: #dfae00;
+  td.name {
+    position: relative;
+
+    .material-icons {
+      position: absolute;
+      transform: translateX(-24px);
+      color: #dfae00;
+    }
   }
 
   td.units {
