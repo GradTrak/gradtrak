@@ -18,7 +18,7 @@
     <div class="modal-footer">
       <div class="register">
         Don't have an account?
-        <a href="#" (click)="onSignUp()">Sign Up</a>
+        <a href="#" (click)="switchMode()">Sign Up</a>
       </div>
       <div class="skip">
         <a href="#" (click)="dismiss()">Continue as guest</a>
@@ -56,7 +56,7 @@
     <div class="modal-footer">
       <div class="register">
         Already have an account?
-        <a href="#" (click)="registering = false">Log In</a>
+        <a href="#" (click)="switchMode()">Log In</a>
       </div>
       <div class="skip">
         <a href="#" (click)="dismiss()">Continue as guest</a>

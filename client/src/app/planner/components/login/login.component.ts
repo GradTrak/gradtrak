@@ -43,8 +43,8 @@ export class LoginComponent implements OnInit {
     this.dismissEvent.emit();
   }
 
-  onSignUp(): void {
-    this.registering = true;
+  switchMode(): void {
+    this.registering = !this.registering;
   }
 
   submitLogin(): void {
