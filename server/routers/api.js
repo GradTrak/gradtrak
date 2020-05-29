@@ -18,7 +18,7 @@ api.put('/user', userController.setUserData);
 
 api.post('/account/register', userController.register);
 api.post(
-  '/login',
+  '/account/login',
   passport.authenticate('local', { failWithError: true }),
   userController.loginSuccess,
   // eslint-disable-next-line no-unused-vars
@@ -27,7 +27,7 @@ api.post(
     userController.loginFailure(req, res);
   },
 );
-api.post('/logout', userController.logout);
-api.get('/whoami', userController.whoami);
+api.post('/account/logout', userController.logout);
+api.get('/account/whoami', userController.whoami);
 
 exports.api = api;

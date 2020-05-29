@@ -1,5 +1,4 @@
 const argon2 = require('argon2');
-const crypto = require('crypto');
 const util = require('util');
 const User = require('../models/user');
 

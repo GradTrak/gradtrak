@@ -61,9 +61,9 @@ export class UserService {
   };
 
   private static readonly REGISTER_ENDPOINT = '/api/account/register';
-  private static readonly LOGIN_ENDPOINT = '/api/login';
-  private static readonly LOGOUT_ENDPOINT = '/api/logout';
-  private static readonly WHOAMI_ENDPOINT = '/api/whoami';
+  private static readonly LOGIN_ENDPOINT = '/api/account/login';
+  private static readonly LOGOUT_ENDPOINT = '/api/account/logout';
+  private static readonly WHOAMI_ENDPOINT = '/api/account/whoami';
   private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private readonly state: BehaviorSubject<State>;
