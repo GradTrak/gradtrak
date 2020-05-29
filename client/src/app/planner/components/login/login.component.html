@@ -18,10 +18,10 @@
     <div class="modal-footer">
       <div class="register">
         Don't have an account?
-        <a href="#" (click)="switchMode()">Sign Up</a>
+        <a href="#" (click)="$event.preventDefault(); switchMode()">Sign Up</a>
       </div>
       <div class="skip">
-        <a href="#" (click)="dismiss()">Continue as guest</a>
+        <a href="#" (click)="$event.preventDefault(); dismiss()">Continue as guest</a>
       </div>
     </div>
   </form>
@@ -56,10 +56,10 @@
     <div class="modal-footer">
       <div class="register">
         Already have an account?
-        <a href="#" (click)="switchMode()">Log In</a>
+        <a href="#" (click)="$event.preventDefault(); switchMode()">Log In</a>
       </div>
       <div class="skip">
-        <a href="#" (click)="dismiss()">Continue as guest</a>
+        <a href="#" (click)="$event.preventDefault(); dismiss()">Continue as guest</a>
       </div>
     </div>
   </form>
