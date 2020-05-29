@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
           this.regError = error;
           this.loading = false;
         } else {
-          this.userService.queryWhoami().subscribe((email: string) => {
+          this.userService.queryWhoami().subscribe(() => {
             this.success.emit();
             this.loading = false;
           });

@@ -98,11 +98,16 @@ export class UserService {
   */
   register(email: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
-      throw new Error('Tried to resgister when already logged in');
+      throw new Error('Tried to register when already logged in');
     }
     return this.http.post(UserService.REGISTER_ENDPOINT, { email, password, emailMarketing, userTesting }).pipe(
       tap((response: { success: boolean; email?: string; error?: string }) => {
         if (response.success) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username: email,
+          });
         }
       }),
       map((response: { success: boolean; email?: string; error?: string }) => (response.error ? response.error : null)),
@@ -126,7 +131,6 @@ export class UserService {
         if (response.success) {
           this.state.next({
             ...this.currentState,
-            loading: true,
             loggedIn: true,
             username,
           });
