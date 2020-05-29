@@ -15,8 +15,8 @@
     </ng-template>
   </div>
 </div>
-<ng-container *ngIf="!isLoading; else loading">
-  <div class="body">
+<div class="body">
+  <ng-container *ngIf="!isLoading; else loading">
     <div class="main">
       <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
       <app-requirements-pane
@@ -26,8 +26,8 @@
       ></app-requirements-pane>
     </div>
     <button class="gt-button report-button" (click)="showReportForm()">Feedback</button>
-  </div>
-</ng-container>
+  </ng-container>
+</div>
 
 <ng-template #loading>
   <div>
