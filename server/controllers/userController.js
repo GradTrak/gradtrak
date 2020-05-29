@@ -2,6 +2,7 @@ const argon2 = require('argon2');
 const util = require('util');
 
 const smtp = require('../config/smtp');
+const { validateEmail } = require('../lib/utils');
 const User = require('../models/user');
 
 exports.register = async (req, res) => {
@@ -27,6 +28,14 @@ exports.register = async (req, res) => {
     res.status(400).json({
       success: false,
       error: 'Missing registration fields',
+    });
+    return;
+  }
+  if (!validateEmail(username)) {
+    // TODO Send status code 400 once client-side validation is implemented
+    res.json({
+      success: false,
+      error: 'Invalid email address',
     });
     return;
   }
