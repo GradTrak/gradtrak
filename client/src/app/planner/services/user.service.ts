@@ -86,15 +86,15 @@ export class UserService {
   }
 
   /**
-  * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
-  *
-  * @param {string} username The user's username.
-  * @param {string} password The user's password.
-  * @param {boolean} emailMarketing The user's emailMarketing preference.
-  * @param {boolean} userTesting The user's userTesting preference.
-  * @return {Observable<string>} An Observable that will emit an error string or null
-   if the registration was successful.
-  */
+   * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
+   *
+   * @param {string} username The user's username.
+   * @param {string} password The user's password.
+   * @param {boolean} emailMarketing The user's emailMarketing preference.
+   * @param {boolean} userTesting The user's userTesting preference.
+   * @return {Observable<string>} An Observable that will emit an error string or null if the registration was
+   * successful.
+   */
   register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to register when already logged in');
