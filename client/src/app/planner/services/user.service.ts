@@ -105,7 +105,7 @@ export class UserService {
       {email, password, emailMarketing, userTesting }).pipe(
         tap((response: { success: boolean; email?: string; error?: string}) => {
           if (response.success) {
-    
+
           }
         }),
         map((response: { success: boolean; email?: string; error?: string }) =>
@@ -159,24 +159,32 @@ export class UserService {
 
   /**
    * Queries the server to detect current login status and updates state accordingly.
+   *
+   * @return {Observable<string>} An Observable that contains the username
+   * or null if not logged in.
    */
-  queryWhoami(): void {
-    this.http.get(UserService.WHOAMI_ENDPOINT).subscribe((response: { loggedIn: boolean; username?: string }) => {
-      if (response.loggedIn) {
-        this.state.next({
-          ...this.currentState,
-          loggedIn: true,
-          username: response.username,
-        });
-      } else {
-        this.state.next({
-          ...this.currentState,
-          loading: false,
-          loggedIn: false,
-          username: null,
-        });
-      }
-    });
+  queryWhoami(): Observable<string> {
+    return this.http.get(UserService.WHOAMI_ENDPOINT).pipe(
+      tap((response: { loggedIn: boolean; username?: string }) => {
+        if (response.loggedIn) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username: response.username,
+          });
+        } else {
+          this.state.next({
+            ...this.currentState,
+            loading: false,
+            loggedIn: false,
+            username: null,
+          });
+        }
+      }),
+      map((response: { loggedIn: boolean; username?: string }) => {
+        return response.loggedIn ? response.username : null;
+      }),
+    );
   }
 
   /**

@@ -63,10 +63,13 @@ export class LoginComponent implements OnInit {
     .subscribe((error: string) => {
       if (error) {
         this.regError = error;
+        this.loading = false;
       } else {
-        this.success.emit();
+        this.userService.queryWhoami().subscribe((email: string) => {
+          this.success.emit();
+          this.loading = false;
+        });
       }
-      this.loading = false;
     });
   }
 }
