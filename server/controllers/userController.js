@@ -11,10 +11,10 @@ exports.register = async (req, res) => {
     return;
   }
 
-  const { email, password, emailMarketing, userTesting } = req.body;
+  const { username, password, emailMarketing, userTesting } = req.body;
   if (
-    email === undefined ||
-    email === null ||
+    username === undefined ||
+    username === null ||
     password === undefined ||
     password === null ||
     emailMarketing === undefined ||
@@ -29,7 +29,7 @@ exports.register = async (req, res) => {
     return;
   }
 
-  const user = await User.findOne({ username: email });
+  const user = await User.findOne({ username });
   if (user) {
     res.json({
       success: false,
@@ -40,14 +40,14 @@ exports.register = async (req, res) => {
 
   const passwordHash = await argon2.hash(password, { type: argon2.argon2id });
   const newUser = await User.create({
-    username: email,
+    username,
     passwordHash,
     emailMarketing,
     userTesting,
   });
   await util.promisify(req.login).bind(req)(newUser);
   res.json({
-    email,
+    username,
     success: true,
   });
 };

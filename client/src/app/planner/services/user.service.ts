@@ -87,30 +87,32 @@ export class UserService {
   }
 
   /**
-  * Registers a user with the given email, password, and emailMarketing and userTesting preferences.
+  * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
   *
-  * @param {string} email The user's email.
+  * @param {string} username The user's username.
   * @param {string} password The user's password.
   * @param {boolean} emailMarketing The user's emailMarketing preference.
   * @param {boolean} userTesting The user's userTesting preference.
   * @return {Observable<string>} An Observable that will emit an error string or null
    if the registration was successful.
   */
-  register(email: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
+  register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
-    return this.http.post(UserService.REGISTER_ENDPOINT, { email, password, emailMarketing, userTesting }).pipe(
-      tap((response: { success: boolean; email?: string; error?: string }) => {
+    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
+      tap((response: { success: boolean; username?: string; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username: email,
+            username,
           });
         }
       }),
-      map((response: { success: boolean; email?: string; error?: string }) => (response.error ? response.error : null)),
+      map((response: { success: boolean; username?: string; error?: string }) =>
+        response.error ? response.error : null,
+      ),
     );
   }
 
