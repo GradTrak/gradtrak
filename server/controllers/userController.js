@@ -1,5 +1,6 @@
 const argon2 = require('argon2');
 const util = require('util');
+
 const User = require('../models/user');
 
 exports.register = async (req, res) => {
