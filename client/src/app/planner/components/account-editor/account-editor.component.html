@@ -21,6 +21,9 @@
         </ng-container>
         <ng-template #passwordChange>
           <input class="expand" type="password" [(ngModel)]="newPassword" />
+          <div class="password-restrictions">
+            Your password must be at least 6 characters.
+          </div>
         </ng-template>
       </div>
     </div>
