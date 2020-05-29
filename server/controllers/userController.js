@@ -5,41 +5,45 @@ function validPassword(password) {
   return password.length >= 6;
 }
 
-async function changePassword(user, oldPassword, newPassword) {
-  if (!validPassword(newPassword)) {
-    return 'New password is invalid';
-  }
-  const verify = await verifyUser(user, oldPassword);
-  if (!verify) {
-    return 'Incorrect password';
-  }
-  user.passwordHash = await argon2.hash(newPassword, { mode: argon2.argon2id });
-  user.save();
-  return null;
-}
-
-exports.changePassword = (req, res) => {
+exports.changePassword = async (req, res) => {
   if (!req.user) {
-    res.status(401).send();
+    res.status(401).json({
+      success: false,
+      error: 'Not logged in',
+    });
     return;
   }
 
   const { oldPassword, newPassword } = req.body;
   if (oldPassword === undefined || oldPassword === null || newPassword === undefined || newPassword === null) {
     res.status(400).json({
+      success: false,
       error: 'Old password or new password not provided',
     });
     return;
   }
+  if (!validPassword(newPassword)) {
+    res.json({
+      success: false,
+      error: 'New password is invalid',
+    });
+    return;
+  }
 
-  changePassword(req.user, oldPassword, newPassword).then((err) => {
-    if (err) {
-      res.json({
-        error: err,
-      });
-    } else {
-      res.status(204).send();
-    }
+  const verify = await verifyUser(req.user, oldPassword);
+  if (!verify) {
+    res.json({
+      success: false,
+      error: 'Incorrect current password',
+    });
+    return;
+  }
+
+  req.user.passwordHash = await argon2.hash(newPassword, { mode: argon2.argon2id });
+  await req.user.save();
+
+  res.json({
+    success: true,
   });
 };
 
