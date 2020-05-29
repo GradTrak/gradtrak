@@ -7,8 +7,8 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  @Output() private success: EventEmitter<void>;
-  @Output() private dismiss: EventEmitter<void>;
+  @Output('success') private success: EventEmitter<void>;
+  @Output('dismiss') private dismissEvent: EventEmitter<void>;
 
   username: string;
   // FIXME Look into how to securely handle passwords in JS/Angular
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private userService: UserService) {
     this.success = new EventEmitter<void>();
-    this.dismiss = new EventEmitter<void>();
+    this.dismissEvent = new EventEmitter<void>();
     this.loading = false;
     this.failed = false;
     this.registering = false;
@@ -38,6 +38,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  dismiss(): void {
+    this.dismissEvent.emit();
+  }
 
   onSignUp(): void {
     this.registering = true;
