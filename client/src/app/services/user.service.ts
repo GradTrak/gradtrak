@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map, tap } from 'rxjs/operators';
+import { SemesterPrototype } from 'common/prototypes/semester.prototype';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from 'models/course.model';
+import { Requirement } from 'models/requirement.model';
 import { RequirementSet } from 'models/requirement-set.model';
 import { Semester } from 'models/semester.model';
 import { State } from 'models/state.model';
@@ -60,6 +62,7 @@ export class UserService {
         },
       ],
       goals: [],
+      manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
   };
 
@@ -236,6 +239,7 @@ export class UserService {
   removeCourse(course: Course, semester: Semester): void {
     if (!semester.courses.includes(course)) {
       console.error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
+      return;
     }
 
     semester.courses = semester.courses.filter((c: Course) => c !== course);
@@ -244,17 +248,74 @@ export class UserService {
     });
   }
 
+  manuallyFulfill(requirement: Requirement, requirementSet: RequirementSet): void {
+    const { manuallyFulfilledReqs } = this.currentState.userData;
+
+    if (
+      manuallyFulfilledReqs.has(requirementSet.id) &&
+      manuallyFulfilledReqs.get(requirementSet.id).has(requirement.id)
+    ) {
+      console.error(
+        `Tried to mark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already is`,
+      );
+      return;
+    }
+
+    if (manuallyFulfilledReqs.has(requirementSet.id)) {
+      manuallyFulfilledReqs.get(requirementSet.id).add(requirement.id);
+    } else {
+      const newSet: Set<string> = new Set<string>();
+      newSet.add(requirement.id);
+      manuallyFulfilledReqs.set(requirementSet.id, newSet);
+    }
+    this.state.next({
+      ...this.currentState,
+    });
+  }
+
+  manuallyUnfulfill(requirement: Requirement, requirementSet: RequirementSet): void {
+    const { manuallyFulfilledReqs } = this.currentState.userData;
+
+    if (
+      !manuallyFulfilledReqs.has(requirementSet.id) ||
+      !manuallyFulfilledReqs.get(requirementSet.id).has(requirement.id)
+    ) {
+      console.error(
+        `Tried to unmark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already isn't`,
+      );
+      return;
+    }
+
+    manuallyFulfilledReqs.get(requirementSet.id).delete(requirement.id);
+    if (manuallyFulfilledReqs.get(requirementSet.id).size === 0) {
+      manuallyFulfilledReqs.delete(requirementSet.id);
+    }
+    this.state.next({
+      ...this.currentState,
+    });
+  }
+
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
+    const semesters: SemesterPrototype[] = userData.semesters.map((semester: Semester) => {
+      const semesterPrototype = {
+        ...semester,
+        courseIds: semester.courses.map((course: Course) => course.id),
+      };
+      delete semesterPrototype.courses;
+      return semesterPrototype;
+    });
+    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
+    const manuallyFulfilledReqs: object = Object.fromEntries(
+      Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
+        entry[0],
+        Array.from(entry[1]),
+      ]),
+    );
+
     return {
-      semesters: userData.semesters.map((semester: Semester) => {
-        const semesterPrototype = {
-          ...semester,
-          courseIds: semester.courses.map((course: Course) => course.id),
-        };
-        delete semesterPrototype.courses;
-        return semesterPrototype;
-      }),
-      goalIds: userData.goals.map((goal: RequirementSet) => goal.id),
+      semesters,
+      goalIds,
+      manuallyFulfilledReqs,
     };
   }
 }

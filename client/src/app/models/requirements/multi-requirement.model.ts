@@ -5,23 +5,13 @@ import { Requirement } from 'models/requirement.model';
  * The MultiRequirement class represents a {@link Requirement} that contains a number of child requirements and is only
  * fulfilled if at least a specified number of those requirements are fulfilled.
  */
-export class MultiRequirement implements Requirement {
-  name: string;
-
+export class MultiRequirement extends Requirement {
   requirements: Requirement[];
   numRequired: number;
   hidden: boolean;
 
-  constructor(obj: object) {
-    Object.assign(this, obj);
-  }
-
-  isFulfilled(courses: Course[]): boolean {
-    return this.numFulfilled(courses) >= this.numRequired;
-  }
-
-  numFulfilled(courses: Course[]): number {
-    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses)).length;
+  numFulfilled(courses: Course[], override?: Set<string>): number {
+    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses, override)).length;
   }
 
   getAnnotation(): string {
@@ -36,5 +26,9 @@ export class MultiRequirement implements Requirement {
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
       `Fulfill with ${this.numRequired} of:`,
     );
+  }
+
+  protected isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
+    return this.numFulfilled(courses, override) >= this.numRequired;
   }
 }

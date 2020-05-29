@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from 'models/course.model';
 import { Requirement } from 'models/requirement.model';
@@ -17,6 +17,9 @@ export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
+  @Input() readonly manuallyFulfilled: Set<string>;
+  @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   displayedRequirement: Requirement;
 
@@ -36,7 +39,7 @@ export class RequirementComponent implements OnInit {
   ngOnInit(): void {}
 
   isMulti(): boolean {
-    return this.requirement instanceof MultiRequirement;
+    return this.requirement instanceof MultiRequirement || this.isPoly();
   }
 
   isPoly(): boolean {
@@ -61,14 +64,19 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MutexRequirement;
   }
 
-  getFulfillment(): string {
+  getFulfillment(): string[] {
+    const fulfillments: string[] = [];
     if (this.override) {
-      return this.override;
-    } else if (this.requirement.isFulfilled(this.courses)) {
-      return 'fulfilled';
+      fulfillments.push(this.override);
+    } else if (this.requirement.isFulfilled(this.courses, this.manuallyFulfilled)) {
+      fulfillments.push('fulfilled');
     } else {
-      return 'unfulfilled';
+      fulfillments.push('unfulfilled');
     }
+    if (this.isManuallyFulfilled()) {
+      fulfillments.push('manual');
+    }
+    return fulfillments;
   }
 
   /**
@@ -116,7 +124,6 @@ export class RequirementComponent implements OnInit {
    *
    * @return {TemplateRef<any>} The template of the requirement.
    */
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getReqTemplate(): TemplateRef<any> {
     if (this.isMulti()) {
@@ -144,6 +151,18 @@ export class RequirementComponent implements OnInit {
       return annotation;
     }
     return null;
+  }
+
+  isManuallyFulfilled(): boolean {
+    return this.manuallyFulfilled && this.manuallyFulfilled.has(this.requirement.id);
+  }
+
+  manuallyFulfill(requirement: Requirement): void {
+    this.onManualFulfill.emit(requirement);
+  }
+
+  manuallyUnfulfill(requirement: Requirement): void {
+    this.onManualUnfulfill.emit(requirement);
   }
 
   openRequirementDisplay(requirement: Requirement): void {

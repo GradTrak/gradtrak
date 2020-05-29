@@ -6,7 +6,7 @@ const https = require('https');
 const LIST_ENDPOINT =
   'https://berkeleytime.com/api/catalog/filter/?filters=22619,22620,22621,22622,22623,22624,22625,22626';
 
-const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog_json/course_box/?course_id=';
+const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog/catalog_json/course_box/?course_id=';
 
 const TAG_MAP = new Map([
   ['American Cultures', 'ac'],
@@ -142,7 +142,20 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
     });
 
     fetchCourseTags(validCourses).then(() => {
-      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(Array.from(courseMap.values())));
+      const courses = Array.from(courseMap.values());
+      courses.sort((a, b) => {
+        if (a.dept === b.dept) {
+          const aNo = parseInt(a.no.replace(/[^\d]/g, ''));
+          const bNo = parseInt(b.no.replace(/[^\d]/g, ''));
+
+          if (aNo === bNo) {
+            return a.no > b.no ? 1 : -1;
+          }
+          return aNo > bNo ? 1 : -1;
+        }
+        return a.dept > b.dept ? 1 : -1;
+      });
+      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(courses));
     });
   });
 });

@@ -29,6 +29,11 @@ const courseSchema = new mongoose.Schema(
       required: true,
       default: [],
     },
+    equivIds: {
+      type: [String],
+      required: true,
+      default: [],
+    },
   },
   { strict: 'throw' },
 );

@@ -11,6 +11,8 @@ export class Course {
   title: string;
   units: number;
   tags: Tag[];
+  equivIds: string[];
+  equiv: Course[];
 
   constructor(proto: CoursePrototype, tagMap: Map<string, Tag>) {
     this.id = proto.id;
@@ -19,6 +21,8 @@ export class Course {
     this.title = proto.title;
     this.units = proto.units;
     this.tags = proto.tagIds.map((tagId: string) => tagMap.get(tagId));
+    this.equivIds = proto.equivIds;
+    this.equiv = null;
   }
 
   getName(): string {
@@ -31,5 +35,17 @@ export class Course {
 
   getBareNumber(): number {
     return parseInt(this.no.replace(/[^\d]/g, ''), 10);
+  }
+
+  mapEquiv(map: Map<string, Course>): void {
+    this.equiv = this.equivIds
+      .filter((id: string) => {
+        if (!map.has(id)) {
+          console.error(`No equivalent course with ID ${id} found for course ${this.id}`);
+          return false;
+        }
+        return true;
+      })
+      .map((id: string) => map.get(id));
   }
 }
