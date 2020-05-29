@@ -1,64 +1,56 @@
-const argon2 = require("argon2");
-const User = require("../models/user");
+const argon2 = require('argon2');
+const util = require('util');
+const User = require('../models/user');
 
-exports.register = (req, res) => {
+exports.register = async (req, res) => {
   if (req.user) {
     res.status(400).json({
-      error: "Already logged in",
       success: false,
+      error: 'Already logged in',
     });
     return;
   }
+
   const { email, password, emailMarketing, userTesting } = req.body;
-  if (email === undefined || email === null
-      || password === undefined || password === null
-      || emailMarketing === undefined || emailMarketing === null
-      || userTesting === undefined || userTesting === null) {
+  if (
+    email === undefined ||
+    email === null ||
+    password === undefined ||
+    password === null ||
+    emailMarketing === undefined ||
+    emailMarketing === null ||
+    userTesting === undefined ||
+    userTesting === null
+  ) {
     res.status(400).json({
-      error: "Missing registration fields",
       success: false,
+      error: 'Missing registration fields',
     });
     return;
   }
-  User.findOne({ username: email }).then((user) => {
-    console.log(user);
-    if (user) {
-      res.json({
-        success: false,
-        error: "User with that email already exists",
-      });
-      return;
-    }
-    argon2.hash(password, { type: argon2.argon2id }).then((passwordHash) => {
-      return User.create({
-        username: email,
-        passwordHash,
-        emailMarketing,
-        userTesting,
-      });
-    }).then((newUser) => {
-      req.login(newUser, (err) => {
-        if (err) {
-          res.status(500).json({
-            error: "Internal server error #1",
-            success: false,
-          });
-          return;
-        }
-        res.json({
-          email,
-          success: true,
-        });
-      });
-    }).catch((err) => {
-      res.status(500).json({
-        error: "Internal server error #2",
-        success: false,
-      });
-      return;
-    })
+
+  const user = await User.findOne({ username: email });
+  if (user) {
+    res.json({
+      success: false,
+      error: 'User with that email already exists',
+    });
+    return;
+  }
+
+  const passwordHash = await argon2.hash(password, { type: argon2.argon2id });
+  const newUser = await User.create({
+    username: email,
+    passwordHash,
+    emailMarketing,
+    userTesting,
   });
-}
+  await util.promisify(req.login).bind(req)(newUser);
+  res.json({
+    email,
+    success: true,
+  });
+};
 
 exports.getUserData = (req, res) => {
   if (!req.user) {
