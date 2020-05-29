@@ -13,32 +13,40 @@ import { UserService } from './services/user.service';
 export class PlannerComponent implements OnInit {
   state: State;
   currentCourses: Course[];
+  isLoading: boolean;
 
   @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private loginModalInstance: NgbModalRef;
   private loginPrompted: boolean;
 
-  constructor(private userService: UserService, private modalService: NgbModal) {}
+  constructor(private userService: UserService, private modalService: NgbModal) {
+    this.isLoading = true;
+  }
 
   ngOnInit(): void {
     this.userService.getState().subscribe((nextState: State) => {
-      /* Fetch user data if just logged in */
-      if (nextState.loggedIn && !this.state.loggedIn) {
-        this.userService.fetchUserData();
-      }
+      if (nextState !== UserService.INITIAL_STATE) {
+        const wasLoading: boolean = this.isLoading;
+        this.isLoading = false;
 
-      /* Open login modal if not opened previously */
-      if (!nextState.loading && !nextState.loggedIn && !this.loginPrompted) {
-        this.loginPrompted = true;
-        this.openLogin();
-      }
+        /* Fetch user data if just logged in */
+        if (nextState.loggedIn && !this.state.loggedIn) {
+          this.userService.fetchUserData();
+          this.isLoading = true;
+        }
 
-      /* Save user data if logged in and not just loaded */
-      if (!nextState.loading && !this.state.loading && nextState.loggedIn) {
-        this.userService.saveUserData();
-      }
+        /* Open login modal if not opened previously */
+        if (!nextState.loggedIn && !this.loginPrompted) {
+          this.loginPrompted = true;
+          this.openLogin();
+        }
 
+        /* Save user data if logged in and not just loaded */
+        if (!wasLoading && nextState.loggedIn) {
+          this.userService.saveUserData();
+        }
+      }
       this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
     });

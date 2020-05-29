@@ -17,14 +17,7 @@ import { RequirementService } from './requirement.service';
   providedIn: 'root',
 })
 export class UserService {
-  private static readonly REGISTER_ENDPOINT = '/api/account/register';
-  private static readonly LOGIN_ENDPOINT = '/api/login';
-  private static readonly LOGOUT_ENDPOINT = '/api/logout';
-  private static readonly WHOAMI_ENDPOINT = '/api/whoami';
-  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
-
-  private static readonly INITIAL_STATE: State = {
-    loading: true,
+  static readonly INITIAL_STATE: State = {
     loggedIn: false,
     username: null,
     userData: {
@@ -66,6 +59,12 @@ export class UserService {
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
   };
+
+  private static readonly REGISTER_ENDPOINT = '/api/account/register';
+  private static readonly LOGIN_ENDPOINT = '/api/login';
+  private static readonly LOGOUT_ENDPOINT = '/api/logout';
+  private static readonly WHOAMI_ENDPOINT = '/api/whoami';
+  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private readonly state: BehaviorSubject<State>;
 
@@ -177,7 +176,6 @@ export class UserService {
         } else {
           this.state.next({
             ...this.currentState,
-            loading: false,
             loggedIn: false,
             username: null,
           });
@@ -206,7 +204,6 @@ export class UserService {
       .subscribe((userData: UserData) =>
         this.state.next({
           ...this.currentState,
-          loading: false,
           userData,
         }),
       );

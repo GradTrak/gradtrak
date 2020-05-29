@@ -15,7 +15,7 @@
     </ng-template>
   </div>
 </div>
-<ng-container *ngIf="!state.loading; else loading">
+<ng-container *ngIf="!isLoading; else loading">
   <div class="body">
     <div class="main">
       <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
