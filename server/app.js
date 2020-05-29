@@ -1,5 +1,5 @@
 const express = require('express');
-const compression = require('express-compression');
+const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
