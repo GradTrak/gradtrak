@@ -1,4 +1,5 @@
 const argon2 = require('argon2');
+const crypto = require('crypto');
 const util = require('util');
 const User = require('../models/user');
 
@@ -50,6 +51,43 @@ exports.register = async (req, res) => {
     username,
     success: true,
   });
+};
+
+exports.logout = (req, res) => {
+  if (req.user) {
+    req.logout();
+    res.status(204).send();
+  } else {
+    res.status(400).json({
+      error: 'Not logged in',
+    });
+  }
+};
+
+exports.loginSuccess = (req, res) => {
+  res.json({
+    success: true,
+    username: req.user.username,
+  });
+};
+
+exports.loginFailure = (req, res) => {
+  res.status(200).json({
+    success: false,
+  });
+};
+
+exports.whoami = (req, res) => {
+  if (req.user) {
+    res.json({
+      loggedIn: true,
+      username: req.user.username,
+    });
+  } else {
+    res.json({
+      loggedIn: false,
+    });
+  }
 };
 
 exports.getUserData = (req, res) => {
