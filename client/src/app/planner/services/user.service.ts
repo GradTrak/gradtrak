@@ -17,6 +17,7 @@ import { RequirementService } from './requirement.service';
   providedIn: 'root',
 })
 export class UserService {
+  private static readonly REGISTER_ENDPOINT = '/api/account/register';
   private static readonly LOGIN_ENDPOINT = '/api/login';
   private static readonly LOGOUT_ENDPOINT = '/api/logout';
   private static readonly WHOAMI_ENDPOINT = '/api/whoami';
@@ -83,6 +84,33 @@ export class UserService {
 
   getState(): Observable<State> {
     return this.state.asObservable();
+  }
+
+  /**
+  * Registers a user with the given email, password, and emailMarketing and userTesting preferences.
+  *
+  * @param {string} email The user's email.
+  * @param {string} password The user's password.
+  * @param {boolean} emailMarketing The user's emailMarketing preference.
+  * @param {boolean} userTesting The user's userTesting preference.
+  * @return {Observable<string>} An Observable that will emit an error string or null
+   if the registration was successful.
+  */
+  register(email: string, password: string, emailMarketing: boolean, userTesting: boolean):
+  Observable<string> {
+    if (this.currentState.loggedIn) {
+      throw new Error('Tried to resgister when already logged in');
+    }
+    return this.http.post(UserService.REGISTER_ENDPOINT,
+      {email, password, emailMarketing, userTesting }).pipe(
+        tap((response: { success: boolean; email?: string; error?: string}) => {
+          if (response.success) {
+    
+          }
+        }),
+        map((response: { success: boolean; email?: string; error?: string }) =>
+        response.error ? response.error : null),
+    );
   }
 
   /**

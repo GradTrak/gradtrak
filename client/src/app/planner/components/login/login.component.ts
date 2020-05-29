@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   password: string;
   password2: string;
 
+  regError: string;
   regEmailMarketing: boolean;
   regUserTesting: boolean;
 
@@ -31,6 +32,9 @@ export class LoginComponent implements OnInit {
     this.username = '';
     this.password = '';
     this.password2 = '';
+    this.regError = null;
+    this.regEmailMarketing = true;
+    this.regUserTesting = false;
   }
 
   ngOnInit(): void {}
@@ -47,6 +51,20 @@ export class LoginComponent implements OnInit {
         this.success.emit();
       } else {
         this.failed = true;
+      }
+      this.loading = false;
+    });
+  }
+
+  submitRegistration(): void {
+    this.loading = true;
+
+    this.userService.register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
+    .subscribe((error: string) => {
+      if (error) {
+        this.regError = error;
+      } else {
+        this.success.emit();
       }
       this.loading = false;
     });
