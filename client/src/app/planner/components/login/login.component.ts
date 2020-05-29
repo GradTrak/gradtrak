@@ -59,17 +59,18 @@ export class LoginComponent implements OnInit {
   submitRegistration(): void {
     this.loading = true;
 
-    this.userService.register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
-    .subscribe((error: string) => {
-      if (error) {
-        this.regError = error;
-        this.loading = false;
-      } else {
-        this.userService.queryWhoami().subscribe((email: string) => {
-          this.success.emit();
+    this.userService
+      .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
+      .subscribe((error: string) => {
+        if (error) {
+          this.regError = error;
           this.loading = false;
-        });
-      }
-    });
+        } else {
+          this.userService.queryWhoami().subscribe((email: string) => {
+            this.success.emit();
+            this.loading = false;
+          });
+        }
+      });
   }
 }

@@ -96,20 +96,16 @@ export class UserService {
   * @return {Observable<string>} An Observable that will emit an error string or null
    if the registration was successful.
   */
-  register(email: string, password: string, emailMarketing: boolean, userTesting: boolean):
-  Observable<string> {
+  register(email: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to resgister when already logged in');
     }
-    return this.http.post(UserService.REGISTER_ENDPOINT,
-      {email, password, emailMarketing, userTesting }).pipe(
-        tap((response: { success: boolean; email?: string; error?: string}) => {
-          if (response.success) {
-
-          }
-        }),
-        map((response: { success: boolean; email?: string; error?: string }) =>
-        response.error ? response.error : null),
+    return this.http.post(UserService.REGISTER_ENDPOINT, { email, password, emailMarketing, userTesting }).pipe(
+      tap((response: { success: boolean; email?: string; error?: string }) => {
+        if (response.success) {
+        }
+      }),
+      map((response: { success: boolean; email?: string; error?: string }) => (response.error ? response.error : null)),
     );
   }
 
