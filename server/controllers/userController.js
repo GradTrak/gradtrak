@@ -1,6 +1,7 @@
 const argon2 = require('argon2');
 const util = require('util');
 
+const smtp = require('../config/smtp');
 const User = require('../models/user');
 
 exports.register = async (req, res) => {
@@ -50,6 +51,11 @@ exports.register = async (req, res) => {
   res.json({
     username,
     success: true,
+  });
+
+  smtp.sendMail({
+    to: username,
+    ...smtp.WELCOME_EMAIL,
   });
 };
 
