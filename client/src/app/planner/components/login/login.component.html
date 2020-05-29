@@ -7,7 +7,7 @@
   <br />
   <input type="password" name="password" [(ngModel)]="password" />
   <br />
-  <button type="submit" [disabled]="loading">Login</button>
+  <button class="gt-button gt-button-secondary" type="submit" [disabled]="loading">Login</button>
   <ng-container *ngIf="failed">
     <br />
     <span class="failure">Incorrect username or password.</span>
