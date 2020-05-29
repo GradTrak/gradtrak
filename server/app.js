@@ -18,7 +18,7 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({ secret: 'secret' }));
+app.use(session({ secret: process.env.SESSION_SECRET || 'secret' }));
 app.use(passport.initialize());
 app.use(passport.session());
 
