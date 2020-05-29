@@ -22,7 +22,6 @@ export class PlannerComponent implements OnInit {
   constructor(private userService: UserService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.userService.queryWhoami();
     this.userService.getState().subscribe((nextState: State) => {
       /* Fetch user data if just logged in */
       if (nextState.loggedIn && !this.state.loggedIn) {
@@ -43,6 +42,7 @@ export class PlannerComponent implements OnInit {
       this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
     });
+    this.userService.queryWhoami().subscribe();
   }
 
   openLogin(): void {
