@@ -28,28 +28,30 @@
       </div>
     </div>
   </div>
-  <div class="section">
-    <div class="row">
-      <div class="col col-6">
-        Current password:
-      </div>
-      <div class="col col-6">
-        <input class="expand" type="password" [(ngModel)]="currentPassword" />
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="row">
-      <div class="col col-12">
-        <button class="expand" (click)="submit()" [disabled]="!changesMade || isSubmitting">Save Changes</button>
+  <form (ngSubmit)="submit()">
+    <div class="section">
+      <div class="row">
+        <div class="col col-6">
+          Current password:
+        </div>
+        <div class="col col-6">
+          <input class="expand" type="password" name="password" [(ngModel)]="currentPassword" />
+        </div>
       </div>
     </div>
-    <div *ngIf="error" class="row">
-      <div class="error col col-12">
-        {{ error }}
+    <div class="section">
+      <div class="row">
+        <div class="col col-12">
+          <button type="submit" class="expand" [disabled]="!changesMade || isSubmitting">Save Changes</button>
+        </div>
+      </div>
+      <div *ngIf="error" class="row">
+        <div class="error col col-12">
+          {{ error }}
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 
 <ng-template #loading>
