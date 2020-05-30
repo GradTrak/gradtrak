@@ -57,4 +57,13 @@ export class RequirementSet {
       this.parent = null;
     }
   }
+
+  getConstraints(): Constraint[] {
+    const constraints: Constraint[] = [...this.selfConstraints, ...this.universalConstraints];
+    let curr: RequirementSet = this.parent;
+    while (curr) {
+      constraints.push(...curr.universalConstraints);
+    }
+    return constraints;
+  }
 }
