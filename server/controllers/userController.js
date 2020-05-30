@@ -6,6 +6,10 @@ const smtp = require('../config/smtp');
 const { validateEmail } = require('../lib/utils');
 const User = require('../models/user');
 
+function validPassword(password) {
+  return password.length >= 6;
+}
+
 exports.register = async (req, res) => {
   if (req.user) {
     res.status(400).json({
