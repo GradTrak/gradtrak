@@ -20,25 +20,17 @@ import { Tag } from './tag.model';
 export class RequirementCategory {
   name: string;
   requirements: Requirement[];
-  universalConstraints: Constraint[];
-  selfConstraints: Constraint[];
+  constraints: Constraint[];
 
   constructor(proto: RequirementCategoryPrototype, coursesMap: Map<string, Course>, tagsMap: Map<string, Tag>) {
     this.name = proto.name;
     this.requirements = proto.requirements.map((reqProto: RequirementPrototype) =>
       RequirementCategory.getRequirementObjectFromPrototype(reqProto, coursesMap, tagsMap),
     );
-    this.universalConstraints = proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
-      switch (universalConstraintProto.type) {
+    this.constraints = proto.constraints.map((constraintProto: ConstraintPrototype) => {
+      switch (constraintProto.type) {
         case 'mutex':
-          return new MutexConstraint(universalConstraintProto);
-          break;
-      }
-    });
-    this.selfConstraints = proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
-      switch (selfConstraintProto.type) {
-        case 'mutex':
-          return new MutexConstraint(selfConstraintProto);
+          return new MutexConstraint(constraintProto);
           break;
       }
     });
@@ -118,5 +110,10 @@ export class RequirementCategory {
     }
 
     return requirement;
+  }
+
+  getConstraints(): Constraint[] {
+    const constraints: Constraint[] = [...this.constraints];
+    return constraints;
   }
 }

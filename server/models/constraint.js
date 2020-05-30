@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const constraintSchema = new mongoose.Schema(
+module.exports.constraintSchema = new mongoose.Schema(
   {
     id: {
       type: String,
@@ -19,5 +19,3 @@ const constraintSchema = new mongoose.Schema(
   },
   { strict: 'throw' },
 );
-
-module.exports = mongoose.model('Constraint', constraintSchema);

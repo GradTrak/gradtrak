@@ -8,8 +8,7 @@ import { Constraint } from './constraint.model';
 export abstract class Requirement {
   id: string;
   name: string;
-  universalConstraints: Constraint[];
-  selfConstraints: Constraint[];
+  constraints: Constraint[];
 
   constructor(obj: object) {
     Object.assign(this, obj);
@@ -29,4 +28,9 @@ export abstract class Requirement {
   }
 
   abstract toString(): string;
+
+  getConstraints(): Constraint[] {
+    const constraints: Constraint[] = [...this.constraints];
+    return constraints;
+  }
 }

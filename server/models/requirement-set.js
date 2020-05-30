@@ -1,4 +1,4 @@
-const Constraint = require('./constraint.js');
+const { constraintSchema } = require('./constraint.js');
 const mongoose = require('mongoose');
 
 const requirementSchema = new mongoose.Schema(
@@ -37,11 +37,8 @@ const requirementSchema = new mongoose.Schema(
     units: {
       type: Number,
     },
-    universalConstraints: {
-      type: Constraint,
-    },
-    selfConstraints: {
-      type: Constraint,
+    constraints: {
+      type: [constraintSchema],
     },
   },
   { strict: 'throw' },
@@ -60,11 +57,8 @@ const requirementCategorySchema = new mongoose.Schema(
       required: true,
       default: [],
     },
-    universalConstraints: {
-      type: Constraint,
-    },
-    selfConstraints: {
-      type: Constraint,
+    constraints: {
+      type: [constraintSchema],
     },
   },
   { strict: 'throw' },
@@ -95,10 +89,10 @@ const requirementSetSchema = new mongoose.Schema(
       default: [],
     },
     universalConstraints: {
-      type: Constraint,
+      type: [constraintSchema],
     },
     selfConstraints: {
-      type: Constraint,
+      type: [constraintSchema],
     },
   },
   { strict: 'throw' },

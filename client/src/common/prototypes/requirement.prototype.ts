@@ -4,6 +4,5 @@ export interface RequirementPrototype {
   id: string;
   type: string;
   name: string;
-  universalConstraints: ConstraintPrototype[];
-  selfConstraints: ConstraintPrototype[];
+  constraints: ConstraintPrototype[];
 }
