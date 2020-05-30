@@ -21,6 +21,7 @@ export class UserService {
   private static readonly LOGOUT_ENDPOINT = '/api/logout';
   private static readonly WHOAMI_ENDPOINT = '/api/whoami';
   private static readonly SEMESTER_API_ENDPOINT = '/api/user';
+  private static readonly PASSWORD_CHANGE_ENDPOINT = '/api/account/password';
 
   private static readonly INITIAL_STATE: State = {
     loading: true,
@@ -149,6 +150,22 @@ export class UserService {
         });
       }
     });
+  }
+
+  /**
+   * Changes the user's password.
+   *
+   * @param {string} oldPassword The user's old password, used for verification.
+   * @param {string} newPassword the user's new password.
+   * @return {Observable<string>} The error in changing the password, null if the operation succeeded.
+   */
+  changePassword(oldPassword: string, newPassword: string): Observable<string> {
+    return this.http
+      .post(UserService.PASSWORD_CHANGE_ENDPOINT, {
+        oldPassword,
+        newPassword,
+      })
+      .pipe(map((err: { error?: string }) => (err ? err.error : null)));
   }
 
   /**

@@ -14,9 +14,13 @@ export class PlannerComponent implements OnInit {
   state: State;
   currentCourses: Course[];
 
-  @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-  @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>;
+  @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>;
+  @ViewChild('accountEditor', { static: true }) private accountEditorContent: TemplateRef<any>;
   private loginModalInstance: NgbModalRef;
+  private accountEditorInstance: NgbModalRef;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   constructor(private userService: UserService, private modalService: NgbModal) {}
 
@@ -45,6 +49,16 @@ export class PlannerComponent implements OnInit {
   closeLogin(): void {
     if (this.loginModalInstance) {
       this.loginModalInstance.close();
+    }
+  }
+
+  openAccountEditor(): void {
+    this.accountEditorInstance = this.modalService.open(this.accountEditorContent);
+  }
+
+  closeAccountEditor(): void {
+    if (this.accountEditorInstance) {
+      this.accountEditorInstance.close();
     }
   }
 
