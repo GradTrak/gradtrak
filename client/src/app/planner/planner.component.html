@@ -26,7 +26,7 @@
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
       ></app-requirements-pane>
     </div>
-    <button class="gt-button gt-button-secondary report-button" (click)="showReportForm()">Feedback</button>
+    <button class="gt-button gt-button-secondary report-button" (click)="openReportForm()">Feedback</button>
   </ng-container>
 </div>
 
@@ -40,7 +40,7 @@
   <app-login (success)="closeLogin()" (dismiss)="closeLogin()"></app-login>
 </ng-template>
 
-<ng-template #reportFormTemplate>
+<ng-template #reportForm>
   <app-report-pane></app-report-pane>
 </ng-template>
 

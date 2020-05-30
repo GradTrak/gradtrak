@@ -16,13 +16,15 @@ export class PlannerComponent implements OnInit {
   isLoading: boolean;
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
-  @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>;
-  @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>;
-  @ViewChild('accountEditor', { static: true }) private accountEditorContent: TemplateRef<any>;
-  private loginModalInstance: NgbModalRef;
-  private loginPrompted: boolean;
-  private accountEditorInstance: NgbModalRef;
+  @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
+  @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
+  @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
+
+  private loginInstance: NgbModalRef;
+  private accountEditorInstance: NgbModalRef;
+
+  private loginPrompted: boolean;
 
   constructor(private userService: UserService, private modalService: NgbModal) {
     this.isLoading = true;
@@ -58,19 +60,17 @@ export class PlannerComponent implements OnInit {
   }
 
   openLogin(): void {
-    this.loginModalInstance = this.modalService.open(this.loginModalContent);
+    this.loginInstance = this.modalService.open(this.loginTemplate);
   }
 
-  onSignUp(): void {}
-
   closeLogin(): void {
-    if (this.loginModalInstance) {
-      this.loginModalInstance.close();
+    if (this.loginInstance) {
+      this.loginInstance.close();
     }
   }
 
   openAccountEditor(): void {
-    this.accountEditorInstance = this.modalService.open(this.accountEditorContent);
+    this.accountEditorInstance = this.modalService.open(this.accountEditorTemplate);
   }
 
   closeAccountEditor(): void {
@@ -79,7 +79,7 @@ export class PlannerComponent implements OnInit {
     }
   }
 
-  showReportForm(): void {
+  openReportForm(): void {
     this.modalService.open(this.reportFormTemplate);
   }
 
