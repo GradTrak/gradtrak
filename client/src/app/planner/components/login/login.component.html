@@ -1,66 +1,78 @@
 <ng-container *ngIf="!registering; else regTemplate">
-  <form (ngSubmit)="submitLogin()">
-    <div class="modal-body">
+  <div class="modal-body">
+    <h4 class="header">Login</h4>
+    <form (ngSubmit)="submitLogin()">
       <label>Email</label>
-      <br />
-      <input type="text" name="username" [(ngModel)]="username" />
-      <br />
+      <input class="form-control" type="text" name="username" [(ngModel)]="username" />
       <label>Password</label>
+      <input class="form-control" type="password" name="password" [(ngModel)]="password" />
       <br />
-      <input type="password" name="password" [(ngModel)]="password" />
-      <br />
-      <button class="submit gt-button gt-button-secondary" type="submit" [disabled]="loading">Login</button>
+      <button class="btn btn-primary btn-block gt-button gt-button-secondary" type="submit" [disabled]="loading">
+        Login
+      </button>
       <ng-container *ngIf="failed">
-        <br />
         <span class="failure">Incorrect username or password.</span>
       </ng-container>
+    </form>
+    <div class="register">
+      Don't have an account?
+      <a href="#" (click)="$event.preventDefault(); switchMode()">Register</a>
     </div>
-    <div class="modal-footer">
-      <div class="register">
-        Don't have an account?
-        <a href="#" (click)="$event.preventDefault(); switchMode()">Sign Up</a>
-      </div>
-      <div class="skip">
-        <a href="#" (click)="$event.preventDefault(); dismiss()">Continue as guest</a>
-      </div>
+    <hr class="or" />
+    <div class="skip">
+      <a href="#" (click)="$event.preventDefault(); dismiss()">Continue as guest</a>
     </div>
-  </form>
+  </div>
 </ng-container>
 <ng-template #regTemplate>
-  <form (ngSubmit)="submitRegistration()">
-    <div class="modal-body">
+  <div class="modal-body">
+    <h4 class="header">Register</h4>
+    <form (ngSubmit)="submitRegistration()">
       <label>Email</label>
-      <br />
-      <input type="text" name="username" [(ngModel)]="username" />
-      <br />
+      <input class="form-control" type="text" name="username" [(ngModel)]="username" />
       <label>Password</label>
-      <br />
-      <input type="password" name="password" [(ngModel)]="password" />
-      <br />
+      <input class="form-control" type="password" name="password" [(ngModel)]="password" />
       <label>Confirm Password</label>
+      <input class="form-control" type="password" name="password2" [(ngModel)]="password2" />
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="email-marketing"
+          name="email-marketing"
+          [(ngModel)]="regEmailMarketing"
+        />
+        <label class="form-check-label" for="email-marketing">
+          I would like to receive updates on new features!
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="user-testing"
+          name="user-testing"
+          [(ngModel)]="regUserTesting"
+        />
+        <label class="form-check-label" for="user-testing">
+          I would like to be contacted to help with user testing!
+        </label>
+      </div>
       <br />
-      <input type="password" name="password2" [(ngModel)]="password2" />
-      <br />
-      <input type="checkbox" id="email-marketing" name="email-marketing" [(ngModel)]="regEmailMarketing" />
-      <label for="email-marketing">I would like to receive updates on new features!</label>
-      <br />
-      <input type="checkbox" id="user-testing" name="user-testing" [(ngModel)]="regUserTesting" />
-      <label for="user-testing">I would like to be contacted to help with user testing!</label>
-      <br />
-      <button class="submit gt-button gt-button-secondary" type="submit" [disabled]="loading">Register</button>
+      <button class="btn btn-primary btn-block gt-button gt-button-secondary" type="submit" [disabled]="loading">
+        Register
+      </button>
       <ng-container *ngIf="regError">
-        <br />
         <span class="failure">{{ regError }}</span>
       </ng-container>
+    </form>
+    <div class="register">
+      Have an account?
+      <a href="#" (click)="$event.preventDefault(); switchMode()">Log In</a>
     </div>
-    <div class="modal-footer">
-      <div class="register">
-        Already have an account?
-        <a href="#" (click)="$event.preventDefault(); switchMode()">Log In</a>
-      </div>
-      <div class="skip">
-        <a href="#" (click)="$event.preventDefault(); dismiss()">Continue as guest</a>
-      </div>
+    <hr class="or" />
+    <div class="skip">
+      <a href="#" (click)="$event.preventDefault(); dismiss()">Continue as guest</a>
     </div>
-  </form>
+  </div>
 </ng-template>
