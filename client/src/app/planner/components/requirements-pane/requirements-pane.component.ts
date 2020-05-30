@@ -66,12 +66,12 @@ export class RequirementsPaneComponent implements OnInit {
   }
 
   /**
-  * Takes in a list of courses, processes all the children requirementSets,
-  * and returns a mapping of all the possibilities of partitioning the list of
-  * courses that satisies the constraints between the children requiremenetSets.
-  * @param courses a list of couses that the user has chosen
-  * @return a list of maps, each of which indicate a possible mapping of courses.
-  */
+   * Takes in a list of courses, processes all the children requirementSets,
+   * and returns a mapping of all the possibilities of partitioning the list of
+   * courses that satisies the constraints between the children requiremenetSets.
+   * @param courses a list of couses that the user has chosen
+   * @return a list of maps, each of which indicate a possible mapping of courses.
+   */
   processRequirements(courses: Course[], setIndex: number, categoryIndex: number, reqIndex: number): object {
     const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
     this.getRequiredSets().forEach((reqSet: RequirementSet) => {
@@ -84,12 +84,20 @@ export class RequirementsPaneComponent implements OnInit {
         });
       });
     });
-    const reqs = this.getRequiredSets().flatMap((reqSet: RequirementSet) => {
-      return reqSet.requirementCategories;
-    }).flatMap((reqCategory: RequirementCategory) => {
-      return reqCategory.requirements;
-    });
-    const getMappings = (reqs: Requirement[], i: number, courses: Course[], mapping: Map<Requirement, Course[]>, constraints: Map<Requirement, Constraint[]>) => {
+    const reqs = this.getRequiredSets()
+      .flatMap((reqSet: RequirementSet) => {
+        return reqSet.requirementCategories;
+      })
+      .flatMap((reqCategory: RequirementCategory) => {
+        return reqCategory.requirements;
+      });
+    const getMappings = (
+      reqs: Requirement[],
+      i: number,
+      courses: Course[],
+      mapping: Map<Requirement, Course[]>,
+      constraints: Map<Requirement, Constraint[]>,
+    ) => {
       if (reqs.length === i) {
         return [];
       }
@@ -99,7 +107,7 @@ export class RequirementsPaneComponent implements OnInit {
         getMappings(reqs, i + 1, courses, mapping, constraints);
       });
       return new Map(mapping);
-    }
+    };
     const possibilityArray = getMappings(reqs, 0, courses, new Map<Requirement, Course[]>(), constraints);
     return null;
   }
