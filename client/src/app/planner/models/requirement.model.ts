@@ -19,11 +19,11 @@ export abstract class Requirement {
     return this.isFulfilledWith(courses, override);
   }
 
-  abstract isFulfilledWith(courses: Course[], override: Set<string>): boolean;
-
   getAnnotation(): string {
     return null;
   }
 
   abstract toString(): string;
+
+  protected abstract isFulfilledWith(courses: Course[], override: Set<string>): boolean;
 }

@@ -1,6 +1,7 @@
 const argon2 = require('argon2');
 const util = require('util');
 
+const { verifyUser } = require('../config/passport');
 const smtp = require('../config/smtp');
 const { validateEmail } = require('../lib/utils');
 const User = require('../models/user');
@@ -103,6 +104,48 @@ exports.whoami = (req, res) => {
       loggedIn: false,
     });
   }
+};
+
+exports.changePassword = async (req, res) => {
+  if (!req.user) {
+    res.status(401).json({
+      success: false,
+      error: 'Not logged in',
+    });
+    return;
+  }
+
+  const { oldPassword, newPassword } = req.body;
+  if (oldPassword === undefined || oldPassword === null || newPassword === undefined || newPassword === null) {
+    res.status(400).json({
+      success: false,
+      error: 'Old password or new password not provided',
+    });
+    return;
+  }
+  if (!validPassword(newPassword)) {
+    res.json({
+      success: false,
+      error: 'New password is invalid',
+    });
+    return;
+  }
+
+  const verify = await verifyUser(req.user, oldPassword);
+  if (!verify) {
+    res.json({
+      success: false,
+      error: 'Incorrect current password',
+    });
+    return;
+  }
+
+  req.user.passwordHash = await argon2.hash(newPassword, { mode: argon2.argon2id });
+  await req.user.save();
+
+  res.json({
+    success: true,
+  });
 };
 
 exports.getUserData = (req, res) => {

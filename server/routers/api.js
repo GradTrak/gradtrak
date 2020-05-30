@@ -29,5 +29,6 @@ api.post(
 );
 api.post('/account/logout', userController.logout);
 api.get('/account/whoami', userController.whoami);
+api.post('/account/password', userController.changePassword);
 
 exports.api = api;

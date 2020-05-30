@@ -9,7 +9,7 @@
       <br />
       <input type="password" name="password" [(ngModel)]="password" />
       <br />
-      <button class="submit" type="submit" [disabled]="loading">Login</button>
+      <button class="submit gt-button gt-button-secondary" type="submit" [disabled]="loading">Login</button>
       <ng-container *ngIf="failed">
         <br />
         <span class="failure">Incorrect username or password.</span>
@@ -47,7 +47,7 @@
       <input type="checkbox" id="user-testing" name="user-testing" [(ngModel)]="regUserTesting" />
       <label for="user-testing">I would like to be contacted to help with user testing!</label>
       <br />
-      <button class="submit" type="submit" [disabled]="loading">Register</button>
+      <button class="submit gt-button gt-button-secondary" type="submit" [disabled]="loading">Register</button>
       <ng-container *ngIf="regError">
         <br />
         <span class="failure">{{ regError }}</span>
