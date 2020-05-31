@@ -21,40 +21,7 @@ export class UserService {
     loggedIn: false,
     username: null,
     userData: {
-      semesters: [
-        {
-          name: 'Fall 2019',
-          courses: [],
-        },
-        {
-          name: 'Spring 2020',
-          courses: [],
-        },
-        {
-          name: 'Fall 2020',
-          courses: [],
-        },
-        {
-          name: 'Spring 2021',
-          courses: [],
-        },
-        {
-          name: 'Fall 2021',
-          courses: [],
-        },
-        {
-          name: 'Spring 2022',
-          courses: [],
-        },
-        {
-          name: 'Fall 2022',
-          courses: [],
-        },
-        {
-          name: 'Spring 2023',
-          courses: [],
-        },
-      ],
+      semesters: [],
       goals: [],
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },

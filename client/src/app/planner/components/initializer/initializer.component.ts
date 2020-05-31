@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./initializer.component.scss'],
 })
 export class InitializerComponent implements OnInit {
-  constructor() {}
+  gradYear: number;
+
+  constructor() {
+    this.gradYear = 2024;
+  }
 
   ngOnInit(): void {}
 }

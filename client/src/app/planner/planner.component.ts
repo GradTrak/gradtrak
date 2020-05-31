@@ -67,7 +67,15 @@ export class PlannerComponent implements OnInit {
   }
 
   openLogin(): void {
-    this.loginInstance = this.modalService.open(this.loginTemplate);
+    this.loginInstance = this.modalService.open(this.loginTemplate,
+      { backdrop: 'static', keyboard: false });
+  }
+
+  onLoginDismiss(): void {
+    this.closeLogin();
+    if (this.state.userData.semesters.length === 0) {
+      this.openInitializer();
+    }
   }
 
   closeLogin(): void {
@@ -77,7 +85,12 @@ export class PlannerComponent implements OnInit {
   }
 
   openInitializer(): void {
-    this.initializerInstance = this.modalService.open(this.initializerTemplate);
+    this.initializerInstance = this.modalService.open(this.initializerTemplate, 
+    { backdrop: 'static', keyboard: false });
+  }
+
+  setUserData(): void {
+
   }
 
   closeInitializer(): void {

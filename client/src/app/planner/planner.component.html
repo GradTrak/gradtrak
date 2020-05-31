@@ -37,7 +37,7 @@
 </ng-template>
 
 <ng-template #login>
-  <app-login (success)="closeLogin()" (dismiss)="closeLogin()"></app-login>
+  <app-login (success)="closeLogin()" (dismiss)="onLoginDismiss()"></app-login>
 </ng-template>
 
 <ng-template #initializer>
