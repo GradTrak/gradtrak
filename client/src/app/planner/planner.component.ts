@@ -22,9 +22,7 @@ export class PlannerComponent implements OnInit {
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
-  private loginInstance: NgbModalRef;
-  private initializerInstance: NgbModalRef;
-  private accountEditorInstance: NgbModalRef;
+  private modalInstance: NgbModalRef;
 
   private loginPrompted: boolean;
 
@@ -48,6 +46,9 @@ export class PlannerComponent implements OnInit {
         if (!nextState.loggedIn && !this.loginPrompted) {
           this.loginPrompted = true;
           this.openLogin();
+        } else if (nextState.userData.semesters.length === 0) {
+          /* Open initializer if not prompting for login and empty semesters */
+          this.openInitializer();
         }
 
         /* Save user data if logged in and not just loaded */
@@ -55,10 +56,6 @@ export class PlannerComponent implements OnInit {
           this.userService.saveUserData();
         }
 
-        /* Open initializer if not prompting for login and empty semesters */
-        if (!this.loginInstance && nextState.userData.semesters.length === 0) {
-          this.openInitializer();
-        }
       }
       this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
@@ -66,26 +63,29 @@ export class PlannerComponent implements OnInit {
     this.userService.queryWhoami().subscribe();
   }
 
+  closeModal(): void {
+    if (this.modalInstance) {
+      this.modalInstance.close();
+      this.modalInstance = null;
+    }
+  }
+
   openLogin(): void {
-    this.loginInstance = this.modalService.open(this.loginTemplate,
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.loginTemplate,
       { backdrop: 'static', keyboard: false });
   }
 
   onLoginDismiss(): void {
-    this.closeLogin();
+    this.closeModal();
     if (this.state.userData.semesters.length === 0) {
       this.openInitializer();
     }
   }
 
-  closeLogin(): void {
-    if (this.loginInstance) {
-      this.loginInstance.close();
-    }
-  }
-
   openInitializer(): void {
-    this.initializerInstance = this.modalService.open(this.initializerTemplate, 
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.initializerTemplate,
     { backdrop: 'static', keyboard: false });
   }
 
@@ -93,24 +93,14 @@ export class PlannerComponent implements OnInit {
 
   }
 
-  closeInitializer(): void {
-    if (this.initializerInstance) {
-      this.initializerInstance.close();
-    }
-  }
-
   openAccountEditor(): void {
-    this.accountEditorInstance = this.modalService.open(this.accountEditorTemplate);
-  }
-
-  closeAccountEditor(): void {
-    if (this.accountEditorInstance) {
-      this.accountEditorInstance.close();
-    }
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.accountEditorTemplate);
   }
 
   openReportForm(): void {
-    this.modalService.open(this.reportFormTemplate);
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.reportFormTemplate);
   }
 
   logout(): void {
