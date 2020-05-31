@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RequirementSet } from '../../models/requirement-set.model';
 
 @Component({
   selector: 'app-initializer',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitializerComponent implements OnInit {
   //@Output
+  majors: RequirementSet[];
+  startYear: number;
   gradYear: number;
+  summer: boolean;
 
   constructor() {
-    this.gradYear = 2024;
   }
 
   ngOnInit(): void {}
