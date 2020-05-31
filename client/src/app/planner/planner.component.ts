@@ -17,11 +17,13 @@ export class PlannerComponent implements OnInit {
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
+  @ViewChild('initializer', { static: true }) private initializerTemplate: TemplateRef<any>;
   @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private loginInstance: NgbModalRef;
+  private initializerInstance: NgbModalRef;
   private accountEditorInstance: NgbModalRef;
 
   private loginPrompted: boolean;
@@ -52,6 +54,11 @@ export class PlannerComponent implements OnInit {
         if (!wasLoading && nextState.loggedIn) {
           this.userService.saveUserData();
         }
+
+        /* Open initializer if not prompting for login and empty semesters */
+        if (!this.loginInstance && nextState.userData.semesters.length === 0) {
+          this.openInitializer();
+        }
       }
       this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
@@ -66,6 +73,16 @@ export class PlannerComponent implements OnInit {
   closeLogin(): void {
     if (this.loginInstance) {
       this.loginInstance.close();
+    }
+  }
+
+  openInitializer(): void {
+    this.initializerInstance = this.modalService.open(this.initializerTemplate);
+  }
+
+  closeInitializer(): void {
+    if (this.initializerInstance) {
+      this.initializerInstance.close();
     }
   }
 
