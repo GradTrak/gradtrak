@@ -8,7 +8,7 @@ import { UserData } from '../../models/user-data.model';
   styleUrls: ['./initializer.component.scss'],
 })
 export class InitializerComponent implements OnInit {
-  @Output initializeData: EventEmitter<UserData>;
+  @Output() initializeData: EventEmitter<UserData>;
   startYear: number;
   gradYear: number;
   summer: boolean;
@@ -24,7 +24,5 @@ export class InitializerComponent implements OnInit {
     this.state = 'goals';
   }
 
-  submit(reqSets: RequirementSet[]): void {
-
-  }
+  submit(reqSets: RequirementSet[]): void {}
 }

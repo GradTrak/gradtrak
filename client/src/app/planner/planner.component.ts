@@ -55,7 +55,6 @@ export class PlannerComponent implements OnInit {
         if (!wasLoading && nextState.loggedIn) {
           this.userService.saveUserData();
         }
-
       }
       this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
@@ -72,8 +71,7 @@ export class PlannerComponent implements OnInit {
 
   openLogin(): void {
     this.closeModal();
-    this.modalInstance = this.modalService.open(this.loginTemplate,
-      { backdrop: 'static', keyboard: false });
+    this.modalInstance = this.modalService.open(this.loginTemplate, { backdrop: 'static', keyboard: false });
   }
 
   onLoginDismiss(): void {
@@ -85,13 +83,10 @@ export class PlannerComponent implements OnInit {
 
   openInitializer(): void {
     this.closeModal();
-    this.modalInstance = this.modalService.open(this.initializerTemplate,
-    { backdrop: 'static', keyboard: false });
+    this.modalInstance = this.modalService.open(this.initializerTemplate, { backdrop: 'static', keyboard: false });
   }
 
-  setUserData(): void {
-
-  }
+  setUserData(): void {}
 
   openAccountEditor(): void {
     this.closeModal();
