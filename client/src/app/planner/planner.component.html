@@ -37,7 +37,7 @@
 </ng-template>
 
 <ng-template #login>
-  <app-login (success)="closeLogin()" (dismiss)="onLoginDismiss()"></app-login>
+  <app-login (success)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
 </ng-template>
 
 <ng-template #initializer>
@@ -49,5 +49,5 @@
 </ng-template>
 
 <ng-template #accountEditor>
-  <app-account-editor (onClose)="closeAccountEditor()"></app-account-editor>
+  <app-account-editor (onClose)="closeModal()"></app-account-editor>
 </ng-template>
