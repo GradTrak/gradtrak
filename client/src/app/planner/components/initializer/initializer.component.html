@@ -1,9 +1,5 @@
-<div class="modal-body">
+<div *ngIf="state === 'semesters'" class="modal-body">
   <h4 class="header">Set Up</h4>
-  <div class="form-group">
-    <label>Majors</label>
-    <input class="form-control" [(ngModel)]="major" />
-  </div>
   <!-- TODO: implement when minors are implemented -->
   <!-- <div class="form-group">
     <label>Minors</label>
@@ -42,6 +38,9 @@
     <label class="form-check-label" for="summer">Include Summer Semesters?</label>
   </div>
   <div class="form-group">
-    <button class="btn btn-primary btn-block gt-button gt-button-secondary" (click)="submit()">Continue</button>
+    <button class="btn btn-primary btn-block gt-button gt-button-secondary" (click)="next()">Next</button>
   </div>
+</div>
+<div *ngIf="state === 'goals'" class="modal-body">
+  <app-goal-selector (selectGoals)="submit($event)"> </app-goal-selector>
 </div>
