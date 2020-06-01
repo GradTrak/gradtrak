@@ -43,7 +43,7 @@ export class InitializerComponent implements OnInit {
   initializeSemesters(startYear: number, gradYear: number, summer: boolean): Semester[] {
     const semesters: Semester[] = [];
     semesters.push(new Semester(`Fall ${startYear}`));
-    for (let i: number = startYear + 1; i <= gradYear - 1; i++) {
+    for (let i: number = startYear + 1; i <= gradYear - 1; i += 1) {
       semesters.push(new Semester(`Spring ${i}`));
       if (summer) {
         semesters.push(new Semester(`Summer ${i}`));
