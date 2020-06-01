@@ -48,24 +48,22 @@ export class SemesterChangerComponent implements OnInit {
       this.errorMessage = 'Please select a season and a valid year.';
       return;
     }
-    if (this.semesters.foreach(() => {
-
-    }))
-    if (this.semesters.flatMap((semesters): Semester[] => semesters).map((semester) => semester.name).includes(semesterName)) {
+    if (Array.from(semesters.values()).flat().map((semester) => semester?semester.name:null).includes(semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
     const newSemester = new Semester(semesterName);
     const semArr = semester.split(' ')
     const semesterYear = parseInt(semArr[1]) - ((semArr[0] !== 'Fall')? 1 : 0); //this feels so incredibly clunky.
-    const academicYearName = semesterYear.toString() + "-" + (semesterYear+1).toString();
-    semesters.array.forEach(academicYear: => {
-      if (academicYear[0] === academicYearName) {
-        if
-      }
-    });
-    this.semesters.push(newSemester);
-    this.semesters.sort(this.semesterCompare);
+    const academicYearName = semesterYear.toString() + "-" + (semesterYear+1).toString(); //eg '2019-2020'
+    const index = {
+      'Fall' : 0,
+      'Spring' : 1,
+      'Summer' : 2
+    }.semArr[0]
+    if (semesters[academicYearName]) {
+      semesters[academicYearName][index] = newSemester;
+    }
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
 
