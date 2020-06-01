@@ -44,6 +44,14 @@ exports.register = async (req, res) => {
     });
     return;
   }
+  if (!validPassword(password)) {
+    // TODO Send status code 400 once client-side validation is implemented
+    res.json({
+      success: false,
+      error: 'Invalid password',
+    });
+    return;
+  }
 
   const user = await User.findOne({ username });
   if (user) {
