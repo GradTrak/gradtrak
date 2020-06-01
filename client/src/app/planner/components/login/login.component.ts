@@ -7,7 +7,8 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  @Output('success') private success: EventEmitter<void>;
+  @Output('login') private login: EventEmitter<void>;
+  @Output('register') private register: EventEmitter<void>;
   @Output('dismiss') private dismissEvent: EventEmitter<void>;
 
   username: string;
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
   registering: boolean;
 
   constructor(private userService: UserService) {
-    this.success = new EventEmitter<void>();
+    this.login = new EventEmitter<void>();
+    this.register = new EventEmitter<void>();
     this.dismissEvent = new EventEmitter<void>();
     this.loading = false;
     this.failed = false;
@@ -52,7 +54,7 @@ export class LoginComponent implements OnInit {
 
     this.userService.login(this.username, this.password).subscribe((success: boolean) => {
       if (success) {
-        this.success.emit();
+        this.login.emit();
       } else {
         this.failed = true;
       }
@@ -71,7 +73,7 @@ export class LoginComponent implements OnInit {
           this.loading = false;
         } else {
           this.userService.queryWhoami().subscribe(() => {
-            this.success.emit();
+            this.register.emit();
             this.loading = false;
           });
         }
