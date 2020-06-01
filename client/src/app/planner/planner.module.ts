@@ -20,6 +20,8 @@ import { SemesterChangerComponent } from './components/semester-changer/semester
 import { RequirementDisplayComponent } from './components/requirement-category/requirement-display/requirement-display.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReportPaneComponent } from './components/report-pane/report-pane.component';
+import { AccountEditorComponent } from './components/account-editor/account-editor.component';
+import { InitializerComponent } from './components/initializer/initializer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { ReportPaneComponent } from './components/report-pane/report-pane.compon
     RequirementDisplayComponent,
     LoginComponent,
     ReportPaneComponent,
+    AccountEditorComponent,
+    InitializerComponent,
   ],
   exports: [
     PlannerComponent, //

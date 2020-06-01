@@ -56,6 +56,16 @@ const userSchema = new mongoose.Schema(
         goalIds: [],
       },
     },
+    emailMarketing: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    userTesting: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
   },
   { strict: 'throw' },
 );

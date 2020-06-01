@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('express-compression');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
@@ -13,10 +14,11 @@ db.connect();
 const app = express();
 
 app.use(logger('dev'));
+app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({ secret: 'secret' }));
+app.use(session({ secret: process.env.SESSION_SECRET || 'secret' }));
 app.use(passport.initialize());
 app.use(passport.session());
 

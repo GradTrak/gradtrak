@@ -17,54 +17,22 @@ import { RequirementService } from './requirement.service';
   providedIn: 'root',
 })
 export class UserService {
-  private static readonly LOGIN_ENDPOINT = '/api/login';
-  private static readonly LOGOUT_ENDPOINT = '/api/logout';
-  private static readonly WHOAMI_ENDPOINT = '/api/whoami';
-  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
-
-  private static readonly INITIAL_STATE: State = {
-    loading: true,
+  static readonly INITIAL_STATE: State = {
     loggedIn: false,
     username: null,
     userData: {
-      semesters: [
-        {
-          name: 'Fall 2019',
-          courses: [],
-        },
-        {
-          name: 'Spring 2020',
-          courses: [],
-        },
-        {
-          name: 'Fall 2020',
-          courses: [],
-        },
-        {
-          name: 'Spring 2021',
-          courses: [],
-        },
-        {
-          name: 'Fall 2021',
-          courses: [],
-        },
-        {
-          name: 'Spring 2022',
-          courses: [],
-        },
-        {
-          name: 'Fall 2022',
-          courses: [],
-        },
-        {
-          name: 'Spring 2023',
-          courses: [],
-        },
-      ],
+      semesters: [],
       goals: [],
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
   };
+
+  private static readonly REGISTER_ENDPOINT = '/api/account/register';
+  private static readonly LOGIN_ENDPOINT = '/api/account/login';
+  private static readonly LOGOUT_ENDPOINT = '/api/account/logout';
+  private static readonly WHOAMI_ENDPOINT = '/api/account/whoami';
+  private static readonly PASSWORD_CHANGE_ENDPOINT = '/api/account/password';
+  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private readonly state: BehaviorSubject<State>;
 
@@ -86,6 +54,36 @@ export class UserService {
   }
 
   /**
+   * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
+   *
+   * @param {string} username The user's username.
+   * @param {string} password The user's password.
+   * @param {boolean} emailMarketing The user's emailMarketing preference.
+   * @param {boolean} userTesting The user's userTesting preference.
+   * @return {Observable<string>} An Observable that will emit an error string or null if the registration was
+   * successful.
+   */
+  register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
+    if (this.currentState.loggedIn) {
+      throw new Error('Tried to register when already logged in');
+    }
+    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
+      tap((response: { success: boolean; username?: string; error?: string }) => {
+        if (response.success) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username,
+          });
+        }
+      }),
+      map((response: { success: boolean; username?: string; error?: string }) =>
+        response.error ? response.error : null,
+      ),
+    );
+  }
+
+  /**
    * Logs into the application with the given username and password.
    *
    * @param {string} username The user's username.
@@ -102,7 +100,6 @@ export class UserService {
         if (response.success) {
           this.state.next({
             ...this.currentState,
-            loading: true,
             loggedIn: true,
             username,
           });
@@ -131,24 +128,47 @@ export class UserService {
 
   /**
    * Queries the server to detect current login status and updates state accordingly.
+   *
+   * @return {Observable<string>} An Observable that contains the username
+   * or null if not logged in.
    */
-  queryWhoami(): void {
-    this.http.get(UserService.WHOAMI_ENDPOINT).subscribe((response: { loggedIn: boolean; username?: string }) => {
-      if (response.loggedIn) {
-        this.state.next({
-          ...this.currentState,
-          loggedIn: true,
-          username: response.username,
-        });
-      } else {
-        this.state.next({
-          ...this.currentState,
-          loading: false,
-          loggedIn: false,
-          username: null,
-        });
-      }
-    });
+  queryWhoami(): Observable<string> {
+    return this.http.get(UserService.WHOAMI_ENDPOINT).pipe(
+      tap((response: { loggedIn: boolean; username?: string }) => {
+        if (response.loggedIn) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username: response.username,
+          });
+        } else {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: false,
+            username: null,
+          });
+        }
+      }),
+      map((response: { loggedIn: boolean; username?: string }) => {
+        return response.loggedIn ? response.username : null;
+      }),
+    );
+  }
+
+  /**
+   * Changes the user's password.
+   *
+   * @param {string} oldPassword The user's old password, used for verification.
+   * @param {string} newPassword the user's new password.
+   * @return {Observable<string>} The error in changing the password, null if the operation succeeded.
+   */
+  changePassword(oldPassword: string, newPassword: string): Observable<string> {
+    return this.http
+      .post(UserService.PASSWORD_CHANGE_ENDPOINT, {
+        oldPassword,
+        newPassword,
+      })
+      .pipe(map((err: { error?: string }) => (err ? err.error : null)));
   }
 
   /**
@@ -162,13 +182,12 @@ export class UserService {
           forkJoin({
             coursesMap: this.courseService.getCoursesMap(),
             reqsMap: this.requirementService.getRequirementsMap(),
-          }).pipe(map(({ coursesMap, reqsMap }) => new UserData(userDataProto, coursesMap, reqsMap))),
+          }).pipe(map(({ coursesMap, reqsMap }) => UserData.fromProto(userDataProto, coursesMap, reqsMap))),
         ),
       )
       .subscribe((userData: UserData) =>
         this.state.next({
           ...this.currentState,
-          loading: false,
           userData,
         }),
       );
@@ -198,7 +217,7 @@ export class UserService {
   /**
    * Updates the list of goals to a new list of given goals.
    *
-   * @param {RequiremnetSet[]} newGoals The new goals.
+   * @param {RequirementSet[]} newGoals The new goals.
    */
   updateGoals(newGoals: RequirementSet[]): void {
     this.state.next({
@@ -292,6 +311,13 @@ export class UserService {
     }
     this.state.next({
       ...this.currentState,
+    });
+  }
+
+  setUserData(userData: UserData): void {
+    this.state.next({
+      ...this.currentState,
+      userData,
     });
   }
 

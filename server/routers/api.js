@@ -16,43 +16,19 @@ api.get('/tags', cache.route(), tagController.getTags);
 api.get('/user', userController.getUserData);
 api.put('/user', userController.setUserData);
 
+api.post('/account/register', userController.register);
 api.post(
-  '/login',
+  '/account/login',
   passport.authenticate('local', { failWithError: true }),
-  (req, res) => {
-    res.json({
-      success: true,
-      username: req.user.username,
-    });
-  },
+  userController.loginSuccess,
   // eslint-disable-next-line no-unused-vars
   (err, req, res, next) => {
-    res.status(200).json({
-      success: false,
-    });
+    res.status(200);
+    userController.loginFailure(req, res);
   },
 );
-api.post('/logout', (req, res) => {
-  if (req.user) {
-    req.logout();
-    res.status(204).send();
-  } else {
-    res.status(400).json({
-      error: 'Not logged in',
-    });
-  }
-});
-api.get('/whoami', (req, res) => {
-  if (req.user) {
-    res.json({
-      loggedIn: true,
-      username: req.user.username,
-    });
-  } else {
-    res.json({
-      loggedIn: false,
-    });
-  }
-});
+api.post('/account/logout', userController.logout);
+api.get('/account/whoami', userController.whoami);
+api.post('/account/password', userController.changePassword);
 
 exports.api = api;
