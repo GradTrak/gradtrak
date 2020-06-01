@@ -323,15 +323,16 @@ export class UserService {
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
     const semesters: Map<string, SemesterPrototype[]> = new Map<string, SemesterPrototype[]>();
-    for (let [key, value] of semesters.)
-    userData.semesters.map((semester: Semester) => {
-      const semesterPrototype = {
-        ...semester,
-        courseIds: semester.courses.map((course: Course) => course.id),
-      };
-      delete semesterPrototype.courses;
-      return semesterPrototype;
-    });
+    for (let [academicYearName, academicYearSemesters] of userData.semesters.entries()) {
+      semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
+        const semesterPrototype = {
+          ...semester,
+          courseIds: semester.courses.map((course: Course) => course.id),
+        };
+        delete semesterPrototype.courses;
+        return semesterPrototype;
+      });
+    }
     const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
     const manuallyFulfilledReqs: object = Object.fromEntries(
       Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
