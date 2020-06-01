@@ -41,7 +41,7 @@
 </ng-template>
 
 <ng-template #initializer>
-  <app-initializer></app-initializer>
+  <app-initializer (initializeData)="setUserData($event)"></app-initializer>
 </ng-template>
 
 <ng-template #reportForm>

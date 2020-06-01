@@ -217,7 +217,7 @@ export class UserService {
   /**
    * Updates the list of goals to a new list of given goals.
    *
-   * @param {RequiremnetSet[]} newGoals The new goals.
+   * @param {RequirementSet[]} newGoals The new goals.
    */
   updateGoals(newGoals: RequirementSet[]): void {
     this.state.next({
@@ -311,6 +311,13 @@ export class UserService {
     }
     this.state.next({
       ...this.currentState,
+    });
+  }
+
+  setUserData(userData: UserData): void {
+    this.state.next({
+      ...this.currentState,
+      userData,
     });
   }
 

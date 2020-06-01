@@ -3,6 +3,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from './models/course.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
+import { UserData } from './models/user-data.model';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -86,7 +87,10 @@ export class PlannerComponent implements OnInit {
     this.modalInstance = this.modalService.open(this.initializerTemplate, { backdrop: 'static', keyboard: false });
   }
 
-  setUserData(): void {}
+  setUserData(userData: UserData): void {
+    this.closeModal();
+    this.userService.setUserData(userData);
+  }
 
   openAccountEditor(): void {
     this.closeModal();
