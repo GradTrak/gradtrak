@@ -202,9 +202,9 @@ export class UserService {
   /**
    * Updates the list of semesters to a new list of given semesters.
    *
-   * @param {Semester[]} newSemesters The new semesters.
+   * @param {Semester[][]} newSemesters The new semesters.
    */
-  updateSemesters(newSemesters: Semester[]): void {
+  updateSemesters(newSemesters: Map<string, Semester[]>): void {
     this.state.next({
       ...this.currentState,
       userData: {

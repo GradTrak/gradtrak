@@ -5,11 +5,11 @@ import { RequirementSet } from './requirement-set.model';
 import { Semester } from './semester.model';
 
 export class UserData {
-  semesters: Semester[];
+  semesters: Map<string, Semester[]>;
   goals: RequirementSet[];
   manuallyFulfilledReqs: Map<string, Set<string>>;
 
-  constructor(semesters: Semester[][], goals: RequirementSet[], manuallyFulfilledReqs?: Map<string, Set<string>>) {
+  constructor(semesters: Map<string, Semester[]>, goals: RequirementSet[], manuallyFulfilledReqs?: Map<string, Set<string>>) {
     this.semesters = semesters;
     this.goals = goals;
     if (manuallyFulfilledReqs) {
@@ -20,7 +20,7 @@ export class UserData {
   }
 
   static fromProto(proto: UserDataPrototype, coursesMap: Map<string, Course>, reqSetMap: Map<string, RequirementSet>): UserData {
-    const semesters: Semester[][] = proto.semesters.map(
+    const semesters: Map<string, Semester[]> = proto.semesters.map(
       (semesterProtoArr: SemesterPrototype[]) => (semesterProtoArr.map(
         (semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap),
       ))
