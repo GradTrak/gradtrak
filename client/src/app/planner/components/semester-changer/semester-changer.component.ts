@@ -25,8 +25,8 @@ export class SemesterChangerComponent implements OnInit {
   private semesterAdderModal: NgbModalRef;
 
   constructor(private modalRef: NgbModal) {
-    this.semesters = [];
-    this.semesterChanged = new EventEmitter<Semester[]>();
+    this.semesters = new Map<string, Semester[]>();
+    this.semesterChanged = new EventEmitter<Map<string, Semester[]>>();
   }
 
   ngOnInit(): void {
