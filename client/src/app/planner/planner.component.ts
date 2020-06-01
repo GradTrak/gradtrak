@@ -41,10 +41,8 @@ export class PlannerComponent implements OnInit {
         if (nextState.loggedIn && !this.state.loggedIn) {
           this.userService.fetchUserData();
           this.isLoading = true;
-        }
-
-        /* Open login modal if not opened previously */
-        if (!nextState.loggedIn && !this.loginPrompted) {
+        } else if (!nextState.loggedIn && !this.loginPrompted) {
+          /* Open login modal if not opened previously */
           this.loginPrompted = true;
           this.openLogin();
         } else if (nextState.userData.semesters.length === 0) {
