@@ -82,7 +82,11 @@ export class PlannerComponent implements OnInit {
 
   openInitializer(): void {
     this.closeModal();
-    this.modalInstance = this.modalService.open(this.initializerTemplate, { backdrop: 'static', keyboard: false });
+    this.modalInstance = this.modalService.open(this.initializerTemplate, {
+      size: 'lg',
+      backdrop: 'static',
+      keyboard: false,
+    });
   }
 
   openAccountEditor(): void {
