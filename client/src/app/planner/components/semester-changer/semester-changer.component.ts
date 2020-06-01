@@ -14,6 +14,12 @@ export class SemesterChangerComponent implements OnInit {
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';
+  const SEASON_INDEX: object = {
+    'Fall' : 0,
+    'Spring' : 1,
+    'Summer' : 2
+  };
+
 
   @ViewChild('semesterAdder', { static: false }) private referenceToTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private semesterAdderModal: NgbModalRef;
@@ -37,6 +43,20 @@ export class SemesterChangerComponent implements OnInit {
     this.semesterAdderModal.close();
   }
 
+
+
+  /**
+  * Given a semester, retunrs the string of its academic year in the form of
+  * 'YYYY-YYYY'
+  * @param a semester for which you want the year. Name is in 'Season YYYY' format.
+  */
+
+  getAcademicYearName(semester: Semester) {
+    const semArr = semester.name.split(' ')
+    const semesterYear = parseInt(semArr[1]) - ((semArr[0] !== 'Fall')? 1 : 0); //this feels so incredibly clunky.
+    return semesterYear.toString() + "-" + (semesterYear+1).toString(); //eg '2019-2020'
+  }
+
   /**
    * Adds a semester to the current list of semesters.
    *
@@ -53,14 +73,8 @@ export class SemesterChangerComponent implements OnInit {
       return;
     }
     const newSemester = new Semester(semesterName);
-    const semArr = semester.split(' ')
-    const semesterYear = parseInt(semArr[1]) - ((semArr[0] !== 'Fall')? 1 : 0); //this feels so incredibly clunky.
-    const academicYearName = semesterYear.toString() + "-" + (semesterYear+1).toString(); //eg '2019-2020'
-    const index = {
-      'Fall' : 0,
-      'Spring' : 1,
-      'Summer' : 2
-    }.semArr[0]
+    const academicYearName = getAcademicYearName(newSemester);
+    const index = this.SEASON_INDEX[semArr[0]];
     if (semesters[academicYearName]) {
       semesters[academicYearName][index] = newSemester;
     }
@@ -100,8 +114,10 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   removeSemester(semester: Semester): void {
-    const index = this.semesters.indexOf(semester);
-    this.semesters.splice(index, 1);
+    const acadYear = getAcademicYearName(semester);
+    const semesterArr = semester.name.split(' ');
+    const index = SEASON_INDEX[semesterArr[0]];
+    this.semesters[acadYear][index] = null;
     // an undo button would be nice here. Or an "are you sure".
     // just in case they delete a semester that's important.
   }
