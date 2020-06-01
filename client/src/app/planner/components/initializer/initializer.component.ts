@@ -41,8 +41,8 @@ export class InitializerComponent implements OnInit {
       if (summer) {
         currSem.push(new Semester(`Summer ${i+1}`));
       }
-      semesters.set(`${number}-${number+1}`, currSem);
-      }
+      semesters.set(`${i}-${i+1}`, currSem);
+    }
     return semesters;
   }
 }
