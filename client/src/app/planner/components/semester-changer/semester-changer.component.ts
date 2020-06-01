@@ -10,7 +10,7 @@ import { Semester } from '../../models/semester.model';
 export class SemesterChangerComponent implements OnInit {
   @Input() readonly semestersInput: Semester[]; // optional
   @Output() semesterChanged: EventEmitter<Semester[]>;
-  semesters: Semester[];
+  semesters: Semester[][];
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';

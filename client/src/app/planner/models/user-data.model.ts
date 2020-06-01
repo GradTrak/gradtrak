@@ -9,7 +9,7 @@ export class UserData {
   goals: RequirementSet[];
   manuallyFulfilledReqs: Map<string, Set<string>>;
 
-  constructor(semesters: Semester[], goals: RequirementSet[], manuallyFulfilledReqs?: Map<string, Set<string>>) {
+  constructor(semesters: Semester[][], goals: RequirementSet[], manuallyFulfilledReqs?: Map<string, Set<string>>) {
     this.semesters = semesters;
     this.goals = goals;
     if (manuallyFulfilledReqs) {
@@ -20,7 +20,11 @@ export class UserData {
   }
 
   static fromProto(proto: UserDataPrototype, coursesMap: Map<string, Course>, reqSetMap: Map<string, RequirementSet>): UserData {
-    const semesters: Semester[] = proto.semesters.map((semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap));
+    const semesters: Semester[][] = proto.semesters.map(
+      (semesterProtoArr: SemesterPrototype[]) => (semesterProtoArr.map(
+        (semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap),
+      ))
+    );
     const goals: RequirementSet[] = proto.goalIds.map((goalId: string) => reqSetMap.get(goalId));
     const manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>();
     Object.entries(proto.manuallyFulfilledReqs).forEach((entry) => {
