@@ -182,7 +182,7 @@ export class UserService {
           forkJoin({
             coursesMap: this.courseService.getCoursesMap(),
             reqsMap: this.requirementService.getRequirementsMap(),
-          }).pipe(map(({ coursesMap, reqsMap }) => new UserData(userDataProto, coursesMap, reqsMap))),
+          }).pipe(map(({ coursesMap, reqsMap }) => UserData.fromProto(userDataProto, coursesMap, reqsMap))),
         ),
       )
       .subscribe((userData: UserData) =>
