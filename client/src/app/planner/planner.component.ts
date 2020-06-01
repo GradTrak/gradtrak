@@ -85,11 +85,6 @@ export class PlannerComponent implements OnInit {
     this.modalInstance = this.modalService.open(this.initializerTemplate, { backdrop: 'static', keyboard: false });
   }
 
-  setUserData(userData: UserData): void {
-    this.closeModal();
-    this.userService.setUserData(userData);
-  }
-
   openAccountEditor(): void {
     this.closeModal();
     this.modalInstance = this.modalService.open(this.accountEditorTemplate);
@@ -102,6 +97,11 @@ export class PlannerComponent implements OnInit {
 
   logout(): void {
     this.userService.logout();
+  }
+
+  setUserData(userData: UserData): void {
+    this.closeModal();
+    this.userService.setUserData(userData);
   }
 
   private getCurrentCourses(): Course[] {

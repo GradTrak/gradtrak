@@ -185,12 +185,18 @@ export class UserService {
           }).pipe(map(({ coursesMap, reqsMap }) => UserData.fromProto(userDataProto, coursesMap, reqsMap))),
         ),
       )
-      .subscribe((userData: UserData) =>
-        this.state.next({
-          ...this.currentState,
-          userData,
-        }),
-      );
+      .subscribe((userData: UserData) => {
+        if (userData.semesters.length > 0) {
+          this.state.next({
+            ...this.currentState,
+            userData,
+          });
+        } else {
+          this.state.next({
+            ...this.currentState,
+          });
+        }
+      });
   }
 
   saveUserData(): void {
