@@ -21,7 +21,7 @@ export class UserService {
     loggedIn: false,
     username: null,
     userData: {
-      semesters: [],
+      semesters: new Map<string, Semester[]>(),
       goals: [],
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
@@ -202,14 +202,14 @@ export class UserService {
   /**
    * Updates the list of semesters to a new list of given semesters.
    *
-   * @param {Semester[][]} newSemesters The new semesters.
+   * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
   updateSemesters(newSemesters: Map<string, Semester[]>): void {
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...newSemesters],
+        semesters: new Map<string, Semester[]>(semesters), //FIXME some way to copy this. @nicholas why do we need to make a copy again?
       },
     });
   }
@@ -322,7 +322,9 @@ export class UserService {
   }
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: SemesterPrototype[] = userData.semesters.map((semester: Semester) => {
+    const semesters: Map<string, SemesterPrototype[]> = new Map<string, SemesterPrototype[]>();
+    for (let [key, value] of semesters.)
+    userData.semesters.map((semester: Semester) => {
       const semesterPrototype = {
         ...semester,
         courseIds: semester.courses.map((course: Course) => course.id),

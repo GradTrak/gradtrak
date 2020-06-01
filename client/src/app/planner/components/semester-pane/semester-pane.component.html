@@ -1,6 +1,6 @@
 <div class="semester-container">
-  <app-semester *ngFor="let semester of semesters" [semester]="semester" [currentSemesters]="semesters"></app-semester>
-</div>
+  <app-semester *ngFor="let semester of Array.from(semesters.values()).flat().map((semester) => semester?semester.name).filter(a => a)" [semester]="semester" [currentSemesters]="semesters"></app-semester>
+</div> <!-- Yeah okay this is hopefully temporary -->
 
 <ng-template #semesterChangerTemplate>
   <app-semester-changer
