@@ -10,7 +10,7 @@ import { Semester } from '../../models/semester.model';
 export class SemesterChangerComponent implements OnInit {
   @Input() readonly semestersInput: Semester[]; // optional
   @Output() semesterChanged: EventEmitter<Semester[]>;
-  semesters: Semester[][];
+  semesters: Map<string, Semester[]>;
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';
@@ -41,17 +41,29 @@ export class SemesterChangerComponent implements OnInit {
    * Adds a semester to the current list of semesters.
    *
    * @param {string} semesterName The intended name of the new semester object being initialized.
+   * Must be formatted "Season YYYY"
    */
   addSemester(semesterName: string): void {
     if (semesterName.includes('undefined')) {
       this.errorMessage = 'Please select a season and a valid year.';
       return;
     }
-    if (this.semesters.map((semester) => semester.name).includes(semesterName)) {
+    if (this.semesters.foreach(() => {
+
+    }))
+    if (this.semesters.flatMap((semesters): Semester[] => semesters).map((semester) => semester.name).includes(semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
     const newSemester = new Semester(semesterName);
+    const semArr = semester.split(' ')
+    const semesterYear = parseInt(semArr[1]) - ((semArr[0] !== 'Fall')? 1 : 0); //this feels so incredibly clunky.
+    const academicYearName = semesterYear.toString() + "-" + (semesterYear+1).toString();
+    semesters.array.forEach(academicYear: => {
+      if (academicYear[0] === academicYearName) {
+        if
+      }
+    });
     this.semesters.push(newSemester);
     this.semesters.sort(this.semesterCompare);
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
