@@ -112,10 +112,37 @@ export class RequirementsPaneComponent implements OnInit {
       if (reqs.length === i) {
         return [];
       }
-      const possibilites: Course[][] = []; // [[], ['cs61a']]
-      possibilites.forEach((possibility: Course[]) => { 
-        mapping.set(reqs[0], possibility);
-        getMappings(reqs, i + 1, courses, mapping, constraints);
+      /**
+      * Given a list of courses,returns the powerset, or all possible combination, of the courses.
+      * source: https://stackoverflow.com/questions/42773836/how-to-find-all-subsets-of-a-set-in-javascript.
+      * Unknown runtimes, however It's probably exponential.
+      * @param allCourses courses whose combinations are being found
+      * @return a powerset of the courses
+      */
+      const generatePermutations = (allCourses: Course[]): Course[][] => allCourses.reduce(
+        (subsets, value) => subsets.concat(
+         subsets.map(set => [value,...set])
+        ),
+        [[]]
+      );
+      /* For Connie and Nicholas to discuss on 6/02: Finds all combinations that can fullfill the requirement. Note that I've done this because I think this pruning will
+      help the runtime, but the act of pruning the permutations of courses itself is also exponential time. I think it's a
+      much smaller exponential time, though, compared to having a much larger powerset of EVERY single course of every requriement.
+
+      The next step would be to prune even further by checking the constraints immediately, in this function. That would add a
+      factor of n to the runtime, but is probably worth it. Otherwise, you'll note that nowhere in the function do we actually
+      use the CONSTRAINTS variable.
+
+      It's really late, and I have work tomorrow, but the last thing I'll say is that we need to create copies of the
+      map at every single recursive call to avoid mutability issues. And also, we need to contatenate the mapping,
+      because that's what getmapping returns. Probably just create a variable returnMaps and appent getMappings to it.
+      Currently we are returning a single map. But really we need to return a list of maps, each of which map a requirement
+      to its corresponding list of courses. 
+      */
+      const possibilites: Course[][] = generatePermutations(courses.filter(course => req[i].getsContributed(course)));
+      possibilites.forEach((possibility: Course[]) => {
+        mapping.set(reqs[i], possibility);
+        getMappings(reqs, i + 1, courses, mapping, constraints); //FIXME do something with this map.
       });
       return new Map(mapping);
     };
