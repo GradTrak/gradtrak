@@ -35,6 +35,14 @@ export class MutexRequirement extends Requirement {
   }
 
   /**
+  * Possibility in fullfilling any of the child standalones are considered a possible
+  * contriution to a MutexRequirement.
+  */
+  getsContributed(course: Course): boolean {
+    return this.requirements.any(requirement => requirement.getsContributed(course))
+  }
+
+  /**
    * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
    *
    * @param {Course[]} courses The input Courses that are currently being taken.

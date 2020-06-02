@@ -33,4 +33,10 @@ export abstract class Requirement {
     const constraints: Constraint[] = [...this.constraints];
     return constraints;
   }
+
+  /**
+  * Given a course, returns whether the course has any possibility of
+  * contributing to to the requirement.
+  */
+  abstract getsContributed(course: Course): boolean;
 }

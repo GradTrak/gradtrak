@@ -20,6 +20,15 @@ export class UnitRequirement extends Requirement {
     return this.getFulfillingCourses(courses).reduce((sum, course) => sum + course.units, 0);
   }
 
+  /**
+  * Any COURSE that is a possible contribution to any child requirement is
+  * a possible contribution to a UnitRequirement, and will return true.
+  * @return whether the course could possibly help fullfill a requirement. 
+  */
+  getsContributed(course: Course): boolean {
+    return this.requirements.any(requirement => requirement.getsContributed(course))
+  }
+
   getFulfillingCourses(courses: Course[]): Course[] {
     return courses.filter((course) => this.requirement.isFulfillableBy(course));
   }

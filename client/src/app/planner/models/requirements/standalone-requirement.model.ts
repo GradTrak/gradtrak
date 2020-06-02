@@ -16,6 +16,14 @@ export abstract class StandaloneRequirement extends Requirement {
   }
 
   /**
+  * For standalones, a COURSE contributes if and only if it fullfills that standalone.
+  * returns false otherwise. 
+  */
+  getsContributed(course: Course): boolean{
+    return this.isFulfillableBy(course);
+  }
+
+  /**
    * Performs a graph traversal of the graph of equivalent courses starting at the given course, returning true if any
    * equivalent course fulfills the requirement.
    */

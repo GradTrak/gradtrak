@@ -73,6 +73,7 @@ export class RequirementsPaneComponent implements OnInit {
    * @return a list of maps, each of which indicate a possible mapping of courses.
    */
   processRequirements(courses: Course[], setIndex: number, categoryIndex: number, reqIndex: number): object {
+    //combines all constraints and pools them into a single array
     const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
     this.getRequiredSets().forEach((reqSet: RequirementSet) => {
       const setConstraints: Constraint[] = reqSet.getConstraints();
@@ -91,7 +92,17 @@ export class RequirementsPaneComponent implements OnInit {
       .flatMap((reqCategory: RequirementCategory) => {
         return reqCategory.requirements;
       });
+      /**
+      * Given a list of requirements and courses, recursively finds and returns an
+      * array of every single possible way to arrange courses to the different requirements.
+      * Note that the time and space complexity of this operation is Theta(N**M), where N is the
+      * number of courses and M is the number of requirements.
+      * @param reqs the complete list of requirements being looked at
+      * @param i the current index for the requirement that's "on deck"
+      * @param mapping A map of requirements to courses that fulfill that requirement
+      */
     const getMappings = (
+       //I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
       reqs: Requirement[],
       i: number,
       courses: Course[],
@@ -102,7 +113,7 @@ export class RequirementsPaneComponent implements OnInit {
         return [];
       }
       const possibilites: Course[][] = []; // [[], ['cs61a']]
-      possibilites.forEach((possibility: Course[]) => {
+      possibilites.forEach((possibility: Course[]) => { 
         mapping.set(reqs[0], possibility);
         getMappings(reqs, i + 1, courses, mapping, constraints);
       });
