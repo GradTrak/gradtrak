@@ -28,12 +28,12 @@ export class InitializerComponent implements OnInit {
   }
 
   submit(reqSets: RequirementSet[]): void {
-    const semesters: Semester[] = this.initializeSemesters(this.startYear, this.gradYear, this.summer);
+    const semesters: Map<string, Semester[]> = this.initializeSemesters(this.startYear, this.gradYear, this.summer);
     this.initializeData.emit(new UserData(semesters, reqSets));
   }
 
   initializeSemesters(startYear: number, gradYear: number, summer: boolean): Map<string, Semester[]> {
-    const semesters: Map<string, Semester[]> = new Map([]);
+    const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
     for (let i: number = startYear + 1; i <= gradYear - 1; i++) {
       let currSem: Semester[] = [];
       currSem.push(`Fall ${i}`);
