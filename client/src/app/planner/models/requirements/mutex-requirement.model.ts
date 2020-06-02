@@ -35,11 +35,11 @@ export class MutexRequirement extends Requirement {
   }
 
   /**
-  * Possibility in fullfilling any of the child standalones are considered a possible
-  * contriution to a MutexRequirement.
-  */
+   * Possibility in fullfilling any of the child standalones are considered a possible
+   * contriution to a MutexRequirement.
+   */
   canFulfill(course: Course): boolean {
-    return this.requirements.any(requirement => requirement.canFulfill(course))
+    return this.requirements.any((requirement) => requirement.canFulfill(course));
   }
 
   /**

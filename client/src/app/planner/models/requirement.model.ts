@@ -35,8 +35,8 @@ export abstract class Requirement {
   }
 
   /**
-  * Given a course, returns whether the course has any possibility of
-  * contributing to to the requirement.
-  */
+   * Given a course, returns whether the course has any possibility of
+   * contributing to to the requirement.
+   */
   abstract canFulfill(course: Course): boolean;
 }

@@ -92,17 +92,17 @@ export class RequirementsPaneComponent implements OnInit {
       .flatMap((reqCategory: RequirementCategory) => {
         return reqCategory.requirements;
       });
-      /**
-      * Given a list of requirements and courses, recursively finds and returns an
-      * array of every single possible way to arrange courses to the different requirements.
-      * Note that the time and space complexity of this operation is Theta(N**M), where N is the
-      * number of courses and M is the number of requirements.
-      * @param reqs the complete list of requirements being looked at
-      * @param i the current index for the requirement that's "on deck"
-      * @param mapping A map of requirements to courses that fulfill that requirement
-      */
+    /**
+     * Given a list of requirements and courses, recursively finds and returns an
+     * array of every single possible way to arrange courses to the different requirements.
+     * Note that the time and space complexity of this operation is Theta(N**M), where N is the
+     * number of courses and M is the number of requirements.
+     * @param reqs the complete list of requirements being looked at
+     * @param i the current index for the requirement that's "on deck"
+     * @param mapping A map of requirements to courses that fulfill that requirement
+     */
     const getMappings = (
-       //I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
+      //I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
       reqs: Requirement[],
       i: number,
       courses: Course[],
@@ -113,18 +113,14 @@ export class RequirementsPaneComponent implements OnInit {
         return [];
       }
       /**
-      * Given a list of courses,returns the powerset, or all possible combination, of the courses.
-      * source: https://stackoverflow.com/questions/42773836/how-to-find-all-subsets-of-a-set-in-javascript.
-      * Unknown runtimes, however It's probably exponential.
-      * @param allCourses courses whose combinations are being found
-      * @return a powerset of the courses
-      */
-      const generatePermutations = (allCourses: Course[]): Course[][] => allCourses.reduce(
-        (subsets, value) => subsets.concat(
-         subsets.map(set => [value,...set])
-        ),
-        [[]]
-      );
+       * Given a list of courses,returns the powerset, or all possible combination, of the courses.
+       * source: https://stackoverflow.com/questions/42773836/how-to-find-all-subsets-of-a-set-in-javascript.
+       * Unknown runtimes, however It's probably exponential.
+       * @param allCourses courses whose combinations are being found
+       * @return a powerset of the courses
+       */
+      const generatePermutations = (allCourses: Course[]): Course[][] =>
+        allCourses.reduce((subsets, value) => subsets.concat(subsets.map((set) => [value, ...set])), [[]]);
       /* For Connie and Nicholas to discuss on 6/02: Finds all combinations that can fullfill the requirement. Note that I've done this because I think this pruning will
       help the runtime, but the act of pruning the permutations of courses itself is also exponential time. I think it's a
       much smaller exponential time, though, compared to having a much larger powerset of EVERY single course of every requriement.
@@ -139,7 +135,7 @@ export class RequirementsPaneComponent implements OnInit {
       Currently we are returning a single map. But really we need to return a list of maps, each of which map a requirement
       to its corresponding list of courses. 
       */
-      const possibilites: Course[][] = generatePermutations(courses.filter(course => req[i].canFulfill(course)));
+      const possibilites: Course[][] = generatePermutations(courses.filter((course) => req[i].canFulfill(course)));
       possibilites.forEach((possibility: Course[]) => {
         mapping.set(reqs[i], possibility);
         getMappings(reqs, i + 1, courses, mapping, constraints); //FIXME do something with this map.

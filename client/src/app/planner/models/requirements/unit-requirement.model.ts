@@ -21,12 +21,12 @@ export class UnitRequirement extends Requirement {
   }
 
   /**
-  * Any COURSE that is a possible contribution to any child requirement is
-  * a possible contribution to a UnitRequirement, and will return true.
-  * @return whether the course could possibly help fullfill a requirement. 
-  */
+   * Any COURSE that is a possible contribution to any child requirement is
+   * a possible contribution to a UnitRequirement, and will return true.
+   * @return whether the course could possibly help fullfill a requirement.
+   */
   canFulfill(course: Course): boolean {
-    return this.requirements.any(requirement => requirement.canFulfill(course))
+    return this.requirements.any((requirement) => requirement.canFulfill(course));
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {

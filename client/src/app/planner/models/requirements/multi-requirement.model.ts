@@ -26,11 +26,11 @@ export class MultiRequirement extends Requirement {
   }
 
   /**
-  * For MultiRequirements, possible contribution to any of its subrequirements means it
-  * contributes to the MultiRequirement.
-  */
+   * For MultiRequirements, possible contribution to any of its subrequirements means it
+   * contributes to the MultiRequirement.
+   */
   canFulfill(course: Course): boolean {
-    return this.requirements.any(requirement => requirement.canFulfill(course))
+    return this.requirements.any((requirement) => requirement.canFulfill(course));
   }
 
   toString(): string {
