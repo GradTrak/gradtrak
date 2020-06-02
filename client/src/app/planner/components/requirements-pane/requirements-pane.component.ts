@@ -139,7 +139,7 @@ export class RequirementsPaneComponent implements OnInit {
       Currently we are returning a single map. But really we need to return a list of maps, each of which map a requirement
       to its corresponding list of courses. 
       */
-      const possibilites: Course[][] = generatePermutations(courses.filter(course => req[i].getsContributed(course)));
+      const possibilites: Course[][] = generatePermutations(courses.filter(course => req[i].canFulfill(course)));
       possibilites.forEach((possibility: Course[]) => {
         mapping.set(reqs[i], possibility);
         getMappings(reqs, i + 1, courses, mapping, constraints); //FIXME do something with this map.

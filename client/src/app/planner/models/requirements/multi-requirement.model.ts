@@ -29,8 +29,8 @@ export class MultiRequirement extends Requirement {
   * For MultiRequirements, possible contribution to any of its subrequirements means it
   * contributes to the MultiRequirement.
   */
-  getsContributed(course: Course): boolean {
-    return this.requirements.any(requirement => requirement.getsContributed(course))
+  canFulfill(course: Course): boolean {
+    return this.requirements.any(requirement => requirement.canFulfill(course))
   }
 
   toString(): string {

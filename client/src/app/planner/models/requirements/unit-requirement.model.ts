@@ -25,8 +25,8 @@ export class UnitRequirement extends Requirement {
   * a possible contribution to a UnitRequirement, and will return true.
   * @return whether the course could possibly help fullfill a requirement. 
   */
-  getsContributed(course: Course): boolean {
-    return this.requirements.any(requirement => requirement.getsContributed(course))
+  canFulfill(course: Course): boolean {
+    return this.requirements.any(requirement => requirement.canFulfill(course))
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {
