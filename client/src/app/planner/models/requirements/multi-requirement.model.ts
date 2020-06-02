@@ -30,7 +30,7 @@ export class MultiRequirement extends Requirement {
    * contributes to the MultiRequirement.
    */
   canFulfill(course: Course): boolean {
-    return this.requirements.any((requirement) => requirement.canFulfill(course));
+    return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
   toString(): string {

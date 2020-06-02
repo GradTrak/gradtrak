@@ -26,7 +26,7 @@ export class UnitRequirement extends Requirement {
    * @return whether the course could possibly help fullfill a requirement.
    */
   canFulfill(course: Course): boolean {
-    return this.requirements.any((requirement) => requirement.canFulfill(course));
+    return this.requirement.canFulfill(course);
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {

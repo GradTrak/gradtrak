@@ -39,7 +39,7 @@ export class MutexRequirement extends Requirement {
    * contriution to a MutexRequirement.
    */
   canFulfill(course: Course): boolean {
-    return this.requirements.any((requirement) => requirement.canFulfill(course));
+    return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
   /**
