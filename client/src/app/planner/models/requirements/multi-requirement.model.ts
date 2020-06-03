@@ -52,6 +52,7 @@ export class MultiRequirement extends Requirement {
     if (index >= sets.length) {
       return [];
     }
+    /* optimize by capping at numRequired */
     return sets[index].flatMap((elem: T) => {
       return MultiRequirement.getAllCombinations(sets, index)
         .map((combination: T[]) => [elem, ...combination]);

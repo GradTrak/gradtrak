@@ -50,8 +50,7 @@ export class UnitRequirement extends Requirement {
       return [[]];
     }
     const rest: T[][] = UnitRequirement.getAllCombinations<T>(arr, index + 1);
-    //[[], [2]] => [[], [1], [2], [1, 2]]
-    /* optimize */
+    /* optimize by capping at units*/
     return [...rest, ...rest.map((combination: T[]) => [arr[index], ...combination])];
   }
 }

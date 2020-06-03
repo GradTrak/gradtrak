@@ -110,8 +110,27 @@ export class RequirementsPaneComponent implements OnInit {
       constraints: Map<Requirement, Constraint[]>,
     ) => {
       if (reqs.length === i) {
-        return [];
+        return [new Map<Requirement, Course[]>()];
       }
+
+      const req: Requirement = reqs[i];
+      const combinations: Course[][] = req.getCourseCombinations(courses).filter((combination: Course[]) => {
+        mapping.set(req, combination);
+        const valid: boolean = constraints.get(req).every((constraint: Constraint) => constraint.isValidMapping(mapping));
+        mapping.delete(req);
+        return valid;
+      });
+
+      return combinations.flatMap((combination: Course[]) => {
+        mapping.set(req, combination);
+        const rest: Map<Requirement, Course[]>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
+        mapping.delete(req);
+        rest.forEach((restCombinations: Map<Requirement, Course[]>) => {
+          restCombinations.set(req, combination);
+        })
+        return rest;
+      })
+
       /**
        * Given a list of courses,returns the powerset, or all possible combination, of the courses.
        * source: https://stackoverflow.com/questions/42773836/how-to-find-all-subsets-of-a-set-in-javascript.
