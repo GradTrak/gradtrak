@@ -34,7 +34,9 @@ export class MultiRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Course[][] {
-    const childs: Course[][][] = this.requirements.map((requirement: Requirement) => requirement.getCourseCombinations(courses));
+    const childs: Course[][][] = this.requirements.map((requirement: Requirement) =>
+      requirement.getCourseCombinations(courses),
+    );
     return MultiRequirement.getAllCombinations<Course[]>(childs).map((combination: Course[][]) => combination.flat());
   }
 
@@ -54,8 +56,7 @@ export class MultiRequirement extends Requirement {
     }
     /* optimize by capping at numRequired */
     return sets[index].flatMap((elem: T) => {
-      return MultiRequirement.getAllCombinations(sets, index)
-        .map((combination: T[]) => [elem, ...combination]);
+      return MultiRequirement.getAllCombinations(sets, index).map((combination: T[]) => [elem, ...combination]);
     });
   }
 }

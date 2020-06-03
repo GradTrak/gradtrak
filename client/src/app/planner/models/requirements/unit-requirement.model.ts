@@ -34,7 +34,9 @@ export class UnitRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Course[][] {
-    const filteredCourses: Course[] = courses.filter((course: Course) => this.requirement.isFulfilledWith([course], null));
+    const filteredCourses: Course[] = courses.filter((course: Course) =>
+      this.requirement.isFulfilledWith([course], null),
+    );
     return UnitRequirement.getAllCombinations<Course>(filteredCourses);
   }
 

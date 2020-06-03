@@ -24,11 +24,13 @@ export abstract class StandaloneRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Course[][] {
-    const combinations: Course[][] = courses.filter((course: Course) => {
-      return this.isFulfilledWith([course], null);
-    }).map((course: Course) => {
-      return [course];
-    });
+    const combinations: Course[][] = courses
+      .filter((course: Course) => {
+        return this.isFulfilledWith([course], null);
+      })
+      .map((course: Course) => {
+        return [course];
+      });
     combinations.push([]);
     return combinations;
   }

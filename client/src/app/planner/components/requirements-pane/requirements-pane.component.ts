@@ -73,7 +73,7 @@ export class RequirementsPaneComponent implements OnInit {
    * @return a list of maps, each of which indicate a possible mapping of courses.
    */
   processRequirements(courses: Course[], setIndex: number, categoryIndex: number, reqIndex: number): object {
-    //combines all constraints and pools them into a single array
+    // combines all constraints and pools them into a single array
     const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
     this.getRequiredSets().forEach((reqSet: RequirementSet) => {
       const setConstraints: Constraint[] = reqSet.getConstraints();
@@ -102,7 +102,7 @@ export class RequirementsPaneComponent implements OnInit {
      * @param mapping A map of requirements to courses that fulfill that requirement
      */
     const getMappings = (
-      //I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
+      // I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
       reqs: Requirement[],
       i: number,
       courses: Course[],
@@ -116,7 +116,9 @@ export class RequirementsPaneComponent implements OnInit {
       const req: Requirement = reqs[i];
       const combinations: Course[][] = req.getCourseCombinations(courses).filter((combination: Course[]) => {
         mapping.set(req, combination);
-        const valid: boolean = constraints.get(req).every((constraint: Constraint) => constraint.isValidMapping(mapping));
+        const valid: boolean = constraints
+          .get(req)
+          .every((constraint: Constraint) => constraint.isValidMapping(mapping));
         mapping.delete(req);
         return valid;
       });
@@ -127,9 +129,9 @@ export class RequirementsPaneComponent implements OnInit {
         mapping.delete(req);
         rest.forEach((restCombinations: Map<Requirement, Course[]>) => {
           restCombinations.set(req, combination);
-        })
+        });
         return rest;
-      })
+      });
 
       /**
        * Given a list of courses,returns the powerset, or all possible combination, of the courses.
