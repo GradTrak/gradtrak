@@ -34,12 +34,24 @@ export class UnitRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Course[][] {
-    return courses.map((course: Course) => {
-      return this.requirement.getCourseCombinations([course]);
-    });
+    const filteredCourses: Course[] = courses.filter((course: Course) => this.requirement.isFulfilledWith([course], null));
+    return UnitRequirement.getAllCombinations<Course>(filteredCourses);
   }
 
   toString(): string {
     return `${this.units} units of \n${this.requirement.name}`;
+  }
+
+  private static getAllCombinations<T>(arr: T[], index?: number): T[][] {
+    if (index === undefined) {
+      index = 0;
+    }
+    if (arr.length >= index) {
+      return [[]];
+    }
+    const rest: T[][] = UnitRequirement.getAllCombinations<T>(arr, index + 1);
+    //[[], [2]] => [[], [1], [2], [1, 2]]
+    /* optimize */
+    return [...rest, ...rest.map((combination: T[]) => [arr[index], ...combination])];
   }
 }

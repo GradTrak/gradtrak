@@ -46,11 +46,14 @@ export class MultiRequirement extends Requirement {
   }
 
   private static getAllCombinations<T>(sets: T[][], index?: number): T[][] {
+    if (index === undefined) {
+      index = 0;
+    }
     if (index >= sets.length) {
       return [];
     }
     return sets[index].flatMap((elem: T) => {
-      return MultiRequirement.getAllCombinations(sets, index === undefined ? 1 : index + 1)
+      return MultiRequirement.getAllCombinations(sets, index)
         .map((combination: T[]) => [elem, ...combination]);
     });
   }
