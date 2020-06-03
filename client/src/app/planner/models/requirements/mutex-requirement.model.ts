@@ -69,6 +69,11 @@ export class MutexRequirement extends Requirement {
     });
   }
 
+  /* will be deleted later */
+  getCourseCombinations(courses: Course[]): Course[][] {
+    return [[]];
+  }
+
   /**
    * Returns an array of possible arrangements to fulfill the given requirements given the set of courses.
    *

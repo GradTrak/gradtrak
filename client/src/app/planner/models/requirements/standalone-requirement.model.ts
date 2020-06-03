@@ -23,6 +23,16 @@ export abstract class StandaloneRequirement extends Requirement {
     return this.isFulfillableBy(course);
   }
 
+  getCourseCombinations(courses: Course[]): Course[][] {
+    const combinations: Course[][] = courses.filter((course: Course) => {
+      return this.isFulfilledWith([course], null);
+    }).map((course: Course) => {
+      return [course];
+    });
+    combinations.push([]);
+    return combinations;
+  }
+
   /**
    * Performs a graph traversal of the graph of equivalent courses starting at the given course, returning true if any
    * equivalent course fulfills the requirement.

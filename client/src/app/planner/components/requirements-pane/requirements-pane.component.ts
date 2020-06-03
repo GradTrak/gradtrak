@@ -119,7 +119,7 @@ export class RequirementsPaneComponent implements OnInit {
        * @param allCourses courses whose combinations are being found
        * @return a powerset of the courses
        */
-      const generatePermutations = (allCourses: Course[]): Course[][] =>
+      const generateCombinations = (allCourses: Course[]): Course[][] =>
         allCourses.reduce((subsets, value) => subsets.concat(subsets.map((set) => [value, ...set])), [[]]);
       /* For Connie and Nicholas to discuss on 6/02: Finds all combinations that can fullfill the requirement. Note that I've done this because I think this pruning will
       help the runtime, but the act of pruning the permutations of courses itself is also exponential time. I think it's a
@@ -133,9 +133,9 @@ export class RequirementsPaneComponent implements OnInit {
       map at every single recursive call to avoid mutability issues. And also, we need to contatenate the mapping,
       because that's what getmapping returns. Probably just create a variable returnMaps and appent getMappings to it.
       Currently we are returning a single map. But really we need to return a list of maps, each of which map a requirement
-      to its corresponding list of courses. 
+      to its corresponding list of courses.
       */
-      const possibilites: Course[][] = generatePermutations(courses.filter((course) => reqs[i].canFulfill(course)));
+      const possibilites: Course[][] = generateCombinations(courses.filter((course) => reqs[i].canFulfill(course)));
       possibilites.forEach((possibility: Course[]) => {
         mapping.set(reqs[i], possibility);
         getMappings(reqs, i + 1, courses, mapping, constraints); //FIXME do something with this map.

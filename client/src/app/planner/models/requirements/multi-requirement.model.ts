@@ -33,10 +33,25 @@ export class MultiRequirement extends Requirement {
     return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
+  getCourseCombinations(courses: Course[]): Course[][] {
+    const childs: Course[][][] = this.requirements.map((requirement: Requirement) => requirement.getCourseCombinations(courses));
+    return MultiRequirement.getAllCombinations<Course[]>(childs).map((combination: Course[][]) => combination.flat());
+  }
+
   toString(): string {
     return this.requirements.reduce(
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
       `Fulfill with ${this.numRequired} of:`,
     );
+  }
+
+  private static getAllCombinations<T>(sets: T[][], index?: number): T[][] {
+    if (index >= sets.length) {
+      return [];
+    }
+    return sets[index].flatMap((elem: T) => {
+      return MultiRequirement.getAllCombinations(sets, index === undefined ? 1 : index + 1)
+        .map((combination: T[]) => [elem, ...combination]);
+    });
   }
 }

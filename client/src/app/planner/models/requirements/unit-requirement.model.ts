@@ -33,6 +33,12 @@ export class UnitRequirement extends Requirement {
     return courses.filter((course) => this.requirement.isFulfillableBy(course));
   }
 
+  getCourseCombinations(courses: Course[]): Course[][] {
+    return courses.map((course: Course) => {
+      return this.requirement.getCourseCombinations([course]);
+    });
+  }
+
   toString(): string {
     return `${this.units} units of \n${this.requirement.name}`;
   }

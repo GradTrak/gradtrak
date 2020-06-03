@@ -39,4 +39,6 @@ export abstract class Requirement {
    * contributing to to the requirement.
    */
   abstract canFulfill(course: Course): boolean;
+
+  abstract getCourseCombinations(courses: Course[]): Course[][];
 }
