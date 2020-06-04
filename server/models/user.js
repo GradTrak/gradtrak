@@ -14,11 +14,11 @@ const semesterSchema = new mongoose.Schema(
   },
   { strict: 'throw' },
 );
-
 const userDataSchema = new mongoose.Schema(
   {
     semesters: {
-      type: [semesterSchema],
+      type: Map,
+      of: [semesterSchema],
       required: true,
       default: [],
     },

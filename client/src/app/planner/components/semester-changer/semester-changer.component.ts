@@ -8,13 +8,13 @@ import { Semester } from '../../models/semester.model';
   styleUrls: ['./semester-changer.component.scss'],
 })
 export class SemesterChangerComponent implements OnInit {
-  @Input() readonly semestersInput: Semester[]; // optional
-  @Output() semesterChanged: EventEmitter<Semester[]>;
-  semesters: Map<string, Semester[]>;
+  @Input() readonly semestersInput: Map<string, Semester[]>; // optional
+  @Output() semesterChanged: EventEmitter<Map<string, Semester[]>>;
+  semesters: EventEmitter<Map<string, Semester[]>>;
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';
-  const SEASON_INDEX: object = {
+  SEASON_INDEX: object = {
     'Fall' : 0,
     'Spring' : 1,
     'Summer' : 2
@@ -31,7 +31,10 @@ export class SemesterChangerComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.semestersInput) {
-      this.semesters = [...this.semestersInput];
+      this.semesters = new Map<string, Semester[]>();
+      this.semestersInput.array.forEach((value, key) => {
+        this.semesters.set(key, [...value]);
+      });
     }
   }
 
@@ -68,15 +71,19 @@ export class SemesterChangerComponent implements OnInit {
       this.errorMessage = 'Please select a season and a valid year.';
       return;
     }
-    if (Array.from(semesters.values()).flat().map((semester) => semester?semester.name:null).includes(semesterName)) {
+    if (Array.from(this.semesters.values()).flat().map((semester) => semester?semester.name:null).includes(semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
     const newSemester = new Semester(semesterName);
     const academicYearName = getAcademicYearName(newSemester);
+    const semArr = semesterName.split(' ');
     const index = this.SEASON_INDEX[semArr[0]];
-    if (semesters[academicYearName]) {
-      semesters[academicYearName][index] = newSemester;
+    if (this.semesters[academicYearName]) {
+      this.semesters.get(academicYearName)[index] = newSemester;
+    } else {
+      this.semesters.set(academicYearName) = [null, null, null];
+      this.semesters.get(academicYearName)[index] = newSemester;
     }
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }

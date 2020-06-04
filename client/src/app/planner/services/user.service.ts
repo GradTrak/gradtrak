@@ -200,16 +200,20 @@ export class UserService {
   }
 
   /**
-   * Updates the list of semesters to a new list of given semesters.
+   * Updates the list of semesters to a new mapping of given semesters.
    *
    * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
   updateSemesters(newSemesters: Map<string, Semester[]>): void {
+    const newMap = new Map<string, Semester[]>()//not sure why, before the rework the list of semesters was copied, so I've copied the map here as well.
+    newSemesters.forEach((value, key) => {
+      newMap.set(key, [...value])
+    });
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: new Map<string, Semester[]>(semesters), //FIXME some way to copy this. @nicholas why do we need to make a copy again?
+        semesters: newMap
       },
     });
   }
