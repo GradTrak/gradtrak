@@ -47,7 +47,7 @@ export class PlannerComponent implements OnInit {
         if (!nextState.loggedIn && !this.loginPrompted) {
           this.loginPrompted = true;
           this.openLogin();
-        } else if (nextState.userData.semesters.length === 0) {
+        } else if (nextState.userData.semesters.size === 0) {
           /* Open initializer if not prompting for login and empty semesters */
           this.openInitializer();
         }
@@ -77,7 +77,7 @@ export class PlannerComponent implements OnInit {
 
   onLoginDismiss(): void {
     this.closeModal();
-    if (this.state.userData.semesters.length === 0) {
+    if (this.state.userData.semesters.size === 0) {
       this.openInitializer();
     }
   }
@@ -107,6 +107,9 @@ export class PlannerComponent implements OnInit {
   }
 
   private getCurrentCourses(): Course[] {
-    return this.state.userData.semesters.flatMap((semester: Semester) => semester.courses);
+    const courses = [];
+    this.state.userData.semesters.forEach((semesters: Semester[]) => 
+    semesters.forEach((semester: Semester) => courses.concat(semester)));
+    return courses;
   }
 }
