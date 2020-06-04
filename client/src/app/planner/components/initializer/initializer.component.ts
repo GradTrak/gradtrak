@@ -28,7 +28,8 @@ export class InitializerComponent implements OnInit {
   }
 
   submit(reqSets: RequirementSet[]): void {
-    const semesters: Map<string, Semester[]> = this.initializeSemesters(this.startYear, this.gradYear, this.summer);
+    const semesters: Map<string, Semester[]> = this.initializeSemesters(this.startYear,
+       this.gradYear, this.summer);
     this.initializeData.emit(new UserData(semesters, reqSets));
   }
 
@@ -36,8 +37,8 @@ export class InitializerComponent implements OnInit {
     const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
     for (let i: number = startYear + 1; i <= gradYear - 1; i++) {
       let currSem: Semester[] = [];
-      currSem.push(`Fall ${i}`);
-      currSem.push(`Spring ${i+1}`)
+      currSem.push(new Semester(`Fall ${i}`));
+      currSem.push(new Semester(`Spring ${i+1}`));
       if (summer) {
         currSem.push(new Semester(`Summer ${i+1}`));
       }
