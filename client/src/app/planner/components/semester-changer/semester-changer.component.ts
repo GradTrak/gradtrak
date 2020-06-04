@@ -10,7 +10,7 @@ import { Semester } from '../../models/semester.model';
 export class SemesterChangerComponent implements OnInit {
   @Input() readonly semestersInput: Map<string, Semester[]>; // optional
   @Output() semesterChanged: EventEmitter<Map<string, Semester[]>>;
-  semesters: EventEmitter<Map<string, Semester[]>>;
+  semesters: Map<string, Semester[]>;
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';
@@ -32,7 +32,7 @@ export class SemesterChangerComponent implements OnInit {
   ngOnInit(): void {
     if (this.semestersInput) {
       this.semesters = new Map<string, Semester[]>();
-      this.semestersInput.array.forEach((value, key) => {
+      this.semestersInput.forEach((value, key) => {
         this.semesters.set(key, [...value]);
       });
     }
@@ -76,13 +76,13 @@ export class SemesterChangerComponent implements OnInit {
       return;
     }
     const newSemester = new Semester(semesterName);
-    const academicYearName = getAcademicYearName(newSemester);
+    const academicYearName = this.getAcademicYearName(newSemester);
     const semArr = semesterName.split(' ');
     const index = this.SEASON_INDEX[semArr[0]];
     if (this.semesters[academicYearName]) {
       this.semesters.get(academicYearName)[index] = newSemester;
     } else {
-      this.semesters.set(academicYearName) = [null, null, null];
+      this.semesters.set(academicYearName, [null, null, null]);
       this.semesters.get(academicYearName)[index] = newSemester;
     }
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
@@ -121,9 +121,9 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   removeSemester(semester: Semester): void {
-    const acadYear = getAcademicYearName(semester);
+    const acadYear = this.getAcademicYearName(semester);
     const semesterArr = semester.name.split(' ');
-    const index = SEASON_INDEX[semesterArr[0]];
+    const index = this.SEASON_INDEX[semesterArr[0]];
     this.semesters[acadYear][index] = null;
     // an undo button would be nice here. Or an "are you sure".
     // just in case they delete a semester that's important.
