@@ -34,7 +34,7 @@ export class InitializerComponent implements OnInit {
   }
 
   initializeSemesters(startYear: number, gradYear: number, summer: boolean): Map<string, Semester[]> {
-    const semesters: Map<string, Semester[]> = new Map([]);
+    const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
     for (let i: number = startYear + 1; i <= gradYear - 1; i++) {
       let currSem: Semester[] = [];
       currSem.push(new Semester(`Fall ${i}`));
