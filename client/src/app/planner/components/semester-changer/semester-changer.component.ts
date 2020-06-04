@@ -14,6 +14,7 @@ export class SemesterChangerComponent implements OnInit {
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';
+  semesterArr: Semester[];
   SEASON_INDEX: object = {
     'Fall' : 0,
     'Spring' : 1,
@@ -36,6 +37,7 @@ export class SemesterChangerComponent implements OnInit {
         this.semesters.set(key, [...value]);
       });
     }
+    this.semesterArr = Array.from(semesters.values()).flat().map((semester) => semester?semester.name: '').filter(a => a);
   }
 
   openSemesterAdder(): void {

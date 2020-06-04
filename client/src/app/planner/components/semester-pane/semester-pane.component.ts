@@ -8,8 +8,9 @@ import { UserService } from '../../services/user.service';
   templateUrl: './semester-pane.component.html',
   styleUrls: ['./semester-pane.component.scss'],
 })
-export class SemesterPaneComponent implements OnInit {
+export class SemesterPaneComponent implements OnInit, OnChanges {
   @Input() readonly semesters: Map<string, Semester[]>;
+  semesterArr: Semester[];
 
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private semesterChangerModalReference: NgbModalRef;
@@ -17,6 +18,12 @@ export class SemesterPaneComponent implements OnInit {
   constructor(private modalService: NgbModal, private userService: UserService) {}
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    this.semesterArr = Array.from(this.semesters.values()).flat().map((semester) => semester?semester: '').filter(a => a);
+    console.log(this.semesterArr)
+    console.log(this.semesters)
+  }
 
   openSemesterChanger(): void {
     this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
