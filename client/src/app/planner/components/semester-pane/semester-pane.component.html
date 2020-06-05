@@ -1,10 +1,10 @@
 <div class="semester-container">
   <app-semester *ngFor="let semester of semesterArr" [semester]="semester" [currentSemesters]="semesterArr"></app-semester>
-</div> 
+</div>
 
 <ng-template #semesterChangerTemplate>
   <app-semester-changer
-    [semestersInput]="semesters"
+    [semestersInput]="semesterArr"
     (semesterChanged)="setSemesters($event)"
     (semesterChanged)="closeSemesterChanger()"
   ></app-semester-changer>

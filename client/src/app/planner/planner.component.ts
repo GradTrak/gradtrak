@@ -108,7 +108,7 @@ export class PlannerComponent implements OnInit {
 
   private getCurrentCourses(): Course[] {
     const courses = [];
-    this.state.userData.semesters.forEach((semesters: Semester[]) => 
+    this.state.userData.semesters.forEach((semesters: Semester[]) =>
     semesters.forEach((semester: Semester) => courses.concat(semester)));
     return courses;
   }
