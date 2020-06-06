@@ -4,7 +4,7 @@
 
 <ng-template #semesterChangerTemplate>
   <app-semester-changer
-    [semestersInput]="semesterArr"
+    [semestersInput]="semesters"
     (semesterChanged)="setSemesters($event)"
     (semesterChanged)="closeSemesterChanger()"
   ></app-semester-changer>

@@ -33,11 +33,14 @@ export class SemesterChangerComponent implements OnInit {
   ngOnInit(): void {
     if (this.semestersInput) {
       this.semesters = new Map<string, Semester[]>();
+      console.log(this.semestersInput);
       this.semestersInput.forEach((value, key) => {
+        console.log('value should be', value);
+        console.log('key should be', key);
         this.semesters.set(key, [...value]);
       });
     }
-    this.semesterArr = Array.from(semesters.values()).flat().map((semester) => semester?semester.name: '').filter(a => a);
+    this.semesterArr = Array.from(this.semesters.values()).flat().filter(a => a);
   }
 
   openSemesterAdder(): void {

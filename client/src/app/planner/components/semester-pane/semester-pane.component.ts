@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Semester } from '../../models/semester.model';
 import { UserService } from '../../services/user.service';
@@ -22,8 +22,8 @@ export class SemesterPaneComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    this.semesterArr = Array.from(this.semesters.values()).flat().map((semester) => semester?semester: '').filter(a => a);
-
+    this.semesterArr = Array.from(this.semesters.values()).flat().filter(a => a);
+    //a temporary fix because we haven't implemented the viewing thing yet. 
   }
 
   openSemesterChanger(): void {
