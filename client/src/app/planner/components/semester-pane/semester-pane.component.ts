@@ -17,17 +17,16 @@ export class SemesterPaneComponent implements OnInit, OnChanges {
 
   constructor(private modalService: NgbModal, private userService: UserService) {}
 
-  ngOnInit(): void {
-    console.log(this.semesters)
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(): void {
-    this.semesterArr = Array.from(this.semesters.values()).flat().filter(a => a);
-    //a temporary fix because we haven't implemented the viewing thing yet. 
+    this.semesterArr = Array.from(this.semesters.values())
+      .flat()
+      .filter((a) => a);
+    // a temporary fix because we haven't implemented the viewing thing yet.
   }
 
   openSemesterChanger(): void {
-    console.log('debug:', this.semesters)
     this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
   }
 

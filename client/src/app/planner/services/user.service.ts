@@ -205,15 +205,15 @@ export class UserService {
    * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
   updateSemesters(newSemesters: Map<string, Semester[]>): void {
-    const newMap = new Map<string, Semester[]>()//not sure why, before the rework the list of semesters was copied, so I've copied the map here as well.
+    const newMap = new Map<string, Semester[]>(); // not sure why, before the rework the list of semesters was copied, so I've copied the map here as well.
     newSemesters.forEach((value, key) => {
-      newMap.set(key, [...value])
+      newMap.set(key, [...value]);
     });
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: newMap
+        semesters: newMap,
       },
     });
   }
@@ -327,7 +327,8 @@ export class UserService {
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
     const semesters: Map<string, SemesterPrototype[]> = new Map<string, SemesterPrototype[]>();
-    for (let [academicYearName, academicYearSemesters] of userData.semesters.entries()) {
+    // for (const [academicYearName, academicYearSemesters] of userData.semesters.entries()) {
+    userData.semesters.forEach((academicYearSemesters, academicYearName) => {
       semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
         const semesterPrototype = {
           ...semester,
@@ -336,7 +337,7 @@ export class UserService {
         delete semesterPrototype.courses;
         return semesterPrototype;
       });
-    }
+    });
     const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
     const manuallyFulfilledReqs: object = Object.fromEntries(
       Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [

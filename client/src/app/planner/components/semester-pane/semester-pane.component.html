@@ -1,5 +1,9 @@
 <div class="semester-container">
-  <app-semester *ngFor="let semester of semesterArr" [semester]="semester" [currentSemesters]="semesterArr"></app-semester>
+  <app-semester
+    *ngFor="let semester of semesterArr"
+    [semester]="semester"
+    [currentSemesters]="semesterArr"
+  ></app-semester>
 </div>
 
 <ng-template #semesterChangerTemplate>
