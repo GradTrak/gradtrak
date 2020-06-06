@@ -1,6 +1,6 @@
 <h3>Add/Remove a Semester</h3>
 <div class="table">
-  <h4 *ngFor="let semester of semesterArr">
+  <h4 *ngFor="let semester of getSemArr(semesters)">
     <i class="material-icons" (click)="removeSemester(semester)">close</i>{{ semester.name }}
   </h4>
   <button class="gt-button gt-button-secondary" (click)="openSemesterAdder()">Add a Semester</button>

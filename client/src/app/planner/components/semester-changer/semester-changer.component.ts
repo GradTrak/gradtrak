@@ -35,12 +35,9 @@ export class SemesterChangerComponent implements OnInit {
       this.semesters = new Map<string, Semester[]>();
       console.log(this.semestersInput);
       this.semestersInput.forEach((value, key) => {
-        console.log('value should be', value);
-        console.log('key should be', key);
         this.semesters.set(key, [...value]);
       });
     }
-    this.semesterArr = Array.from(this.semesters.values()).flat().filter(a => a);
   }
 
   openSemesterAdder(): void {
@@ -52,6 +49,15 @@ export class SemesterChangerComponent implements OnInit {
   }
 
 
+  /**Turns a map of semesters into an array of semesters.
+  * @param mapping a mapping of the academic year to their corresponding semesters
+  * @return an array of all the semestsers in the values of the map
+  */
+  getSemArr(mapping: Map<string, Semester[]>): Semester[] {
+     return Array.from(this.semesters.values()).flat().filter(a => a);
+     //consider making this static. Or just having it not take in args?
+  }
+
 
   /**
   * Given a semester, retunrs the string of its academic year in the form of
@@ -59,7 +65,7 @@ export class SemesterChangerComponent implements OnInit {
   * @param a semester for which you want the year. Name is in 'Season YYYY' format.
   */
 
-  getAcademicYearName(semester: Semester) {
+  getAcademicYearName(semester: Semester):string {
     const semArr = semester.name.split(' ')
     const semesterYear = parseInt(semArr[1]) - ((semArr[0] !== 'Fall')? 1 : 0); //this feels so incredibly clunky.
     return semesterYear.toString() + "-" + (semesterYear+1).toString(); //eg '2019-2020'
@@ -76,7 +82,7 @@ export class SemesterChangerComponent implements OnInit {
       this.errorMessage = 'Please select a season and a valid year.';
       return;
     }
-    if (Array.from(this.semesters.values()).flat().map((semester) => semester?semester.name:null).includes(semesterName)) {
+    if (this.getSemArr(this.semesters).map((semester) => semester.name).includes(semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
@@ -89,6 +95,7 @@ export class SemesterChangerComponent implements OnInit {
     } else {
       this.semesters.set(academicYearName, [null, null, null]);
       this.semesters.get(academicYearName)[index] = newSemester;
+      console.log(this.semesters)
     }
     this.closeSemesterAdder(); // optional. We can decide if this is needed.
   }
@@ -129,7 +136,8 @@ export class SemesterChangerComponent implements OnInit {
     const acadYear = this.getAcademicYearName(semester);
     const semesterArr = semester.name.split(' ');
     const index = this.SEASON_INDEX[semesterArr[0]];
-    this.semesters[acadYear][index] = null;
+    console.log(this.semesters, acadYear, index)
+    this.semesters.get(acadYear)[index] = null;
     // an undo button would be nice here. Or an "are you sure".
     // just in case they delete a semester that's important.
   }
