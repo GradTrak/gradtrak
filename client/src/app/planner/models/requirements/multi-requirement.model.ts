@@ -34,8 +34,9 @@ export class MultiRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Course[][] {
+    //For each requireemnt, finds all possible course combinations
     const childs: Course[][][] = this.requirements.map((requirement: Requirement) =>
-      requirement.getCourseCombinations(courses),
+      requirement.getCourseCombinations(courses), //LMAO I think the plural of child is children but this is funny so I'll leave it -B
     );
     return MultiRequirement.getAllCombinations<Course[]>(childs).map((combination: Course[][]) => combination.flat());
   }
@@ -47,6 +48,9 @@ export class MultiRequirement extends Requirement {
     );
   }
 
+  /**
+  * FIXME write doc.
+  */
   private static getAllCombinations<T>(sets: T[][], index?: number): T[][] {
     if (index === undefined) {
       index = 0;
@@ -56,7 +60,7 @@ export class MultiRequirement extends Requirement {
     }
     /* optimize by capping at numRequired */
     return sets[index].flatMap((elem: T) => {
-      return MultiRequirement.getAllCombinations(sets, index).map((combination: T[]) => [elem, ...combination]);
+      return MultiRequirement.getAllCombinations(sets, index + 1).map((combination: T[]) => [elem, ...combination]);
     });
   }
 }

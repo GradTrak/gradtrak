@@ -40,5 +40,9 @@ export abstract class Requirement {
    */
   abstract canFulfill(course: Course): boolean;
 
+  /**
+  * Given a list of COURSES, returns a 2d array. Each element in the 2d array
+  * is an array of courses which potentially fullfill part or all of the requirement. 
+  */
   abstract getCourseCombinations(courses: Course[]): Course[][];
 }

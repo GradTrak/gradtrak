@@ -23,6 +23,10 @@ export abstract class StandaloneRequirement extends Requirement {
     return this.isFulfillableBy(course);
   }
 
+  /**
+  * For standalones the combination of courses that will fullfill it
+  * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
+  */
   getCourseCombinations(courses: Course[]): Course[][] {
     const combinations: Course[][] = courses
       .filter((course: Course) => {
