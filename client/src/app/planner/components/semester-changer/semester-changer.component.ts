@@ -92,7 +92,7 @@ export class SemesterChangerComponent implements OnInit {
     const academicYearName = this.getAcademicYearName(newSemester);
     const semArr = semesterName.split(' ');
     const index = this.SEASON_INDEX[semArr[0]];
-    if (this.semesters[academicYearName]) {
+    if (this.semesters.get(academicYearName)) {
       this.semesters.get(academicYearName)[index] = newSemester;
     } else {
       this.semesters.set(academicYearName, [null, null, null]);
