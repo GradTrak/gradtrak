@@ -111,7 +111,9 @@ export class PlannerComponent implements OnInit {
     Array.from(this.state.userData.semesters.values())
       .flat()
       .forEach((semester: Semester) => {
-        courses = courses.concat(semester.courses);
+        if (semester) { //if semester is not null
+          courses = courses.concat(semester.courses);
+        }
       });
     return courses;
   }
