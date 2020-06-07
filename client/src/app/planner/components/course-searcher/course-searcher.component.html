@@ -1,14 +1,20 @@
 <ng-container *ngIf="allCourses; else loading">
-  <form class="searcher" (ngSubmit)="returnCourse()">
-    <input
-      class="search-bar"
-      type="text"
-      name="course"
-      placeholder="Search for a class"
-      [(ngModel)]="searchedCourse"
-      [ngbTypeahead]="updateAutoComplete"
-    />
-    <button class="gt-button gt-button-secondary" type="submit">Add</button>
+  <form (ngSubmit)="returnCourse()">
+    <div class="form-row">
+      <div class="col">
+        <input
+          class="form-control"
+          type="text"
+          name="course"
+          placeholder="Search for a class"
+          [(ngModel)]="searchedCourse"
+          [ngbTypeahead]="updateAutoComplete"
+        />
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Add</button>
+      </div>
+    </div>
   </form>
 </ng-container>
 
