@@ -29,7 +29,7 @@ export class UserData {
     reqSetMap: Map<string, RequirementSet>,
   ): UserData {
     const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
-    proto.semesters.forEach((value, key) => {
+    Object.entries(proto.semesters).forEach(([key, value]) => {
       semesters.set(
         key,
         value.map((semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap)),
