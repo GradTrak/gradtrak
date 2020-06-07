@@ -18,13 +18,17 @@
 </div>
 <div class="body">
   <ng-container *ngIf="!isLoading; else loading">
-    <div class="main">
-      <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
-      <app-requirements-pane
-        [courses]="currentCourses"
-        [goals]="state.userData.goals"
-        [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
-      ></app-requirements-pane>
+    <div class="row no-gutters main">
+      <div class="col-8">
+        <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+      </div>
+      <div class="col-4">
+        <app-requirements-pane
+          [courses]="currentCourses"
+          [goals]="state.userData.goals"
+          [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
+        ></app-requirements-pane>
+      </div>
     </div>
     <button class="btn btn-primary btn-sm report-button" (click)="openReportForm()">
       Feedback
