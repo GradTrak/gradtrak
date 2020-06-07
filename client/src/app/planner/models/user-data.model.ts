@@ -9,12 +9,29 @@ export class UserData {
   goals: RequirementSet[];
   manuallyFulfilledReqs: Map<string, Set<string>>;
 
-  constructor(proto: UserDataPrototype, coursesMap: Map<string, Course>, reqSetMap: Map<string, RequirementSet>) {
-    this.semesters = proto.semesters.map((semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap));
-    this.goals = proto.goalIds.map((goalId: string) => reqSetMap.get(goalId));
-    this.manuallyFulfilledReqs = new Map<string, Set<string>>();
+  constructor(semesters: Semester[], goals: RequirementSet[], manuallyFulfilledReqs?: Map<string, Set<string>>) {
+    this.semesters = semesters;
+    this.goals = goals;
+    if (manuallyFulfilledReqs) {
+      this.manuallyFulfilledReqs = manuallyFulfilledReqs;
+    } else {
+      this.manuallyFulfilledReqs = new Map<string, Set<string>>();
+    }
+  }
+
+  static fromProto(
+    proto: UserDataPrototype,
+    coursesMap: Map<string, Course>,
+    reqSetMap: Map<string, RequirementSet>,
+  ): UserData {
+    const semesters: Semester[] = proto.semesters.map(
+      (semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap),
+    );
+    const goals: RequirementSet[] = proto.goalIds.map((goalId: string) => reqSetMap.get(goalId));
+    const manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>();
     Object.entries(proto.manuallyFulfilledReqs).forEach((entry) => {
-      this.manuallyFulfilledReqs.set(entry[0], new Set<string>(entry[1]));
+      manuallyFulfilledReqs.set(entry[0], new Set<string>(entry[1]));
     });
+    return new UserData(semesters, goals, manuallyFulfilledReqs);
   }
 }

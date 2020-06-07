@@ -1,9 +1,122 @@
 const argon2 = require('argon2');
+const util = require('util');
+
 const { verifyUser } = require('../config/passport');
+const smtp = require('../config/smtp');
+const { validateEmail } = require('../lib/utils');
+const User = require('../models/user');
 
 function validPassword(password) {
   return password.length >= 6;
 }
+
+exports.register = async (req, res) => {
+  if (req.user) {
+    res.status(400).json({
+      success: false,
+      error: 'Already logged in',
+    });
+    return;
+  }
+
+  const { username, password, emailMarketing, userTesting } = req.body;
+  if (
+    username === undefined ||
+    username === null ||
+    password === undefined ||
+    password === null ||
+    emailMarketing === undefined ||
+    emailMarketing === null ||
+    userTesting === undefined ||
+    userTesting === null
+  ) {
+    res.status(400).json({
+      success: false,
+      error: 'Missing registration fields',
+    });
+    return;
+  }
+  if (!validateEmail(username)) {
+    // TODO Send status code 400 once client-side validation is implemented
+    res.json({
+      success: false,
+      error: 'Invalid email address',
+    });
+    return;
+  }
+  if (!validPassword(password)) {
+    // TODO Send status code 400 once client-side validation is implemented
+    res.json({
+      success: false,
+      error: 'Invalid password',
+    });
+    return;
+  }
+
+  const user = await User.findOne({ username });
+  if (user) {
+    res.json({
+      success: false,
+      error: 'User with that email already exists',
+    });
+    return;
+  }
+
+  const passwordHash = await argon2.hash(password, { type: argon2.argon2id });
+  const newUser = await User.create({
+    username,
+    passwordHash,
+    emailMarketing,
+    userTesting,
+  });
+  await util.promisify(req.login).bind(req)(newUser);
+  res.json({
+    username,
+    success: true,
+  });
+
+  smtp.sendMail({
+    to: username,
+    ...smtp.WELCOME_EMAIL,
+  });
+};
+
+exports.logout = (req, res) => {
+  if (req.user) {
+    req.logout();
+    res.status(204).send();
+  } else {
+    res.status(400).json({
+      error: 'Not logged in',
+    });
+  }
+};
+
+exports.loginSuccess = (req, res) => {
+  res.json({
+    success: true,
+    username: req.user.username,
+  });
+};
+
+exports.loginFailure = (req, res) => {
+  res.status(200).json({
+    success: false,
+  });
+};
+
+exports.whoami = (req, res) => {
+  if (req.user) {
+    res.json({
+      loggedIn: true,
+      username: req.user.username,
+    });
+  } else {
+    res.json({
+      loggedIn: false,
+    });
+  }
+};
 
 exports.changePassword = async (req, res) => {
   if (!req.user) {

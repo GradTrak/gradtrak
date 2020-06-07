@@ -3,6 +3,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from './models/course.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
+import { UserData } from './models/user-data.model';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -13,61 +14,98 @@ import { UserService } from './services/user.service';
 export class PlannerComponent implements OnInit {
   state: State;
   currentCourses: Course[];
+  isLoading: boolean;
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
-  @ViewChild('login', { static: true }) private loginModalContent: TemplateRef<any>;
-  @ViewChild('reportFormTemplate', { static: false }) private reportFormTemplate: TemplateRef<any>;
-  @ViewChild('accountEditor', { static: true }) private accountEditorContent: TemplateRef<any>;
-  private loginModalInstance: NgbModalRef;
-  private accountEditorInstance: NgbModalRef;
+  @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
+  @ViewChild('initializer', { static: true }) private initializerTemplate: TemplateRef<any>;
+  @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
+  @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
-  constructor(private userService: UserService, private modalService: NgbModal) {}
+  private modalInstance: NgbModalRef;
+
+  private loginPrompted: boolean;
+
+  constructor(private userService: UserService, private modalService: NgbModal) {
+    this.isLoading = true;
+  }
 
   ngOnInit(): void {
-    this.userService.queryWhoami();
-    this.userService.getState().subscribe((state: State) => {
-      /* Fetch user data if just logged in */
-      if (state.loggedIn && !this.state.loggedIn) {
-        this.userService.fetchUserData();
-      }
+    this.userService.getState().subscribe((nextState: State) => {
+      if (nextState !== UserService.INITIAL_STATE) {
+        const wasLoading: boolean = this.isLoading;
+        this.isLoading = false;
 
-      /* Save user data if logged in and not just loaded */
-      if (!state.loading && !this.state.loading && state.loggedIn) {
-        this.userService.saveUserData();
-      }
+        /* Fetch user data if just logged in */
+        if (nextState.loggedIn && !this.state.loggedIn) {
+          this.userService.fetchUserData();
+          this.isLoading = true;
+        } else if (!nextState.loggedIn && !this.loginPrompted) {
+          /* Open login modal if not opened previously */
+          this.loginPrompted = true;
+          this.openLogin();
+        } else if (nextState.userData.semesters.length === 0) {
+          /* Open initializer if not prompting for login and empty semesters */
+          this.openInitializer();
+        }
 
-      this.state = state;
+        /* Save user data if logged in and not just loaded */
+        if (!wasLoading && nextState.loggedIn) {
+          this.userService.saveUserData();
+        }
+      }
+      this.state = nextState;
       this.currentCourses = this.getCurrentCourses();
     });
+    this.userService.queryWhoami().subscribe();
+  }
+
+  closeModal(): void {
+    if (this.modalInstance) {
+      this.modalInstance.close();
+      this.modalInstance = null;
+    }
   }
 
   openLogin(): void {
-    this.loginModalInstance = this.modalService.open(this.loginModalContent, { size: 'sm' });
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.loginTemplate, { backdrop: 'static', keyboard: false });
   }
 
-  closeLogin(): void {
-    if (this.loginModalInstance) {
-      this.loginModalInstance.close();
+  onLoginDismiss(): void {
+    this.closeModal();
+    if (this.state.userData.semesters.length === 0) {
+      this.openInitializer();
     }
+  }
+
+  openInitializer(): void {
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.initializerTemplate, {
+      size: 'lg',
+      backdrop: 'static',
+      keyboard: false,
+    });
   }
 
   openAccountEditor(): void {
-    this.accountEditorInstance = this.modalService.open(this.accountEditorContent);
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.accountEditorTemplate);
   }
 
-  closeAccountEditor(): void {
-    if (this.accountEditorInstance) {
-      this.accountEditorInstance.close();
-    }
-  }
-
-  showReportForm(): void {
-    this.modalService.open(this.reportFormTemplate);
+  openReportForm(): void {
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.reportFormTemplate);
   }
 
   logout(): void {
     this.userService.logout();
+  }
+
+  setUserData(userData: UserData): void {
+    this.closeModal();
+    this.userService.setUserData(userData);
   }
 
   private getCurrentCourses(): Course[] {
