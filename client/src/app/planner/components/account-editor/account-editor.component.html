@@ -1,52 +1,52 @@
-<div *ngIf="!isLoading; else loading" class="container">
+<div *ngIf="!isLoading; else loading" class="modal-body">
   <h4>Account Settings</h4>
-  <div class="section">
+  <div class="form-group">
     <div class="row">
-      <div class="col col-6">
-        <span>Email</span>
+      <div class="col-6">
+        <label>Email</label>
       </div>
-      <div class="col col-6">
+      <div class="col-6">
         {{ email }}
       </div>
     </div>
     <div class="row">
-      <div class="col col-6">
-        <span>Password</span>
+      <div class="col-6">
+        <label>Password</label>
       </div>
-      <div class="col col-6">
+      <div class="col-6">
         <ng-container *ngIf="!isChangingPassword; else passwordChange">
-          ********&nbsp;<button class="edit-button" (click)="changePassword()">
+          ********&nbsp;<button class="gt-button" (click)="changePassword()">
             <i class="material-icons">edit</i>
           </button>
         </ng-container>
         <ng-template #passwordChange>
-          <input class="expand" type="password" [(ngModel)]="newPassword" />
-          <div class="password-restrictions">
-            Your password must be at least 6 characters.
-          </div>
+          <input class="form-control" type="password" [(ngModel)]="newPassword" />
+          <small class="form-text text-muted">Your password must be at least 6 characters.</small>
         </ng-template>
       </div>
     </div>
   </div>
   <form (ngSubmit)="submit()">
-    <div class="section">
+    <div class="form-group">
       <div class="row">
-        <div class="col col-6">
-          Current password:
+        <div class="col-6">
+          <label>Current password:</label>
         </div>
-        <div class="col col-6">
-          <input class="expand" type="password" name="password" [(ngModel)]="currentPassword" />
+        <div class="col-6">
+          <input class="form-control" type="password" name="password" [(ngModel)]="currentPassword" />
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="form-group">
       <div class="row">
-        <div class="col col-12">
-          <button type="submit" class="expand" [disabled]="!changesMade || isSubmitting">Save Changes</button>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!changesMade || isSubmitting">
+            Save Changes
+          </button>
         </div>
       </div>
       <div *ngIf="error" class="row">
-        <div class="error col col-12">
+        <div class="error col-12">
           {{ error }}
         </div>
       </div>
