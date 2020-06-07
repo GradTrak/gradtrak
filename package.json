@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4"
   }
 }

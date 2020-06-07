@@ -20,7 +20,7 @@ const userDataSchema = new mongoose.Schema(
       type: Map,
       of: [semesterSchema],
       required: true,
-      default: [],
+      default: {},
     },
     goalIds: {
       type: [String],
@@ -52,7 +52,7 @@ const userSchema = new mongoose.Schema(
       type: userDataSchema,
       required: true,
       default: {
-        semesters: [],
+        semesters: {},
         goalIds: [],
       },
     },
