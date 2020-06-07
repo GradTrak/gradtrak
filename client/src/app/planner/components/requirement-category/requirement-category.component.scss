@@ -7,8 +7,20 @@
   font-size: 1.2rem;
 }
 
-.name {
-  padding-left: 24px;
+.button {
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(4px);
+}
+
+.collapsed {
+  .button {
+    transform: translateY(4px) rotate(-90deg);
+  }
+
+  .requirements {
+    display: none;
+  }
 }
 
 .requirements {
