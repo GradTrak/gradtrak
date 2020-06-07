@@ -13,6 +13,7 @@ export class InitializerComponent implements OnInit {
   startYear: number;
   gradYear: number;
   summer: boolean;
+  semesterError: string;
   state: 'semesters' | 'goals';
 
   constructor() {
@@ -23,6 +24,14 @@ export class InitializerComponent implements OnInit {
   ngOnInit(): void {}
 
   next(): void {
+    if (!this.startYear || !this.gradYear) {
+      this.semesterError = 'Please fill in all required fields.';
+      return;
+    }
+    if (this.startYear >= this.gradYear) {
+      this.semesterError = 'The start year must be before the year of graduation.';
+      return;
+    }
     this.state = 'goals';
   }
 

@@ -4,7 +4,7 @@
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
       <div class="left">Guest User</div>
       <div class="right">
-        <button class="gt-button" (click)="openLogin()">Login</button>
+        <button class="gt-button" (click)="openLogin()">Login / Register</button>
       </div>
     </ng-container>
     <ng-template #loggedIn>
@@ -37,7 +37,7 @@
 </ng-template>
 
 <ng-template #login>
-  <app-login (success)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
+  <app-login (login)="closeModal()" (register)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
 </ng-template>
 
 <ng-template #initializer>

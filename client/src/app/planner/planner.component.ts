@@ -41,10 +41,8 @@ export class PlannerComponent implements OnInit {
         if (nextState.loggedIn && !this.state.loggedIn) {
           this.userService.fetchUserData();
           this.isLoading = true;
-        }
-
-        /* Open login modal if not opened previously */
-        if (!nextState.loggedIn && !this.loginPrompted) {
+        } else if (!nextState.loggedIn && !this.loginPrompted) {
+          /* Open login modal if not opened previously */
           this.loginPrompted = true;
           this.openLogin();
         } else if (nextState.userData.semesters.size === 0) {
@@ -84,12 +82,11 @@ export class PlannerComponent implements OnInit {
 
   openInitializer(): void {
     this.closeModal();
-    this.modalInstance = this.modalService.open(this.initializerTemplate, { backdrop: 'static', keyboard: false });
-  }
-
-  setUserData(userData: UserData): void {
-    this.closeModal();
-    this.userService.setUserData(userData);
+    this.modalInstance = this.modalService.open(this.initializerTemplate, {
+      size: 'lg',
+      backdrop: 'static',
+      keyboard: false,
+    });
   }
 
   openAccountEditor(): void {
@@ -104,6 +101,11 @@ export class PlannerComponent implements OnInit {
 
   logout(): void {
     this.userService.logout();
+  }
+
+  setUserData(userData: UserData): void {
+    this.closeModal();
+    this.userService.setUserData(userData);
   }
 
   private getCurrentCourses(): Course[] {
