@@ -3,19 +3,24 @@
   <h4 *ngFor="let semester of semesters">
     <i class="material-icons" (click)="removeSemester(semester)">close</i>{{ semester.name }}
   </h4>
-  <button class="gt-button gt-button-secondary" (click)="openSemesterAdder()">Add a Semester</button>
+  <button class="btn btn-primary btn-sm" (click)="openSemesterAdder()">Add a Semester</button>
 </div>
-<button class="gt-button gt-button-secondary" (click)="returnSemesters()">Confirm</button>
+<button class="btn btn-primary" (click)="returnSemesters()">Confirm</button>
 
 <ng-template #semesterAdder>
   <div class="modal-body semester-adder">
     <h5>Add a semester</h5>
-    <form class="semester-input" (ngSubmit)="addSemester(semesterName)">
+    <form (ngSubmit)="addSemester(semesterName)">
       <label>Semester name</label>
       <br />
-      <input type="text" name="name-input" [(ngModel)]="semesterName" />
-      <br />
-      <button class="gt-button gt-button-secondary" type="submit">Add</button>
+      <div class="form-row">
+        <div class="col">
+          <input class="form-control" type="text" name="name-input" [(ngModel)]="semesterName" />
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary" type="submit">Add</button>
+        </div>
+      </div>
     </form>
   </div>
 </ng-template>
