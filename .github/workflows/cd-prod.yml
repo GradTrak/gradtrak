@@ -13,10 +13,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install Yarn
+      run: npm install --global yarn
     - name: Install Dependencies
-      run: npm ci
+      run: (cd client && yarn install --frozen-lockfile) && (cd server && yarn install --frozen-lockfile)
     - name: Build
-      run: npm run build
+      run: yarn build
     - name: Deploy to Heroku
       run: |
         cd server &&
@@ -37,10 +39,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install Yarn
+      run: npm install --global yarn
     - name: Install Dependencies
-      run: npm ci
+      run: (cd client && yarn install --frozen-lockfile) && (cd server && yarn install --frozen-lockfile)
     - name: Build
-      run: npm run build
+      run: yarn build
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
       with:

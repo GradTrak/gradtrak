@@ -10,10 +10,12 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install Yarn
+      run: npm install --global yarn
     - name: Install Dependencies
-      run: cd client && npm ci
+      run: cd client && yarn install --frozen-lockfile
     - name: Build Angular App
-      run: cd client && npm run build-dev
+      run: cd client && yarn build-dev
   lint-and-pretty:
     runs-on: ubuntu-latest
     steps:
@@ -21,9 +23,11 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install Yarn
+      run: npm install --global yarn
     - name: Install Dependencies
-      run: cd client && npm ci
+      run: cd client && yarn install --frozen-lockfile
     - name: ESLint
-      run: cd client && npm run lint
+      run: cd client && yarn lint
     - name: Prettier
-      run: cd client && npm run pretty
+      run: cd client && yarn pretty
