@@ -11,6 +11,7 @@
 .button {
   cursor: pointer;
   user-select: none;
+  transform: translateY(4px);
 }
 
 .requirements {
@@ -19,7 +20,7 @@
 
 .collapsed {
   .button {
-    transform: rotate(-90deg);
+    transform: translateY(4px) rotate(-90deg);
   }
 
   .requirements {
