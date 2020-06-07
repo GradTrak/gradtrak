@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "(cd client && npm install) && (cd server && npm install)",
-    "build": "(cd client && npm run build) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
-    "build-dev": "(cd client && npm run build-dev) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
-    "start": "cd server && npm run start",
-    "start-dev": "concurrently -n client,server --handle-input \"cd client && npm run start\" \"cd server && npm run start-dev\""
+    "postinstall": "(cd client && yarn install) && (cd server && yarn install)",
+    "build": "(cd client && yarn build) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
+    "build-dev": "(cd client && yarn build-dev) && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
+    "start": "cd server && yarn start",
+    "watch": "concurrently -n client,server --handle-input \"cd client && yarn start\" \"cd server && yarn watch\""
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
