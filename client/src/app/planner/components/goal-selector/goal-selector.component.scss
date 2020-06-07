@@ -1,25 +1,6 @@
-:host {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  grid-gap: 16px;
-}
-
-.selector-container {
-  display: flex;
-
-  > * {
-    margin: 12px;
-    width: 100%;
-  }
-}
-
-.selector > select {
-  width: 100%;
-}
-
 .material-icons {
   position: absolute;
-  transform: translateX(-20px);
+  transform: translate(-20px, 2px);
   font-size: 1.25rem;
   color: red;
   cursor: pointer;
