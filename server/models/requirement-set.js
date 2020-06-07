@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const requirementSchema = new mongoose.Schema(
   {
+    id: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -9,7 +13,7 @@ const requirementSchema = new mongoose.Schema(
     type: {
       type: String,
       enum: ['course', 'multi', 'mutex', 'poly', 'tag', 'unit'],
-      required: false, // TODO Make this true
+      required: true,
     },
     courseId: {
       type: String,

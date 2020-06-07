@@ -27,6 +27,12 @@ const userDataSchema = new mongoose.Schema(
       required: true,
       default: [],
     },
+    manuallyFulfilledReqs: {
+      type: Map,
+      of: [String],
+      required: true,
+      default: {},
+    },
   },
   { strict: 'throw' },
 );
@@ -49,6 +55,16 @@ const userSchema = new mongoose.Schema(
         semesters: [],
         goalIds: [],
       },
+    },
+    emailMarketing: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    userTesting: {
+      type: Boolean,
+      required: true,
+      default: false,
     },
   },
   { strict: 'throw' },

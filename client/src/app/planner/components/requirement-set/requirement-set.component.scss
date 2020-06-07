@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(4px);
+}
+
+.collapsed {
+  .button {
+    transform: translateY(4px) rotate(-90deg);
+  }
+
+  .requirement-categories {
+    display: none;
+  }
+}
+
+.requirement-categories {
+  margin-left: 16px;
+}
+
+app-requirement-category {
+  margin-bottom: 16px;
+}

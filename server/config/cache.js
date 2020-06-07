@@ -4,6 +4,13 @@ const redisCache = require('express-redis-cache');
 const cache = redisCache({
   client: redis.createClient(process.env.REDIS_URL),
 });
-cache.on('error', console.error.bind(console));
+let cacheConnRefused = false;
+
+cache.on('error', (err) => {
+  if (err.code !== 'ECONNREFUSED' || !cacheConnRefused) {
+    console.error(err);
+    cacheConnRefused = true;
+  }
+});
 
 module.exports.cache = cache;

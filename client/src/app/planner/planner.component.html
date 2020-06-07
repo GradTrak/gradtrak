@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="title">GradTrak</div>
+  <div class="name">
+    <ng-container *ngIf="!state.loggedIn; else loggedIn">
+      <div class="left">Guest User</div>
+      <div class="right">
+        <button class="gt-button" (click)="openLogin()">Login / Register</button>
+      </div>
+    </ng-container>
+    <ng-template #loggedIn>
+      <div class="left">Name: {{ state.username }}</div>
+      <div class="right">
+        <button class="gt-button" (click)="openAccountEditor()">Account</button>
+        <button class="gt-button" (click)="logout()">Logout</button>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<div class="body">
+  <ng-container *ngIf="!isLoading; else loading">
+    <div class="main">
+      <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+      <app-requirements-pane
+        [courses]="currentCourses"
+        [goals]="state.userData.goals"
+        [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
+      ></app-requirements-pane>
+    </div>
+    <button class="gt-button gt-button-secondary report-button" (click)="openReportForm()">Feedback</button>
+  </ng-container>
+</div>
+
+<ng-template #loading>
+  <div>
+    Loading...
+  </div>
+</ng-template>
+
+<ng-template #login>
+  <app-login (login)="closeModal()" (register)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
+</ng-template>
+
+<ng-template #initializer>
+  <app-initializer (initializeData)="setUserData($event)"></app-initializer>
+</ng-template>
+
+<ng-template #reportForm>
+  <app-report-pane></app-report-pane>
+</ng-template>
+
+<ng-template #accountEditor>
+  <app-account-editor (onClose)="closeModal()"></app-account-editor>
+</ng-template>
