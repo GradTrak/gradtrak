@@ -37,17 +37,25 @@
 </ng-template>
 
 <ng-template #login>
-  <app-login (login)="closeModal()" (register)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
+  <div class="modal-body">
+    <app-login (login)="closeModal()" (register)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
+  </div>
 </ng-template>
 
 <ng-template #initializer>
-  <app-initializer (initializeData)="setUserData($event)"></app-initializer>
+  <div class="modal-body">
+    <app-initializer (initializeData)="setUserData($event)"></app-initializer>
+  </div>
 </ng-template>
 
 <ng-template #reportForm>
-  <app-report-pane></app-report-pane>
+  <div class="modal-body">
+    <app-report-pane></app-report-pane>
+  </div>
 </ng-template>
 
 <ng-template #accountEditor>
-  <app-account-editor (onClose)="closeModal()"></app-account-editor>
+  <div class="modal-body">
+    <app-account-editor (onClose)="closeModal()"></app-account-editor>
+  </div>
 </ng-template>

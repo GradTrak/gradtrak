@@ -1,4 +1,4 @@
-<div *ngIf="state === 'semesters'" class="modal-body">
+<ng-container *ngIf="state === 'semesters'">
   <h4 class="header">Set Up</h4>
   <!-- TODO: implement when minors are implemented -->
   <!-- <div class="form-group">
@@ -41,7 +41,7 @@
     <button class="btn btn-primary btn-block gt-button gt-button-secondary" (click)="next()">Next</button>
     <span *ngIf="semesterError" class="failure">{{ semesterError }}</span>
   </div>
-</div>
-<div *ngIf="state === 'goals'" class="modal-body">
-  <app-goal-selector (selectGoals)="submit($event)"> </app-goal-selector>
-</div>
+</ng-container>
+<ng-container *ngIf="state === 'goals'">
+  <app-goal-selector (selectGoals)="submit($event)"></app-goal-selector>
+</ng-container>

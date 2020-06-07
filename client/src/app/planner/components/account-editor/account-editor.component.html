@@ -1,4 +1,4 @@
-<div *ngIf="!isLoading; else loading" class="modal-body">
+<ng-container *ngIf="!isLoading; else loading">
   <h4>Account Settings</h4>
   <div class="form-group">
     <div class="row">
@@ -52,7 +52,7 @@
       </div>
     </div>
   </form>
-</div>
+</ng-container>
 
 <ng-template #loading>
   Loading...
