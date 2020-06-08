@@ -30,12 +30,15 @@ a:hover {
   background-color: white;
 }
 
-.gt-button-secondary {
-  border-radius: 4px;
+.btn-primary {
+  border: none;
   background-color: #283adc;
-  color: white;
 }
 
-.gt-button-secondary:hover {
+.btn-primary:hover {
   background-color: #417fdc;
+}
+
+.btn-primary:disabled {
+  background-color: #283adc;
 }

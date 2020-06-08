@@ -1,4 +1,5 @@
 <h3 class="display-title">Eligible Courses</h3>
 <div class="course-list">
-  <h4 class="courses" *ngFor="let course of getFulfillingCourses() | async">{{ course.toString() }} <br /></h4>
+  <h4 *ngFor="let course of getFulfillingCourses() | async">{{ course.toString() }}</h4>
+  <br />
 </div>
