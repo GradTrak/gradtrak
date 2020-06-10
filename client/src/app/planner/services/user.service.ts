@@ -336,6 +336,7 @@ export class UserService {
     // for (const [academicYearName, academicYearSemesters] of userData.semesters.entries()) {
     userData.semesters.forEach((academicYearSemesters, academicYearName) => {
       semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
+        if (!semester) {return null;}
         const semesterPrototype = {
           ...semester,
           courseIds: semester.courses.map((course: Course) => course.id),
@@ -351,6 +352,7 @@ export class UserService {
         Array.from(entry[1]),
       ]),
     );
+    console.log(semesters);
 
     return {
       semesters,
