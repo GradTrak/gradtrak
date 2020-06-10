@@ -35,6 +35,8 @@ export class SemesterChangerComponent implements OnInit {
         this.semesters.set(key, [...value]);
       });
     }
+    this.seasonInput = 'Fall';
+    this.yearNum = 2020; //FIXME make it the current year.
   }
 
   openSemesterAdder(): void {
