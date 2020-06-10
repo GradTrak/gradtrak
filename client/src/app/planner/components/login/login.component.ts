@@ -71,7 +71,7 @@ export class LoginComponent implements OnInit {
     }
 
     this.userService
-      .register(this.username, this.password, this.password2, this.regEmailMarketing, this.regUserTesting)
+      .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
       .subscribe((error: string) => {
         if (error) {
           this.regError = error;
