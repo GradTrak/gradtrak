@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map, tap } from 'rxjs/operators';
-import { SemesterPrototype } from 'common/prototypes/semester.prototype';
+// import { SemesterPrototype } from 'common/prototypes/semester.prototype'; //Lint was mad
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
@@ -338,7 +338,7 @@ export class UserService {
         if (!semester) {
           return null;
         }
-        const semesterPrototype: SemesterPrototype = {
+        const semesterPrototype = {
           ...semester,
           courseIds: semester.courses.map((course: Course) => course.id),
         };
