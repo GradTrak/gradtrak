@@ -332,12 +332,13 @@ export class UserService {
   }
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: any = {};
-    // for (const [academicYearName, academicYearSemesters] of userData.semesters.entries()) {
+    const semesters: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
     userData.semesters.forEach((academicYearSemesters, academicYearName) => {
       semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
-        if (!semester) {return null;}
-        const semesterPrototype = {
+        if (!semester) {
+          return null;
+        }
+        const semesterPrototype: SemesterPrototype = {
           ...semester,
           courseIds: semester.courses.map((course: Course) => course.id),
         };
@@ -352,8 +353,6 @@ export class UserService {
         Array.from(entry[1]),
       ]),
     );
-    console.log(semesters);
-
     return {
       semesters,
       goalIds,

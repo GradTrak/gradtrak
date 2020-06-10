@@ -36,7 +36,7 @@ export class SemesterChangerComponent implements OnInit {
       });
     }
     this.seasonInput = 'Fall';
-    this.yearNum = 2020; //FIXME make it the current year.
+    this.yearNum = 2020; // FIXME make it the current year.
   }
 
   openSemesterAdder(): void {
@@ -52,7 +52,9 @@ export class SemesterChangerComponent implements OnInit {
    * @return an array of all the semestsers in the values of the map
    */
   getSemArr(mapping: Map<string, Semester[]>): Semester[] {
-    return Array.from(mapping.keys()).sort().map(key => mapping.get(key))
+    return Array.from(mapping.keys())
+      .sort()
+      .map((key) => mapping.get(key))
       .flat()
       .filter((a) => a);
     // consider making this static. Or just having it not take in args?
@@ -78,15 +80,12 @@ export class SemesterChangerComponent implements OnInit {
    */
   addSemester(season: string, yearNum: number): void {
     if (!(season && yearNum) || yearNum < 2000 || yearNum > 2050) {
-      //console.log(season, yearNum)
+      // console.log(season, yearNum)
       this.errorMessage = 'Please select a season and a valid year.';
-      return
+      return;
     }
-    const semesterName: string = season + ' ' + yearNum;
-    if (
-      this.getSemArr(this.semesters)
-      .some((semester: Semester) => semester.name === semesterName)
-    ) {
+    const semesterName: string = `${season} ${yearNum}`;
+    if (this.getSemArr(this.semesters).some((semester: Semester) => semester.name === semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }

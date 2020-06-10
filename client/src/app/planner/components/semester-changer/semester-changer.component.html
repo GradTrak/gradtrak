@@ -12,16 +12,14 @@
     <h4>Add a semester</h4>
     <h5>Season:</h5>
     <form class="semesterInput" (ngSubmit)="addSemester(seasonInput, yearNum)">
-      <select name="seasonInput" type="string" [(ngModel)]="seasonInput"
-      >
+      <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
         <option ngValue="Fall" selected="selected">Fall</option>
         <!-- TODO selected = selected doesn't actually work for some reason? -->
         <option ngValue="Spring">Spring</option>
         <option ngValue="Summer">Summer</option>
       </select>
       <h5>Year:</h5>
-      <input type="number" name="yearName" min="2010" max="2030" [(ngModel)]="yearNum"
-      />
+      <input type="number" name="yearName" min="2010" max="2030" [(ngModel)]="yearNum" />
       <br />
       <button class="gt-button gt-button-secondary" type="submit">Add</button>
       <p>{{ errorMessage }}</p>
