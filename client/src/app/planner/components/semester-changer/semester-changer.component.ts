@@ -52,7 +52,7 @@ export class SemesterChangerComponent implements OnInit {
    * @return an array of all the semestsers in the values of the map
    */
   getSemArr(mapping: Map<string, Semester[]>): Semester[] {
-    return Array.from(mapping.values())
+    return Array.from(mapping.keys()).sort().map(key => mapping.get(key))
       .flat()
       .filter((a) => a);
     // consider making this static. Or just having it not take in args?

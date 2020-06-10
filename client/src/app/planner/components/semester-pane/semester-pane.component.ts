@@ -40,7 +40,7 @@ export class SemesterPaneComponent implements OnInit, OnChanges {
    * @return an array of all the semestsers in the values of the map
    */
   getSemArr(mapping: Map<string, Semester[]>): Semester[] {
-    return Array.from(mapping.values())
+    return Array.from(mapping.keys()).sort().map(key => mapping.get(key))
       .flat()
       .filter((a) => a);
     // a temporary fix because we haven't implemented view by year functionality yet.
