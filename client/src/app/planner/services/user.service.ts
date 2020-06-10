@@ -63,7 +63,7 @@ export class UserService {
    * @return {Observable<string>} An Observable that will emit an error string or null if the registration was
    * successful.
    */
-  register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
+  register(username: string, password: string, password2:string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
