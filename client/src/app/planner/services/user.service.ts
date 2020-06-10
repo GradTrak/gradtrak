@@ -332,7 +332,7 @@ export class UserService {
   }
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: Map<string, SemesterPrototype[]> = new Map<string, SemesterPrototype[]>();
+    const semesters: any = {};
     // for (const [academicYearName, academicYearSemesters] of userData.semesters.entries()) {
     userData.semesters.forEach((academicYearSemesters, academicYearName) => {
       semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {

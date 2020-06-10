@@ -108,16 +108,16 @@ export class PlannerComponent implements OnInit {
     this.userService.setUserData(userData);
   }
 
+  /**
+  * Gets a list of all the courses a user is currently taking, in
+  * the form of an array, based on the currrent state and userdata.
+  * @return a list of courses that are in the state.
+  */
   private getCurrentCourses(): Course[] {
     let courses = [];
-    Array.from(this.state.userData.semesters.values())
+    return Array.from(this.state.userData.semesters.values())
       .flat()
-      .forEach((semester: Semester) => {
-        if (semester) {
-          // if semester is not null
-          courses = courses.concat(semester.courses);
-        }
-      });
-    return courses;
+      .filter((semester: Semester) => semester)
+      .flatMap((semester: Semester) => semester.courses);
   }
 }
