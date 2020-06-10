@@ -14,8 +14,7 @@ export class SemesterChangerComponent implements OnInit {
   yearNum: number;
   seasonInput: string;
   errorMessage: string = '';
-  semesterArr: Semester[];
-  SEASON_INDEX: object = {
+  private static readonly SEASON_INDEX: object = {
     Fall: 0,
     Spring: 1,
     Summer: 2,
@@ -91,7 +90,7 @@ export class SemesterChangerComponent implements OnInit {
     const newSemester = new Semester(semesterName);
     const academicYearName = this.getAcademicYearName(newSemester);
     const semArr = semesterName.split(' ');
-    const index = this.SEASON_INDEX[semArr[0]];
+    const index = SemesterChangerComponent.SEASON_INDEX[semArr[0]];
     if (this.semesters.get(academicYearName)) {
       this.semesters.get(academicYearName)[index] = newSemester;
     } else {
@@ -136,7 +135,7 @@ export class SemesterChangerComponent implements OnInit {
   removeSemester(semester: Semester): void {
     const acadYear = this.getAcademicYearName(semester);
     const semesterArr = semester.name.split(' ');
-    const index = this.SEASON_INDEX[semesterArr[0]];
+    const index = SemesterChangerComponent.SEASON_INDEX[semesterArr[0]];
     this.semesters.get(acadYear)[index] = null;
     // an undo button would be nice here. Or an "are you sure".
     // just in case they delete a semester that's important.

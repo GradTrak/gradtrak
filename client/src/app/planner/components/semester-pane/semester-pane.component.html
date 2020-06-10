@@ -1,8 +1,8 @@
 <div class="semester-container">
   <app-semester
-    *ngFor="let semester of semesterArr"
+    *ngFor="let semester of getSemArr(semesters)"
     [semester]="semester"
-    [currentSemesters]="semesterArr"
+    [currentSemesters]="getSemArr(semesters)"
   ></app-semester>
 </div>
 

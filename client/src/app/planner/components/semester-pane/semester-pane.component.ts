@@ -20,10 +20,6 @@ export class SemesterPaneComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(): void {
-    this.semesterArr = Array.from(this.semesters.values())
-      .flat()
-      .filter((a) => a);
-    // a temporary fix because we haven't implemented the viewing thing yet.
   }
 
   openSemesterChanger(): void {
@@ -36,5 +32,17 @@ export class SemesterPaneComponent implements OnInit, OnChanges {
 
   setSemesters(semestersOutput: Map<string, Semester[]>): void {
     this.userService.updateSemesters(semestersOutput);
+  }
+
+  /** Identical to the semesterchanger :(
+  * Turns a map of semesters into an array of semesters.
+   * @param mapping a mapping of the academic year to their corresponding semesters
+   * @return an array of all the semestsers in the values of the map
+   */
+  getSemArr(mapping: Map<string, Semester[]>): Semester[] {
+    return Array.from(mapping.values())
+      .flat()
+      .filter((a) => a);
+    // a temporary fix because we haven't implemented view by year functionality yet.
   }
 }
