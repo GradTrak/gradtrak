@@ -11,7 +11,7 @@
   <div class="semester-adder">
     <h5>Add a semester</h5>
     <p>Season:</p>
-    <form class="semesterInput" (ngSubmit)="addSemester(seasonInput + ' ' + yearNum)">
+    <form class="semesterInput" (ngSubmit)="addSemester(seasonInput, yearNum)">
       <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
         <option ngValue="Fall">Fall</option>
         <!-- TODO selected = selected doesn't actually work for some reason? -->

@@ -76,11 +76,13 @@ export class SemesterChangerComponent implements OnInit {
    * @param {string} semesterName The intended name of the new semester object being initialized.
    * Must be formatted "Season YYYY"
    */
-  addSemester(semesterName: string): void {
-    if (semesterName.includes('undefined')) {
+  addSemester(season: string, yearNum: number): void {
+    if (!(season && yearNum) || yearNum < 2000 || yearNum > 2050) {
+      //console.log(season, yearNum)
       this.errorMessage = 'Please select a season and a valid year.';
-      return;
+      return
     }
+    const semesterName: string = season + ' ' + yearNum;
     if (
       this.getSemArr(this.semesters)
         .map((semester) => semester.name)
