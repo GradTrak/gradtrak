@@ -3,40 +3,7 @@
     "username": "info@gradtrak.me",
     "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$ycSZFhDyQ413bWbyGQ2gdQ$V4C8MJhM5Rgr5OF5njGZYmAb+DVMliNNfYZIHkqwVnw",
     "userdata": {
-      "semesters": [
-        {
-          "name": "Fall 2019",
-          "courseIds": []
-        },
-        {
-          "name": "Spring 2020",
-          "courseIds": []
-        },
-        {
-          "name": "Fall 2020",
-          "courseIds": []
-        },
-        {
-          "name": "Spring 2021",
-          "courseIds": []
-        },
-        {
-          "name": "Fall 2021",
-          "courseIds": []
-        },
-        {
-          "name": "Spring 2022",
-          "courseIds": []
-        },
-        {
-          "name": "Fall 2022",
-          "courseIds": []
-        },
-        {
-          "name": "Spring 2023",
-          "courseIds": []
-        }
-      ],
+      "semesters": {},
       "goalIds": [],
       "manuallyFulfilledReqs": {}
     }
