@@ -13,7 +13,7 @@
     <p>Season:</p>
     <form class="semesterInput" (ngSubmit)="addSemester(seasonInput + ' ' + yearNum)">
       <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
-        <option ngValue="Fall" selected="selected">Fall</option>
+        <option ngValue="Fall">Fall</option>
         <!-- TODO selected = selected doesn't actually work for some reason? -->
         <option ngValue="Spring">Spring</option>
         <option ngValue="Summer">Summer</option>
