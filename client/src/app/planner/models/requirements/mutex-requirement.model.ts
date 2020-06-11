@@ -70,8 +70,8 @@ export class MutexRequirement extends Requirement {
   }
 
   /* will be deleted later */
-  getCourseCombinations(courses: Course[]): Course[][] {
-    return [[]];
+  getCourseCombinations(courses: Course[]): Set<Course>[] {
+    return [new Set<Course>()];
   }
 
   /**

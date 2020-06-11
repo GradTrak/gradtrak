@@ -97,24 +97,27 @@ export class RequirementsPaneComponent implements OnInit {
      * array of every single possible way to arrange courses to the different requirements.
      * Note that the time and space complexity of this operation is Theta(N**M), where N is the
      * number of courses and M is the number of requirements.
-     * @param reqs the complete list of requirements being looked at
-     * @param i the current index for the requirement that's "on deck"
-     * @param mapping A map of requirements to courses that fulfill that requirement
+     * @param {Requirement[]} reqs the complete list of requirements being looked at
+     * @param {number} i the current index for the requirement that's "on deck"
+     * @param {Course[]} courses
+     * @param {Map<Requirement, Course[]>} mapping A map of requirements to courses that fulfill that requirement
+     * @param {Map<Requirement, Constraint[]>}
+     *
      */
     const getMappings = (
       // I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
       reqs: Requirement[],
       i: number,
       courses: Course[],
-      mapping: Map<Requirement, Course[]>,
+      mapping: Map<Requirement, Set<Course>>,
       constraints: Map<Requirement, Constraint[]>,
     ) => {
       if (reqs.length === i) {
-        return [new Map<Requirement, Course[]>()];
+        return [new Map<Requirement, Set<Course>>()];
       }
 
       const req: Requirement = reqs[i];
-      const combinations: Course[][] = req.getCourseCombinations(courses).filter((combination: Course[]) => {
+      const combinations: Set<Course>[] = req.getCourseCombinations(courses).filter((combination: Set<Course>) => {
         mapping.set(req, combination);
         const valid: boolean = constraints
           .get(req)
@@ -123,11 +126,11 @@ export class RequirementsPaneComponent implements OnInit {
         return valid;
       });
 
-      return combinations.flatMap((combination: Course[]) => {
+      return combinations.flatMap((combination: Set<Course>) => {
         mapping.set(req, combination);
-        const rest: Map<Requirement, Course[]>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
+        const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
         mapping.delete(req);
-        rest.forEach((restCombinations: Map<Requirement, Course[]>) => {
+        rest.forEach((restCombinations: Map<Requirement, Set<Course>>) => {
           restCombinations.set(req, combination);
         });
         return rest;
@@ -140,30 +143,16 @@ export class RequirementsPaneComponent implements OnInit {
        * @param allCourses courses whose combinations are being found
        * @return a powerset of the courses
        */
-      const generateCombinations = (allCourses: Course[]): Course[][] =>
+      /*const generateCombinations = (allCourses: Course[]): Course[][] =>
         allCourses.reduce((subsets, value) => subsets.concat(subsets.map((set) => [value, ...set])), [[]]);
-      /* For Connie and Nicholas to discuss on 6/02: Finds all combinations that can fullfill the requirement. Note that I've done this because I think this pruning will
-      help the runtime, but the act of pruning the permutations of courses itself is also exponential time. I think it's a
-      much smaller exponential time, though, compared to having a much larger powerset of EVERY single course of every requriement.
-
-      The next step would be to prune even further by checking the constraints immediately, in this function. That would add a
-      factor of n to the runtime, but is probably worth it. Otherwise, you'll note that nowhere in the function do we actually
-      use the CONSTRAINTS variable.
-
-      It's really late, and I have work tomorrow, but the last thing I'll say is that we need to create copies of the
-      map at every single recursive call to avoid mutability issues. And also, we need to contatenate the mapping,
-      because that's what getmapping returns. Probably just create a variable returnMaps and appent getMappings to it.
-      Currently we are returning a single map. But really we need to return a list of maps, each of which map a requirement
-      to its corresponding list of courses.
-      */
       const possibilites: Course[][] = generateCombinations(courses.filter((course) => reqs[i].canFulfill(course)));
       possibilites.forEach((possibility: Course[]) => {
         mapping.set(reqs[i], possibility);
         getMappings(reqs, i + 1, courses, mapping, constraints); //FIXME do something with this map.
       });
-      return new Map(mapping);
+      return new Map(mapping);*/
     };
-    const possibilityArray = getMappings(reqs, 0, courses, new Map<Requirement, Course[]>(), constraints);
+    const possibilityArray = getMappings(reqs, 0, courses, new Map<Requirement, Set<Course>>(), constraints);
     return null;
   }
 }

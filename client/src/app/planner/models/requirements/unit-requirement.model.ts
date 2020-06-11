@@ -2,6 +2,8 @@ import { Course } from '../course.model';
 import { Requirement } from '../requirement.model';
 import { StandaloneRequirement } from './standalone-requirement.model';
 
+import { getAllCombinations } from '../../../../utils';
+
 /**
  * The UnitRequirement class represents a {@link Requirement} has one base {@link StandaloneRequirement} and is only
  * fulfilled if sum of the number of units that fulfill its underlying base requirement is greater than a specified
@@ -33,26 +35,14 @@ export class UnitRequirement extends Requirement {
     return courses.filter((course) => this.requirement.isFulfillableBy(course));
   }
 
-  getCourseCombinations(courses: Course[]): Course[][] {
+  getCourseCombinations(courses: Course[]): Set<Course>[] {
     const filteredCourses: Course[] = courses.filter((course: Course) =>
       this.requirement.isFulfilledWith([course], null),
     );
-    return UnitRequirement.getAllCombinations<Course>(filteredCourses);
+    return getAllCombinations(filteredCourses).map((combination: Course[]) => new Set<Course>(combination));
   }
 
   toString(): string {
     return `${this.units} units of \n${this.requirement.name}`;
-  }
-
-  private static getAllCombinations<T>(arr: T[], index?: number): T[][] {
-    if (index === undefined) {
-      index = 0;
-    }
-    if (arr.length >= index) {
-      return [[]];
-    }
-    const rest: T[][] = UnitRequirement.getAllCombinations<T>(arr, index + 1);
-    /* optimize by capping at units*/
-    return [...rest, ...rest.map((combination: T[]) => [arr[index], ...combination])];
   }
 }

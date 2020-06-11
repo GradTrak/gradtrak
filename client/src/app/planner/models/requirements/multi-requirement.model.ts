@@ -36,17 +36,8 @@ export class MultiRequirement extends Requirement implements RequirementContaine
     return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
-  [[], ['physics7a']]
-  [[], ['physics7b']]
-
-  [[], ['physics7a'], ['physics7b'], ['phsyics7a', 'physics7b']]
-
-  getCourseCombinations(courses: Course[]): Course[][] {
-    //For each requireemnt, finds all possible course combinations
-    const childs: Course[][][] = this.requirements.map((requirement: Requirement) =>
-      requirement.getCourseCombinations(courses), //LMAO I think the plural of child is children but this is funny so I'll leave it -B
-    );
-    return MultiRequirement.getAllCombinations<Course[]>(childs).map((combination: Course[][]) => combination.flat());
+  getCourseCombinations(courses: Course[]): Set<Course>[] {
+    throw new Error("Tried to get Course combinations for MultiRequirement");
   }
 
   toString(): string {

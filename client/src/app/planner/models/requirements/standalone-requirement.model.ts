@@ -27,15 +27,17 @@ export abstract class StandaloneRequirement extends Requirement {
   * For standalones the combination of courses that will fullfill it
   * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
   */
-  getCourseCombinations(courses: Course[]): Course[][] {
-    const combinations: Course[][] = courses
+  getCourseCombinations(courses: Course[]): Set<Course>[] {
+    const combinations: Set<Course>[] = courses
       .filter((course: Course) => {
         return this.isFulfilledWith([course], null);
       })
       .map((course: Course) => {
-        return [course];
+        const combination: Set<Course> = new Set<Course>();
+        combination.add(course);
+        return combination;
       });
-    combinations.push([]);
+    combinations.push(new Set<Course>());
     return combinations;
   }
 

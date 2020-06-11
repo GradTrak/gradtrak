@@ -42,7 +42,7 @@ export abstract class Requirement {
 
   /**
   * Given a list of COURSES, returns a 2d array. Each element in the 2d array
-  * is an array of courses which potentially fullfill part or all of the requirement. 
+  * is an array of courses which potentially fullfill part or all of the requirement.
   */
-  abstract getCourseCombinations(courses: Course[]): Course[][];
+  abstract getCourseCombinations(courses: Course[]): Set<Course>[];
 }
