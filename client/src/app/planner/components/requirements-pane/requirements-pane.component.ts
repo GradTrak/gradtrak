@@ -106,7 +106,7 @@ export class RequirementsPaneComponent implements OnInit {
      * @param {Requirement[]} reqs the complete list of requirements being looked at
      * @param {number} i the current index for the requirement that's "on deck"
      * @param {Course[]} courses
-     * @param {Map<Requirement, Set<Course>>} mapping A map of requirements to courses that fulfill that requirement
+     * @param {Map<Requirement, Set<Course>>} mapping A map of requirements to courses that fulfill that requirement, used as a pruning tool.
      * @param {Map<Requirement, Constraint[]>}
      * @return {Map<Requirement, Set<Course>>[]} All possible ways of assigning courses to requirements from i to the end.
      */
@@ -130,16 +130,22 @@ export class RequirementsPaneComponent implements OnInit {
        */
        //TODO typeguard without violating abstraction
       if (req instanceof MultiRequirement) {
+        //Process the children requirements and add it to our current map.
         const subMappings: Map<Requirement, Set<Course>>[] = getMappings(req.requirements, 0, courses, mapping, constraints);
+        /*Take each submap from the result from the requirements and assumes that we are using it, setting
+         * the contents of the submap to mapping and using it to find all the future possibilities.
+         */
         const finalMappings: Map<Requirement, Set<Course>>[] = subMappings.flatMap((submap: Map<Requirement, Set<Course>>) => {
           submap.forEach((value: Set<Course>, key: Requirement) => {
             mapping.set(key, value);
           });
+          //Find the future mappings, with the assumption that we are using the current submap.
           const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
           //TODO may not be necessary to delete from mapping
           submap.forEach((value: Set<Course>, key: Requirement) => {
-            mapping.delete(key);
+            mapping.delete(key); //revert the edit so that we can use the mapping later to prune properly.
           });
+          //take the potential results and add the current possibilities to them.
           rest.forEach((restCombination: Map<Requirement, Set<Course>>) => {
             submap.forEach((value: Set<Course>, key: Requirement) => {
               restCombination.set(key, value);
@@ -161,6 +167,10 @@ export class RequirementsPaneComponent implements OnInit {
           return valid;
         });
 
+        /* for each possible combination of courses, which are to be used to fulfill the requirement, take the
+         * list of possible mappings that are generated from the recursive call, add the possible combination
+         * to each of those possible mappings.
+         */
         const finalMappings: Map<Requirement, Set<Course>>[] = combinations.flatMap((combination: Set<Course>) => {
           mapping.set(req, combination);
           const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
