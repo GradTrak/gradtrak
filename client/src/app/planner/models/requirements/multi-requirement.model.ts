@@ -1,11 +1,14 @@
 import { Course } from '../course.model';
 import { Requirement } from '../requirement.model';
+import { RequirementContainer } from '../requirement-container.model';
+
+import { getAllCombinations } from '../../../../utils';
 
 /**
  * The MultiRequirement class represents a {@link Requirement} that contains a number of child requirements and is only
  * fulfilled if at least a specified number of those requirements are fulfilled.
  */
-export class MultiRequirement extends Requirement {
+export class MultiRequirement extends Requirement implements RequirementContainer {
   requirements: Requirement[];
   numRequired: number;
   hidden: boolean;
@@ -33,6 +36,11 @@ export class MultiRequirement extends Requirement {
     return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
+  [[], ['physics7a']]
+  [[], ['physics7b']]
+
+  [[], ['physics7a'], ['physics7b'], ['phsyics7a', 'physics7b']]
+
   getCourseCombinations(courses: Course[]): Course[][] {
     //For each requireemnt, finds all possible course combinations
     const childs: Course[][][] = this.requirements.map((requirement: Requirement) =>
@@ -46,21 +54,5 @@ export class MultiRequirement extends Requirement {
       (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
       `Fulfill with ${this.numRequired} of:`,
     );
-  }
-
-  /**
-  * FIXME write doc.
-  */
-  private static getAllCombinations<T>(sets: T[][], index?: number): T[][] {
-    if (index === undefined) {
-      index = 0;
-    }
-    if (index >= sets.length) {
-      return [];
-    }
-    /* optimize by capping at numRequired */
-    return sets[index].flatMap((elem: T) => {
-      return MultiRequirement.getAllCombinations(sets, index + 1).map((combination: T[]) => [elem, ...combination]);
-    });
   }
 }
