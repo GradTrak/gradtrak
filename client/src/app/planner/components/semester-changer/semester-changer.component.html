@@ -3,9 +3,9 @@
   <h4 *ngFor="let semester of getSemArr(semesters)">
     <i class="material-icons" (click)="removeSemester(semester)">close</i>{{ semester.name }}
   </h4>
-  <button class="gt-button gt-button-secondary" (click)="openSemesterAdder()">Add a Semester</button>
+  <button class="btn btn-primary btn-sm" (click)="openSemesterAdder()">Add a Semester</button>
 </div>
-<button class="gt-button gt-button-secondary" (click)="returnSemesters()">Confirm</button>
+<button class="btn btn-primary" (click)="returnSemesters()">Confirm</button>
 
 <ng-template #semesterAdder>
   <div class="semester-adder">
@@ -24,6 +24,8 @@
       <br/>
       <button class="gt-button gt-button-secondary" type="submit">Add</button>
       <p>{{ errorMessage }}</p>
+      <!--- TODO: bootstrappify. Was overriden in merge-->
+
     </form>
   </div>
 </ng-template>

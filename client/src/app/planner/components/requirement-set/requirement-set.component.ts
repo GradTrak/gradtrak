@@ -14,6 +14,8 @@ export class RequirementSetComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
 
+  collapsed: boolean;
+
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {}
@@ -24,5 +26,9 @@ export class RequirementSetComponent implements OnInit {
 
   manuallyUnfulfill(requirement: Requirement): void {
     this.userService.manuallyUnfulfill(requirement, this.requirementSet);
+  }
+
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
   }
 }

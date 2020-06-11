@@ -19,9 +19,11 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install Yarn
+      run: npm install --global yarn
     - name: Install Dependencies
-      run: cd server && npm ci
+      run: cd server && yarn install --frozen-lockfile
     - name: ESLint
-      run: cd server && npm run lint
+      run: cd server && yarn lint
     - name: Prettier
-      run: cd server && npm run pretty
+      run: cd server && yarn pretty

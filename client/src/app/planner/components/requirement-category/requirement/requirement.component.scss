@@ -33,4 +33,12 @@
 .req-more {
   float: right;
   height: 1.5rem;
+
+  .dropdown-toggle::before {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
 }
