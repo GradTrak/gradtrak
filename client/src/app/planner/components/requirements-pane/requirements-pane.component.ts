@@ -5,6 +5,8 @@ import { Course } from '../../models/course.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { RequirementCategory } from '../../models/requirement-category.model';
+import { RequirementContainer } from '../../models/requirement-container.model';
+import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
 import { RequirementService } from '../../services/requirement.service';
 import { UserService } from '../../services/user.service';
 
@@ -92,20 +94,23 @@ export class RequirementsPaneComponent implements OnInit {
       .flatMap((reqCategory: RequirementCategory) => {
         return reqCategory.requirements;
       });
+
     /**
      * Given a list of requirements and courses, recursively finds and returns an
      * array of every single possible way to arrange courses to the different requirements.
      * Note that the time and space complexity of this operation is Theta(N**M), where N is the
      * number of courses and M is the number of requirements.
+     *
+     * In particular, each recursive call calculates all the possibilities fron i to the length of courses.
+     *
      * @param {Requirement[]} reqs the complete list of requirements being looked at
      * @param {number} i the current index for the requirement that's "on deck"
      * @param {Course[]} courses
-     * @param {Map<Requirement, Course[]>} mapping A map of requirements to courses that fulfill that requirement
+     * @param {Map<Requirement, Set<Course>>} mapping A map of requirements to courses that fulfill that requirement
      * @param {Map<Requirement, Constraint[]>}
-     *
+     * @return {Map<Requirement, Set<Course>>[]} All possible ways of assigning courses to requirements from i to the end.
      */
     const getMappings = (
-      // I have no idea if a doc comment like this is allowed, but I think this is complicated enough to justify.
       reqs: Requirement[],
       i: number,
       courses: Course[],
@@ -117,24 +122,56 @@ export class RequirementsPaneComponent implements OnInit {
       }
 
       const req: Requirement = reqs[i];
-      const combinations: Set<Course>[] = req.getCourseCombinations(courses).filter((combination: Set<Course>) => {
-        mapping.set(req, combination);
-        const valid: boolean = constraints
-          .get(req)
-          .every((constraint: Constraint) => constraint.isValidMapping(mapping));
-        mapping.delete(req);
-        return valid;
-      });
-
-      return combinations.flatMap((combination: Set<Course>) => {
-        mapping.set(req, combination);
-        const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
-        mapping.delete(req);
-        rest.forEach((restCombinations: Map<Requirement, Set<Course>>) => {
-          restCombinations.set(req, combination);
+      /*
+       * If the requirement implements requirement-container, then we recursively generate fullfillment
+       * status for each child requirement, adding it to the current mappings and
+       * constantly pruning and checking for conflicts. Then assume we use each mapping
+       * and continue to recurse through the remainder of reqs.
+       */
+       //TODO typeguard without violating abstraction
+      if (req instanceof MultiRequirement) {
+        const subMappings: Map<Requirement, Set<Course>>[] = getMappings(req.requirements, 0, courses, mapping, constraints);
+        const finalMappings: Map<Requirement, Set<Course>>[] = subMappings.flatMap((submap: Map<Requirement, Set<Course>>) => {
+          submap.forEach((value: Set<Course>, key: Requirement) => {
+            mapping.set(key, value);
+          });
+          const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
+          //TODO may not be necessary to delete from mapping
+          submap.forEach((value: Set<Course>, key: Requirement) => {
+            mapping.delete(key);
+          });
+          rest.forEach((restCombination: Map<Requirement, Set<Course>>) => {
+            submap.forEach((value: Set<Course>, key: Requirement) => {
+              restCombination.set(key, value);
+            });
+          });
+          return rest;
         });
-        return rest;
-      });
+        return finalMappings;
+      } else {
+        /* The filter prunes the combination. Takes the course combinations of each course,
+         * adds it to the current mapping, and then tests to see if the new mapping is still valid with the constraint.
+         */
+        const combinations: Set<Course>[] = req.getCourseCombinations(courses).filter((combination: Set<Course>) => {
+          mapping.set(req, combination);
+          const valid: boolean = constraints
+            .get(req)
+            .every((constraint: Constraint) => constraint.isValidMapping(mapping));
+          mapping.delete(req);
+          return valid;
+        });
+
+        const finalMappings: Map<Requirement, Set<Course>>[] = combinations.flatMap((combination: Set<Course>) => {
+          mapping.set(req, combination);
+          const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, courses, mapping, constraints);
+          mapping.delete(req);
+          rest.forEach((restCombination: Map<Requirement, Set<Course>>) => {
+            restCombination.set(req, combination);
+          });
+          return rest;
+        });
+        return finalMappings;
+      }
 
       /**
        * Given a list of courses,returns the powerset, or all possible combination, of the courses.
