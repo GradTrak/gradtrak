@@ -113,7 +113,6 @@ export class RequirementCategory {
   }
 
   getConstraints(): Constraint[] {
-    const constraints: Constraint[] = [...this.constraints];
-    return constraints;
+    return this.constraints ? this.constraints : [];
   }
 }

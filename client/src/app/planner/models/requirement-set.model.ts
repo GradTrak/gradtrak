@@ -59,10 +59,13 @@ export class RequirementSet {
   }
 
   getConstraints(): Constraint[] {
-    const constraints: Constraint[] = [...this.selfConstraints, ...this.universalConstraints];
+    const selfConstraints = this.selfConstraints ? this.selfConstraints : [];
+    const universalConstraints = this.universalConstraints ? this.universalConstraints : []; 
+    const constraints: Constraint[] = [...selfConstraints, ...universalConstraints];
     let curr: RequirementSet = this.parent;
     while (curr) {
-      constraints.push(...curr.universalConstraints);
+      constraints.push(...(curr.universalConstraints ? curr.universalConstraints : []));
+      curr = curr.parent;
     }
     return constraints;
   }

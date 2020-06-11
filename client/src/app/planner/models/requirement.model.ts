@@ -30,8 +30,7 @@ export abstract class Requirement {
   abstract toString(): string;
 
   getConstraints(): Constraint[] {
-    const constraints: Constraint[] = [...this.constraints];
-    return constraints;
+    return this.constraints ? this.constraints : [];
   }
 
   /**
