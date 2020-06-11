@@ -8,8 +8,8 @@
 <button class="btn btn-primary" (click)="returnSemesters()">Confirm</button>
 
 <ng-template #semesterAdder>
-  <div class="semester-adder">
-    <h4 style="padding-bottom: 15px;">Add a semester</h4>
+  <div class="modal-body semester-adder">
+    <h4>Add a semester</h4>
     <h5>Season:</h5>
     <form class="semesterInput" (ngSubmit)="addSemester(seasonInput, yearNum)">
       <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
@@ -22,7 +22,9 @@
       <input type="number" class="yearName" name="yearName" min="2010" max="2030" [(ngModel)]="yearNum"/>
       <br/>
       <br/>
-      <button class="gt-button gt-button-secondary" type="submit">Add</button>
+      <div class="col-auto">
+          <button class="btn btn-primary" type="submit">Add</button>
+        </div>
       <p>{{ errorMessage }}</p>
       <!--- TODO: bootstrappify. Was overriden in merge-->
 
