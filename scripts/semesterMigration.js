@@ -23,6 +23,7 @@ db.connect()
     return User.find();
     //TODO: Query everything and then modify their semesters and then dump it back in.
   }).then((users) => {
+    let lastcall;
     const newUsers = users.forEach(user => {
       console.log('\n\n\n\n\n\n\n\n\n\n')
 
@@ -44,15 +45,16 @@ db.connect()
 
       user.userdata.semesters = semesters;
       console.log(user)
-      user.save();
-      return conn;
+      lastcall = user.save()
+      return lastcall;
     });
 
-    return conn;
+    return lastcall;
   })
   .catch((err) => {
     console.error(err);
   })
   .finally(() => {
     conn.close();
+    console.log("CONNECTION CLOSED")
   });
