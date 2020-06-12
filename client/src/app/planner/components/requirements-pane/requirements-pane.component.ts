@@ -266,7 +266,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
               },
               new Map<Set<Course>, number>(),
             );
-            const maxUnits: number = Math.max(...units.values(), req.units);
+            const maxUnits: number = Math.max(...units.values());
             let unitTarget: number;
             if (maxUnits >= req.units) {
               unitTarget = Math.min(...Array.from(units.values()).filter((unit: number) => unit >= req.units));
