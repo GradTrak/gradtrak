@@ -16,19 +16,21 @@ const findAcadYear = semester => {
   return `${semesterYear.toString()}-${(semesterYear + 1).toString()}`;
 }
 const db = require('../server/config/db');
+let conn;
 db.connect()
   .then((c) => {
-    const conn = c;
+    conn = c;
     return User.find();
     //TODO: Query everything and then modify their semesters and then dump it back in.
   }).then((users) => {
-    console.log();console.log();console.log();console.log();console.log();console.log();console.log();
-
     const newUsers = users.forEach(user => {
+      console.log('\n\n\n\n\n\n\n\n\n\n')
+
       let semesterArr = [].concat(...user.userdata.semesters.values())
       const semesters = new Map();
       console.log(semesterArr)
       semesterArr.forEach((semester) => {
+        if (semester === null) return;
         const academicYearName = findAcadYear(semester);
         const semArr = semester.name.split(' ');
         const index = seasonVal[semArr[0]];
@@ -40,9 +42,10 @@ db.connect()
         }
       });
 
-      user.userdata.semesters = semesters
-      console.log(semesters)
+      user.userdata.semesters = semesters;
+      console.log(user)
       user.save();
+      return conn;
     });
 
     return conn;
@@ -52,12 +55,4 @@ db.connect()
   })
   .finally(() => {
     conn.close();
-    cache.del('*', (err, deleted) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log(`Cache flushed: ${deleted} keys deleted`);
-      }
-      cache.client.quit();
-    });
   });
