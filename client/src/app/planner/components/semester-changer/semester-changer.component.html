@@ -9,8 +9,8 @@
 
 <ng-template #semesterAdder>
   <div class="modal-body semester-adder">
-    <h4>Add a semester</h4>
-    <h5>Season:</h5>
+    <h4 style="padding-top: 5px;">Add a semester</h4>
+    <h5 style="padding-top: 15px;">Season:</h5>
     <form class="semesterInput" (ngSubmit)="addSemester(seasonInput, yearNum)">
       <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
         <option ngValue="Fall" selected="selected">Fall</option>
