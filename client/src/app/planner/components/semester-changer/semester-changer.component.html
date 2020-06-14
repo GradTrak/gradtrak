@@ -13,7 +13,7 @@
     <form class="semesterInput" (ngSubmit)="addSemester(termInput, yearNum)">
       <div class="form-row">
         <div class="col">
-          <h5 style="padding-top: 15px;">Term</h5>
+          <h5>Term:</h5>
         </div>
         <div class="col">
           <select name="termInput" class="term-input" type="string" [(ngModel)]="termInput">
@@ -26,7 +26,7 @@
       </div>
       <div class="form-row">
         <div class="col">
-          <h5 style="padding-top: 15px;">Year</h5>
+          <h5>Year:</h5>
         </div>
         <div class="col">
           <input type="number" class="year-name" name="year-name" min="2010" max="2030" [(ngModel)]="yearNum" />
