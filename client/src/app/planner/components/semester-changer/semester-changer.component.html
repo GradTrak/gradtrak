@@ -29,19 +29,18 @@
           <h5 style="padding-top: 15px;">Year:</h5>
         </div>
         <div class="col">
-          <input type="number" class="yearName" name="yearName" min="2010" max="2030" [(ngModel)]="yearNum"/>
+          <input type="number" class="yearName" name="yearName" min="2010" max="2030" [(ngModel)]="yearNum" />
         </div>
       </div>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <div class="form-row">
         <div class="col">
-            <button class="btn btn-primary" type="submit">Add</button>
-          </div>
+          <button class="btn btn-primary" type="submit">Add</button>
+        </div>
         <p>{{ errorMessage }}</p>
         <!--- TODO: bootstrappify. Was overriden in merge-->
       </div>
-
     </form>
   </div>
 </ng-template>
