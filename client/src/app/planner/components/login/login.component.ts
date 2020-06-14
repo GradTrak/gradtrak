@@ -69,7 +69,6 @@ export class LoginComponent implements OnInit {
       this.loading = false;
       return;
     }
-
     this.userService
       .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
       .subscribe((error: string) => {
