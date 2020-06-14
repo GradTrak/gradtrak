@@ -10,13 +10,13 @@
 <ng-template #semesterAdder>
   <div class="modal-body semester-adder">
     <h4 style="padding-top: 5px;">Add a semester</h4>
-    <form class="semesterInput" (ngSubmit)="addSemester(seasonInput, yearNum)">
+    <form class="semesterInput" (ngSubmit)="addSemester(termInput, yearNum)">
       <div class="form-row">
         <div class="col">
-          <h5 style="padding-top: 15px;">Season:</h5>
+          <h5 style="padding-top: 15px;">Term</h5>
         </div>
         <div class="col">
-          <select name="seasonInput" type="string" [(ngModel)]="seasonInput">
+          <select name="termInput" class="term-input"type="string" [(ngModel)]="termInput">
             <option ngValue="Fall" selected="selected">Fall</option>
             <!-- TODO selected = selected doesn't actually work for some reason? -->
             <option ngValue="Spring">Spring</option>
@@ -26,10 +26,10 @@
       </div>
       <div class="form-row">
         <div class="col">
-          <h5 style="padding-top: 15px;">Year:</h5>
+          <h5 style="padding-top: 15px;">Year</h5>
         </div>
         <div class="col">
-          <input type="number" class="yearName" name="yearName" min="2010" max="2030" [(ngModel)]="yearNum" />
+          <input type="number" class="year-name" name="year-name" min="2010" max="2030" [(ngModel)]="yearNum" />
         </div>
       </div>
       <br />

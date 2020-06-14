@@ -12,9 +12,9 @@ export class SemesterChangerComponent implements OnInit {
   @Output() semesterChanged: EventEmitter<Map<string, Semester[]>>;
   semesters: Map<string, Semester[]>;
   yearNum: number;
-  seasonInput: string;
+  termInput: string;
   errorMessage: string = '';
-  private static readonly SEASON_INDEX: object = {
+  private static readonly TERM_INDEX: object = {
     Fall: 0,
     Spring: 1,
     Summer: 2,
@@ -35,7 +35,7 @@ export class SemesterChangerComponent implements OnInit {
         this.semesters.set(key, [...value]);
       });
     }
-    this.seasonInput = 'Fall';
+    this.termInput = 'Fall';
     this.yearNum = 2020; // FIXME make it the current year.
   }
 
@@ -63,7 +63,7 @@ export class SemesterChangerComponent implements OnInit {
   /**
    * Given a semester, retunrs the string of its academic year in the form of
    * 'YYYY-YYYY'
-   * @param a semester for which you want the year. Name is in 'Season YYYY' format.
+   * @param a semester for which you want the year. Name is in 'term YYYY' format.
    */
 
   getAcademicYearName(semester: Semester): string {
@@ -76,15 +76,15 @@ export class SemesterChangerComponent implements OnInit {
    * Adds a semester to the current list of semesters.
    *
    * @param {string} semesterName The intended name of the new semester object being initialized.
-   * Must be formatted "Season YYYY"
+   * Must be formatted "term YYYY"
    */
-  addSemester(season: string, yearNum: number): void {
-    if (!(season && yearNum) || yearNum < 2000 || yearNum > 2050) {
-      // console.log(season, yearNum)
-      this.errorMessage = 'Please select a season and a valid year.';
+  addSemester(term: string, yearNum: number): void {
+    if (!(term && yearNum) || yearNum < 2000 || yearNum > 2050) {
+      // console.log(term, yearNum)
+      this.errorMessage = 'Please select a term and a valid year.';
       return;
     }
-    const semesterName: string = `${season} ${yearNum}`;
+    const semesterName: string = `${term} ${yearNum}`;
     if (this.getSemArr(this.semesters).some((semester: Semester) => semester.name === semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
@@ -92,7 +92,7 @@ export class SemesterChangerComponent implements OnInit {
     const newSemester = new Semester(semesterName);
     const academicYearName = this.getAcademicYearName(newSemester);
     const semArr = semesterName.split(' ');
-    const index = SemesterChangerComponent.SEASON_INDEX[semArr[0]];
+    const index = SemesterChangerComponent.TERM_INDEX[semArr[0]];
     if (this.semesters.get(academicYearName)) {
       this.semesters.get(academicYearName)[index] = newSemester;
     } else {
@@ -105,7 +105,7 @@ export class SemesterChangerComponent implements OnInit {
   removeSemester(semester: Semester): void {
     const acadYear = this.getAcademicYearName(semester);
     const semesterArr = semester.name.split(' ');
-    const index = SemesterChangerComponent.SEASON_INDEX[semesterArr[0]];
+    const index = SemesterChangerComponent.TERM_INDEX[semesterArr[0]];
     this.semesters.get(acadYear)[index] = null;
     // an undo button would be nice here. Or an "are you sure".
     // just in case they delete a semester that's important.
