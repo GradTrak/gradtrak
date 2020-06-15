@@ -7,7 +7,13 @@ const DEFAULT_OPTIONS = {
 
 const WELCOME_EMAIL = {
   subject: 'Welcome to GradTrak!',
-  text: `Placeholder text`, // FIXME Use actual text
+  text: `Hi!
+
+Thanks for registering with GradTrak! Feel free to email us at info@gradtrak.me if you have any questions. Welcome on board!
+
+Best,
+
+The GradTrak Team`,
 };
 module.exports.WELCOME_EMAIL = WELCOME_EMAIL;
 
