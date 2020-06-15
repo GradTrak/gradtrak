@@ -33,7 +33,7 @@ export class UserData {
       semesters.set(
         key,
         (value as SemesterPrototype[]).map((semesterProto: SemesterPrototype) =>
-          semesterProto ? new Semester(semesterProto, coursesMap) : null,
+          semesterProto ? Semester.fromProto(semesterProto, coursesMap) : null,
         ),
       );
     });

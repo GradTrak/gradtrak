@@ -2,10 +2,10 @@ import { RequirementPrototype } from 'common/prototypes/requirement.prototype';
 import { RequirementCategoryPrototype } from 'common/prototypes/requirement-category.prototype';
 import { Course } from './course.model';
 import { Requirement } from './requirement.model';
-import { PolyRequirement } from './requirements/poly-requirement.model';
 import { CourseRequirement } from './requirements/course-requirement.model';
 import { MultiRequirement } from './requirements/multi-requirement.model';
 import { MutexRequirement } from './requirements/mutex-requirement.model';
+import { PolyRequirement } from './requirements/poly-requirement.model';
 import { TagRequirement } from './requirements/tag-requirement.model';
 import { UnitRequirement } from './requirements/unit-requirement.model';
 import { Tag } from './tag.model';
@@ -18,14 +18,26 @@ export class RequirementCategory {
   name: string;
   requirements: Requirement[];
 
-  constructor(proto: RequirementCategoryPrototype, coursesMap: Map<string, Course>, tagsMap: Map<string, Tag>) {
-    this.name = proto.name;
-    this.requirements = proto.requirements.map((reqProto: RequirementPrototype) =>
-      RequirementCategory.getRequirementObjectFromPrototype(reqProto, coursesMap, tagsMap),
+  constructor(name: string, requirements: Requirement[]) {
+    this.name = name;
+    this.requirements = requirements;
+  }
+
+  static fromProto(
+    proto: RequirementCategoryPrototype,
+    coursesMap: Map<string, Course>,
+    tagsMap: Map<string, Tag>,
+  ): RequirementCategory {
+    return new RequirementCategory(
+      proto.name,
+      proto.requirements.map((reqProto: RequirementPrototype) =>
+        RequirementCategory.reqFromProto(reqProto, coursesMap, tagsMap),
+      ),
     );
   }
 
-  private static getRequirementObjectFromPrototype(
+  /* This is placed here to avoid circular dependencies. */
+  static reqFromProto(
     reqProto: RequirementPrototype,
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
@@ -56,7 +68,7 @@ export class RequirementCategory {
       case 'multi':
       case 'poly': {
         requirement.requirements = requirement.requirements.map((childReqProto: RequirementPrototype) =>
-          RequirementCategory.getRequirementObjectFromPrototype(childReqProto, coursesMap, tagsMap),
+          RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
         );
         switch (requirement.type) {
           case 'multi':
@@ -76,18 +88,14 @@ export class RequirementCategory {
 
       case 'mutex': {
         requirement.requirements = requirement.requirements.map((childReqProto: RequirementPrototype) =>
-          RequirementCategory.getRequirementObjectFromPrototype(childReqProto, coursesMap, tagsMap),
+          RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
         );
         requirement = new MutexRequirement(requirement);
         break;
       }
 
       case 'unit': {
-        requirement.requirement = RequirementCategory.getRequirementObjectFromPrototype(
-          requirement.requirement,
-          coursesMap,
-          tagsMap,
-        );
+        requirement.requirement = RequirementCategory.reqFromProto(requirement.requirement, coursesMap, tagsMap);
         requirement = new UnitRequirement(requirement);
         break;
       }
