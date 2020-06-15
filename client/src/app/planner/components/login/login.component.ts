@@ -64,6 +64,11 @@ export class LoginComponent implements OnInit {
 
   submitRegistration(): void {
     this.loading = true;
+    if (this.password !== this.password2) {
+      this.regError = "Password and confirm password fields don't match!";
+      this.loading = false;
+      return;
+    }
 
     this.userService
       .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
