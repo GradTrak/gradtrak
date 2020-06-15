@@ -9,23 +9,21 @@ async function verifyUser(user, inputPassword) {
     /* This is the hash of 'password' if anyone is curious */
     const dummy = '$argon2id$v=19$m=4096,t=3,p=1$bPaz0G0LK/r5aSoCQsU8Bg$8mbAff+svZA0QV3XH5i5vSPTYBE5xd4rmVZEDF0umvA';
     await argon2.verify(dummy, inputPassword);
-    return null;
+    return false;
   } else if (!(await argon2.verify(user.passwordHash, inputPassword))) {
-    return null;
+    return false;
   }
-  return user;
+  return true;
 }
 
-const localStrategy = new Strategy((username, inputPassword, done) => {
-  User.findOne({ username })
-    .then((user) => verifyUser(user, inputPassword))
-    .then((user) => {
-      if (user) {
-        done(null, user);
-      } else {
-        done(null, false, { message: 'Incorrect username or password' });
-      }
-    });
+const localStrategy = new Strategy(async (username, inputPassword, done) => {
+  const user = await User.findOne({ username });
+
+  if (!(await verifyUser(user, inputPassword))) {
+    done(null, false, { message: 'Incorrect username or password' });
+    return;
+  }
+  done(null, user);
 });
 
 /* eslint-disable no-underscore-dangle */

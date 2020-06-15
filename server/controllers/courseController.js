@@ -3,10 +3,10 @@ const Course = require('../models/course');
 /**
 queries mongo for any course models and calls successCallback on what is returned
 */
-function queryCourses() {
-  return Course.find().exec();
+async function queryCourses() {
+  return Course.find();
 }
 
-module.exports.getCourses = (req, res) => {
-  queryCourses().then((courses) => res.json(courses));
+module.exports.getCourses = async (req, res) => {
+  res.json(await queryCourses());
 };

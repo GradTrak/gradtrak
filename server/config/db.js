@@ -7,32 +7,10 @@ const CONFIG = {
   useUnifiedTopology: true,
 };
 
-module.exports.connect = (done) => {
-  if (!done) {
-    return new Promise((resolve, reject) => {
-      module.exports.connect((err, conn) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(conn);
-        }
-      });
-    });
-  }
+module.exports.connect = async () => {
+  await mongoose.connect(dbUrl, CONFIG);
 
-  mongoose.connect(dbUrl, CONFIG);
+  console.log('MongoDB connected');
 
-  const db = mongoose.connection;
-
-  db.on('error', (err) => {
-    console.error(err);
-    done(err);
-  });
-
-  db.once('open', () => {
-    console.log('MongoDB connected');
-    done(null, db);
-  });
-
-  return null;
+  return mongoose.connection;
 };
