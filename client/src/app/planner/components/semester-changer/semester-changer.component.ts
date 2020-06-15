@@ -29,7 +29,8 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.semestersInput) { //this creates a deep clone of the map for the arrays
+    if (this.semestersInput) {
+      // this creates a deep clone of the map for the arrays
       this.semesters = new Map<string, Semester[]>();
       this.semestersInput.forEach((value, key) => {
         this.semesters.set(key, [...value]);
@@ -67,7 +68,7 @@ export class SemesterChangerComponent implements OnInit {
 
   getAcademicYearName(semester: Semester): string {
     const semArr = semester.name.split(' ');
-    const semesterYear = parseInt(semArr[1]) - (semArr[0] !== 'Fall' ? 1 : 0); // this feels so incredibly clunky.
+    const semesterYear = parseInt(semArr[1], 10) - (semArr[0] !== 'Fall' ? 1 : 0); // this feels so incredibly clunky.
     return `${semesterYear.toString()}-${(semesterYear + 1).toString()}`; // eg '2019-2020'
   }
 
