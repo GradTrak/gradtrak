@@ -68,7 +68,7 @@ export class SemesterChangerComponent implements OnInit {
 
   getAcademicYearName(semester: Semester): string {
     const semArr = semester.name.split(' ');
-    const semesterYear = parseInt(semArr[1], 10) - (semArr[0] !== 'Fall' ? 1 : 0); // this feels so incredibly clunky.
+    const semesterYear = parseInt(semArr[1]) - (semArr[0] !== 'Fall' ? 1 : 0); // this feels so incredibly clunky.
     return `${semesterYear.toString()}-${(semesterYear + 1).toString()}`; // eg '2019-2020'
   }
 
