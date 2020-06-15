@@ -32,7 +32,7 @@ export class UserData {
     Object.entries(proto.semesters).forEach(([key, value]) => {
       semesters.set(
         key,
-        value.map((semesterProto: SemesterPrototype) =>
+        (value as SemesterPrototype[]).map((semesterProto: SemesterPrototype) =>
           semesterProto ? new Semester(semesterProto, coursesMap) : null,
         ),
       );

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnChanges, ViewChild, TemplateRef } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Semester } from '../../models/semester.model';
 import { UserService } from '../../services/user.service';
@@ -8,7 +8,7 @@ import { UserService } from '../../services/user.service';
   templateUrl: './semester-pane.component.html',
   styleUrls: ['./semester-pane.component.scss'],
 })
-export class SemesterPaneComponent implements OnInit, OnChanges {
+export class SemesterPaneComponent implements OnInit {
   @Input() readonly semesters: Map<string, Semester[]>;
   semesterArr: Semester[];
 

@@ -51,7 +51,7 @@ export class SemesterChangerComponent implements OnInit {
   /** Turns a map of semesters into an array of semesters.
    * @return an array of all the semestsers in the values of the map
    */
-  getSemArr(mapping: Map<string, Semester[]>): Semester[] {
+  getSemArr(): Semester[] {
     return Array.from(this.semesters.keys())
       .sort()
       .map((key) => this.semesters.get(key))
