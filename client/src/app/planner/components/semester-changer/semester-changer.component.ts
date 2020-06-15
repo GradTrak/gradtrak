@@ -29,7 +29,7 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.semestersInput) {
+    if (this.semestersInput) { //this creates a deep clone of the map for the arrays
       this.semesters = new Map<string, Semester[]>();
       this.semestersInput.forEach((value, key) => {
         this.semesters.set(key, [...value]);
