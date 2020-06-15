@@ -1,7 +1,7 @@
 import { SemesterPrototype } from './semester.prototype';
 
 export interface UserDataPrototype {
-  semesters: Map<string, SemesterPrototype[]>;
+  semesters: any;
   goalIds: string[];
   manuallyFulfilledReqs: object;
 }

@@ -48,11 +48,10 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   /** Turns a map of semesters into an array of semesters.
-   * @param mapping a mapping of the academic year to their corresponding semesters
    * @return an array of all the semestsers in the values of the map
    */
   getSemArr(mapping: Map<string, Semester[]>): Semester[] {
-    return Array.from(mapping.keys())
+    return Array.from(this.semesters.keys())
       .sort()
       .map((key) => mapping.get(key))
       .flat()
@@ -85,7 +84,7 @@ export class SemesterChangerComponent implements OnInit {
       return;
     }
     const semesterName: string = `${term} ${yearNum}`;
-    if (this.getSemArr(this.semesters).some((semester: Semester) => semester.name === semesterName)) {
+    if (this.getSemArr().some((semester: Semester) => semester.name === semesterName)) {
       this.errorMessage = 'This semester is already in your schedule!';
       return;
     }
