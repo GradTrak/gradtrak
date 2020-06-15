@@ -37,7 +37,7 @@ export class SemesterChangerComponent implements OnInit {
       });
     }
     this.termInput = 'Fall';
-    this.yearNum = 2020; // FIXME make it the current year.
+    this.yearNum = 2020; // TODO make it the current year.
   }
 
   openSemesterAdder(): void {
@@ -57,7 +57,6 @@ export class SemesterChangerComponent implements OnInit {
       .map((key) => mapping.get(key))
       .flat()
       .filter((a) => a);
-    // consider making this static. Or just having it not take in args?
   }
 
   /**
@@ -80,7 +79,6 @@ export class SemesterChangerComponent implements OnInit {
    */
   addSemester(term: string, yearNum: number): void {
     if (!(term && yearNum) || yearNum < 2000 || yearNum > 2050) {
-      // console.log(term, yearNum)
       this.errorMessage = 'Please select a term and a valid year.';
       return;
     }
@@ -99,7 +97,7 @@ export class SemesterChangerComponent implements OnInit {
       this.semesters.set(academicYearName, [null, null, null]);
       this.semesters.get(academicYearName)[index] = newSemester;
     }
-    this.closeSemesterAdder(); // optional. We can decide if this is needed.
+    this.closeSemesterAdder();
   }
 
   removeSemester(semester: Semester): void {
