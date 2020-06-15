@@ -67,8 +67,8 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   searchFunction(input: string, courseList: Course[]): Course[] {
-    const processedInput = input.toLowerCase().replace(/[^\w]/g, '');
-    return courseList.filter((course) => {
+    const processedInput = input.toLowerCase().replace(/[^\w]/g, ''); //remove whitespace from input.
+    const resultCourses = courseList.filter((course) => {
       const canonicalName: string = course.toString();
       const names: string[] = [canonicalName];
       const deptAlises: string[] = CourseSearcherComponent.DEPT_ALIASES.get(course.dept);
@@ -79,18 +79,40 @@ export class CourseSearcherComponent implements OnInit {
         .map((name: string) => name.toLowerCase().replace(/[^\w]/g, ''))
         .some((name: string) => name.includes(processedInput));
     });
+    return this.courseSorter(resultCourses, input)
   }
 
   /**
    * Given a list of courses, considers the current search param and sorts the
    * courses, returning an array which has the most relevant courses up top.
+   * @param input The input of the user
+   * @param courses the list of courses being sorted.
    */
-  courseSorter(courses: Course[]): Course[] {
-    if (this.searchedCourse instanceof Course) {
-      return [this.searchedCourse]; //if it's not a search term.
-    }
-    const priorityFunction = (a, b) => (-1);
-    return courses.sort(priorityFunction)
+  courseSorter(courses: Course[], input: string): Course[] {
+    /**
+     * Assigns a "how closely it's matched" value from 0 to 1000, from the following
+     * rules, such that each level takes prece:
+     * - 1000 if the course number AND dept are contained. eg cs61a
+     * - 500 if the course number OR dept are matched exactly. eg compsci, cs, 61a
+     * - 100 if it contains the number or dept in any way.
+     * - 10 for each case of the term containing a part of the description.
+     * - 1 for something else.
+     * @param course a course to find the priority value for.
+     */
+    const priorityFunction = (course: Course) => {
+      const courseNum = course.no.toLowerCase();
+      let sum = 0;
+      const splitSearchTerm: string[] = input.toLowerCase().split(' ')
+      //If it includes any of the dept aliases
+      let deptAlises: Course[] = (CourseSearcherComponent.DEPT_ALIASES.get(course.dept) || []);
+      deptAlises = [...deptAlises].concat([course.dept]).map(deptName => deptName.toLowerCase());
+      const containsDept: boolean = deptAlises.some(dept => splitSearchTerm.includes(dept));
+      const containsNum: boolean = splitSearchTerm.includes(courseNum);
+      if (containsDept && containsNum) {return 1000;}
+      if (containsDept || containsNum) {return 500;}
+      return sum;
+    };
+    return courses.sort((course1, course2) => (priorityFunction(course1) - priorityFunction(course2))) //Should I make a copy of courses here?
   }
 
   /**
@@ -104,7 +126,6 @@ export class CourseSearcherComponent implements OnInit {
       debounceTime(150),
       distinctUntilChanged(),
       map((searchTerm) => (searchTerm.length < 2 ? [] : this.searchFunction(searchTerm, this.allCourses))),
-      map(this.courseSorter),
       map((results: Course[]) => results.slice(0, 8)),
       // TODO: sort this by search rankings for relevance
     );
