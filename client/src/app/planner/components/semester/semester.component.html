@@ -1,0 +1,58 @@
+<div class="semester-name">{{ semester.name }}</div>
+<hr />
+<table>
+  <colgroup>
+    <col class="name" />
+    <col class="title" />
+    <col class="units" />
+    <col class="button-cell" />
+  </colgroup>
+  <tbody>
+    <tr class="header">
+      <td>Class</td>
+      <td>Title</td>
+      <td>Units</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let course of semester.courses">
+      <td class="name">
+        <ng-container *ngIf="isDuplicate(course)">
+          <i class="material-icons" [ngbPopover]="duplicateCoursePopover" triggers="mouseenter:mouseleave">
+            error_outline
+          </i>
+          <ng-template #duplicateCoursePopover>
+            This course is duplicated in:
+            <ng-container *ngFor="let dupSemester of getSemestersWithCourse(course)">
+              <br />
+              {{ dupSemester.name }}
+            </ng-container>
+          </ng-template>
+        </ng-container>
+        {{ course.dept + ' ' + course.no + ' ' }}
+      </td>
+      <td class="title">
+        {{ course.title }}
+      </td>
+      <td class="units">
+        {{ course.units }}
+      </td>
+      <td class="button-cell">
+        <div ngbDropdown class="dropdown-sm">
+          <button ngbDropdownToggle class="gt-button course-more-button"></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem (click)="removeCourse(course)">Remove</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr></tr>
+  </tbody>
+</table>
+<button class="gt-button course-adder" (click)="openAdder()">+</button>
+
+<ng-template #courseAdder>
+  <div class="modal-body">
+    <h4>Add a class to {{ semester.name }}</h4>
+    <app-course-searcher (courseReturned)="addCourse($event)"></app-course-searcher>
+  </div>
+</ng-template>

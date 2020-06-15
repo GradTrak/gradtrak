@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.name {
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(4px);
+}
+
+.collapsed {
+  .button {
+    transform: translateY(4px) rotate(-90deg);
+  }
+
+  .requirements {
+    display: none;
+  }
+}
+
+.requirements {
+  margin-left: 24px;
+}

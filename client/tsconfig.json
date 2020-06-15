@@ -17,13 +17,7 @@
     "lib": [
       "es2019",
       "dom"
-    ],
-    "paths": {
-      "common/*": [ "common/*" ],
-      "components/*": [ "app/components/*" ],
-      "models/*": [ "app/models/*" ],
-      "services/*": [ "app/services/*" ]
-    }
+    ]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
