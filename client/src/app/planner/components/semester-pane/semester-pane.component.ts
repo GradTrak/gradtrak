@@ -19,8 +19,6 @@ export class SemesterPaneComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {}
 
-  ngOnChanges(): void {}
-
   openSemesterChanger(): void {
     this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
   }
