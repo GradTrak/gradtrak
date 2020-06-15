@@ -5,11 +5,15 @@ import { RequirementSet } from './requirement-set.model';
 import { Semester } from './semester.model';
 
 export class UserData {
-  semesters: Semester[];
+  semesters: Map<string, Semester[]>;
   goals: RequirementSet[];
   manuallyFulfilledReqs: Map<string, Set<string>>;
 
-  constructor(semesters: Semester[], goals: RequirementSet[], manuallyFulfilledReqs?: Map<string, Set<string>>) {
+  constructor(
+    semesters: Map<string, Semester[]>,
+    goals: RequirementSet[],
+    manuallyFulfilledReqs?: Map<string, Set<string>>,
+  ) {
     this.semesters = semesters;
     this.goals = goals;
     if (manuallyFulfilledReqs) {
@@ -24,9 +28,15 @@ export class UserData {
     coursesMap: Map<string, Course>,
     reqSetMap: Map<string, RequirementSet>,
   ): UserData {
-    const semesters: Semester[] = proto.semesters.map(
-      (semesterProto: SemesterPrototype) => new Semester(semesterProto, coursesMap),
-    );
+    const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
+    Object.entries(proto.semesters).forEach(([key, value]) => {
+      semesters.set(
+        key,
+        (value as SemesterPrototype[]).map((semesterProto: SemesterPrototype) =>
+          semesterProto ? new Semester(semesterProto, coursesMap) : null,
+        ),
+      );
+    });
     const goals: RequirementSet[] = proto.goalIds.map((goalId: string) => reqSetMap.get(goalId));
     const manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>();
     Object.entries(proto.manuallyFulfilledReqs).forEach((entry) => {
