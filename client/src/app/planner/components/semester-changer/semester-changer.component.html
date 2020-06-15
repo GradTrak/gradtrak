@@ -8,15 +8,15 @@
 <button class="btn btn-primary" (click)="returnSemesters()">Confirm</button>
 
 <ng-template #semesterAdder>
-  <div class="modal-body semester-adder">
-    <h4 style="padding-top: 5px;">Add a semester</h4>
-    <form class="semesterInput" (ngSubmit)="addSemester(termInput, yearNum)">
-      <div class="form-row">
+  <div class="modal-body">
+    <h4 class="header">Add a semester</h4>
+    <form (ngSubmit)="addSemester(termInput, yearNum)">
+      <div class="form-group row">
         <div class="col">
-          <h5>Term:</h5>
+          <label>Semester</label>
         </div>
         <div class="col">
-          <select name="termInput" class="term-input" type="string" [(ngModel)]="termInput">
+          <select class="form-control" name="termInput" type="string" [(ngModel)]="termInput">
             <option ngValue="Fall" selected="selected">Fall</option>
             <!-- TODO selected = selected doesn't actually work for some reason? -->
             <option ngValue="Spring">Spring</option>
@@ -24,22 +24,30 @@
           </select>
         </div>
       </div>
-      <div class="form-row">
+      <div class="form-group row">
         <div class="col">
-          <h5>Year:</h5>
+          <label>Year</label>
         </div>
         <div class="col">
-          <input type="number" class="year-name" name="year-name" min="2010" max="2030" [(ngModel)]="yearNum" />
+          <input
+            class="form-control year-name"
+            type="number"
+            name="year-name"
+            min="2010"
+            max="2030"
+            [(ngModel)]="yearNum"
+          />
         </div>
       </div>
-      <br />
-      <br />
-      <div class="form-row">
-        <div class="col">
-          <button class="btn btn-primary" type="submit">Add</button>
+      <div class="form-group row justify-content-center">
+        <div class="col-6">
+          <button class="btn btn-primary btn-block" type="submit">Add</button>
         </div>
-        <p>{{ errorMessage }}</p>
-        <!--- TODO: bootstrappify. Was overriden in merge-->
+      </div>
+      <div class="form-group row">
+        <div class="col error">
+          {{ errorMessage }}
+        </div>
       </div>
     </form>
   </div>

@@ -1,5 +1,17 @@
+.header {
+  margin-top: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #283adc;
+}
+
 .table {
   margin: 32px;
+}
+
+.error {
+  color: red;
 }
 
 .material-icons {
@@ -8,18 +20,4 @@
   font-size: 1.25rem;
   color: red;
   cursor: pointer;
-}
-
-.yearName {
-  width: 95px;
-  border-radius: 6px;
-}
-
-.semesterInput {
-  width: 80%;
-}
-
-.col {
-  margin-left: 10px;
-  margin-top: 5px;
 }
