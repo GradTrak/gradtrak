@@ -82,6 +82,18 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   /**
+   * Given a list of courses, considers the current search param and sorts the
+   * courses, returning an array which has the most relevant courses up top.
+   */
+  courseSorter(courses: Course[]): Course[] {
+    if (this.searchedCourse instanceof Course) {
+      return [this.searchedCourse]; //if it's not a search term.
+    }
+    const priorityFunction = (a, b) => (-1);
+    return courses.sort(priorityFunction)
+  }
+
+  /**
    * Given a string observable, return all courses that match the specification of searchFunction in the form of an
    * Observable.
    *
@@ -92,6 +104,7 @@ export class CourseSearcherComponent implements OnInit {
       debounceTime(150),
       distinctUntilChanged(),
       map((searchTerm) => (searchTerm.length < 2 ? [] : this.searchFunction(searchTerm, this.allCourses))),
+      map(this.courseSorter),
       map((results: Course[]) => results.slice(0, 8)),
       // TODO: sort this by search rankings for relevance
     );
