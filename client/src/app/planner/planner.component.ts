@@ -4,6 +4,9 @@ import { Course } from './models/course.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
 import { UserData } from './models/user-data.model';
+import { CourseService } from './services/course.service';
+import { RequirementService } from './services/requirement.service';
+import { TagService } from './services/tag.service';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -27,7 +30,13 @@ export class PlannerComponent implements OnInit {
 
   private loginPrompted: boolean;
 
-  constructor(private userService: UserService, private modalService: NgbModal) {
+  constructor(
+    private courseService: CourseService,
+    private requirementService: RequirementService,
+    private tagService: TagService,
+    private userService: UserService,
+    private modalService: NgbModal,
+  ) {
     this.isLoading = true;
   }
 
@@ -59,6 +68,11 @@ export class PlannerComponent implements OnInit {
       this.currentCourses = this.getCurrentCourses();
     });
     this.userService.queryWhoami().subscribe();
+
+    /* Prefetch data */
+    this.courseService.getCourses().subscribe();
+    this.requirementService.getRequirements().subscribe();
+    this.tagService.getTags().subscribe();
   }
 
   closeModal(): void {
