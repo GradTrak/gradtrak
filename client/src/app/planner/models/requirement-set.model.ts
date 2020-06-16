@@ -12,30 +12,47 @@ export class RequirementSet {
   id: string;
   name: string;
   parent: RequirementSet;
-  type: string; // string id. either major, minor, other, or unselectable
+  type: string;
   requirementCategories: RequirementCategory[];
 
   constructor(
+    id: string,
+    name: string,
+    parent: RequirementSet,
+    type: string,
+    requirementCategories: RequirementCategory[],
+  ) {
+    this.id = id;
+    this.name = name;
+    this.parent = parent;
+    this.type = type;
+    this.requirementCategories = requirementCategories;
+  }
+
+  static fromProto(
     proto: RequirementSetPrototype,
     reqSetMap: Map<string, RequirementSet>,
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
-  ) {
-    this.id = proto.id;
-    this.name = proto.name;
-    this.type = proto.type;
-    this.requirementCategories = proto.requirementCategories.map(
-      (reqCategoryProto: RequirementCategoryPrototype) =>
-        new RequirementCategory(reqCategoryProto, coursesMap, tagsMap),
-    );
-
+  ): RequirementSet {
+    let parent: RequirementSet;
     if (proto.parentId) {
-      this.parent = reqSetMap.get(proto.parentId);
-      if (!this.parent) {
+      parent = reqSetMap.get(proto.parentId);
+      if (!parent) {
         console.error(`Parent RequirementSet not yet instantiated or nonexistent: ${proto.parentId}`);
       }
     } else {
-      this.parent = null;
+      parent = null;
     }
+
+    return new RequirementSet(
+      proto.id,
+      proto.name,
+      parent,
+      proto.type,
+      proto.requirementCategories.map((reqCategoryProto: RequirementCategoryPrototype) =>
+        RequirementCategory.fromProto(reqCategoryProto, coursesMap, tagsMap),
+      ),
+    );
   }
 }
