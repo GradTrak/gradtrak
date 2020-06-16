@@ -101,7 +101,6 @@ export class CourseSearcherComponent implements OnInit {
      * - exactly 500 if the course number OR dept are matched exactly. eg compsci, cs, 61a
      * - 200 if the search term contains the number or dept in any way.
      * - up to 100 depending on the popularity of the course.//NOT IMPLEMENTED
-     * - 20 if the coursedept + no combo contains the search term. eg cs61 //NOT IMPLEMENTED
      * - 10 if the course number or department contains the search term.
      * - 1 for each case of the term containing a part of the description. //NOT IMPLEMENTED
      * @param course a course to find the priority value for.
@@ -111,7 +110,7 @@ export class CourseSearcherComponent implements OnInit {
       let sum = 0;
       const splitInput: string[] = input.toLowerCase().split(' ');
       // If it includes any of the dept aliases
-      let deptAlises: Course[] = CourseSearcherComponent.DEPT_ALIASES.get(course.dept) || [];
+      let deptAlises: string[] = CourseSearcherComponent.DEPT_ALIASES.get(course.dept) || [];
       deptAlises = [...deptAlises]
         .concat([course.dept])
         .map((deptName) => deptName.toLowerCase().replace(/[^\w]/g, ''));
