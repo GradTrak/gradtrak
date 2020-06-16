@@ -46,12 +46,11 @@ export class MutexRequirement extends Requirement {
       return [[]];
     }
     const firstReq: StandaloneRequirement = requirements[0];
-    const fulfillingCourses: (Course | boolean)[] = [
-      null,
-      ...courses.filter((course: Course) => firstReq.isFulfilled(course, override)),
-    ];
+    let fulfillingCourses: (Course | boolean)[];
     if (override && override.has(firstReq.id)) {
-      fulfillingCourses[0] = true;
+      fulfillingCourses = [true];
+    } else {
+      fulfillingCourses = [null, ...courses.filter((course: Course) => firstReq.isFulfilled(course, override))];
     }
     return fulfillingCourses.flatMap((course: Course) =>
       MutexRequirement.getFulfillmentMapping(
