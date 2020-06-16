@@ -66,6 +66,11 @@ export class CourseSearcherComponent implements OnInit {
     });
   }
 
+  /**
+   * A function which takes a list of courses and an input and finds the courses
+   * that are related to that input. In particular, it's defined to be if the name
+   * of the course includes the search term.
+   */
   searchFunction(input: string, courseList: Course[]): Course[] {
     const processedInput = input.toLowerCase().replace(/[^\w]/g, ''); //remove whitespace from input.
     const resultCourses = courseList.filter((course) => {
@@ -91,28 +96,44 @@ export class CourseSearcherComponent implements OnInit {
   courseSorter(courses: Course[], input: string): Course[] {
     /**
      * Assigns a "how closely it's matched" value from 0 to 1000, from the following
-     * rules, such that each level takes prece:
-     * - 1000 if the course number AND dept are contained. eg cs61a
-     * - 500 if the course number OR dept are matched exactly. eg compsci, cs, 61a
-     * - 100 if it contains the number or dept in any way.
-     * - 10 for each case of the term containing a part of the description.
-     * - 1 for something else.
+     * rules:
+     * - exactly 1000 if the course number AND dept are contained. eg cs61a
+     * - exactly 500 if the course number OR dept are matched exactly. eg compsci, cs, 61a
+     * - 200 if the search term contains the number or dept in any way.
+     * - up to 100 depending on the popularity of the course.//NOT IMPLEMENTED
+     * - 20 if the coursedept + no combo contains the search term. eg cs61 //NOT IMPLEMENTED
+     * - 10 if the course number or department contains the search term.
+     * - 1 for each case of the term containing a part of the description. //NOT IMPLEMENTED
      * @param course a course to find the priority value for.
      */
     const priorityFunction = (course: Course) => {
       const courseNum = course.no.toLowerCase();
       let sum = 0;
-      const splitSearchTerm: string[] = input.toLowerCase().split(' ')
+      const splitInput: string[] = input.toLowerCase().split(' ')
       //If it includes any of the dept aliases
       let deptAlises: Course[] = (CourseSearcherComponent.DEPT_ALIASES.get(course.dept) || []);
-      deptAlises = [...deptAlises].concat([course.dept]).map(deptName => deptName.toLowerCase());
-      const containsDept: boolean = deptAlises.some(dept => splitSearchTerm.includes(dept));
-      const containsNum: boolean = splitSearchTerm.includes(courseNum);
+      deptAlises = [...deptAlises].concat([course.dept]).map(deptName => deptName.toLowerCase().replace(/[^\w]/g, ''));
+      const containsDept: boolean = deptAlises.some(dept => splitInput.includes(dept));
+      const containsNum: boolean = splitInput.includes(courseNum);
       if (containsDept && containsNum) {return 1000;}
-      if (containsDept || containsNum) {return 500;}
+      if (containsDept || containsNum) {return 500;} //consider making this additive to the sum.
+      const blockedInput = input.toLowerCase().replace(/[^\w]/g, ''); //remove whitespace from input.
+      //if any part of the search contains the courseNum or a dept alias
+      if (blockedInput.includes(courseNum)) {sum += 200}
+      if (deptAlises.some(dept => blockedInput.includes(dept))) {
+        sum += 200;
+      }
+      if (courseNum.includes(blockedInput)) {sum += 10}
+      //There's a lot of seperate iterations, but these are "some". We can consider doing it all at once, should it be needed.
+      if (deptAlises.some(dept => dept.includes(blockedInput))) {
+        sum += 10;
+      }
+      if (deptAlises.includes('ee')){
+        console.log(course, sum)
+      }
       return sum;
     };
-    return courses.sort((course1, course2) => (priorityFunction(course1) - priorityFunction(course2))) //Should I make a copy of courses here?
+    return courses.sort((course1, course2) => (priorityFunction(course2) - priorityFunction(course1))) //Should I make a copy of courses here?
   }
 
   /**
