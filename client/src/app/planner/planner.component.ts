@@ -46,8 +46,8 @@ export class PlannerComponent implements OnInit {
         const wasLoading: boolean = this.isLoading;
         this.isLoading = false;
 
-        /* Fetch user data if just logged in */
         if (nextState.loggedIn && !this.state.loggedIn) {
+          /* Fetch user data if just logged in */
           this.userService.fetchUserData();
           this.isLoading = true;
         } else if (!nextState.loggedIn && !this.loginPrompted) {
@@ -59,8 +59,8 @@ export class PlannerComponent implements OnInit {
           this.openInitializer();
         }
 
-        /* Save user data if logged in and not just loaded */
-        if (!wasLoading && nextState.loggedIn) {
+        /* Save user data if logged in, not just loaded, and user data changed */
+        if (!wasLoading && nextState.loggedIn && this.state.userData !== nextState.userData) {
           this.userService.saveUserData();
         }
       }
