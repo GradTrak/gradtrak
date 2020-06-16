@@ -1,54 +1,7 @@
-<!-- TODO This seems slightly janky -->
-
-<ng-template #standardReq>
-  <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
-    <div ngbDropdownMenu>
-      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
-        Mark as Fulfilled
-      </button>
-      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
-        Mark as Unfulfilled
-      </button>
-    </div>
-  </div>
-  {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
-</ng-template>
-
-<ng-template #tagReq>
-  <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
-    <div ngbDropdownMenu>
-      <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
-        Show Fulfilling Courses
-      </button>
-      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
-        Mark as Fulfilled
-      </button>
-      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
-        Mark as Unfulfilled
-      </button>
-    </div>
-  </div>
-  {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
-</ng-template>
+<ng-template #standardReq>{{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span></ng-template>
 
 <ng-template #multiReq>
-  <ng-container *ngIf="!getMulti().hidden; else multiReqHidden">
-    <div ngbDropdown class="req-more">
-      <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
-      <div ngbDropdownMenu>
-        <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
-          Show Fulfilling Courses
-        </button>
-        <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
-          Mark as Fulfilled
-        </button>
-        <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
-          Mark as Unfulfilled
-        </button>
-      </div>
-    </div>
+  <ng-container *ngIf="!getMulti().hidden; else standardReq">
     {{
       getMulti().numRequired === 1
         ? 'One of'
@@ -65,40 +18,9 @@
       (onManualUnfulfill)="manuallyUnfulfill($event)"
     ></app-requirement>
   </ng-container>
-  <ng-template #multiReqHidden>
-    <div ngbDropdown class="req-more">
-      <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
-      <div ngbDropdownMenu>
-        <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
-          Show Fulfilling Courses
-        </button>
-        <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
-          Mark as Fulfilled
-        </button>
-        <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
-          Mark as Unfulfilled
-        </button>
-      </div>
-    </div>
-    {{ requirement.name }}<span *ngIf="getAnnotation()">&nbsp;*</span>
-  </ng-template>
 </ng-template>
 
 <ng-template #unitReq>
-  <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
-    <div ngbDropdownMenu>
-      <button ngbDropdownItem (click)="openRequirementDisplay(getUnit().requirement)">
-        Show Fulfilling Courses
-      </button>
-      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
-        Mark as Fulfilled
-      </button>
-      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
-        Mark as Unfulfilled
-      </button>
-    </div>
-  </div>
   {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
   <br />
   {{ getUnit().requirement.toString() }}
@@ -110,17 +32,6 @@
 </ng-template>
 
 <ng-template #mutexReq>
-  <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
-    <div ngbDropdownMenu>
-      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
-        Mark as Fulfilled
-      </button>
-      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
-        Mark as Unfulfilled
-      </button>
-    </div>
-  </div>
   Distinctly fulfill
   <ng-container *ngIf="getMutex().getFulfillment(courses, manuallyFulfilled) as fulfillments">
     <app-requirement
@@ -141,6 +52,20 @@
   [ngbPopover]="requirement.getAnnotation() ? annotation : null"
   [triggers]="requirement.getAnnotation() ? 'mouseenter:mouseleave' : null"
 >
+  <div ngbDropdown class="req-more">
+    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
+    <div ngbDropdownMenu>
+      <button *ngIf="isStandalone()" ngbDropdownItem (click)="openRequirementDisplay(getStandalone())">
+        Show Fulfilling Courses
+      </button>
+      <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
+        Mark as Fulfilled
+      </button>
+      <button *ngIf="isManuallyFulfilled()" ngbDropdownItem (click)="manuallyUnfulfill(requirement)">
+        Mark as Unfulfilled
+      </button>
+    </div>
+  </div>
   <ng-container *ngTemplateOutlet="getReqTemplate()"></ng-container>
 </div>
 
