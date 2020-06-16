@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { Course } from '../../../models/course.model';
-import { Requirement } from '../../../models/requirement.model';
-import { MultiRequirement } from '../../../models/requirements/multi-requirement.model';
-import { MutexRequirement } from '../../../models/requirements/mutex-requirement.model';
-import { UnitRequirement } from '../../../models/requirements/unit-requirement.model';
-import { PolyRequirement } from '../../../models/requirements/poly-requirement.model';
-import { TagRequirement } from '../../../models/requirements/tag-requirement.model';
+import { Course } from '../../models/course.model';
+import { Requirement } from '../../models/requirement.model';
+import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
+import { MutexRequirement } from '../../models/requirements/mutex-requirement.model';
+import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
+import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
+import { TagRequirement } from '../../models/requirements/tag-requirement.model';
 
 @Component({
   selector: 'app-requirement',
   templateUrl: './requirement.component.html',
-  styleUrls: ['./requirement.component.scss', '../requirement-category.component.scss'],
+  styleUrls: ['./requirement.component.scss'],
 })
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
