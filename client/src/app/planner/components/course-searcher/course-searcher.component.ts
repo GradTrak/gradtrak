@@ -72,7 +72,7 @@ export class CourseSearcherComponent implements OnInit {
    * of the course includes the search term.
    */
   searchFunction(input: string, courseList: Course[]): Course[] {
-    const processedInput = input.toLowerCase().replace(/[^\w]/g, ''); //remove whitespace from input.
+    const processedInput = input.toLowerCase().replace(/[^\w]/g, ''); // remove whitespace from input.
     const resultCourses = courseList.filter((course) => {
       const canonicalName: string = course.toString();
       const names: string[] = [canonicalName];
@@ -84,7 +84,7 @@ export class CourseSearcherComponent implements OnInit {
         .map((name: string) => name.toLowerCase().replace(/[^\w]/g, ''))
         .some((name: string) => name.includes(processedInput));
     });
-    return this.courseSorter(resultCourses, input)
+    return this.courseSorter(resultCourses, input);
   }
 
   /**
@@ -106,34 +106,41 @@ export class CourseSearcherComponent implements OnInit {
      * - 1 for each case of the term containing a part of the description. //NOT IMPLEMENTED
      * @param course a course to find the priority value for.
      */
-    const priorityFunction = (course: Course) => {
+    const priorityFunction = (course: Course): number => {
       const courseNum = course.no.toLowerCase();
       let sum = 0;
-      const splitInput: string[] = input.toLowerCase().split(' ')
-      //If it includes any of the dept aliases
-      let deptAlises: Course[] = (CourseSearcherComponent.DEPT_ALIASES.get(course.dept) || []);
-      deptAlises = [...deptAlises].concat([course.dept]).map(deptName => deptName.toLowerCase().replace(/[^\w]/g, ''));
-      const containsDept: boolean = deptAlises.some(dept => splitInput.includes(dept));
+      const splitInput: string[] = input.toLowerCase().split(' ');
+      // If it includes any of the dept aliases
+      let deptAlises: Course[] = CourseSearcherComponent.DEPT_ALIASES.get(course.dept) || [];
+      deptAlises = [...deptAlises]
+        .concat([course.dept])
+        .map((deptName) => deptName.toLowerCase().replace(/[^\w]/g, ''));
+      const containsDept: boolean = deptAlises.some((dept) => splitInput.includes(dept));
       const containsNum: boolean = splitInput.includes(courseNum);
-      if (containsDept && containsNum) {return 1000;}
-      if (containsDept || containsNum) {return 500;} //consider making this additive to the sum.
-      const blockedInput = input.toLowerCase().replace(/[^\w]/g, ''); //remove whitespace from input.
-      //if any part of the search contains the courseNum or a dept alias
-      if (blockedInput.includes(courseNum)) {sum += 200}
-      if (deptAlises.some(dept => blockedInput.includes(dept))) {
+      if (containsDept && containsNum) {
+        return 1000;
+      }
+      if (containsDept || containsNum) {
+        return 500;
+      } // consider making this additive to the sum.
+      const blockedInput = input.toLowerCase().replace(/[^\w]/g, ''); // remove whitespace from input.
+      // if any part of the search contains the courseNum or a dept alias
+      if (blockedInput.includes(courseNum)) {
         sum += 200;
       }
-      if (courseNum.includes(blockedInput)) {sum += 10}
-      //There's a lot of seperate iterations, but these are "some". We can consider doing it all at once, should it be needed.
-      if (deptAlises.some(dept => dept.includes(blockedInput))) {
+      if (deptAlises.some((dept) => blockedInput.includes(dept))) {
+        sum += 200;
+      }
+      if (courseNum.includes(blockedInput)) {
         sum += 10;
       }
-      if (deptAlises.includes('ee')){
-        console.log(course, sum)
+      // There's a lot of seperate iterations, but these are "some". We can consider doing it all at once, should it be needed.
+      if (deptAlises.some((dept) => dept.includes(blockedInput))) {
+        sum += 10;
       }
       return sum;
     };
-    return courses.sort((course1, course2) => (priorityFunction(course2) - priorityFunction(course1))) //Should I make a copy of courses here?
+    return courses.sort((course1, course2) => priorityFunction(course2) - priorityFunction(course1)); // Should I make a copy of courses here?
   }
 
   /**
