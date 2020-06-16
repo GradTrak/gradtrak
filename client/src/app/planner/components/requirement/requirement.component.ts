@@ -1,17 +1,18 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { Course } from '../../../models/course.model';
-import { Requirement } from '../../../models/requirement.model';
-import { MultiRequirement } from '../../../models/requirements/multi-requirement.model';
-import { MutexRequirement } from '../../../models/requirements/mutex-requirement.model';
-import { UnitRequirement } from '../../../models/requirements/unit-requirement.model';
-import { PolyRequirement } from '../../../models/requirements/poly-requirement.model';
-import { TagRequirement } from '../../../models/requirements/tag-requirement.model';
+import { Course } from '../../models/course.model';
+import { Requirement } from '../../models/requirement.model';
+import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
+import { MutexRequirement } from '../../models/requirements/mutex-requirement.model';
+import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
+import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
+import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
+import { TagRequirement } from '../../models/requirements/tag-requirement.model';
 
 @Component({
   selector: 'app-requirement',
   templateUrl: './requirement.component.html',
-  styleUrls: ['./requirement.component.scss', '../requirement-category.component.scss'],
+  styleUrls: ['./requirement.component.scss'],
 })
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
@@ -37,6 +38,17 @@ export class RequirementComponent implements OnInit {
   constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
+
+  isStandalone(): boolean {
+    return this.requirement instanceof StandaloneRequirement;
+  }
+
+  getStandalone(): StandaloneRequirement {
+    if (!this.isStandalone()) {
+      throw new Error('Attempted to retreive non-StandaloneRequirement as StandaloneRequirement');
+    }
+    return this.requirement as StandaloneRequirement;
+  }
 
   isMulti(): boolean {
     return this.requirement instanceof MultiRequirement || this.isPoly();
@@ -108,17 +120,6 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
-  isTag(): boolean {
-    return this.requirement instanceof TagRequirement;
-  }
-
-  getTag(): TagRequirement {
-    if (!this.isTag()) {
-      throw new Error('Attempted to retreive non-TagRequirement as TagRequirement');
-    }
-    return this.requirement as TagRequirement;
-  }
-
   /**
    * Returns the HTML template of the requirement based on its type.
    *
@@ -134,9 +135,6 @@ export class RequirementComponent implements OnInit {
     }
     if (this.isUnit()) {
       return this.unitReq;
-    }
-    if (this.isTag()) {
-      return this.tagReq;
     }
     return this.standardReq;
   }

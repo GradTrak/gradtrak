@@ -12,6 +12,9 @@ export abstract class Requirement {
     Object.assign(this, obj);
   }
 
+  /* Requirement.fromProto is currently RequirementCategory.reqFromProto to
+   * avoid circular dependencies. */
+
   isFulfilled(courses: Course[], override: Set<string>): boolean {
     if (override && override.has(this.id)) {
       return true;

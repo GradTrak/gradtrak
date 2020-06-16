@@ -199,9 +199,7 @@ export class UserService {
   }
 
   saveUserData(): void {
-    this.http
-      .put(UserService.SEMESTER_API_ENDPOINT, this.getPrototypeFromUserData(this.currentState.userData))
-      .subscribe();
+    this.http.put(UserService.SEMESTER_API_ENDPOINT, UserData.toProto(this.currentState.userData)).subscribe();
   }
 
   /**
@@ -244,16 +242,20 @@ export class UserService {
    * @param {Course} course The course to add.
    * @param {Semester} semester The semester to which to add the course.
    */
-  // TODO Making this a function that returns a clone breaks the course-changer
   addCourse(course: Course, semester: Semester): void {
     if (semester.courses.includes(course)) {
       console.error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
       return;
     }
 
+    // TODO Making this a function that returns a clone breaks the course-changer
     semester.courses = [...semester.courses, course];
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
+      },
     });
   }
 
@@ -263,16 +265,20 @@ export class UserService {
    * @param {Course} course The course to remove.
    * @param {Semester} semester The semester from which to remove the course.
    */
-  // TODO Making this a function that returns a clone breaks the course-changer
   removeCourse(course: Course, semester: Semester): void {
     if (!semester.courses.includes(course)) {
       console.error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
       return;
     }
 
+    // TODO Making this a function that returns a clone breaks the course-changer
     semester.courses = semester.courses.filter((c: Course) => c !== course);
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
+      },
     });
   }
 
@@ -328,34 +334,5 @@ export class UserService {
       ...this.currentState,
       userData,
     });
-  }
-
-  private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
-    userData.semesters.forEach((academicYearSemesters, academicYearName) => {
-      semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
-        if (!semester) {
-          return null;
-        }
-        const semesterPrototype = {
-          ...semester,
-          courseIds: semester.courses.map((course: Course) => course.id),
-        };
-        delete semesterPrototype.courses;
-        return semesterPrototype;
-      });
-    });
-    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
-    const manuallyFulfilledReqs: object = Object.fromEntries(
-      Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
-        entry[0],
-        Array.from(entry[1]),
-      ]),
-    );
-    return {
-      semesters,
-      goalIds,
-      manuallyFulfilledReqs,
-    };
   }
 }

@@ -14,15 +14,27 @@ export class Course {
   equivIds: string[];
   equiv: Course[];
 
-  constructor(proto: CoursePrototype, tagMap: Map<string, Tag>) {
-    this.id = proto.id;
-    this.dept = proto.dept;
-    this.no = proto.no;
-    this.title = proto.title;
-    this.units = proto.units;
-    this.tags = proto.tagIds.map((tagId: string) => tagMap.get(tagId));
-    this.equivIds = proto.equivIds;
+  constructor(id: string, dept: string, no: string, title: string, units: number, tags?: Tag[], equivIds?: string[]) {
+    this.id = id;
+    this.dept = dept;
+    this.no = no;
+    this.title = title;
+    this.units = units;
+    this.tags = tags;
+    this.equivIds = equivIds;
     this.equiv = null;
+  }
+
+  static fromProto(proto: CoursePrototype, tagMap: Map<string, Tag>): Course {
+    return new Course(
+      proto.id,
+      proto.dept,
+      proto.no,
+      proto.title,
+      proto.units,
+      proto.tagIds.map((tagId: string) => tagMap.get(tagId)),
+      proto.equivIds,
+    );
   }
 
   getName(): string {

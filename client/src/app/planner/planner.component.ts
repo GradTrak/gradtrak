@@ -4,6 +4,9 @@ import { Course } from './models/course.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
 import { UserData } from './models/user-data.model';
+import { CourseService } from './services/course.service';
+import { RequirementService } from './services/requirement.service';
+import { TagService } from './services/tag.service';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -27,7 +30,13 @@ export class PlannerComponent implements OnInit {
 
   private loginPrompted: boolean;
 
-  constructor(private userService: UserService, private modalService: NgbModal) {
+  constructor(
+    private courseService: CourseService,
+    private requirementService: RequirementService,
+    private tagService: TagService,
+    private userService: UserService,
+    private modalService: NgbModal,
+  ) {
     this.isLoading = true;
   }
 
@@ -37,8 +46,8 @@ export class PlannerComponent implements OnInit {
         const wasLoading: boolean = this.isLoading;
         this.isLoading = false;
 
-        /* Fetch user data if just logged in */
         if (nextState.loggedIn && !this.state.loggedIn) {
+          /* Fetch user data if just logged in */
           this.userService.fetchUserData();
           this.isLoading = true;
         } else if (!nextState.loggedIn && !this.loginPrompted) {
@@ -50,8 +59,8 @@ export class PlannerComponent implements OnInit {
           this.openInitializer();
         }
 
-        /* Save user data if logged in and not just loaded */
-        if (!wasLoading && nextState.loggedIn) {
+        /* Save user data if logged in, not just loaded, and user data changed */
+        if (!wasLoading && nextState.loggedIn && this.state.userData !== nextState.userData) {
           this.userService.saveUserData();
         }
       }
@@ -59,6 +68,11 @@ export class PlannerComponent implements OnInit {
       this.currentCourses = this.getCurrentCourses();
     });
     this.userService.queryWhoami().subscribe();
+
+    /* Prefetch data */
+    this.courseService.getCourses().subscribe();
+    this.requirementService.getRequirements().subscribe();
+    this.tagService.getTags().subscribe();
   }
 
   closeModal(): void {
