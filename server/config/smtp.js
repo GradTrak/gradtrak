@@ -26,13 +26,14 @@ if (process.env.SMTP_URL) {
   });
 }
 
-function sendMail(options) {
-  return transporter.sendMail({ ...DEFAULT_OPTIONS, ...options }).then((info) => {
-    if (!process.env.SMTP_URL) {
-      console.log('No SMTP_URL environment variable found for message delivery:');
-      console.log(options);
-    }
-    return info;
-  });
+async function sendMail(options) {
+  const info = await transporter.sendMail({ ...DEFAULT_OPTIONS, ...options });
+
+  if (!process.env.SMTP_URL) {
+    console.log('No SMTP_URL environment variable found for message delivery:');
+    console.log(options);
+  }
+
+  return info;
 }
 module.exports.sendMail = sendMail;
