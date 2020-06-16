@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn build:client && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
-    "build-dev": "yarn build-dev:client && rm -rf server/dist && cp -R client/dist/gradtrak server/dist",
-    "start": "yarn start:server",
+    "build": "yarn clean && yarn build:client && cp -R server build && cp -R client/dist/gradtrak build/dist",
+    "build-dev": "yarn clean && yarn build-dev:client && cp -R server build && cp -R client/dist/gradtrak build/dist",
+    "clean": "rm -rf build",
+    "start": "node build/bin/www",
     "watch": "concurrently -n client,server --handle-input \"yarn start:client\" \"yarn watch:server\"",
     "lint": "yarn lint:client && yarn lint:server",
     "lint-fix": "yarn lint-fix:client && yarn lint-fix:server",
@@ -25,7 +26,8 @@
     "lint:server": "eslint \"server/**/*.js\"",
     "lint-fix:server": "eslint --fix \"server/**/*.js\"",
     "pretty:server": "prettier --check \"server/**/*.js\"",
-    "pretty-fix:server": "prettier --check --write \"server/**/*.js\""
+    "pretty-fix:server": "prettier --check --write \"server/**/*.js\"",
+    "heroku-postbuild": "true"
   },
   "dependencies": {
     "@angular/animations": "~8.2.14",

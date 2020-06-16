@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -27,5 +28,5 @@ passport.serializeUser(serializeUser);
 passport.deserializeUser(deserializeUser);
 
 app.use('/api', api);
-app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, 'dist')));
 module.exports = app;
