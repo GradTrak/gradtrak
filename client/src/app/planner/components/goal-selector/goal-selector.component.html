@@ -1,14 +1,16 @@
 <ng-container *ngIf="requirementSets; else loading">
   <div class="row">
     <div class="col-8">
-      <input
-        class="form-control"
-        type="text"
-        placeholder="Search for a major"
-        [(ngModel)]="searchPrompt"
-        (keyup)="updateGoalSearch()"
-      />
-      <div class="row">
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search for a major"
+          [(ngModel)]="searchPrompt"
+          (keyup)="updateGoalSearch()"
+        />
+      </div>
+      <div class="row form-group">
         <div *ngFor="let state of selectionStates" class="col">
           <h4>{{ state.type | titlecase }}</h4>
           <select class="custom-select" size="8" [(ngModel)]="state.selectedSearchedGoal">
