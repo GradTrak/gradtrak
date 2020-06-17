@@ -46,7 +46,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   }
 
   openSelector(): void {
-    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'xl' });
+    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
   }
 
   closeSelector(): void {

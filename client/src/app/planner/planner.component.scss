@@ -5,6 +5,10 @@ $header-height: 5rem;
   height: $header-height;
   position: fixed;
   color: white;
+
+  button {
+    color: white;
+  }
 }
 
 .title {
@@ -27,23 +31,9 @@ $header-height: 5rem;
   width: 100%;
 }
 
-.main {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 0.6fr 0.4fr;
-
-  > * {
-    height: calc(100vh - #{$header-height});
-    overflow-y: scroll;
-  }
-}
-
-app-login {
-  padding: 16px;
-}
-
-app-report-pane {
-  padding: 7px;
+.main > * {
+  height: calc(100vh - #{$header-height});
+  overflow-y: scroll;
 }
 
 $report-button-width: 5rem;
@@ -55,8 +45,6 @@ $report-button-height: 2rem;
   top: calc(50vh + #{$header-height / 2 - $report-button-height / 2});
   width: $report-button-width;
   height: $report-button-height;
-  background-color: #417fdc;
-  color: white;
   font-size: 0.75rem;
   transform: rotate(-90deg);
 }

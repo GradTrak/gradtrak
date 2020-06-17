@@ -24635,6 +24635,14 @@
     "tagIds": []
   },
   {
+    "units": 4,
+    "title": "Principles & Techniques of Data Science",
+    "id": "compscic100",
+    "dept": "COMPSCI",
+    "no": "C100",
+    "tagIds": []
+  },
+  {
     "units": 2,
     "title": "Programmable Digital Systems Laboratory",
     "id": "compsci146l",

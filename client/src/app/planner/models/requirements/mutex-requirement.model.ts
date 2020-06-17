@@ -42,6 +42,18 @@ export class MutexRequirement extends Requirement {
     return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
+  /* will be deleted later */
+  getCourseCombinations(courses: Course[]): Set<Course>[] {
+    return [new Set<Course>()];
+  }
+
+  toString(): string {
+    return this.requirements.reduce(
+      (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
+      'Uniquely fulfill:',
+    );
+  }
+
   /**
    * Returns an array of fulfillment status corresponding to the fulfillments of each child requirement.
    *
@@ -69,11 +81,6 @@ export class MutexRequirement extends Requirement {
     });
   }
 
-  /* will be deleted later */
-  getCourseCombinations(courses: Course[]): Set<Course>[] {
-    return [new Set<Course>()];
-  }
-
   /**
    * Returns an array of possible arrangements to fulfill the given requirements given the set of courses.
    *
@@ -94,7 +101,7 @@ export class MutexRequirement extends Requirement {
     const firstReq: StandaloneRequirement = requirements[0];
     const fulfillingCourses: (Course | boolean)[] = [
       null,
-      ...courses.filter((course: Course) => firstReq.isFulfillableBy(course)),
+      ...courses.filter((course: Course) => firstReq.isFulfilled(course, override)),
     ];
     if (override && override.has(firstReq.id)) {
       fulfillingCourses[0] = true;
@@ -105,13 +112,6 @@ export class MutexRequirement extends Requirement {
         courses.filter((c: Course) => c !== course),
         override,
       ).map((fulfillment: Course[]) => [course, ...fulfillment]),
-    );
-  }
-
-  toString(): string {
-    return this.requirements.reduce(
-      (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
-      'Uniquely fulfill:',
     );
   }
 }

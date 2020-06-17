@@ -22,6 +22,7 @@
             {
                 "allowElseIf": true
             }
-        ]
+        ],
+        "no-param-reassign": "off"
     }
 }

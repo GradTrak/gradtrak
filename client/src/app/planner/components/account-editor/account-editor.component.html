@@ -1,0 +1,59 @@
+<ng-container *ngIf="!isLoading; else loading">
+  <h4>Account Settings</h4>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-6">
+        <label>Email</label>
+      </div>
+      <div class="col-6">
+        {{ email }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label>Password</label>
+      </div>
+      <div class="col-6">
+        <ng-container *ngIf="!isChangingPassword; else passwordChange">
+          ********&nbsp;<button class="gt-button" (click)="changePassword()">
+            <i class="material-icons">edit</i>
+          </button>
+        </ng-container>
+        <ng-template #passwordChange>
+          <input class="form-control" type="password" [(ngModel)]="newPassword" />
+          <small class="form-text text-muted">Your password must be at least 6 characters.</small>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <form (ngSubmit)="submit()">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <label>Current password:</label>
+        </div>
+        <div class="col-6">
+          <input class="form-control" type="password" name="password" [(ngModel)]="currentPassword" />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!changesMade || isSubmitting">
+            Save Changes
+          </button>
+        </div>
+      </div>
+      <div *ngIf="error" class="row">
+        <div class="error col-12">
+          {{ error }}
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-container>
+
+<ng-template #loading>
+  Loading...
+</ng-template>

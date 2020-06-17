@@ -12,14 +12,16 @@ import { RequirementService } from './services/requirement.service';
 import { UserService } from './services/user.service';
 import { RequirementSetComponent } from './components/requirement-set/requirement-set.component';
 import { RequirementsPaneComponent } from './components/requirements-pane/requirements-pane.component';
-import { RequirementComponent } from './components/requirement-category/requirement/requirement.component';
+import { RequirementComponent } from './components/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
 import { GoalSelectorComponent } from './components/goal-selector/goal-selector.component';
 import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
-import { RequirementDisplayComponent } from './components/requirement-category/requirement-display/requirement-display.component';
+import { RequirementDisplayComponent } from './components/requirement-display/requirement-display.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReportPaneComponent } from './components/report-pane/report-pane.component';
+import { AccountEditorComponent } from './components/account-editor/account-editor.component';
+import { InitializerComponent } from './components/initializer/initializer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { ReportPaneComponent } from './components/report-pane/report-pane.compon
     RequirementDisplayComponent,
     LoginComponent,
     ReportPaneComponent,
+    AccountEditorComponent,
+    InitializerComponent,
   ],
   exports: [
     PlannerComponent, //

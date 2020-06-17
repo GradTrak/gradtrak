@@ -15,52 +15,73 @@ export class RequirementSet {
   id: string;
   name: string;
   parent: RequirementSet;
-  type: string; // string id. either major, minor, other, or unselectable
+  type: string;
   requirementCategories: RequirementCategory[];
   universalConstraints: Constraint[];
   selfConstraints: Constraint[];
 
   constructor(
+    id: string,
+    name: string,
+    parent: RequirementSet,
+    type: string,
+    requirementCategories: RequirementCategory[],
+    universalConstraints?: Constraint[],
+    selfConstraints?: Constraint[],
+  ) {
+    this.id = id;
+    this.name = name;
+    this.parent = parent;
+    this.type = type;
+    this.requirementCategories = requirementCategories;
+    this.universalConstraints = universalConstraints || [];
+    this.selfConstraints = selfConstraints || [];
+  }
+
+  static fromProto(
     proto: RequirementSetPrototype,
     reqSetMap: Map<string, RequirementSet>,
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
-  ) {
-    this.id = proto.id;
-    this.name = proto.name;
-    this.type = proto.type;
-    this.requirementCategories = proto.requirementCategories.map(
-      (reqCategoryProto: RequirementCategoryPrototype) =>
-        new RequirementCategory(reqCategoryProto, coursesMap, tagsMap),
-    );
-    this.universalConstraints = proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
-      switch (universalConstraintProto.type) {
-        case 'mutex':
-          return new MutexConstraint(universalConstraintProto);
-          break;
-      }
-    });
-    this.selfConstraints = proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
-      switch (selfConstraintProto.type) {
-        case 'mutex':
-          return new MutexConstraint(selfConstraintProto);
-          break;
-      }
-    });
-
+  ): RequirementSet {
+    let parent: RequirementSet;
     if (proto.parentId) {
-      this.parent = reqSetMap.get(proto.parentId);
-      if (!this.parent) {
+      parent = reqSetMap.get(proto.parentId);
+      if (!parent) {
         console.error(`Parent RequirementSet not yet instantiated or nonexistent: ${proto.parentId}`);
       }
     } else {
-      this.parent = null;
+      parent = null;
     }
+
+    return new RequirementSet(
+      proto.id,
+      proto.name,
+      parent,
+      proto.type,
+      proto.requirementCategories.map((reqCategoryProto: RequirementCategoryPrototype) =>
+        RequirementCategory.fromProto(reqCategoryProto, coursesMap, tagsMap),
+      ),
+      proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
+        switch (universalConstraintProto.type) {
+          case 'mutex':
+            return new MutexConstraint(universalConstraintProto);
+            break;
+        }
+      }),
+      proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
+        switch (selfConstraintProto.type) {
+          case 'mutex':
+            return new MutexConstraint(selfConstraintProto);
+            break;
+        }
+      }),
+    );
   }
 
   getConstraints(): Constraint[] {
     const selfConstraints = this.selfConstraints ? this.selfConstraints : [];
-    const universalConstraints = this.universalConstraints ? this.universalConstraints : []; 
+    const universalConstraints = this.universalConstraints ? this.universalConstraints : [];
     const constraints: Constraint[] = [...selfConstraints, ...universalConstraints];
     let curr: RequirementSet = this.parent;
     while (curr) {

@@ -4,30 +4,34 @@
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
       <div class="left">Guest User</div>
       <div class="right">
-        <button (click)="openLogin()">Login</button>
+        <button class="gt-button" (click)="openLogin()">Login / Register</button>
       </div>
     </ng-container>
     <ng-template #loggedIn>
       <div class="left">Name: {{ state.username }}</div>
       <div class="right">
-        <button (click)="logout()">Logout</button>
+        <button class="gt-button" (click)="openAccountEditor()">Account</button>
+        <button class="gt-button" (click)="logout()">Logout</button>
       </div>
     </ng-template>
   </div>
 </div>
-<ng-container *ngIf="!state.loading; else loading">
-  <div class="body">
-    <div class="main">
-      <app-semester-pane [semesters]="state.userData.semesters"></app-semester-pane>
+<div class="body">
+  <ng-container *ngIf="!isLoading; else loading">
+    <div class="row no-gutters main">
+      <app-semester-pane class="col-8" [semesters]="state.userData.semesters"></app-semester-pane>
       <app-requirements-pane
+        class="col-4"
         [courses]="currentCourses"
         [goals]="state.userData.goals"
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
       ></app-requirements-pane>
     </div>
-    <button class="gt-button report-button" (click)="showReportForm()">Feedback</button>
-  </div>
-</ng-container>
+    <button class="btn btn-primary btn-sm report-button" (click)="openReportForm()">
+      Feedback
+    </button>
+  </ng-container>
+</div>
 
 <ng-template #loading>
   <div>
@@ -36,9 +40,25 @@
 </ng-template>
 
 <ng-template #login>
-  <app-login (success)="closeLogin()"></app-login>
+  <div class="modal-body">
+    <app-login (login)="closeModal()" (register)="closeModal()" (dismiss)="onLoginDismiss()"></app-login>
+  </div>
 </ng-template>
 
-<ng-template #reportFormTemplate>
-  <app-report-pane></app-report-pane>
+<ng-template #initializer>
+  <div class="modal-body">
+    <app-initializer (initializeData)="setUserData($event)"></app-initializer>
+  </div>
+</ng-template>
+
+<ng-template #reportForm>
+  <div class="modal-body">
+    <app-report-pane></app-report-pane>
+  </div>
+</ng-template>
+
+<ng-template #accountEditor>
+  <div class="modal-body">
+    <app-account-editor (onClose)="closeModal()"></app-account-editor>
+  </div>
 </ng-template>

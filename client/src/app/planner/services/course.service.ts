@@ -42,7 +42,7 @@ export class CourseService {
           .getTagsMap()
           .pipe(
             map((tagsMap: Map<string, Tag>) =>
-              data.map((courseProto: CoursePrototype) => new Course(courseProto, tagsMap)),
+              data.map((courseProto: CoursePrototype) => Course.fromProto(courseProto, tagsMap)),
             ),
           ),
       ),

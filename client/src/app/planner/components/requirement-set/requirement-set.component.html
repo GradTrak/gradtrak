@@ -1,11 +1,16 @@
-<div class="name">{{ requirementSet.name }}</div>
-<div class="requirement-categories">
-  <app-requirement-category
-    *ngFor="let requirementCategory of requirementSet.requirementCategories"
-    [requirementCategory]="requirementCategory"
-    [courses]="courses"
-    [manuallyFulfilled]="manuallyFulfilled.get(requirementSet.id)"
-    (onManualFulfill)="manuallyFulfill($event)"
-    (onManualUnfulfill)="manuallyUnfulfill($event)"
-  ></app-requirement-category>
+<div [ngClass]="collapsed ? 'collapsed' : null">
+  <div class="name">
+    <i class="button material-icons" (click)="toggleCollapsed()">arrow_drop_down</i>
+    {{ requirementSet.name }}
+  </div>
+  <div class="requirement-categories">
+    <app-requirement-category
+      *ngFor="let requirementCategory of requirementSet.requirementCategories"
+      [requirementCategory]="requirementCategory"
+      [courses]="courses"
+      [manuallyFulfilled]="manuallyFulfilled.get(requirementSet.id)"
+      (onManualFulfill)="manuallyFulfill($event)"
+      (onManualUnfulfill)="manuallyUnfulfill($event)"
+    ></app-requirement-category>
+  </div>
 </div>

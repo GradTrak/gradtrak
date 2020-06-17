@@ -13,11 +13,11 @@ export class MultiRequirement extends Requirement implements RequirementContaine
   numRequired: number;
   hidden: boolean;
 
-  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
+  isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.numFulfilled(courses, override) >= this.numRequired;
   }
 
-  numFulfilled(courses: Course[], override: Set<string>): number {
+  numFulfilled(courses: Course[], override?: Set<string>): number {
     return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses, override)).length;
   }
 
@@ -37,7 +37,7 @@ export class MultiRequirement extends Requirement implements RequirementContaine
   }
 
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    throw new Error("Tried to get Course combinations for MultiRequirement");
+    throw new Error('Tried to get Course combinations for MultiRequirement');
   }
 
   toString(): string {

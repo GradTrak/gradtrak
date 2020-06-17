@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map, tap } from 'rxjs/operators';
-import { SemesterPrototype } from 'common/prototypes/semester.prototype';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
@@ -17,54 +16,22 @@ import { RequirementService } from './requirement.service';
   providedIn: 'root',
 })
 export class UserService {
-  private static readonly LOGIN_ENDPOINT = '/api/login';
-  private static readonly LOGOUT_ENDPOINT = '/api/logout';
-  private static readonly WHOAMI_ENDPOINT = '/api/whoami';
-  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
-
-  private static readonly INITIAL_STATE: State = {
-    loading: true,
+  static readonly INITIAL_STATE: State = {
     loggedIn: false,
     username: null,
     userData: {
-      semesters: [
-        {
-          name: 'Fall 2019',
-          courses: [],
-        },
-        {
-          name: 'Spring 2020',
-          courses: [],
-        },
-        {
-          name: 'Fall 2020',
-          courses: [],
-        },
-        {
-          name: 'Spring 2021',
-          courses: [],
-        },
-        {
-          name: 'Fall 2021',
-          courses: [],
-        },
-        {
-          name: 'Spring 2022',
-          courses: [],
-        },
-        {
-          name: 'Fall 2022',
-          courses: [],
-        },
-        {
-          name: 'Spring 2023',
-          courses: [],
-        },
-      ],
+      semesters: new Map<string, Semester[]>(),
       goals: [],
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
   };
+
+  private static readonly REGISTER_ENDPOINT = '/api/account/register';
+  private static readonly LOGIN_ENDPOINT = '/api/account/login';
+  private static readonly LOGOUT_ENDPOINT = '/api/account/logout';
+  private static readonly WHOAMI_ENDPOINT = '/api/account/whoami';
+  private static readonly PASSWORD_CHANGE_ENDPOINT = '/api/account/password';
+  private static readonly SEMESTER_API_ENDPOINT = '/api/user';
 
   private readonly state: BehaviorSubject<State>;
 
@@ -86,6 +53,36 @@ export class UserService {
   }
 
   /**
+   * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
+   *
+   * @param {string} username The user's username.
+   * @param {string} password The user's password.
+   * @param {boolean} emailMarketing The user's emailMarketing preference.
+   * @param {boolean} userTesting The user's userTesting preference.
+   * @return {Observable<string>} An Observable that will emit an error string or null if the registration was
+   * successful.
+   */
+  register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
+    if (this.currentState.loggedIn) {
+      throw new Error('Tried to register when already logged in');
+    }
+    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
+      tap((response: { success: boolean; username?: string; error?: string }) => {
+        if (response.success) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username,
+          });
+        }
+      }),
+      map((response: { success: boolean; username?: string; error?: string }) =>
+        response.error ? response.error : null,
+      ),
+    );
+  }
+
+  /**
    * Logs into the application with the given username and password.
    *
    * @param {string} username The user's username.
@@ -102,7 +99,6 @@ export class UserService {
         if (response.success) {
           this.state.next({
             ...this.currentState,
-            loading: true,
             loggedIn: true,
             username,
           });
@@ -131,24 +127,47 @@ export class UserService {
 
   /**
    * Queries the server to detect current login status and updates state accordingly.
+   *
+   * @return {Observable<string>} An Observable that contains the username
+   * or null if not logged in.
    */
-  queryWhoami(): void {
-    this.http.get(UserService.WHOAMI_ENDPOINT).subscribe((response: { loggedIn: boolean; username?: string }) => {
-      if (response.loggedIn) {
-        this.state.next({
-          ...this.currentState,
-          loggedIn: true,
-          username: response.username,
-        });
-      } else {
-        this.state.next({
-          ...this.currentState,
-          loading: false,
-          loggedIn: false,
-          username: null,
-        });
-      }
-    });
+  queryWhoami(): Observable<string> {
+    return this.http.get(UserService.WHOAMI_ENDPOINT).pipe(
+      tap((response: { loggedIn: boolean; username?: string }) => {
+        if (response.loggedIn) {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: true,
+            username: response.username,
+          });
+        } else {
+          this.state.next({
+            ...this.currentState,
+            loggedIn: false,
+            username: null,
+          });
+        }
+      }),
+      map((response: { loggedIn: boolean; username?: string }) => {
+        return response.loggedIn ? response.username : null;
+      }),
+    );
+  }
+
+  /**
+   * Changes the user's password.
+   *
+   * @param {string} oldPassword The user's old password, used for verification.
+   * @param {string} newPassword the user's new password.
+   * @return {Observable<string>} The error in changing the password, null if the operation succeeded.
+   */
+  changePassword(oldPassword: string, newPassword: string): Observable<string> {
+    return this.http
+      .post(UserService.PASSWORD_CHANGE_ENDPOINT, {
+        oldPassword,
+        newPassword,
+      })
+      .pipe(map((err: { error?: string }) => (err ? err.error : null)));
   }
 
   /**
@@ -162,35 +181,42 @@ export class UserService {
           forkJoin({
             coursesMap: this.courseService.getCoursesMap(),
             reqsMap: this.requirementService.getRequirementsMap(),
-          }).pipe(map(({ coursesMap, reqsMap }) => new UserData(userDataProto, coursesMap, reqsMap))),
+          }).pipe(map(({ coursesMap, reqsMap }) => UserData.fromProto(userDataProto, coursesMap, reqsMap))),
         ),
       )
-      .subscribe((userData: UserData) =>
-        this.state.next({
-          ...this.currentState,
-          loading: false,
-          userData,
-        }),
-      );
+      .subscribe((userData: UserData) => {
+        if (userData.semesters.size > 0) {
+          this.state.next({
+            ...this.currentState,
+            userData,
+          });
+        } else {
+          this.state.next({
+            ...this.currentState,
+          });
+        }
+      });
   }
 
   saveUserData(): void {
-    this.http
-      .put(UserService.SEMESTER_API_ENDPOINT, this.getPrototypeFromUserData(this.currentState.userData))
-      .subscribe();
+    this.http.put(UserService.SEMESTER_API_ENDPOINT, UserData.toProto(this.currentState.userData)).subscribe();
   }
 
   /**
-   * Updates the list of semesters to a new list of given semesters.
+   * Updates the list of semesters to a new mapping of given semesters.
    *
-   * @param {Semester[]} newSemesters The new semesters.
+   * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
-  updateSemesters(newSemesters: Semester[]): void {
+  updateSemesters(newSemesters: Map<string, Semester[]>): void {
+    const newMap = new Map<string, Semester[]>(); // not sure why, before the rework the list of semesters was copied, so I've copied the map here as well.
+    newSemesters.forEach((value, key) => {
+      newMap.set(key, [...value]);
+    });
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...newSemesters],
+        semesters: newMap,
       },
     });
   }
@@ -198,7 +224,7 @@ export class UserService {
   /**
    * Updates the list of goals to a new list of given goals.
    *
-   * @param {RequiremnetSet[]} newGoals The new goals.
+   * @param {RequirementSet[]} newGoals The new goals.
    */
   updateGoals(newGoals: RequirementSet[]): void {
     this.state.next({
@@ -216,16 +242,20 @@ export class UserService {
    * @param {Course} course The course to add.
    * @param {Semester} semester The semester to which to add the course.
    */
-  // TODO Making this a function that returns a clone breaks the course-changer
   addCourse(course: Course, semester: Semester): void {
     if (semester.courses.includes(course)) {
       console.error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
       return;
     }
 
+    // TODO Making this a function that returns a clone breaks the course-changer
     semester.courses = [...semester.courses, course];
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
+      },
     });
   }
 
@@ -235,16 +265,20 @@ export class UserService {
    * @param {Course} course The course to remove.
    * @param {Semester} semester The semester from which to remove the course.
    */
-  // TODO Making this a function that returns a clone breaks the course-changer
   removeCourse(course: Course, semester: Semester): void {
     if (!semester.courses.includes(course)) {
       console.error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
       return;
     }
 
+    // TODO Making this a function that returns a clone breaks the course-changer
     semester.courses = semester.courses.filter((c: Course) => c !== course);
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
+      },
     });
   }
 
@@ -295,27 +329,10 @@ export class UserService {
     });
   }
 
-  private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: SemesterPrototype[] = userData.semesters.map((semester: Semester) => {
-      const semesterPrototype = {
-        ...semester,
-        courseIds: semester.courses.map((course: Course) => course.id),
-      };
-      delete semesterPrototype.courses;
-      return semesterPrototype;
+  setUserData(userData: UserData): void {
+    this.state.next({
+      ...this.currentState,
+      userData,
     });
-    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
-    const manuallyFulfilledReqs: object = Object.fromEntries(
-      Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
-        entry[0],
-        Array.from(entry[1]),
-      ]),
-    );
-
-    return {
-      semesters,
-      goalIds,
-      manuallyFulfilledReqs,
-    };
   }
 }

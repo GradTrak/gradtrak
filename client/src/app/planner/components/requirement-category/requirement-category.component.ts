@@ -15,7 +15,13 @@ export class RequirementCategoryComponent implements OnInit {
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
+  collapsed: boolean;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
 }

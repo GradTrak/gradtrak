@@ -14,6 +14,9 @@ export abstract class Requirement {
     Object.assign(this, obj);
   }
 
+  /* Requirement.fromProto is currently RequirementCategory.reqFromProto to
+   * avoid circular dependencies. */
+
   isFulfilled(courses: Course[], override: Set<string>): boolean {
     if (override && override.has(this.id)) {
       return true;
@@ -40,8 +43,8 @@ export abstract class Requirement {
   abstract canFulfill(course: Course): boolean;
 
   /**
-  * Given a list of COURSES, returns a 2d array. Each element in the 2d array
-  * is an array of courses which potentially fullfill part or all of the requirement.
-  */
+   * Given a list of COURSES, returns a 2d array. Each element in the 2d array
+   * is an array of courses which potentially fullfill part or all of the requirement.
+   */
   abstract getCourseCombinations(courses: Course[]): Set<Course>[];
 }

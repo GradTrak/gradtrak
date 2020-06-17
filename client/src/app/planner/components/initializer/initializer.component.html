@@ -1,0 +1,47 @@
+<ng-container *ngIf="state === 'semesters'">
+  <h4 class="header">Set Up</h4>
+  <!-- TODO: implement when minors are implemented -->
+  <!-- <div class="form-group">
+    <label>Minors</label>
+    <input class="form-control" [(ngModel)]="minor" />
+  </div> -->
+  <div class="form-group">
+    <label>Start Year</label>
+    <select class="form-control" [(ngModel)]="startYear">
+      <option [ngValue]="2015">2015</option>
+      <option [ngValue]="2016">2016</option>
+      <option [ngValue]="2017">2017</option>
+      <option [ngValue]="2018">2018</option>
+      <option [ngValue]="2019">2019</option>
+      <option [ngValue]="2020">2020</option>
+      <option [ngValue]="2021">2021</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Graduation Year</label>
+    <select class="form-control" [(ngModel)]="gradYear">
+      <option [ngValue]="2020">2020</option>
+      <option [ngValue]="2021">2021</option>
+      <option [ngValue]="2022">2022</option>
+      <option [ngValue]="2023">2023</option>
+      <option [ngValue]="2024">2024</option>
+      <option [ngValue]="2025">2025</option>
+      <option [ngValue]="2026">2026</option>
+      <option [ngValue]="2027">2027</option>
+      <option [ngValue]="2028">2028</option>
+      <option [ngValue]="2029">2029</option>
+      <option [ngValue]="2030">2030</option>
+    </select>
+  </div>
+  <div class="form-group form-check">
+    <input id="summer" class="form-check-input" type="checkbox" [(ngModel)]="summer" />
+    <label class="form-check-label" for="summer">Include Summer Semesters?</label>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary btn-block" (click)="next()">Next</button>
+    <span *ngIf="semesterError" class="failure">{{ semesterError }}</span>
+  </div>
+</ng-container>
+<ng-container *ngIf="state === 'goals'">
+  <app-goal-selector (selectGoals)="submit($event)"></app-goal-selector>
+</ng-container>

@@ -6,14 +6,26 @@ import { Requirement } from '../requirement.model';
  * opposed to a set of courses.
  */
 export abstract class StandaloneRequirement extends Requirement {
-  abstract isFulfillableBy(course: Course): boolean;
+  isFulfilled(courses: Course | Course[], override?: Set<string>): boolean {
+    if (courses instanceof Course) {
+      return super.isFulfilled([courses], override);
+    } else {
+      return super.isFulfilled(courses, override);
+    }
+  }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  isFulfilledWith(courses: Course[], override: Set<string>): boolean {
-    return courses.some((course: Course) => {
-      return this.equivIsFulfillableBy(course, new Set<Course>());
-    });
+  isFulfilledWith(courses: Course | Course[], override?: Set<string>): boolean {
+    if (courses instanceof Course) {
+      return this.equivIsFulfillableBy(courses, new Set<Course>());
+    } else {
+      return courses.some((course: Course) => {
+        return this.equivIsFulfillableBy(course, new Set<Course>());
+      });
+    }
   }
+
+  protected abstract isFulfillableBy(course: Course): boolean;
 
   /**
    * For standalones, a COURSE contributes if and only if it fullfills that standalone.
@@ -24,9 +36,9 @@ export abstract class StandaloneRequirement extends Requirement {
   }
 
   /**
-  * For standalones the combination of courses that will fullfill it
-  * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
-  */
+   * For standalones the combination of courses that will fullfill it
+   * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
+   */
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     const combinations: Set<Course>[] = courses
       .filter((course: Course) => {

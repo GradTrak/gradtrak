@@ -5,6 +5,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+a {
+  color: #283adc;
+}
+
+a:hover {
+  color: #417fdc;
+}
+
 .dropdown-sm {
   .dropdown-item {
     padding: 0.1rem 1rem;
@@ -20,4 +28,17 @@ body {
 .gt-button-primary {
   color: #2a26ea;
   background-color: white;
+}
+
+.btn-primary {
+  border: none;
+  background-color: #283adc;
+}
+
+.btn-primary:hover {
+  background-color: #417fdc;
+}
+
+.btn-primary:disabled {
+  background-color: #283adc;
 }

@@ -9,11 +9,11 @@ import { StandaloneRequirement } from './standalone-requirement.model';
 export class TagRequirement extends StandaloneRequirement {
   tag: Tag;
 
-  isFulfillableBy(course: Course): boolean {
-    return course.tags.includes(this.tag);
-  }
-
   toString(): string {
     return `Category: ${this.tag.name}`;
+  }
+
+  protected isFulfillableBy(course: Course): boolean {
+    return course.tags.includes(this.tag);
   }
 }
