@@ -15,7 +15,7 @@
             <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
           </select>
           <button
-            class="btn btn-secondary btn-block"
+            class="btn btn-primary btn-sm btn-block"
             (click)="addGoal(state.selectedSearchedGoal, state)"
             [disabled]="!state.selectedSearchedGoal"
           >
