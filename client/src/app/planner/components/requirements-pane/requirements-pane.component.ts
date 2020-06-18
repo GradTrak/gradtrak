@@ -211,59 +211,49 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
        * adds it to the current mapping, and then tests to see if the new mapping is still valid with the constraint.
        */
       let combinations: Set<Course>[] = req.getCourseCombinations(this.courses);
-      if (constraints.get(req).length === 0) {
-        /* With 0 constraints, it does not matter which combination is taken,
-         * so take a fulfilling one if one is present and any other one
-         * otherwise. */
-        const taken: Set<Course> = combinations.find((combination: Set<Course>) =>
-          req.isFulfilledWith(Array.from(combination), null),
-        );
-        combinations = [taken || combinations[0]];
-      } else {
-        /* Prune invalid mappings */
-        combinations = combinations.filter((combination: Set<Course>) => {
-          mapping.set(req, combination);
-          const valid: boolean = constraints
-            .get(req)
-            .every((constraint: Constraint) => constraint.isValidMapping(mapping));
-          mapping.delete(req);
-          return valid;
-        });
-        if (root) {
-          /* Prune possibilities that don't fulfill a necessary course requirement if we can */
-          if (req instanceof CourseRequirement) {
-            combinations = combinations.filter((combination: Set<Course>) => {
-              return req.isFulfilledWith(Array.from(combination), null);
-            });
-            if (combinations.length === 0) {
-              combinations = [new Set<Course>()];
-            }
+      /* Prune invalid mappings */
+      combinations = combinations.filter((combination: Set<Course>) => {
+        mapping.set(req, combination);
+        const valid: boolean = constraints
+          .get(req)
+          .every((constraint: Constraint) => constraint.isValidMapping(mapping));
+        mapping.delete(req);
+        return valid;
+      });
+      if (root) {
+        /* Prune possibilities that don't fulfill a necessary course requirement if we can */
+        if (req instanceof CourseRequirement) {
+          combinations = combinations.filter((combination: Set<Course>) => {
+            return req.isFulfilledWith(Array.from(combination), null);
+          });
+          if (combinations.length === 0) {
+            combinations = [new Set<Course>()];
           }
-          /* Prune unnecessary unit requirement possibilities if we can */
-          if (req instanceof UnitRequirement) {
-            // FIXME Fix unit requirement checking logic (prune combinations where removing a course would still be enough)
-            const unitsPerCombination: Map<Set<Course>, number> = new Map<Set<Course>, number>();
-            combinations.forEach((combination: Set<Course>) => {
-              unitsPerCombination.set(
-                combination,
-                Array.from(combination)
-                  .map((course: Course) => course.units)
-                  .reduce((accum: number, curr: number) => accum + curr, 0),
-              );
-            });
-            const maxUnits: number = Math.max(...unitsPerCombination.values());
-            let unitTarget: number;
-            if (maxUnits >= req.units) {
-              unitTarget = Math.min(
-                ...Array.from(unitsPerCombination.values()).filter((unit: number) => unit >= req.units),
-              );
-            } else {
-              unitTarget = maxUnits;
-            }
-            combinations = combinations.filter(
-              (combination: Set<Course>) => unitsPerCombination.get(combination) === unitTarget,
+        }
+        /* Prune unnecessary unit requirement possibilities if we can */
+        if (req instanceof UnitRequirement) {
+          // FIXME Fix unit requirement checking logic (prune combinations where removing a course would still be enough)
+          const unitsPerCombination: Map<Set<Course>, number> = new Map<Set<Course>, number>();
+          combinations.forEach((combination: Set<Course>) => {
+            unitsPerCombination.set(
+              combination,
+              Array.from(combination)
+                .map((course: Course) => course.units)
+                .reduce((accum: number, curr: number) => accum + curr, 0),
             );
+          });
+          const maxUnits: number = Math.max(...unitsPerCombination.values());
+          let unitTarget: number;
+          if (maxUnits >= req.units) {
+            unitTarget = Math.min(
+              ...Array.from(unitsPerCombination.values()).filter((unit: number) => unit >= req.units),
+            );
+          } else {
+            unitTarget = maxUnits;
           }
+          combinations = combinations.filter(
+            (combination: Set<Course>) => unitsPerCombination.get(combination) === unitTarget,
+          );
         }
       }
 
@@ -285,6 +275,55 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   }
 
   /**
+   * Derives the fulfillment statuses of requirements from a mapping of
+   * requirements to possible course combinations and assigns them to the given
+   * map.
+   *
+   * @param {Requirement} baseReqs The requirements that count towards overall
+   * goal progress.
+   * @param {Map<Requirement, Set<Course>>[]} mappings The possible course
+   * mappings.
+   * @param {Map<Requirement, FulfillmentType} fulfillment The map to which to
+   * assign the derived fulfillment statuses.
+   */
+  private static deriveFulfillment(
+    baseReqs: Requirement[],
+    mappings: Map<Requirement, Set<Course>>[],
+    fulfillment: Map<Requirement, FulfillmentType>,
+  ): void {
+    const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course>>, number> = new Map<
+      Map<Requirement, Set<Course>>,
+      number
+    >(
+      mappings.map((mapping: Map<Requirement, Set<Course>>) => [
+        mapping,
+        baseReqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(mapping.get(req)), null)).length,
+      ]),
+    );
+    const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
+    const maxMappings: Map<Requirement, Set<Course>>[] = mappings.filter(
+      (mapping: Map<Requirement, Set<Course>>) => mappingFulfillmentCounts.get(mapping) === maxFulfilled,
+    );
+    baseReqs.forEach((req: Requirement) => {
+      if (
+        maxMappings.every((mapping: Map<Requirement, Set<Course>>) =>
+          req.isFulfilledWith(Array.from(mapping.get(req)), null),
+        )
+      ) {
+        fulfillment.set(req, 'fulfilled');
+      } else if (
+        maxMappings.some((mapping: Map<Requirement, Set<Course>>) =>
+          req.isFulfilledWith(Array.from(mapping.get(req)), null),
+        )
+      ) {
+        fulfillment.set(req, 'possible');
+      } else {
+        fulfillment.set(req, 'unfulfilled');
+      }
+    });
+  }
+
+  /**
    * Returns a map containing each requirement as the key mapped to its
    * fulfillment status.
    *
@@ -292,7 +331,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * fulfillment statuses of every requirement.
    */
   processRequirements(): Map<Requirement, FulfillmentType> {
-    // combines all constraints and pools them into a single array
+
     const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
     this.getRequiredSets().forEach((reqSet: RequirementSet) => {
       const setConstraints: Constraint[] = reqSet.getConstraints();
@@ -306,49 +345,39 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
         });
       });
     });
-    const reqs: Requirement[] = this.getRequiredSets().flatMap((reqSet: RequirementSet) => reqSet.getRequirements());
-    reqs.sort((a: Requirement, b: Requirement) => {
-      return RequirementsPaneComponent.getReqPriority(a) - RequirementsPaneComponent.getReqPriority(b);
+
+    const fulfillment: Map<Requirement, FulfillmentType> = new Map();
+
+    this.getRequiredSets().forEach((reqSet: RequirementSet) => {
+      const setConstraints: Constraint[] = reqSet.getConstraints();
+      if (setConstraints.length === 0) {
+        /* If a set has no constraints, we can derive fulfillment at the level
+         * of a category. */
+        reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
+          const categoryConstraints: Constraint[] = reqCategory.getConstraints();
+          if (categoryConstraints.length === 0) {
+            /* If a category has no constraints, we can derive fulfillment at
+             * the level of a requirement. */
+            reqCategory.requirements.forEach((req: Requirement) => {
+              const reqMappings: Map<Requirement, Set<Course>>[] = this.getMappings([req], constraints);
+              RequirementsPaneComponent.deriveFulfillment([req], reqMappings, fulfillment);
+            });
+          } else {
+            const categoryMappings: Map<Requirement, Set<Course>>[] = this.getMappings(
+              reqCategory.requirements,
+              constraints,
+            );
+            RequirementsPaneComponent.deriveFulfillment(reqCategory.requirements, categoryMappings, fulfillment);
+          }
+        });
+      } else {
+        const setReqs: Requirement[] = reqSet.getRequirements();
+        const setMappings: Map<Requirement, Set<Course>>[] = this.getMappings(setReqs, constraints);
+        RequirementsPaneComponent.deriveFulfillment(setReqs, setMappings, fulfillment);
+      }
     });
 
-    const mappings: Map<Requirement, Set<Course>>[] = this.getMappings(
-      reqs,
-      constraints,
-    );
-    const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course>>, number> = new Map<
-      Map<Requirement, Set<Course>>,
-      number
-    >(
-      mappings.map((mapping: Map<Requirement, Set<Course>>) => [
-        mapping,
-        reqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(mapping.get(req)), null)).length,
-      ]),
-    );
-    const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
-    const maxMappings: Map<Requirement, Set<Course>>[] = mappings.filter(
-      (mapping: Map<Requirement, Set<Course>>) => mappingFulfillmentCounts.get(mapping) === maxFulfilled,
-    );
-
-    const fulfillmentMapping: Map<Requirement, FulfillmentType> = new Map<Requirement, FulfillmentType>(
-      reqs.map((req: Requirement) => {
-        if (
-          maxMappings.every((mapping: Map<Requirement, Set<Course>>) =>
-            req.isFulfilledWith(Array.from(mapping.get(req)), null),
-          )
-        ) {
-          return [req, 'fulfilled'];
-        }
-        if (
-          maxMappings.some((mapping: Map<Requirement, Set<Course>>) =>
-            req.isFulfilledWith(Array.from(mapping.get(req)), null),
-          )
-        ) {
-          return [req, 'possible'];
-        }
-        return [req, 'unfulfilled'];
-      }),
-    );
-    console.log(fulfillmentMapping);
-    return fulfillmentMapping;
+    console.log(fulfillment);
+    return fulfillment;
   }
 }
