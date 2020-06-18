@@ -209,20 +209,29 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
          */
         const finalMappings: Map<Requirement, Set<Course>>[] = subMappings.flatMap(
           (submap: Map<Requirement, Set<Course>>) => {
-            submap.forEach((value: Set<Course>, key: Requirement) => {
-              mapping.set(key, value);
+            const union: Set<Course> = new Set<Course>();
+            submap.forEach((courses: Set<Course>, subReq: Requirement) => {
+              courses.forEach((course: Course) => {
+                union.add(course);
+              });
             });
+            submap.forEach((courses: Set<Course>, subReq: Requirement) => {
+              mapping.set(subReq, courses);
+            });
+            mapping.set(req, union);
             //Find the future mappings, with the assumption that we are using the current submap.
             const rest: Map<Requirement, Set<Course>>[] = getMappings(reqs, i + 1, mapping, constraints, root);
             //TODO may not be necessary to delete from mapping
-            submap.forEach((value: Set<Course>, key: Requirement) => {
-              mapping.delete(key); //revert the edit so that we can use the mapping later to prune properly.
+            submap.forEach((courses: Set<Course>, subReq: Requirement) => {
+              mapping.delete(subReq); //revert the edit so that we can use the mapping later to prune properly.
             });
+            mapping.delete(req);
             //take the potential results and add the current possibilities to them.
             rest.forEach((restCombination: Map<Requirement, Set<Course>>) => {
-              submap.forEach((value: Set<Course>, key: Requirement) => {
-                restCombination.set(key, value);
+              submap.forEach((courses: Set<Course>, subReq: Requirement) => {
+                restCombination.set(subReq, courses);
               });
+              restCombination.set(req, union);
             });
             return rest;
           },
@@ -304,6 +313,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
         return finalMappings;
       }
     };
+
     const mappings: Map<Requirement, Set<Course>>[] = getMappings(
       reqs,
       0,
@@ -311,7 +321,40 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       constraints,
       true,
     );
-    console.log(mappings);
-    return null;
+    const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course>>, number> = new Map<
+      Map<Requirement, Set<Course>>,
+      number
+    >(
+      mappings.map((mapping: Map<Requirement, Set<Course>>) => [
+        mapping,
+        reqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(mapping.get(req)), null)).length,
+      ]),
+    );
+    const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
+    const maxMappings: Map<Requirement, Set<Course>>[] = mappings.filter(
+      (mapping: Map<Requirement, Set<Course>>) => mappingFulfillmentCounts.get(mapping) === maxFulfilled,
+    );
+
+    const fulfillmentMapping: Map<Requirement, FulfillmentType> = new Map<Requirement, FulfillmentType>(
+      reqs.map((req: Requirement) => {
+        if (
+          maxMappings.every((mapping: Map<Requirement, Set<Course>>) =>
+            req.isFulfilledWith(Array.from(mapping.get(req)), null),
+          )
+        ) {
+          return [req, 'fulfilled'];
+        }
+        if (
+          maxMappings.some((mapping: Map<Requirement, Set<Course>>) =>
+            req.isFulfilledWith(Array.from(mapping.get(req)), null),
+          )
+        ) {
+          return [req, 'possible'];
+        }
+        return [req, 'unfulfilled'];
+      }),
+    );
+    console.log(fulfillmentMapping);
+    return fulfillmentMapping;
   }
 }
