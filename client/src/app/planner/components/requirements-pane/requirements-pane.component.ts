@@ -140,7 +140,11 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * @param {Map<Requirement, Set<Course>>} mapping A map of requirements to
    * courses that fulfill that requirement, used as a pruning tool.
    * @param {boolean} root Whether root requirement pruning can be performed.
-   * @param {number} i the current index for the requirement that's "on deck"
+   * @param {number} i The current index for the requirement that's "on deck"
+   * @param {number} numFulfilled The number of requirements that are
+   * fulfilled with the given mapping.
+   * @param {number} alpha The lower bound on how many requirements are
+   * fulfilled for returned course mappings, used for efficient pruning.
    * @return {Map<Requirement, Set<Course>>[]} All possible ways of assigning
    * courses to requirements from i to the end.
    */
@@ -149,9 +153,21 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
     constraints: Map<Requirement, Constraint[]>,
     root: boolean = true,
     mapping: Map<Requirement, Set<Course>> = new Map<Requirement, Set<Course>>(),
+    numFulfilled: number = 0,
+    alpha: number = 0,
     i: number = 0,
   ): Map<Requirement, Set<Course>>[] {
 
+    /*
+     * If, assuming all remaining requirements are fulfilled, we still aren’t
+     * able to reach alpha, prune.
+     */
+    const numRemaining: number = reqs.length - i;
+    if (numFulfilled + numRemaining < alpha) {
+      return [new Map<Requirement, Set<Course>>(reqs.slice(i).map((req: Requirement) => [req, new Set<Course>()]))];
+    }
+
+    /* Base case */
     if (reqs.length === i) {
       return [new Map<Requirement, Set<Course>>()];
     }
@@ -194,7 +210,15 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
            * Find the future mappings, with the assumption that we are using
            * the current submap.
            */
-          const rest: Map<Requirement, Set<Course>>[] = this.getMappings(reqs, constraints, root, mapping, i + 1);
+          const rest: Map<Requirement, Set<Course>>[] = this.getMappings(
+            reqs,
+            constraints,
+            root,
+            mapping,
+            numFulfilled,
+            alpha,
+            i + 1,
+          );
           // TODO may not be necessary to delete from mapping
           submap.forEach((courses: Set<Course>, subReq: Requirement) => {
             /* Revert so that we can use the mapping later to prune properly. */
@@ -273,15 +297,47 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
        * generated from the recursive call, add the possible combination to
        * each of those possible mappings.
        */
-      const finalMappings: Map<Requirement, Set<Course>>[] = combinations.flatMap((combination: Set<Course>) => {
+
+      const finalMappings: Map<Requirement, Set<Course>>[] = [];
+      let nextAlpha: number = alpha;
+
+      combinations.forEach((combination: Set<Course>) => {
+        const fulfillsReq: boolean = req.isFulfilledWith(Array.from(combination));
+        const nextNumFulfilled: number = fulfillsReq ? numFulfilled + 1 : numFulfilled;
+
+        /* Recurse */
         mapping.set(req, combination);
-        const rest: Map<Requirement, Set<Course>>[] = this.getMappings(reqs, constraints, root, mapping, i + 1);
+        const restMappings: Map<Requirement, Set<Course>>[] = this.getMappings(
+          reqs,
+          constraints,
+          root,
+          mapping,
+          nextNumFulfilled,
+          nextAlpha,
+          i + 1,
+        );
         mapping.delete(req);
-        rest.forEach((restCombination: Map<Requirement, Set<Course>>) => {
-          restCombination.set(req, combination);
+
+        /* Update alpha */
+        nextAlpha = Math.max(
+          nextAlpha,
+          ...restMappings.map(
+            (restMapping: Map<Requirement, Set<Course>>) =>
+              nextNumFulfilled +
+              Array.from(restMapping.keys()).filter((req: Requirement) =>
+                req.isFulfilledWith(Array.from(restMapping.get(req))),
+              ).length,
+          ),
+        );
+
+        /* Edit resulting mappings to include current requirement */
+        restMappings.forEach((restMapping: Map<Requirement, Set<Course>>) => {
+          restMapping.set(req, combination);
         });
-        return rest;
+
+        finalMappings.push(...restMappings);
       });
+
       return finalMappings;
     }
   }
