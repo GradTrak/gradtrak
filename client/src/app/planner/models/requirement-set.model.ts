@@ -61,7 +61,7 @@ export class RequirementSet {
     );
     const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
 
-    const addReqToMap = (req: Requirement) => {
+    const addReqToMap: (Requirement) => void = (req: Requirement) => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
@@ -75,7 +75,8 @@ export class RequirementSet {
         switch (universalConstraintProto.type) {
           case 'mutex':
             return MutexConstraint.fromProto(universalConstraintProto, reqMap);
-            break;
+          default:
+            throw new Error(`Unknown constraint type: ${universalConstraintProto.type}`);
         }
       },
     );
@@ -83,7 +84,8 @@ export class RequirementSet {
       switch (selfConstraintProto.type) {
         case 'mutex':
           return MutexConstraint.fromProto(selfConstraintProto, reqMap);
-          break;
+        default:
+          throw new Error(`Unknown constraint type: ${selfConstraintProto.type}`);
       }
     });
 

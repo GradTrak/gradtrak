@@ -38,7 +38,7 @@ export class RequirementCategory {
     );
     const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
 
-    const addReqToMap = (req: Requirement) => {
+    const addReqToMap: (Requirement) => void = (req: Requirement) => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
@@ -47,11 +47,12 @@ export class RequirementCategory {
     };
     requirements.forEach(addReqToMap);
 
-    const constraints = proto.constraints.map((constraintProto: ConstraintPrototype) => {
+    const constraints: Constraint[] = proto.constraints.map((constraintProto: ConstraintPrototype) => {
       switch (constraintProto.type) {
         case 'mutex':
           return MutexConstraint.fromProto(constraintProto, reqMap);
-          break;
+        default:
+          throw new Error(`Unknown constraint type: ${constraintProto.type}`);
       }
     });
 

@@ -1,4 +1,3 @@
-import { ConstraintPrototype } from 'common/prototypes/constraint.prototype';
 import { Course } from './course.model';
 import { Requirement } from './requirement.model';
 

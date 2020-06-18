@@ -43,8 +43,9 @@ export class MutexRequirement extends Requirement {
   }
 
   /* will be deleted later */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    return [new Set<Course>()];
+    throw new Error('Tried to get Course combinations for MutexRequirement');
   }
 
   toString(): string {

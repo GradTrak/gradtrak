@@ -2,8 +2,6 @@ import { Course } from '../course.model';
 import { Requirement } from '../requirement.model';
 import { RequirementContainer } from '../requirement-container.model';
 
-import { getAllCombinations } from '../../../../utils';
-
 /**
  * The MultiRequirement class represents a {@link Requirement} that contains a number of child requirements and is only
  * fulfilled if at least a specified number of those requirements are fulfilled.
@@ -36,6 +34,7 @@ export class MultiRequirement extends Requirement implements RequirementContaine
     return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     throw new Error('Tried to get Course combinations for MultiRequirement');
   }
