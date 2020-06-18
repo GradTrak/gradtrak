@@ -11293,7 +11293,10 @@
     "id": "bioeng116",
     "dept": "BIO ENG",
     "no": "116",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11301,7 +11304,10 @@
     "id": "bioengc117",
     "dept": "BIO ENG",
     "no": "C117",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11309,7 +11315,10 @@
     "id": "bioengc118",
     "dept": "BIO ENG",
     "no": "C118",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11317,7 +11326,10 @@
     "id": "bioengc119",
     "dept": "BIO ENG",
     "no": "C119",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11325,7 +11337,10 @@
     "id": "bioeng121",
     "dept": "BIO ENG",
     "no": "121",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11354,7 +11369,10 @@
     "id": "bioengc125",
     "dept": "BIO ENG",
     "no": "C125",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11362,7 +11380,10 @@
     "id": "bioengc125b",
     "dept": "BIO ENG",
     "no": "C125B",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11396,7 +11417,10 @@
     "id": "bioeng132",
     "dept": "BIO ENG",
     "no": "132",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 3,
@@ -11404,7 +11428,10 @@
     "id": "bioeng133",
     "dept": "BIO ENG",
     "no": "133",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11412,7 +11439,10 @@
     "id": "bioeng134",
     "dept": "BIO ENG",
     "no": "134",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11420,7 +11450,10 @@
     "id": "bioeng135",
     "dept": "BIO ENG",
     "no": "135",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 3,
@@ -11453,7 +11486,10 @@
     "id": "bioeng142",
     "dept": "BIO ENG",
     "no": "142",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11461,7 +11497,10 @@
     "id": "bioeng143",
     "dept": "BIO ENG",
     "no": "143",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 4,
@@ -11469,7 +11508,10 @@
     "id": "bioeng144",
     "dept": "BIO ENG",
     "no": "144",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 3,
@@ -11490,7 +11532,10 @@
     "id": "bioengc144",
     "dept": "BIO ENG",
     "no": "C144",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 3,
@@ -11498,7 +11543,11 @@
     "id": "bioengc144l",
     "dept": "BIO ENG",
     "no": "C144L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+      "bioeng_lab_course"
+    ]
   },
   {
     "units": 4,
@@ -11506,7 +11555,10 @@
     "id": "bioeng145",
     "dept": "BIO ENG",
     "no": "145",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+    ]
   },
   {
     "units": 3,
@@ -11514,7 +11566,11 @@
     "id": "bioengc145l",
     "dept": "BIO ENG",
     "no": "C145L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+      "bioeng_lab_course"
+    ]
   },
   {
     "units": 3,
@@ -11522,7 +11578,11 @@
     "id": "bioengc145m",
     "dept": "BIO ENG",
     "no": "C145M",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics",
+      "bioeng_lab_course"
+    ]
   },
   {
     "units": 4,
@@ -11530,7 +11590,10 @@
     "id": "bioeng147",
     "dept": "BIO ENG",
     "no": "147",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -11538,7 +11601,10 @@
     "id": "bioeng148",
     "dept": "BIO ENG",
     "no": "148",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11546,7 +11612,10 @@
     "id": "bioeng150",
     "dept": "BIO ENG",
     "no": "150",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11554,7 +11623,10 @@
     "id": "bioeng151",
     "dept": "BIO ENG",
     "no": "151",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 2,
@@ -11562,7 +11634,10 @@
     "id": "bioeng153",
     "dept": "BIO ENG",
     "no": "153",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11570,7 +11645,10 @@
     "id": "bioeng155",
     "dept": "BIO ENG",
     "no": "155",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -11578,7 +11656,10 @@
     "id": "bioengc157",
     "dept": "BIO ENG",
     "no": "C157",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11586,7 +11667,10 @@
     "id": "bioeng163",
     "dept": "BIO ENG",
     "no": "163",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11606,7 +11690,10 @@
     "id": "bioeng164",
     "dept": "BIO ENG",
     "no": "164",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11614,7 +11701,10 @@
     "id": "bioengc165",
     "dept": "BIO ENG",
     "no": "C165",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -11635,7 +11725,10 @@
     "id": "bioengc181",
     "dept": "BIO ENG",
     "no": "C181",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
