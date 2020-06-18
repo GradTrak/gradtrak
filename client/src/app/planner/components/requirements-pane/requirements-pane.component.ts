@@ -160,10 +160,11 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
 
     /*
      * If, assuming all remaining requirements are fulfilled, we still aren’t
-     * able to reach alpha, prune.
+     * able to reach alpha, or if we managed to fulfill every single
+     * requirement, prune.
      */
     const numRemaining: number = reqs.length - i;
-    if (numFulfilled + numRemaining < alpha) {
+    if (numFulfilled + numRemaining < alpha || alpha === reqs.length) {
       return [new Map<Requirement, Set<Course>>(reqs.slice(i).map((req: Requirement) => [req, new Set<Course>()]))];
     }
 
