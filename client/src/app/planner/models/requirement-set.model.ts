@@ -100,6 +100,10 @@ export class RequirementSet {
     );
   }
 
+  getRequirements(): Requirement[] {
+    return this.requirementCategories.flatMap((reqCategory: RequirementCategory) => reqCategory.requirements);
+  }
+
   getConstraints(): Constraint[] {
     const selfConstraints = this.selfConstraints ? this.selfConstraints : [];
     const universalConstraints = this.universalConstraints ? this.universalConstraints : [];

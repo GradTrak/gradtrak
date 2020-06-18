@@ -306,13 +306,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
         });
       });
     });
-    const reqs: Requirement[] = this.getRequiredSets()
-      .flatMap((reqSet: RequirementSet) => {
-        return reqSet.requirementCategories;
-      })
-      .flatMap((reqCategory: RequirementCategory) => {
-        return reqCategory.requirements;
-      });
+    const reqs: Requirement[] = this.getRequiredSets().flatMap((reqSet: RequirementSet) => reqSet.getRequirements());
     reqs.sort((a: Requirement, b: Requirement) => {
       return RequirementsPaneComponent.getReqPriority(a) - RequirementsPaneComponent.getReqPriority(b);
     });
