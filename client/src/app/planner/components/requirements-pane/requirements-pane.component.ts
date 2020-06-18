@@ -233,49 +233,58 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
          * adds it to the current mapping, and then tests to see if the new mapping is still valid with the constraint.
          */
         let combinations: Set<Course>[] = req.getCourseCombinations(this.courses);
-        // FIXME Prune branches from requirements with no constraints
-        /* Prune invalid mappings */
-        combinations = combinations.filter((combination: Set<Course>) => {
-          mapping.set(req, combination);
-          const valid: boolean = constraints
-            .get(req)
-            .every((constraint: Constraint) => constraint.isValidMapping(mapping));
-          mapping.delete(req);
-          return valid;
-        });
-        if (root) {
-          /* Prune possibilities that don't fulfill a necessary course requirement if we can */
-          if (req instanceof CourseRequirement) {
-            combinations = combinations.filter((combination: Set<Course>) => {
-              return req.isFulfilledWith(Array.from(combination), null);
-            });
-            if (combinations.length === 0) {
-              combinations = [new Set<Course>()];
+        if (constraints.get(req).length === 0) {
+          /* With 0 constraints, it does not matter which combination is taken,
+           * so take a fulfilling one if one is present and any other one
+           * otherwise. */
+          const combination: Set<Course> = combinations.find((combination: Set<Course>) =>
+            req.isFulfilledWith(Array.from(combination), null),
+          );
+          combinations = combination ? [combination] : [combinations[0]];
+        } else {
+          /* Prune invalid mappings */
+          combinations = combinations.filter((combination: Set<Course>) => {
+            mapping.set(req, combination);
+            const valid: boolean = constraints
+              .get(req)
+              .every((constraint: Constraint) => constraint.isValidMapping(mapping));
+            mapping.delete(req);
+            return valid;
+          });
+          if (root) {
+            /* Prune possibilities that don't fulfill a necessary course requirement if we can */
+            if (req instanceof CourseRequirement) {
+              combinations = combinations.filter((combination: Set<Course>) => {
+                return req.isFulfilledWith(Array.from(combination), null);
+              });
+              if (combinations.length === 0) {
+                combinations = [new Set<Course>()];
+              }
             }
-          }
-          /* Prune unnecessary unit requirement possibilities if we can */
-          if (req instanceof UnitRequirement) {
-            // FIXME Fix unit requirement checking logic (prune combinations where removing a course would still be enough)
-            const units: Map<Set<Course>, number> = combinations.reduce(
-              (accum: Map<Set<Course>, number>, curr: Set<Course>) => {
-                accum.set(
-                  curr,
-                  Array.from(curr)
-                    .map((course: Course) => course.units)
-                    .reduce((accum: number, curr: number) => accum + curr, 0),
-                );
-                return accum;
-              },
-              new Map<Set<Course>, number>(),
-            );
-            const maxUnits: number = Math.max(...units.values());
-            let unitTarget: number;
-            if (maxUnits >= req.units) {
-              unitTarget = Math.min(...Array.from(units.values()).filter((unit: number) => unit >= req.units));
-            } else {
-              unitTarget = maxUnits;
+            /* Prune unnecessary unit requirement possibilities if we can */
+            if (req instanceof UnitRequirement) {
+              // FIXME Fix unit requirement checking logic (prune combinations where removing a course would still be enough)
+              const units: Map<Set<Course>, number> = combinations.reduce(
+                (accum: Map<Set<Course>, number>, curr: Set<Course>) => {
+                  accum.set(
+                    curr,
+                    Array.from(curr)
+                      .map((course: Course) => course.units)
+                      .reduce((accum: number, curr: number) => accum + curr, 0),
+                  );
+                  return accum;
+                },
+                new Map<Set<Course>, number>(),
+              );
+              const maxUnits: number = Math.max(...units.values());
+              let unitTarget: number;
+              if (maxUnits >= req.units) {
+                unitTarget = Math.min(...Array.from(units.values()).filter((unit: number) => unit >= req.units));
+              } else {
+                unitTarget = maxUnits;
+              }
+              combinations = combinations.filter((combination: Set<Course>) => units.get(combination) === unitTarget);
             }
-            combinations = combinations.filter((combination: Set<Course>) => units.get(combination) === unitTarget);
           }
         }
 
