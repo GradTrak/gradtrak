@@ -136,22 +136,18 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * i to the length of courses.
    *
    * @param {Requirement[]} reqs the complete list of requirements being looked at
-   * @param {Course[]} courses
    * @param {Map<Requirement, Set<Course>>} mapping A map of requirements to courses that fulfill that requirement, used as a pruning tool.
    * @param {boolean} root Whether root requirement pruning can be performed.
-   * @param {number} index the current index for the requirement that's "on deck"
+   * @param {number} i the current index for the requirement that's "on deck"
    * @return {Map<Requirement, Set<Course>>[]} All possible ways of assigning courses to requirements from i to the end.
    */
   private getMappings(
     reqs: Requirement[],
     constraints: Map<Requirement, Constraint[]>,
-    isRoot?: boolean,
-    currMapping?: Map<Requirement, Set<Course>>,
-    index?: number,
+    root: boolean = true,
+    mapping: Map<Requirement, Set<Course>> = new Map<Requirement, Set<Course>>(),
+    i: number = 0,
   ): Map<Requirement, Set<Course>>[] {
-    const root: boolean = isRoot === undefined ? true : isRoot;
-    const i: number = index === undefined ? 0 : index;
-    const mapping: Map<Requirement, Set<Course>> = currMapping || new Map<Requirement, Set<Course>>();
 
     if (reqs.length === i) {
       return [new Map<Requirement, Set<Course>>()];

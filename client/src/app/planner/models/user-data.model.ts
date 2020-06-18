@@ -12,11 +12,11 @@ export class UserData {
   constructor(
     semesters: Map<string, Semester[]>,
     goals: RequirementSet[],
-    manuallyFulfilledReqs?: Map<string, Set<string>>,
+    manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>(),
   ) {
     this.semesters = semesters;
     this.goals = goals;
-    this.manuallyFulfilledReqs = manuallyFulfilledReqs || new Map<string, Set<string>>();
+    this.manuallyFulfilledReqs = manuallyFulfilledReqs;
   }
 
   static fromProto(

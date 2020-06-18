@@ -28,16 +28,16 @@ export class RequirementSet {
     parent: RequirementSet,
     type: string,
     requirementCategories: RequirementCategory[],
-    universalConstraints?: Constraint[],
-    selfConstraints?: Constraint[],
+    universalConstraints: Constraint[] = [],
+    selfConstraints: Constraint[] = [],
   ) {
     this.id = id;
     this.name = name;
     this.parent = parent;
     this.type = type;
     this.requirementCategories = requirementCategories;
-    this.universalConstraints = universalConstraints || [];
-    this.selfConstraints = selfConstraints || [];
+    this.universalConstraints = universalConstraints;
+    this.selfConstraints = selfConstraints;
   }
 
   static fromProto(

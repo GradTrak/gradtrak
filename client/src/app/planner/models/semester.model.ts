@@ -8,9 +8,9 @@ export class Semester {
   name: string;
   courses: Course[];
 
-  constructor(name: string, courses?: Course[]) {
+  constructor(name: string, courses: Course[] = []) {
     this.name = name;
-    this.courses = courses || [];
+    this.courses = courses;
   }
 
   static fromProto(proto: SemesterPrototype, coursesMap: Map<string, Course>): Semester {
