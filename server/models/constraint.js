@@ -10,6 +10,9 @@ module.exports.constraintSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    mutexReqIds: {
+      type: [String],
+    }
   },
   { strict: 'throw' },
 );

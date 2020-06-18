@@ -233,6 +233,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
          * adds it to the current mapping, and then tests to see if the new mapping is still valid with the constraint.
          */
         let combinations: Set<Course>[] = req.getCourseCombinations(this.courses);
+        // FIXME Prune branches from requirements with no constraints
         /* Prune invalid mappings */
         combinations = combinations.filter((combination: Set<Course>) => {
           mapping.set(req, combination);
@@ -254,6 +255,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
           }
           /* Prune unnecessary unit requirement possibilities if we can */
           if (req instanceof UnitRequirement) {
+            // FIXME Fix unit requirement checking logic (prune combinations where removing a course would still be enough)
             const units: Map<Set<Course>, number> = combinations.reduce(
               (accum: Map<Set<Course>, number>, curr: Set<Course>) => {
                 accum.set(

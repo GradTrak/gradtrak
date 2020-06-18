@@ -11,6 +11,7 @@ export abstract class Requirement {
   constraints: Constraint[];
 
   constructor(obj: object) {
+    // FIXME Constraints
     Object.assign(this, obj);
   }
 

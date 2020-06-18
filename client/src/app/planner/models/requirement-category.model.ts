@@ -33,19 +33,29 @@ export class RequirementCategory {
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
   ): RequirementCategory {
-    return new RequirementCategory(
-      proto.name,
-      proto.requirements.map((reqProto: RequirementPrototype) =>
-        RequirementCategory.reqFromProto(reqProto, coursesMap, tagsMap),
-      ),
-      proto.constraints.map((constraintProto: ConstraintPrototype) => {
-        switch (constraintProto.type) {
-          case 'mutex':
-            return new MutexConstraint(constraintProto);
-            break;
-        }
-      }),
+    const requirements: Requirement[] = proto.requirements.map((reqProto: RequirementPrototype) =>
+      RequirementCategory.reqFromProto(reqProto, coursesMap, tagsMap),
     );
+    const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
+
+    const addReqToMap = (req: Requirement) => {
+      reqMap.set(req.id, req);
+      // TODO Type guard
+      if (req instanceof MultiRequirement) {
+        req.requirements.forEach(addReqToMap);
+      }
+    };
+    requirements.forEach(addReqToMap);
+
+    const constraints = proto.constraints.map((constraintProto: ConstraintPrototype) => {
+      switch (constraintProto.type) {
+        case 'mutex':
+          return MutexConstraint.fromProto(constraintProto, reqMap);
+          break;
+      }
+    });
+
+    return new RequirementCategory(proto.name, requirements, constraints);
   }
 
   /* This is placed here to avoid circular dependencies. */
