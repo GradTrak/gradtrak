@@ -136,19 +136,23 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * i to the length of courses.
    *
    * @param {Requirement[]} reqs the complete list of requirements being looked at
-   * @param {number} i the current index for the requirement that's "on deck"
    * @param {Course[]} courses
    * @param {Map<Requirement, Set<Course>>} mapping A map of requirements to courses that fulfill that requirement, used as a pruning tool.
    * @param {boolean} root Whether root requirement pruning can be performed.
+   * @param {number} index the current index for the requirement that's "on deck"
    * @return {Map<Requirement, Set<Course>>[]} All possible ways of assigning courses to requirements from i to the end.
    */
   private getMappings(
     reqs: Requirement[],
-    i: number,
-    mapping: Map<Requirement, Set<Course>>,
     constraints: Map<Requirement, Constraint[]>,
-    root: boolean,
+    isRoot?: boolean,
+    currMapping?: Map<Requirement, Set<Course>>,
+    index?: number,
   ): Map<Requirement, Set<Course>>[] {
+    const root: boolean = isRoot === undefined ? true : isRoot;
+    const i: number = index === undefined ? 0 : index;
+    const mapping: Map<Requirement, Set<Course>> = currMapping || new Map<Requirement, Set<Course>>();
+
     if (reqs.length === i) {
       return [new Map<Requirement, Set<Course>>()];
     }
@@ -165,10 +169,9 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       // Process the children requirements and add it to our current map.
       const subMappings: Map<Requirement, Set<Course>>[] = this.getMappings(
         req.requirements,
-        0,
-        mapping,
         constraints,
         root && req.numRequired === req.requirements.length,
+        mapping,
       );
       /* Take each submap from the result from the requirements and assumes that we are using it, setting
        * the contents of the submap to mapping and using it to find all the future possibilities.
@@ -186,7 +189,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
           });
           mapping.set(req, union);
           // Find the future mappings, with the assumption that we are using the current submap.
-          const rest: Map<Requirement, Set<Course>>[] = this.getMappings(reqs, i + 1, mapping, constraints, root);
+          const rest: Map<Requirement, Set<Course>>[] = this.getMappings(reqs, constraints, root, mapping, i + 1);
           // TODO may not be necessary to delete from mapping
           submap.forEach((courses: Set<Course>, subReq: Requirement) => {
             mapping.delete(subReq); // revert the edit so that we can use the mapping later to prune properly.
@@ -270,7 +273,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
        */
       const finalMappings: Map<Requirement, Set<Course>>[] = combinations.flatMap((combination: Set<Course>) => {
         mapping.set(req, combination);
-        const rest: Map<Requirement, Set<Course>>[] = this.getMappings(reqs, i + 1, mapping, constraints, root);
+        const rest: Map<Requirement, Set<Course>>[] = this.getMappings(reqs, constraints, root, mapping, i + 1);
         mapping.delete(req);
         rest.forEach((restCombination: Map<Requirement, Set<Course>>) => {
           restCombination.set(req, combination);
@@ -316,10 +319,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
 
     const mappings: Map<Requirement, Set<Course>>[] = this.getMappings(
       reqs,
-      0,
-      new Map<Requirement, Set<Course>>(),
       constraints,
-      true,
     );
     const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course>>, number> = new Map<
       Map<Requirement, Set<Course>>,
