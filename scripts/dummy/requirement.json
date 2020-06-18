@@ -258,8 +258,15 @@
         "constraints": [
           {
             "type": "mutex",
-            "name": "CoE H/SS Mutex",
-            "mutexReqIds": ["rc_a", "rc_b", "hss_1", "hss_2", "hssupper_1", "hssupper_2"]
+            "name": "CoE Humanities and Social Sciences Mutex",
+            "mutexReqIds": [
+              "rc_a",
+              "rc_b",
+              "hss_1",
+              "hss_2",
+              "hssupper_1",
+              "hssupper_2"
+            ]
           }
         ]
       }
@@ -304,52 +311,60 @@
         "name": "Breadth Requirements",
         "requirements": [
           {
-            "id": "breadth",
+            "id": "ls_arts",
+            "type": "tag",
+            "name": "Arts and Literature",
+            "tagId": "ls_arts"
+          },
+          {
+            "id": "ls_bio",
+            "type": "tag",
+            "name": "Biological Science",
+            "tagId": "ls_bio"
+          },
+          {
+            "id": "ls_hist",
+            "type": "tag",
+            "name": "Historical Studies",
+            "tagId": "ls_hist"
+          },
+          {
+            "id": "ls_inter",
+            "type": "tag",
+            "name": "International Studies",
+            "tagId": "ls_inter"
+          },
+          {
+            "id": "ls_philo",
+            "type": "tag",
+            "name": "Philosophy and Values",
+            "tagId": "ls_philo"
+          },
+          {
+            "id": "ls_phys",
+            "type": "tag",
+            "name": "Physical Science",
+            "tagId": "ls_phys"
+          },
+          {
+            "id": "ls_socio",
+            "type": "tag",
+            "name": "Social and Behavioral Science",
+            "tagId": "ls_socio"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "L&S Breadth Requirements",
-            "requirements": [
-              {
-                "id": "ls_arts",
-                "type": "tag",
-                "name": "Arts and Literature",
-                "tagId": "ls_arts"
-              },
-              {
-                "id": "ls_bio",
-                "type": "tag",
-                "name": "Biological Science",
-                "tagId": "ls_bio"
-              },
-              {
-                "id": "ls_hist",
-                "type": "tag",
-                "name": "Historical Studies",
-                "tagId": "ls_hist"
-              },
-              {
-                "id": "ls_inter",
-                "type": "tag",
-                "name": "International Studies",
-                "tagId": "ls_inter"
-              },
-              {
-                "id": "ls_philo",
-                "type": "tag",
-                "name": "Philosophy and Values",
-                "tagId": "ls_philo"
-              },
-              {
-                "id": "ls_phys",
-                "type": "tag",
-                "name": "Physical Science",
-                "tagId": "ls_phys"
-              },
-              {
-                "id": "ls_socio",
-                "type": "tag",
-                "name": "Social and Behavioral Science",
-                "tagId": "ls_socio"
-              }
+            "name": "L&S Breadth Requirements Mutex",
+            "mutexReqIds": [
+              "ls_bio",
+              "ls_phys",
+              "ls_philo",
+              "ls_socio",
+              "ls_inter",
+              "ls_arts",
+              "ls_hist"
             ]
           }
         ]
@@ -891,28 +906,32 @@
         "name": "Cluster Courses",
         "requirements": [
           {
-            "id": "cluster",
+            "id": "stat_cluster_1",
+            "type": "tag",
+            "name": "Cluster Course",
+            "tagId": "stat_cluster"
+          },
+          {
+            "id": "stat_cluster_2",
+            "type": "tag",
+            "name": "Cluster Course",
+            "tagId": "stat_cluster"
+          },
+          {
+            "id": "stat_cluster_3",
+            "type": "tag",
+            "name": "Cluster Course",
+            "tagId": "stat_cluster"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "Cluster Courses",
-            "requirements": [
-              {
-                "id": "stat_cluster_1",
-                "type": "tag",
-                "name": "Cluster Course",
-                "tagId": "stat_cluster"
-              },
-              {
-                "id": "stat_cluster_2",
-                "type": "tag",
-                "name": "Cluster Course",
-                "tagId": "stat_cluster"
-              },
-              {
-                "id": "stat_cluster_3",
-                "type": "tag",
-                "name": "Cluster Course",
-                "tagId": "stat_cluster"
-              }
+            "name": "Statistics Cluster Courses Mutex",
+            "mutexReqIds": [
+              "stat_cluster_1",
+              "stat_cluster_2",
+              "stat_cluster_3"
             ]
           }
         ]
