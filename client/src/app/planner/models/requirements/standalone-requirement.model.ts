@@ -42,7 +42,7 @@ export abstract class StandaloneRequirement extends Requirement {
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     const combinations: Set<Course>[] = courses
       .filter((course: Course) => {
-        return this.isFulfilledWith([course], null);
+        return this.isFulfilledWith([course]);
       })
       .map((course: Course) => {
         const combination: Set<Course> = new Set<Course>();

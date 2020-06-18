@@ -18,7 +18,6 @@ export abstract class Requirement {
   /* Requirement.fromProto is currently RequirementCategory.reqFromProto to
    * avoid circular dependencies. */
 
-  // TODO Make override optional
   isFulfilled(courses: Course[], override: Set<string>): boolean {
     if (override && override.has(this.id)) {
       return true;
@@ -26,7 +25,7 @@ export abstract class Requirement {
     return this.isFulfilledWith(courses, override);
   }
 
-  abstract isFulfilledWith(courses: Course[], override: Set<string>): boolean;
+  abstract isFulfilledWith(courses: Course[], override?: Set<string>): boolean;
 
   getAnnotation(): string {
     return null;

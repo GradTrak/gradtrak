@@ -233,7 +233,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
          * requirement if we can. */
         if (req instanceof CourseRequirement) {
           combinations = combinations.filter((combination: Set<Course>) => {
-            return req.isFulfilledWith(Array.from(combination), null);
+            return req.isFulfilledWith(Array.from(combination));
           });
           if (combinations.length === 0) {
             combinations = [new Set<Course>()];
@@ -309,7 +309,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
     >(
       mappings.map((mapping: Map<Requirement, Set<Course>>) => [
         mapping,
-        baseReqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(mapping.get(req)), null)).length,
+        baseReqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(mapping.get(req)))).length,
       ]),
     );
     const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
@@ -318,15 +318,11 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
     );
     baseReqs.forEach((req: Requirement) => {
       if (
-        maxMappings.every((mapping: Map<Requirement, Set<Course>>) =>
-          req.isFulfilledWith(Array.from(mapping.get(req)), null),
-        )
+        maxMappings.every((mapping: Map<Requirement, Set<Course>>) => req.isFulfilledWith(Array.from(mapping.get(req))))
       ) {
         fulfillment.set(req, 'fulfilled');
       } else if (
-        maxMappings.some((mapping: Map<Requirement, Set<Course>>) =>
-          req.isFulfilledWith(Array.from(mapping.get(req)), null),
-        )
+        maxMappings.some((mapping: Map<Requirement, Set<Course>>) => req.isFulfilledWith(Array.from(mapping.get(req))))
       ) {
         fulfillment.set(req, 'possible');
       } else {

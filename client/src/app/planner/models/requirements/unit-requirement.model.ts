@@ -38,9 +38,7 @@ export class UnitRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    const filteredCourses: Course[] = courses.filter((course: Course) =>
-      this.requirement.isFulfilledWith([course], null),
-    );
+    const filteredCourses: Course[] = courses.filter((course: Course) => this.requirement.isFulfilledWith([course]));
     return getAllCombinations(filteredCourses).map((combination: Course[]) => new Set<Course>(combination));
   }
 
