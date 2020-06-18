@@ -11295,7 +11295,7 @@
     "no": "116",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11306,7 +11306,7 @@
     "no": "C117",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11317,7 +11317,7 @@
     "no": "C118",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11328,7 +11328,7 @@
     "no": "C119",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11339,7 +11339,8 @@
     "no": "121",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "bioeng_lab_course"
     ]
   },
   {
@@ -11361,7 +11362,10 @@
     "id": "bioeng124",
     "dept": "BIO ENG",
     "no": "124",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_upper_div",
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -11371,7 +11375,7 @@
     "no": "C125",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11382,7 +11386,7 @@
     "no": "C125B",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11419,7 +11423,7 @@
     "no": "132",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11430,7 +11434,7 @@
     "no": "133",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11441,7 +11445,7 @@
     "no": "134",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11452,7 +11456,7 @@
     "no": "135",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11488,7 +11492,7 @@
     "no": "142",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11499,7 +11503,7 @@
     "no": "143",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11510,7 +11514,8 @@
     "no": "144",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
+      "bioeng_lab_course"
     ]
   },
   {
@@ -11534,7 +11539,7 @@
     "no": "C144",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11557,7 +11562,7 @@
     "no": "145",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11669,7 +11674,8 @@
     "no": "163",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "bioeng_lab_course"
     ]
   },
   {
