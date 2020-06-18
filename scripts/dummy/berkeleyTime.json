@@ -25221,7 +25221,8 @@
     "dept": "COMPSCI",
     "no": "190",
     "tagIds": [
-      "qr"
+      "qr",
+      "eecs_upper_div"
     ]
   },
   {
@@ -25230,7 +25231,9 @@
     "id": "compsci191a",
     "dept": "COMPSCI",
     "no": "191A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -25240,7 +25243,8 @@
     "no": "C191",
     "tagIds": [
       "qr",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_upper_div"
     ]
   },
   {
@@ -25249,7 +25253,9 @@
     "id": "compsci195",
     "dept": "COMPSCI",
     "no": "195",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 2,
@@ -25257,7 +25263,9 @@
     "id": "compscic195",
     "dept": "COMPSCI",
     "no": "C195",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 3,
@@ -25266,7 +25274,8 @@
     "dept": "COMPSCI",
     "no": "H195",
     "tagIds": [
-      "qr"
+      "qr",
+      "eecs_ethics"
     ]
   },
   {
@@ -25568,7 +25577,8 @@
     "dept": "COMPSCI",
     "no": "270",
     "tagIds": [
-      "qr"
+      "qr",
+      "eecs_upper_div"
     ]
   },
   {
@@ -25678,7 +25688,8 @@
     "dept": "COMPSCI",
     "no": "C280",
     "tagIds": [
-      "qr"
+      "qr",
+      "eecs_upper_div"
     ]
   },
   {
@@ -25728,7 +25739,8 @@
     "dept": "COMPSCI",
     "no": "282A",
     "tagIds": [
-      "qr"
+      "qr",
+      "eecs_upper_div"
     ]
   },
   {
@@ -35152,7 +35164,9 @@
     "id": "eleng100",
     "dept": "EL ENG",
     "no": "100",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 5,
@@ -35160,7 +35174,9 @@
     "id": "eleng104",
     "dept": "EL ENG",
     "no": "104",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 5,
@@ -35168,7 +35184,9 @@
     "id": "elengs104",
     "dept": "EL ENG",
     "no": "S104",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35176,7 +35194,9 @@
     "id": "eleng105",
     "dept": "EL ENG",
     "no": "105",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35184,7 +35204,9 @@
     "id": "elengc106a",
     "dept": "EL ENG",
     "no": "C106A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35192,7 +35214,9 @@
     "id": "elengc106b",
     "dept": "EL ENG",
     "no": "C106B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -35200,7 +35224,9 @@
     "id": "eleng110",
     "dept": "EL ENG",
     "no": "110",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35208,7 +35234,9 @@
     "id": "eleng111",
     "dept": "EL ENG",
     "no": "111",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35216,7 +35244,9 @@
     "id": "eleng112",
     "dept": "EL ENG",
     "no": "112",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35224,7 +35254,9 @@
     "id": "eleng113",
     "dept": "EL ENG",
     "no": "113",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35232,7 +35264,9 @@
     "id": "eleng114",
     "dept": "EL ENG",
     "no": "114",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 1,
@@ -35240,7 +35274,8 @@
     "id": "eleng115",
     "dept": "EL ENG",
     "no": "115",
-    "tagIds": []
+    "tagIds": [
+    ]
   },
   {
     "units": 4,
@@ -35248,7 +35283,9 @@
     "id": "eleng117",
     "dept": "EL ENG",
     "no": "117",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35256,7 +35293,9 @@
     "id": "eleng117a",
     "dept": "EL ENG",
     "no": "117A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35264,7 +35303,9 @@
     "id": "eleng117b",
     "dept": "EL ENG",
     "no": "117B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35272,7 +35313,9 @@
     "id": "eleng118",
     "dept": "EL ENG",
     "no": "118",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35280,7 +35323,9 @@
     "id": "eleng119",
     "dept": "EL ENG",
     "no": "119",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35288,7 +35333,9 @@
     "id": "eleng120",
     "dept": "EL ENG",
     "no": "120",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 1,
@@ -35296,7 +35343,8 @@
     "id": "eleng120l",
     "dept": "EL ENG",
     "no": "120L",
-    "tagIds": []
+    "tagIds": [
+    ]
   },
   {
     "units": 4,
@@ -35304,7 +35352,9 @@
     "id": "eleng121",
     "dept": "EL ENG",
     "no": "121",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35312,7 +35362,9 @@
     "id": "eleng122",
     "dept": "EL ENG",
     "no": "122",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35320,7 +35372,9 @@
     "id": "eleng123",
     "dept": "EL ENG",
     "no": "123",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 1,
@@ -35328,7 +35382,9 @@
     "id": "eleng124",
     "dept": "EL ENG",
     "no": "124",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35336,7 +35392,9 @@
     "id": "eleng125",
     "dept": "EL ENG",
     "no": "125",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35344,7 +35402,9 @@
     "id": "elengc125",
     "dept": "EL ENG",
     "no": "C125",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35352,7 +35412,9 @@
     "id": "eleng126",
     "dept": "EL ENG",
     "no": "126",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35360,7 +35422,9 @@
     "id": "eleng127",
     "dept": "EL ENG",
     "no": "127",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35368,7 +35432,9 @@
     "id": "eleng127a",
     "dept": "EL ENG",
     "no": "127A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35376,7 +35442,9 @@
     "id": "eleng128",
     "dept": "EL ENG",
     "no": "128",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35384,7 +35452,9 @@
     "id": "elengc128",
     "dept": "EL ENG",
     "no": "C128",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35392,7 +35462,9 @@
     "id": "eleng129",
     "dept": "EL ENG",
     "no": "129",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35400,7 +35472,9 @@
     "id": "eleng130",
     "dept": "EL ENG",
     "no": "130",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35408,7 +35482,9 @@
     "id": "elengw130",
     "dept": "EL ENG",
     "no": "W130",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35416,7 +35492,9 @@
     "id": "eleng131",
     "dept": "EL ENG",
     "no": "131",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -35424,7 +35502,9 @@
     "id": "elengc133",
     "dept": "EL ENG",
     "no": "C133",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35432,7 +35512,9 @@
     "id": "eleng134",
     "dept": "EL ENG",
     "no": "134",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -35440,7 +35522,9 @@
     "id": "eleng135",
     "dept": "EL ENG",
     "no": "135",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -35448,7 +35532,9 @@
     "id": "eleng136",
     "dept": "EL ENG",
     "no": "136",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35456,7 +35542,9 @@
     "id": "eleng137",
     "dept": "EL ENG",
     "no": "137",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35464,7 +35552,9 @@
     "id": "eleng137a",
     "dept": "EL ENG",
     "no": "137A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35472,7 +35562,9 @@
     "id": "eleng137b",
     "dept": "EL ENG",
     "no": "137B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35480,7 +35572,9 @@
     "id": "eleng140",
     "dept": "EL ENG",
     "no": "140",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35488,7 +35582,9 @@
     "id": "elengw140",
     "dept": "EL ENG",
     "no": "W140",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35496,7 +35592,9 @@
     "id": "eleng141",
     "dept": "EL ENG",
     "no": "141",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35504,7 +35602,9 @@
     "id": "elengs141",
     "dept": "EL ENG",
     "no": "S141",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35512,7 +35612,9 @@
     "id": "elengw141",
     "dept": "EL ENG",
     "no": "W141",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35520,7 +35622,9 @@
     "id": "eleng142",
     "dept": "EL ENG",
     "no": "142",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35528,7 +35632,9 @@
     "id": "elengw142",
     "dept": "EL ENG",
     "no": "W142",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35536,7 +35642,9 @@
     "id": "eleng143",
     "dept": "EL ENG",
     "no": "143",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35544,7 +35652,9 @@
     "id": "eleng144",
     "dept": "EL ENG",
     "no": "144",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35552,7 +35662,9 @@
     "id": "eleng145a",
     "dept": "EL ENG",
     "no": "145A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35560,7 +35672,9 @@
     "id": "eleng145b",
     "dept": "EL ENG",
     "no": "145B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35568,7 +35682,9 @@
     "id": "eleng145l",
     "dept": "EL ENG",
     "no": "145L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35576,7 +35692,9 @@
     "id": "eleng145m",
     "dept": "EL ENG",
     "no": "145M",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35584,7 +35702,9 @@
     "id": "elengc145b",
     "dept": "EL ENG",
     "no": "C145B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35592,7 +35712,9 @@
     "id": "elengc145l",
     "dept": "EL ENG",
     "no": "C145L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35600,7 +35722,9 @@
     "id": "elengc145m",
     "dept": "EL ENG",
     "no": "C145M",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35608,7 +35732,9 @@
     "id": "elengc145o",
     "dept": "EL ENG",
     "no": "C145O",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35616,7 +35742,9 @@
     "id": "eleng146",
     "dept": "EL ENG",
     "no": "146",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -35624,7 +35752,8 @@
     "id": "eleng146l",
     "dept": "EL ENG",
     "no": "146L",
-    "tagIds": []
+    "tagIds": [
+    ]
   },
   {
     "units": 3,
@@ -35632,7 +35761,9 @@
     "id": "eleng147",
     "dept": "EL ENG",
     "no": "147",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35640,7 +35771,9 @@
     "id": "eleng148",
     "dept": "EL ENG",
     "no": "148",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35648,7 +35781,9 @@
     "id": "elengc149",
     "dept": "EL ENG",
     "no": "C149",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35656,7 +35791,9 @@
     "id": "eleng191a",
     "dept": "EL ENG",
     "no": "191A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35664,7 +35801,9 @@
     "id": "eleng191b",
     "dept": "EL ENG",
     "no": "191B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -35672,7 +35811,9 @@
     "id": "eleng192",
     "dept": "EL ENG",
     "no": "192",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -35680,7 +35821,9 @@
     "id": "eleng193",
     "dept": "EL ENG",
     "no": "193",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -36104,7 +36247,9 @@
     "id": "eleng229a",
     "dept": "EL ENG",
     "no": "229A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_upper_div"
+    ]
   },
   {
     "units": 3,
