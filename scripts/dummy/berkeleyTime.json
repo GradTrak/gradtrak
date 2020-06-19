@@ -24882,7 +24882,8 @@
     "no": "C149",
     "tagIds": [
       "qr",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -24936,7 +24937,8 @@
     "no": "160",
     "tagIds": [
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_design"
     ]
   },
   {
@@ -24970,7 +24972,8 @@
     "no": "162",
     "tagIds": [
       "qr",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -24981,7 +24984,8 @@
     "no": "164",
     "tagIds": [
       "qr",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -25015,7 +25019,8 @@
     "tagIds": [
       "qr",
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_design"
     ]
   },
   {
@@ -25118,7 +25123,8 @@
     "no": "182",
     "tagIds": [
       "qr",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -25162,7 +25168,8 @@
     "no": "184",
     "tagIds": [
       "qr",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -25174,7 +25181,8 @@
     "tagIds": [
       "qr",
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_design"
     ]
   },
   {
@@ -25186,7 +25194,8 @@
     "tagIds": [
       "qr",
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_design"
     ]
   },
   {
@@ -35206,7 +35215,8 @@
     "dept": "EL ENG",
     "no": "C106A",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35216,7 +35226,8 @@
     "dept": "EL ENG",
     "no": "C106B",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35444,7 +35455,8 @@
     "dept": "EL ENG",
     "no": "128",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35454,7 +35466,8 @@
     "dept": "EL ENG",
     "no": "C128",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35474,7 +35487,8 @@
     "dept": "EL ENG",
     "no": "130",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35574,7 +35588,8 @@
     "dept": "EL ENG",
     "no": "140",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35644,7 +35659,8 @@
     "dept": "EL ENG",
     "no": "143",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35783,7 +35799,8 @@
     "dept": "EL ENG",
     "no": "C149",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
@@ -35813,7 +35830,8 @@
     "dept": "EL ENG",
     "no": "192",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
   {
