@@ -34788,7 +34788,8 @@
     "id": "eecs151la",
     "dept": "EECS",
     "no": "151LA",
-    "tagIds": []
+    "tagIds": [
+    ]
   },
   {
     "units": 2,
@@ -36977,7 +36978,9 @@
     "id": "eneres100",
     "dept": "ENE,RES",
     "no": "100",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 4,
@@ -36987,7 +36990,8 @@
     "no": "C100",
     "tagIds": [
       "ls_phys",
-      "ls_socio"
+      "ls_socio",
+      "eecs_ethics"
     ]
   },
   {
@@ -36996,7 +37000,9 @@
     "id": "eneresw100",
     "dept": "ENE,RES",
     "no": "W100",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 3,
@@ -37836,7 +37842,9 @@
     "id": "engin125",
     "dept": "ENGIN",
     "no": "125",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 3,
@@ -38086,7 +38094,9 @@
     "id": "engin185",
     "dept": "ENGIN",
     "no": "185",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 3,
