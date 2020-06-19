@@ -62220,7 +62220,8 @@
     "no": "C184D",
     "tagIds": [
       "ls_hist",
-      "ls_philo"
+      "ls_philo",
+      "eecs_ethics"
     ]
   },
   {
@@ -63928,7 +63929,8 @@
     "dept": "IAS",
     "no": "157AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "eecs_ethics"
     ]
   },
   {
@@ -65075,7 +65077,9 @@
     "id": "info88a",
     "dept": "INFO",
     "no": "88A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 3,
@@ -69102,7 +69106,9 @@
     "id": "isf100d",
     "dept": "ISF",
     "no": "100D",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 4,
@@ -94298,7 +94304,9 @@
     "id": "nwmedia151ac",
     "dept": "NWMEDIA",
     "no": "151AC",
-    "tagIds": []
+    "tagIds": [
+      "eecs_ethics"
+    ]
   },
   {
     "units": 4,
