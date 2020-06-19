@@ -24961,7 +24961,8 @@
     "tagIds": [
       "qr",
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_design" //technically only for spring 2019 and after but riperinoes, good enough? juniors prob wont use this
     ]
   },
   {
@@ -34788,9 +34789,11 @@
     "dept": "EECS",
     "no": "151",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "eecs_design"
     ]
   },
+  //uh technically they're supposed to take both the above and la/lb but uh idk
   {
     "units": 2,
     "title": "Application Specific Integrated Circuits Laboratory",
@@ -34798,6 +34801,7 @@
     "dept": "EECS",
     "no": "151LA",
     "tagIds": [
+      "eecs_design"
     ]
   },
   {
@@ -34806,7 +34810,9 @@
     "id": "eecs151lb",
     "dept": "EECS",
     "no": "151LB",
-    "tagIds": []
+    "tagIds": [
+      "eecs_design"
+    ]
   },
   {
     "units": 4,
