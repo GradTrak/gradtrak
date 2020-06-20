@@ -7,7 +7,6 @@ import { MutexRequirement } from '../../models/requirements/mutex-requirement.mo
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
-import { TagRequirement } from '../../models/requirements/tag-requirement.model';
 
 @Component({
   selector: 'app-requirement',
