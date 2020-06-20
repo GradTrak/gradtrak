@@ -1107,7 +1107,8 @@
     "dept": "AFRICAM",
     "no": "114",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
@@ -1995,7 +1996,9 @@
     "id": "africam242",
     "dept": "AFRICAM",
     "no": "242",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -5309,7 +5312,9 @@
     "id": "anthro166",
     "dept": "ANTHRO",
     "no": "166",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -5351,7 +5356,9 @@
     "id": "anthro169c",
     "dept": "ANTHRO",
     "no": "169C",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 2,
@@ -13393,7 +13400,9 @@
     "id": "celtic102a",
     "dept": "CELTIC",
     "no": "102A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -13409,7 +13418,9 @@
     "id": "celtic105a",
     "dept": "CELTIC",
     "no": "105A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -13660,7 +13671,9 @@
     "id": "celtic161",
     "dept": "CELTIC",
     "no": "161",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -16425,7 +16438,9 @@
     "id": "chinese161",
     "dept": "CHINESE",
     "no": "161",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -16441,7 +16456,9 @@
     "id": "chinese165",
     "dept": "CHINESE",
     "no": "165",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -26185,7 +26202,9 @@
     "id": "cuneif100a",
     "dept": "CUNEIF",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -26193,7 +26212,9 @@
     "id": "cuneif100b",
     "dept": "CUNEIF",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -26201,7 +26222,9 @@
     "id": "cuneif101a",
     "dept": "CUNEIF",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -26209,7 +26232,9 @@
     "id": "cuneif101b",
     "dept": "CUNEIF",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -26233,7 +26258,9 @@
     "id": "cuneif103a",
     "dept": "CUNEIF",
     "no": "103A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -26241,7 +26268,9 @@
     "id": "cuneif103b",
     "dept": "CUNEIF",
     "no": "103B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -28608,7 +28637,9 @@
     "id": "dutch107",
     "dept": "DUTCH",
     "no": "107",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -34892,7 +34923,9 @@
     "id": "egypt100a",
     "dept": "EGYPT",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 5,
@@ -34900,7 +34933,9 @@
     "id": "egypt100b",
     "dept": "EGYPT",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -34908,7 +34943,9 @@
     "id": "egypt101a",
     "dept": "EGYPT",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -34916,7 +34953,9 @@
     "id": "egypt101b",
     "dept": "EGYPT",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -39567,7 +39606,9 @@
     "id": "english101",
     "dept": "ENGLISH",
     "no": "101",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -39575,7 +39616,9 @@
     "id": "englishs101",
     "dept": "ENGLISH",
     "no": "S101",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -40809,7 +40852,8 @@
     "dept": "ENGLISH",
     "no": "179",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "linguis_elective"
     ]
   },
   {
@@ -49728,7 +49772,9 @@
     "id": "french145",
     "dept": "FRENCH",
     "no": "145",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -49770,7 +49816,8 @@
     "no": "146A",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
@@ -49787,7 +49834,9 @@
     "id": "french147",
     "dept": "FRENCH",
     "no": "147",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -49795,7 +49844,9 @@
     "id": "french148",
     "dept": "FRENCH",
     "no": "148",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -53044,7 +53095,9 @@
     "id": "german103",
     "dept": "GERMAN",
     "no": "103",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -53061,7 +53114,8 @@
     "dept": "GERMAN",
     "no": "105",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "linguis_elective"
     ]
   },
   {
@@ -53905,7 +53959,9 @@
     "id": "german170",
     "dept": "GERMAN",
     "no": "170",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -53929,7 +53985,9 @@
     "id": "german173",
     "dept": "GERMAN",
     "no": "173",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -53937,7 +53995,9 @@
     "id": "german174",
     "dept": "GERMAN",
     "no": "174",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 0,
@@ -56641,7 +56701,9 @@
     "id": "hebrew105b",
     "dept": "HEBREW",
     "no": "105B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 2,
@@ -65233,7 +65295,9 @@
     "id": "info159",
     "dept": "INFO",
     "no": "159",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -69122,7 +69186,9 @@
     "id": "isf100c",
     "dept": "ISF",
     "no": "100C",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -70682,7 +70748,8 @@
     "no": "120",
     "tagIds": [
       "ls_arts",
-      "ls_inter"
+      "ls_inter",
+      "linguis_elective"
     ]
   },
   {
