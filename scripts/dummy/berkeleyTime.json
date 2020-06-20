@@ -4090,7 +4090,9 @@
     "id": "anthroc100",
     "dept": "ANTHRO",
     "no": "C100",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4114,7 +4116,9 @@
     "id": "anthroc103",
     "dept": "ANTHRO",
     "no": "C103",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4246,7 +4250,9 @@
     "id": "anthro115",
     "dept": "ANTHRO",
     "no": "115",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -4304,7 +4310,9 @@
     "id": "anthro121",
     "dept": "ANTHRO",
     "no": "121",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4512,7 +4520,9 @@
     "id": "anthroc124c",
     "dept": "ANTHRO",
     "no": "C124C",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -4584,7 +4594,9 @@
     "id": "anthro127a",
     "dept": "ANTHRO",
     "no": "127A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4592,7 +4604,9 @@
     "id": "anthro127b",
     "dept": "ANTHRO",
     "no": "127B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 5,
@@ -4674,7 +4688,9 @@
     "id": "anthro129d",
     "dept": "ANTHRO",
     "no": "129D",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4690,7 +4706,9 @@
     "id": "anthroc129d",
     "dept": "ANTHRO",
     "no": "C129D",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4738,7 +4756,9 @@
     "id": "anthro132a",
     "dept": "ANTHRO",
     "no": "132A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4787,7 +4807,8 @@
     "dept": "ANTHRO",
     "no": "135",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "stat_cluster"
     ]
   },
   {
@@ -5330,7 +5351,8 @@
     "id": "anthro169",
     "dept": "ANTHRO",
     "no": "169",
-    "tagIds": []
+    "tagIds": [
+    ]
   },
   {
     "units": 4,
@@ -5347,7 +5369,8 @@
     "dept": "ANTHRO",
     "no": "169B",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -7610,7 +7633,9 @@
     "id": "arch140",
     "dept": "ARCH",
     "no": "140",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -7642,7 +7667,9 @@
     "id": "arch150",
     "dept": "ARCH",
     "no": "150",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -7674,7 +7701,9 @@
     "id": "arch154",
     "dept": "ARCH",
     "no": "154",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -10658,7 +10687,9 @@
     "id": "astron128",
     "dept": "ASTRON",
     "no": "128",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -10690,7 +10721,9 @@
     "id": "astron160",
     "dept": "ASTRON",
     "no": "160",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -10722,7 +10755,9 @@
     "id": "astronc161",
     "dept": "ASTRON",
     "no": "C161",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -10730,7 +10765,9 @@
     "id": "astronc162",
     "dept": "ASTRON",
     "no": "C162",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -11200,7 +11237,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_fundamentals"
+      "bioeng_fundamentals",
+      "stat_cluster"
     ]
   },
   {
@@ -11246,7 +11284,8 @@
     "no": "112",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11257,7 +11296,8 @@
     "no": "C112",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11313,7 +11353,8 @@
     "no": "C117",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11335,7 +11376,8 @@
     "no": "C119",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11382,7 +11424,8 @@
     "no": "C125",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11393,7 +11436,8 @@
     "no": "C125B",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11406,7 +11450,8 @@
       "bioeng_upper_div",
       "bioeng_technical_topics",
       "bioeng_fundamentals",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -11475,7 +11520,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -11522,7 +11568,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics"
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -11581,7 +11628,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -11593,7 +11641,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -11604,7 +11653,8 @@
     "no": "147",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11716,7 +11766,8 @@
     "no": "C165",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -67678,7 +67729,9 @@
     "id": "integbic155",
     "dept": "INTEGBI",
     "no": "C155",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -68121,7 +68174,9 @@
     "id": "integbic187",
     "dept": "INTEGBI",
     "no": "C187",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
