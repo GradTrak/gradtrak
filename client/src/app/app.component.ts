@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private router: Router) {
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    router.events.subscribe((event: unknown) => {
+      if (event instanceof NavigationEnd) {
+        const { ga } = window as any;
+        if (ga) {
+          ga('set', 'page', event.urlAfterRedirects);
+          ga('send', 'pageview');
+        }
+      }
+    });
+    /* eslint-enable @typescript-eslint/no-explicit-any */
+  }
 
   ngOnInit(): void {}
 }

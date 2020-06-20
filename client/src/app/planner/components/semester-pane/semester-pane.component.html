@@ -1,15 +1,24 @@
-<div class="semester-container">
-  <app-semester *ngFor="let semester of semesters" [semester]="semester" [currentSemesters]="semesters"></app-semester>
+<div class="container px-4 py-3">
+  <div class="row">
+    <div *ngFor="let semester of getSemArr(semesters)" class="col-6 py-3">
+      <app-semester [semester]="semester" [currentSemesters]="getSemArr(semesters)"></app-semester>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-8 my-4">
+      <button class="gt-button gt-button-primary semester-changer" (click)="openSemesterChanger()">
+        Add/Remove Semesters
+      </button>
+    </div>
+  </div>
 </div>
 
 <ng-template #semesterChangerTemplate>
-  <app-semester-changer
-    [semestersInput]="semesters"
-    (semesterChanged)="setSemesters($event)"
-    (semesterChanged)="closeSemesterChanger()"
-  ></app-semester-changer>
+  <div class="modal-body">
+    <app-semester-changer
+      [semestersInput]="semesters"
+      (semesterChanged)="setSemesters($event)"
+      (semesterChanged)="closeSemesterChanger()"
+    ></app-semester-changer>
+  </div>
 </ng-template>
-
-<button class="gt-button gt-button-primary semester-changer" (click)="openSemesterChanger()">
-  Add/Remove Semesters
-</button>

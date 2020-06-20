@@ -1,22 +1,23 @@
-:host,
-.semester-adder {
-  padding: 16px;
+.header {
+  margin-top: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #283adc;
 }
 
 .table {
   margin: 32px;
 }
 
+.error {
+  color: red;
+}
+
 .material-icons {
   position: absolute;
-  transform: translateX(-20px);
+  transform: translate(-20px, 4px);
   font-size: 1.25rem;
   color: red;
   cursor: pointer;
-}
-
-.semester-adder {
-  input {
-    width: 100%;
-  }
 }

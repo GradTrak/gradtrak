@@ -2,7 +2,7 @@
 
 <ng-template #standardReq>
   <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle></button>
+    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
         Mark as Fulfilled
@@ -17,9 +17,9 @@
 
 <ng-template #tagReq>
   <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle></button>
+    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
-      <button class="gt-button" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+      <button ngbDropdownItem (click)="openRequirementDisplay(requirement)">
         Show Fulfilling Courses
       </button>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
@@ -36,7 +36,7 @@
 <ng-template #multiReq>
   <ng-container *ngIf="!getMulti().hidden; else multiReqHidden">
     <div ngbDropdown class="req-more">
-      <button class="gt-button" ngbDropdownToggle></button>
+      <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
       <div ngbDropdownMenu>
         <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
           Show Fulfilling Courses
@@ -67,7 +67,7 @@
   </ng-container>
   <ng-template #multiReqHidden>
     <div ngbDropdown class="req-more">
-      <button class="gt-button" ngbDropdownToggle></button>
+      <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
       <div ngbDropdownMenu>
         <button *ngIf="isPoly()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
           Show Fulfilling Courses
@@ -86,9 +86,9 @@
 
 <ng-template #unitReq>
   <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle></button>
+    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
-      <button class="gt-button" ngbDropdownItem (click)="openRequirementDisplay(getUnit().requirement)">
+      <button ngbDropdownItem (click)="openRequirementDisplay(getUnit().requirement)">
         Show Fulfilling Courses
       </button>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
@@ -111,7 +111,7 @@
 
 <ng-template #mutexReq>
   <div ngbDropdown class="req-more">
-    <button class="gt-button" ngbDropdownToggle></button>
+    <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
         Mark as Fulfilled
@@ -150,5 +150,7 @@
 </ng-template>
 
 <ng-template #requirementDisplayTemplate>
-  <app-requirement-display [requirementInput]="displayedRequirement"></app-requirement-display>
+  <div class="modal-body">
+    <app-requirement-display [requirementInput]="displayedRequirement"></app-requirement-display>
+  </div>
 </ng-template>

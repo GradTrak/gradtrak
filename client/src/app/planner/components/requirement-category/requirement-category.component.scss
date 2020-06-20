@@ -7,14 +7,14 @@
   font-size: 1.2rem;
 }
 
-.button {
+.dropdown-arrow {
   cursor: pointer;
   user-select: none;
   transform: translateY(4px);
 }
 
 .collapsed {
-  .button {
+  .dropdown-arrow {
     transform: translateY(4px) rotate(-90deg);
   }
 

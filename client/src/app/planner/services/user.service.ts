@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map, tap } from 'rxjs/operators';
-import { SemesterPrototype } from 'common/prototypes/semester.prototype';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
@@ -21,7 +20,7 @@ export class UserService {
     loggedIn: false,
     username: null,
     userData: {
-      semesters: [],
+      semesters: new Map<string, Semester[]>(),
       goals: [],
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
@@ -186,7 +185,7 @@ export class UserService {
         ),
       )
       .subscribe((userData: UserData) => {
-        if (userData.semesters.length > 0) {
+        if (userData.semesters.size > 0) {
           this.state.next({
             ...this.currentState,
             userData,
@@ -206,16 +205,20 @@ export class UserService {
   }
 
   /**
-   * Updates the list of semesters to a new list of given semesters.
+   * Updates the list of semesters to a new mapping of given semesters.
    *
-   * @param {Semester[]} newSemesters The new semesters.
+   * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
-  updateSemesters(newSemesters: Semester[]): void {
+  updateSemesters(newSemesters: Map<string, Semester[]>): void {
+    const newMap = new Map<string, Semester[]>(); // not sure why, before the rework the list of semesters was copied, so I've copied the map here as well.
+    newSemesters.forEach((value, key) => {
+      newMap.set(key, [...value]);
+    });
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...newSemesters],
+        semesters: newMap,
       },
     });
   }
@@ -253,7 +256,7 @@ export class UserService {
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...this.currentState.userData.semesters],
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
       },
     });
   }
@@ -276,7 +279,7 @@ export class UserService {
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...this.currentState.userData.semesters],
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
       },
     });
   }
@@ -336,13 +339,19 @@ export class UserService {
   }
 
   private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: SemesterPrototype[] = userData.semesters.map((semester: Semester) => {
-      const semesterPrototype = {
-        ...semester,
-        courseIds: semester.courses.map((course: Course) => course.id),
-      };
-      delete semesterPrototype.courses;
-      return semesterPrototype;
+    const semesters: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
+    userData.semesters.forEach((academicYearSemesters, academicYearName) => {
+      semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
+        if (!semester) {
+          return null;
+        }
+        const semesterPrototype = {
+          ...semester,
+          courseIds: semester.courses.map((course: Course) => course.id),
+        };
+        delete semesterPrototype.courses;
+        return semesterPrototype;
+      });
     });
     const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
     const manuallyFulfilledReqs: object = Object.fromEntries(
@@ -351,7 +360,6 @@ export class UserService {
         Array.from(entry[1]),
       ]),
     );
-
     return {
       semesters,
       goalIds,
