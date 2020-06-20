@@ -127,10 +127,11 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
 
   /**
    * Given a list of requirements and courses, recursively finds and returns an
-   * array of every single possible way to arrange courses to the different
+   * array of every single reasonable possible way to arrange courses to the different
    * requirements.  Note that the time and space complexity of this operation
    * is Theta(N**M), where N is the number of courses and M is the number of
-   * requirements.
+   * requirements. Will assume that base level course requirements are fullfilled immediately,
+   * and always attempts to take the map with the highest number of fullfilled requirements. 
    *
    * In particular, each recursive call calculates all the possibilities from i
    * to the length of courses.
@@ -220,7 +221,6 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
             alpha,
             i + 1,
           );
-          // TODO may not be necessary to delete from mapping
           submap.forEach((courses: Set<Course>, subReq: Requirement) => {
             /* Revert so that we can use the mapping later to prune properly. */
             mapping.delete(subReq);
@@ -396,7 +396,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * fulfillment statuses of every requirement.
    */
   processRequirements(): Map<Requirement, FulfillmentType> {
-
+    //pool constraints into a map.
     const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
     this.getRequiredSets().forEach((reqSet: RequirementSet) => {
       const setConstraints: Constraint[] = reqSet.getConstraints();
