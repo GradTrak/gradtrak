@@ -11,8 +11,11 @@ export class AppComponent {
     /* eslint-disable @typescript-eslint/no-explicit-any */
     router.events.subscribe((event: unknown) => {
       if (event instanceof NavigationEnd) {
-        (window as any).ga('set', 'page', event.urlAfterRedirects);
-        (window as any).ga('send', 'pageview');
+        const { ga } = window as any;
+        if (ga) {
+          ga('set', 'page', event.urlAfterRedirects);
+          ga('send', 'pageview');
+        }
       }
     });
     /* eslint-enable @typescript-eslint/no-explicit-any */
