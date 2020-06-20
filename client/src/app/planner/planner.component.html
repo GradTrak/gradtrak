@@ -1,4 +1,5 @@
 <div class="header">
+  <span class="material-icons" (click)="openReportForm()">outlined_flag</span>
   <div class="title">GradTrak</div>
   <div class="name">
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
@@ -27,9 +28,6 @@
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
       ></app-requirements-pane>
     </div>
-    <button class="btn btn-primary btn-sm report-button" (click)="openReportForm()">
-      Feedback
-    </button>
   </ng-container>
 </div>
 

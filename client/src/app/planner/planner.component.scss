@@ -36,23 +36,18 @@ $header-height: 5rem;
   overflow-y: scroll;
 }
 
-$report-button-width: 5rem;
-$report-button-height: 2rem;
-
-.report-button {
-  position: fixed;
-  right: ($report-button-height - $report-button-width) / 2;
-  top: calc(50vh + #{$header-height / 2 - $report-button-height / 2});
-  width: $report-button-width;
-  height: $report-button-height;
-  font-size: 0.75rem;
-  transform: rotate(-90deg);
-}
-
 .left {
   float: left;
 }
 
 .right {
   float: right;
+}
+
+.material-icons {
+  cursor: pointer;
+  float: right;
+  padding: 12px;
+  font-size: 24px;
+  color: white;
 }
