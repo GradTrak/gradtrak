@@ -23,7 +23,7 @@ export type FulfillmentType = 'fulfilled' | 'unfulfilled' | 'possible';
 export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly goals: RequirementSet[];
   @Input() readonly courses: Course[];
-  @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
+  @Input() readonly manuallyFulfilled: Map<string, Set<string>>; //Maps from a requirementSet id to a list of requirement ids.
 
   fulfillmentMap: Map<Requirement, FulfillmentType>;
 
@@ -131,7 +131,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * requirements.  Note that the time and space complexity of this operation
    * is Theta(N**M), where N is the number of courses and M is the number of
    * requirements. Will assume that base level course requirements are fullfilled immediately,
-   * and always attempts to take the map with the highest number of fullfilled requirements. 
+   * and always attempts to take the map with the highest number of fullfilled requirements.
    *
    * In particular, each recursive call calculates all the possibilities from i
    * to the length of courses.
@@ -352,29 +352,32 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
    * goal progress.
    * @param {Map<Requirement, Set<Course>>[]} mappings The possible course
    * mappings.
-   * @param {Map<Requirement, FulfillmentType} fulfillment The map to which to
+   * @param {Map<Requirement, FulfillmentType} fulfillment The map to which we
    * assign the derived fulfillment statuses.
    */
   private static deriveFulfillment(
     baseReqs: Requirement[],
-    mappings: Map<Requirement, Set<Course>>[],
+    reqToCourseMappings: Map<Requirement, Set<Course>>[],
     fulfillment: Map<Requirement, FulfillmentType>,
+    manualFulfillment: Set<Requirement>
   ): void {
     const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course>>, number> = new Map<
       Map<Requirement, Set<Course>>,
       number
-    >(
-      mappings.map((mapping: Map<Requirement, Set<Course>>) => [
-        mapping,
-        baseReqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(mapping.get(req)))).length,
+    >( //A mapping of each requirement-to-course map to the number of requirements it fulfills.
+      reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course>>) => [
+        reqToCourseMapping,
+        baseReqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(reqToCourseMapping.get(req)))).length,
       ]),
     );
     const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
-    const maxMappings: Map<Requirement, Set<Course>>[] = mappings.filter(
-      (mapping: Map<Requirement, Set<Course>>) => mappingFulfillmentCounts.get(mapping) === maxFulfilled,
+    const maxMappings: Map<Requirement, Set<Course>>[] = reqToCourseMappings.filter(
+      (reqToCourseMapping: Map<Requirement, Set<Course>>) => mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
     );
     baseReqs.forEach((req: Requirement) => {
-      if (
+      if (manualFulfillment.has(req)) {
+        fullfillment.set(req, 'manual');
+      } else if (
         maxMappings.every((mapping: Map<Requirement, Set<Course>>) => req.isFulfilledWith(Array.from(mapping.get(req))))
       ) {
         fulfillment.set(req, 'fulfilled');
@@ -414,11 +417,18 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
     const fulfillment: Map<Requirement, FulfillmentType> = new Map();
 
     this.getRequiredSets().forEach((reqSet: RequirementSet) => {
-      const setConstraints: Constraint[] = reqSet.getConstraints();
+      const unfulfilledReqSet = reqSet.requirementCategories.map(reqCateg => {//Filter each group to only have non manually-fulfilled requirements.
+        {
+          ...reqCateg,
+          requirements: reqCateg.requirements.filter(req: Requirement => !(manuallyFulfilled.get(reqSet.id).has(req.id)))
+        }
+      });
+      Object.assign(unfulfilledReqSet, RequirementSet)
+      const setConstraints: Constraint[] = unfulfilledReqSet.getConstraints();
       if (setConstraints.length === 0) {
         /* If a set has no constraints, we can derive fulfillment at the level
          * of a category. */
-        reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
+        unfulfilledReqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
           const categoryConstraints: Constraint[] = reqCategory.getConstraints();
           if (categoryConstraints.length === 0) {
             /* If a category has no constraints, we can derive fulfillment at
@@ -436,9 +446,17 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
           }
         });
       } else {
-        const setReqs: Requirement[] = reqSet.getRequirements();
+        const setReqs: Requirement[] = unfulfilledReqSet.getRequirements();
         const setMappings: Map<Requirement, Set<Course>>[] = this.getMappings(setReqs, constraints);
-        RequirementsPaneComponent.deriveFulfillment(setReqs, setMappings, fulfillment);
+        const manualReqs: Set<Requirement> = new Set<Requirement>;
+        this.getRequiredSets.forEach(reqSet: RequirementSet => {
+          const manualReqIds = this.manuallyFulfilled.get(reqSet.id);
+          const manuallyFulfilledInReqSet = reqSet.getRequirements.filter(req: Requirement => manualReqIds.has(req.id));
+          manuallyFulfilledInReqSet.forEach(requirement: Requirement => {
+            manualReqs.add(requirement)
+          });
+        });
+        RequirementsPaneComponent.deriveFulfillment(setReqs, setMappings, fulfillment, manualReqs);
       }
     });
 
