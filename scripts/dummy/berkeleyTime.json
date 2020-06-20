@@ -70958,7 +70958,8 @@
     "no": "160",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
@@ -70967,7 +70968,9 @@
     "id": "japan161",
     "dept": "JAPAN",
     "no": "161",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -73048,7 +73051,9 @@
     "id": "l& s180b",
     "dept": "L & S",
     "no": "180B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -100599,7 +100604,8 @@
     "dept": "PHILOS",
     "no": "133",
     "tagIds": [
-      "ls_philo"
+      "ls_philo",
+      "linguis_elective"
     ]
   },
   {
@@ -100616,7 +100622,9 @@
     "id": "philos134",
     "dept": "PHILOS",
     "no": "134",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -100624,7 +100632,9 @@
     "id": "philos135",
     "dept": "PHILOS",
     "no": "135",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -110747,7 +110757,9 @@
     "id": "psychc143",
     "dept": "PSYCH",
     "no": "C143",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -117284,7 +117296,9 @@
     "id": "sanskr100a",
     "dept": "SANSKR",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 5,
@@ -117292,7 +117306,9 @@
     "id": "sanskr100b",
     "dept": "SANSKR",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 5,
@@ -117686,7 +117702,8 @@
     "dept": "SCANDIN",
     "no": "101A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "linguis_elective"
     ]
   },
   {
@@ -118102,7 +118119,9 @@
     "id": "scandin180",
     "dept": "SCANDIN",
     "no": "180",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -118152,7 +118171,9 @@
     "id": "scandin201a",
     "dept": "SCANDIN",
     "no": "201A",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -118583,7 +118604,9 @@
     "id": "semitic100b",
     "dept": "SEMITIC",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -119404,7 +119427,9 @@
     "id": "slavicc137",
     "dept": "SLAVIC",
     "no": "C137",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -124388,7 +124413,8 @@
     "no": "100",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
@@ -124835,7 +124861,8 @@
     "dept": "SPANISH",
     "no": "161",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
@@ -124844,7 +124871,9 @@
     "id": "spanish162",
     "dept": "SPANISH",
     "no": "162",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 4,
@@ -124861,7 +124890,8 @@
     "dept": "SPANISH",
     "no": "164",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
@@ -124888,7 +124918,9 @@
     "id": "spanish166",
     "dept": "SPANISH",
     "no": "166",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -124944,7 +124976,9 @@
     "id": "spanish179",
     "dept": "SPANISH",
     "no": "179",
-    "tagIds": []
+    "tagIds": [
+      "linguis_elective"
+    ]
   },
   {
     "units": 3,
@@ -131913,7 +131947,8 @@
     "dept": "UGIS",
     "no": "120",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "linguis_elective"
     ]
   },
   {
