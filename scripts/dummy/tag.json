@@ -1,87 +1,87 @@
 [
   {
     "id": "upper_div",
-    "name": "Upper Division Course"
+    "name": "Upper Division Course" //TODO: write script to go through + tag this
   },
   {
     "id": "cw",
-    "name": "Entry-Level Writing"
+    "name": "Entry-Level Writing" //done
   },
   {
     "id": "ah",
-    "name": "American History"
+    "name": "American History" //done
   },
   {
     "id": "ai",
-    "name": "American Institutions"
+    "name": "American Institutions" //done
   },
   {
     "id": "ac",
-    "name": "American Cultures"
+    "name": "American Cultures" //done
   },
   {
     "id": "rc_a",
-    "name": "Reading and Composition Part A"
+    "name": "Reading and Composition Part A" //done
   },
   {
     "id": "rc_b",
-    "name": "Reading and Composition Part B"
+    "name": "Reading and Composition Part B" //done
   },
   {
     "id": "ls_quant",
-    "name": "Quantitative Reasoning"
+    "name": "Quantitative Reasoning" //done
   },
   {
     "id": "ls_lang",
-    "name": "Foreign Language"
+    "name": "Foreign Language" //done
   },
   {
     "id": "ls_arts",
-    "name": "L&S Arts and Literature"
+    "name": "L&S Arts and Literature" //done
   },
   {
     "id": "ls_bio",
-    "name": "L&S Biological Science"
+    "name": "L&S Biological Science" //done
   },
   {
     "id": "ls_hist",
-    "name": "L&S Historical Studies"
+    "name": "L&S Historical Studies" //done
   },
   {
     "id": "ls_inter",
-    "name": "L&S International Studies"
+    "name": "L&S International Studies" //done
   },
   {
     "id": "ls_philo",
-    "name": "L&S Philosophy and Values"
+    "name": "L&S Philosophy and Values" //done
   },
   {
     "id": "ls_phys",
-    "name": "L&S Physical Science"
+    "name": "L&S Physical Science" //done
   },
   {
     "id": "ls_socio",
-    "name": "L&S Social and Behavioral Sciences"
+    "name": "L&S Social and Behavioral Sciences" //done
   },
   {
     "id": "eecs_ethics",
-    "name": "EECS Ethics Course"
+    "name": "EECS Ethics Course" //done (by danial)
   },
   {
     "id": "eecs_upper_div",
-    "name": "EECS Upper Division Course"
+    "name": "EECS Upper Division Course" //done (by danial)
   },
   {
     "id": "eecs_design",
-    "name": "EECS Upper Division Design Course"
+    "name": "EECS Upper Division Design Course" //done (by danial)
   },
   {
     "id": "linguis_elective",
-    "name": "Linguistics Elective"
+    "name": "Linguistics Elective" //done (by danial)
   },
   {
     "id": "stat_cluster",
-    "name": "Statistics Cluster Course" //note: this is impossibly long
+    "name": "Statistics Cluster Course" //note: this is impossibly long (i did some anyway lol)
   },
   {
     "id": "mcb_bmb_elective",
@@ -121,26 +121,26 @@
   },
   {
     "id": "bioeng_ethics",
-    "name": "Bioengineering Ethics Course"
+    "name": "BioE Ethics Course" //done (by danial)
   },
   {
     "id": "bioeng_design_research",
-    "name": "BioE Design Project or Research"
+    "name": "BioE Design Project or Research" //done (by danial), 100% sure
   },
   {
     "id": "bioeng_lab_course",
-    "name": "BioE Lab Course"
+    "name": "BioE Lab Course" //done (by danial)
   },
   {
     "id": "bioeng_fundamentals",
-    "name": "BioE Fundamental"
+    "name": "BioE Fundamental" //done (by bryn good job bro)
   },
   {
     "id": "bioeng_technical_topics",
-    "name": "BioE Technical Topic"
+    "name": "BioE Technical Topic" //done (by danial)
   },
   {
     "id": "bioeng_upper_div",
-    "name": "BioE Upper Division Course"
+    "name": "BioE Upper Division Course" //done (by danial, I took my best guess)
   }
 ]

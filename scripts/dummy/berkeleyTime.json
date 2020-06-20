@@ -11593,7 +11593,8 @@
     "no": "C144",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "bioeng_design_research"
     ]
   },
   {
@@ -24409,7 +24410,7 @@
     "dept": "COMPSCI",
     "no": "3",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24419,7 +24420,7 @@
     "dept": "COMPSCI",
     "no": "3L",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24429,7 +24430,7 @@
     "dept": "COMPSCI",
     "no": "S3",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24455,7 +24456,7 @@
     "dept": "COMPSCI",
     "no": "7",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24473,7 +24474,7 @@
     "dept": "COMPSCI",
     "no": "S7",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24483,7 +24484,7 @@
     "dept": "COMPSCI",
     "no": "8",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24501,7 +24502,7 @@
     "dept": "COMPSCI",
     "no": "C8",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24511,7 +24512,7 @@
     "dept": "COMPSCI",
     "no": "C8R",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24521,7 +24522,7 @@
     "dept": "COMPSCI",
     "no": "S8",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24595,7 +24596,7 @@
     "dept": "COMPSCI",
     "no": "10",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24605,7 +24606,7 @@
     "dept": "COMPSCI",
     "no": "N10",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24615,7 +24616,7 @@
     "dept": "COMPSCI",
     "no": "W10",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24674,7 +24675,7 @@
     "dept": "COMPSCI",
     "no": "50",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24700,7 +24701,7 @@
     "dept": "COMPSCI",
     "no": "55",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24710,7 +24711,7 @@
     "dept": "COMPSCI",
     "no": "S55",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24720,7 +24721,7 @@
     "dept": "COMPSCI",
     "no": "60A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24730,7 +24731,7 @@
     "dept": "COMPSCI",
     "no": "60B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24740,7 +24741,7 @@
     "dept": "COMPSCI",
     "no": "60C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24750,7 +24751,7 @@
     "dept": "COMPSCI",
     "no": "S60A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24760,7 +24761,7 @@
     "dept": "COMPSCI",
     "no": "S60B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24770,7 +24771,7 @@
     "dept": "COMPSCI",
     "no": "S60C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24780,7 +24781,7 @@
     "dept": "COMPSCI",
     "no": "61A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24790,7 +24791,7 @@
     "dept": "COMPSCI",
     "no": "61B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24800,7 +24801,7 @@
     "dept": "COMPSCI",
     "no": "61BL",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24811,7 +24812,7 @@
     "no": "61C",
     "tagIds": [
       "ls_phys",
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24821,7 +24822,7 @@
     "dept": "COMPSCI",
     "no": "61CL",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24831,7 +24832,7 @@
     "dept": "COMPSCI",
     "no": "S61A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24841,7 +24842,7 @@
     "dept": "COMPSCI",
     "no": "S61B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24851,7 +24852,7 @@
     "dept": "COMPSCI",
     "no": "W61A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24861,7 +24862,7 @@
     "dept": "COMPSCI",
     "no": "W61B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24871,7 +24872,7 @@
     "dept": "COMPSCI",
     "no": "70",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24881,7 +24882,7 @@
     "dept": "COMPSCI",
     "no": "C79",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24891,7 +24892,7 @@
     "dept": "COMPSCI",
     "no": "80",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24901,7 +24902,7 @@
     "dept": "COMPSCI",
     "no": "88",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24911,7 +24912,7 @@
     "dept": "COMPSCI",
     "no": "91A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -24949,7 +24950,7 @@
     "dept": "COMPSCI",
     "no": "C149",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "eecs_design"
     ]
@@ -24961,7 +24962,7 @@
     "dept": "COMPSCI",
     "no": "150",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -24982,7 +24983,7 @@
     "dept": "COMPSCI",
     "no": "152",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -24993,7 +24994,7 @@
     "dept": "COMPSCI",
     "no": "154",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25016,7 +25017,7 @@
     "dept": "COMPSCI",
     "no": "S160",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25027,7 +25028,7 @@
     "dept": "COMPSCI",
     "no": "161",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
       "eecs_design" //technically only for spring 2019 and after but riperinoes, good enough? juniors prob wont use this
@@ -25040,7 +25041,7 @@
     "dept": "COMPSCI",
     "no": "162",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "eecs_design"
     ]
@@ -25052,7 +25053,7 @@
     "dept": "COMPSCI",
     "no": "164",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "eecs_design"
     ]
@@ -25064,7 +25065,7 @@
     "dept": "COMPSCI",
     "no": "167",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25075,7 +25076,7 @@
     "dept": "COMPSCI",
     "no": "168",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25086,7 +25087,7 @@
     "dept": "COMPSCI",
     "no": "169",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
       "eecs_design"
@@ -25099,7 +25100,7 @@
     "dept": "COMPSCI",
     "no": "169A",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics"
     ]
@@ -25122,7 +25123,7 @@
     "dept": "COMPSCI",
     "no": "W169A",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics"
     ]
@@ -25134,7 +25135,7 @@
     "dept": "COMPSCI",
     "no": "170",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics"
     ]
@@ -25146,7 +25147,7 @@
     "dept": "COMPSCI",
     "no": "171",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25157,7 +25158,7 @@
     "dept": "COMPSCI",
     "no": "172",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25168,7 +25169,7 @@
     "dept": "COMPSCI",
     "no": "174",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25179,7 +25180,7 @@
     "dept": "COMPSCI",
     "no": "176",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics"
     ]
@@ -25191,7 +25192,7 @@
     "dept": "COMPSCI",
     "no": "182",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "eecs_design"
     ]
@@ -25203,7 +25204,7 @@
     "dept": "COMPSCI",
     "no": "C182",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25214,7 +25215,7 @@
     "dept": "COMPSCI",
     "no": "L182",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25225,7 +25226,7 @@
     "dept": "COMPSCI",
     "no": "W182",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25236,7 +25237,7 @@
     "dept": "COMPSCI",
     "no": "184",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "eecs_design"
     ]
@@ -25248,7 +25249,7 @@
     "dept": "COMPSCI",
     "no": "186",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
       "eecs_design"
@@ -25261,7 +25262,7 @@
     "dept": "COMPSCI",
     "no": "W186",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
       "eecs_design"
@@ -25275,7 +25276,7 @@
     "no": "188",
     "tagIds": [
       "ls_phys",
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics"
     ]
@@ -25287,7 +25288,7 @@
     "dept": "COMPSCI",
     "no": "189",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics"
     ]
@@ -25299,7 +25300,7 @@
     "dept": "COMPSCI",
     "no": "190",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25320,7 +25321,7 @@
     "dept": "COMPSCI",
     "no": "C191",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "bioeng_technical_topics",
       "eecs_upper_div"
     ]
@@ -25352,7 +25353,7 @@
     "dept": "COMPSCI",
     "no": "H195",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_ethics"
     ]
   },
@@ -25363,7 +25364,7 @@
     "dept": "COMPSCI",
     "no": "H196",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25373,7 +25374,7 @@
     "dept": "COMPSCI",
     "no": "S196",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25383,7 +25384,7 @@
     "dept": "COMPSCI",
     "no": "C219D",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25393,7 +25394,7 @@
     "dept": "COMPSCI",
     "no": "C249A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25403,7 +25404,7 @@
     "dept": "COMPSCI",
     "no": "250",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25413,7 +25414,7 @@
     "dept": "COMPSCI",
     "no": "252",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25423,7 +25424,7 @@
     "dept": "COMPSCI",
     "no": "253",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25433,7 +25434,7 @@
     "dept": "COMPSCI",
     "no": "254",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25459,7 +25460,7 @@
     "dept": "COMPSCI",
     "no": "257",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25469,7 +25470,7 @@
     "dept": "COMPSCI",
     "no": "258",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25487,7 +25488,7 @@
     "dept": "COMPSCI",
     "no": "260",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25497,7 +25498,7 @@
     "dept": "COMPSCI",
     "no": "260A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25507,7 +25508,7 @@
     "dept": "COMPSCI",
     "no": "260B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25517,7 +25518,7 @@
     "dept": "COMPSCI",
     "no": "261",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25527,7 +25528,7 @@
     "dept": "COMPSCI",
     "no": "261N",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25537,7 +25538,7 @@
     "dept": "COMPSCI",
     "no": "262",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25547,7 +25548,7 @@
     "dept": "COMPSCI",
     "no": "262A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25557,7 +25558,7 @@
     "dept": "COMPSCI",
     "no": "262B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25567,7 +25568,7 @@
     "dept": "COMPSCI",
     "no": "263",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25577,7 +25578,7 @@
     "dept": "COMPSCI",
     "no": "264",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25587,7 +25588,7 @@
     "dept": "COMPSCI",
     "no": "265",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25597,7 +25598,7 @@
     "dept": "COMPSCI",
     "no": "266",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25607,7 +25608,7 @@
     "dept": "COMPSCI",
     "no": "267",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25617,7 +25618,7 @@
     "dept": "COMPSCI",
     "no": "C267",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25627,7 +25628,7 @@
     "dept": "COMPSCI",
     "no": "W267",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25637,7 +25638,7 @@
     "dept": "COMPSCI",
     "no": "268",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25655,7 +25656,7 @@
     "dept": "COMPSCI",
     "no": "270",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25666,7 +25667,7 @@
     "dept": "COMPSCI",
     "no": "271",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25676,7 +25677,7 @@
     "dept": "COMPSCI",
     "no": "272",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25686,7 +25687,7 @@
     "dept": "COMPSCI",
     "no": "273",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25696,7 +25697,7 @@
     "dept": "COMPSCI",
     "no": "274",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25706,7 +25707,7 @@
     "dept": "COMPSCI",
     "no": "275",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25716,7 +25717,7 @@
     "dept": "COMPSCI",
     "no": "276",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25726,7 +25727,7 @@
     "dept": "COMPSCI",
     "no": "277",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25736,7 +25737,7 @@
     "dept": "COMPSCI",
     "no": "278",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25746,7 +25747,7 @@
     "dept": "COMPSCI",
     "no": "279",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25756,7 +25757,7 @@
     "dept": "COMPSCI",
     "no": "280",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25766,7 +25767,7 @@
     "dept": "COMPSCI",
     "no": "C280",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25777,7 +25778,7 @@
     "dept": "COMPSCI",
     "no": "281",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25787,7 +25788,7 @@
     "dept": "COMPSCI",
     "no": "C281A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25797,7 +25798,7 @@
     "dept": "COMPSCI",
     "no": "C281B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25807,7 +25808,7 @@
     "dept": "COMPSCI",
     "no": "282",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25817,7 +25818,7 @@
     "dept": "COMPSCI",
     "no": "282A",
     "tagIds": [
-      "qr",
+      "ls_quant",
       "eecs_upper_div"
     ]
   },
@@ -25828,7 +25829,7 @@
     "dept": "COMPSCI",
     "no": "283",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25838,7 +25839,7 @@
     "dept": "COMPSCI",
     "no": "283B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25848,7 +25849,7 @@
     "dept": "COMPSCI",
     "no": "284",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25858,7 +25859,7 @@
     "dept": "COMPSCI",
     "no": "284A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25868,7 +25869,7 @@
     "dept": "COMPSCI",
     "no": "284B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25878,7 +25879,7 @@
     "dept": "COMPSCI",
     "no": "285",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25888,7 +25889,7 @@
     "dept": "COMPSCI",
     "no": "286",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25898,7 +25899,7 @@
     "dept": "COMPSCI",
     "no": "286A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25908,7 +25909,7 @@
     "dept": "COMPSCI",
     "no": "286B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25918,7 +25919,7 @@
     "dept": "COMPSCI",
     "no": "287",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25928,7 +25929,7 @@
     "dept": "COMPSCI",
     "no": "287H",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25938,7 +25939,7 @@
     "dept": "COMPSCI",
     "no": "288",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25948,7 +25949,7 @@
     "dept": "COMPSCI",
     "no": "289",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25958,7 +25959,7 @@
     "dept": "COMPSCI",
     "no": "289A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25968,7 +25969,7 @@
     "dept": "COMPSCI",
     "no": "291A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25986,7 +25987,7 @@
     "dept": "COMPSCI",
     "no": "292B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -25996,7 +25997,7 @@
     "dept": "COMPSCI",
     "no": "292C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26022,7 +26023,7 @@
     "dept": "COMPSCI",
     "no": "292F",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26048,7 +26049,7 @@
     "dept": "COMPSCI",
     "no": "292I",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26066,7 +26067,7 @@
     "dept": "COMPSCI",
     "no": "292K",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26076,7 +26077,7 @@
     "dept": "COMPSCI",
     "no": "292L",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26102,7 +26103,7 @@
     "dept": "COMPSCI",
     "no": "292R",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26112,7 +26113,7 @@
     "dept": "COMPSCI",
     "no": "292S",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26122,7 +26123,7 @@
     "dept": "COMPSCI",
     "no": "292T",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26132,7 +26133,7 @@
     "dept": "COMPSCI",
     "no": "292V",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26150,7 +26151,7 @@
     "dept": "COMPSCI",
     "no": "292X",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26168,7 +26169,7 @@
     "dept": "COMPSCI",
     "no": "292Z",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26178,7 +26179,7 @@
     "dept": "COMPSCI",
     "no": "302",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -26188,7 +26189,7 @@
     "dept": "COMPSCI",
     "no": "370",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -37957,7 +37958,8 @@
     "dept": "ENGIN",
     "no": "125",
     "tagIds": [
-      "eecs_ethics"
+      "eecs_ethics",
+      "bioeng_ethics"
     ]
   },
   {
@@ -38055,7 +38057,9 @@
     "dept": "ENGIN",
     "no": "157AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "bioeng_ethics",
+      "bioeng_ethics"
     ]
   },
   {
@@ -44528,7 +44532,8 @@
     "no": "161",
     "tagIds": [
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "bioeng_ethics"
     ]
   },
   {
@@ -44539,7 +44544,8 @@
     "no": "162",
     "tagIds": [
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "bioeng_ethics"
     ]
   },
   {
@@ -62331,7 +62337,9 @@
     "id": "historyc182c",
     "dept": "HISTORY",
     "no": "C182C",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_ethics"
+    ]
   },
   {
     "units": 4,
@@ -64067,7 +64075,8 @@
     "no": "157AC",
     "tagIds": [
       "ac",
-      "eecs_ethics"
+      "eecs_ethics",
+      "bioeng_ethics"
     ]
   },
   {
@@ -69278,7 +69287,8 @@
     "dept": "ISF",
     "no": "100G",
     "tagIds": [
-      "ls_philo"
+      "ls_philo",
+      "bioeng_ethics"
     ]
   },
   {
@@ -69330,7 +69340,9 @@
     "id": "isfc100g",
     "dept": "ISF",
     "no": "C100G",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_ethics"
+    ]
   },
   {
     "units": 4,
@@ -73054,7 +73066,9 @@
     "id": "l& s160b",
     "dept": "L & S",
     "no": "160B",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_ethics"
+    ]
   },
   {
     "units": 4,
@@ -78441,7 +78455,7 @@
     "dept": "MATH",
     "no": "1A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78459,7 +78473,7 @@
     "dept": "MATH",
     "no": "1AM",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78469,7 +78483,7 @@
     "dept": "MATH",
     "no": "1B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78487,7 +78501,7 @@
     "dept": "MATH",
     "no": "1BM",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78497,7 +78511,7 @@
     "dept": "MATH",
     "no": "1C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78507,7 +78521,7 @@
     "dept": "MATH",
     "no": "H1A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78517,7 +78531,7 @@
     "dept": "MATH",
     "no": "H1AS",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78527,7 +78541,7 @@
     "dept": "MATH",
     "no": "H1B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78537,7 +78551,7 @@
     "dept": "MATH",
     "no": "H1BS",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78547,7 +78561,7 @@
     "dept": "MATH",
     "no": "N1A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78557,7 +78571,7 @@
     "dept": "MATH",
     "no": "N1B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78567,7 +78581,7 @@
     "dept": "MATH",
     "no": "S1A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78577,7 +78591,7 @@
     "dept": "MATH",
     "no": "S1B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78587,7 +78601,7 @@
     "dept": "MATH",
     "no": "2A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78597,7 +78611,7 @@
     "dept": "MATH",
     "no": "2B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78607,7 +78621,7 @@
     "dept": "MATH",
     "no": "3",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78617,7 +78631,7 @@
     "dept": "MATH",
     "no": "10",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78627,7 +78641,7 @@
     "dept": "MATH",
     "no": "10A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78637,7 +78651,7 @@
     "dept": "MATH",
     "no": "10B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78647,7 +78661,7 @@
     "dept": "MATH",
     "no": "N10A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78657,7 +78671,7 @@
     "dept": "MATH",
     "no": "N10B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78667,7 +78681,7 @@
     "dept": "MATH",
     "no": "15",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78677,7 +78691,7 @@
     "dept": "MATH",
     "no": "16A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78687,7 +78701,7 @@
     "dept": "MATH",
     "no": "16B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78697,7 +78711,7 @@
     "dept": "MATH",
     "no": "N16A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78707,7 +78721,7 @@
     "dept": "MATH",
     "no": "N16B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78717,7 +78731,7 @@
     "dept": "MATH",
     "no": "S16A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78727,7 +78741,7 @@
     "dept": "MATH",
     "no": "S16B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78737,7 +78751,7 @@
     "dept": "MATH",
     "no": "17",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78755,7 +78769,7 @@
     "dept": "MATH",
     "no": "30",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78765,7 +78779,7 @@
     "dept": "MATH",
     "no": "32",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78775,7 +78789,7 @@
     "dept": "MATH",
     "no": "N32",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78785,7 +78799,7 @@
     "dept": "MATH",
     "no": "S32",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78795,7 +78809,7 @@
     "dept": "MATH",
     "no": "S32X",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78805,7 +78819,7 @@
     "dept": "MATH",
     "no": "50A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78823,7 +78837,7 @@
     "dept": "MATH",
     "no": "50B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78841,7 +78855,7 @@
     "dept": "MATH",
     "no": "50C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78851,7 +78865,7 @@
     "dept": "MATH",
     "no": "H50A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78861,7 +78875,7 @@
     "dept": "MATH",
     "no": "H50B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78871,7 +78885,7 @@
     "dept": "MATH",
     "no": "S50A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78881,7 +78895,7 @@
     "dept": "MATH",
     "no": "S50B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78891,7 +78905,7 @@
     "dept": "MATH",
     "no": "51",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78901,7 +78915,7 @@
     "dept": "MATH",
     "no": "H51",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78911,7 +78925,7 @@
     "dept": "MATH",
     "no": "53",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78929,7 +78943,7 @@
     "dept": "MATH",
     "no": "53M",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78939,7 +78953,7 @@
     "dept": "MATH",
     "no": "H53",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78949,7 +78963,7 @@
     "dept": "MATH",
     "no": "N53",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78959,7 +78973,7 @@
     "dept": "MATH",
     "no": "S53",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78969,7 +78983,7 @@
     "dept": "MATH",
     "no": "W53",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78979,7 +78993,7 @@
     "dept": "MATH",
     "no": "54",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -78997,7 +79011,7 @@
     "dept": "MATH",
     "no": "54M",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79007,7 +79021,7 @@
     "dept": "MATH",
     "no": "H54",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79017,7 +79031,7 @@
     "dept": "MATH",
     "no": "N54",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79027,7 +79041,7 @@
     "dept": "MATH",
     "no": "S54",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79037,7 +79051,7 @@
     "dept": "MATH",
     "no": "55",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79047,7 +79061,7 @@
     "dept": "MATH",
     "no": "N55",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79057,7 +79071,7 @@
     "dept": "MATH",
     "no": "S55",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79067,7 +79081,7 @@
     "dept": "MATH",
     "no": "67",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79077,7 +79091,7 @@
     "dept": "MATH",
     "no": "74",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79095,7 +79109,7 @@
     "dept": "MATH",
     "no": "91",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79129,7 +79143,7 @@
     "dept": "MATH",
     "no": "100",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79140,7 +79154,7 @@
     "no": "C103",
     "tagIds": [
       "ls_socio",
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79150,7 +79164,7 @@
     "dept": "MATH",
     "no": "104",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79160,7 +79174,7 @@
     "dept": "MATH",
     "no": "H104",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79170,7 +79184,7 @@
     "dept": "MATH",
     "no": "S104",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79180,7 +79194,7 @@
     "dept": "MATH",
     "no": "105",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79190,7 +79204,7 @@
     "dept": "MATH",
     "no": "110",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79200,7 +79214,7 @@
     "dept": "MATH",
     "no": "H110",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79210,7 +79224,7 @@
     "dept": "MATH",
     "no": "S110",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79220,7 +79234,7 @@
     "dept": "MATH",
     "no": "111",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79230,7 +79244,7 @@
     "dept": "MATH",
     "no": "112",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79240,7 +79254,7 @@
     "dept": "MATH",
     "no": "S112",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79250,7 +79264,7 @@
     "dept": "MATH",
     "no": "113",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79260,7 +79274,7 @@
     "dept": "MATH",
     "no": "113A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79270,7 +79284,7 @@
     "dept": "MATH",
     "no": "113B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79280,7 +79294,7 @@
     "dept": "MATH",
     "no": "H113",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79290,7 +79304,7 @@
     "dept": "MATH",
     "no": "H113A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79300,7 +79314,7 @@
     "dept": "MATH",
     "no": "H113B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79310,7 +79324,7 @@
     "dept": "MATH",
     "no": "S113",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79320,7 +79334,7 @@
     "dept": "MATH",
     "no": "S113A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79330,7 +79344,7 @@
     "dept": "MATH",
     "no": "S113B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79340,7 +79354,7 @@
     "dept": "MATH",
     "no": "114",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79350,7 +79364,7 @@
     "dept": "MATH",
     "no": "115",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79360,7 +79374,7 @@
     "dept": "MATH",
     "no": "S115",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79370,7 +79384,7 @@
     "dept": "MATH",
     "no": "116",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79380,7 +79394,7 @@
     "dept": "MATH",
     "no": "H117",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79390,7 +79404,7 @@
     "dept": "MATH",
     "no": "118",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79400,7 +79414,7 @@
     "dept": "MATH",
     "no": "119",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79410,7 +79424,7 @@
     "dept": "MATH",
     "no": "120A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79420,7 +79434,7 @@
     "dept": "MATH",
     "no": "120B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79430,7 +79444,7 @@
     "dept": "MATH",
     "no": "121A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79440,7 +79454,7 @@
     "dept": "MATH",
     "no": "121B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79450,7 +79464,7 @@
     "dept": "MATH",
     "no": "S121A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79460,7 +79474,7 @@
     "dept": "MATH",
     "no": "123",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79470,7 +79484,7 @@
     "dept": "MATH",
     "no": "124",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79480,7 +79494,7 @@
     "dept": "MATH",
     "no": "125A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79490,7 +79504,7 @@
     "dept": "MATH",
     "no": "125B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79500,7 +79514,7 @@
     "dept": "MATH",
     "no": "S125A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79510,7 +79524,7 @@
     "dept": "MATH",
     "no": "126",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79520,7 +79534,7 @@
     "dept": "MATH",
     "no": "127",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79530,7 +79544,7 @@
     "dept": "MATH",
     "no": "128A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79540,7 +79554,7 @@
     "dept": "MATH",
     "no": "128B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79550,7 +79564,7 @@
     "dept": "MATH",
     "no": "S128A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79560,7 +79574,7 @@
     "dept": "MATH",
     "no": "130",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79570,7 +79584,7 @@
     "dept": "MATH",
     "no": "S130",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79580,7 +79594,7 @@
     "dept": "MATH",
     "no": "132",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79590,7 +79604,7 @@
     "dept": "MATH",
     "no": "135",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79600,7 +79614,7 @@
     "dept": "MATH",
     "no": "H135",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79610,7 +79624,7 @@
     "dept": "MATH",
     "no": "136",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79620,7 +79634,7 @@
     "dept": "MATH",
     "no": "140",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79630,7 +79644,7 @@
     "dept": "MATH",
     "no": "S140",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79640,7 +79654,7 @@
     "dept": "MATH",
     "no": "141",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79650,7 +79664,7 @@
     "dept": "MATH",
     "no": "142",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79660,7 +79674,7 @@
     "dept": "MATH",
     "no": "143",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79670,7 +79684,7 @@
     "dept": "MATH",
     "no": "145",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79680,7 +79694,7 @@
     "dept": "MATH",
     "no": "151",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79690,7 +79704,7 @@
     "dept": "MATH",
     "no": "152",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79700,7 +79714,7 @@
     "dept": "MATH",
     "no": "153",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79710,7 +79724,7 @@
     "dept": "MATH",
     "no": "160",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79720,7 +79734,7 @@
     "dept": "MATH",
     "no": "S160",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79730,7 +79744,7 @@
     "dept": "MATH",
     "no": "163",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79740,7 +79754,7 @@
     "dept": "MATH",
     "no": "170",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79750,7 +79764,7 @@
     "dept": "MATH",
     "no": "172",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79760,7 +79774,7 @@
     "dept": "MATH",
     "no": "185",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79770,7 +79784,7 @@
     "dept": "MATH",
     "no": "H185",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79780,7 +79794,7 @@
     "dept": "MATH",
     "no": "S185",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79790,7 +79804,7 @@
     "dept": "MATH",
     "no": "187",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79800,7 +79814,7 @@
     "dept": "MATH",
     "no": "188",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79810,7 +79824,7 @@
     "dept": "MATH",
     "no": "189",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79820,7 +79834,7 @@
     "dept": "MATH",
     "no": "195",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79830,7 +79844,7 @@
     "dept": "MATH",
     "no": "196",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79848,7 +79862,7 @@
     "dept": "MATH",
     "no": "202A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79858,7 +79872,7 @@
     "dept": "MATH",
     "no": "202B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79868,7 +79882,7 @@
     "dept": "MATH",
     "no": "S202A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79878,7 +79892,7 @@
     "dept": "MATH",
     "no": "203",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79888,7 +79902,7 @@
     "dept": "MATH",
     "no": "204",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79898,7 +79912,7 @@
     "dept": "MATH",
     "no": "204A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79908,7 +79922,7 @@
     "dept": "MATH",
     "no": "204B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79918,7 +79932,7 @@
     "dept": "MATH",
     "no": "205",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79928,7 +79942,7 @@
     "dept": "MATH",
     "no": "206",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79938,7 +79952,7 @@
     "dept": "MATH",
     "no": "207",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79948,7 +79962,7 @@
     "dept": "MATH",
     "no": "208",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79958,7 +79972,7 @@
     "dept": "MATH",
     "no": "209",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79968,7 +79982,7 @@
     "dept": "MATH",
     "no": "210",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79978,7 +79992,7 @@
     "dept": "MATH",
     "no": "211",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79988,7 +80002,7 @@
     "dept": "MATH",
     "no": "212",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -79998,7 +80012,7 @@
     "dept": "MATH",
     "no": "213A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80008,7 +80022,7 @@
     "dept": "MATH",
     "no": "213B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80018,7 +80032,7 @@
     "dept": "MATH",
     "no": "214",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80028,7 +80042,7 @@
     "dept": "MATH",
     "no": "S214",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80038,7 +80052,7 @@
     "dept": "MATH",
     "no": "215A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80048,7 +80062,7 @@
     "dept": "MATH",
     "no": "215B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80058,7 +80072,7 @@
     "dept": "MATH",
     "no": "C218A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80068,7 +80082,7 @@
     "dept": "MATH",
     "no": "C218B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80078,7 +80092,7 @@
     "dept": "MATH",
     "no": "219",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80088,7 +80102,7 @@
     "dept": "MATH",
     "no": "220",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80098,7 +80112,7 @@
     "dept": "MATH",
     "no": "220A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80108,7 +80122,7 @@
     "dept": "MATH",
     "no": "220B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80118,7 +80132,7 @@
     "dept": "MATH",
     "no": "221",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80128,7 +80142,7 @@
     "dept": "MATH",
     "no": "222A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80138,7 +80152,7 @@
     "dept": "MATH",
     "no": "222B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80148,7 +80162,7 @@
     "dept": "MATH",
     "no": "C223A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80158,7 +80172,7 @@
     "dept": "MATH",
     "no": "C223B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80168,7 +80182,7 @@
     "dept": "MATH",
     "no": "224A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80178,7 +80192,7 @@
     "dept": "MATH",
     "no": "224B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80188,7 +80202,7 @@
     "dept": "MATH",
     "no": "225A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80198,7 +80212,7 @@
     "dept": "MATH",
     "no": "225B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80208,7 +80222,7 @@
     "dept": "MATH",
     "no": "226A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80218,7 +80232,7 @@
     "dept": "MATH",
     "no": "226B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80228,7 +80242,7 @@
     "dept": "MATH",
     "no": "227A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80238,7 +80252,7 @@
     "dept": "MATH",
     "no": "227B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80248,7 +80262,7 @@
     "dept": "MATH",
     "no": "228A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80258,7 +80272,7 @@
     "dept": "MATH",
     "no": "228B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80268,7 +80282,7 @@
     "dept": "MATH",
     "no": "S228A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80278,7 +80292,7 @@
     "dept": "MATH",
     "no": "229",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80288,7 +80302,7 @@
     "dept": "MATH",
     "no": "235A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80298,7 +80312,7 @@
     "dept": "MATH",
     "no": "235B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80308,7 +80322,7 @@
     "dept": "MATH",
     "no": "236",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80318,7 +80332,7 @@
     "dept": "MATH",
     "no": "239",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80328,7 +80342,7 @@
     "dept": "MATH",
     "no": "C239",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80338,7 +80352,7 @@
     "dept": "MATH",
     "no": "240",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80348,7 +80362,7 @@
     "dept": "MATH",
     "no": "241",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80358,7 +80372,7 @@
     "dept": "MATH",
     "no": "242",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80368,7 +80382,7 @@
     "dept": "MATH",
     "no": "C243",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80378,7 +80392,7 @@
     "dept": "MATH",
     "no": "245A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80388,7 +80402,7 @@
     "dept": "MATH",
     "no": "245B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80398,7 +80412,7 @@
     "dept": "MATH",
     "no": "249",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80408,7 +80422,7 @@
     "dept": "MATH",
     "no": "250A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80418,7 +80432,7 @@
     "dept": "MATH",
     "no": "250B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80428,7 +80442,7 @@
     "dept": "MATH",
     "no": "S250A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80438,7 +80452,7 @@
     "dept": "MATH",
     "no": "251",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80448,7 +80462,7 @@
     "dept": "MATH",
     "no": "252",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80458,7 +80472,7 @@
     "dept": "MATH",
     "no": "253",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80468,7 +80482,7 @@
     "dept": "MATH",
     "no": "254A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80478,7 +80492,7 @@
     "dept": "MATH",
     "no": "254B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80488,7 +80502,7 @@
     "dept": "MATH",
     "no": "255",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80498,7 +80512,7 @@
     "dept": "MATH",
     "no": "255A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80508,7 +80522,7 @@
     "dept": "MATH",
     "no": "255B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80518,7 +80532,7 @@
     "dept": "MATH",
     "no": "256A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80528,7 +80542,7 @@
     "dept": "MATH",
     "no": "256B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80538,7 +80552,7 @@
     "dept": "MATH",
     "no": "257",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80548,7 +80562,7 @@
     "dept": "MATH",
     "no": "258",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80558,7 +80572,7 @@
     "dept": "MATH",
     "no": "259",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80568,7 +80582,7 @@
     "dept": "MATH",
     "no": "260",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80578,7 +80592,7 @@
     "dept": "MATH",
     "no": "261A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80588,7 +80602,7 @@
     "dept": "MATH",
     "no": "261B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80598,7 +80612,7 @@
     "dept": "MATH",
     "no": "265",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80616,7 +80630,7 @@
     "dept": "MATH",
     "no": "271",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80626,7 +80640,7 @@
     "dept": "MATH",
     "no": "273",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80636,7 +80650,7 @@
     "dept": "MATH",
     "no": "273A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80646,7 +80660,7 @@
     "dept": "MATH",
     "no": "273B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80656,7 +80670,7 @@
     "dept": "MATH",
     "no": "273C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80666,7 +80680,7 @@
     "dept": "MATH",
     "no": "273D",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80676,7 +80690,7 @@
     "dept": "MATH",
     "no": "273E",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80686,7 +80700,7 @@
     "dept": "MATH",
     "no": "273F",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80696,7 +80710,7 @@
     "dept": "MATH",
     "no": "273G",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80706,7 +80720,7 @@
     "dept": "MATH",
     "no": "273H",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80716,7 +80730,7 @@
     "dept": "MATH",
     "no": "273I",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80726,7 +80740,7 @@
     "dept": "MATH",
     "no": "273J",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80736,7 +80750,7 @@
     "dept": "MATH",
     "no": "273K",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80746,7 +80760,7 @@
     "dept": "MATH",
     "no": "274",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80756,7 +80770,7 @@
     "dept": "MATH",
     "no": "275",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80766,7 +80780,7 @@
     "dept": "MATH",
     "no": "276",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80776,7 +80790,7 @@
     "dept": "MATH",
     "no": "277",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80786,7 +80800,7 @@
     "dept": "MATH",
     "no": "278",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80796,7 +80810,7 @@
     "dept": "MATH",
     "no": "279",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80806,7 +80820,7 @@
     "dept": "MATH",
     "no": "280A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80816,7 +80830,7 @@
     "dept": "MATH",
     "no": "280B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80834,7 +80848,7 @@
     "dept": "MATH",
     "no": "300",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -80852,7 +80866,7 @@
     "dept": "MATH",
     "no": "375",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -100346,7 +100360,9 @@
     "id": "philos104",
     "dept": "PHILOS",
     "no": "104",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_ethics"
+    ]
   },
   {
     "units": 4,
@@ -100394,7 +100410,9 @@
     "id": "philos107",
     "dept": "PHILOS",
     "no": "107",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_ethics"
+    ]
   },
   {
     "units": 4,
@@ -125434,7 +125452,7 @@
     "dept": "STAT",
     "no": "2",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125444,7 +125462,7 @@
     "dept": "STAT",
     "no": "2X",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125454,7 +125472,7 @@
     "dept": "STAT",
     "no": "S2",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125464,7 +125482,7 @@
     "dept": "STAT",
     "no": "5",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125474,7 +125492,7 @@
     "dept": "STAT",
     "no": "C8",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125484,7 +125502,7 @@
     "dept": "STAT",
     "no": "20",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125494,7 +125512,7 @@
     "dept": "STAT",
     "no": "S20",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125504,7 +125522,7 @@
     "dept": "STAT",
     "no": "21",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125514,7 +125532,7 @@
     "dept": "STAT",
     "no": "21X",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125524,7 +125542,7 @@
     "dept": "STAT",
     "no": "N21",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125534,7 +125552,7 @@
     "dept": "STAT",
     "no": "S21",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125544,7 +125562,7 @@
     "dept": "STAT",
     "no": "W21",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125562,7 +125580,7 @@
     "dept": "STAT",
     "no": "25",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125572,7 +125590,7 @@
     "dept": "STAT",
     "no": "28",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125598,7 +125616,7 @@
     "dept": "STAT",
     "no": "C79",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125608,7 +125626,7 @@
     "dept": "STAT",
     "no": "88",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125618,7 +125636,7 @@
     "dept": "STAT",
     "no": "89A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125636,7 +125654,7 @@
     "dept": "STAT",
     "no": "C100",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125646,7 +125664,7 @@
     "dept": "STAT",
     "no": "101",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125656,7 +125674,7 @@
     "dept": "STAT",
     "no": "102",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125666,7 +125684,7 @@
     "dept": "STAT",
     "no": "103A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125676,7 +125694,7 @@
     "dept": "STAT",
     "no": "103B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125686,7 +125704,7 @@
     "dept": "STAT",
     "no": "131A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125696,7 +125714,7 @@
     "dept": "STAT",
     "no": "131B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125706,7 +125724,7 @@
     "dept": "STAT",
     "no": "131F",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125716,7 +125734,7 @@
     "dept": "STAT",
     "no": "S131A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125726,7 +125744,7 @@
     "dept": "STAT",
     "no": "132",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125736,7 +125754,7 @@
     "dept": "STAT",
     "no": "133",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125746,7 +125764,7 @@
     "dept": "STAT",
     "no": "134",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125756,7 +125774,7 @@
     "dept": "STAT",
     "no": "S134",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125766,7 +125784,7 @@
     "dept": "STAT",
     "no": "135",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125776,7 +125794,7 @@
     "dept": "STAT",
     "no": "140",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125786,7 +125804,7 @@
     "dept": "STAT",
     "no": "C141",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125796,7 +125814,7 @@
     "dept": "STAT",
     "no": "150",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125806,7 +125824,7 @@
     "dept": "STAT",
     "no": "151A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125816,7 +125834,7 @@
     "dept": "STAT",
     "no": "151B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125826,7 +125844,7 @@
     "dept": "STAT",
     "no": "152",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125836,7 +125854,7 @@
     "dept": "STAT",
     "no": "153",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125846,7 +125864,7 @@
     "dept": "STAT",
     "no": "154",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125856,7 +125874,7 @@
     "dept": "STAT",
     "no": "155",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125866,7 +125884,7 @@
     "dept": "STAT",
     "no": "156",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125876,7 +125894,7 @@
     "dept": "STAT",
     "no": "157",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125886,7 +125904,7 @@
     "dept": "STAT",
     "no": "158",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125896,7 +125914,7 @@
     "dept": "STAT",
     "no": "159",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125906,7 +125924,7 @@
     "dept": "STAT",
     "no": "200A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125916,7 +125934,7 @@
     "dept": "STAT",
     "no": "200B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125926,7 +125944,7 @@
     "dept": "STAT",
     "no": "C200C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125936,7 +125954,7 @@
     "dept": "STAT",
     "no": "201A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125946,7 +125964,7 @@
     "dept": "STAT",
     "no": "201B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125956,7 +125974,7 @@
     "dept": "STAT",
     "no": "204",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125966,7 +125984,7 @@
     "dept": "STAT",
     "no": "205A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125976,7 +125994,7 @@
     "dept": "STAT",
     "no": "205B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125986,7 +126004,7 @@
     "dept": "STAT",
     "no": "205F",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -125996,7 +126014,7 @@
     "dept": "STAT",
     "no": "C205A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126006,7 +126024,7 @@
     "dept": "STAT",
     "no": "C205B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126016,7 +126034,7 @@
     "dept": "STAT",
     "no": "206A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126026,7 +126044,7 @@
     "dept": "STAT",
     "no": "206B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126036,7 +126054,7 @@
     "dept": "STAT",
     "no": "C206A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126046,7 +126064,7 @@
     "dept": "STAT",
     "no": "C206B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126056,7 +126074,7 @@
     "dept": "STAT",
     "no": "210A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126066,7 +126084,7 @@
     "dept": "STAT",
     "no": "210B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126076,7 +126094,7 @@
     "dept": "STAT",
     "no": "212A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126086,7 +126104,7 @@
     "dept": "STAT",
     "no": "212B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126096,7 +126114,7 @@
     "dept": "STAT",
     "no": "215A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126106,7 +126124,7 @@
     "dept": "STAT",
     "no": "215B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126116,7 +126134,7 @@
     "dept": "STAT",
     "no": "216A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126126,7 +126144,7 @@
     "dept": "STAT",
     "no": "216B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126136,7 +126154,7 @@
     "dept": "STAT",
     "no": "217A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126146,7 +126164,7 @@
     "dept": "STAT",
     "no": "217B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126156,7 +126174,7 @@
     "dept": "STAT",
     "no": "222",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126166,7 +126184,7 @@
     "dept": "STAT",
     "no": "230A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126176,7 +126194,7 @@
     "dept": "STAT",
     "no": "230B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126186,7 +126204,7 @@
     "dept": "STAT",
     "no": "232",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126196,7 +126214,7 @@
     "dept": "STAT",
     "no": "235",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126206,7 +126224,7 @@
     "dept": "STAT",
     "no": "236",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126216,7 +126234,7 @@
     "dept": "STAT",
     "no": "238",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126226,7 +126244,7 @@
     "dept": "STAT",
     "no": "239A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126236,7 +126254,7 @@
     "dept": "STAT",
     "no": "239B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126246,7 +126264,7 @@
     "dept": "STAT",
     "no": "C239A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126256,7 +126274,7 @@
     "dept": "STAT",
     "no": "240",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126266,7 +126284,7 @@
     "dept": "STAT",
     "no": "241A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126276,7 +126294,7 @@
     "dept": "STAT",
     "no": "241B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126286,7 +126304,7 @@
     "dept": "STAT",
     "no": "C241A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126296,7 +126314,7 @@
     "dept": "STAT",
     "no": "C241B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126306,7 +126324,7 @@
     "dept": "STAT",
     "no": "242A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126316,7 +126334,7 @@
     "dept": "STAT",
     "no": "242B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126326,7 +126344,7 @@
     "dept": "STAT",
     "no": "243",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126336,7 +126354,7 @@
     "dept": "STAT",
     "no": "244",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126346,7 +126364,7 @@
     "dept": "STAT",
     "no": "C245A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126356,7 +126374,7 @@
     "dept": "STAT",
     "no": "C245B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126366,7 +126384,7 @@
     "dept": "STAT",
     "no": "C245C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126376,7 +126394,7 @@
     "dept": "STAT",
     "no": "C245D",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126386,7 +126404,7 @@
     "dept": "STAT",
     "no": "C245E",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126396,7 +126414,7 @@
     "dept": "STAT",
     "no": "C245F",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126406,7 +126424,7 @@
     "dept": "STAT",
     "no": "246",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126416,7 +126434,7 @@
     "dept": "STAT",
     "no": "C247C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126426,7 +126444,7 @@
     "dept": "STAT",
     "no": "248",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126436,7 +126454,7 @@
     "dept": "STAT",
     "no": "C249A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126446,7 +126464,7 @@
     "dept": "STAT",
     "no": "250",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126456,7 +126474,7 @@
     "dept": "STAT",
     "no": "250A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126466,7 +126484,7 @@
     "dept": "STAT",
     "no": "250B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126476,7 +126494,7 @@
     "dept": "STAT",
     "no": "250C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126486,7 +126504,7 @@
     "dept": "STAT",
     "no": "251",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126496,7 +126514,7 @@
     "dept": "STAT",
     "no": "256",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126506,7 +126524,7 @@
     "dept": "STAT",
     "no": "259",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126516,7 +126534,7 @@
     "dept": "STAT",
     "no": "260",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126526,7 +126544,7 @@
     "dept": "STAT",
     "no": "260A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126536,7 +126554,7 @@
     "dept": "STAT",
     "no": "260B",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126546,7 +126564,7 @@
     "dept": "STAT",
     "no": "260C",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126556,7 +126574,7 @@
     "dept": "STAT",
     "no": "260D",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126566,7 +126584,7 @@
     "dept": "STAT",
     "no": "260E",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126576,7 +126594,7 @@
     "dept": "STAT",
     "no": "260F",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126586,7 +126604,7 @@
     "dept": "STAT",
     "no": "260G",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126596,7 +126614,7 @@
     "dept": "STAT",
     "no": "260H",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126606,7 +126624,7 @@
     "dept": "STAT",
     "no": "260I",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126616,7 +126634,7 @@
     "dept": "STAT",
     "no": "260J",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126626,7 +126644,7 @@
     "dept": "STAT",
     "no": "C261",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126636,7 +126654,7 @@
     "dept": "STAT",
     "no": "262",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126646,7 +126664,7 @@
     "dept": "STAT",
     "no": "272",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126656,7 +126674,7 @@
     "dept": "STAT",
     "no": "278A",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126690,7 +126708,7 @@
     "dept": "STAT",
     "no": "282",
     "tagIds": [
-      "qr"
+      "ls_quant"
     ]
   },
   {
@@ -126707,7 +126725,9 @@
     "id": "stsc100",
     "dept": "STS",
     "no": "C100",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_ethics"
+    ]
   },
   {
     "units": 3,
