@@ -374,10 +374,11 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       (reqToCourseMapping: Map<Requirement, Set<Course>>) =>
         mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
     );
+    manualFulfillment.forEach((req: Requirement) => {
+      fulfillment.set(req, 'manual'); //This can be redundant but it's linear so
+    });
     baseReqs.forEach((req: Requirement) => {
-      if (manualFulfillment.has(req)) {
-        fulfillment.set(req, 'manual');
-      } else if (
+      if (
         maxMappings.every((mapping: Map<Requirement, Set<Course>>) => req.isFulfilledWith(Array.from(mapping.get(req))))
       ) {
         fulfillment.set(req, 'fulfilled');
@@ -450,6 +451,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
           manualReqs.add(requirement);
         });
       });
+
       const setConstraints: Constraint[] = unfulfilledReqSet.getConstraints();
       if (setConstraints.length === 0) {
         /* If a set has no constraints, we can derive fulfillment at the level
@@ -482,7 +484,6 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
         RequirementsPaneComponent.deriveFulfillment(setReqs, setMappings, fulfillment, manualReqs);
       }
     });
-
     console.log(fulfillment);
     return fulfillment;
   }
