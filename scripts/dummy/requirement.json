@@ -622,10 +622,7 @@
         ]
       },
       {
-        "id": "core",
-        "type": "multi",
         "name": "UGBA Core",
-        "numRequired": 10,
         "requirements": [
           {
             "id": "ugba100",
@@ -669,7 +666,7 @@
                 "type": "course",
                 "name": "POLECON 106",
                 "courseId": "polecon106"
-              },
+              }
             ]
           },
           {
@@ -702,7 +699,7 @@
                 "type": "course",
                 "name": "POLECON 107",
                 "courseId": "polecon107"
-              },
+              }
             ]
           },
           {
@@ -746,7 +743,7 @@
             "type": "course",
             "name": "UGBA 107",
             "courseId": "ugba107"
-          },
+          }
         ]
       },
       {

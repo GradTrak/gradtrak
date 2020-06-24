@@ -120,6 +120,14 @@
     "name": "MCB NEU Elective"
   },
   {
+    "id": "ugba_upper_div",
+    "name": "Business Upper Division Course"
+  },
+  {
+    "id": "non_ugba_upper_div",
+    "name": "Non-business Upper Division Course"
+  },
+  {
     "id": "bioeng_ethics",
     "name": "BioE Ethics Course"
   },
