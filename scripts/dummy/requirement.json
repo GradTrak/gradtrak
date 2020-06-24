@@ -2153,6 +2153,62 @@
           }
         ]
       },
+      {
+        "name": "Upper Division"
+        "requirements": [
+          {
+            "id": "econ100econ101",
+            "type": "multi",
+            "name": "ECON 100 / ECON 101",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ100",
+                "type": "multi",
+                "name": "ECON 100 Series",
+                "numRequired": 2,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "econ100a",
+                    "type": "course",
+                    "name": "ECON 100A",
+                    "courseId": "econ100a"
+                  },
+                  {
+                    "id": "econ100b",
+                    "type": "course",
+                    "name": "ECON 100B",
+                    "courseId": "econ100b"
+                  }
+                ]
+              },
+              {
+                "id": "econ101",
+                "type": "multi",
+                "name": "ECON 101 Series",
+                "numRequired": 2,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "econ101a",
+                    "type": "course",
+                    "name": "ECON 101A",
+                    "courseId": "econ101a"
+                  },
+                  {
+                    "id": "econ101b",
+                    "type": "course",
+                    "name": "ECON 101B",
+                    "courseId": "econ101b"
+                  }
+                ]
+              }
+            ]
+          },
+        ]
+      }
     ]
   }
 ]
