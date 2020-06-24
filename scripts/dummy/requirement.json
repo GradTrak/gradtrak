@@ -2018,7 +2018,7 @@
             "type": "multi",
             "name": "MATH 1A / MATH 16A",
             "numRequired": 1,
-            "hidden": true,
+            "hidden": false,
             "requirements": [
               {
                 "id": "math1a",
@@ -2037,7 +2037,7 @@
           {
             "id": "Statistics Course",
             "type": "multi",
-            "name": "MATH 1A / MATH 16A",
+            "name": "Statistics Course",
             "numRequired": 1,
             "hidden": true,
             "requirements": [
@@ -2085,6 +2085,72 @@
               }
             ]
           },
+          {
+            "id": "econ1econ2",
+            "type": "multi",
+            "name": "ECON 1 / ECON 2",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ1",
+                "type": "course",
+                "name": "ECON 1",
+                "courseId": "econ1"
+              },
+              {
+                "id": "econ2",
+                "type": "course",
+                "name": "ECON 2",
+                "courseId": "econ2"
+              }
+            ]
+          },
+          {
+            "id": "econupperdivprereq",
+            "type": "multi",
+            "name": "Economics Upper Div",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "econ100a",
+                "type": "course",
+                "name": "ECON 100A",
+                "courseId": "econ100a"
+              },
+              {
+                "id": "econ100b",
+                "type": "course",
+                "name": "ECON 100B",
+                "courseId": "econ100b"
+              },
+              {
+                "id": "econ101a",
+                "type": "course",
+                "name": "ECON 101A",
+                "courseId": "econ101a"
+              },
+              {
+                "id": "econ101b",
+                "type": "course",
+                "name": "ECON 101B",
+                "courseId": "econ101b"
+              },
+              {
+                "id": "econ140",
+                "type": "course",
+                "name": "ECON 140",
+                "courseId": "econ140"
+              },
+              {
+                "id": "econ141",
+                "type": "course",
+                "name": "ECON 141",
+                "courseId": "econ141"
+              }
+            ]
+          }
         ]
       },
     ]
