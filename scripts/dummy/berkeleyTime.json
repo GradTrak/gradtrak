@@ -11567,7 +11567,7 @@
     "no": "144",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
       "bioeng_lab_course",
       "stat_cluster"
     ]
@@ -25031,7 +25031,7 @@
       "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
-      "eecs_design" //technically only for spring 2019 and after but riperinoes, good enough? juniors prob wont use this
+      "eecs_design"
     ]
   },
   {
@@ -34876,7 +34876,6 @@
       "eecs_design"
     ]
   },
-  //uh technically they're supposed to take both the above and la/lb but uh idk
   {
     "units": 2,
     "title": "Application Specific Integrated Circuits Laboratory",
