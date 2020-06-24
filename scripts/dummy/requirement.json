@@ -2154,7 +2154,7 @@
         ]
       },
       {
-        "name": "Upper Division"
+        "name": "Upper Division",
         "requirements": [
           {
             "id": "econ100econ101",
@@ -2207,6 +2207,27 @@
               }
             ]
           },
+          {
+            "id": "econ140econ141",
+            "type": "multi",
+            "name": "ECON 140/141 Series",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ140",
+                "type": "course",
+                "name": "ECON 140",
+                "courseId": "econ140"
+              },
+              {
+                "id": "econ141",
+                "type": "course",
+                "name": "ECON 141",
+                "courseId": "econ141"
+              }
+            ]
+          }
         ]
       }
     ]
