@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
+import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
 import { MutexRequirement } from '../../models/requirements/mutex-requirement.model';
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
-
 @Component({
   selector: 'app-requirement',
   templateUrl: './requirement.component.html',
@@ -18,6 +18,7 @@ export class RequirementComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
   @Input() readonly manuallyFulfilled: Set<string>;
+  @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
@@ -77,16 +78,19 @@ export class RequirementComponent implements OnInit {
 
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
-    if (this.override) {
-      fulfillments.push(this.override);
-    } else if (this.requirement.isFulfilled(this.courses, this.manuallyFulfilled)) {
-      fulfillments.push('fulfilled');
-    } else {
-      fulfillments.push('unfulfilled');
-    }
-    if (this.isManuallyFulfilled()) {
-      fulfillments.push('manual');
-    }
+    // if (this.override) {
+    //   fulfillments.push(this.override);
+    // } else if (this.requirement.isFulfilled(this.courses, this.manuallyFulfilled)) {
+    //   fulfillments.push('fulfilled');
+    // } else {
+    //   fulfillments.push('unfulfilled');
+    // }
+    // if (this.isManuallyFulfilled()) {
+    //   fulfillments.push('manual');
+    // }
+    fulfillments.push(this.fulfillmentMap.get(this.requirement));
+    console.log(this.requirement);
+    console.log(fulfillments);
     return fulfillments;
   }
 

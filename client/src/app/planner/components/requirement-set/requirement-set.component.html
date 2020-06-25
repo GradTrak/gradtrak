@@ -9,6 +9,7 @@
       [requirementCategory]="requirementCategory"
       [courses]="courses"
       [manuallyFulfilled]="manuallyFulfilled.get(requirementSet.id)"
+      [fulfillmentMap]="fulfillmentMap"
       (onManualFulfill)="manuallyFulfill($event)"
       (onManualUnfulfill)="manuallyUnfulfill($event)"
     ></app-requirement-category>

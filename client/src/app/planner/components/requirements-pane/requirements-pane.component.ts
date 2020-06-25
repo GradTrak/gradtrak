@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnInit, ViewChild, TemplateRef } from '@an
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Constraint } from '../../models/constraint.model';
 import { Course } from '../../models/course.model';
+import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { RequirementCategory } from '../../models/requirement-category.model';
@@ -12,8 +13,6 @@ import { TagRequirement } from '../../models/requirements/tag-requirement.model'
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { RequirementService } from '../../services/requirement.service';
 import { UserService } from '../../services/user.service';
-
-export type FulfillmentType = 'fulfilled' | 'unfulfilled' | 'possible' | 'manual';
 
 @Component({
   selector: 'app-requirements-pane',
