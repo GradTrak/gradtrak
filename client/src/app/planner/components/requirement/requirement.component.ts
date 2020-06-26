@@ -78,17 +78,11 @@ export class RequirementComponent implements OnInit {
 
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
-    // if (this.override) {
-    //   fulfillments.push(this.override);
-    // } else if (this.requirement.isFulfilled(this.courses, this.manuallyFulfilled)) {
-    //   fulfillments.push('fulfilled');
-    // } else {
-    //   fulfillments.push('unfulfilled');
-    // }
-    // if (this.isManuallyFulfilled()) {
-    //   fulfillments.push('manual');
-    // }
-    fulfillments.push(this.fulfillmentMap.get(this.requirement));
+    const fulfillment: string = this.fulfillmentMap.get(this.requirement);
+    if (fulfillment === 'manual') {
+      fulfillments.push('fulfilled');
+    }
+    fulfillments.push(fulfillment);
     return fulfillments;
   }
 
