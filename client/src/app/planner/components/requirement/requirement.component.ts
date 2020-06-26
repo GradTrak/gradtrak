@@ -89,8 +89,6 @@ export class RequirementComponent implements OnInit {
     //   fulfillments.push('manual');
     // }
     fulfillments.push(this.fulfillmentMap.get(this.requirement));
-    console.log(this.requirement);
-    console.log(fulfillments);
     return fulfillments;
   }
 

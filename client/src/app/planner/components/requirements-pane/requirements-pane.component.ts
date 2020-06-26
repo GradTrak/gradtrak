@@ -365,7 +365,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
     >( // A mapping of each requirement-to-course map to the number of requirements it fulfills.
       reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course>>) => [
         reqToCourseMapping,
-        baseReqs.filter((req: Requirement) => req.isFulfilledWith(Array.from(reqToCourseMapping.get(req)))).length,
+        baseReqs.filter((req: Requirement) => RequirementsPaneComponent.reqIsFulfilledWithMapping(req, reqToCourseMapping)).length,
       ]),
     );
     const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
@@ -377,18 +377,61 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       fulfillment.set(req, 'manual'); //This can be redundant but it's linear so
     });
     baseReqs.forEach((req: Requirement) => {
+      RequirementsPaneComponent.deriveReqFulfillment(req, maxMappings, fulfillment);
+    });
+  }
+
+  private static reqIsFulfilledWithMapping(req: Requirement, reqToCourseMapping: Map<Requirement, Set<Course>>): boolean {
+    if (!(req instanceof MultiRequirement)) {
+      return req.isFulfilledWith(Array.from(reqToCourseMapping.get(req)));
+    }
+
+    const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) => RequirementsPaneComponent.reqIsFulfilledWithMapping(childReq, reqToCourseMapping));
+    const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
+    return numFulfilled >= req.numRequired;
+  }
+
+  /**
+   * Derives the fulfillment statuses of requirements from a mapping of
+   * requirements to fulfillmentTypes (to take care of special cases for
+   * multi requirements).
+   *
+   * @param {Requirement} req The requirement being processed
+   * mappings.
+   * @param {Map<Requirement, FulfillmentType} fulfillment The map to which we
+   * assign the derived fulfillment statuses.
+   */
+  private static deriveReqFulfillment(
+    req: Requirement,
+    bestMappings: Map<Requirement, Set<Course>>[],
+    fulfillment: Map<Requirement, FulfillmentType>,
+  ): void {
+    // TODO type guard
+    if (fulfillment.has(req)) {
+      return;
+    }
+    if (!(req instanceof MultiRequirement)) {
       if (
-        maxMappings.every((mapping: Map<Requirement, Set<Course>>) => req.isFulfilledWith(Array.from(mapping.get(req))))
+        bestMappings.every((reqToCourseMapping: Map<Requirement, Set<Course>>) => RequirementsPaneComponent.reqIsFulfilledWithMapping(req, reqToCourseMapping))
       ) {
         fulfillment.set(req, 'fulfilled');
       } else if (
-        maxMappings.some((mapping: Map<Requirement, Set<Course>>) => req.isFulfilledWith(Array.from(mapping.get(req))))
+        bestMappings.some((reqToCourseMapping: Map<Requirement, Set<Course>>) => RequirementsPaneComponent.reqIsFulfilledWithMapping(req, reqToCourseMapping))
       ) {
         fulfillment.set(req, 'possible');
       } else {
         fulfillment.set(req, 'unfulfilled');
       }
-    });
+      return;
+    }
+    req.requirements.forEach((childReq: Requirement) =>
+      RequirementsPaneComponent.deriveReqFulfillment(childReq, bestMappings, fulfillment));
+    const childFulfillments: FulfillmentType[] = req.requirements.map((childReq: Requirement) =>
+      fulfillment.get(childReq));
+    const numFulfilled: number = childFulfillments.filter((childFulfillment: FulfillmentType) =>
+      childFulfillment === 'fulfilled').length;
+    const reqFulfillment: FulfillmentType = numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled';
+    fulfillment.set(req, reqFulfillment);
   }
 
   /**
