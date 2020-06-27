@@ -1,18 +1,22 @@
 <div class="header">
-  <span class="material-icons" (click)="openReportForm()">outlined_flag</span>
   <div class="title">GradTrak</div>
   <div class="name">
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
       <div class="left">Guest User</div>
       <div class="right">
         <button class="gt-button" (click)="openLogin()">Login / Register</button>
+        <span> | </span>
+        <div class="material-icons" (click)="openReportForm()">outlined_flag</div>
       </div>
     </ng-container>
     <ng-template #loggedIn>
       <div class="left">Name: {{ state.username }}</div>
       <div class="right">
         <button class="gt-button" (click)="openAccountEditor()">Account</button>
+        <span> | </span>
         <button class="gt-button" (click)="logout()">Logout</button>
+        <span> | </span>
+        <div class="material-icons" (click)="openReportForm()">outlined_flag</div>
       </div>
     </ng-template>
   </div>
