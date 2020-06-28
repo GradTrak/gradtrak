@@ -6,18 +6,15 @@ import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
 import { CourseRequirement } from '../models/requirements/course-requirement.model';
 import { MultiRequirement } from '../models/requirements/multi-requirement.model';
-import { PolyRequirement } from '../models/requirements/poly-requirement.model';
-import { TagRequirement } from '../models/requirements/tag-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
 
 /**
- * Returns a map containing the requirement and any child requirement as
- * keys, mapped to the requirement-scope constraints that apply to them.
+ * Returns a map containing the requirement and any child requirement as keys,
+ * mapped to the requirement-scope constraints that apply to them.
  *
  * @param {Requirement} req The requirement whose constraints to fetch.
- * @return {Map<Requirement, Constraints[]>} The map containing the
- * requirement and its potential children mapped to the requirement-scope
- * constraints.
+ * @return {Map<Requirement, Constraints[]>} The map containing the requirement
+ * and its potential children mapped to the requirement-scope constraints.
  */
 function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
   const mapping: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
@@ -35,32 +32,35 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
   return mapping;
 }
 
-function getReqPriority(req: Requirement): number {
-  if (req instanceof CourseRequirement) {
-    return 0;
+function reqIsFulfilledWithMapping(
+  req: Requirement,
+  reqToCourseMapping: Map<Requirement, Set<Course> | boolean>,
+): boolean {
+  const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
+
+  if (typeof courses === 'boolean') {
+    return courses;
   }
-  if (req instanceof TagRequirement) {
-    return 1;
+
+  if (!(req instanceof MultiRequirement)) {
+    return req.isFulfilledWith(Array.from(courses));
   }
-  if (req instanceof PolyRequirement) {
-    return 2;
-  }
-  if (req instanceof MultiRequirement) {
-    return 3;
-  }
-  if (req instanceof UnitRequirement) {
-    return 4;
-  }
-  return 5;
+
+  const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) =>
+    reqIsFulfilledWithMapping(childReq, reqToCourseMapping),
+  );
+  const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
+  return numFulfilled >= req.numRequired;
 }
 
 /**
  * Given a list of requirements and courses, recursively finds and returns an
- * array of every single reasonable possible way to arrange courses to the different
- * requirements.  Note that the time and space complexity of this operation
- * is Theta(N**M), where N is the number of courses and M is the number of
- * requirements. Will assume that base level course requirements are fullfilled immediately,
- * and always attempts to take the map with the highest number of fullfilled requirements.
+ * array of every single reasonable possible way to arrange courses to the
+ * different requirements.  Note that the time and space complexity of this
+ * operation is Theta(N**M), where N is the number of courses and M is the
+ * number of requirements. Will assume that base level course requirements are
+ * fullfilled immediately, and always attempts to take the map with the highest
+ * number of fullfilled requirements.
  *
  * In particular, each recursive call calculates all the possibilities from i
  * to the length of courses.
@@ -72,10 +72,10 @@ function getReqPriority(req: Requirement): number {
  * tool.
  * @param {boolean} root Whether root requirement pruning can be performed.
  * @param {number} i The current index for the requirement that's "on deck"
- * @param {number} numFulfilled The number of requirements that are
- * fulfilled with the given mapping.
- * @param {number} alpha The lower bound on how many requirements are
- * fulfilled for returned course mappings, used for efficient pruning.
+ * @param {number} numFulfilled The number of requirements that are fulfilled
+ * with the given mapping.
+ * @param {number} alpha The lower bound on how many requirements are fulfilled
+ * for returned course mappings, used for efficient pruning.
  * @return {Map<Requirement, Set<Course>>[]} All possible ways of assigning
  * courses to requirements from i to the end.
  */
@@ -90,11 +90,9 @@ function getMappings(
   alpha: number = 0,
   i: number = 0,
 ): Map<Requirement, Set<Course> | boolean>[] {
-  /*
-   * If, assuming all remaining requirements are fulfilled, we still aren’t
-   * able to reach alpha, or if we managed to fulfill every single
-   * requirement, prune.
-   */
+  /* If, assuming all remaining requirements are fulfilled, we still aren't
+   * able to reach alpha, or if we managed to fulfill every single requirement,
+   * prune. */
   const numRemaining: number = reqs.length - i;
   if (numFulfilled + numRemaining < alpha || alpha === reqs.length) {
     return [
@@ -108,17 +106,15 @@ function getMappings(
   }
 
   const req: Requirement = reqs[i];
-  /*
-   * If the requirement implements requirement-container, then we recursively
-   * generate fullfillment status for each child requirement, adding it to
-   * the current mappings and constantly pruning and checking for conflicts.
-   * Then assume we use each mapping and continue to recurse through the
-   * remainder of reqs.
-   */
-  // TODO typeguard without violating abstraction
+  /* If the requirement implements requirement-container, then we recursively
+   * generate fullfillment status for each child requirement, adding it to the
+   * current mappings and constantly pruning and checking for conflicts. Then
+   * assume we use each mapping and continue to recurse through the remainder
+   * of reqs. */
   /* We need to check RequirementContainers first because we always need to
    * process sub-requirements, even if the container itself is manually
    * fulfilled. */
+  // TODO typeguard without violating abstraction
   if (req instanceof MultiRequirement) {
     /* Process the children requirements and add it to our current map. */
     const subMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
@@ -129,30 +125,26 @@ function getMappings(
       root && req.numRequired === req.requirements.length,
       mapping,
     );
-    /*
-     * Take each submap from the result from the requirements and assumes
-     * that we are using it, setting the contents of the submap to mapping
-     * and using it to find all the future possibilities.
-     */
+    /* Take each submap from the result from the requirements and assumes that
+     * we are using it, setting the contents of the submap to mapping and using
+     * it to find all the future possibilities */
     const finalMappings: Map<Requirement, Set<Course> | boolean>[] = subMappings.flatMap(
       (submap: Map<Requirement, Set<Course> | boolean>) => {
         const union: Set<Course> = new Set<Course>();
-        submap.forEach((courses: Set<Course> | boolean) => {
-          if (typeof courses === 'boolean') {
+        submap.forEach((subReqCourses: Set<Course> | boolean) => {
+          if (typeof subReqCourses === 'boolean') {
             return;
           }
-          courses.forEach((course: Course) => {
+          subReqCourses.forEach((course: Course) => {
             union.add(course);
           });
         });
-        submap.forEach((courses: Set<Course> | boolean, subReq: Requirement) => {
-          mapping.set(subReq, courses);
+        submap.forEach((subReqCourses: Set<Course> | boolean, subReq: Requirement) => {
+          mapping.set(subReq, subReqCourses);
         });
         mapping.set(req, union);
-        /*
-         * Find the future mappings, with the assumption that we are using
-         * the current submap.
-         */
+        /* Find the future mappings, with the assumption that we are using the
+         * current submap */
         const rest: Map<Requirement, Set<Course> | boolean>[] = getMappings(
           reqs,
           courses,
@@ -164,15 +156,15 @@ function getMappings(
           alpha,
           i + 1,
         );
-        submap.forEach((courses: Set<Course> | boolean, subReq: Requirement) => {
-          /* Revert so that we can use the mapping later to prune properly. */
+        submap.forEach((subReqCourses: Set<Course> | boolean, subReq: Requirement) => {
+          /* Revert so that we can use the mapping later to prune properly */
           mapping.delete(subReq);
         });
         mapping.delete(req);
-        /* Take the potential results and add the current combination. */
+        /* Take the potential results and add the current combination */
         rest.forEach((restCombination: Map<Requirement, Set<Course> | boolean>) => {
-          submap.forEach((courses: Set<Course> | boolean, subReq: Requirement) => {
-            restCombination.set(subReq, courses);
+          submap.forEach((subReqCourses: Set<Course> | boolean, subReq: Requirement) => {
+            restCombination.set(subReq, subReqCourses);
           });
           restCombination.set(req, union);
         });
@@ -186,11 +178,9 @@ function getMappings(
   if (manuallyFulfilled.has(req)) {
     combinations = [true];
   } else {
-    /*
-     * The filter prunes the combination. Takes the course combinations of
-     * each course, adds it to the current mapping, and then tests to see if
-     * the new mapping is still valid with the constraint.
-     */
+    /* The filter prunes the combination. Takes the course combinations of each
+     * course, adds it to the current mapping, and then tests to see if the new
+     * mapping is still valid with the constraint. */
     combinations = req.getCourseCombinations(courses);
     /* Prune invalid mappings */
     combinations = combinations.filter((combination: Set<Course>) => {
@@ -200,8 +190,8 @@ function getMappings(
       return valid;
     });
     if (root) {
-      /* Prune possibilities that don't fulfill a necessary course
-       * requirement if we can. */
+      /* Prune possibilities that don't fulfill a necessary course requirement
+       * if we can */
       if (req instanceof CourseRequirement) {
         combinations = combinations.filter((combination: Set<Course>) => {
           return req.isFulfilledWith(Array.from(combination));
@@ -210,10 +200,10 @@ function getMappings(
           combinations = [new Set<Course>()];
         }
       }
-      /* Prune unnecessary unit requirement possibilities if we can. */
+      /* Prune unnecessary unit requirement possibilities if we can */
       if (req instanceof UnitRequirement) {
-        // FIXME Fix unit requirement checking logic (prune combinations
-        // where removing a course would still be enough)
+        // FIXME Fix unit requirement checking logic (prune combinations where
+        // removing a course would still be enough)
         const unitsPerCombination: Map<Set<Course>, number> = new Map<Set<Course>, number>();
         combinations.forEach((combination: Set<Course>) => {
           unitsPerCombination.set(
@@ -239,12 +229,10 @@ function getMappings(
     }
   }
 
-  /*
-   * For each possible combination of courses, which are to be used to
-   * fulfill the requirement, take the list of possible mappings that are
-   * generated from the recursive call, add the possible combination to
-   * each of those possible mappings.
-   */
+  /* For each possible combination of courses, which are to be used to fulfill
+   * the requirement, take the list of possible mappings that are generated
+   * from the recursive call, add the possible combination to each of those
+   * possible mappings. */
 
   const finalMappings: Map<Requirement, Set<Course> | boolean>[] = [];
   let nextAlpha: number = alpha;
@@ -275,8 +263,9 @@ function getMappings(
       ...restMappings.map(
         (restMapping: Map<Requirement, Set<Course> | boolean>) =>
           nextNumFulfilled +
-          Array.from(restMapping.keys()).filter((req: Requirement) => reqIsFulfilledWithMapping(req, restMapping))
-            .length,
+          Array.from(restMapping.keys()).filter((restReq: Requirement) =>
+            reqIsFulfilledWithMapping(restReq, restMapping),
+          ).length,
       ),
     );
 
@@ -289,63 +278,6 @@ function getMappings(
   });
 
   return finalMappings;
-}
-
-/**
- * Derives the fulfillment statuses of requirements from a mapping of
- * requirements to possible course combinations and assigns them to the given
- * map.
- *
- * @param {Requirement} baseReqs The requirements that count towards overall
- * goal progress.
- * @param {Map<Requirement, Set<Course> | boolean>[]} mappings The possible
- * course mappings.
- * @param {Map<Requirement, FulfillmentType} fulfillment The map to which we
- * assign the derived fulfillment statuses.
- */
-function deriveFulfillment(
-  baseReqs: Requirement[],
-  reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
-  fulfillment: Map<Requirement, FulfillmentType>,
-): void {
-  const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
-    Map<Requirement, Set<Course> | boolean>,
-    number
-  >( // A mapping of each requirement-to-course map to the number of requirements it fulfills.
-    reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => [
-      reqToCourseMapping,
-      baseReqs.filter((req: Requirement) => reqIsFulfilledWithMapping(req, reqToCourseMapping)).length,
-    ]),
-  );
-  const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
-  const maxMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
-    (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-      mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
-  );
-  baseReqs.forEach((req: Requirement) => {
-    deriveReqFulfillment(req, maxMappings, fulfillment);
-  });
-}
-
-function reqIsFulfilledWithMapping(
-  req: Requirement,
-  reqToCourseMapping: Map<Requirement, Set<Course> | boolean>,
-): boolean {
-  const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
-
-  if (typeof courses === 'boolean') {
-    return courses;
-  }
-
-  if (!(req instanceof MultiRequirement)) {
-    return req.isFulfilledWith(Array.from(courses));
-  }
-
-  const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) =>
-    reqIsFulfilledWithMapping(childReq, reqToCourseMapping),
-  );
-  const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
-  return numFulfilled >= req.numRequired;
 }
 
 /**
@@ -378,23 +310,59 @@ function deriveReqFulfillment(
     ).length;
     const reqFulfillment: FulfillmentType = numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled';
     fulfillment.set(req, reqFulfillment);
+  } else if (
+    bestMappings.every((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
+      reqIsFulfilledWithMapping(req, reqToCourseMapping),
+    )
+  ) {
+    fulfillment.set(req, 'fulfilled');
+  } else if (
+    bestMappings.some((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
+      reqIsFulfilledWithMapping(req, reqToCourseMapping),
+    )
+  ) {
+    fulfillment.set(req, 'possible');
   } else {
-    if (
-      bestMappings.every((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-        reqIsFulfilledWithMapping(req, reqToCourseMapping),
-      )
-    ) {
-      fulfillment.set(req, 'fulfilled');
-    } else if (
-      bestMappings.some((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-        reqIsFulfilledWithMapping(req, reqToCourseMapping),
-      )
-    ) {
-      fulfillment.set(req, 'possible');
-    } else {
-      fulfillment.set(req, 'unfulfilled');
-    }
+    fulfillment.set(req, 'unfulfilled');
   }
+}
+
+/**
+ * Derives the fulfillment statuses of requirements from a mapping of
+ * requirements to possible course combinations and assigns them to the given
+ * map.
+ *
+ * @param {Requirement} baseReqs The requirements that count towards overall
+ * goal progress.
+ * @param {Map<Requirement, Set<Course> | boolean>[]} mappings The possible
+ * course mappings.
+ * @param {Map<Requirement, FulfillmentType} fulfillment The map to which we
+ * assign the derived fulfillment statuses.
+ */
+function deriveFulfillment(
+  baseReqs: Requirement[],
+  reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
+  fulfillment: Map<Requirement, FulfillmentType>,
+): void {
+  /* A mapping of each requirement-to-course map to the number of requirements
+   * it fulfills */
+  const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
+    Map<Requirement, Set<Course> | boolean>,
+    number
+  >(
+    reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => [
+      reqToCourseMapping,
+      baseReqs.filter((req: Requirement) => reqIsFulfilledWithMapping(req, reqToCourseMapping)).length,
+    ]),
+  );
+  const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
+  const maxMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
+    (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
+      mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
+  );
+  baseReqs.forEach((req: Requirement) => {
+    deriveReqFulfillment(req, maxMappings, fulfillment);
+  });
 }
 
 /**
@@ -402,8 +370,8 @@ function deriveReqFulfillment(
  * fulfillment status.
  *
  * @param {RequirementSet[]} reqSets The requirement sets being processed.
- * @param {Course[]} courses The courses used to fulfill requirements.  @param
- * {Map<string, Set<string>>} manuallyFulfilled The map mapping
+ * @param {Course[]} courses The courses used to fulfill requirements.
+ * @param {Map<string, Set<string>>} manuallyFulfilled The map mapping
  * requirement set IDs to the IDs of manually fulfilled within those sets.
  * @return {Map<Requirement, FulfillmentType>} The fulfillment statuses of
  * every requirement.
@@ -413,7 +381,7 @@ export function processRequirements(
   courses: Course[],
   manuallyFulfilled: Map<string, Set<string>>,
 ): Map<Requirement, FulfillmentType> {
-  // pool constraints into a map.
+  /* Precompute applicable constraints */
   const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
   reqSets.forEach((reqSet: RequirementSet) => {
     const setConstraints: Constraint[] = reqSet.getConstraints();
@@ -428,36 +396,35 @@ export function processRequirements(
     });
   });
 
+  /* Find Requirement instances of manually fulfillled reqs */
+  const manualReqs: Set<Requirement> = new Set<Requirement>();
+  reqSets.forEach((reqSet: RequirementSet) => {
+    if (manuallyFulfilled.has(reqSet.id)) {
+      const manualReqIds: Set<string> = manuallyFulfilled.get(reqSet.id);
+      const addManualReq: (Requirement) => void = (req: Requirement) => {
+        if (manualReqIds.has(req.id)) {
+          manualReqs.add(req);
+        }
+        // TODO Type guard
+        if (req instanceof MultiRequirement) {
+          req.requirements.forEach(addManualReq);
+        }
+      };
+      reqSet.getRequirements().forEach(addManualReq);
+    }
+  });
+
   const fulfillment: Map<Requirement, FulfillmentType> = new Map();
-
   reqSets.forEach((reqSet: RequirementSet): void => {
-    /* Find Requirement instances of manually fulfillled reqs. */
-    const manualReqs: Set<Requirement> = new Set<Requirement>();
-    reqSets.forEach((reqSet: RequirementSet) => {
-      if (manuallyFulfilled.has(reqSet.id)) {
-        const manualReqIds: Set<string> = manuallyFulfilled.get(reqSet.id);
-        const addManualReq: (Requirement) => void = (req: Requirement) => {
-          if (manualReqIds.has(req.id)) {
-            manualReqs.add(req);
-          }
-          // TODO Type guard
-          if (req instanceof MultiRequirement) {
-            req.requirements.forEach(addManualReq);
-          }
-        };
-        reqSet.getRequirements().forEach(addManualReq);
-      }
-    });
-
     const setConstraints: Constraint[] = reqSet.getConstraints();
     if (setConstraints.length === 0) {
       /* If a set has no constraints, we can derive fulfillment at the level
-       * of a category. */
+       * of a category */
       reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
         const categoryConstraints: Constraint[] = reqCategory.getConstraints();
         if (categoryConstraints.length === 0) {
           /* If a category has no constraints, we can derive fulfillment at
-           * the level of a requirement. */
+           * the level of a requirement */
           reqCategory.requirements.forEach((req: Requirement) => {
             const reqMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
               [req],
@@ -488,6 +455,5 @@ export function processRequirements(
       deriveFulfillment(setReqs, setMappings, fulfillment);
     }
   });
-  console.log(fulfillment);
   return fulfillment;
 }
