@@ -82,6 +82,7 @@ function getMappings(
   reqs: Requirement[],
   courses: Course[],
   constraints: Map<Requirement, Constraint[]>,
+  manuallyFulfilled: Set<Requirement>,
   root: boolean = true,
   mapping: Map<Requirement, Set<Course>> = new Map<Requirement, Set<Course>>(),
   numFulfilled: number = 0,
@@ -118,6 +119,7 @@ function getMappings(
       req.requirements,
       courses,
       constraints,
+      manuallyFulfilled,
       root && req.numRequired === req.requirements.length,
       mapping,
     );
@@ -146,6 +148,7 @@ function getMappings(
           reqs,
           courses,
           constraints,
+          manuallyFulfilled,
           root,
           mapping,
           numFulfilled,
@@ -241,6 +244,7 @@ function getMappings(
         reqs,
         courses,
         constraints,
+        manuallyFulfilled,
         root,
         mapping,
         nextNumFulfilled,
@@ -429,14 +433,19 @@ export function processRequirements(
     /* Find Requirement instances of manually fulfillled reqs. */
     const manualReqs: Set<Requirement> = new Set<Requirement>();
     reqSets.forEach((reqSet: RequirementSet) => {
-      const manualReqIds = manuallyFulfilled.get(reqSet.id);
-      if (!manualReqIds) {
-        return;
+      if (manuallyFulfilled.has(reqSet.id)) {
+        const manualReqIds: Set<string> = manuallyFulfilled.get(reqSet.id);
+        const addManualReq: (Requirement) => void = (req: Requirement) => {
+          if (manualReqIds.has(req.id)) {
+            manualReqs.add(req);
+          }
+          // TODO Type guard
+          if (req instanceof MultiRequirement) {
+            req.requirements.forEach(addManualReq);
+          }
+        };
+        reqSet.getRequirements().forEach(addManualReq);
       }
-      const manuallyFulfilledInReqSet = reqSet.getRequirements().filter((req: Requirement) => manualReqIds.has(req.id));
-      manuallyFulfilledInReqSet.forEach((requirement: Requirement) => {
-        manualReqs.add(requirement);
-      });
     });
 
     const setConstraints: Constraint[] = unfulfilledReqSet.getConstraints();
@@ -449,7 +458,7 @@ export function processRequirements(
           /* If a category has no constraints, we can derive fulfillment at
            * the level of a requirement. */
           reqCategory.requirements.forEach((req: Requirement) => {
-            const reqMappings: Map<Requirement, Set<Course>>[] = getMappings([req], courses, constraints);
+            const reqMappings: Map<Requirement, Set<Course>>[] = getMappings([req], courses, constraints, manualReqs);
             deriveFulfillment([req], reqMappings, fulfillment, manualReqs);
           });
         } else {
@@ -457,13 +466,14 @@ export function processRequirements(
             reqCategory.requirements,
             courses,
             constraints,
+            manualReqs,
           );
           deriveFulfillment(reqCategory.requirements, categoryMappings, fulfillment, manualReqs);
         }
       });
     } else {
       const setReqs: Requirement[] = unfulfilledReqSet.getRequirements();
-      const setMappings: Map<Requirement, Set<Course>>[] = getMappings(setReqs, courses, constraints);
+      const setMappings: Map<Requirement, Set<Course>>[] = getMappings(setReqs, courses, constraints, manualReqs);
       deriveFulfillment(setReqs, setMappings, fulfillment, manualReqs);
     }
   });
