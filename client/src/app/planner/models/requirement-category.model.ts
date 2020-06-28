@@ -1,9 +1,8 @@
 import { RequirementPrototype } from 'common/prototypes/requirement.prototype';
 import { RequirementCategoryPrototype } from 'common/prototypes/requirement-category.prototype';
 import { ConstraintPrototype } from 'common/prototypes/constraint.prototype';
-import { Constraint } from './constraint.model';
 import { Course } from './course.model';
-import { Requirement } from './requirement.model';
+import { Constraint, Requirement } from './requirement.model';
 import { CourseRequirement } from './requirements/course-requirement.model';
 import { MutexConstraint } from './constraints/mutex-constraint.model';
 import { MultiRequirement } from './requirements/multi-requirement.model';

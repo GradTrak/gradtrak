@@ -1,7 +1,6 @@
 import { ConstraintPrototype } from 'common/prototypes/constraint.prototype';
-import { Constraint } from '../constraint.model';
 import { Course } from '../course.model';
-import { Requirement } from '../requirement.model';
+import { Constraint, Requirement } from '../requirement.model';
 
 /**
  * The MutexConstraint class defines a {@link Constraint} that only allows courses to be assigned to a single

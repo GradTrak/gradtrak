@@ -1,7 +1,6 @@
-import { Constraint } from '../models/constraint.model';
 import { Course } from '../models/course.model';
 import { FulfillmentType } from '../models/fulfillment-type.model';
-import { Requirement } from '../models/requirement.model';
+import { Constraint, Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
 import { CourseRequirement } from '../models/requirements/course-requirement.model';
