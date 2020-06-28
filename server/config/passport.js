@@ -1,4 +1,5 @@
 const argon2 = require('argon2');
+const { OAuth2Strategy: GoogleStrategy } = require('passport-google-oauth');
 const { Strategy } = require('passport-local');
 
 const User = require('../models/user');
@@ -26,6 +27,18 @@ const localStrategy = new Strategy(async (username, inputPassword, done) => {
   done(null, user);
 });
 
+const googleStrategy = new GoogleStrategy(
+  {
+    clientID: '193968115710-tbotc192sopukgp3b13741d1puvlarsk.apps.googleusercontent.com',
+    clientSecret: 'l4DbnSBR-YVKXfKCKJXuvOi3',
+    callbackURL: 'http://localhost:4200/login/google/callback',
+  },
+  async (accessToken, refreshToken, profile, done) => {
+    const user = await User.findOrCreate({ googleId: profile.id });
+    done(user);
+  },
+);
+
 /* eslint-disable no-underscore-dangle */
 
 module.exports.serializeUser = (user, done) => {
@@ -39,4 +52,5 @@ module.exports.deserializeUser = (_id, done) => {
 /* eslint-enable no-underscore-dangle */
 
 module.exports.verifyUser = verifyUser;
-module.exports.authStrategy = localStrategy;
+module.exports.localStrategy = localStrategy;
+module.exports.googleStrategy = googleStrategy;
