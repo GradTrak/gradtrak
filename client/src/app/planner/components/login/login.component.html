@@ -13,8 +13,8 @@
       <button class="btn btn-primary btn-block" type="submit" [disabled]="loading">
         Login
       </button>
-      <ng-container *ngIf="failed">
-        <span class="failure">Incorrect username or password.</span>
+      <ng-container *ngIf="loginError">
+        <span class="failure">{{ loginError }}</span>
       </ng-container>
     </div>
   </form>

@@ -37,16 +37,14 @@ exports.register = async (req, res) => {
     return;
   }
   if (!validateEmail(username)) {
-    // TODO Send status code 400 once client-side validation is implemented
-    res.json({
+    res.status(400).json({
       success: false,
       error: 'Invalid email address',
     });
     return;
   }
   if (!validPassword(password)) {
-    // TODO Send status code 400 once client-side validation is implemented
-    res.json({
+    res.status(400).json({
       success: false,
       error: 'Invalid password',
     });
@@ -102,6 +100,7 @@ exports.loginSuccess = (req, res) => {
 exports.loginFailure = (req, res) => {
   res.status(200).json({
     success: false,
+    error: 'Invalid username or password',
   });
 };
 
