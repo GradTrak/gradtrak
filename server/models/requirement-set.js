@@ -1,5 +1,21 @@
-const { constraintSchema } = require('./constraint.js');
 const mongoose = require('mongoose');
+
+const constraintSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+    mutexReqIds: {
+      type: [String],
+    },
+  },
+  { strict: 'throw' },
+);
 
 const requirementSchema = new mongoose.Schema(
   {
