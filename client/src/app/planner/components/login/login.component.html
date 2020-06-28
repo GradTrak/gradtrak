@@ -1,6 +1,6 @@
 <ng-container *ngIf="!registering; else regTemplate">
   <h4 class="header">Login</h4>
-  <form (ngSubmit)="submitLogin()">
+  <form class="login" (ngSubmit)="submitLogin()">
     <div class="form-group">
       <label>Email</label>
       <input class="form-control" type="text" name="username" [(ngModel)]="username" />
@@ -9,7 +9,7 @@
       <label>Password</label>
       <input class="form-control" type="password" name="password" [(ngModel)]="password" />
     </div>
-    <div class="form-group">
+    <div class="form-group my-4">
       <button class="btn btn-primary btn-block" type="submit" [disabled]="loading">
         Login
       </button>
@@ -29,7 +29,7 @@
 </ng-container>
 <ng-template #regTemplate>
   <h4 class="header">Register</h4>
-  <form (ngSubmit)="submitRegistration()">
+  <form class="login" (ngSubmit)="submitRegistration()">
     <div class="form-group">
       <label>Email</label>
       <input class="form-control" type="text" name="username" [(ngModel)]="username" />
@@ -52,7 +52,7 @@
           [(ngModel)]="regEmailMarketing"
         />
         <label class="form-check-label" for="email-marketing">
-          I would like to receive updates on new features!
+          I would like to subscribe to email updates!
         </label>
       </div>
       <div class="form-check">
@@ -68,10 +68,15 @@
         </label>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group my-4">
       <button class="btn btn-primary btn-block" type="submit" [disabled]="loading">
         Register
       </button>
+      <small class="form-text text-muted text-center px-3">
+        By clicking Register, you agree to GradTrak&lsquo;s
+        <a href="https://gradtrak.me/terms/" target="_blank">Terms of Service</a> and
+        <a href="https://gradtrak.me/privacy/" target="_blank">Privacy Policy</a>.
+      </small>
       <ng-container *ngIf="regError">
         <span class="failure">{{ regError }}</span>
       </ng-container>

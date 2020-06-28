@@ -7,6 +7,7 @@ import { MultiRequirement } from '../../models/requirements/multi-requirement.mo
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
+
 @Component({
   selector: 'app-requirement',
   templateUrl: './requirement.component.html',
