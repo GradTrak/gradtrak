@@ -1,1 +1,1 @@
-export type FulfillmentType = 'fulfilled' | 'unfulfilled' | 'possible' | 'manual';
+export type FulfillmentType = 'fulfilled' | 'unfulfilled' | 'possible';

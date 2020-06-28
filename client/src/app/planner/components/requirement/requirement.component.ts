@@ -78,11 +78,10 @@ export class RequirementComponent implements OnInit {
 
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
-    const fulfillment: string = this.fulfillmentMap.get(this.requirement);
-    if (fulfillment === 'manual') {
-      fulfillments.push('fulfilled');
+    fulfillments.push(this.fulfillmentMap.get(this.requirement));
+    if (this.isManuallyFulfilled()) {
+      fulfillments.push('manual');
     }
-    fulfillments.push(fulfillment);
     return fulfillments;
   }
 
