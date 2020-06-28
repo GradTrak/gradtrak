@@ -7,7 +7,6 @@ import { Requirement } from './requirement.model';
 import { CourseRequirement } from './requirements/course-requirement.model';
 import { MutexConstraint } from './constraints/mutex-constraint.model';
 import { MultiRequirement } from './requirements/multi-requirement.model';
-import { MutexRequirement } from './requirements/mutex-requirement.model';
 import { PolyRequirement } from './requirements/poly-requirement.model';
 import { TagRequirement } from './requirements/tag-requirement.model';
 import { UnitRequirement } from './requirements/unit-requirement.model';
@@ -106,14 +105,6 @@ export class RequirementCategory {
             // Do nothing
             break;
         }
-        break;
-      }
-
-      case 'mutex': {
-        requirement.requirements = requirement.requirements.map((childReqProto: RequirementPrototype) =>
-          RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
-        );
-        requirement = new MutexRequirement(requirement);
         break;
       }
 

@@ -1302,22 +1302,25 @@
             ]
           },
           {
-            "id": "electives",
+            "id": "mcb_cdb_elective_a_1",
+            "type": "tag",
+            "name": "CDB Elective A",
+            "tagId": "mcb_cdb_elective_a"
+          },
+          {
+            "id": "mcb_cdb_elective_a_2",
+            "type": "tag",
+            "name": "CDB Elective A",
+            "tagId": "mcb_cdb_elective_a"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "CDB Electives",
-            "requirements": [
-              {
-                "id": "mcb_cdb_elective_a_1",
-                "type": "tag",
-                "name": "CDB Elective A",
-                "tagId": "mcb_cdb_elective_a"
-              },
-              {
-                "id": "mcb_cdb_elective_a_2",
-                "type": "tag",
-                "name": "CDB Elective A",
-                "tagId": "mcb_cdb_elective_a"
-              }
+            "name": "MCB - CDB - GDB Track Electives Mutex",
+            "mutexReqIds": [
+              "mcb_cdb_elective_a_1",
+              "mcb_cdb_elective_a_2"
             ]
           }
         ]
@@ -1373,22 +1376,25 @@
             ]
           },
           {
-            "id": "electives",
+            "id": "mcb_cdb_elective_b_1",
+            "type": "tag",
+            "name": "CDB Elective B",
+            "tagId": "mcb_cdb_elective_b"
+          },
+          {
+            "id": "mcb_cdb_elective_b_2",
+            "type": "tag",
+            "name": "CDB Elective B",
+            "tagId": "mcb_cdb_elective_b"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "CDB Electives",
-            "requirements": [
-              {
-                "id": "mcb_cdb_elective_b_1",
-                "type": "tag",
-                "name": "CDB Elective B",
-                "tagId": "mcb_cdb_elective_b"
-              },
-              {
-                "id": "mcb_cdb_elective_b_2",
-                "type": "tag",
-                "name": "CDB Elective B",
-                "tagId": "mcb_cdb_elective_b"
-              }
+            "name": "MCB - CDB - MBP Track Electives Mutex",
+            "mutexReqIds": [
+              "mcb_cdb_elective_b_1",
+              "mcb_cdb_elective_b_2"
             ]
           }
         ]
@@ -1429,37 +1435,40 @@
             "courseId": "mcellbi140l"
           },
           {
-            "id": "electives",
-            "type": "mutex",
-            "name": "GGD Electives",
+            "id": "elective_1",
+            "type": "poly",
+            "name": "GGD Elective A or B",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
-                "id": "elective_1",
-                "type": "poly",
-                "name": "GGD Elective A or B",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "mcb_ggd_elective_a_1",
-                    "type": "tag",
-                    "name": "GGD Elective A",
-                    "tagId": "mcb_ggd_elective_a"
-                  },
-                  {
-                    "id": "mcb_ggd_elective_b_1",
-                    "type": "tag",
-                    "name": "GGD Elective B",
-                    "tagId": "mcb_ggd_elective_b"
-                  }
-                ]
+                "id": "mcb_ggd_elective_a_1",
+                "type": "tag",
+                "name": "GGD Elective A",
+                "tagId": "mcb_ggd_elective_a"
               },
               {
-                "id": "mcb_ggd_elective_b_2",
+                "id": "mcb_ggd_elective_b_1",
                 "type": "tag",
                 "name": "GGD Elective B",
                 "tagId": "mcb_ggd_elective_b"
               }
+            ]
+          },
+          {
+            "id": "mcb_ggd_elective_b_2",
+            "type": "tag",
+            "name": "GGD Elective B",
+            "tagId": "mcb_ggd_elective_b"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "MCB - GGD - GGD Track Electives Mutex",
+            "mutexReqIds": [
+              "elective_1",
+              "mcb_ggd_elective_b_2"
             ]
           }
         ]
@@ -1515,37 +1524,40 @@
             "courseId": "mcellbi140l"
           },
           {
-            "id": "electives",
-            "type": "mutex",
-            "name": "GGD Electives",
+            "id": "elective_1",
+            "type": "poly",
+            "name": "GGD Elective A or B",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
-                "id": "elective_1",
-                "type": "poly",
-                "name": "GGD Elective A or B",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "mcb_ggd_elective_a_1",
-                    "type": "tag",
-                    "name": "GGD Elective A",
-                    "tagId": "mcb_ggd_elective_a"
-                  },
-                  {
-                    "id": "mcb_ggd_elective_b_1",
-                    "type": "tag",
-                    "name": "GGD Elective B",
-                    "tagId": "mcb_ggd_elective_b"
-                  }
-                ]
+                "id": "mcb_ggd_elective_a_1",
+                "type": "tag",
+                "name": "GGD Elective A",
+                "tagId": "mcb_ggd_elective_a"
               },
               {
-                "id": "mcb_ggd_elective_b_2",
+                "id": "mcb_ggd_elective_b_1",
                 "type": "tag",
                 "name": "GGD Elective B",
                 "tagId": "mcb_ggd_elective_b"
               }
+            ]
+          },
+          {
+            "id": "mcb_ggd_elective_b_2",
+            "type": "tag",
+            "name": "GGD Elective B",
+            "tagId": "mcb_ggd_elective_b"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "MCB - GGD - DevGen Track Electives Mutex",
+            "mutexReqIds": [
+              "elective_1",
+              "mcb_ggd_elective_b_2"
             ]
           }
         ]

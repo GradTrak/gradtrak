@@ -32,21 +32,6 @@
   </div>
 </ng-template>
 
-<ng-template #mutexReq>
-  Distinctly fulfill
-  <ng-container *ngIf="getMutex().getFulfillment(courses, manuallyFulfilled) as fulfillments">
-    <app-requirement
-      *ngFor="let childReq of getMutex().requirements; index as i"
-      [requirement]="childReq"
-      [courses]="[]"
-      [override]="getMutexFulfillment(fulfillments[i])"
-      [manuallyFulfilled]="manuallyFulfilled"
-      (onManualFulfill)="manuallyFulfill($event)"
-      (onManualUnfulfill)="manuallyUnfulfill($event)"
-    ></app-requirement>
-  </ng-container>
-</ng-template>
-
 <div
   class="requirement"
   [ngClass]="getFulfillment()"

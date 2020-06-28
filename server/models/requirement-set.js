@@ -29,7 +29,7 @@ const requirementSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      enum: ['course', 'multi', 'mutex', 'poly', 'tag', 'unit'],
+      enum: ['course', 'multi', 'poly', 'tag', 'unit'],
       required: true,
     },
     courseId: {
