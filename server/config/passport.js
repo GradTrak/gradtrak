@@ -32,8 +32,9 @@ const localStrategy = new Strategy(async (username, inputPassword, done) => {
 
 const googleStrategy = new GoogleStrategy(
   {
-    clientID: '193968115710-tbotc192sopukgp3b13741d1puvlarsk.apps.googleusercontent.com',
-    clientSecret: 'l4DbnSBR-YVKXfKCKJXuvOi3',
+    clientID:
+      process.env.GOOGLE_OAUTH2_CLIENT_ID || '193968115710-tbotc192sopukgp3b13741d1puvlarsk.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_OAUTH2_CLIENT_SECRET || 'l4DbnSBR-YVKXfKCKJXuvOi3',
     callbackURL: 'http://localhost:4200/login/google/callback',
   },
   async (accessToken, refreshToken, profile, done) => {
