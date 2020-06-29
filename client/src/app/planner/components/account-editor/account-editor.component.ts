@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthType } from '../../models/state.model';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class AccountEditorComponent implements OnInit {
   isLoading: boolean;
   isSubmitting: boolean;
   changesMade: boolean;
-  email: string;
+  user: {
+    username: string,
+      auth: AuthType,
+  };
   isChangingPassword: boolean;
   newPassword: string;
   currentPassword: string;
@@ -24,7 +28,7 @@ export class AccountEditorComponent implements OnInit {
     this.isLoading = true;
     this.isSubmitting = false;
     this.changesMade = false;
-    this.email = null;
+    this.user = null;
     this.isChangingPassword = false;
     this.newPassword = '';
     this.currentPassword = '';
@@ -34,7 +38,7 @@ export class AccountEditorComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getState().subscribe((state) => {
       this.isLoading = false;
-      this.email = state.username;
+      this.user = state.user;
     });
   }
 
