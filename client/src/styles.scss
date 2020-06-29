@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 @import '~material-design-icons/iconfont/material-icons.css';
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
 }
 
 a {
@@ -23,6 +24,7 @@ a:hover {
 .gt-button {
   background-color: unset;
   border: none;
+  font-weight: lighter;
 }
 
 .gt-button-primary {
