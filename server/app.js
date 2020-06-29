@@ -11,8 +11,6 @@ const db = require('./config/db');
 const { deserializeUser, googleStrategy, localStrategy, serializeUser } = require('./config/passport');
 const { api } = require('./routers/api');
 
-const userController = require('./controllers/userController');
-
 db.connect();
 
 const app = express();

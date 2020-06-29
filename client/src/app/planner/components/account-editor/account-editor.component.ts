@@ -15,7 +15,7 @@ export class AccountEditorComponent implements OnInit {
   changesMade: boolean;
   user: {
     username: string;
-      auth: AuthType;
+    auth: AuthType;
   };
 
   isChangingPassword: boolean;
