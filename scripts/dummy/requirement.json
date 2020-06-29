@@ -990,6 +990,12 @@
         "name": "Upper Division",
         "requirements": [
           {
+            "id": "eecs_design",
+            "type": "tag",
+            "name": "EECS Design Course",
+            "tagId": "eecs_design"
+          }
+          {
             "id": "upper_div",
             "type": "unit",
             "name": "Upper Division",
