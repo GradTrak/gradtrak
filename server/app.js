@@ -11,6 +11,8 @@ const db = require('./config/db');
 const { deserializeUser, googleStrategy, localStrategy, serializeUser } = require('./config/passport');
 const { api } = require('./routers/api');
 
+const userController = require('./controllers/userController');
+
 db.connect();
 
 const app = express();
@@ -41,6 +43,13 @@ app.get(
   passport.authenticate('google', {
     callback: '/login/google/callback',
     scope: 'openid profile email',
+  }),
+);
+app.get(
+  '/login/google/callback',
+  passport.authenticate('google', {
+    successRedirect: '/',
+    failureRedirect: '/',
   }),
 );
 app.use(express.static(path.join(__dirname, 'dist')));

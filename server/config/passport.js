@@ -18,13 +18,16 @@ async function verifyUser(user, inputPassword) {
 }
 
 const localStrategy = new Strategy(async (username, inputPassword, done) => {
-  const user = await User.findOne({ username });
-
-  if (!(await verifyUser(user, inputPassword))) {
-    done(null, false, { message: 'Incorrect username or password' });
-    return;
+  try {
+    const user = await User.findOne({ username });
+    if (!(await verifyUser(user, inputPassword))) {
+      done(null, false, { message: 'Incorrect username or password' });
+      return;
+    }
+    done(null, user);
+  } catch (err) {
+    done(err);
   }
-  done(null, user);
 });
 
 const googleStrategy = new GoogleStrategy(
@@ -34,8 +37,20 @@ const googleStrategy = new GoogleStrategy(
     callbackURL: 'http://localhost:4200/login/google/callback',
   },
   async (accessToken, refreshToken, profile, done) => {
-    const user = await User.findOrCreate({ googleId: profile.id });
-    done(user);
+    try {
+      let user = await User.findOne({ googleId: profile.id });
+      if (user) {
+        done(null, user);
+      } else {
+        user = await User.create({
+          username: profile.emails[0].value,
+          googleId: profile.id,
+        });
+        done(null, user);
+      }
+    } catch (err) {
+      done(err);
+    }
   },
 );
 
