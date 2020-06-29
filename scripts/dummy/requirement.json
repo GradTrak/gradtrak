@@ -784,30 +784,7 @@
     "type": "major",
     "requirementCategories": [
       {
-        "name": "Math",
-        "requirements": [
-          {
-            "id": "math1a",
-            "type": "course",
-            "name": "MATH 1A",
-            "courseId": "math1a"
-          },
-          {
-            "id": "math1b",
-            "type": "course",
-            "name": "MATH 1B",
-            "courseId": "math1b"
-          },
-          {
-            "id": "compsci70",
-            "type": "course",
-            "name": "COMPSCI 70",
-            "courseId": "compsci70"
-          }
-        ]
-      },
-      {
-        "name": "Lower Division",
+        "name": "Lower Division Prerequisites",
         "requirements": [
           {
             "id": "compsci61a",
@@ -822,16 +799,59 @@
             "courseId": "compsci61b"
           },
           {
+            "id": "compsci70",
+            "type": "course",
+            "name": "COMPSCI 70",
+            "courseId": "compsci70"
+          }
+        ]
+      },
+      {
+        "name": "Math",
+      },
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "id": "math1a",
+            "type": "course",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "id": "math1b",
+            "type": "course",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
             "id": "compsci61c",
             "type": "course",
             "name": "COMPSCI 61C",
             "courseId": "compsci61c"
           },
           {
-            "id": "eecs16a",
-            "type": "course",
-            "name": "EECS 16A",
-            "courseId": "eecs16a"
+            {
+              "id": "eecs16amath54",
+              "type": "multi",
+              "name": "EECS 16A / MATH 54",
+              "numRequired": 1,
+              "hidden": true,
+              "requirements": [
+                {
+                  "id": "eecs16a",
+                  "type": "course",
+                  "name": "EECS 16A",
+                  "courseId": "math54"
+                },
+                {
+                  "id": "math54",
+                  "type": "course",
+                  "name": "MATH 54",
+                  "courseId": "math54"
+                }
+              ]
+            }
           },
           {
             "id": "eecs16b",
