@@ -8,5 +8,6 @@ export class State {
     username: string;
     auth: AuthType;
   };
+
   userData: UserData;
 }

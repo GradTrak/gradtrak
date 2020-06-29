@@ -8,7 +8,7 @@
       </div>
     </ng-container>
     <ng-template #loggedIn>
-      <div class="left">Name: {{ state.username }}</div>
+      <div class="left">Name: {{ state.user.username }}</div>
       <div class="right">
         <button class="gt-button" (click)="openAccountEditor()">Account</button>
         <button class="gt-button" (click)="logout()">Logout</button>

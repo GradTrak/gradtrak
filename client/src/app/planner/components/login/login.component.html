@@ -1,5 +1,19 @@
 <ng-container *ngIf="!registering; else regTemplate">
   <h4 class="header">Login</h4>
+  <hr />
+  <div class="row text-center">
+    <div class="col">
+      <a href="/login/google">
+        <img
+          src="/assets/btn_google_signin_light_normal_web.png"
+          onmousedown="this.setAttribute('src', '/assets/btn_google_signin_light_pressed_web.png')"
+          onmouseup="this.setAttribute('src', '/assets/btn_google_signin_light_normal_web.png')"
+          onmouseout="this.setAttribute('src', '/assets/btn_google_signin_light_normal_web.png')"
+        />
+      </a>
+    </div>
+  </div>
+  <hr class="or" />
   <form class="login" (ngSubmit)="submitLogin()">
     <div class="form-group">
       <label>Email</label>
@@ -29,6 +43,20 @@
 </ng-container>
 <ng-template #regTemplate>
   <h4 class="header">Register</h4>
+  <hr />
+  <div class="row text-center">
+    <div class="col">
+      <a href="/login/google">
+        <img
+          src="/assets/btn_google_signin_light_normal_web.png"
+          onmousedown="this.setAttribute('src', '/assets/btn_google_signin_light_pressed_web.png')"
+          onmouseup="this.setAttribute('src', '/assets/btn_google_signin_light_normal_web.png')"
+          onmouseout="this.setAttribute('src', '/assets/btn_google_signin_light_normal_web.png')"
+        />
+      </a>
+    </div>
+  </div>
+  <hr class="or" />
   <form class="login" (ngSubmit)="submitRegistration()">
     <div class="form-group">
       <label>Email</label>
