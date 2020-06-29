@@ -50,7 +50,7 @@
     "material-design-icons": "^3.0.1",
     "mongoose": "^5.8.7",
     "morgan": "~1.9.1",
-    "nodemailer": "^6.4.8",
+    "nodemailer": "^6.4.10",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "redis": "^3.0.2",
