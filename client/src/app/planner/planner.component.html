@@ -5,8 +5,8 @@
       <div class="left">Guest User</div>
       <div class="right">
         <button class="gt-button" (click)="openLogin()">Login / Register</button>
-        <span> | </span>
-        <div class="material-icons" (click)="openReportForm()">outlined_flag</div>
+        <span> | &nbsp;</span>
+        <i class="material-icons" (click)="openReportForm()">flag</i>
       </div>
     </ng-container>
     <ng-template #loggedIn>
@@ -15,8 +15,8 @@
         <button class="gt-button" (click)="openAccountEditor()">Account</button>
         <span> | </span>
         <button class="gt-button" (click)="logout()">Logout</button>
-        <span> | </span>
-        <div class="material-icons" (click)="openReportForm()">outlined_flag</div>
+        <span> | &nbsp;</span>
+        <i class="material-icons" (click)="openReportForm()">flag</i>
       </div>
     </ng-template>
   </div>
