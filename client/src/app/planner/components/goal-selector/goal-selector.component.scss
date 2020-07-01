@@ -1,4 +1,18 @@
-.material-icons {
+.search {
+  margin-top: 24px;
+}
+
+.line {
+  margin-left: 16px;
+  margin-right: 16px;
+  border-left: solid 1px #e0e0e0;
+}
+
+.goal {
+  color: #283adc;
+}
+
+.remove {
   position: absolute;
   transform: translate(-20px, 2px);
   font-size: 1.25rem;
