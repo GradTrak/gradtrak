@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const csrf = require('csurf');
@@ -34,5 +35,5 @@ app.all('*', (req, res, next) => {
 });
 
 app.use('/api', api);
-app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, 'dist')));
 module.exports = app;

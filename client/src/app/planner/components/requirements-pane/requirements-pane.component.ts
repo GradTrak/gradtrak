@@ -1,19 +1,25 @@
-import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
+import { FulfillmentType } from '../../models/fulfillment-type.model';
+import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { RequirementService } from '../../services/requirement.service';
 import { UserService } from '../../services/user.service';
+
+import { processRequirements } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirements-pane',
   templateUrl: './requirements-pane.component.html',
   styleUrls: ['./requirements-pane.component.scss'],
 })
-export class RequirementsPaneComponent implements OnInit {
+export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly goals: RequirementSet[];
   @Input() readonly courses: Course[];
-  @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
+  @Input() readonly manuallyFulfilled: Map<string, Set<string>>; // Maps from a requirementSet id to a list of requirement ids.
+
+  fulfillmentMap: Map<Requirement, FulfillmentType>;
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
@@ -22,9 +28,15 @@ export class RequirementsPaneComponent implements OnInit {
     private modalService: NgbModal,
     private requirementService: RequirementService,
     private userService: UserService,
-  ) {}
+  ) {
+    this.fulfillmentMap = new Map<Requirement, FulfillmentType>();
+  }
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    this.fulfillmentMap = processRequirements(this.getRequiredSets(), this.courses, this.manuallyFulfilled);
+  }
 
   openSelector(): void {
     this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
@@ -37,8 +49,9 @@ export class RequirementsPaneComponent implements OnInit {
   }
 
   /**
-   * Uses the {@link RequirementsPaneComponent#baseGoals} to return a list of all required requirement sets by
-   * recursively looking up {@link RequirementSet#parent} until it reaches the root.
+   * Uses the {@link RequirementsPaneComponent#baseGoals} to return a list of
+   * all required requirement sets by recursively looking up {@link
+   * RequirementSet#parent} until it reaches the root.
    *
    * @return {RequirementSet[]} An array of all required requirement sets.
    */
