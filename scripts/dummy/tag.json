@@ -33,7 +33,8 @@
   },
   {
     "id": "ls_lang",
-    "name": "Foreign Language"
+    "name": "Foreign Language",
+    "TODO": "this tag"
   },
   {
     "id": "ls_arts",

@@ -24503,6 +24503,9 @@
     "no": "C8",
     "tagIds": [
       "ls_quant"
+    ],
+    "equivIds": [
+      "datac8"
     ]
   },
   {
@@ -27605,7 +27608,11 @@
     "id": "datac100",
     "dept": "DATA",
     "no": "C100",
-    "tagIds": []
+    "tagIds": [
+    ],
+    "equivIds": [
+      "compscic100"
+    ]
   },
   {
     "units": 4,
@@ -65203,7 +65210,11 @@
     "id": "infoc8",
     "dept": "INFO",
     "no": "C8",
-    "tagIds": []
+    "tagIds": [
+    ],
+    "equivIds": [
+      "datac8"
+    ]
   },
   {
     "units": 3,
@@ -125513,6 +125524,9 @@
     "no": "C8",
     "tagIds": [
       "ls_quant"
+    ],
+    "equivIds": [
+      "datac8"
     ]
   },
   {
