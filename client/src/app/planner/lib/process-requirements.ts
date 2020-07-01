@@ -1,3 +1,5 @@
+import memoize from 'memoizee';
+
 import { Course } from '../models/course.model';
 import { FulfillmentType } from '../models/fulfillment-type.model';
 import { Constraint, Requirement } from '../models/requirement.model';
@@ -31,26 +33,25 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
   return mapping;
 }
 
-function reqIsFulfilledWithMapping(
-  req: Requirement,
-  reqToCourseMapping: Map<Requirement, Set<Course> | boolean>,
-): boolean {
-  const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
+const reqIsFulfilledWithMapping = memoize(
+  (req: Requirement, reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => {
+    const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
 
-  if (typeof courses === 'boolean') {
-    return courses;
-  }
+    if (typeof courses === 'boolean') {
+      return courses;
+    }
 
-  if (!(req instanceof MultiRequirement)) {
-    return req.isFulfilledWith(Array.from(courses));
-  }
+    if (!(req instanceof MultiRequirement)) {
+      return req.isFulfilledWith(Array.from(courses));
+    }
 
-  const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) =>
-    reqIsFulfilledWithMapping(childReq, reqToCourseMapping),
-  );
-  const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
-  return numFulfilled >= req.numRequired;
-}
+    const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) =>
+      reqIsFulfilledWithMapping(childReq, reqToCourseMapping),
+    );
+    const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
+    return numFulfilled >= req.numRequired;
+  },
+);
 
 /**
  * Given a list of requirements and courses, recursively finds and returns an
@@ -454,5 +455,8 @@ export function processRequirements(
       deriveFulfillment(setReqs, setMappings, fulfillment);
     }
   });
+
+  reqIsFulfilledWithMapping.clear();
+
   return fulfillment;
 }
