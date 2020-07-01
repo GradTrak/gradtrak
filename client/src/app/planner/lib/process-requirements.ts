@@ -301,7 +301,8 @@ function deriveReqFulfillment(
     return;
   }
   if (req instanceof MultiRequirement) {
-    req.requirements.forEach((childReq: Requirement) => deriveReqFulfillment(childReq, bestMappings, fulfillment));
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    deriveFulfillment(req.requirements, bestMappings, fulfillment);
     const childFulfillments: FulfillmentType[] = req.requirements.map((childReq: Requirement) =>
       fulfillment.get(childReq),
     );
