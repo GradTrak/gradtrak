@@ -76,6 +76,10 @@
     "name": "EECS Upper Division Design Course"
   },
   {
+    "id": "cs_design",
+    "name": "CS Upper Division Design Course"
+  },
+  {
     "id": "linguis_elective",
     "name": "Linguistics Elective"
   },

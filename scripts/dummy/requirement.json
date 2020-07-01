@@ -807,9 +807,6 @@
         ]
       },
       {
-        "name": "Math",
-      },
-      {
         "name": "Lower Division Requirements",
         "requirements": [
           {
@@ -831,27 +828,25 @@
             "courseId": "compsci61c"
           },
           {
-            {
-              "id": "eecs16amath54",
-              "type": "multi",
-              "name": "EECS 16A / MATH 54",
-              "numRequired": 1,
-              "hidden": true,
-              "requirements": [
-                {
-                  "id": "eecs16a",
-                  "type": "course",
-                  "name": "EECS 16A",
-                  "courseId": "math54"
-                },
-                {
-                  "id": "math54",
-                  "type": "course",
-                  "name": "MATH 54",
-                  "courseId": "math54"
-                }
-              ]
-            }
+            "id": "eecs16amath54",
+            "type": "multi",
+            "name": "EECS 16A / MATH 54",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "eecs16a",
+                "type": "course",
+                "name": "EECS 16A",
+                "courseId": "math54"
+              },
+              {
+                "id": "math54",
+                "type": "course",
+                "name": "MATH 54",
+                "courseId": "math54"
+              }
+            ]
           },
           {
             "id": "eecs16b",
@@ -864,6 +859,12 @@
       {
         "name": "Upper Division",
         "requirements": [
+          {
+            "id": "eecs_design",
+            "type": "tag",
+            "name": "EECS Design Course",
+            "tagId": "eecs_design"
+          },
           {
             "id": "upper_div",
             "type": "unit",
@@ -1014,7 +1015,7 @@
             "type": "tag",
             "name": "EECS Design Course",
             "tagId": "eecs_design"
-          }
+          },
           {
             "id": "upper_div",
             "type": "unit",
