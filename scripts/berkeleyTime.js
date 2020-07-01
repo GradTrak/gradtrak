@@ -8,6 +8,8 @@ const LIST_ENDPOINT =
 
 const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog/catalog_json/course_box/?course_id=';
 
+const DUMMY_COURSE_DATA = './dummy/berkeleyTime.json';
+
 const TAG_MAP = new Map([
   ['American Cultures', 'ac'],
   ['American History', 'ah'],
@@ -155,7 +157,7 @@ https.get(LIST_ENDPOINT, { agent: agent }, (res) => {
         }
         return a.dept > b.dept ? 1 : -1;
       });
-      fs.writeFileSync('./berkeleyTime.json', JSON.stringify(courses));
+      fs.writeFileSync(DUMMY_COURSE_DATA, JSON.stringify(courses));
     });
   });
 });
