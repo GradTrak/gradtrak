@@ -38,17 +38,29 @@ const googleStrategy = new GoogleStrategy(
     callbackURL: `${process.env.HOST || 'http://localhost:4200'}/login/google/callback`,
   },
   async (accessToken, refreshToken, profile, done) => {
+    const username = profile.emails[0].value;
+    const googleId = profile.id;
     try {
-      let user = await User.findOne({ googleId: profile.id });
+      let user = await User.findOne({ googleId });
       if (user) {
         done(null, user);
-      } else {
-        user = await User.create({
-          username: profile.emails[0].value,
-          googleId: profile.id,
-        });
-        done(null, user);
+        return;
       }
+
+      user = await User.findOne({ username });
+      if (user) {
+        user.googleId = googleId;
+        user.passwordHash = undefined;
+        await user.save();
+        done(null, user);
+        return;
+      }
+
+      user = await User.create({
+        username,
+        googleId: profile.id,
+      });
+      done(null, user);
     } catch (err) {
       done(err);
     }
