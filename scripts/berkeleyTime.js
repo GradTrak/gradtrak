@@ -92,7 +92,7 @@ async function fetchCourseTags(course) {
     delete course.course_number;
 
     course._id = course.id;
-    course.id = (course.dept + course.no).replace(/[^A-Za-z\d]/, '').toLowerCase();
+    course.id = (course.dept + course.no).replace(/[^A-Za-z\d]/g, '').toLowerCase();
 
     // Convert units to number
     course.units = parseFloat(course.units);
