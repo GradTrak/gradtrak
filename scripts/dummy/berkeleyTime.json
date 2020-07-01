@@ -404,8 +404,8 @@
     "dept": "AFRICAM",
     "no": "4A",
     "tagIds": [
-      "ls_hist",
       "ls_arts",
+      "ls_hist",
       "ls_socio"
     ]
   },
@@ -440,8 +440,8 @@
     "dept": "AFRICAM",
     "no": "5A",
     "tagIds": [
-      "ls_hist",
       "ls_arts",
+      "ls_hist",
       "ls_socio"
     ]
   },
@@ -1333,8 +1333,8 @@
     "dept": "AFRICAM",
     "no": "C133A",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -1788,8 +1788,8 @@
     "dept": "AFRICAM",
     "no": "158A",
     "tagIds": [
-      "ls_arts",
-      "ac"
+      "ac",
+      "ls_arts"
     ]
   },
   {
@@ -2472,8 +2472,8 @@
     "dept": "AMERSTD",
     "no": "101AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -2912,9 +2912,9 @@
     "dept": "AMERSTD",
     "no": "139AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -3828,9 +3828,9 @@
     "dept": "ANTHRO",
     "no": "2AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -3864,8 +3864,8 @@
     "dept": "ANTHRO",
     "no": "3AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -4329,9 +4329,9 @@
     "dept": "ANTHRO",
     "no": "121AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -5351,8 +5351,7 @@
     "id": "anthro169",
     "dept": "ANTHRO",
     "no": "169",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -7386,8 +7385,8 @@
     "dept": "ARCH",
     "no": "110AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -8743,8 +8742,8 @@
     "dept": "ART",
     "no": "23AC",
     "tagIds": [
-      "ls_arts",
-      "ac"
+      "ac",
+      "ls_arts"
     ]
   },
   {
@@ -9565,8 +9564,8 @@
     "dept": "ASAMST",
     "no": "20AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -9705,9 +9704,9 @@
     "dept": "ASAMST",
     "no": "128AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -9870,8 +9869,8 @@
     "dept": "ASAMST",
     "no": "151AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -20308,8 +20307,8 @@
     "dept": "CLASSIC",
     "no": "10A",
     "tagIds": [
-      "ls_hist",
       "ls_arts",
+      "ls_hist",
       "ls_philo"
     ]
   },
@@ -20689,8 +20688,8 @@
     "dept": "CLASSIC",
     "no": "R44",
     "tagIds": [
-      "ls_hist",
       "ls_arts",
+      "ls_hist",
       "ls_socio",
       "rc_a",
       "rc_b"
@@ -22707,9 +22706,9 @@
     "dept": "COLWRIT",
     "no": "25AC",
     "tagIds": [
-      "ls_socio",
       "ac",
-      "cw"
+      "cw",
+      "ls_socio"
     ]
   },
   {
@@ -23654,8 +23653,8 @@
     "dept": "COM LIT",
     "no": "60AC",
     "tagIds": [
-      "ls_arts",
-      "ac"
+      "ac",
+      "ls_arts"
     ]
   },
   {
@@ -27608,8 +27607,7 @@
     "id": "datac100",
     "dept": "DATA",
     "no": "C100",
-    "tagIds": [
-    ],
+    "tagIds": [],
     "equivIds": [
       "compscic100"
     ]
@@ -28877,8 +28875,8 @@
     "dept": "DUTCH",
     "no": "171AC",
     "tagIds": [
-      "ls_hist",
-      "ac"
+      "ac",
+      "ls_hist"
     ]
   },
   {
@@ -31501,8 +31499,8 @@
     "dept": "EDUC",
     "no": "131AC",
     "tagIds": [
-      "ls_philo",
-      "ac"
+      "ac",
+      "ls_philo"
     ]
   },
   {
@@ -31528,8 +31526,8 @@
     "dept": "EDUC",
     "no": "140AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -31557,8 +31555,8 @@
     "dept": "EDUC",
     "no": "W140A",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -31988,8 +31986,8 @@
     "dept": "EDUC",
     "no": "190AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -35404,8 +35402,7 @@
     "id": "eleng115",
     "dept": "EL ENG",
     "no": "115",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -35473,8 +35470,7 @@
     "id": "eleng120l",
     "dept": "EL ENG",
     "no": "120L",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -35892,8 +35888,7 @@
     "id": "eleng146l",
     "dept": "EL ENG",
     "no": "146L",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -39138,8 +39133,8 @@
     "dept": "ENGLISH",
     "no": "31AC",
     "tagIds": [
-      "ls_arts",
-      "ac"
+      "ac",
+      "ls_arts"
     ]
   },
   {
@@ -43550,10 +43545,10 @@
     "dept": "ESPM",
     "no": "50AC",
     "tagIds": [
+      "ac",
       "ls_hist",
       "ls_philo",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -44477,8 +44472,8 @@
     "dept": "ESPM",
     "no": "155AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -44536,9 +44531,9 @@
     "dept": "ESPM",
     "no": "160AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -44601,9 +44596,9 @@
     "dept": "ESPM",
     "no": "163AC",
     "tagIds": [
+      "ac",
       "ls_philo",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -46136,9 +46131,9 @@
     "dept": "ETH STD",
     "no": "10AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -46156,8 +46151,8 @@
     "dept": "ETH STD",
     "no": "11AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -46193,9 +46188,9 @@
     "dept": "ETH STD",
     "no": "21AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -46289,9 +46284,9 @@
     "dept": "ETH STD",
     "no": "C73AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -46780,8 +46775,8 @@
     "dept": "ETH STD",
     "no": "159AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -46799,9 +46794,9 @@
     "dept": "ETH STD",
     "no": "173AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -50999,8 +50994,8 @@
     "dept": "GEOG",
     "no": "50AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -51730,8 +51725,8 @@
     "dept": "GEOG",
     "no": "159AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -53099,8 +53094,8 @@
     "dept": "GERMAN",
     "no": "100",
     "tagIds": [
-      "ls_inter",
-      "ls_arts"
+      "ls_arts",
+      "ls_inter"
     ]
   },
   {
@@ -56153,8 +56148,8 @@
     "dept": "GWS",
     "no": "50AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -59354,10 +59349,10 @@
     "dept": "HISTORY",
     "no": "7A",
     "tagIds": [
-      "ls_hist",
-      "ls_socio",
       "ac",
-      "ah"
+      "ah",
+      "ls_hist",
+      "ls_socio"
     ]
   },
   {
@@ -59691,7 +59686,7 @@
   },
   {
     "units": 4,
-    "title": "THE HISTORY OF NEOLIBERALISM",
+    "title": "The History of Neoliberalism",
     "id": "history39c",
     "dept": "HISTORY",
     "no": "39C",
@@ -60457,7 +60452,7 @@
   },
   {
     "units": 4,
-    "title": "Topics in the History of Southest Asia: Southeast Asia to the 18th Century",
+    "title": "Topics in the History of Southeast Asia: Southeast Asia to the 18th Century",
     "id": "history111a",
     "dept": "HISTORY",
     "no": "111A",
@@ -60465,7 +60460,7 @@
   },
   {
     "units": 4,
-    "title": "Topics in the History of Southest Asia: Modern Southeast Asia",
+    "title": "Topics in the History of Southeast Asia: Modern Southeast Asia",
     "id": "history111b",
     "dept": "HISTORY",
     "no": "111B",
@@ -60473,7 +60468,7 @@
   },
   {
     "units": 4,
-    "title": "Topics in the History of Southest Asia: Political and Cultural History of Vietnam",
+    "title": "Topics in the History of Southeast Asia: Political and Cultural History of Vietnam",
     "id": "history111c",
     "dept": "HISTORY",
     "no": "111C",
@@ -60819,9 +60814,9 @@
     "dept": "HISTORY",
     "no": "122AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -61242,9 +61237,9 @@
     "dept": "HISTORY",
     "no": "136C",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -61280,9 +61275,9 @@
     "dept": "HISTORY",
     "no": "138",
     "tagIds": [
+      "ah",
       "ls_hist",
-      "ls_socio",
-      "ah"
+      "ls_socio"
     ]
   },
   {
@@ -65210,8 +65205,7 @@
     "id": "infoc8",
     "dept": "INFO",
     "no": "C8",
-    "tagIds": [
-    ],
+    "tagIds": [],
     "equivIds": [
       "datac8"
     ]
@@ -66268,9 +66262,9 @@
     "dept": "INTEGBI",
     "no": "35AC",
     "tagIds": [
+      "ac",
       "ls_bio",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -70481,8 +70475,8 @@
     "dept": "JAPAN",
     "no": "7A",
     "tagIds": [
-      "ls_hist",
-      "ls_arts"
+      "ls_arts",
+      "ls_hist"
     ]
   },
   {
@@ -72467,7 +72461,7 @@
   {
     "units": 2,
     "title": "Exploring the Liberal Arts",
-    "id": "l&s1",
+    "id": "ls1",
     "dept": "L & S",
     "no": "1",
     "tagIds": []
@@ -72475,7 +72469,7 @@
   {
     "units": 2,
     "title": "Exploring the Liberal Arts Hybrid Course",
-    "id": "l&s1w",
+    "id": "ls1w",
     "dept": "L & S",
     "no": "1W",
     "tagIds": []
@@ -72483,7 +72477,7 @@
   {
     "units": 2,
     "title": "Exploring the Liberal Arts",
-    "id": "l&sw1",
+    "id": "lsw1",
     "dept": "L & S",
     "no": "W1",
     "tagIds": []
@@ -72491,7 +72485,7 @@
   {
     "units": 2,
     "title": "Introduction to Entrepreneurship",
-    "id": "l&s5",
+    "id": "ls5",
     "dept": "L & S",
     "no": "5",
     "tagIds": []
@@ -72499,7 +72493,7 @@
   {
     "units": 2,
     "title": "Introduction to Entrepreneurship",
-    "id": "l&sc5",
+    "id": "lsc5",
     "dept": "L & S",
     "no": "C5",
     "tagIds": []
@@ -72507,7 +72501,7 @@
   {
     "units": 1,
     "title": "The On the Same Page Course",
-    "id": "l&s10",
+    "id": "ls10",
     "dept": "L & S",
     "no": "10",
     "tagIds": []
@@ -72515,7 +72509,7 @@
   {
     "units": 4,
     "title": "The Age of the Earth",
-    "id": "l&s16",
+    "id": "ls16",
     "dept": "L & S",
     "no": "16",
     "tagIds": []
@@ -72523,7 +72517,7 @@
   {
     "units": 4,
     "title": "Literature and Culture of the Nordic World",
-    "id": "l&s17",
+    "id": "ls17",
     "dept": "L & S",
     "no": "17",
     "tagIds": []
@@ -72531,7 +72525,7 @@
   {
     "units": 3,
     "title": "Genetics and Contemporary Social Issues",
-    "id": "l&s18",
+    "id": "ls18",
     "dept": "L & S",
     "no": "18",
     "tagIds": []
@@ -72539,7 +72533,7 @@
   {
     "units": 3,
     "title": "Drugs and the Brain",
-    "id": "l&s19",
+    "id": "ls19",
     "dept": "L & S",
     "no": "19",
     "tagIds": []
@@ -72547,7 +72541,7 @@
   {
     "units": 0,
     "title": "Arts and Literature",
-    "id": "l&s20",
+    "id": "ls20",
     "dept": "L & S",
     "no": "20",
     "tagIds": []
@@ -72555,7 +72549,7 @@
   {
     "units": 4,
     "title": "Edible Stories: Representing California Food Culture",
-    "id": "l&s20e",
+    "id": "ls20e",
     "dept": "L & S",
     "no": "20E",
     "tagIds": []
@@ -72563,7 +72557,7 @@
   {
     "units": 3,
     "title": "Medieval Memories",
-    "id": "l&s21",
+    "id": "ls21",
     "dept": "L & S",
     "no": "21",
     "tagIds": []
@@ -72571,7 +72565,7 @@
   {
     "units": 4,
     "title": "Sense and Sensibility and Science",
-    "id": "l&s22",
+    "id": "ls22",
     "dept": "L & S",
     "no": "22",
     "tagIds": []
@@ -72579,7 +72573,7 @@
   {
     "units": 4,
     "title": "The Humanities",
-    "id": "l&s23",
+    "id": "ls23",
     "dept": "L & S",
     "no": "23",
     "tagIds": []
@@ -72587,7 +72581,7 @@
   {
     "units": 1,
     "title": "Freshman Seminar",
-    "id": "l&s24",
+    "id": "ls24",
     "dept": "L & S",
     "no": "24",
     "tagIds": []
@@ -72595,7 +72589,7 @@
   {
     "units": 3,
     "title": "Thinking Through Art and Design @Berkeley",
-    "id": "l&s25",
+    "id": "ls25",
     "dept": "L & S",
     "no": "25",
     "tagIds": [
@@ -72605,7 +72599,7 @@
   {
     "units": 3,
     "title": "Renaissance Literature, Philosophy, and Art",
-    "id": "l&s27",
+    "id": "ls27",
     "dept": "L & S",
     "no": "27",
     "tagIds": []
@@ -72613,7 +72607,7 @@
   {
     "units": 3,
     "title": "Drugs and the Brain",
-    "id": "l&sc30t",
+    "id": "lsc30t",
     "dept": "L & S",
     "no": "C30T",
     "tagIds": [
@@ -72623,7 +72617,7 @@
   {
     "units": 4,
     "title": "Americans and the Global Forest",
-    "id": "l&sc30u",
+    "id": "lsc30u",
     "dept": "L & S",
     "no": "C30U",
     "tagIds": []
@@ -72631,7 +72625,7 @@
   {
     "units": 4,
     "title": "Environmental Issues",
-    "id": "l&sc30v",
+    "id": "lsc30v",
     "dept": "L & S",
     "no": "C30V",
     "tagIds": []
@@ -72639,7 +72633,7 @@
   {
     "units": 3,
     "title": "Brain, Mind, and Behavior",
-    "id": "l&sc30w",
+    "id": "lsc30w",
     "dept": "L & S",
     "no": "C30W",
     "tagIds": []
@@ -72647,7 +72641,7 @@
   {
     "units": 3,
     "title": "Big Ideas in Cell Biology",
-    "id": "l&sc30x",
+    "id": "lsc30x",
     "dept": "L & S",
     "no": "C30X",
     "tagIds": []
@@ -72655,7 +72649,7 @@
   {
     "units": 3,
     "title": "Biology for Voters",
-    "id": "l&sc30y",
+    "id": "lsc30y",
     "dept": "L & S",
     "no": "C30Y",
     "tagIds": []
@@ -72663,7 +72657,7 @@
   {
     "units": 0,
     "title": "Historical Studies",
-    "id": "l&s40",
+    "id": "ls40",
     "dept": "L & S",
     "no": "40",
     "tagIds": []
@@ -72671,7 +72665,7 @@
   {
     "units": 4,
     "title": "Historical Studies: California and the World",
-    "id": "l&s40ac",
+    "id": "ls40ac",
     "dept": "L & S",
     "no": "40AC",
     "tagIds": [
@@ -72681,7 +72675,7 @@
   {
     "units": 4,
     "title": "Hollywood: The Place, the Industry, the Fantasy",
-    "id": "l&s40c",
+    "id": "ls40c",
     "dept": "L & S",
     "no": "40C",
     "tagIds": [
@@ -72692,7 +72686,7 @@
   {
     "units": 4,
     "title": "Learning from Disney",
-    "id": "l&s40e",
+    "id": "ls40e",
     "dept": "L & S",
     "no": "40E",
     "tagIds": []
@@ -72700,7 +72694,7 @@
   {
     "units": 4,
     "title": "Introduction to American Studies: Hollywood: the Place, the Industry, the Fantasy",
-    "id": "l&sc40t",
+    "id": "lsc40t",
     "dept": "L & S",
     "no": "C40T",
     "tagIds": []
@@ -72708,7 +72702,7 @@
   {
     "units": 5,
     "title": "Western Civilization",
-    "id": "l&sr44",
+    "id": "lsr44",
     "dept": "L & S",
     "no": "R44",
     "tagIds": []
@@ -72716,7 +72710,7 @@
   {
     "units": 4,
     "title": "Climate Change and the Future of California",
-    "id": "l&sc46",
+    "id": "lsc46",
     "dept": "L & S",
     "no": "C46",
     "tagIds": []
@@ -72724,7 +72718,7 @@
   {
     "units": 1,
     "title": "Mindfulness and Meditation: An Introduction",
-    "id": "l&s54",
+    "id": "ls54",
     "dept": "L & S",
     "no": "54",
     "tagIds": []
@@ -72732,7 +72726,7 @@
   {
     "units": 0,
     "title": "Philosophy and Values",
-    "id": "l&s60",
+    "id": "ls60",
     "dept": "L & S",
     "no": "60",
     "tagIds": []
@@ -72740,7 +72734,7 @@
   {
     "units": 4,
     "title": "What is Beauty?",
-    "id": "l&sc60t",
+    "id": "lsc60t",
     "dept": "L & S",
     "no": "C60T",
     "tagIds": [
@@ -72750,7 +72744,7 @@
   {
     "units": 4,
     "title": "Revolutionary Thinking: Marx, Nietzsche, Freud",
-    "id": "l&sc60u",
+    "id": "lsc60u",
     "dept": "L & S",
     "no": "C60U",
     "tagIds": []
@@ -72758,7 +72752,7 @@
   {
     "units": 0,
     "title": "Physical Science",
-    "id": "l&s70",
+    "id": "ls70",
     "dept": "L & S",
     "no": "70",
     "tagIds": []
@@ -72766,7 +72760,7 @@
   {
     "units": 3,
     "title": "Physics and Music",
-    "id": "l&s70a",
+    "id": "ls70a",
     "dept": "L & S",
     "no": "70A",
     "tagIds": []
@@ -72774,7 +72768,7 @@
   {
     "units": 4,
     "title": "Global Warming",
-    "id": "l&s70b",
+    "id": "ls70b",
     "dept": "L & S",
     "no": "70B",
     "tagIds": []
@@ -72782,7 +72776,7 @@
   {
     "units": 4,
     "title": "Living on the Edge",
-    "id": "l&s70c",
+    "id": "ls70c",
     "dept": "L & S",
     "no": "70C",
     "tagIds": []
@@ -72790,7 +72784,7 @@
   {
     "units": 3,
     "title": "The Planets",
-    "id": "l&sc70t",
+    "id": "lsc70t",
     "dept": "L & S",
     "no": "C70T",
     "tagIds": []
@@ -72798,7 +72792,7 @@
   {
     "units": 4,
     "title": "Introduction to General Astronomy",
-    "id": "l&sc70u",
+    "id": "lsc70u",
     "dept": "L & S",
     "no": "C70U",
     "tagIds": [
@@ -72808,7 +72802,7 @@
   {
     "units": 3,
     "title": "Descriptive Introduction to Physics",
-    "id": "l&sc70v",
+    "id": "lsc70v",
     "dept": "L & S",
     "no": "C70V",
     "tagIds": [
@@ -72818,7 +72812,7 @@
   {
     "units": 3,
     "title": "Physics and Music",
-    "id": "l&sc70w",
+    "id": "lsc70w",
     "dept": "L & S",
     "no": "C70W",
     "tagIds": []
@@ -72826,7 +72820,7 @@
   {
     "units": 4,
     "title": "Big History -- Cosmos, Earth, Life, and Humanity",
-    "id": "l&sc70x",
+    "id": "lsc70x",
     "dept": "L & S",
     "no": "C70X",
     "tagIds": []
@@ -72834,7 +72828,7 @@
   {
     "units": 3,
     "title": "Earthquakes in Your Backyard",
-    "id": "l&sc70y",
+    "id": "lsc70y",
     "dept": "L & S",
     "no": "C70Y",
     "tagIds": [
@@ -72844,7 +72838,7 @@
   {
     "units": 4,
     "title": "Beauty and the Beholder: Approaching Art at the Berkeley Art Museum",
-    "id": "l&s76",
+    "id": "ls76",
     "dept": "L & S",
     "no": "76",
     "tagIds": []
@@ -72852,7 +72846,7 @@
   {
     "units": 4,
     "title": "Beauty and the Beholder: Approaching Art at the Berkeley Art Museum",
-    "id": "l&sc76",
+    "id": "lsc76",
     "dept": "L & S",
     "no": "C76",
     "tagIds": []
@@ -72860,7 +72854,7 @@
   {
     "units": 0,
     "title": "Social and Behavioral Sciences",
-    "id": "l&s80",
+    "id": "ls80",
     "dept": "L & S",
     "no": "80",
     "tagIds": []
@@ -72868,7 +72862,7 @@
   {
     "units": 2,
     "title": "Edible Education: The Rise and Future of the Food Movement",
-    "id": "l&sc101",
+    "id": "lsc101",
     "dept": "L & S",
     "no": "C101",
     "tagIds": []
@@ -72876,7 +72870,7 @@
   {
     "units": 2,
     "title": "Edible Education: Telling Stories About Food and Agriculture",
-    "id": "l&sc103",
+    "id": "lsc103",
     "dept": "L & S",
     "no": "C103",
     "tagIds": []
@@ -72884,7 +72878,7 @@
   {
     "units": 3,
     "title": "Arts Entrepreneurship",
-    "id": "l&s105",
+    "id": "ls105",
     "dept": "L & S",
     "no": "105",
     "tagIds": []
@@ -72892,7 +72886,7 @@
   {
     "units": 1,
     "title": "The World According to Berkeley",
-    "id": "l&s110",
+    "id": "ls110",
     "dept": "L & S",
     "no": "110",
     "tagIds": []
@@ -72900,7 +72894,7 @@
   {
     "units": 4,
     "title": "Turn-of-the-Century Vienna: Eros and Death, Gender and Race",
-    "id": "l&s116",
+    "id": "ls116",
     "dept": "L & S",
     "no": "116",
     "tagIds": []
@@ -72908,7 +72902,7 @@
   {
     "units": 4,
     "title": "Astrobiology: The Scientific Search for Life in the Universe",
-    "id": "l&s117",
+    "id": "ls117",
     "dept": "L & S",
     "no": "117",
     "tagIds": []
@@ -72916,7 +72910,7 @@
   {
     "units": 3,
     "title": "Framing the Arts at Berkeley",
-    "id": "l&s118",
+    "id": "ls118",
     "dept": "L & S",
     "no": "118",
     "tagIds": []
@@ -72924,7 +72918,7 @@
   {
     "units": 3,
     "title": "Californians and Water",
-    "id": "l&s119ac",
+    "id": "ls119ac",
     "dept": "L & S",
     "no": "119AC",
     "tagIds": [
@@ -72934,7 +72928,7 @@
   {
     "units": 1,
     "title": "Californians and Water Field Trip",
-    "id": "l&s119f",
+    "id": "ls119f",
     "dept": "L & S",
     "no": "119F",
     "tagIds": []
@@ -72942,7 +72936,7 @@
   {
     "units": 4,
     "title": "The Poetics of Time and Place",
-    "id": "l&s120",
+    "id": "ls120",
     "dept": "L & S",
     "no": "120",
     "tagIds": []
@@ -72950,7 +72944,7 @@
   {
     "units": 4,
     "title": "The Bible in Western Culture",
-    "id": "l&s120c",
+    "id": "ls120c",
     "dept": "L & S",
     "no": "120C",
     "tagIds": [
@@ -72961,7 +72955,7 @@
   {
     "units": 4,
     "title": "Origins in Science and Religion",
-    "id": "l&s121",
+    "id": "ls121",
     "dept": "L & S",
     "no": "121",
     "tagIds": []
@@ -72969,7 +72963,7 @@
   {
     "units": 4,
     "title": "Time",
-    "id": "l&s122",
+    "id": "ls122",
     "dept": "L & S",
     "no": "122",
     "tagIds": []
@@ -72977,7 +72971,7 @@
   {
     "units": 4,
     "title": "Ancient China and Ancient Greece",
-    "id": "l&s123",
+    "id": "ls123",
     "dept": "L & S",
     "no": "123",
     "tagIds": []
@@ -72985,7 +72979,7 @@
   {
     "units": 3,
     "title": "Consciousness: Buddhist and Neuroscientific Perspectives",
-    "id": "l&s124",
+    "id": "ls124",
     "dept": "L & S",
     "no": "124",
     "tagIds": []
@@ -72993,7 +72987,7 @@
   {
     "units": 4,
     "title": "Time",
-    "id": "l&s125",
+    "id": "ls125",
     "dept": "L & S",
     "no": "125",
     "tagIds": []
@@ -73001,7 +72995,7 @@
   {
     "units": 4,
     "title": "Energy and Civilization",
-    "id": "l&s126",
+    "id": "ls126",
     "dept": "L & S",
     "no": "126",
     "tagIds": [
@@ -73011,7 +73005,7 @@
   {
     "units": 4,
     "title": "Heritage Futures in a Digital Age",
-    "id": "l&s127",
+    "id": "ls127",
     "dept": "L & S",
     "no": "127",
     "tagIds": []
@@ -73019,7 +73013,7 @@
   {
     "units": 4,
     "title": "Crowds and Clouds",
-    "id": "l&s128",
+    "id": "ls128",
     "dept": "L & S",
     "no": "128",
     "tagIds": []
@@ -73027,7 +73021,7 @@
   {
     "units": 4,
     "title": "Art and Activism",
-    "id": "l&sc138",
+    "id": "lsc138",
     "dept": "L & S",
     "no": "C138",
     "tagIds": []
@@ -73035,7 +73029,7 @@
   {
     "units": 0,
     "title": "Historical Studies",
-    "id": "l&s140",
+    "id": "ls140",
     "dept": "L & S",
     "no": "140",
     "tagIds": []
@@ -73043,7 +73037,7 @@
   {
     "units": 4,
     "title": "The Archaeology of Health and Disease",
-    "id": "l&sc140u",
+    "id": "lsc140u",
     "dept": "L & S",
     "no": "C140U",
     "tagIds": []
@@ -73051,7 +73045,7 @@
   {
     "units": 4,
     "title": "The History and Practice of Human Rights",
-    "id": "l&sc140v",
+    "id": "lsc140v",
     "dept": "L & S",
     "no": "C140V",
     "tagIds": [
@@ -73062,7 +73056,7 @@
   {
     "units": 3,
     "title": "The Soviet Experience",
-    "id": "l&s148",
+    "id": "ls148",
     "dept": "L & S",
     "no": "148",
     "tagIds": []
@@ -73070,7 +73064,7 @@
   {
     "units": 0,
     "title": "International Studies",
-    "id": "l&s150",
+    "id": "ls150",
     "dept": "L & S",
     "no": "150",
     "tagIds": []
@@ -73078,7 +73072,7 @@
   {
     "units": 4,
     "title": "Working People in the Global Economy",
-    "id": "l&sc150t",
+    "id": "lsc150t",
     "dept": "L & S",
     "no": "C150T",
     "tagIds": []
@@ -73086,7 +73080,7 @@
   {
     "units": 0,
     "title": "Philosophy and Values",
-    "id": "l&s160",
+    "id": "ls160",
     "dept": "L & S",
     "no": "160",
     "tagIds": []
@@ -73094,7 +73088,7 @@
   {
     "units": 3,
     "title": "Effective Personal Ethics for the Twenty-First Century",
-    "id": "l&s160b",
+    "id": "ls160b",
     "dept": "L & S",
     "no": "160B",
     "tagIds": [
@@ -73104,7 +73098,7 @@
   {
     "units": 4,
     "title": "Philosophy of Mind",
-    "id": "l&sc160t",
+    "id": "lsc160t",
     "dept": "L & S",
     "no": "C160T",
     "tagIds": []
@@ -73112,7 +73106,7 @@
   {
     "units": 3,
     "title": "Human Happiness",
-    "id": "l&sc160v",
+    "id": "lsc160v",
     "dept": "L & S",
     "no": "C160V",
     "tagIds": []
@@ -73120,7 +73114,7 @@
   {
     "units": 4,
     "title": "Crossroads of Earth Resources and Society",
-    "id": "l&s170ac",
+    "id": "ls170ac",
     "dept": "L & S",
     "no": "170AC",
     "tagIds": [
@@ -73130,7 +73124,7 @@
   {
     "units": 0,
     "title": "Social and Behavioral Sciences",
-    "id": "l&s180",
+    "id": "ls180",
     "dept": "L & S",
     "no": "180",
     "tagIds": []
@@ -73138,7 +73132,7 @@
   {
     "units": 4,
     "title": "Archaeology of Sex and Gender",
-    "id": "l&s180ac",
+    "id": "ls180ac",
     "dept": "L & S",
     "no": "180AC",
     "tagIds": [
@@ -73148,7 +73142,7 @@
   {
     "units": 4,
     "title": "Language and Power",
-    "id": "l&s180b",
+    "id": "ls180b",
     "dept": "L & S",
     "no": "180B",
     "tagIds": [
@@ -73158,7 +73152,7 @@
   {
     "units": 4,
     "title": "Language and Power",
-    "id": "l&sc180t",
+    "id": "lsc180t",
     "dept": "L & S",
     "no": "C180T",
     "tagIds": []
@@ -73166,7 +73160,7 @@
   {
     "units": 4,
     "title": "Wealth and Poverty",
-    "id": "l&sc180u",
+    "id": "lsc180u",
     "dept": "L & S",
     "no": "C180U",
     "tagIds": [
@@ -73177,7 +73171,7 @@
   {
     "units": 4,
     "title": "Social Psychology: Self and Society",
-    "id": "l&sc180v",
+    "id": "lsc180v",
     "dept": "L & S",
     "no": "C180V",
     "tagIds": []
@@ -73185,7 +73179,7 @@
   {
     "units": 4,
     "title": "Who Owns the Past? Cultural Heritage in a Digital Age",
-    "id": "l&sc180w",
+    "id": "lsc180w",
     "dept": "L & S",
     "no": "C180W",
     "tagIds": []
@@ -73193,7 +73187,7 @@
   {
     "units": 4,
     "title": "Arts and Cultural Policy",
-    "id": "l&sc180x",
+    "id": "lsc180x",
     "dept": "L & S",
     "no": "C180X",
     "tagIds": []
@@ -73405,8 +73399,8 @@
     "dept": "LATIN",
     "no": "100",
     "tagIds": [
-      "ls_hist",
-      "ls_arts"
+      "ls_arts",
+      "ls_hist"
     ]
   },
   {
@@ -75160,8 +75154,8 @@
     "dept": "LEGALST",
     "no": "162AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -75475,8 +75469,8 @@
     "dept": "LGBT",
     "no": "20AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -76355,7 +76349,7 @@
   },
   {
     "units": 3,
-    "title": "Linguistics Typology",
+    "title": "Linguistics Typology ",
     "id": "linguis122",
     "dept": "LINGUIS",
     "no": "122",
@@ -77394,7 +77388,7 @@
   {
     "units": 4,
     "title": "Introduction to Middle Eastern Studies",
-    "id": "me stu10",
+    "id": "mestu10",
     "dept": "M E STU",
     "no": "10",
     "tagIds": []
@@ -77402,7 +77396,7 @@
   {
     "units": 2,
     "title": "Perspectives on the Middle East",
-    "id": "me stu20",
+    "id": "mestu20",
     "dept": "M E STU",
     "no": "20",
     "tagIds": []
@@ -77410,7 +77404,7 @@
   {
     "units": 1,
     "title": "Freshman Seminar",
-    "id": "me stu24",
+    "id": "mestu24",
     "dept": "M E STU",
     "no": "24",
     "tagIds": []
@@ -77418,7 +77412,7 @@
   {
     "units": 4,
     "title": "Scope and Methods of Research in Middle Eastern Studies",
-    "id": "me stu102",
+    "id": "mestu102",
     "dept": "M E STU",
     "no": "102",
     "tagIds": []
@@ -77426,7 +77420,7 @@
   {
     "units": 3,
     "title": "Model Arab League",
-    "id": "me stu109",
+    "id": "mestu109",
     "dept": "M E STU",
     "no": "109",
     "tagIds": []
@@ -77434,7 +77428,7 @@
   {
     "units": 4,
     "title": "Special Topic Seminars",
-    "id": "me stu111",
+    "id": "mestu111",
     "dept": "M E STU",
     "no": "111",
     "tagIds": []
@@ -77442,7 +77436,7 @@
   {
     "units": 3,
     "title": "Selected Topics--Middle Eastern Studies",
-    "id": "me stu120",
+    "id": "mestu120",
     "dept": "M E STU",
     "no": "120",
     "tagIds": []
@@ -77450,7 +77444,7 @@
   {
     "units": 2,
     "title": "Special Topics",
-    "id": "me stu140",
+    "id": "mestu140",
     "dept": "M E STU",
     "no": "140",
     "tagIds": []
@@ -77458,7 +77452,7 @@
   {
     "units": 4,
     "title": "Advanced Study in the Middle East",
-    "id": "me stu150",
+    "id": "mestu150",
     "dept": "M E STU",
     "no": "150",
     "tagIds": []
@@ -77466,7 +77460,7 @@
   {
     "units": 3,
     "title": "On-Line Research and Digital Production for Middle Eastern Studies",
-    "id": "me stu194",
+    "id": "mestu194",
     "dept": "M E STU",
     "no": "194",
     "tagIds": []
@@ -77474,7 +77468,7 @@
   {
     "units": 4,
     "title": "Honors in Middle Eastern Studies",
-    "id": "me stuh195",
+    "id": "mestuh195",
     "dept": "M E STU",
     "no": "H195",
     "tagIds": []
@@ -77482,7 +77476,7 @@
   {
     "units": 4,
     "title": "Honors in Middle Eastern Studies",
-    "id": "me stuh195a",
+    "id": "mestuh195a",
     "dept": "M E STU",
     "no": "H195A",
     "tagIds": []
@@ -77490,7 +77484,7 @@
   {
     "units": 4,
     "title": "Honors in Middle Eastern Studies",
-    "id": "me stuh195b",
+    "id": "mestuh195b",
     "dept": "M E STU",
     "no": "H195B",
     "tagIds": []
@@ -79184,8 +79178,8 @@
     "dept": "MATH",
     "no": "C103",
     "tagIds": [
-      "ls_socio",
-      "ls_quant"
+      "ls_quant",
+      "ls_socio"
     ]
   },
   {
@@ -88183,9 +88177,9 @@
     "dept": "MUSIC",
     "no": "26AC",
     "tagIds": [
+      "ac",
       "ls_arts",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -88792,8 +88786,8 @@
     "dept": "MUSIC",
     "no": "128",
     "tagIds": [
-      "ls_hist",
-      "ls_arts"
+      "ls_arts",
+      "ls_hist"
     ]
   },
   {
@@ -90968,9 +90962,9 @@
     "dept": "NATAMST",
     "no": "C73AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -91069,8 +91063,8 @@
     "dept": "NATAMST",
     "no": "120AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -91329,9 +91323,9 @@
     "dept": "NATAMST",
     "no": "173AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -104174,8 +104168,8 @@
     "dept": "POL SCI",
     "no": "1",
     "tagIds": [
-      "ls_socio",
-      "ai"
+      "ai",
+      "ls_socio"
     ]
   },
   {
@@ -107255,8 +107249,8 @@
     "dept": "POL SCI",
     "no": "167AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -111228,8 +111222,8 @@
     "dept": "PSYCH",
     "no": "167AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -113046,8 +113040,8 @@
     "dept": "PUB POL",
     "no": "117AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -115345,9 +115339,9 @@
     "dept": "RHETOR",
     "no": "152AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -120477,8 +120471,8 @@
     "dept": "SOC WEL",
     "no": "150AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -121784,8 +121778,8 @@
     "dept": "SOCIOL",
     "no": "3AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -122043,8 +122037,8 @@
     "dept": "SOCIOL",
     "no": "111AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -122408,8 +122402,8 @@
     "dept": "SOCIOL",
     "no": "130AC",
     "tagIds": [
-      "ls_socio",
-      "ac"
+      "ac",
+      "ls_socio"
     ]
   },
   {
@@ -122443,9 +122437,9 @@
     "dept": "SOCIOL",
     "no": "131AC",
     "tagIds": [
+      "ac",
       "ls_hist",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -122555,9 +122549,9 @@
     "dept": "SOCIOL",
     "no": "137AC",
     "tagIds": [
+      "ac",
       "ls_philo",
-      "ls_socio",
-      "ac"
+      "ls_socio"
     ]
   },
   {
@@ -124890,8 +124884,8 @@
     "dept": "SPANISH",
     "no": "135W",
     "tagIds": [
-      "ls_inter",
-      "ls_arts"
+      "ls_arts",
+      "ls_inter"
     ]
   },
   {
@@ -127109,8 +127103,8 @@
     "dept": "THEATER",
     "no": "25AC",
     "tagIds": [
-      "ls_arts",
-      "ac"
+      "ac",
+      "ls_arts"
     ]
   },
   {
