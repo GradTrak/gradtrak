@@ -406,52 +406,10 @@
             "hidden": false,
             "requirements": [
               {
-                "id": "math16ab",
+                "id": "math1a16a",
                 "type": "multi",
-                "name": "Math 16AB",
-                "numRequired": 2,
-                "hidden": false,
-                "requirements": [
-                  {
-                    "id": "math16a",
-                    "type": "course",
-                    "name": "MATH 16a",
-                    "courseId": "math16a"
-                  },
-                  {
-                    "id": "math16b",
-                    "type": "course",
-                    "name": "MATH 16b",
-                    "courseId": "math16b"
-                  }
-                ]
-              },
-              {
-                "id": "math1a16b",
-                "type": "multi",
-                "name": "Math 1A/16B",
-                "numRequired": 2,
-                "hidden": false,
-                "requirements": [
-                  {
-                    "id": "math1a",
-                    "type": "course",
-                    "name": "MATH 1a",
-                    "courseId": "math1a"
-                  },
-                  {
-                    "id": "math16b",
-                    "type": "course",
-                    "name": "MATH 16b",
-                    "courseId": "math16b"
-                  }
-                ]
-              },
-              {
-                "id": "math1ab",
-                "type": "multi",
-                "name": "Math 1AB",
-                "numRequired": 2,
+                "name": "MATH 1A / MATH 16A",
+                "numRequired": 1,
                 "hidden": false,
                 "requirements": [
                   {
@@ -461,10 +419,31 @@
                     "courseId": "math1a"
                   },
                   {
+                    "id": "math16a",
+                    "type": "course",
+                    "name": "MATH 16A",
+                    "courseId": "math16a"
+                  }
+                ]
+              },
+              {
+                "id": "math1b16b",
+                "type": "multi",
+                "name": "MATH 1B / MATH 16B",
+                "numRequired": 1,
+                "hidden": false,
+                "requirements": [
+                  {
                     "id": "math1b",
                     "type": "course",
-                    "name": "MATH 1b",
+                    "name": "MATH 1B",
                     "courseId": "math1b"
+                  },
+                  {
+                    "id": "math16b",
+                    "type": "course",
+                    "name": "MATH 16B",
+                    "courseId": "math16b"
                   }
                 ]
               },
@@ -2510,6 +2489,27 @@
                 "type": "course",
                 "name": "MATH 16A",
                 "courseId": "math16a"
+              }
+            ]
+          },
+          {
+            "id": "math1b16b",
+            "type": "multi",
+            "name": "MATH 1B / MATH 16B",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "math1b",
+                "type": "course",
+                "name": "MATH 1B",
+                "courseId": "math1b"
+              },
+              {
+                "id": "math16b",
+                "type": "course",
+                "name": "MATH 16B",
+                "courseId": "math16b"
               }
             ]
           },
