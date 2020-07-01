@@ -148,5 +148,5 @@ async function fetchCourseTags(course) {
     }
     return a.dept > b.dept ? 1 : -1;
   });
-  fs.writeFileSync(DUMMY_COURSE_DATA, JSON.stringify(validCourses));
+  fs.writeFileSync(DUMMY_COURSE_DATA, JSON.stringify(courses, null, 2) + '\n');
 })();
