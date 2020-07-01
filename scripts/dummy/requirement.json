@@ -2226,11 +2226,11 @@
         "name": "Physics",
         "requirements": [
           {
-            "id": "physics",
-            "type": "multi",
-            "name": "Physics 7A/B",
-            "numRequired": 2,
-            "hidden": false,
+            "id": "physics5a/7a",
+            "type": "poly",
+            "name": "Physics 7A",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
                 "id": "physics7a",
@@ -2239,10 +2239,31 @@
                 "courseId": "physics7a"
               },
               {
+                "id": "physics5a",
+                "type": "course",
+                "name": "PHYSICS 5A",
+                "courseId": "physics5a"
+              }
+            ]
+          },
+          {
+            "id": "physics5b/7b",
+            "type": "poly",
+            "name": "Physics 7B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
                 "id": "physics7b",
                 "type": "course",
                 "name": "PHYSICS 7B",
                 "courseId": "physics7b"
+              },
+              {
+                "id": "physics5b",
+                "type": "course",
+                "name": "PHYSICS 5B",
+                "courseId": "physics5b"
               }
             ]
           }
@@ -2252,83 +2273,74 @@
         "name": "Chemistry",
         "requirements": [
           {
-            "id": "chem",
+            "id": "chem1al4",
             "type": "multi",
-            "name": "Chemistry",
-            "numRequired": 2,
+            "name": "CHEM 1A/L",
+            "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
-                "id": "chem1al4",
+                "id": "chem1a1al",
                 "type": "multi",
-                "name": "CHEM 1A/L",
-                "numRequired": 1,
+                "name": "Chem 1A/L",
+                "numRequired": 2,
                 "hidden": true,
                 "requirements": [
                   {
-                    "id": "chem1a1al",
-                    "type": "multi",
-                    "name": "Chem 1A/L",
-                    "numRequired": 2,
-                    "hidden": true,
-                    "requirements": [
-                      {
-                        "id": "chem1a",
-                        "type": "course",
-                        "name": "CHEM 1A",
-                        "courseId": "chem1a"
-                      },
-                      {
-                        "id": "chem1al",
-                        "type": "course",
-                        "name": "CHEM 1AL",
-                        "courseId": "chem1al"
-                      }
-                    ]
+                    "id": "chem1a",
+                    "type": "course",
+                    "name": "CHEM 1A",
+                    "courseId": "chem1a"
                   },
                   {
-                    "id": "chem4a",
+                    "id": "chem1al",
                     "type": "course",
-                    "name": "CHEM 4A",
-                    "courseId": "chem4a"
+                    "name": "CHEM 1AL",
+                    "courseId": "chem1al"
                   }
                 ]
               },
               {
-                "id": "chem3al12",
+                "id": "chem4a",
+                "type": "course",
+                "name": "CHEM 4A",
+                "courseId": "chem4a"
+              }
+            ]
+          },
+          {
+            "id": "chem3al12",
+            "type": "multi",
+            "name": "CHEM 3A/L",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "chem3a3al",
                 "type": "multi",
-                "name": "CHEM 3A/L",
-                "numRequired": 1,
+                "name": "Chem 3A/L",
+                "numRequired": 2,
                 "hidden": true,
                 "requirements": [
                   {
-                    "id": "chem3a3al",
-                    "type": "multi",
-                    "name": "Chem 3A/L",
-                    "numRequired": 2,
-                    "hidden": true,
-                    "requirements": [
-                      {
-                        "id": "chem3a",
-                        "type": "course",
-                        "name": "CHEM 3A",
-                        "courseId": "chem3a"
-                      },
-                      {
-                        "id": "chem3al",
-                        "type": "course",
-                        "name": "CHEM 3AL",
-                        "courseId": "chem3al"
-                      }
-                    ]
+                    "id": "chem3a",
+                    "type": "course",
+                    "name": "CHEM 3A",
+                    "courseId": "chem3a"
                   },
                   {
-                    "id": "chem12a",
+                    "id": "chem3al",
                     "type": "course",
-                    "name": "CHEM 12A",
-                    "courseId": "chem12a"
+                    "name": "CHEM 3AL",
+                    "courseId": "chem3al"
                   }
                 ]
+              },
+              {
+                "id": "chem12a",
+                "type": "course",
+                "name": "CHEM 12A",
+                "courseId": "chem12a"
               }
             ]
           }
@@ -2388,37 +2400,28 @@
         "name": "Upper Division",
         "requirements": [
           {
-            "id": "upper_div_units",
-            "type": "multi",
-            "name": "Minimum 36 units, including 24 BioE courses",
-            "numRequired": 2,
-            "hidden": false,
-            "requirements": [
-              {
-                "id": "upper_div_units_bioe",
-                "type": "unit",
-                "name": "24 Upper Division Units",
-                "units": 24,
-                "requirement": {
-                  "id": "bioeng_upper_div",
-                  "type": "tag",
-                  "name": "BioE Upper Division Course",
-                  "tagId": "bioeng_upper_div"
-                }
-              },
-              {
-                "id": "upper_div_units_technical",
-                "type": "unit",
-                "name": "12 Technical Topics Units",
-                "units": 36,
-                "requirement": {
-                  "id": "bioeng_technical_topics",
-                  "type": "tag",
-                  "name": "BioE Technical Topic",
-                  "tagId": "bioeng_technical_topics"
-                }
-              }
-            ]
+            "id": "upper_div_units_bioe",
+            "type": "unit",
+            "name": "24 Upper Division Units",
+            "units": 24,
+            "requirement": {
+              "id": "bioeng_upper_div",
+              "type": "tag",
+              "name": "BioE Upper Division Course",
+              "tagId": "bioeng_upper_div"
+            }
+          },
+          {
+            "id": "upper_div_units_technical",
+            "type": "unit",
+            "name": "12 Technical Topics Units",
+            "units": 36,
+            "requirement": {
+              "id": "bioeng_technical_topics",
+              "type": "tag",
+              "name": "BioE Technical Topic",
+              "tagId": "bioeng_technical_topics"
+            }
           },
           {
             "id": "fundamentals",
