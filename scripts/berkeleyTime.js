@@ -28,6 +28,8 @@ const TAG_MAP = new Map([
   ['Social and Behavioral Sciences', 'ls_socio'],
 ]);
 
+const globalTagIds = new Set(TAG_MAP.values());
+
 if (!fs.existsSync('cache')) {
   fs.mkdirSync('cache');
 }
@@ -101,19 +103,40 @@ async function fetchCourseTags(course) {
       courseMap.set(course.id, course);
     }
   });
-  validCourses = Array.from(courseMap.values());
 
-  for (let i = 0; i < validCourses.length; i++) {
-    const course = validCourses[i];
-    const tags = await fetchCourseTags(course);
-    course.tagIds = tags;
-    delete course._id;
-    if (i % 100 === 0) {
-      console.log(`Done: ${i} / ${validCourses.length}`);
-    }
+  let existingCoursesMap;
+  if (fs.existsSync(DUMMY_COURSE_DATA)) {
+    existingCoursesMap = new Map(JSON.parse(fs.readFileSync(DUMMY_COURSE_DATA)).map((course) => [course.id, course]));
+  } else {
+    existingCoursesMap = new Map();
   }
 
-  validCourses.sort((a, b) => {
+  let i = 0;
+  for (let [courseId, course] of courseMap) {
+    course.tagIds = await fetchCourseTags(course);
+    course.tagIds.sort();
+    delete course._id;
+
+    if (existingCoursesMap.has(courseId)) {
+      const existingCourse = existingCoursesMap.get(courseId);
+      existingCoursesMap.set(courseId, {
+        ...existingCourse,
+        ...course,
+        tagIds: [...course.tagIds, ...existingCourse.tagIds.filter((tagId) => !globalTagIds.has(tagId))],
+      });
+    } else {
+      existingCoursesMap.set(courseId, course);
+    }
+
+    if (i % 100 === 0) {
+      console.log(`Done: ${i} / ${courseMap.size}`);
+    }
+    i += 1;
+  }
+
+  let courses = Array.from(existingCoursesMap.values());
+
+  courses.sort((a, b) => {
     if (a.dept === b.dept) {
       const aNo = parseInt(a.no.replace(/[^\d]/g, ''));
       const bNo = parseInt(b.no.replace(/[^\d]/g, ''));
