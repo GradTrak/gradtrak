@@ -1,6 +1,6 @@
 <ng-container *ngIf="!registering; else regTemplate">
   <h4 class="gt-modal-header">Login</h4>
-  <form class="login" (ngSubmit)="submitLogin()">
+  <form (ngSubmit)="submitLogin()">
     <div class="form-group">
       <label>Email</label>
       <input class="form-control" type="text" name="username" [(ngModel)]="username" />
@@ -29,7 +29,7 @@
 </ng-container>
 <ng-template #regTemplate>
   <h4 class="gt-modal-header">Register</h4>
-  <form class="login" (ngSubmit)="submitRegistration()">
+  <form (ngSubmit)="submitRegistration()">
     <div class="form-group">
       <label>Email</label>
       <input class="form-control" type="text" name="username" [(ngModel)]="username" />
