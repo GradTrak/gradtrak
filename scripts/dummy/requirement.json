@@ -410,7 +410,7 @@
                 "type": "multi",
                 "name": "MATH 1A / MATH 16A",
                 "numRequired": 1,
-                "hidden": false,
+                "hidden": true,
                 "requirements": [
                   {
                     "id": "math1a",
@@ -431,7 +431,7 @@
                 "type": "multi",
                 "name": "MATH 1B / MATH 16B",
                 "numRequired": 1,
-                "hidden": false,
+                "hidden": true,
                 "requirements": [
                   {
                     "id": "math1b",
@@ -531,7 +531,7 @@
                     "type": "multi",
                     "name": "STAT/UGBA 88",
                     "numRequired": 1,
-                    "hidden": false,
+                    "hidden": true,
                     "requirements": [
                       {
                         "id": "stat88",

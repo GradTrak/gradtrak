@@ -128478,7 +128478,9 @@
     "id": "ugba100",
     "dept": "UGBA",
     "no": "100",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128486,7 +128488,9 @@
     "id": "ugbac100",
     "dept": "UGBA",
     "no": "C100",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128495,7 +128499,8 @@
     "dept": "UGBA",
     "no": "101A",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -128505,7 +128510,8 @@
     "dept": "UGBA",
     "no": "101B",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -128514,7 +128520,9 @@
     "id": "ugba102a",
     "dept": "UGBA",
     "no": "102A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128522,7 +128530,9 @@
     "id": "ugba102b",
     "dept": "UGBA",
     "no": "102B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128530,7 +128540,9 @@
     "id": "ugbaw102a",
     "dept": "UGBA",
     "no": "W102A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128538,7 +128550,9 @@
     "id": "ugba103",
     "dept": "UGBA",
     "no": "103",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128546,7 +128560,9 @@
     "id": "ugba104",
     "dept": "UGBA",
     "no": "104",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128554,7 +128570,9 @@
     "id": "ugba105",
     "dept": "UGBA",
     "no": "105",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128562,7 +128580,9 @@
     "id": "ugba106",
     "dept": "UGBA",
     "no": "106",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128572,7 +128592,8 @@
     "no": "107",
     "tagIds": [
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -128581,7 +128602,9 @@
     "id": "ugba110",
     "dept": "UGBA",
     "no": "110",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128589,7 +128612,9 @@
     "id": "ugbas110",
     "dept": "UGBA",
     "no": "S110",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128597,7 +128622,9 @@
     "id": "ugba111",
     "dept": "UGBA",
     "no": "111",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128605,7 +128632,9 @@
     "id": "ugbas111",
     "dept": "UGBA",
     "no": "S111",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128613,7 +128642,9 @@
     "id": "ugba112",
     "dept": "UGBA",
     "no": "112",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128621,7 +128652,9 @@
     "id": "ugba113",
     "dept": "UGBA",
     "no": "113",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128629,7 +128662,9 @@
     "id": "ugba114",
     "dept": "UGBA",
     "no": "114",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128637,7 +128672,9 @@
     "id": "ugba115",
     "dept": "UGBA",
     "no": "115",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128647,7 +128684,8 @@
     "no": "118",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -128656,7 +128694,9 @@
     "id": "ugba119",
     "dept": "UGBA",
     "no": "119",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128664,7 +128704,9 @@
     "id": "ugba120",
     "dept": "UGBA",
     "no": "120",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128672,7 +128714,9 @@
     "id": "ugba120a",
     "dept": "UGBA",
     "no": "120A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128680,7 +128724,9 @@
     "id": "ugba120aa",
     "dept": "UGBA",
     "no": "120AA",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128688,7 +128734,9 @@
     "id": "ugba120ab",
     "dept": "UGBA",
     "no": "120AB",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128696,7 +128744,9 @@
     "id": "ugba120b",
     "dept": "UGBA",
     "no": "120B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128704,7 +128754,9 @@
     "id": "ugbas120",
     "dept": "UGBA",
     "no": "S120",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128712,7 +128764,9 @@
     "id": "ugbas120a",
     "dept": "UGBA",
     "no": "S120A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128720,7 +128774,9 @@
     "id": "ugbas120b",
     "dept": "UGBA",
     "no": "S120B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128728,7 +128784,9 @@
     "id": "ugba121",
     "dept": "UGBA",
     "no": "121",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128736,7 +128794,9 @@
     "id": "ugbas121",
     "dept": "UGBA",
     "no": "S121",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128744,7 +128804,9 @@
     "id": "ugba122",
     "dept": "UGBA",
     "no": "122",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128752,7 +128814,9 @@
     "id": "ugba123",
     "dept": "UGBA",
     "no": "123",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128760,7 +128824,9 @@
     "id": "ugba124",
     "dept": "UGBA",
     "no": "124",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128768,7 +128834,9 @@
     "id": "ugba125",
     "dept": "UGBA",
     "no": "125",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128776,7 +128844,9 @@
     "id": "ugbas125",
     "dept": "UGBA",
     "no": "S125",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128784,7 +128854,9 @@
     "id": "ugbaw125",
     "dept": "UGBA",
     "no": "W125",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128792,7 +128864,9 @@
     "id": "ugba126",
     "dept": "UGBA",
     "no": "126",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128800,7 +128874,9 @@
     "id": "ugbas126",
     "dept": "UGBA",
     "no": "S126",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128808,7 +128884,9 @@
     "id": "ugba128",
     "dept": "UGBA",
     "no": "128",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128816,7 +128894,9 @@
     "id": "ugba128a",
     "dept": "UGBA",
     "no": "128A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128824,7 +128904,9 @@
     "id": "ugba128b",
     "dept": "UGBA",
     "no": "128B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128832,7 +128914,9 @@
     "id": "ugbas128",
     "dept": "UGBA",
     "no": "S128",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128840,7 +128924,9 @@
     "id": "ugbas128a",
     "dept": "UGBA",
     "no": "S128A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128848,7 +128934,9 @@
     "id": "ugba129",
     "dept": "UGBA",
     "no": "129",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128856,7 +128944,9 @@
     "id": "ugbas129",
     "dept": "UGBA",
     "no": "S129",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128864,7 +128954,9 @@
     "id": "ugba130",
     "dept": "UGBA",
     "no": "130",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128872,7 +128964,9 @@
     "id": "ugbas130",
     "dept": "UGBA",
     "no": "S130",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128880,7 +128974,9 @@
     "id": "ugba131",
     "dept": "UGBA",
     "no": "131",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128888,7 +128984,9 @@
     "id": "ugba131a",
     "dept": "UGBA",
     "no": "131A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128896,7 +128994,9 @@
     "id": "ugba132",
     "dept": "UGBA",
     "no": "132",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128904,7 +129004,9 @@
     "id": "ugbas132",
     "dept": "UGBA",
     "no": "S132",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128912,7 +129014,9 @@
     "id": "ugba133",
     "dept": "UGBA",
     "no": "133",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128920,7 +129024,9 @@
     "id": "ugbas133",
     "dept": "UGBA",
     "no": "S133",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128928,7 +129034,9 @@
     "id": "ugba134",
     "dept": "UGBA",
     "no": "134",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -128936,7 +129044,9 @@
     "id": "ugba135",
     "dept": "UGBA",
     "no": "135",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128944,7 +129054,9 @@
     "id": "ugba136f",
     "dept": "UGBA",
     "no": "136F",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128952,7 +129064,9 @@
     "id": "ugba139",
     "dept": "UGBA",
     "no": "139",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128960,7 +129074,9 @@
     "id": "ugba140",
     "dept": "UGBA",
     "no": "140",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128968,7 +129084,9 @@
     "id": "ugbas140",
     "dept": "UGBA",
     "no": "S140",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128976,7 +129094,9 @@
     "id": "ugba142",
     "dept": "UGBA",
     "no": "142",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -128984,7 +129104,9 @@
     "id": "ugba143",
     "dept": "UGBA",
     "no": "143",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -128992,7 +129114,9 @@
     "id": "ugba144",
     "dept": "UGBA",
     "no": "144",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -129000,7 +129124,9 @@
     "id": "ugba145",
     "dept": "UGBA",
     "no": "145",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129008,7 +129134,9 @@
     "id": "ugba146",
     "dept": "UGBA",
     "no": "146",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -129016,7 +129144,9 @@
     "id": "ugbas147",
     "dept": "UGBA",
     "no": "S147",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -129024,7 +129154,9 @@
     "id": "ugba148",
     "dept": "UGBA",
     "no": "148",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129032,7 +129164,9 @@
     "id": "ugba149a",
     "dept": "UGBA",
     "no": "149A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129040,7 +129174,9 @@
     "id": "ugba150",
     "dept": "UGBA",
     "no": "150",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129048,7 +129184,9 @@
     "id": "ugbas150",
     "dept": "UGBA",
     "no": "S150",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129056,7 +129194,9 @@
     "id": "ugba151",
     "dept": "UGBA",
     "no": "151",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129065,7 +129205,8 @@
     "dept": "UGBA",
     "no": "152",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -129074,7 +129215,9 @@
     "id": "ugba153",
     "dept": "UGBA",
     "no": "153",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129082,7 +129225,9 @@
     "id": "ugba154",
     "dept": "UGBA",
     "no": "154",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129090,7 +129235,9 @@
     "id": "ugba155",
     "dept": "UGBA",
     "no": "155",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129098,7 +129245,9 @@
     "id": "ugbac155",
     "dept": "UGBA",
     "no": "C155",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129106,7 +129255,9 @@
     "id": "ugbaw155",
     "dept": "UGBA",
     "no": "W155",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129114,7 +129265,9 @@
     "id": "ugba156",
     "dept": "UGBA",
     "no": "156",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129123,7 +129276,8 @@
     "dept": "UGBA",
     "no": "156AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "ugba_upper_div"
     ]
   },
   {
@@ -129133,7 +129287,8 @@
     "dept": "UGBA",
     "no": "160",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -129142,7 +129297,9 @@
     "id": "ugbas160",
     "dept": "UGBA",
     "no": "S160",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129150,7 +129307,9 @@
     "id": "ugba161",
     "dept": "UGBA",
     "no": "161",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129158,7 +129317,9 @@
     "id": "ugba162",
     "dept": "UGBA",
     "no": "162",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129166,7 +129327,9 @@
     "id": "ugba162a",
     "dept": "UGBA",
     "no": "162A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129174,7 +129337,9 @@
     "id": "ugba163",
     "dept": "UGBA",
     "no": "163",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129182,7 +129347,9 @@
     "id": "ugba164",
     "dept": "UGBA",
     "no": "164",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129190,7 +129357,9 @@
     "id": "ugbas164",
     "dept": "UGBA",
     "no": "S164",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129198,7 +129367,9 @@
     "id": "ugba165",
     "dept": "UGBA",
     "no": "165",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129206,7 +129377,9 @@
     "id": "ugbas165",
     "dept": "UGBA",
     "no": "S165",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129214,7 +129387,9 @@
     "id": "ugba166",
     "dept": "UGBA",
     "no": "166",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129222,7 +129397,9 @@
     "id": "ugba168b",
     "dept": "UGBA",
     "no": "168B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129230,7 +129407,9 @@
     "id": "ugba169",
     "dept": "UGBA",
     "no": "169",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129238,7 +129417,9 @@
     "id": "ugbas169",
     "dept": "UGBA",
     "no": "S169",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129246,7 +129427,9 @@
     "id": "ugba170",
     "dept": "UGBA",
     "no": "170",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129254,7 +129437,9 @@
     "id": "ugbas170",
     "dept": "UGBA",
     "no": "S170",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129262,7 +129447,9 @@
     "id": "ugba171",
     "dept": "UGBA",
     "no": "171",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129270,7 +129457,9 @@
     "id": "ugba172",
     "dept": "UGBA",
     "no": "172",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129278,7 +129467,9 @@
     "id": "ugbac172",
     "dept": "UGBA",
     "no": "C172",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129286,7 +129477,9 @@
     "id": "ugba175",
     "dept": "UGBA",
     "no": "175",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129294,7 +129487,9 @@
     "id": "ugbas175",
     "dept": "UGBA",
     "no": "S175",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129302,7 +129497,9 @@
     "id": "ugba176",
     "dept": "UGBA",
     "no": "176",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129312,7 +129509,8 @@
     "no": "178",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -129321,7 +129519,9 @@
     "id": "ugba179",
     "dept": "UGBA",
     "no": "179",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129329,7 +129529,9 @@
     "id": "ugba180",
     "dept": "UGBA",
     "no": "180",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129337,7 +129539,9 @@
     "id": "ugbas180",
     "dept": "UGBA",
     "no": "S180",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129345,7 +129549,9 @@
     "id": "ugba181",
     "dept": "UGBA",
     "no": "181",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129353,7 +129559,9 @@
     "id": "ugba183",
     "dept": "UGBA",
     "no": "183",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129361,7 +129569,9 @@
     "id": "ugba184",
     "dept": "UGBA",
     "no": "184",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129369,7 +129579,9 @@
     "id": "ugba185",
     "dept": "UGBA",
     "no": "185",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129377,7 +129589,9 @@
     "id": "ugba188",
     "dept": "UGBA",
     "no": "188",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129385,7 +129599,9 @@
     "id": "ugba190",
     "dept": "UGBA",
     "no": "190",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -129393,7 +129609,9 @@
     "id": "ugba190c",
     "dept": "UGBA",
     "no": "190C",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129401,7 +129619,9 @@
     "id": "ugba190d",
     "dept": "UGBA",
     "no": "190D",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129409,7 +129629,9 @@
     "id": "ugba190v",
     "dept": "UGBA",
     "no": "190V",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129417,7 +129639,9 @@
     "id": "ugba191a",
     "dept": "UGBA",
     "no": "191A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129425,7 +129649,9 @@
     "id": "ugba191b",
     "dept": "UGBA",
     "no": "191B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129433,7 +129659,9 @@
     "id": "ugba191c",
     "dept": "UGBA",
     "no": "191C",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129441,7 +129669,9 @@
     "id": "ugba191i",
     "dept": "UGBA",
     "no": "191I",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 1,
@@ -129449,7 +129679,9 @@
     "id": "ugba191l",
     "dept": "UGBA",
     "no": "191L",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129457,7 +129689,9 @@
     "id": "ugba191p",
     "dept": "UGBA",
     "no": "191P",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129465,7 +129699,9 @@
     "id": "ugba192a",
     "dept": "UGBA",
     "no": "192A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129474,7 +129710,8 @@
     "dept": "UGBA",
     "no": "192AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "ugba_upper_div"
     ]
   },
   {
@@ -129483,7 +129720,9 @@
     "id": "ugba192b",
     "dept": "UGBA",
     "no": "192B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129491,7 +129730,9 @@
     "id": "ugba192e",
     "dept": "UGBA",
     "no": "192E",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129499,7 +129740,9 @@
     "id": "ugba192g",
     "dept": "UGBA",
     "no": "192G",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129507,7 +129750,9 @@
     "id": "ugba192h",
     "dept": "UGBA",
     "no": "192H",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129515,7 +129760,9 @@
     "id": "ugba192l",
     "dept": "UGBA",
     "no": "192L",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129523,7 +129770,9 @@
     "id": "ugba192p",
     "dept": "UGBA",
     "no": "192P",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129531,7 +129780,9 @@
     "id": "ugba192s",
     "dept": "UGBA",
     "no": "192S",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -129540,7 +129791,8 @@
     "dept": "UGBA",
     "no": "193B",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "ugba_upper_div"
     ]
   },
   {
@@ -129549,7 +129801,9 @@
     "id": "ugba193c",
     "dept": "UGBA",
     "no": "193C",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 1,
@@ -129557,7 +129811,9 @@
     "id": "ugba194",
     "dept": "UGBA",
     "no": "194",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129565,7 +129821,9 @@
     "id": "ugba195",
     "dept": "UGBA",
     "no": "195",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129573,7 +129831,9 @@
     "id": "ugba195a",
     "dept": "UGBA",
     "no": "195A",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 2,
@@ -129581,7 +129841,9 @@
     "id": "ugba195b",
     "dept": "UGBA",
     "no": "195B",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129589,7 +129851,9 @@
     "id": "ugba195p",
     "dept": "UGBA",
     "no": "195P",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129597,7 +129861,9 @@
     "id": "ugba195s",
     "dept": "UGBA",
     "no": "195S",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -129605,7 +129871,9 @@
     "id": "ugba197",
     "dept": "UGBA",
     "no": "197",
-    "tagIds": []
+    "tagIds": [
+      "ugba_upper_div"
+    ]
   },
   {
     "units": 5,
