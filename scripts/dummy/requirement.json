@@ -830,7 +830,7 @@
           {
             "id": "eecs16amath54",
             "type": "multi",
-            "name": "EECS 16A / MATH 54",
+            "name": "EECS 16A",
             "numRequired": 1,
             "hidden": true,
             "requirements": [
