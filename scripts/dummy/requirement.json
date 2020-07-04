@@ -373,25 +373,13 @@
   },
   {
     "id": "haas",
-    "name": "Haas School of Business",
-    "parentId": "ucb",
+    "name": "Business Administraion",
+    "parentId": "ls",
     "type": "major",
     "requirementCategories": [
       {
         "name": "Prerequisites",
         "requirements": [
-          {
-            "id": "rc_a",
-            "type": "tag",
-            "name": "R&C Part A",
-            "tagId": "rc_a"
-          },
-          {
-            "id": "rc_b",
-            "type": "tag",
-            "name": "R&C Part B",
-            "tagId": "rc_b"
-          },
           {
             "id": "ugba10",
             "type": "course",
@@ -494,67 +482,76 @@
         "name": "Calculus",
         "requirements": [
           {
-            "id": "math1a1b",
+            "id": "ugbacalc",
             "type": "multi",
-            "name": "MATH 1A/ 1B Series",
-            "numRequired": 2,
+            "name": "Math",
+            "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
-                "id": "math1a16a",
+                "id": "math1a1b",
                 "type": "multi",
-                "name": "MATH 1A / MATH 16A",
-                "numRequired": 1,
+                "name": "MATH 1A/1B Series",
+                "numRequired": 2,
                 "hidden": false,
                 "requirements": [
                   {
-                    "id": "math1a",
-                    "type": "course",
-                    "name": "MATH 1A",
-                    "courseId": "math1a"
+                    "id": "math1a16a",
+                    "type": "multi",
+                    "name": "MATH 1A / MATH 16A",
+                    "numRequired": 1,
+                    "hidden": false,
+                    "requirements": [
+                      {
+                        "id": "math1a",
+                        "type": "course",
+                        "name": "MATH 1A",
+                        "courseId": "math1a"
+                      },
+                      {
+                        "id": "math16a",
+                        "type": "course",
+                        "name": "MATH 16A",
+                        "courseId": "math16a"
+                      }
+                    ]
                   },
                   {
-                    "id": "math16a",
-                    "type": "course",
-                    "name": "MATH 16A",
-                    "courseId": "math16a"
+                    "id": "math1b16b",
+                    "type": "multi",
+                    "name": "MATH 1B / MATH 16B",
+                    "numRequired": 1,
+                    "hidden": false,
+                    "requirements": [
+                      {
+                        "id": "math1b",
+                        "type": "course",
+                        "name": "MATH 1B",
+                        "courseId": "math1b"
+                      },
+                      {
+                        "id": "math16b",
+                        "type": "course",
+                        "name": "MATH 16B",
+                        "courseId": "math16b"
+                      }
+                    ]
                   }
                 ]
               },
               {
-                "id": "math1b16b",
-                "type": "multi",
-                "name": "MATH 1B / MATH 16B",
-                "numRequired": 1,
-                "hidden": false,
-                "requirements": [
-                  {
-                    "id": "math1b",
-                    "type": "course",
-                    "name": "MATH 1B",
-                    "courseId": "math1b"
-                  },
-                  {
-                    "id": "math16b",
-                    "type": "course",
-                    "name": "MATH 16B",
-                    "courseId": "math16b"
-                  }
-                ]
+                "id": "math53",
+                "type": "course",
+                "name": "MATH 53",
+                "courseId": "math53"
+              },
+              {
+                "id": "math54",
+                "type": "course",
+                "name": "MATH 54",
+                "courseId": "math54"
               }
             ]
-          },
-          {
-            "id": "math53",
-            "type": "course",
-            "name": "MATH 53",
-            "courseId": "math53"
-          },
-          {
-            "id": "math54",
-            "type": "course",
-            "name": "MATH 54",
-            "courseId": "math54"
           }
         ]
       },
