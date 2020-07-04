@@ -424,7 +424,7 @@
             "type": "multi",
             "name": "Statistics",
             "numRequired": 1,
-            "hidden": false,
+            "hidden": true,
             "requirements": [
               {
                 "id": "stat20",
