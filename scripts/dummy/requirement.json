@@ -399,69 +399,6 @@
             "courseId": "ugba10"
           },
           {
-            "id": "ugba_math",
-            "type": "multi",
-            "name": "Calculus",
-            "numRequired": 1,
-            "hidden": false,
-            "requirements": [
-              {
-                "id": "math1a16a",
-                "type": "multi",
-                "name": "MATH 1A / MATH 16A",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "math1a",
-                    "type": "course",
-                    "name": "MATH 1A",
-                    "courseId": "math1a"
-                  },
-                  {
-                    "id": "math16a",
-                    "type": "course",
-                    "name": "MATH 16A",
-                    "courseId": "math16a"
-                  }
-                ]
-              },
-              {
-                "id": "math1b16b",
-                "type": "multi",
-                "name": "MATH 1B / MATH 16B",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "math1b",
-                    "type": "course",
-                    "name": "MATH 1B",
-                    "courseId": "math1b"
-                  },
-                  {
-                    "id": "math16b",
-                    "type": "course",
-                    "name": "MATH 16B",
-                    "courseId": "math16b"
-                  }
-                ]
-              },
-              {
-                "id": "math53",
-                "type": "course",
-                "name": "MATH 53",
-                "courseId": "math53"
-              },
-              {
-                "id": "math54",
-                "type": "course",
-                "name": "MATH 54",
-                "courseId": "math54"
-              }
-            ]
-          },
-          {
             "id": "econ1/2",
             "type": "multi",
             "name": "Econ 1/2",
@@ -487,7 +424,7 @@
             "type": "multi",
             "name": "Statistics",
             "numRequired": 1,
-            "hidden": false,
+            "hidden": true,
             "requirements": [
               {
                 "id": "stat20",
@@ -550,6 +487,74 @@
                 ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Calculus",
+        "requirements": [
+          {
+            "id": "math1a1b",
+            "type": "multi",
+            "name": "MATH 1A/ 1B Series",
+            "numRequired": 2,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "math1a16a",
+                "type": "multi",
+                "name": "MATH 1A / MATH 16A",
+                "numRequired": 1,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "math1a",
+                    "type": "course",
+                    "name": "MATH 1A",
+                    "courseId": "math1a"
+                  },
+                  {
+                    "id": "math16a",
+                    "type": "course",
+                    "name": "MATH 16A",
+                    "courseId": "math16a"
+                  }
+                ]
+              },
+              {
+                "id": "math1b16b",
+                "type": "multi",
+                "name": "MATH 1B / MATH 16B",
+                "numRequired": 1,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "math1b",
+                    "type": "course",
+                    "name": "MATH 1B",
+                    "courseId": "math1b"
+                  },
+                  {
+                    "id": "math16b",
+                    "type": "course",
+                    "name": "MATH 16B",
+                    "courseId": "math16b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "math53",
+            "type": "course",
+            "name": "MATH 53",
+            "courseId": "math53"
+          },
+          {
+            "id": "math54",
+            "type": "course",
+            "name": "MATH 54",
+            "courseId": "math54"
           }
         ]
       },
