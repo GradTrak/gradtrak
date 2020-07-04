@@ -7,7 +7,7 @@ import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { Semester } from '../models/semester.model';
-import { State } from '../models/state.model';
+import { AuthType, State } from '../models/state.model';
 import { UserData } from '../models/user-data.model';
 import { CourseService } from './course.service';
 import { RequirementService } from './requirement.service';
@@ -18,7 +18,10 @@ import { RequirementService } from './requirement.service';
 export class UserService {
   static readonly INITIAL_STATE: State = {
     loggedIn: false,
-    username: null,
+    user: {
+      username: null,
+      auth: null,
+    },
     userData: {
       semesters: new Map<string, Semester[]>(),
       goals: [],
@@ -68,16 +71,19 @@ export class UserService {
       throw new Error('Tried to register when already logged in');
     }
     return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
-      tap((response: { success: boolean; username?: string; error?: string }) => {
+      tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         }
       }),
-      map((response: { success: boolean; username?: string; error?: string }) =>
+      map((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) =>
         response.error ? response.error : null,
       ),
     );
@@ -97,16 +103,19 @@ export class UserService {
     }
 
     return this.http.post(UserService.LOGIN_ENDPOINT, { username, password }).pipe(
-      tap((response: { success: boolean; username?: string; error?: string }) => {
+      tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         }
       }),
-      map((response: { success: boolean; username?: string; error?: string }) =>
+      map((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) =>
         response.error ? response.error : null,
       ),
     );
@@ -124,7 +133,7 @@ export class UserService {
       this.state.next({
         ...this.currentState,
         loggedIn: false,
-        username: null,
+        user: null,
       });
     });
   }
@@ -138,18 +147,21 @@ export class UserService {
    */
   queryWhoami(): Observable<string> {
     return this.http.get(UserService.WHOAMI_ENDPOINT).pipe(
-      tap((response: { loggedIn: boolean; username?: string }) => {
+      tap((response: { loggedIn: boolean; username?: string; auth?: AuthType }) => {
         if (response.loggedIn) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username: response.username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         } else {
           this.state.next({
             ...this.currentState,
             loggedIn: false,
-            username: null,
+            user: null,
           });
         }
       }),

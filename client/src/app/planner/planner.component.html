@@ -5,13 +5,18 @@
       <div class="left">Guest User</div>
       <div class="right">
         <button class="gt-button" (click)="openLogin()">Login / Register</button>
+        <span> | &nbsp;</span>
+        <i class="material-icons" (click)="openReportForm()">flag</i>
       </div>
     </ng-container>
     <ng-template #loggedIn>
-      <div class="left">Name: {{ state.username }}</div>
+      <div class="left">Name: {{ state.user.username }}</div>
       <div class="right">
         <button class="gt-button" (click)="openAccountEditor()">Account</button>
+        <span> | </span>
         <button class="gt-button" (click)="logout()">Logout</button>
+        <span> | &nbsp;</span>
+        <i class="material-icons" (click)="openReportForm()">flag</i>
       </div>
     </ng-template>
   </div>
@@ -27,9 +32,6 @@
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
       ></app-requirements-pane>
     </div>
-    <button class="btn btn-primary btn-sm report-button" (click)="openReportForm()">
-      Feedback
-    </button>
   </ng-container>
 </div>
 
