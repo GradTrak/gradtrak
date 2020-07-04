@@ -46,7 +46,11 @@ const userSchema = new mongoose.Schema(
     },
     passwordHash: {
       type: String,
-      required: true,
+    },
+    googleId: {
+      type: String,
+      id: true,
+      unique: true,
     },
     userdata: {
       type: userDataSchema,

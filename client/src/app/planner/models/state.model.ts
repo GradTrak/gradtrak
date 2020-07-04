@@ -1,7 +1,13 @@
 import { UserData } from './user-data.model';
 
+export type AuthType = 'local' | 'google';
+
 export class State {
   loggedIn: boolean;
-  username: string;
+  user: {
+    username: string;
+    auth: AuthType;
+  };
+
   userData: UserData;
 }

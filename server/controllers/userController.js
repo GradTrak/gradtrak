@@ -110,6 +110,7 @@ exports.whoami = (req, res) => {
     res.json({
       loggedIn: true,
       username: req.user.username,
+      auth: req.user.googleId ? 'google' : 'local',
     });
   } else {
     res.json({
@@ -123,6 +124,13 @@ exports.changePassword = async (req, res) => {
     res.status(401).json({
       success: false,
       error: 'Not logged in',
+    });
+    return;
+  }
+  if (req.user.googleId) {
+    res.status(400).json({
+      success: false,
+      error: 'You are currently authenticated with Google',
     });
     return;
   }

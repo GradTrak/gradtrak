@@ -27,6 +27,16 @@ api.post(
     userController.loginFailure(req, res);
   },
 );
+api.get(
+  '/account/login/google/callback',
+  passport.authenticate('google'),
+  userController.loginSuccess,
+  // eslint-disable-next-line no-unused-vars
+  (err, req, res, next) => {
+    res.status(200);
+    userController.loginFailure(req, res);
+  },
+);
 api.post('/account/logout', userController.logout);
 api.get('/account/whoami', userController.whoami);
 api.post('/account/password', userController.changePassword);
