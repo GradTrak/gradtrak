@@ -374,12 +374,86 @@
   {
     "id": "haas",
     "name": "Business Administration",
-    "parentId": "ls",
+    "parentId": "ucb",
     "type": "major",
     "requirementCategories": [
       {
+        "name": "Breadth Requirements",
+        "requirements": [
+          {
+            "id": "ls_arts",
+            "type": "tag",
+            "name": "Arts and Literature",
+            "tagId": "ls_arts"
+          },
+          {
+            "id": "ls_bio",
+            "type": "tag",
+            "name": "Biological Science",
+            "tagId": "ls_bio"
+          },
+          {
+            "id": "ls_hist",
+            "type": "tag",
+            "name": "Historical Studies",
+            "tagId": "ls_hist"
+          },
+          {
+            "id": "ls_inter",
+            "type": "tag",
+            "name": "International Studies",
+            "tagId": "ls_inter"
+          },
+          {
+            "id": "ls_philo",
+            "type": "tag",
+            "name": "Philosophy and Values",
+            "tagId": "ls_philo"
+          },
+          {
+            "id": "ls_phys",
+            "type": "tag",
+            "name": "Physical Science",
+            "tagId": "ls_phys"
+          },
+          {
+            "id": "ls_socio",
+            "type": "tag",
+            "name": "Social and Behavioral Science",
+            "tagId": "ls_socio"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "L&S Breadth Requirements Mutex",
+            "mutexReqIds": [
+              "ls_bio",
+              "ls_phys",
+              "ls_philo",
+              "ls_socio",
+              "ls_inter",
+              "ls_arts",
+              "ls_hist"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Prerequisites",
         "requirements": [
+          {
+            "id": "rc_a",
+            "type": "tag",
+            "name": "R&C Part A",
+            "tagId": "rc_a"
+          },
+          {
+            "id": "rc_b",
+            "type": "tag",
+            "name": "R&C Part B",
+            "tagId": "rc_b"
+          },
           {
             "id": "ugba10",
             "type": "course",
@@ -443,7 +517,7 @@
                 "type": "multi",
                 "name": "Data 8 and STAT/UGBA 88",
                 "numRequired": 2,
-                "hidden": false,
+                "hidden": true,
                 "requirements": [
                   {
                     "id": "datac8",
@@ -475,12 +549,7 @@
                 ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "name": "Calculus",
-        "requirements": [
+          },
           {
             "id": "ugbacalc",
             "type": "multi",
@@ -498,9 +567,9 @@
                   {
                     "id": "math1a16a",
                     "type": "multi",
-                    "name": "MATH 1A / MATH 16A",
+                    "name": "MATH 16A",
                     "numRequired": 1,
-                    "hidden": false,
+                    "hidden": true,
                     "requirements": [
                       {
                         "id": "math1a",
@@ -519,9 +588,9 @@
                   {
                     "id": "math1b16b",
                     "type": "multi",
-                    "name": "MATH 1B / MATH 16B",
+                    "name": "MATH 16B",
                     "numRequired": 1,
-                    "hidden": false,
+                    "hidden": true,
                     "requirements": [
                       {
                         "id": "math1b",
@@ -551,68 +620,6 @@
                 "name": "MATH 54",
                 "courseId": "math54"
               }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Breadth Requirements",
-        "requirements": [
-          {
-            "id": "ls_arts",
-            "type": "tag",
-            "name": "Arts and Literature",
-            "tagId": "ls_arts"
-          },
-          {
-            "id": "ls_bio",
-            "type": "tag",
-            "name": "Biological Science",
-            "tagId": "ls_bio"
-          },
-          {
-            "id": "ls_hist",
-            "type": "tag",
-            "name": "Historical Studies",
-            "tagId": "ls_hist"
-          },
-          {
-            "id": "ls_inter",
-            "type": "tag",
-            "name": "International Studies",
-            "tagId": "ls_inter"
-          },
-          {
-            "id": "ls_philo",
-            "type": "tag",
-            "name": "Philosophy and Values",
-            "tagId": "ls_philo"
-          },
-          {
-            "id": "ls_phys",
-            "type": "tag",
-            "name": "Physical Science",
-            "tagId": "ls_phys"
-          },
-          {
-            "id": "ls_socio",
-            "type": "tag",
-            "name": "Social and Behavioral Science",
-            "tagId": "ls_socio"
-          }
-        ],
-        "constraints": [
-          {
-            "type": "mutex",
-            "name": "L&S Breadth Requirements Mutex",
-            "mutexReqIds": [
-              "ls_bio",
-              "ls_phys",
-              "ls_philo",
-              "ls_socio",
-              "ls_inter",
-              "ls_arts",
-              "ls_hist"
             ]
           }
         ]
@@ -2634,6 +2641,54 @@
                 "courseId": "econ141"
               }
             ]
+          },
+          {
+            "name": "Economics Electives",
+            "requirements": [
+              {
+                "id": "econ_elective_1",
+                "type": "tag",
+                "name": "Upper Division Economics Elective",
+                "tagId": "econ_upper_div"
+              },
+              {
+                "id": "econ_elective_2",
+                "type": "tag",
+                "name": "Upper Division Economics Elective",
+                "tagId": "econ_upper_div"
+              },
+              {
+                "id": "econ_elective_3",
+                "type": "tag",
+                "name": "Upper Division Economics Elective",
+                "tagId": "econ_upper_div"
+              },
+              {
+                "id": "econ_elective_4",
+                "type": "tag",
+                "name": "Upper Division Economics Elective",
+                "tagId": "econ_upper_div"
+              },
+              {
+                "id": "econ_elective_5",
+                "type": "tag",
+                "name": "Upper Division Economics Elective",
+                "tagId": "econ_upper_div"
+              }
+            ],
+            "constraints": [
+              {
+                "type": "mutex",
+                "name": "Economics Electives",
+                "mutexReqIds": [
+                  "econ_elective_1",
+                  "econ_elective_2",
+                  "econ_elective_3",
+                  "econ_elective_4",
+                  "econ_elective_5"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -2711,6 +2766,9 @@
                 "courseId": "econ141"
               }
             ]
+          },
+          {
+
           }
         ]
       }
