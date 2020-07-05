@@ -825,12 +825,6 @@
             "courseId": "math1b"
           },
           {
-            "id": "compsci61c",
-            "type": "course",
-            "name": "COMPSCI 61C",
-            "courseId": "compsci61c"
-          },
-          {
             "id": "eecs16amath54",
             "type": "multi",
             "name": "EECS 16A",
@@ -856,6 +850,12 @@
             "type": "course",
             "name": "EECS 16B",
             "courseId": "eecs16b"
+          },
+          {
+            "id": "compsci61c",
+            "type": "course",
+            "name": "COMPSCI 61C",
+            "courseId": "compsci61c"
           }
         ]
       },
