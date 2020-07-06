@@ -14219,7 +14219,9 @@
     "id": "chem113",
     "dept": "CHEM",
     "no": "113",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 3,
@@ -14235,7 +14237,9 @@
     "id": "chem115",
     "dept": "CHEM",
     "no": "115",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 3,
@@ -14299,7 +14303,9 @@
     "id": "chem130b",
     "dept": "CHEM",
     "no": "130B",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 2,
@@ -44400,7 +44406,9 @@
     "id": "espmc148",
     "dept": "ESPM",
     "no": "C148",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 4,
@@ -44560,7 +44568,8 @@
     "tagIds": [
       "ls_philo",
       "ls_socio",
-      "bioeng_ethics"
+      "bioeng_ethics",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -67842,7 +67851,9 @@
     "id": "integbi160",
     "dept": "INTEGBI",
     "no": "160",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 4,
@@ -79232,7 +79243,8 @@
     "no": "110",
     "tagIds": [
       "ls_quant",
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82377,7 +82389,8 @@
     "dept": "MCELLBI",
     "no": "100B",
     "tagIds": [
-      "mcb_imm_elective_c"
+      "mcb_imm_elective_c",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82433,7 +82446,8 @@
     "no": "C103",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_imm_elective_a"
+      "mcb_imm_elective_a",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82500,7 +82514,8 @@
     "no": "C112",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_imm_elective_a"
+      "mcb_imm_elective_a",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82537,7 +82552,8 @@
     "no": "C114",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_imm_elective_a"
+      "mcb_imm_elective_a",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82562,7 +82578,9 @@
     "id": "mcellbic116",
     "dept": "MCELLBI",
     "no": "C116",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 4,
@@ -82693,7 +82711,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_imm_elective_c",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82791,7 +82810,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_imm_elective_c",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -82890,7 +82910,8 @@
     "no": "136",
     "tagIds": [
       "mcb_neu_elective",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -83007,7 +83028,8 @@
     "dept": "MCELLBI",
     "no": "150",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -83057,7 +83079,8 @@
     "dept": "MCELLBI",
     "no": "160",
     "tagIds": [
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -83085,7 +83108,8 @@
     "dept": "MCELLBI",
     "no": "161",
     "tagIds": [
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -83129,7 +83153,8 @@
     "dept": "MCELLBI",
     "no": "165",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -83139,7 +83164,8 @@
     "dept": "MCELLBI",
     "no": "166",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -94178,7 +94204,9 @@
     "id": "nusctxc114",
     "dept": "NUSCTX",
     "no": "C114",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 2,
@@ -102508,7 +102536,8 @@
     "dept": "PHYSICS",
     "no": "112",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_a"
     ]
   },
   {
@@ -103823,7 +103852,9 @@
     "id": "plantbi135",
     "dept": "PLANTBI",
     "no": "135",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 1,
@@ -103895,7 +103926,9 @@
     "id": "plantbi150",
     "dept": "PLANTBI",
     "no": "150",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_a"
+    ]
   },
   {
     "units": 1,
