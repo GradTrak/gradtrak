@@ -1,5 +1,22 @@
 const mongoose = require('mongoose');
 
+const constraintSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+    mutexReqIds: {
+      type: [String],
+    },
+  },
+  { strict: 'throw' },
+);
+
 const requirementSchema = new mongoose.Schema(
   {
     id: {
@@ -12,7 +29,7 @@ const requirementSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      enum: ['course', 'multi', 'mutex', 'poly', 'tag', 'unit'],
+      enum: ['course', 'multi', 'poly', 'tag', 'unit'],
       required: true,
     },
     courseId: {
@@ -36,6 +53,9 @@ const requirementSchema = new mongoose.Schema(
     units: {
       type: Number,
     },
+    constraints: {
+      type: [constraintSchema],
+    },
   },
   { strict: 'throw' },
 );
@@ -52,6 +72,9 @@ const requirementCategorySchema = new mongoose.Schema(
       type: [requirementSchema],
       required: true,
       default: [],
+    },
+    constraints: {
+      type: [constraintSchema],
     },
   },
   { strict: 'throw' },
@@ -80,6 +103,12 @@ const requirementSetSchema = new mongoose.Schema(
       type: [requirementCategorySchema],
       required: true,
       default: [],
+    },
+    universalConstraints: {
+      type: [constraintSchema],
+    },
+    selfConstraints: {
+      type: [constraintSchema],
     },
   },
   { strict: 'throw' },

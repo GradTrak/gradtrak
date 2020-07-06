@@ -59,206 +59,213 @@
         "name": "Humanities and Social Sciences",
         "requirements": [
           {
-            "id": "hss",
-            "type": "mutex",
-            "name": "CoE Humanities and Social Sciences",
+            "id": "rc_a",
+            "type": "tag",
+            "name": "R&C Part A",
+            "tagId": "rc_a"
+          },
+          {
+            "id": "rc_b",
+            "type": "tag",
+            "name": "R&C Part B",
+            "tagId": "rc_b"
+          },
+          {
+            "id": "hss_1",
+            "type": "poly",
+            "name": "H/SS",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
-                "id": "rc_a",
+                "id": "hss_1_arts",
                 "type": "tag",
-                "name": "R&C Part A",
-                "tagId": "rc_a"
+                "name": "Arts and Literature",
+                "tagId": "ls_arts"
               },
               {
-                "id": "rc_b",
+                "id": "hss_1_hist",
                 "type": "tag",
-                "name": "R&C Part B",
-                "tagId": "rc_b"
+                "name": "Historical Studies",
+                "tagId": "ls_hist"
               },
               {
-                "id": "hss_1",
-                "type": "poly",
-                "name": "H/SS",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "hss_1_arts",
-                    "type": "tag",
-                    "name": "Arts and Literature",
-                    "tagId": "ls_arts"
-                  },
-                  {
-                    "id": "hss_1_hist",
-                    "type": "tag",
-                    "name": "Historical Studies",
-                    "tagId": "ls_hist"
-                  },
-                  {
-                    "id": "hss_1_inter",
-                    "type": "tag",
-                    "name": "International Studies",
-                    "tagId": "ls_inter"
-                  },
-                  {
-                    "id": "hss_1_philo",
-                    "type": "tag",
-                    "name": "Philosophy and Values",
-                    "tagId": "ls_philo"
-                  },
-                  {
-                    "id": "hss_1_socio",
-                    "type": "tag",
-                    "name": "Social and Behavioral Science",
-                    "tagId": "ls_socio"
-                  }
-                ]
+                "id": "hss_1_inter",
+                "type": "tag",
+                "name": "International Studies",
+                "tagId": "ls_inter"
               },
               {
-                "id": "hss_2",
-                "type": "poly",
-                "name": "H/SS",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "hss_2_arts",
-                    "type": "tag",
-                    "name": "Arts and Literature",
-                    "tagId": "ls_arts"
-                  },
-                  {
-                    "id": "hss_2_hist",
-                    "type": "tag",
-                    "name": "Historical Studies",
-                    "tagId": "ls_hist"
-                  },
-                  {
-                    "id": "hss_2_inter",
-                    "type": "tag",
-                    "name": "International Studies",
-                    "tagId": "ls_inter"
-                  },
-                  {
-                    "id": "hss_2_philo",
-                    "type": "tag",
-                    "name": "Philosophy and Values",
-                    "tagId": "ls_philo"
-                  },
-                  {
-                    "id": "hss_2_socio",
-                    "type": "tag",
-                    "name": "Social and Behavioral Science",
-                    "tagId": "ls_socio"
-                  }
-                ]
+                "id": "hss_1_philo",
+                "type": "tag",
+                "name": "Philosophy and Values",
+                "tagId": "ls_philo"
               },
               {
-                "id": "hssupper_1",
-                "type": "poly",
-                "name": "H/SS Upper Division",
-                "numRequired": 2,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "hssupper_1_poly",
-                    "type": "poly",
-                    "name": "H/SS",
-                    "numRequired": 1,
-                    "requirements": [
-                      {
-                        "id": "hssupper_1_arts",
-                        "type": "tag",
-                        "name": "Arts and Literature",
-                        "tagId": "ls_arts"
-                      },
-                      {
-                        "id": "hssupper_1_hist",
-                        "type": "tag",
-                        "name": "Historical Studies",
-                        "tagId": "ls_hist"
-                      },
-                      {
-                        "id": "hssupper_1_inter",
-                        "type": "tag",
-                        "name": "International Studies",
-                        "tagId": "ls_inter"
-                      },
-                      {
-                        "id": "hssupper_1_philo",
-                        "type": "tag",
-                        "name": "Philosophy and Values",
-                        "tagId": "ls_philo"
-                      },
-                      {
-                        "id": "hssupper_1_socio",
-                        "type": "tag",
-                        "name": "Social and Behavioral Science",
-                        "tagId": "ls_socio"
-                      }
-                    ]
-                  },
-                  {
-                    "id": "hssupper_1_upper",
-                    "type": "tag",
-                    "name": "Upper Division Course",
-                    "tagId": "upper_div"
-                  }
-                ]
-              },
-              {
-                "id": "hssupper_2",
-                "type": "poly",
-                "name": "H/SS Upper Division",
-                "numRequired": 2,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "hssupper_2_poly",
-                    "type": "poly",
-                    "name": "H/SS",
-                    "numRequired": 1,
-                    "requirements": [
-                      {
-                        "id": "hssupper_2_arts",
-                        "type": "tag",
-                        "name": "Arts and Literature",
-                        "tagId": "ls_arts"
-                      },
-                      {
-                        "id": "hssupper_2_hist",
-                        "type": "tag",
-                        "name": "Historical Studies",
-                        "tagId": "ls_hist"
-                      },
-                      {
-                        "id": "hssupper_2_inter",
-                        "type": "tag",
-                        "name": "International Studies",
-                        "tagId": "ls_inter"
-                      },
-                      {
-                        "id": "hssupper_2_philo",
-                        "type": "tag",
-                        "name": "Philosophy and Values",
-                        "tagId": "ls_philo"
-                      },
-                      {
-                        "id": "hssupper_2_socio",
-                        "type": "tag",
-                        "name": "Social and Behavioral Science",
-                        "tagId": "ls_socio"
-                      }
-                    ]
-                  },
-                  {
-                    "id": "hssupper_2_upper",
-                    "type": "tag",
-                    "name": "Upper Division Course",
-                    "tagId": "upper_div"
-                  }
-                ]
+                "id": "hss_1_socio",
+                "type": "tag",
+                "name": "Social and Behavioral Science",
+                "tagId": "ls_socio"
               }
+            ]
+          },
+          {
+            "id": "hss_2",
+            "type": "poly",
+            "name": "H/SS",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "hss_2_arts",
+                "type": "tag",
+                "name": "Arts and Literature",
+                "tagId": "ls_arts"
+              },
+              {
+                "id": "hss_2_hist",
+                "type": "tag",
+                "name": "Historical Studies",
+                "tagId": "ls_hist"
+              },
+              {
+                "id": "hss_2_inter",
+                "type": "tag",
+                "name": "International Studies",
+                "tagId": "ls_inter"
+              },
+              {
+                "id": "hss_2_philo",
+                "type": "tag",
+                "name": "Philosophy and Values",
+                "tagId": "ls_philo"
+              },
+              {
+                "id": "hss_2_socio",
+                "type": "tag",
+                "name": "Social and Behavioral Science",
+                "tagId": "ls_socio"
+              }
+            ]
+          },
+          {
+            "id": "hssupper_1",
+            "type": "poly",
+            "name": "H/SS Upper Division",
+            "numRequired": 2,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "hssupper_1_poly",
+                "type": "poly",
+                "name": "H/SS",
+                "numRequired": 1,
+                "requirements": [
+                  {
+                    "id": "hssupper_1_arts",
+                    "type": "tag",
+                    "name": "Arts and Literature",
+                    "tagId": "ls_arts"
+                  },
+                  {
+                    "id": "hssupper_1_hist",
+                    "type": "tag",
+                    "name": "Historical Studies",
+                    "tagId": "ls_hist"
+                  },
+                  {
+                    "id": "hssupper_1_inter",
+                    "type": "tag",
+                    "name": "International Studies",
+                    "tagId": "ls_inter"
+                  },
+                  {
+                    "id": "hssupper_1_philo",
+                    "type": "tag",
+                    "name": "Philosophy and Values",
+                    "tagId": "ls_philo"
+                  },
+                  {
+                    "id": "hssupper_1_socio",
+                    "type": "tag",
+                    "name": "Social and Behavioral Science",
+                    "tagId": "ls_socio"
+                  }
+                ]
+              },
+              {
+                "id": "hssupper_1_upper",
+                "type": "tag",
+                "name": "Upper Division Course",
+                "tagId": "upper_div"
+              }
+            ]
+          },
+          {
+            "id": "hssupper_2",
+            "type": "poly",
+            "name": "H/SS Upper Division",
+            "numRequired": 2,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "hssupper_2_poly",
+                "type": "poly",
+                "name": "H/SS",
+                "numRequired": 1,
+                "requirements": [
+                  {
+                    "id": "hssupper_2_arts",
+                    "type": "tag",
+                    "name": "Arts and Literature",
+                    "tagId": "ls_arts"
+                  },
+                  {
+                    "id": "hssupper_2_hist",
+                    "type": "tag",
+                    "name": "Historical Studies",
+                    "tagId": "ls_hist"
+                  },
+                  {
+                    "id": "hssupper_2_inter",
+                    "type": "tag",
+                    "name": "International Studies",
+                    "tagId": "ls_inter"
+                  },
+                  {
+                    "id": "hssupper_2_philo",
+                    "type": "tag",
+                    "name": "Philosophy and Values",
+                    "tagId": "ls_philo"
+                  },
+                  {
+                    "id": "hssupper_2_socio",
+                    "type": "tag",
+                    "name": "Social and Behavioral Science",
+                    "tagId": "ls_socio"
+                  }
+                ]
+              },
+              {
+                "id": "hssupper_2_upper",
+                "type": "tag",
+                "name": "Upper Division Course",
+                "tagId": "upper_div"
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "CoE Humanities and Social Sciences Mutex",
+            "mutexReqIds": [
+              "rc_a",
+              "rc_b",
+              "hss_1",
+              "hss_2",
+              "hssupper_1",
+              "hssupper_2"
             ]
           }
         ]
@@ -304,52 +311,60 @@
         "name": "Breadth Requirements",
         "requirements": [
           {
-            "id": "breadth",
+            "id": "ls_arts",
+            "type": "tag",
+            "name": "Arts and Literature",
+            "tagId": "ls_arts"
+          },
+          {
+            "id": "ls_bio",
+            "type": "tag",
+            "name": "Biological Science",
+            "tagId": "ls_bio"
+          },
+          {
+            "id": "ls_hist",
+            "type": "tag",
+            "name": "Historical Studies",
+            "tagId": "ls_hist"
+          },
+          {
+            "id": "ls_inter",
+            "type": "tag",
+            "name": "International Studies",
+            "tagId": "ls_inter"
+          },
+          {
+            "id": "ls_philo",
+            "type": "tag",
+            "name": "Philosophy and Values",
+            "tagId": "ls_philo"
+          },
+          {
+            "id": "ls_phys",
+            "type": "tag",
+            "name": "Physical Science",
+            "tagId": "ls_phys"
+          },
+          {
+            "id": "ls_socio",
+            "type": "tag",
+            "name": "Social and Behavioral Science",
+            "tagId": "ls_socio"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "L&S Breadth Requirements",
-            "requirements": [
-              {
-                "id": "ls_arts",
-                "type": "tag",
-                "name": "Arts and Literature",
-                "tagId": "ls_arts"
-              },
-              {
-                "id": "ls_bio",
-                "type": "tag",
-                "name": "Biological Science",
-                "tagId": "ls_bio"
-              },
-              {
-                "id": "ls_hist",
-                "type": "tag",
-                "name": "Historical Studies",
-                "tagId": "ls_hist"
-              },
-              {
-                "id": "ls_inter",
-                "type": "tag",
-                "name": "International Studies",
-                "tagId": "ls_inter"
-              },
-              {
-                "id": "ls_philo",
-                "type": "tag",
-                "name": "Philosophy and Values",
-                "tagId": "ls_philo"
-              },
-              {
-                "id": "ls_phys",
-                "type": "tag",
-                "name": "Physical Science",
-                "tagId": "ls_phys"
-              },
-              {
-                "id": "ls_socio",
-                "type": "tag",
-                "name": "Social and Behavioral Science",
-                "tagId": "ls_socio"
-              }
+            "name": "L&S Breadth Requirements Mutex",
+            "mutexReqIds": [
+              "ls_bio",
+              "ls_phys",
+              "ls_philo",
+              "ls_socio",
+              "ls_inter",
+              "ls_arts",
+              "ls_hist"
             ]
           }
         ]
@@ -891,28 +906,32 @@
         "name": "Cluster Courses",
         "requirements": [
           {
-            "id": "cluster",
+            "id": "stat_cluster_1",
+            "type": "tag",
+            "name": "Cluster Course",
+            "tagId": "stat_cluster"
+          },
+          {
+            "id": "stat_cluster_2",
+            "type": "tag",
+            "name": "Cluster Course",
+            "tagId": "stat_cluster"
+          },
+          {
+            "id": "stat_cluster_3",
+            "type": "tag",
+            "name": "Cluster Course",
+            "tagId": "stat_cluster"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "Cluster Courses",
-            "requirements": [
-              {
-                "id": "stat_cluster_1",
-                "type": "tag",
-                "name": "Cluster Course",
-                "tagId": "stat_cluster"
-              },
-              {
-                "id": "stat_cluster_2",
-                "type": "tag",
-                "name": "Cluster Course",
-                "tagId": "stat_cluster"
-              },
-              {
-                "id": "stat_cluster_3",
-                "type": "tag",
-                "name": "Cluster Course",
-                "tagId": "stat_cluster"
-              }
+            "name": "Statistics Cluster Courses Mutex",
+            "mutexReqIds": [
+              "stat_cluster_1",
+              "stat_cluster_2",
+              "stat_cluster_3"
             ]
           }
         ]
@@ -1283,22 +1302,25 @@
             ]
           },
           {
-            "id": "electives",
+            "id": "mcb_cdb_elective_a_1",
+            "type": "tag",
+            "name": "CDB Elective A",
+            "tagId": "mcb_cdb_elective_a"
+          },
+          {
+            "id": "mcb_cdb_elective_a_2",
+            "type": "tag",
+            "name": "CDB Elective A",
+            "tagId": "mcb_cdb_elective_a"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "CDB Electives",
-            "requirements": [
-              {
-                "id": "mcb_cdb_elective_a_1",
-                "type": "tag",
-                "name": "CDB Elective A",
-                "tagId": "mcb_cdb_elective_a"
-              },
-              {
-                "id": "mcb_cdb_elective_a_2",
-                "type": "tag",
-                "name": "CDB Elective A",
-                "tagId": "mcb_cdb_elective_a"
-              }
+            "name": "MCB - CDB - GDB Track Electives Mutex",
+            "mutexReqIds": [
+              "mcb_cdb_elective_a_1",
+              "mcb_cdb_elective_a_2"
             ]
           }
         ]
@@ -1354,22 +1376,25 @@
             ]
           },
           {
-            "id": "electives",
+            "id": "mcb_cdb_elective_b_1",
+            "type": "tag",
+            "name": "CDB Elective B",
+            "tagId": "mcb_cdb_elective_b"
+          },
+          {
+            "id": "mcb_cdb_elective_b_2",
+            "type": "tag",
+            "name": "CDB Elective B",
+            "tagId": "mcb_cdb_elective_b"
+          }
+        ],
+        "constraints": [
+          {
             "type": "mutex",
-            "name": "CDB Electives",
-            "requirements": [
-              {
-                "id": "mcb_cdb_elective_b_1",
-                "type": "tag",
-                "name": "CDB Elective B",
-                "tagId": "mcb_cdb_elective_b"
-              },
-              {
-                "id": "mcb_cdb_elective_b_2",
-                "type": "tag",
-                "name": "CDB Elective B",
-                "tagId": "mcb_cdb_elective_b"
-              }
+            "name": "MCB - CDB - MBP Track Electives Mutex",
+            "mutexReqIds": [
+              "mcb_cdb_elective_b_1",
+              "mcb_cdb_elective_b_2"
             ]
           }
         ]
@@ -1410,37 +1435,40 @@
             "courseId": "mcellbi140l"
           },
           {
-            "id": "electives",
-            "type": "mutex",
-            "name": "GGD Electives",
+            "id": "elective_1",
+            "type": "poly",
+            "name": "GGD Elective A or B",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
-                "id": "elective_1",
-                "type": "poly",
-                "name": "GGD Elective A or B",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "mcb_ggd_elective_a_1",
-                    "type": "tag",
-                    "name": "GGD Elective A",
-                    "tagId": "mcb_ggd_elective_a"
-                  },
-                  {
-                    "id": "mcb_ggd_elective_b_1",
-                    "type": "tag",
-                    "name": "GGD Elective B",
-                    "tagId": "mcb_ggd_elective_b"
-                  }
-                ]
+                "id": "mcb_ggd_elective_a_1",
+                "type": "tag",
+                "name": "GGD Elective A",
+                "tagId": "mcb_ggd_elective_a"
               },
               {
-                "id": "mcb_ggd_elective_b_2",
+                "id": "mcb_ggd_elective_b_1",
                 "type": "tag",
                 "name": "GGD Elective B",
                 "tagId": "mcb_ggd_elective_b"
               }
+            ]
+          },
+          {
+            "id": "mcb_ggd_elective_b_2",
+            "type": "tag",
+            "name": "GGD Elective B",
+            "tagId": "mcb_ggd_elective_b"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "MCB - GGD - GGD Track Electives Mutex",
+            "mutexReqIds": [
+              "elective_1",
+              "mcb_ggd_elective_b_2"
             ]
           }
         ]
@@ -1496,37 +1524,40 @@
             "courseId": "mcellbi140l"
           },
           {
-            "id": "electives",
-            "type": "mutex",
-            "name": "GGD Electives",
+            "id": "elective_1",
+            "type": "poly",
+            "name": "GGD Elective A or B",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
-                "id": "elective_1",
-                "type": "poly",
-                "name": "GGD Elective A or B",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "mcb_ggd_elective_a_1",
-                    "type": "tag",
-                    "name": "GGD Elective A",
-                    "tagId": "mcb_ggd_elective_a"
-                  },
-                  {
-                    "id": "mcb_ggd_elective_b_1",
-                    "type": "tag",
-                    "name": "GGD Elective B",
-                    "tagId": "mcb_ggd_elective_b"
-                  }
-                ]
+                "id": "mcb_ggd_elective_a_1",
+                "type": "tag",
+                "name": "GGD Elective A",
+                "tagId": "mcb_ggd_elective_a"
               },
               {
-                "id": "mcb_ggd_elective_b_2",
+                "id": "mcb_ggd_elective_b_1",
                 "type": "tag",
                 "name": "GGD Elective B",
                 "tagId": "mcb_ggd_elective_b"
               }
+            ]
+          },
+          {
+            "id": "mcb_ggd_elective_b_2",
+            "type": "tag",
+            "name": "GGD Elective B",
+            "tagId": "mcb_ggd_elective_b"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "MCB - GGD - DevGen Track Electives Mutex",
+            "mutexReqIds": [
+              "elective_1",
+              "mcb_ggd_elective_b_2"
             ]
           }
         ]
