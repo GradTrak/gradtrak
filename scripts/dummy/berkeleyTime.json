@@ -4293,9 +4293,7 @@
     "id": "anthroc100",
     "dept": "ANTHRO",
     "no": "C100",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -4323,9 +4321,7 @@
     "id": "anthroc103",
     "dept": "ANTHRO",
     "no": "C103",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -4473,7 +4469,6 @@
     "dept": "ANTHRO",
     "no": "115",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -4542,7 +4537,6 @@
     "dept": "ANTHRO",
     "no": "121",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -4758,9 +4752,7 @@
     "id": "anthroc124c",
     "dept": "ANTHRO",
     "no": "C124C",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -4838,9 +4830,7 @@
     "id": "anthro127a",
     "dept": "ANTHRO",
     "no": "127A",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -4848,9 +4838,7 @@
     "id": "anthro127b",
     "dept": "ANTHRO",
     "no": "127B",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 5,
@@ -4934,9 +4922,7 @@
     "id": "anthro129d",
     "dept": "ANTHRO",
     "no": "129D",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -4952,9 +4938,7 @@
     "id": "anthroc129d",
     "dept": "ANTHRO",
     "no": "C129D",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -5008,9 +4992,7 @@
     "id": "anthro132a",
     "dept": "ANTHRO",
     "no": "132A",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -5064,7 +5046,6 @@
     "no": "135",
     "tagIds": [
       "ls_bio",
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -5686,8 +5667,7 @@
     "dept": "ANTHRO",
     "no": "169B",
     "tagIds": [
-      "ls_socio",
-      "stat_cluster"
+      "ls_socio"
     ]
   },
   {
@@ -8047,7 +8027,6 @@
     "dept": "ARCH",
     "no": "140",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -8084,7 +8063,6 @@
     "dept": "ARCH",
     "no": "150",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -8123,7 +8101,6 @@
     "dept": "ARCH",
     "no": "154",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -11297,7 +11274,6 @@
     "dept": "ASTRON",
     "no": "128",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -11336,7 +11312,6 @@
     "dept": "ASTRON",
     "no": "160",
     "tagIds": [
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -11370,9 +11345,7 @@
     "id": "astronc161",
     "dept": "ASTRON",
     "no": "C161",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -11380,9 +11353,7 @@
     "id": "astronc162",
     "dept": "ASTRON",
     "no": "C162",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -11863,7 +11834,6 @@
       "bioeng_upper_div",
       "bioeng_technical_topics",
       "bioeng_fundamentals",
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -11914,7 +11884,6 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -11926,8 +11895,7 @@
     "no": "C112",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
-      "stat_cluster"
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -11987,8 +11955,7 @@
     "no": "C117",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
-      "stat_cluster"
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -12010,8 +11977,7 @@
     "no": "C119",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
-      "stat_cluster"
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -12060,8 +12026,7 @@
     "no": "C125",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
-      "stat_cluster"
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -12072,8 +12037,7 @@
     "no": "C125B",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
-      "stat_cluster"
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -12087,7 +12051,6 @@
       "bioeng_technical_topics",
       "bioeng_fundamentals",
       "bioeng_lab_course",
-      "stat_cluster",
       "upper_div"
     ],
     "equivIds": [
@@ -12164,8 +12127,7 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course",
-      "stat_cluster"
+      "bioeng_lab_course"
     ]
   },
   {
@@ -12215,7 +12177,6 @@
       "bioeng_upper_div",
       "bioeng_technical_topics",
       "bioeng_lab_course",
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -12277,8 +12238,7 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course",
-      "stat_cluster"
+      "bioeng_lab_course"
     ]
   },
   {
@@ -12290,8 +12250,7 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course",
-      "stat_cluster"
+      "bioeng_lab_course"
     ]
   },
   {
@@ -12303,7 +12262,6 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "stat_cluster",
       "upper_div"
     ]
   },
@@ -12423,8 +12381,7 @@
     "no": "C165",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics",
-      "stat_cluster"
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -70920,9 +70877,7 @@
     "id": "integbic155",
     "dept": "INTEGBI",
     "no": "C155",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -71417,9 +71372,7 @@
     "id": "integbic187",
     "dept": "INTEGBI",
     "no": "C187",
-    "tagIds": [
-      "stat_cluster"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -116551,9 +116504,7 @@
     "id": "psych190",
     "dept": "PSYCH",
     "no": "190",
-    "tagIds": [
-      "upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
