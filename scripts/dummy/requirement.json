@@ -302,7 +302,7 @@
           {
             "id": "lang",
             "type": "tag",
-            "name": "Foreign Language",
+            "name": "Foreign Language (Manually Fulfill)",
             "tagId": "ls_lang"
           }
         ]
