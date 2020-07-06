@@ -36732,7 +36732,7 @@
     "id": "eleng16a",
     "dept": "EL ENG",
     "no": "16A",
-    "tagIds": []
+    "tagIds": ["eecs16a"]
   },
   {
     "units": 4,
@@ -36740,7 +36740,7 @@
     "id": "eleng16b",
     "dept": "EL ENG",
     "no": "16B",
-    "tagIds": []
+    "tagIds": ["eecs16b"]
   },
   {
     "units": 4,
