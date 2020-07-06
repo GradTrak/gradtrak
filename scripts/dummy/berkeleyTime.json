@@ -11443,7 +11443,8 @@
       "bioeng_technical_topics",
       "bioeng_fundamentals",
       "bioeng_lab_course",
-      "mcb_imm_elective_c"
+      "mcb_imm_elective_c",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -11548,7 +11549,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -11560,7 +11562,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -21454,7 +21457,9 @@
     "id": "cmpbio156",
     "dept": "CMPBIO",
     "no": "156",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 3,
@@ -43852,7 +43857,8 @@
     "dept": "ESPM",
     "no": "108B",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -67861,7 +67867,9 @@
     "id": "integbi161",
     "dept": "INTEGBI",
     "no": "161",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 4,
@@ -67869,7 +67877,9 @@
     "id": "integbi162",
     "dept": "INTEGBI",
     "no": "162",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 3,
@@ -67877,7 +67887,9 @@
     "id": "integbi163",
     "dept": "INTEGBI",
     "no": "163",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 4,
@@ -79575,7 +79587,8 @@
     "no": "127",
     "tagIds": [
       "ls_quant",
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -82755,7 +82768,8 @@
     "no": "132",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -82790,7 +82804,8 @@
     "no": "C134",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -82939,7 +82954,8 @@
     "dept": "MCELLBI",
     "no": "137L",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -82975,7 +82991,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_imm_elective_c",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -83008,7 +83025,9 @@
     "id": "mcellbic148",
     "dept": "MCELLBI",
     "no": "C148",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 3,
@@ -83018,7 +83037,8 @@
     "no": "149",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_imm_elective_b"
+      "mcb_imm_elective_b",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -96338,7 +96358,8 @@
     "dept": "PB HLTH",
     "no": "141",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -98475,7 +98496,9 @@
     "id": "pbhlth256",
     "dept": "PB HLTH",
     "no": "256",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 4,
@@ -103844,7 +103867,9 @@
     "id": "plantbic134",
     "dept": "PLANTBI",
     "no": "C134",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 3,
@@ -103944,7 +103969,9 @@
     "id": "plantbi160",
     "dept": "PLANTBI",
     "no": "160",
-    "tagIds": []
+    "tagIds": [
+      "mcb_ggd_elective_b"
+    ]
   },
   {
     "units": 1,
@@ -125847,7 +125874,8 @@
     "no": "131A",
     "tagIds": [
       "ls_quant",
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_ggd_elective_b"
     ]
   },
   {
@@ -125907,7 +125935,8 @@
     "dept": "STAT",
     "no": "134",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "mcb_ggd_elective_b"
     ]
   },
   {
