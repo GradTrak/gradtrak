@@ -27681,7 +27681,8 @@
     "dept": "CY PLAN",
     "no": "113A",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "economics_upper_div"
     ]
   },
   {
@@ -27690,7 +27691,9 @@
     "id": "cyplan113b",
     "dept": "CY PLAN",
     "no": "113B",
-    "tagIds": []
+    "tagIds": [
+      "economics_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -39697,7 +39700,8 @@
     "dept": "ENGIN",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44085,7 +44089,8 @@
     "dept": "ENVECON",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44113,7 +44118,8 @@
     "dept": "ENVECON",
     "no": "141",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44133,7 +44139,8 @@
     "dept": "ENVECON",
     "no": "143",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44143,7 +44150,8 @@
     "dept": "ENVECON",
     "no": "145",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44181,7 +44189,8 @@
     "dept": "ENVECON",
     "no": "152",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44221,7 +44230,8 @@
     "dept": "ENVECON",
     "no": "162",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -44240,7 +44250,9 @@
     "id": "enveconc176",
     "dept": "ENVECON",
     "no": "C176",
-    "tagIds": []
+    "tagIds": [
+      "economics_upper_div"
+    ]
   },
   {
     "units": 3,
@@ -63421,7 +63433,9 @@
     "id": "history113a",
     "dept": "HISTORY",
     "no": "113A",
-    "tagIds": []
+    "tagIds": [
+      "economics_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -64710,7 +64724,9 @@
     "id": "history159a",
     "dept": "HISTORY",
     "no": "159A",
-    "tagIds": []
+    "tagIds": [
+      "economics_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -64718,7 +64734,9 @@
     "id": "history159b",
     "dept": "HISTORY",
     "no": "159B",
-    "tagIds": []
+    "tagIds": [
+      "economics_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -64727,7 +64745,8 @@
     "dept": "HISTORY",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -78693,7 +78712,8 @@
     "no": "145",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -78713,7 +78733,8 @@
     "dept": "LEGALST",
     "no": "147",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -105558,7 +105579,8 @@
     "dept": "PHILOS",
     "no": "141",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -134812,7 +134834,8 @@
       "ls_inter",
       "ls_socio",
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -135114,7 +135137,8 @@
     "no": "131",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -135124,7 +135148,8 @@
     "dept": "UGBA",
     "no": "131A",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -135135,7 +135160,8 @@
     "no": "132",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -135198,7 +135224,8 @@
     "dept": "UGBA",
     "no": "136F",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "economics_upper_div"
     ]
   },
   {
@@ -135704,7 +135731,8 @@
     "no": "180",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "economics_upper_div"
     ]
   },
   {
