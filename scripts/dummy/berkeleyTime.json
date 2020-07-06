@@ -30805,7 +30805,8 @@
     "dept": "ECON",
     "no": "100A",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "economics_upper_div"
     ]
   },
   {
@@ -30815,7 +30816,8 @@
     "dept": "ECON",
     "no": "100B",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "economics_upper_div"
     ]
   },
   {
@@ -30841,7 +30843,8 @@
     "dept": "ECON",
     "no": "101A",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "economics_upper_div"
     ]
   },
   {
@@ -30852,6 +30855,7 @@
     "no": "101B",
     "tagIds": [
       "ls_socio",
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -30893,6 +30897,7 @@
     "dept": "ECON",
     "no": "C102",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -30915,6 +30920,7 @@
     "no": "C103",
     "tagIds": [
       "ls_socio",
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -30947,6 +30953,7 @@
     "dept": "ECON",
     "no": "S105",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -30989,6 +30996,7 @@
     "dept": "ECON",
     "no": "C108",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31022,6 +31030,7 @@
     "no": "C110",
     "tagIds": [
       "ls_socio",
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31032,6 +31041,7 @@
     "dept": "ECON",
     "no": "N110",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31053,6 +31063,7 @@
     "dept": "ECON",
     "no": "111A",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31063,6 +31074,7 @@
     "dept": "ECON",
     "no": "111B",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31095,6 +31107,7 @@
     "dept": "ECON",
     "no": "N113",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31105,6 +31118,7 @@
     "dept": "ECON",
     "no": "S113",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31162,6 +31176,7 @@
     "dept": "ECON",
     "no": "S121",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31194,6 +31209,7 @@
     "dept": "ECON",
     "no": "124",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31215,6 +31231,7 @@
     "dept": "ECON",
     "no": "C125",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31304,6 +31321,7 @@
     "dept": "ECON",
     "no": "N136",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31314,6 +31332,7 @@
     "dept": "ECON",
     "no": "S136",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31376,7 +31395,9 @@
     "id": "econs141",
     "dept": "ECON",
     "no": "S141",
-    "tagIds": []
+    "tagIds": [
+      "economics_upper_div"
+    ]
   },
   {
     "units": 4,
@@ -31385,6 +31406,7 @@
     "dept": "ECON",
     "no": "C142",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31395,6 +31417,7 @@
     "dept": "ECON",
     "no": "N142",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31438,6 +31461,7 @@
     "dept": "ECON",
     "no": "N152",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31448,6 +31472,7 @@
     "dept": "ECON",
     "no": "S152",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31491,6 +31516,7 @@
     "dept": "ECON",
     "no": "155A",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31501,6 +31527,7 @@
     "dept": "ECON",
     "no": "S155",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31556,6 +31583,7 @@
     "dept": "ECON",
     "no": "163",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31589,6 +31617,7 @@
     "no": "C171",
     "tagIds": [
       "ls_inter",
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31599,6 +31628,7 @@
     "dept": "ECON",
     "no": "N171",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31609,6 +31639,7 @@
     "dept": "ECON",
     "no": "S171",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31662,6 +31693,7 @@
     "dept": "ECON",
     "no": "C175",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31672,6 +31704,7 @@
     "dept": "ECON",
     "no": "N175",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31695,6 +31728,7 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31705,6 +31739,7 @@
     "dept": "ECON",
     "no": "N181",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31715,6 +31750,7 @@
     "dept": "ECON",
     "no": "S181",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -31738,6 +31774,7 @@
     "dept": "ECON",
     "no": "S182",
     "tagIds": [
+      "economics_upper_div",
       "economics_upper_div"
     ]
   },
@@ -39844,7 +39881,6 @@
     "no": "157AC",
     "tagIds": [
       "ac",
-      "bioeng_ethics",
       "bioeng_ethics"
     ]
   },
