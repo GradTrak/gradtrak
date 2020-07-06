@@ -2641,54 +2641,6 @@
                 "courseId": "econ141"
               }
             ]
-          },
-          {
-            "name": "Economics Electives",
-            "requirements": [
-              {
-                "id": "econ_elective_1",
-                "type": "tag",
-                "name": "Upper Division Economics Elective",
-                "tagId": "econ_upper_div"
-              },
-              {
-                "id": "econ_elective_2",
-                "type": "tag",
-                "name": "Upper Division Economics Elective",
-                "tagId": "econ_upper_div"
-              },
-              {
-                "id": "econ_elective_3",
-                "type": "tag",
-                "name": "Upper Division Economics Elective",
-                "tagId": "econ_upper_div"
-              },
-              {
-                "id": "econ_elective_4",
-                "type": "tag",
-                "name": "Upper Division Economics Elective",
-                "tagId": "econ_upper_div"
-              },
-              {
-                "id": "econ_elective_5",
-                "type": "tag",
-                "name": "Upper Division Economics Elective",
-                "tagId": "econ_upper_div"
-              }
-            ],
-            "constraints": [
-              {
-                "type": "mutex",
-                "name": "Economics Electives",
-                "mutexReqIds": [
-                  "econ_elective_1",
-                  "econ_elective_2",
-                  "econ_elective_3",
-                  "econ_elective_4",
-                  "econ_elective_5"
-                ]
-              }
-            ]
           }
         ]
       },
@@ -2766,9 +2718,54 @@
                 "courseId": "econ141"
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Economics Electives",
+        "requirements": [
+          {
+            "id": "econ_elective_1",
+            "type": "tag",
+            "name": "Upper Division Economics Elective",
+            "tagId": "econ_upper_div"
           },
           {
-
+            "id": "econ_elective_2",
+            "type": "tag",
+            "name": "Upper Division Economics Elective",
+            "tagId": "econ_upper_div"
+          },
+          {
+            "id": "econ_elective_3",
+            "type": "tag",
+            "name": "Upper Division Economics Elective",
+            "tagId": "econ_upper_div"
+          },
+          {
+            "id": "econ_elective_4",
+            "type": "tag",
+            "name": "Upper Division Economics Elective",
+            "tagId": "econ_upper_div"
+          },
+          {
+            "id": "econ_elective_5",
+            "type": "tag",
+            "name": "Upper Division Economics Elective",
+            "tagId": "econ_upper_div"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Economics Electives",
+            "mutexReqIds": [
+              "econ_elective_1",
+              "econ_elective_2",
+              "econ_elective_3",
+              "econ_elective_4",
+              "econ_elective_5"
+            ]
           }
         ]
       }
