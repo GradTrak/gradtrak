@@ -7,7 +7,7 @@ import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { Semester } from '../models/semester.model';
-import { State } from '../models/state.model';
+import { AuthType, State } from '../models/state.model';
 import { UserData } from '../models/user-data.model';
 import { CourseService } from './course.service';
 import { RequirementService } from './requirement.service';
@@ -18,7 +18,10 @@ import { RequirementService } from './requirement.service';
 export class UserService {
   static readonly INITIAL_STATE: State = {
     loggedIn: false,
-    username: null,
+    user: {
+      username: null,
+      auth: null,
+    },
     userData: {
       semesters: new Map<string, Semester[]>(),
       goals: [],
@@ -53,30 +56,34 @@ export class UserService {
   }
 
   /**
-   * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
+   * Registers a user with the given username, password, and emailMarketing and
+   * userTesting preferences.
    *
    * @param {string} username The user's username.
    * @param {string} password The user's password.
    * @param {boolean} emailMarketing The user's emailMarketing preference.
    * @param {boolean} userTesting The user's userTesting preference.
-   * @return {Observable<string>} An Observable that will emit an error string or null if the registration was
-   * successful.
+   * @return {Observable<string>} An Observable that will emit an error string
+   * or null if the registration was successful.
    */
   register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
     return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
-      tap((response: { success: boolean; username?: string; error?: string }) => {
+      tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         }
       }),
-      map((response: { success: boolean; username?: string; error?: string }) =>
+      map((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) =>
         response.error ? response.error : null,
       ),
     );
@@ -87,24 +94,30 @@ export class UserService {
    *
    * @param {string} username The user's username.
    * @param {string} password The user's password.
-   * @return {Observable<boolean>} An Observable that will emit whether the login was successful.
+   * @return {Observable<string>} An Observable that will emit an error string
+   * or null if the login was successful.
    */
-  login(username: string, password: string): Observable<boolean> {
+  login(username: string, password: string): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to log in when already logged in');
     }
 
     return this.http.post(UserService.LOGIN_ENDPOINT, { username, password }).pipe(
-      tap((response: { success: boolean; username?: string }) => {
+      tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         }
       }),
-      map((response: { success: boolean; username?: string }) => response.success),
+      map((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) =>
+        response.error ? response.error : null,
+      ),
     );
   }
 
@@ -120,31 +133,35 @@ export class UserService {
       this.state.next({
         ...this.currentState,
         loggedIn: false,
-        username: null,
+        user: null,
       });
     });
   }
 
   /**
-   * Queries the server to detect current login status and updates state accordingly.
+   * Queries the server to detect current login status and updates state
+   * accordingly.
    *
-   * @return {Observable<string>} An Observable that contains the username
-   * or null if not logged in.
+   * @return {Observable<string>} An Observable that contains the username or
+   * null if not logged in.
    */
   queryWhoami(): Observable<string> {
     return this.http.get(UserService.WHOAMI_ENDPOINT).pipe(
-      tap((response: { loggedIn: boolean; username?: string }) => {
+      tap((response: { loggedIn: boolean; username?: string; auth?: AuthType }) => {
         if (response.loggedIn) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username: response.username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         } else {
           this.state.next({
             ...this.currentState,
             loggedIn: false,
-            username: null,
+            user: null,
           });
         }
       }),
@@ -157,9 +174,11 @@ export class UserService {
   /**
    * Changes the user's password.
    *
-   * @param {string} oldPassword The user's old password, used for verification.
+   * @param {string} oldPassword The user's old password, used for
+   * verification.
    * @param {string} newPassword the user's new password.
-   * @return {Observable<string>} The error in changing the password, null if the operation succeeded.
+   * @return {Observable<string>} The error in changing the password, null if
+   * the operation succeeded.
    */
   changePassword(oldPassword: string, newPassword: string): Observable<string> {
     return this.http
@@ -171,7 +190,8 @@ export class UserService {
   }
 
   /**
-   * Fetches the user data from the backend, instantiates the semesters, and takes the object and make it a list.
+   * Fetches the user data from the backend, instantiates the semesters, and
+   * takes the object and make it a list.
    */
   fetchUserData(): void {
     this.http
@@ -208,7 +228,9 @@ export class UserService {
    * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
   updateSemesters(newSemesters: Map<string, Semester[]>): void {
-    const newMap = new Map<string, Semester[]>(); // not sure why, before the rework the list of semesters was copied, so I've copied the map here as well.
+    // not sure why, before the rework the list of semesters was copied, so
+    // I've copied the map here as well.
+    const newMap = new Map<string, Semester[]>();
     newSemesters.forEach((value, key) => {
       newMap.set(key, [...value]);
     });
@@ -248,7 +270,8 @@ export class UserService {
       return;
     }
 
-    // TODO Making this a function that returns a clone breaks the course-changer
+    // TODO Making this a function that returns a clone breaks the
+    // course-changer
     semester.courses = [...semester.courses, course];
     this.state.next({
       ...this.currentState,
