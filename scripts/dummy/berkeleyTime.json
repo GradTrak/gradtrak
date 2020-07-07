@@ -4293,7 +4293,9 @@
     "id": "anthroc100",
     "dept": "ANTHRO",
     "no": "C100",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4321,7 +4323,9 @@
     "id": "anthroc103",
     "dept": "ANTHRO",
     "no": "C103",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4469,7 +4473,8 @@
     "dept": "ANTHRO",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -4574,7 +4579,9 @@
     "id": "anthro121c",
     "dept": "ANTHRO",
     "no": "121C",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -4752,7 +4759,9 @@
     "id": "anthroc124c",
     "dept": "ANTHRO",
     "no": "C124C",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -4830,7 +4839,9 @@
     "id": "anthro127a",
     "dept": "ANTHRO",
     "no": "127A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4838,7 +4849,9 @@
     "id": "anthro127b",
     "dept": "ANTHRO",
     "no": "127B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 5,
@@ -4938,7 +4951,9 @@
     "id": "anthroc129d",
     "dept": "ANTHRO",
     "no": "C129D",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -4992,7 +5007,9 @@
     "id": "anthro132a",
     "dept": "ANTHRO",
     "no": "132A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -5046,7 +5063,8 @@
     "no": "135",
     "tagIds": [
       "ls_bio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -5667,7 +5685,8 @@
     "dept": "ANTHRO",
     "no": "169B",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -8027,7 +8046,8 @@
     "dept": "ARCH",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -8063,7 +8083,8 @@
     "dept": "ARCH",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -8101,7 +8122,8 @@
     "dept": "ARCH",
     "no": "154",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -11274,7 +11296,8 @@
     "dept": "ASTRON",
     "no": "128",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -11312,7 +11335,8 @@
     "dept": "ASTRON",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -11345,7 +11369,9 @@
     "id": "astronc161",
     "dept": "ASTRON",
     "no": "C161",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -11353,7 +11379,9 @@
     "id": "astronc162",
     "dept": "ASTRON",
     "no": "C162",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -11834,7 +11862,8 @@
       "bioeng_upper_div",
       "bioeng_technical_topics",
       "bioeng_fundamentals",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -11895,7 +11924,8 @@
     "no": "C112",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11955,7 +11985,8 @@
     "no": "C117",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -11977,7 +12008,8 @@
     "no": "C119",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -12026,7 +12058,8 @@
     "no": "C125",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -12037,7 +12070,8 @@
     "no": "C125B",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -12053,7 +12087,8 @@
       "bioeng_lab_course",
       "mcb_imm_elective_c",
       "mcb_ggd_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ],
     "equivIds": [
       "bioengc131"
@@ -12129,7 +12164,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -12182,7 +12218,8 @@
       "bioeng_technical_topics",
       "bioeng_lab_course",
       "mcb_ggd_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -12243,7 +12280,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -12255,7 +12293,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "bioeng_lab_course"
+      "bioeng_lab_course",
+      "stat_cluster"
     ]
   },
   {
@@ -12267,7 +12306,8 @@
     "tagIds": [
       "bioeng_upper_div",
       "bioeng_technical_topics",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -12386,7 +12426,8 @@
     "no": "C165",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -12410,7 +12451,8 @@
     "no": "C181",
     "tagIds": [
       "bioeng_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -14856,7 +14898,9 @@
     "id": "chemc110l",
     "dept": "CHEM",
     "no": "C110L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 5,
@@ -14955,7 +14999,8 @@
     "dept": "CHEM",
     "no": "120A",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -14965,7 +15010,8 @@
     "dept": "CHEM",
     "no": "120B",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -15043,7 +15089,8 @@
     "no": "C130",
     "tagIds": [
       "ls_bio",
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -15063,7 +15110,9 @@
     "id": "chemc138",
     "dept": "CHEM",
     "no": "C138",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -17690,7 +17739,8 @@
     "no": "140",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -17701,7 +17751,8 @@
     "no": "141",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -18041,7 +18092,9 @@
     "id": "chmengc195a",
     "dept": "CHM ENG",
     "no": "C195A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -18594,7 +18647,8 @@
     "dept": "CIV ENG",
     "no": "100",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -18624,7 +18678,8 @@
     "dept": "CIV ENG",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -18671,7 +18726,9 @@
     "id": "civengc106",
     "dept": "CIV ENG",
     "no": "C106",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -18819,7 +18876,9 @@
     "id": "civengc116",
     "dept": "CIV ENG",
     "no": "C116",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -19047,7 +19106,9 @@
     "id": "civengc133",
     "dept": "CIV ENG",
     "no": "C133",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -19170,7 +19231,8 @@
     "dept": "CIV ENG",
     "no": "155",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -22671,7 +22733,8 @@
     "dept": "COG SCI",
     "no": "C100",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -22690,7 +22753,9 @@
     "id": "cogscic101",
     "dept": "COG SCI",
     "no": "C101",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -22708,7 +22773,9 @@
     "id": "cogscic102",
     "dept": "COG SCI",
     "no": "C102",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -22740,7 +22807,9 @@
     "id": "cogscic126",
     "dept": "COG SCI",
     "no": "C126",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -22749,7 +22818,8 @@
     "dept": "COG SCI",
     "no": "C127",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "stat_cluster"
     ]
   },
   {
@@ -22759,7 +22829,8 @@
     "dept": "COG SCI",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -22795,7 +22866,8 @@
     "dept": "COG SCI",
     "no": "C140",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -22822,7 +22894,9 @@
     "id": "cogscic147",
     "dept": "COG SCI",
     "no": "C147",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -26155,7 +26229,8 @@
       "ls_quant",
       "eecs_upper_div",
       "eecs_design",
-      "cs_design"
+      "cs_design",
+      "stat_cluster"
     ]
   },
   {
@@ -26190,7 +26265,8 @@
       "ls_quant",
       "eecs_upper_div",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26216,7 +26292,8 @@
       "bioeng_technical_topics",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26242,7 +26319,8 @@
       "bioeng_technical_topics",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26256,7 +26334,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26270,7 +26349,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26294,7 +26374,8 @@
     "tagIds": [
       "ls_quant",
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26309,7 +26390,8 @@
       "bioeng_technical_topics",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26321,7 +26403,8 @@
     "tagIds": [
       "ls_quant",
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -26344,7 +26427,8 @@
     "tagIds": [
       "ls_quant",
       "eecs_upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -26357,7 +26441,8 @@
       "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26381,7 +26466,8 @@
     "tagIds": [
       "ls_quant",
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26406,7 +26492,8 @@
       "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26420,7 +26507,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26467,7 +26555,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26482,7 +26571,8 @@
       "bioeng_technical_topics",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26495,7 +26585,8 @@
       "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
-      "eecs_design"
+      "eecs_design",
+      "stat_cluster"
     ]
   },
   {
@@ -26509,7 +26600,8 @@
       "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -26522,7 +26614,8 @@
       "ls_quant",
       "eecs_upper_div",
       "bioeng_technical_topics",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -27812,7 +27905,8 @@
     "dept": "CY PLAN",
     "no": "118AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "stat_cluster"
     ]
   },
   {
@@ -27823,7 +27917,8 @@
     "no": "119",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -28896,7 +28991,8 @@
     "dept": "DATA",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -29077,7 +29173,8 @@
     "no": "110",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -29097,7 +29194,8 @@
     "dept": "DEMOG",
     "no": "C126",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -29208,7 +29306,9 @@
     "id": "demogc175",
     "dept": "DEMOG",
     "no": "C175",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -29217,7 +29317,8 @@
     "dept": "DEMOG",
     "no": "180",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -30882,7 +30983,8 @@
     "no": "101A",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -30894,7 +30996,8 @@
     "tagIds": [
       "ls_socio",
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -30936,7 +31039,8 @@
     "no": "C102",
     "tagIds": [
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -30959,7 +31063,8 @@
     "tagIds": [
       "ls_socio",
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -30970,7 +31075,8 @@
     "no": "104",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31193,7 +31299,8 @@
     "no": "119",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31204,7 +31311,8 @@
     "no": "121",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31270,7 +31378,8 @@
     "no": "C125",
     "tagIds": [
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31293,7 +31402,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31349,7 +31459,8 @@
     "no": "136",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31393,7 +31504,8 @@
     "no": "138",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31404,7 +31516,8 @@
     "no": "139",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31424,7 +31537,8 @@
     "dept": "ECON",
     "no": "141",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31445,7 +31559,8 @@
     "no": "C142",
     "tagIds": [
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31588,7 +31703,8 @@
     "no": "157",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31656,7 +31772,8 @@
     "tagIds": [
       "ls_inter",
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31711,7 +31828,8 @@
     "no": "174",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31732,7 +31850,8 @@
     "no": "C175",
     "tagIds": [
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31767,7 +31886,8 @@
       "ls_inter",
       "ls_socio",
       "econ_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -31802,7 +31922,8 @@
       "ls_inter",
       "ls_socio",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37025,7 +37146,8 @@
     "no": "100",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37058,7 +37180,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37070,7 +37193,8 @@
     "tagIds": [
       "eecs_upper_div",
       "eecs_design",
-      "cs_design"
+      "cs_design",
+      "stat_cluster"
     ]
   },
   {
@@ -37082,7 +37206,8 @@
     "tagIds": [
       "eecs_upper_div",
       "eecs_design",
-      "cs_design"
+      "cs_design",
+      "stat_cluster"
     ]
   },
   {
@@ -37126,7 +37251,8 @@
     "no": "113",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37159,7 +37285,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37191,7 +37318,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37214,7 +37342,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37233,7 +37362,8 @@
     "no": "121",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37244,7 +37374,8 @@
     "no": "122",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37256,7 +37387,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37311,7 +37443,8 @@
     "no": "127",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37347,7 +37480,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37358,7 +37492,8 @@
     "no": "129",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37371,7 +37506,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37413,7 +37549,8 @@
     "no": "134",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37456,7 +37593,8 @@
     "dept": "EL ENG",
     "no": "137A",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37466,7 +37604,8 @@
     "dept": "EL ENG",
     "no": "137B",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37479,7 +37618,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37532,7 +37672,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37556,7 +37697,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37567,7 +37709,8 @@
     "no": "144",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37617,7 +37760,8 @@
     "dept": "EL ENG",
     "no": "C145B",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37627,7 +37771,8 @@
     "dept": "EL ENG",
     "no": "C145L",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37637,7 +37782,8 @@
     "dept": "EL ENG",
     "no": "C145M",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37647,7 +37793,8 @@
     "dept": "EL ENG",
     "no": "C145O",
     "tagIds": [
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -37678,7 +37825,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -37701,7 +37849,8 @@
     "tagIds": [
       "eecs_upper_div",
       "eecs_design",
-      "cs_design"
+      "cs_design",
+      "stat_cluster"
     ]
   },
   {
@@ -38914,7 +39063,8 @@
     "tagIds": [
       "ls_phys",
       "ls_socio",
-      "eecs_ethics"
+      "eecs_ethics",
+      "stat_cluster"
     ]
   },
   {
@@ -38944,7 +39094,8 @@
     "dept": "ENE,RES",
     "no": "102",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -38992,7 +39143,8 @@
     "dept": "ENE,RES",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -39080,7 +39232,8 @@
     "dept": "ENE,RES",
     "no": "175",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -39089,7 +39242,9 @@
     "id": "eneresc176",
     "dept": "ENE,RES",
     "no": "C176",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -39748,7 +39903,8 @@
     "dept": "ENGIN",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -39758,7 +39914,8 @@
     "dept": "ENGIN",
     "no": "117",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -39789,7 +39946,8 @@
     "no": "120",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44103,7 +44261,9 @@
     "id": "enveconc101",
     "dept": "ENVECON",
     "no": "C101",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -44121,7 +44281,9 @@
     "id": "enveconc102",
     "dept": "ENVECON",
     "no": "C102",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -44149,7 +44311,9 @@
     "id": "enveconc115",
     "dept": "ENVECON",
     "no": "C115",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -44177,7 +44341,8 @@
     "no": "131",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44195,7 +44360,8 @@
     "dept": "ENVECON",
     "no": "140AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "stat_cluster"
     ]
   },
   {
@@ -44206,7 +44372,8 @@
     "no": "141",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44216,7 +44383,8 @@
     "dept": "ENVECON",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44227,7 +44395,8 @@
     "no": "143",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44238,7 +44407,8 @@
     "no": "145",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44248,7 +44418,8 @@
     "dept": "ENVECON",
     "no": "147",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44258,7 +44429,8 @@
     "dept": "ENVECON",
     "no": "C151",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "stat_cluster"
     ]
   },
   {
@@ -44277,7 +44449,8 @@
     "no": "152",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44287,7 +44460,8 @@
     "dept": "ENVECON",
     "no": "153",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44297,7 +44471,8 @@
     "dept": "ENVECON",
     "no": "154",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44307,7 +44482,8 @@
     "dept": "ENVECON",
     "no": "161",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44318,7 +44494,8 @@
     "no": "162",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44328,7 +44505,8 @@
     "dept": "ENVECON",
     "no": "C175",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -44338,7 +44516,8 @@
     "dept": "ENVECON",
     "no": "C176",
     "tagIds": [
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44357,7 +44536,8 @@
     "no": "C181",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -44366,7 +44546,9 @@
     "id": "enveconc183",
     "dept": "ENVECON",
     "no": "C183",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -44643,7 +44825,8 @@
     "no": "101",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44879,7 +45062,8 @@
     "no": "C129",
     "tagIds": [
       "ls_bio",
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -44889,7 +45073,8 @@
     "dept": "EPS",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -44919,7 +45104,9 @@
     "id": "epsc146",
     "dept": "EPS",
     "no": "C146",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -44937,7 +45124,9 @@
     "id": "epsc162",
     "dept": "EPS",
     "no": "C162",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -44963,7 +45152,9 @@
     "id": "epsc180",
     "dept": "EPS",
     "no": "C180",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -44982,7 +45173,8 @@
     "dept": "EPS",
     "no": "C181",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -45738,7 +45930,8 @@
     "dept": "ESPM",
     "no": "100",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -45805,7 +45998,9 @@
     "id": "espm102a",
     "dept": "ESPM",
     "no": "102A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -45829,7 +46024,9 @@
     "id": "espm102c",
     "dept": "ESPM",
     "no": "102C",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -45837,7 +46034,9 @@
     "id": "espm102d",
     "dept": "ESPM",
     "no": "102D",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -45855,7 +46054,9 @@
     "id": "espmc103",
     "dept": "ESPM",
     "no": "C103",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -45873,7 +46074,9 @@
     "id": "espmc104",
     "dept": "ESPM",
     "no": "C104",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -45953,7 +46156,8 @@
     "no": "C107",
     "tagIds": [
       "ls_bio",
-      "ls_inter"
+      "ls_inter",
+      "stat_cluster"
     ]
   },
   {
@@ -45963,7 +46167,8 @@
     "dept": "ESPM",
     "no": "108A",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "stat_cluster"
     ]
   },
   {
@@ -45974,7 +46179,8 @@
     "no": "108B",
     "tagIds": [
       "ls_bio",
-      "mcb_ggd_elective_b"
+      "mcb_ggd_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -46044,7 +46250,8 @@
     "dept": "ESPM",
     "no": "111",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46054,7 +46261,8 @@
     "dept": "ESPM",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46082,7 +46290,8 @@
     "dept": "ESPM",
     "no": "114",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46107,7 +46316,9 @@
     "id": "espm115c",
     "dept": "ESPM",
     "no": "115C",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -46132,7 +46343,8 @@
     "dept": "ESPM",
     "no": "116B",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "stat_cluster"
     ]
   },
   {
@@ -46141,7 +46353,9 @@
     "id": "espm116c",
     "dept": "ESPM",
     "no": "116C",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -46151,7 +46365,8 @@
     "no": "117",
     "tagIds": [
       "ls_bio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46170,7 +46385,8 @@
     "no": "118",
     "tagIds": [
       "ls_bio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46190,7 +46406,8 @@
     "dept": "ESPM",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46200,7 +46417,8 @@
     "dept": "ESPM",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46275,7 +46493,9 @@
     "id": "espmc126",
     "dept": "ESPM",
     "no": "C126",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -46303,7 +46523,9 @@
     "id": "espmc128",
     "dept": "ESPM",
     "no": "C128",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -46323,7 +46545,8 @@
     "no": "C129",
     "tagIds": [
       "ls_bio",
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -46359,7 +46582,8 @@
     "dept": "ESPM",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46377,7 +46601,8 @@
     "dept": "ESPM",
     "no": "132",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46454,7 +46679,9 @@
     "id": "espmc138",
     "dept": "ESPM",
     "no": "C138",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -46473,7 +46700,8 @@
     "dept": "ESPM",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46501,7 +46729,8 @@
     "dept": "ESPM",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46521,7 +46750,8 @@
     "dept": "ESPM",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46604,7 +46834,8 @@
     "no": "C148",
     "tagIds": [
       "mcb_ggd_elective_a",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -46623,7 +46854,9 @@
     "id": "espmc149",
     "dept": "ESPM",
     "no": "C149",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -46642,7 +46875,8 @@
     "dept": "ESPM",
     "no": "152",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46730,7 +46964,9 @@
     "id": "espmc159",
     "dept": "ESPM",
     "no": "C159",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -46843,7 +47079,8 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46853,7 +47090,8 @@
     "dept": "ESPM",
     "no": "166",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46940,7 +47178,8 @@
     "no": "172",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -46958,7 +47197,8 @@
     "dept": "ESPM",
     "no": "173",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -47063,7 +47303,9 @@
     "id": "espmc177",
     "dept": "ESPM",
     "no": "C177",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -47117,7 +47359,9 @@
     "id": "espmc180",
     "dept": "ESPM",
     "no": "C180",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -47135,7 +47379,9 @@
     "id": "espm181a",
     "dept": "ESPM",
     "no": "181A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -47152,7 +47398,8 @@
     "dept": "ESPM",
     "no": "182",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -47162,7 +47409,8 @@
     "dept": "ESPM",
     "no": "183",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -47171,7 +47419,9 @@
     "id": "espmc183",
     "dept": "ESPM",
     "no": "C183",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -47190,7 +47440,8 @@
     "dept": "ESPM",
     "no": "185",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -47200,7 +47451,8 @@
     "dept": "ESPM",
     "no": "186",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -47210,7 +47462,8 @@
     "dept": "ESPM",
     "no": "187",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -53915,7 +54168,9 @@
     "id": "geogc136",
     "dept": "GEOG",
     "no": "C136",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -53954,7 +54209,9 @@
     "id": "geogc139",
     "dept": "GEOG",
     "no": "C139",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -53972,7 +54229,9 @@
     "id": "geog140a",
     "dept": "GEOG",
     "no": "140A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -54007,7 +54266,8 @@
     "dept": "GEOG",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -54017,7 +54277,8 @@
     "dept": "GEOG",
     "no": "143",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -54046,7 +54307,9 @@
     "id": "geogc145",
     "dept": "GEOG",
     "no": "C145",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -54083,7 +54346,8 @@
     "dept": "GEOG",
     "no": "148",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -54650,7 +54914,8 @@
     "dept": "GEOG",
     "no": "187",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -54668,7 +54933,8 @@
     "dept": "GEOG",
     "no": "C188",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -67283,7 +67549,9 @@
     "id": "iasc175",
     "dept": "IAS",
     "no": "C175",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -67291,7 +67559,9 @@
     "id": "iasc176",
     "dept": "IAS",
     "no": "C176",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -67522,7 +67792,8 @@
     "dept": "IND ENG",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67542,7 +67813,8 @@
     "dept": "IND ENG",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67552,7 +67824,8 @@
     "dept": "IND ENG",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67562,7 +67835,8 @@
     "dept": "IND ENG",
     "no": "135",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67582,7 +67856,8 @@
     "dept": "IND ENG",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67592,7 +67867,8 @@
     "dept": "IND ENG",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67602,7 +67878,8 @@
     "dept": "IND ENG",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67612,7 +67889,8 @@
     "dept": "IND ENG",
     "no": "153",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67623,7 +67901,8 @@
     "no": "160",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -67652,7 +67931,8 @@
     "no": "162",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -67700,7 +67980,8 @@
     "dept": "IND ENG",
     "no": "166",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67720,7 +68001,8 @@
     "dept": "IND ENG",
     "no": "170",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -67920,7 +68202,9 @@
     "id": "indeng221",
     "dept": "IND ENG",
     "no": "221",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -67928,7 +68212,9 @@
     "id": "indeng222",
     "dept": "IND ENG",
     "no": "222",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -68602,7 +68888,8 @@
     "dept": "INFO",
     "no": "154",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -68623,7 +68910,8 @@
     "no": "159",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -68669,7 +68957,8 @@
     "dept": "INFO",
     "no": "188",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -68774,7 +69063,9 @@
     "id": "info213",
     "dept": "INFO",
     "no": "213",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -68902,7 +69193,9 @@
     "id": "info232",
     "dept": "INFO",
     "no": "232",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -68998,7 +69291,9 @@
     "id": "info247",
     "dept": "INFO",
     "no": "247",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -69038,7 +69333,9 @@
     "id": "info253",
     "dept": "INFO",
     "no": "253",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -69078,7 +69375,9 @@
     "id": "info256",
     "dept": "INFO",
     "no": "256",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -69086,7 +69385,9 @@
     "id": "info257",
     "dept": "INFO",
     "no": "257",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -69166,7 +69467,9 @@
     "id": "info271b",
     "dept": "INFO",
     "no": "271B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -69174,7 +69477,9 @@
     "id": "info272",
     "dept": "INFO",
     "no": "272",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -69987,7 +70292,9 @@
     "id": "integbi102lf",
     "dept": "INTEGBI",
     "no": "102LF",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -70030,7 +70337,8 @@
     "dept": "INTEGBI",
     "no": "103LF",
     "tagIds": [
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -70058,7 +70366,8 @@
     "dept": "INTEGBI",
     "no": "104LF",
     "tagIds": [
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -70095,7 +70404,9 @@
     "id": "integbi106a",
     "dept": "INTEGBI",
     "no": "106A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 1,
@@ -70119,7 +70430,9 @@
     "id": "integbic107l",
     "dept": "INTEGBI",
     "no": "C107L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -70155,7 +70468,9 @@
     "id": "integbic110l",
     "dept": "INTEGBI",
     "no": "C110L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -70215,7 +70530,9 @@
     "id": "integbi113l",
     "dept": "INTEGBI",
     "no": "113L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -70235,7 +70552,8 @@
     "no": "115",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -70271,7 +70589,8 @@
     "dept": "INTEGBI",
     "no": "117",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70305,7 +70624,8 @@
     "dept": "INTEGBI",
     "no": "118",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70315,7 +70635,8 @@
     "dept": "INTEGBI",
     "no": "119",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70369,7 +70690,8 @@
     "dept": "INTEGBI",
     "no": "123AL",
     "tagIds": [
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -70430,7 +70752,9 @@
     "id": "integbic125l",
     "dept": "INTEGBI",
     "no": "C125L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -70469,7 +70793,8 @@
     "dept": "INTEGBI",
     "no": "128",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70504,7 +70829,9 @@
     "id": "integbic129l",
     "dept": "INTEGBI",
     "no": "C129L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -70542,7 +70869,8 @@
       "ls_bio",
       "mcb_cdb_elective_b",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -70585,7 +70913,8 @@
     "no": "132",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -70656,7 +70985,8 @@
     "no": "135",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -70673,7 +71003,9 @@
     "id": "integbic135l",
     "dept": "INTEGBI",
     "no": "C135L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -70693,7 +71025,8 @@
     "no": "137",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70711,7 +71044,8 @@
     "dept": "INTEGBI",
     "no": "138",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70721,7 +71055,8 @@
     "dept": "INTEGBI",
     "no": "139",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70748,7 +71083,8 @@
     "no": "140",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -70791,7 +71127,9 @@
     "id": "integbic142l",
     "dept": "INTEGBI",
     "no": "C142L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -70835,7 +71173,8 @@
     "no": "C143A",
     "tagIds": [
       "mcb_neu_elective",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -70846,7 +71185,8 @@
     "no": "C143B",
     "tagIds": [
       "mcb_neu_elective",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -70865,7 +71205,9 @@
     "id": "integbic144",
     "dept": "INTEGBI",
     "no": "C144",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -70917,7 +71259,9 @@
     "id": "integbi146lf",
     "dept": "INTEGBI",
     "no": "146LF",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -70946,7 +71290,8 @@
     "tagIds": [
       "mcb_cdb_elective_b",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -70981,7 +71326,9 @@
     "id": "integbic149",
     "dept": "INTEGBI",
     "no": "C149",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -71016,7 +71363,8 @@
     "dept": "INTEGBI",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71034,7 +71382,8 @@
     "dept": "INTEGBI",
     "no": "152",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71044,7 +71393,8 @@
     "dept": "INTEGBI",
     "no": "153",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71094,7 +71444,8 @@
     "dept": "INTEGBI",
     "no": "154",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71129,7 +71480,9 @@
     "id": "integbic155",
     "dept": "INTEGBI",
     "no": "C155",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -71147,7 +71500,9 @@
     "id": "integbic156",
     "dept": "INTEGBI",
     "no": "C156",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -71163,7 +71518,9 @@
     "id": "integbi157lf",
     "dept": "INTEGBI",
     "no": "157LF",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 6,
@@ -71181,7 +71538,8 @@
     "no": "158LF",
     "tagIds": [
       "ls_bio",
-      "ls_inter"
+      "ls_inter",
+      "stat_cluster"
     ]
   },
   {
@@ -71210,7 +71568,8 @@
     "no": "160",
     "tagIds": [
       "mcb_ggd_elective_a",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71222,7 +71581,8 @@
     "tagIds": [
       "mcb_ggd_elective_b",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -71233,7 +71593,8 @@
     "no": "162",
     "tagIds": [
       "mcb_ggd_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71256,7 +71617,8 @@
     "no": "164",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -71276,7 +71638,8 @@
     "dept": "INTEGBI",
     "no": "166",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71305,7 +71668,9 @@
     "id": "integbi168l",
     "dept": "INTEGBI",
     "no": "168L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -71314,7 +71679,8 @@
     "dept": "INTEGBI",
     "no": "169",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -71377,7 +71743,9 @@
     "id": "integbi173lf",
     "dept": "INTEGBI",
     "no": "173LF",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -71403,7 +71771,9 @@
     "id": "integbi174lf",
     "dept": "INTEGBI",
     "no": "174LF",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -71429,7 +71799,9 @@
     "id": "integbi175lf",
     "dept": "INTEGBI",
     "no": "175LF",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -71507,7 +71879,9 @@
     "id": "integbi181l",
     "dept": "INTEGBI",
     "no": "181L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -71543,7 +71917,9 @@
     "id": "integbi183l",
     "dept": "INTEGBI",
     "no": "183L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 1,
@@ -71561,7 +71937,9 @@
     "id": "integbi184l",
     "dept": "INTEGBI",
     "no": "184L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 1,
@@ -71603,7 +71981,9 @@
     "id": "integbic185l",
     "dept": "INTEGBI",
     "no": "C185L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -71631,7 +72011,9 @@
     "id": "integbic187",
     "dept": "INTEGBI",
     "no": "C187",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -77604,7 +77986,8 @@
     "dept": "LD ARCH",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -77824,7 +78207,9 @@
     "id": "ldarchc177",
     "dept": "LD ARCH",
     "no": "C177",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -77843,7 +78228,8 @@
     "dept": "LD ARCH",
     "no": "C188",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -78671,7 +79057,8 @@
     "dept": "LEGALST",
     "no": "123",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -80120,7 +80507,8 @@
     "no": "100",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -80151,7 +80539,8 @@
     "dept": "LINGUIS",
     "no": "C105",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -80215,7 +80604,8 @@
     "no": "110",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -80247,7 +80637,8 @@
     "no": "113",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -80415,7 +80806,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -80469,7 +80861,8 @@
     "no": "C146",
     "tagIds": [
       "ls_socio",
-      "linguis_elective"
+      "linguis_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -80479,7 +80872,8 @@
     "dept": "LINGUIS",
     "no": "C147",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -80663,7 +81057,8 @@
     "no": "C160",
     "tagIds": [
       "ls_socio",
-      "linguis_elective"
+      "linguis_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -83258,7 +83653,8 @@
     "no": "C103",
     "tagIds": [
       "ls_quant",
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -83269,7 +83665,8 @@
     "no": "104",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83279,7 +83676,8 @@
     "dept": "MATH",
     "no": "H104",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83300,7 +83698,8 @@
     "no": "105",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83315,7 +83714,8 @@
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -83325,7 +83725,8 @@
     "dept": "MATH",
     "no": "H110",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83378,7 +83779,8 @@
     "no": "113",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83408,7 +83810,8 @@
     "dept": "MATH",
     "no": "H113",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83469,7 +83872,8 @@
     "no": "114",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83480,7 +83884,8 @@
     "no": "115",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83501,7 +83906,8 @@
     "no": "116",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83523,7 +83929,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -83564,7 +83971,8 @@
     "dept": "MATH",
     "no": "121A",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83574,7 +83982,8 @@
     "dept": "MATH",
     "no": "121B",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83595,7 +84004,8 @@
     "no": "123",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83616,7 +84026,8 @@
     "dept": "MATH",
     "no": "125A",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83647,7 +84058,8 @@
     "no": "126",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83662,7 +84074,8 @@
       "mcb_ggd_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -83673,7 +84086,8 @@
     "no": "128A",
     "tagIds": [
       "ls_quant",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -83683,7 +84097,8 @@
     "dept": "MATH",
     "no": "128B",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83704,7 +84119,8 @@
     "no": "130",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83736,7 +84152,8 @@
     "no": "135",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83757,7 +84174,8 @@
     "no": "136",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83768,7 +84186,8 @@
     "no": "140",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83789,7 +84208,8 @@
     "no": "141",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83800,7 +84220,8 @@
     "no": "142",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83811,7 +84232,8 @@
     "no": "143",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83899,7 +84321,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -83910,7 +84333,8 @@
     "no": "172",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83921,7 +84345,8 @@
     "no": "185",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -83931,7 +84356,8 @@
     "dept": "MATH",
     "no": "H185",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -83974,7 +84400,8 @@
     "no": "189",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -84283,7 +84710,8 @@
     "dept": "MATH",
     "no": "221",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "stat_cluster"
     ]
   },
   {
@@ -86503,7 +86931,8 @@
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86515,7 +86944,8 @@
     "tagIds": [
       "ls_bio",
       "ls_phys",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86527,7 +86957,8 @@
     "tagIds": [
       "ls_bio",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86566,7 +86997,8 @@
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -86576,7 +87008,8 @@
     "dept": "MCELLBI",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -86587,7 +87020,8 @@
     "no": "110",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86604,7 +87038,9 @@
     "id": "mcellbic110l",
     "dept": "MCELLBI",
     "no": "C110L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -86647,7 +87083,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -86690,7 +87127,8 @@
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -86723,7 +87161,8 @@
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -86869,7 +87308,8 @@
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86920,7 +87360,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86940,7 +87381,8 @@
     "dept": "MCELLBI",
     "no": "133L",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -86966,7 +87408,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -86993,7 +87436,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87097,7 +87541,8 @@
       "mcb_cdb_elective_a",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -87129,7 +87574,8 @@
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -87150,7 +87596,8 @@
     "no": "140",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -87160,7 +87607,8 @@
     "dept": "MCELLBI",
     "no": "140L",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -87177,7 +87625,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87206,7 +87655,8 @@
     "no": "143",
     "tagIds": [
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87220,7 +87670,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -87236,7 +87687,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87252,7 +87704,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -87261,7 +87714,9 @@
     "id": "mcellbi150l",
     "dept": "MCELLBI",
     "no": "150L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -87311,7 +87766,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87321,7 +87777,8 @@
     "dept": "MCELLBI",
     "no": "160L",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -87344,7 +87801,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87373,7 +87831,9 @@
     "id": "mcellbi163l",
     "dept": "MCELLBI",
     "no": "163L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -87397,7 +87857,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -87413,7 +87874,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89727,7 +90189,8 @@
     "dept": "MEC ENG",
     "no": "101",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89746,7 +90209,9 @@
     "id": "meceng102a",
     "dept": "MEC ENG",
     "no": "102A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -89755,7 +90220,8 @@
     "dept": "MEC ENG",
     "no": "102B",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89776,7 +90242,8 @@
     "no": "104",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89821,7 +90288,8 @@
     "no": "106",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89831,7 +90299,8 @@
     "dept": "MEC ENG",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89857,7 +90326,8 @@
     "dept": "MEC ENG",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89868,7 +90338,8 @@
     "no": "109",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89878,7 +90349,8 @@
     "dept": "MEC ENG",
     "no": "110",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89887,7 +90359,9 @@
     "id": "mecengc115",
     "dept": "MEC ENG",
     "no": "C115",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -89895,7 +90369,9 @@
     "id": "mecengc117",
     "dept": "MEC ENG",
     "no": "C117",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -89905,7 +90381,8 @@
     "no": "118",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89916,7 +90393,8 @@
     "no": "119",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -89926,7 +90404,8 @@
     "dept": "MEC ENG",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89936,7 +90415,8 @@
     "dept": "MEC ENG",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89984,7 +90464,8 @@
     "dept": "MEC ENG",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -89994,7 +90475,8 @@
     "dept": "MEC ENG",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90005,7 +90487,8 @@
     "no": "132",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -90016,7 +90499,8 @@
     "no": "133",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -90036,7 +90520,8 @@
     "dept": "MEC ENG",
     "no": "C134",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -90046,7 +90531,8 @@
     "dept": "MEC ENG",
     "no": "135",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90066,7 +90552,8 @@
     "dept": "MEC ENG",
     "no": "138",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90076,7 +90563,8 @@
     "dept": "MEC ENG",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90106,7 +90594,8 @@
     "dept": "MEC ENG",
     "no": "146",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90135,7 +90624,9 @@
     "id": "meceng150a",
     "dept": "MEC ENG",
     "no": "150A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -90144,7 +90635,8 @@
     "dept": "MEC ENG",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90220,7 +90712,8 @@
     "dept": "MEC ENG",
     "no": "163",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90230,7 +90723,8 @@
     "dept": "MEC ENG",
     "no": "164",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90248,7 +90742,8 @@
     "dept": "MEC ENG",
     "no": "165",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90277,7 +90772,8 @@
     "no": "167",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -90287,7 +90783,8 @@
     "dept": "MEC ENG",
     "no": "168",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90297,7 +90794,8 @@
     "dept": "MEC ENG",
     "no": "170",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90317,7 +90815,8 @@
     "dept": "MEC ENG",
     "no": "173",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90337,7 +90836,8 @@
     "dept": "MEC ENG",
     "no": "175",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -90356,7 +90856,9 @@
     "id": "mecengc176",
     "dept": "MEC ENG",
     "no": "C176",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -90374,7 +90876,9 @@
     "id": "mecengc178",
     "dept": "MEC ENG",
     "no": "C178",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -90393,7 +90897,9 @@
     "id": "mecengc180",
     "dept": "MEC ENG",
     "no": "C180",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -90403,7 +90909,8 @@
     "no": "185",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -93176,7 +93683,8 @@
     "dept": "MUSIC",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -93185,7 +93693,9 @@
     "id": "music108m",
     "dept": "MUSIC",
     "no": "108M",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -93196,7 +93706,8 @@
     "tagIds": [
       "ls_arts",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -93207,7 +93718,8 @@
     "no": "109M",
     "tagIds": [
       "ls_arts",
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -98247,7 +98759,8 @@
     "dept": "NUC ENG",
     "no": "100",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -98355,7 +98868,8 @@
     "dept": "NUC ENG",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -98480,7 +98994,8 @@
     "dept": "NUC ENG",
     "no": "175",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -98865,7 +99380,8 @@
     "no": "103",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -98940,7 +99456,8 @@
     "no": "110",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -98961,7 +99478,8 @@
     "no": "C114",
     "tagIds": [
       "mcb_ggd_elective_a",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -98991,7 +99509,8 @@
     "dept": "NUSCTX",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -99030,7 +99549,9 @@
     "id": "nusctxc159",
     "dept": "NUSCTX",
     "no": "C159",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -101025,7 +101546,9 @@
     "id": "pbhlthc102",
     "dept": "PB HLTH",
     "no": "C102",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -101098,7 +101621,8 @@
     "dept": "PB HLTH",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -101185,7 +101709,8 @@
     "dept": "PB HLTH",
     "no": "126",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -101195,7 +101720,8 @@
     "dept": "PB HLTH",
     "no": "129",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -101370,7 +101896,9 @@
     "id": "pbhlth150a",
     "dept": "PB HLTH",
     "no": "150A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -101380,7 +101908,8 @@
     "no": "150B",
     "tagIds": [
       "ls_socio",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -101459,7 +101988,8 @@
     "no": "162A",
     "tagIds": [
       "ls_bio",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -101494,7 +102024,9 @@
     "id": "pbhlth170b",
     "dept": "PB HLTH",
     "no": "170B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -103147,7 +103679,9 @@
     "id": "pbhlth250a",
     "dept": "PB HLTH",
     "no": "250A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -105747,7 +106281,8 @@
     "no": "128",
     "tagIds": [
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -105873,7 +106408,9 @@
     "id": "philos140a",
     "dept": "PHILOS",
     "no": "140A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -105881,7 +106418,9 @@
     "id": "philos140b",
     "dept": "PHILOS",
     "no": "140B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -105901,7 +106440,8 @@
     "dept": "PHILOS",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -105911,7 +106451,8 @@
     "dept": "PHILOS",
     "no": "143",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -105931,7 +106472,8 @@
     "dept": "PHILOS",
     "no": "146",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -106921,7 +107463,9 @@
     "id": "physedc129",
     "dept": "PHYS ED",
     "no": "C129",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -106996,7 +107540,9 @@
     "id": "physedc165",
     "dept": "PHYS ED",
     "no": "C165",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -107590,7 +108136,8 @@
     "no": "105",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -107619,7 +108166,8 @@
     "no": "110A",
     "tagIds": [
       "ls_phys",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -107628,7 +108176,9 @@
     "id": "physics110b",
     "dept": "PHYSICS",
     "no": "110B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -107637,7 +108187,8 @@
     "dept": "PHYSICS",
     "no": "111A",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -107651,7 +108202,8 @@
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -107689,7 +108241,8 @@
     "dept": "PHYSICS",
     "no": "129",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -107715,7 +108268,8 @@
     "dept": "PHYSICS",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -107748,7 +108302,8 @@
     "no": "137A",
     "tagIds": [
       "ls_phys",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -107758,7 +108313,8 @@
     "dept": "PHYSICS",
     "no": "137B",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -107784,7 +108340,8 @@
     "dept": "PHYSICS",
     "no": "138",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -107794,7 +108351,8 @@
     "dept": "PHYSICS",
     "no": "139",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -107804,7 +108362,8 @@
     "dept": "PHYSICS",
     "no": "141A",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "stat_cluster"
     ]
   },
   {
@@ -107813,7 +108372,9 @@
     "id": "physics141b",
     "dept": "PHYSICS",
     "no": "141B",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -107822,7 +108383,8 @@
     "dept": "PHYSICS",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -107841,7 +108403,9 @@
     "id": "physics151",
     "dept": "PHYSICS",
     "no": "151",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 1,
@@ -107867,7 +108431,9 @@
     "id": "physicsc161",
     "dept": "PHYSICS",
     "no": "C161",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -107878,7 +108444,8 @@
     "tagIds": [
       "mcb_bmb_elective",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -108806,7 +109373,9 @@
     "id": "plantbi101l",
     "dept": "PLANTBI",
     "no": "101L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -108830,7 +109399,9 @@
     "id": "plantbic103",
     "dept": "PLANTBI",
     "no": "C103",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -108864,7 +109435,9 @@
     "id": "plantbic107l",
     "dept": "PLANTBI",
     "no": "C107L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 5,
@@ -108880,7 +109453,9 @@
     "id": "plantbic109",
     "dept": "PLANTBI",
     "no": "C109",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 2,
@@ -108906,7 +109481,9 @@
     "id": "plantbic110l",
     "dept": "PLANTBI",
     "no": "C110L",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -108916,7 +109493,8 @@
     "no": "C112",
     "tagIds": [
       "mcb_bmb_elective",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -108934,7 +109512,8 @@
     "dept": "PLANTBI",
     "no": "113",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -108944,7 +109523,8 @@
     "dept": "PLANTBI",
     "no": "C114",
     "tagIds": [
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -108954,7 +109534,8 @@
     "dept": "PLANTBI",
     "no": "C116",
     "tagIds": [
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -108974,7 +109555,8 @@
     "dept": "PLANTBI",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -109001,7 +109583,9 @@
     "id": "plantbic124",
     "dept": "PLANTBI",
     "no": "C124",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -109021,7 +109605,8 @@
     "no": "C134",
     "tagIds": [
       "mcb_ggd_elective_b",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -109034,7 +109619,8 @@
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -109103,7 +109689,9 @@
     "id": "plantbic148",
     "dept": "PLANTBI",
     "no": "C148",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -109115,7 +109703,8 @@
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -109136,7 +109725,8 @@
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -109154,7 +109744,8 @@
     "dept": "PLANTBI",
     "no": "165",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -109195,7 +109786,8 @@
     "no": "185",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "stat_cluster"
     ]
   },
   {
@@ -111134,7 +111726,9 @@
     "id": "polscic131a",
     "dept": "POL SCI",
     "no": "C131A",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 4,
@@ -111159,7 +111753,8 @@
     "dept": "POL SCI",
     "no": "133",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115553,7 +116148,8 @@
       "ls_bio",
       "ls_socio",
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115643,7 +116239,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115653,7 +116250,8 @@
     "dept": "PSYCH",
     "no": "114",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115716,7 +116314,8 @@
     "no": "C116",
     "tagIds": [
       "mcb_neu_elective",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "stat_cluster"
     ]
   },
   {
@@ -115726,7 +116325,8 @@
     "dept": "PSYCH",
     "no": "117",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115814,7 +116414,8 @@
     "dept": "PSYCH",
     "no": "C120",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -115841,7 +116442,8 @@
     "no": "121",
     "tagIds": [
       "ls_bio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115859,7 +116461,8 @@
     "dept": "PSYCH",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115939,7 +116542,8 @@
     "tagIds": [
       "ls_bio",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -115968,7 +116572,9 @@
     "id": "psychc126",
     "dept": "PSYCH",
     "no": "C126",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -116003,7 +116609,8 @@
     "dept": "PSYCH",
     "no": "C127",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "stat_cluster"
     ]
   },
   {
@@ -116128,7 +116735,9 @@
     "id": "psychc129",
     "dept": "PSYCH",
     "no": "C129",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -116138,7 +116747,8 @@
     "no": "130",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -116173,7 +116783,8 @@
     "no": "131",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -116205,7 +116816,8 @@
     "tagIds": [
       "ls_bio",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -116326,7 +116938,8 @@
     "no": "140",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -116360,7 +116973,8 @@
     "dept": "PSYCH",
     "no": "141",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -116406,7 +117020,8 @@
     "dept": "PSYCH",
     "no": "C143",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "stat_cluster"
     ]
   },
   {
@@ -116557,7 +117172,8 @@
     "no": "150",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -116767,7 +117383,8 @@
     "dept": "PSYCH",
     "no": "164",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -118619,7 +119236,8 @@
     "no": "101",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -118640,7 +119258,8 @@
     "no": "C103",
     "tagIds": [
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -118670,7 +119289,9 @@
     "id": "pubpolc142",
     "dept": "PUB POL",
     "no": "C142",
-    "tagIds": []
+    "tagIds": [
+      "stat_cluster"
+    ]
   },
   {
     "units": 3,
@@ -119011,7 +119632,8 @@
     "no": "C184",
     "tagIds": [
       "ls_phys",
-      "ls_socio"
+      "ls_socio",
+      "stat_cluster"
     ]
   },
   {
@@ -120550,7 +121172,8 @@
     "dept": "RHETOR",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -121374,7 +121997,8 @@
     "dept": "RHETOR",
     "no": "170",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -128148,7 +128772,8 @@
     "dept": "SOCIOL",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -128158,7 +128783,8 @@
     "dept": "SOCIOL",
     "no": "106",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -128195,7 +128821,8 @@
     "no": "108",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -134999,7 +135626,8 @@
     "no": "101A",
     "tagIds": [
       "ls_socio",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135010,7 +135638,8 @@
     "no": "101B",
     "tagIds": [
       "ls_socio",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135020,7 +135649,8 @@
     "dept": "UGBA",
     "no": "102A",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135030,7 +135660,8 @@
     "dept": "UGBA",
     "no": "102B",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135051,7 +135682,8 @@
     "no": "103",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135084,7 +135716,8 @@
     "no": "106",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135197,7 +135830,8 @@
       "ls_socio",
       "ugba_upper_div",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135208,7 +135842,8 @@
     "no": "119",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135239,7 +135874,8 @@
     "dept": "UGBA",
     "no": "120AA",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135249,7 +135885,8 @@
     "dept": "UGBA",
     "no": "120AB",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135259,7 +135896,8 @@
     "dept": "UGBA",
     "no": "120B",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135321,7 +135959,8 @@
     "no": "122",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135385,7 +136024,8 @@
     "no": "126",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135500,7 +136140,8 @@
     "tagIds": [
       "ugba_upper_div",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135511,7 +136152,8 @@
     "no": "131A",
     "tagIds": [
       "ugba_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135523,7 +136165,8 @@
     "tagIds": [
       "ugba_upper_div",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135544,7 +136187,8 @@
     "no": "133",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135565,7 +136209,8 @@
     "no": "134",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135587,7 +136232,8 @@
     "no": "136F",
     "tagIds": [
       "ugba_upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135836,7 +136482,8 @@
     "tagIds": [
       "ls_socio",
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135857,7 +136504,8 @@
     "no": "161",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135868,7 +136516,8 @@
     "no": "162",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135921,7 +136570,8 @@
     "no": "165",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -135963,7 +136613,8 @@
     "no": "169",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -136094,7 +136745,8 @@
     "tagIds": [
       "ugba_upper_div",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -136126,7 +136778,8 @@
     "no": "183",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {
@@ -136137,7 +136790,8 @@
     "no": "184",
     "tagIds": [
       "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "stat_cluster"
     ]
   },
   {

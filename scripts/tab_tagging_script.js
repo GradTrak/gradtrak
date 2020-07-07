@@ -7,8 +7,8 @@ const nonAlphanumeric = /[^a-zA-Z0-9]/;
 
 
 //INPUTS
-const MY_FILE = './bioeTechTopics.txt'; //change to whatever
-const TAG = 'bioeng_technical_topics';
+const MY_FILE = './statCluster.txt'; //change to whatever
+const TAG = 'stat_cluster';
 
 
 
@@ -28,12 +28,17 @@ eligibleCourses = flatmap(eligibleCourses, courses => {
   }
 });
 eligibleCourses = eligibleCourses.map(courseId => courseId.replace(nonAlphanumeric, ''))
-eligibleCourses = eligibleCourses.map(courseId => courseId.replace(/\s/, ''))
+eligibleCourses = eligibleCourses.map(courseId => courseId.replace(/\s/, '').toLowerCase());
+
+
+//console.log(eligibleCourses);
+//process.exit(0)
+
 data.forEach((course) => {
   const no = course.no.replace(/[a-zA-Z,]/, "");
   if (eligibleCourses.includes(course.id.toLowerCase())) {
     if (!course.tagIds.includes(TAG)) {
-      console.log(course.id)
+      console.log(course.id, "tagged.")
       course.tagIds = [...course.tagIds, TAG];
     }
   }
