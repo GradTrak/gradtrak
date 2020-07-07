@@ -80,6 +80,10 @@
     "name": "EECS Technical Elective"
   },
   {
+    "id": "eecs_natural_science",
+    "name": "EECS Natural Science Elective"
+  },
+  {
     "id": "cs_design",
     "name": "CS Upper Division Design Course"
   },
