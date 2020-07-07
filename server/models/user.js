@@ -41,6 +41,7 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
+      index: true,
       required: true,
       unique: true,
     },
@@ -49,8 +50,9 @@ const userSchema = new mongoose.Schema(
     },
     googleId: {
       type: String,
-      id: true,
+      index: true,
       unique: true,
+      sparse: true,
     },
     userdata: {
       type: userDataSchema,
