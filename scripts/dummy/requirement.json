@@ -1232,31 +1232,10 @@
         "name": "Core Statistics Courses",
         "requirements": [
           {
-            "id": "data",
-            "type": "multi",
-            "name": "Data",
-            "numRequired": 1,
-            "hidden": false,
-            "requirements": [
-              {
-                "id": "stat134",
-                "type": "course",
-                "name": "STAT 134",
-                "courseId": "stat134"
-              },
-              {
-                "id": "statc100",
-                "type": "course",
-                "name": "STAT C100",
-                "courseId": "statc100"
-              },
-              {
-                "id": "compscic100",
-                "type": "course",
-                "name": "COMPSCI C100",
-                "courseId": "compscic100"
-              }
-            ]
+            "id": "stat133",
+            "type": "course",
+            "name": "STAT 133",
+            "courseId": "stat133"
           },
           {
             "id": "probability",
