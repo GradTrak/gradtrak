@@ -1,7 +1,7 @@
 const data = require('./dummy/berkeleyTime.json');
 const fs = require('fs')
 const MY_FILE = './tagging_lists/' + 'foreign_language.txt'; //change to whatever
-const TAG = 'eecs_natural_science';
+const TAG = 'cs_technical_elective';
 
 /*
 var eligibleCourses = fs.readFileSync(MY_FILE).toString();
@@ -21,10 +21,10 @@ eligibleCourses = eligibleCourses.map(line => {
 //console.log(eligibleCourses);
 //process.exit(1)
 
-const allowed = ['ASTRON', 'CHEM', 'EPS', 'INTEGBI', 'MCELLBI', 'PHYSICS', 'PLANTBI']
+const allowed = ['BIO ENG', 'CHEM', 'CHM ENG', 'CIV ENG', 'MATH', 'EL ENG', 'ING ENG', 'MECH ENG', 'MCELLBI', 'PHYSICS', 'STAT']//'ASTRON', 'CHEM', 'EPS', 'INTEGBI', 'MCELLBI', 'PHYSICS', 'PLANTBI']
 data.forEach((course) => {
   //if (eligibleCourses.includes(course.id.toLowerCase())) {
-  if (allowed.includes(course.dept) && course.units >= 3 && course.no.replace(/[A-Za-z]/g, '') >= 100 && course.no.replace(/[A-Za-z]/g, '') < 200) {
+  if (allowed.includes(course.dept) && course.no.replace(/[A-Za-z]/g, '') >= 100/*&& course.no.replace(/[A-Za-z]/g, '') < 200*/) {
     if (!course.tagIds.includes(TAG)) {
       console.log(course.id)
       course.tagIds = [...course.tagIds, TAG];

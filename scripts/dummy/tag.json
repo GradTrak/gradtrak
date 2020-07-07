@@ -88,6 +88,10 @@
     "name": "CS Upper Division Design Course"
   },
   {
+    "id": "cs_technical_elective",
+    "name": "CS Upper Division Technical Elective"
+  },
+  {
     "id": "linguis_elective",
     "name": "Linguistics Elective"
   },
