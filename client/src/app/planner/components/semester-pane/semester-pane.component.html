@@ -6,12 +6,12 @@
       </button>
     </div>
   </div>
-  <div *ngFor="let year of getYears()" class="row">
-    <ng-container *ngFor="let semester of getSemArr(semesters)">
-      <div *ngIf="semester" class="col-6 semester">
-        <app-semester *ngIf="semester" [semester]="semester" [currentSemesters]="getSemArr(semesters)"></app-semester>
-      </div>
-    </ng-container>
+
+<div class="container px-4 py-3">
+  <div class="row">
+    <div *ngFor="let semester of getSemArr(semesters)" class="col-6 semester">
+      <app-semester [semester]="semester" [currentSemesters]="getSemArr(semesters)"></app-semester>
+    </div>
   </div>
 </div>
 
