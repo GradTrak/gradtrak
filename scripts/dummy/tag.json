@@ -76,6 +76,10 @@
     "name": "EECS Upper Division Design Course"
   },
   {
+    "id": "eecs_technical_elective",
+    "name": "EECS Technical Elective"
+  },
+  {
     "id": "cs_design",
     "name": "CS Upper Division Design Course"
   },
