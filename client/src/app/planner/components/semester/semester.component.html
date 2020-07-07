@@ -1,6 +1,6 @@
 <div class="semester-name">{{ semester.name }}</div>
 <hr />
-<table>
+<table class="courses">
   <colgroup>
     <col class="name" />
     <col class="title" />
@@ -14,7 +14,7 @@
       <td>Units</td>
       <td></td>
     </tr>
-    <tr *ngFor="let course of semester.courses">
+    <tr class="course" *ngFor="let course of semester.courses">
       <td class="name">
         <ng-container *ngIf="isDuplicate(course)">
           <i class="material-icons" [ngbPopover]="duplicateCoursePopover" triggers="mouseenter:mouseleave">
