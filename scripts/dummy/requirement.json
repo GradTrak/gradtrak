@@ -302,7 +302,7 @@
           {
             "id": "lang",
             "type": "tag",
-            "name": "Foreign Language (Manually Fulfill)",
+            "name": "Foreign Language",
             "tagId": "ls_lang"
           }
         ]
@@ -1355,19 +1355,19 @@
           {
             "id": "stat_cluster_1",
             "type": "tag",
-            "name": "Cluster Course (Manually Fulfill)",
+            "name": "Cluster Course",
             "tagId": "stat_cluster"
           },
           {
             "id": "stat_cluster_2",
             "type": "tag",
-            "name": "Cluster Course (Manually Fulfill)",
+            "name": "Cluster Course",
             "tagId": "stat_cluster"
           },
           {
             "id": "stat_cluster_3",
             "type": "tag",
-            "name": "Cluster Course (Manually Fulfill)",
+            "name": "Cluster Course",
             "tagId": "stat_cluster"
           }
         ],
