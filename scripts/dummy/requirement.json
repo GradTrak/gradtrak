@@ -1043,6 +1043,17 @@
             "tagId": "eecs_ethics"
           }
         ]
+      },
+      {
+        "name": "Technical Elective",
+        "requirements": [
+          {
+            "id": "eecs_technical_elective",
+            "type": "tag",
+            "name": "EECS Technical Elective (Manually Fulfill)",
+            "tagId": "eecs_technical_elective"
+          }
+        ]
       }
     ]
   },
