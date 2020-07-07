@@ -4113,6 +4113,11 @@ flat-cache@^2.0.1:
     rimraf "2.6.3"
     write "1.0.3"
 
+flatmap@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/flatmap/-/flatmap-0.0.3.tgz#1f18a4d938152d495965f9c958d923ab2dd669b4"
+  integrity sha1-Hxik2TgVLUlZZfnJWNkjqy3WabQ=
+
 flatted@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.2.tgz#4575b21e2bcee7434aa9be662f4b7b5f9c2b5138"
