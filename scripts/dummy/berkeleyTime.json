@@ -14223,7 +14223,8 @@
     "dept": "CHEM",
     "no": "113",
     "tagIds": [
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -14241,7 +14242,8 @@
     "dept": "CHEM",
     "no": "115",
     "tagIds": [
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -14307,7 +14309,8 @@
     "dept": "CHEM",
     "no": "130B",
     "tagIds": [
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -44413,7 +44416,8 @@
     "dept": "ESPM",
     "no": "C148",
     "tagIds": [
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -79272,7 +79276,8 @@
     "tagIds": [
       "ls_quant",
       "mcb_neu_elective",
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -79604,7 +79609,8 @@
     "tagIds": [
       "ls_quant",
       "mcb_neu_elective",
-      "mcb_ggd_elective_b"
+      "mcb_ggd_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82419,7 +82425,8 @@
     "no": "100B",
     "tagIds": [
       "mcb_imm_elective_c",
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82478,7 +82485,8 @@
       "mcb_imm_elective_a",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82548,7 +82556,8 @@
       "mcb_imm_elective_a",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82588,7 +82597,8 @@
       "mcb_imm_elective_a",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82616,7 +82626,8 @@
     "tagIds": [
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82749,7 +82760,8 @@
       "mcb_neu_elective",
       "mcb_imm_elective_c",
       "mcb_imm_elective_b",
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82795,7 +82807,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82833,7 +82846,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82856,7 +82870,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82957,7 +82972,8 @@
       "mcb_neu_elective",
       "mcb_imm_elective_b",
       "mcb_ggd_elective_a",
-      "mcb_cdb_elective_a"
+      "mcb_cdb_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -82988,7 +83004,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83027,7 +83044,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83052,7 +83070,9 @@
     "id": "mcellbi143",
     "dept": "MCELLBI",
     "no": "143",
-    "tagIds": []
+    "tagIds": [
+      "mcb_bmb_elective"
+    ]
   },
   {
     "units": 4,
@@ -83063,7 +83083,8 @@
     "tagIds": [
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83077,7 +83098,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83090,7 +83112,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83143,7 +83166,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83174,7 +83198,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83221,7 +83246,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -83234,7 +83260,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -94280,7 +94307,8 @@
     "dept": "NUSCTX",
     "no": "C114",
     "tagIds": [
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -96419,7 +96447,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_ggd_elective_b",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -102623,7 +102652,8 @@
     "no": "112",
     "tagIds": [
       "mcb_neu_elective",
-      "mcb_ggd_elective_a"
+      "mcb_ggd_elective_a",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -102689,7 +102719,8 @@
     "dept": "PHYSICS",
     "no": "132",
     "tagIds": [
-      "mcb_neu_elective"
+      "mcb_neu_elective",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -102824,7 +102855,9 @@
     "id": "physics177",
     "dept": "PHYSICS",
     "no": "177",
-    "tagIds": []
+    "tagIds": [
+      "mcb_bmb_elective"
+    ]
   },
   {
     "units": 3,
@@ -103842,7 +103875,9 @@
     "id": "plantbic112",
     "dept": "PLANTBI",
     "no": "C112",
-    "tagIds": []
+    "tagIds": [
+      "mcb_bmb_elective"
+    ]
   },
   {
     "units": 2,
@@ -103866,7 +103901,9 @@
     "id": "plantbic114",
     "dept": "PLANTBI",
     "no": "C114",
-    "tagIds": []
+    "tagIds": [
+      "mcb_bmb_elective"
+    ]
   },
   {
     "units": 3,
@@ -103874,7 +103911,9 @@
     "id": "plantbic116",
     "dept": "PLANTBI",
     "no": "C116",
-    "tagIds": []
+    "tagIds": [
+      "mcb_bmb_elective"
+    ]
   },
   {
     "units": 3,
@@ -103931,7 +103970,8 @@
     "dept": "PLANTBI",
     "no": "C134",
     "tagIds": [
-      "mcb_ggd_elective_b"
+      "mcb_ggd_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -103942,7 +103982,8 @@
     "no": "135",
     "tagIds": [
       "mcb_ggd_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -104017,7 +104058,8 @@
     "no": "150",
     "tagIds": [
       "mcb_ggd_elective_a",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -104036,7 +104078,8 @@
     "no": "160",
     "tagIds": [
       "mcb_ggd_elective_b",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -125945,7 +125988,8 @@
       "ls_quant",
       "mcb_neu_elective",
       "mcb_ggd_elective_b",
-      "mcb_cdb_elective_b"
+      "mcb_cdb_elective_b",
+      "mcb_bmb_elective"
     ]
   },
   {
@@ -126046,7 +126090,8 @@
     "dept": "STAT",
     "no": "C141",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "mcb_bmb_elective"
     ]
   },
   {
