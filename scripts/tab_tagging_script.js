@@ -7,18 +7,18 @@ const nonAlphanumeric = /[^a-zA-Z0-9]/;
 
 
 //INPUTS
-const MY_FILE = './statCluster.txt'; //change to whatever
-const TAG = 'stat_cluster';
+const MY_FILE = './bioeTechTopics.txt'; //change to whatever
+const TAG = 'bioeng_technical_topics';
 
 
 
 var eligibleCourses = fs.readFileSync(MY_FILE).toString()
 eligibleCourses = eligibleCourses.split('\n')
 eligibleCourses = eligibleCourses.map(line => line.split('\t')[0].split(' / ').join('/'));
-eligibleCourses = flatmap(eligibleCourses, courses => {
+eligibleCourses = eligibleCourses.flatMap(courses => {
   const splitCourses = courses.split('/');
   if (splitCourses.length === 1) {
-    return splitCourses
+    return splitCourses;
   }
   if (hasNumber.test(splitCourses[0])) { //COMPSCI C100/DATA C100
     return splitCourses;
@@ -27,18 +27,13 @@ eligibleCourses = flatmap(eligibleCourses, courses => {
     //TODO
   }
 });
-eligibleCourses = eligibleCourses.map(courseId => courseId.replace(nonAlphanumeric, ''))
-eligibleCourses = eligibleCourses.map(courseId => courseId.replace(/\s/, '').toLowerCase());
-
-
+eligibleCourses = eligibleCourses.flatMap(courseId => courseId.replace(nonAlphanumeric, '').toLowerCase());
 //console.log(eligibleCourses);
-//process.exit(0)
-
+//process.exit(1)
 data.forEach((course) => {
-  const no = course.no.replace(/[a-zA-Z,]/, "");
   if (eligibleCourses.includes(course.id.toLowerCase())) {
     if (!course.tagIds.includes(TAG)) {
-      console.log(course.id, "tagged.")
+      console.log(course.id)
       course.tagIds = [...course.tagIds, TAG];
     }
   }
