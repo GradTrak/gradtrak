@@ -941,18 +941,14 @@
             "tagId": "eecs_natural_science"
           },
           {
-            "id": "physics",
-            "type": "multi",
-            "name": "EECS Physics",
-            "numRequired": 1,
-            "hidden": false,
+            "name": "Physics",
             "requirements": [
               {
-                "id": "physics7",
-                "type": "multi",
-                "name": "EECS Physics 7A/B",
-                "numRequired": 2,
-                "hidden": false,
+                "id": "physics5a/7a",
+                "type": "poly",
+                "name": "Physics 7A",
+                "numRequired": 1,
+                "hidden": true,
                 "requirements": [
                   {
                     "id": "physics7a",
@@ -961,25 +957,25 @@
                     "courseId": "physics7a"
                   },
                   {
-                    "id": "physics7b",
-                    "type": "course",
-                    "name": "PHYSICS 7B",
-                    "courseId": "physics7b"
-                  }
-                ]
-              },
-              {
-                "id": "physics5",
-                "type": "multi",
-                "name": "EECS Physics 5A/B",
-                "numRequired": 2,
-                "hidden": false,
-                "requirements": [
-                  {
                     "id": "physics5a",
                     "type": "course",
                     "name": "PHYSICS 5A",
                     "courseId": "physics5a"
+                  }
+                ]
+              },
+              {
+                "id": "physics5b/7b",
+                "type": "poly",
+                "name": "Physics 7B",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "id": "physics7b",
+                    "type": "course",
+                    "name": "PHYSICS 7B",
+                    "courseId": "physics7b"
                   },
                   {
                     "id": "physics5b",
