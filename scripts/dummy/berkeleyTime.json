@@ -11279,7 +11279,8 @@
     "dept": "ASTRON",
     "no": "101",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11289,7 +11290,8 @@
     "dept": "ASTRON",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11298,7 +11300,9 @@
     "id": "astron120a",
     "dept": "ASTRON",
     "no": "120A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -11306,7 +11310,9 @@
     "id": "astron120b",
     "dept": "ASTRON",
     "no": "120B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -11315,7 +11321,8 @@
     "dept": "ASTRON",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11325,7 +11332,8 @@
     "dept": "ASTRON",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11334,7 +11342,9 @@
     "id": "astron127a",
     "dept": "ASTRON",
     "no": "127A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -11342,7 +11352,9 @@
     "id": "astron127b",
     "dept": "ASTRON",
     "no": "127B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -11350,7 +11362,9 @@
     "id": "astron127c",
     "dept": "ASTRON",
     "no": "127C",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -11360,7 +11374,8 @@
     "no": "128",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11370,7 +11385,8 @@
     "dept": "ASTRON",
     "no": "149",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11379,7 +11395,9 @@
     "id": "astronc149",
     "dept": "ASTRON",
     "no": "C149",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -11388,7 +11406,8 @@
     "dept": "ASTRON",
     "no": "159",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11399,7 +11418,8 @@
     "no": "160",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11408,7 +11428,9 @@
     "id": "astron160a",
     "dept": "ASTRON",
     "no": "160A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -11416,7 +11438,9 @@
     "id": "astron160b",
     "dept": "ASTRON",
     "no": "160B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -11424,7 +11448,9 @@
     "id": "astronc160a",
     "dept": "ASTRON",
     "no": "C160A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -11433,7 +11459,8 @@
     "dept": "ASTRON",
     "no": "C161",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11443,7 +11470,8 @@
     "dept": "ASTRON",
     "no": "C162",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11453,7 +11481,8 @@
     "dept": "ASTRON",
     "no": "169",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -11463,7 +11492,8 @@
     "dept": "ASTRON",
     "no": "180",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -14938,7 +14968,8 @@
     "dept": "CHEM",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -14948,7 +14979,8 @@
     "dept": "CHEM",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -14957,7 +14989,9 @@
     "id": "chem104a",
     "dept": "CHEM",
     "no": "104A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -14965,7 +14999,9 @@
     "id": "chem104b",
     "dept": "CHEM",
     "no": "104B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -14974,7 +15010,8 @@
     "dept": "CHEM",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -14984,7 +15021,8 @@
     "dept": "CHEM",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -14994,7 +15032,8 @@
     "dept": "CHEM",
     "no": "C110L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15003,7 +15042,9 @@
     "id": "chem112a",
     "dept": "CHEM",
     "no": "112A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 5,
@@ -15011,7 +15052,9 @@
     "id": "chem112b",
     "dept": "CHEM",
     "no": "112B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15019,7 +15062,9 @@
     "id": "chem112bx",
     "dept": "CHEM",
     "no": "112BX",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15027,7 +15072,9 @@
     "id": "chem112e",
     "dept": "CHEM",
     "no": "112E",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 5,
@@ -15035,7 +15082,9 @@
     "id": "chem112h",
     "dept": "CHEM",
     "no": "112H",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -15043,7 +15092,9 @@
     "id": "chemq112",
     "dept": "CHEM",
     "no": "Q112",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15051,7 +15102,9 @@
     "id": "chemq112e",
     "dept": "CHEM",
     "no": "Q112E",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15062,7 +15115,8 @@
     "tagIds": [
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15072,7 +15126,8 @@
     "dept": "CHEM",
     "no": "114",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15084,7 +15139,8 @@
     "tagIds": [
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15095,7 +15151,8 @@
     "no": "120A",
     "tagIds": [
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15106,7 +15163,8 @@
     "no": "120B",
     "tagIds": [
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15116,7 +15174,8 @@
     "dept": "CHEM",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15126,7 +15185,8 @@
     "dept": "CHEM",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15136,7 +15196,8 @@
     "dept": "CHEM",
     "no": "124",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15146,7 +15207,8 @@
     "dept": "CHEM",
     "no": "125",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15165,7 +15227,8 @@
     "no": "130B",
     "tagIds": [
       "mcb_ggd_elective_a",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15185,7 +15248,8 @@
     "tagIds": [
       "ls_bio",
       "ls_phys",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15196,7 +15260,8 @@
     "no": "135",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15206,7 +15271,8 @@
     "dept": "CHEM",
     "no": "C138",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15226,7 +15292,8 @@
     "dept": "CHEM",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15235,7 +15302,9 @@
     "id": "chemc144",
     "dept": "CHEM",
     "no": "C144",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15244,7 +15313,8 @@
     "dept": "CHEM",
     "no": "146",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15253,7 +15323,9 @@
     "id": "chemc150",
     "dept": "CHEM",
     "no": "C150",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15262,7 +15334,8 @@
     "dept": "CHEM",
     "no": "C170L",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15272,7 +15345,8 @@
     "dept": "CHEM",
     "no": "C178",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15281,7 +15355,9 @@
     "id": "chemc182",
     "dept": "CHEM",
     "no": "C182",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15290,7 +15366,8 @@
     "dept": "CHEM",
     "no": "C191",
     "tagIds": [
-      "compscic191"
+      "compscic191",
+      "eecs_natural_science"
     ]
   },
   {
@@ -15299,7 +15376,9 @@
     "id": "chemh193",
     "dept": "CHEM",
     "no": "H193",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -15307,7 +15386,9 @@
     "id": "chem195",
     "dept": "CHEM",
     "no": "195",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1,
@@ -44950,7 +45031,8 @@
     "dept": "EPS",
     "no": "100A",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "eecs_natural_science"
     ]
   },
   {
@@ -44959,7 +45041,9 @@
     "id": "eps100b",
     "dept": "EPS",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -44967,7 +45051,9 @@
     "id": "epsc100",
     "dept": "EPS",
     "no": "C100",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -44978,7 +45064,8 @@
     "tagIds": [
       "ls_phys",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -44989,7 +45076,8 @@
     "no": "102",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -44999,7 +45087,8 @@
     "dept": "EPS",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45009,7 +45098,8 @@
     "dept": "EPS",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45019,7 +45109,8 @@
     "dept": "EPS",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45038,7 +45129,9 @@
     "id": "eps106ac",
     "dept": "EPS",
     "no": "106AC",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -45055,7 +45148,8 @@
     "dept": "EPS",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45065,7 +45159,8 @@
     "dept": "EPS",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45076,7 +45171,8 @@
     "no": "109",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45086,7 +45182,8 @@
     "dept": "EPS",
     "no": "111",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45096,7 +45193,8 @@
     "dept": "EPS",
     "no": "113",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45106,7 +45204,8 @@
     "dept": "EPS",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45116,7 +45215,8 @@
     "dept": "EPS",
     "no": "116",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45127,7 +45227,8 @@
     "no": "117",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45137,7 +45238,8 @@
     "dept": "EPS",
     "no": "118",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45156,7 +45258,9 @@
     "id": "epsc120",
     "dept": "EPS",
     "no": "C120",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1,
@@ -45173,7 +45277,8 @@
     "dept": "EPS",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45183,7 +45288,8 @@
     "dept": "EPS",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45193,7 +45299,8 @@
     "dept": "EPS",
     "no": "124",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45203,7 +45310,8 @@
     "dept": "EPS",
     "no": "125",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45215,7 +45323,8 @@
     "tagIds": [
       "ls_bio",
       "ls_phys",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45226,7 +45335,8 @@
     "no": "130",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45237,7 +45347,8 @@
     "no": "131",
     "tagIds": [
       "ls_phys",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45247,7 +45358,8 @@
     "dept": "EPS",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45257,7 +45369,8 @@
     "dept": "EPS",
     "no": "C146",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45277,7 +45390,8 @@
     "dept": "EPS",
     "no": "C162",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45287,7 +45401,8 @@
     "dept": "EPS",
     "no": "170AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45296,7 +45411,9 @@
     "id": "epsc178",
     "dept": "EPS",
     "no": "C178",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -45305,7 +45422,8 @@
     "dept": "EPS",
     "no": "C180",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45315,7 +45433,8 @@
     "dept": "EPS",
     "no": "181",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45326,7 +45445,8 @@
     "no": "C181",
     "tagIds": [
       "ls_phys",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45336,7 +45456,8 @@
     "dept": "EPS",
     "no": "182",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -45345,7 +45466,9 @@
     "id": "epsc182",
     "dept": "EPS",
     "no": "C182",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -45353,7 +45476,9 @@
     "id": "epsc183",
     "dept": "EPS",
     "no": "C183",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -45371,7 +45496,9 @@
     "id": "epsh195",
     "dept": "EPS",
     "no": "H195",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -70431,7 +70558,9 @@
     "id": "integbi100a",
     "dept": "INTEGBI",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -70439,7 +70568,9 @@
     "id": "integbi100b",
     "dept": "INTEGBI",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -70447,7 +70578,9 @@
     "id": "integbi100c",
     "dept": "INTEGBI",
     "no": "100C",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -70472,7 +70605,8 @@
     "dept": "INTEGBI",
     "no": "101",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70497,7 +70631,9 @@
     "id": "integbic101l",
     "dept": "INTEGBI",
     "no": "C101L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -70524,7 +70660,8 @@
     "dept": "INTEGBI",
     "no": "102LF",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70550,7 +70687,8 @@
     "dept": "INTEGBI",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70569,7 +70707,8 @@
     "no": "103LF",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70579,7 +70718,8 @@
     "dept": "INTEGBI",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70598,7 +70738,8 @@
     "no": "104LF",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70608,7 +70749,8 @@
     "dept": "INTEGBI",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70617,7 +70759,9 @@
     "id": "integbic105",
     "dept": "INTEGBI",
     "no": "C105",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -70626,7 +70770,8 @@
     "dept": "INTEGBI",
     "no": "106",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70636,7 +70781,8 @@
     "dept": "INTEGBI",
     "no": "106A",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70672,7 +70818,8 @@
     "dept": "INTEGBI",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70700,7 +70847,8 @@
     "dept": "INTEGBI",
     "no": "C110L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70762,7 +70910,8 @@
     "dept": "INTEGBI",
     "no": "113L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70772,7 +70921,8 @@
     "dept": "INTEGBI",
     "no": "114",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70784,7 +70934,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70803,7 +70954,9 @@
     "id": "integbi116l",
     "dept": "INTEGBI",
     "no": "116L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -70811,7 +70964,9 @@
     "id": "integbin116",
     "dept": "INTEGBI",
     "no": "N116",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -70856,7 +71011,8 @@
     "no": "118",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70867,7 +71023,8 @@
     "no": "119",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70877,7 +71034,8 @@
     "dept": "INTEGBI",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70912,7 +71070,9 @@
     "id": "integbi123a",
     "dept": "INTEGBI",
     "no": "123A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 5,
@@ -70922,7 +71082,8 @@
     "no": "123AL",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70931,7 +71092,9 @@
     "id": "integbi123b",
     "dept": "INTEGBI",
     "no": "123B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1,
@@ -70948,7 +71111,8 @@
     "dept": "INTEGBI",
     "no": "124",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70984,7 +71148,8 @@
     "dept": "INTEGBI",
     "no": "C125L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -70994,7 +71159,8 @@
     "dept": "INTEGBI",
     "no": "126",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71014,7 +71180,8 @@
     "dept": "INTEGBI",
     "no": "127L",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71025,7 +71192,8 @@
     "no": "128",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71035,7 +71203,8 @@
     "dept": "INTEGBI",
     "no": "129",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71052,7 +71221,9 @@
     "id": "integbic129",
     "dept": "INTEGBI",
     "no": "C129",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71061,7 +71232,8 @@
     "dept": "INTEGBI",
     "no": "C129L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71071,7 +71243,8 @@
     "dept": "INTEGBI",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71080,7 +71253,9 @@
     "id": "integbi130l",
     "dept": "INTEGBI",
     "no": "130L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -71088,7 +71263,9 @@
     "id": "integbic130",
     "dept": "INTEGBI",
     "no": "C130",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71101,7 +71278,8 @@
       "mcb_cdb_elective_b",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71126,7 +71304,9 @@
     "id": "integbis131",
     "dept": "INTEGBI",
     "no": "S131",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -71145,7 +71325,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71170,7 +71351,9 @@
     "id": "integbis132",
     "dept": "INTEGBI",
     "no": "S132",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -71197,7 +71380,8 @@
     "dept": "INTEGBI",
     "no": "134",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71206,7 +71390,9 @@
     "id": "integbi134l",
     "dept": "INTEGBI",
     "no": "134L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -71217,7 +71403,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71226,7 +71413,9 @@
     "id": "integbi135l",
     "dept": "INTEGBI",
     "no": "135L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71235,7 +71424,8 @@
     "dept": "INTEGBI",
     "no": "C135L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71245,7 +71435,8 @@
     "dept": "INTEGBI",
     "no": "136",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71257,7 +71448,8 @@
     "tagIds": [
       "mcb_cdb_elective_b",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71276,7 +71468,8 @@
     "no": "138",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71287,7 +71480,8 @@
     "no": "139",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71304,7 +71498,9 @@
     "id": "integbic139",
     "dept": "INTEGBI",
     "no": "C139",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -71315,7 +71511,8 @@
     "tagIds": [
       "mcb_cdb_elective_b",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71324,7 +71521,9 @@
     "id": "integbis140",
     "dept": "INTEGBI",
     "no": "S140",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71333,7 +71532,8 @@
     "dept": "INTEGBI",
     "no": "141",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71342,7 +71542,9 @@
     "id": "integbis141",
     "dept": "INTEGBI",
     "no": "S141",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 6,
@@ -71350,7 +71552,9 @@
     "id": "integbic142",
     "dept": "INTEGBI",
     "no": "C142",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 6,
@@ -71359,7 +71563,8 @@
     "dept": "INTEGBI",
     "no": "C142L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71369,7 +71574,8 @@
     "dept": "INTEGBI",
     "no": "143",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71378,7 +71584,9 @@
     "id": "integbi143a",
     "dept": "INTEGBI",
     "no": "143A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71386,7 +71594,9 @@
     "id": "integbi143b",
     "dept": "INTEGBI",
     "no": "143B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -71405,7 +71615,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_cdb_elective_b",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71417,7 +71628,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_cdb_elective_b",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71427,7 +71639,8 @@
     "dept": "INTEGBI",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71437,7 +71650,8 @@
     "dept": "INTEGBI",
     "no": "C144",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71447,7 +71661,8 @@
     "dept": "INTEGBI",
     "no": "145",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71456,7 +71671,9 @@
     "id": "integbi145l",
     "dept": "INTEGBI",
     "no": "145L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71464,7 +71681,9 @@
     "id": "integbis145",
     "dept": "INTEGBI",
     "no": "S145",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71473,7 +71692,8 @@
     "dept": "INTEGBI",
     "no": "146",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71491,7 +71711,8 @@
     "dept": "INTEGBI",
     "no": "146LF",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71501,7 +71722,8 @@
     "dept": "INTEGBI",
     "no": "147",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71510,7 +71732,9 @@
     "id": "integbic147",
     "dept": "INTEGBI",
     "no": "C147",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71522,7 +71746,8 @@
       "mcb_cdb_elective_b",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71531,7 +71756,9 @@
     "id": "integbi148l",
     "dept": "INTEGBI",
     "no": "148L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71540,7 +71767,8 @@
     "dept": "INTEGBI",
     "no": "149",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71558,7 +71786,8 @@
     "dept": "INTEGBI",
     "no": "C149",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71576,7 +71805,8 @@
     "dept": "INTEGBI",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71585,7 +71815,9 @@
     "id": "integbi150l",
     "dept": "INTEGBI",
     "no": "150L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -71595,7 +71827,8 @@
     "no": "151",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71614,7 +71847,8 @@
     "no": "152",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71625,7 +71859,8 @@
     "no": "153",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71634,7 +71869,9 @@
     "id": "integbi153a",
     "dept": "INTEGBI",
     "no": "153A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -71650,7 +71887,9 @@
     "id": "integbi153l",
     "dept": "INTEGBI",
     "no": "153L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71658,7 +71897,9 @@
     "id": "integbi153lf",
     "dept": "INTEGBI",
     "no": "153LF",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71666,7 +71907,9 @@
     "id": "integbi153x",
     "dept": "INTEGBI",
     "no": "153X",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71676,7 +71919,8 @@
     "no": "154",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71694,7 +71938,8 @@
     "dept": "INTEGBI",
     "no": "155",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71703,7 +71948,9 @@
     "id": "integbi155l",
     "dept": "INTEGBI",
     "no": "155L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71712,7 +71959,8 @@
     "dept": "INTEGBI",
     "no": "C155",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71722,7 +71970,8 @@
     "dept": "INTEGBI",
     "no": "156",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71732,7 +71981,8 @@
     "dept": "INTEGBI",
     "no": "C156",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71741,7 +71991,9 @@
     "id": "integbi157l",
     "dept": "INTEGBI",
     "no": "157L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -71750,7 +72002,8 @@
     "dept": "INTEGBI",
     "no": "157LF",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71759,7 +72012,9 @@
     "id": "integbis157",
     "dept": "INTEGBI",
     "no": "S157",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 13,
@@ -71770,7 +72025,8 @@
     "tagIds": [
       "ls_bio",
       "ls_inter",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71779,7 +72035,9 @@
     "id": "integbic158",
     "dept": "INTEGBI",
     "no": "C158",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71788,7 +72046,8 @@
     "dept": "INTEGBI",
     "no": "159",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71800,7 +72059,8 @@
     "tagIds": [
       "mcb_ggd_elective_a",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71813,7 +72073,8 @@
       "mcb_ggd_elective_b",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71825,7 +72086,8 @@
     "tagIds": [
       "mcb_ggd_elective_b",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71837,7 +72099,8 @@
     "tagIds": [
       "mcb_ggd_elective_b",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71849,7 +72112,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71859,7 +72123,8 @@
     "dept": "INTEGBI",
     "no": "165",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71870,7 +72135,8 @@
     "no": "166",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71880,7 +72146,8 @@
     "dept": "INTEGBI",
     "no": "167",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71900,7 +72167,8 @@
     "dept": "INTEGBI",
     "no": "168L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71911,7 +72179,8 @@
     "no": "169",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71920,7 +72189,9 @@
     "id": "integbi170lf",
     "dept": "INTEGBI",
     "no": "170LF",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -71929,7 +72200,8 @@
     "dept": "INTEGBI",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71938,7 +72210,9 @@
     "id": "integbic171",
     "dept": "INTEGBI",
     "no": "C171",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -71947,7 +72221,8 @@
     "dept": "INTEGBI",
     "no": "172",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -71966,7 +72241,9 @@
     "id": "integbi173l",
     "dept": "INTEGBI",
     "no": "173L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 5,
@@ -71975,7 +72252,8 @@
     "dept": "INTEGBI",
     "no": "173LF",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72003,7 +72281,8 @@
     "dept": "INTEGBI",
     "no": "174LF",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72031,7 +72310,8 @@
     "dept": "INTEGBI",
     "no": "175LF",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72050,7 +72330,9 @@
     "id": "integbi176l",
     "dept": "INTEGBI",
     "no": "176L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -72058,7 +72340,9 @@
     "id": "integbic176l",
     "dept": "INTEGBI",
     "no": "C176L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -72074,7 +72358,9 @@
     "id": "integbi177lf",
     "dept": "INTEGBI",
     "no": "177LF",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -72092,7 +72378,9 @@
     "id": "integbi180l",
     "dept": "INTEGBI",
     "no": "180L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -72111,7 +72399,8 @@
     "dept": "INTEGBI",
     "no": "181L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72130,7 +72419,9 @@
     "id": "integbi182l",
     "dept": "INTEGBI",
     "no": "182L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -72139,7 +72430,8 @@
     "dept": "INTEGBI",
     "no": "183",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72149,7 +72441,8 @@
     "dept": "INTEGBI",
     "no": "183L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72169,7 +72462,8 @@
     "dept": "INTEGBI",
     "no": "184L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72204,7 +72498,9 @@
     "id": "integbic185",
     "dept": "INTEGBI",
     "no": "C185",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 5,
@@ -72213,7 +72509,8 @@
     "dept": "INTEGBI",
     "no": "C185L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72223,7 +72520,8 @@
     "dept": "INTEGBI",
     "no": "186",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72233,7 +72531,8 @@
     "dept": "INTEGBI",
     "no": "187",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72243,7 +72542,8 @@
     "dept": "INTEGBI",
     "no": "C187",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72253,7 +72553,8 @@
     "dept": "INTEGBI",
     "no": "191",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -72270,7 +72571,9 @@
     "id": "integbih196a",
     "dept": "INTEGBI",
     "no": "H196A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -72278,7 +72581,9 @@
     "id": "integbih196b",
     "dept": "INTEGBI",
     "no": "H196B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -72286,7 +72591,9 @@
     "id": "integbis196a",
     "dept": "INTEGBI",
     "no": "S196A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -72294,7 +72601,9 @@
     "id": "integbis196b",
     "dept": "INTEGBI",
     "no": "S196B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1,
@@ -87235,7 +87544,8 @@
     "dept": "MCELLBI",
     "no": "100",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87250,7 +87560,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87263,7 +87574,8 @@
       "ls_bio",
       "ls_phys",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87276,7 +87588,8 @@
       "ls_bio",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87285,7 +87598,9 @@
     "id": "mcellbi102l",
     "dept": "MCELLBI",
     "no": "102L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87293,7 +87608,9 @@
     "id": "mcellbis102",
     "dept": "MCELLBI",
     "no": "S102",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87301,7 +87618,9 @@
     "id": "mcellbis102l",
     "dept": "MCELLBI",
     "no": "S102L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87316,7 +87635,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87327,7 +87647,8 @@
     "no": "104",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87339,7 +87660,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87348,7 +87670,9 @@
     "id": "mcellbi110l",
     "dept": "MCELLBI",
     "no": "110L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87357,7 +87681,8 @@
     "dept": "MCELLBI",
     "no": "C110L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87367,7 +87692,8 @@
     "dept": "MCELLBI",
     "no": "111",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87377,7 +87703,8 @@
     "dept": "MCELLBI",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87386,7 +87713,9 @@
     "id": "mcellbi112l",
     "dept": "MCELLBI",
     "no": "112L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87402,7 +87731,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87430,7 +87760,8 @@
     "dept": "MCELLBI",
     "no": "114",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87446,7 +87777,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87466,7 +87798,8 @@
     "dept": "MCELLBI",
     "no": "116",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87480,7 +87813,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87489,7 +87823,9 @@
     "id": "mcellbi117l",
     "dept": "MCELLBI",
     "no": "117L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1,
@@ -87518,7 +87854,8 @@
     "dept": "MCELLBI",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87527,7 +87864,9 @@
     "id": "mcellbi120l",
     "dept": "MCELLBI",
     "no": "120L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87536,7 +87875,8 @@
     "dept": "MCELLBI",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87545,7 +87885,9 @@
     "id": "mcellbi122l",
     "dept": "MCELLBI",
     "no": "122L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87554,7 +87896,8 @@
     "dept": "MCELLBI",
     "no": "124",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87563,7 +87906,9 @@
     "id": "mcellbi125b",
     "dept": "MCELLBI",
     "no": "125B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87571,7 +87916,9 @@
     "id": "mcellbi125c",
     "dept": "MCELLBI",
     "no": "125C",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87579,7 +87926,9 @@
     "id": "mcellbi125d",
     "dept": "MCELLBI",
     "no": "125D",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87587,7 +87936,9 @@
     "id": "mcellbi125e",
     "dept": "MCELLBI",
     "no": "125E",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87595,7 +87946,9 @@
     "id": "mcellbi125f",
     "dept": "MCELLBI",
     "no": "125F",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87603,7 +87956,9 @@
     "id": "mcellbi125g",
     "dept": "MCELLBI",
     "no": "125G",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -87627,7 +87982,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87636,7 +87992,9 @@
     "id": "mcellbi130a",
     "dept": "MCELLBI",
     "no": "130A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87644,7 +88002,9 @@
     "id": "mcellbi130l",
     "dept": "MCELLBI",
     "no": "130L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87652,7 +88012,9 @@
     "id": "mcellbin130l",
     "dept": "MCELLBI",
     "no": "N130L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87661,7 +88023,8 @@
     "dept": "MCELLBI",
     "no": "131",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87679,7 +88042,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87700,7 +88064,8 @@
     "no": "133L",
     "tagIds": [
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87710,7 +88075,8 @@
     "dept": "MCELLBI",
     "no": "134",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87727,7 +88093,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87755,7 +88122,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87764,7 +88132,9 @@
     "id": "mcellbi135b",
     "dept": "MCELLBI",
     "no": "135B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87772,7 +88142,9 @@
     "id": "mcellbi135c",
     "dept": "MCELLBI",
     "no": "135C",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87780,7 +88152,9 @@
     "id": "mcellbi135d",
     "dept": "MCELLBI",
     "no": "135D",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87788,7 +88162,9 @@
     "id": "mcellbi135e",
     "dept": "MCELLBI",
     "no": "135E",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87796,7 +88172,9 @@
     "id": "mcellbi135f",
     "dept": "MCELLBI",
     "no": "135F",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -87812,7 +88190,9 @@
     "id": "mcellbi135h",
     "dept": "MCELLBI",
     "no": "135H",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87820,7 +88200,9 @@
     "id": "mcellbi135j",
     "dept": "MCELLBI",
     "no": "135J",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87828,7 +88210,9 @@
     "id": "mcellbi135k",
     "dept": "MCELLBI",
     "no": "135K",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87836,7 +88220,9 @@
     "id": "mcellbi135m",
     "dept": "MCELLBI",
     "no": "135M",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87844,7 +88230,9 @@
     "id": "mcellbic135v",
     "dept": "MCELLBI",
     "no": "C135V",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -87860,7 +88248,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87869,7 +88258,9 @@
     "id": "mcellbi136l",
     "dept": "MCELLBI",
     "no": "136L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87878,7 +88269,8 @@
     "dept": "MCELLBI",
     "no": "137",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87893,7 +88285,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87915,7 +88308,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87926,7 +88320,8 @@
     "no": "140L",
     "tagIds": [
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87944,7 +88339,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87954,7 +88350,8 @@
     "dept": "MCELLBI",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87963,7 +88360,9 @@
     "id": "mcellbic142",
     "dept": "MCELLBI",
     "no": "C142",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -87974,7 +88373,8 @@
     "tagIds": [
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -87989,7 +88389,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88006,7 +88407,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88023,7 +88425,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88033,7 +88436,8 @@
     "dept": "MCELLBI",
     "no": "150L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88042,7 +88446,9 @@
     "id": "mcellbis150",
     "dept": "MCELLBI",
     "no": "S150",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -88051,7 +88457,8 @@
     "dept": "MCELLBI",
     "no": "152",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88060,7 +88467,9 @@
     "id": "mcellbis152",
     "dept": "MCELLBI",
     "no": "S152",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -88069,7 +88478,8 @@
     "dept": "MCELLBI",
     "no": "154",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88085,7 +88495,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88096,7 +88507,8 @@
     "no": "160L",
     "tagIds": [
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88105,7 +88517,9 @@
     "id": "mcellbic160",
     "dept": "MCELLBI",
     "no": "C160",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -88120,7 +88534,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88130,7 +88545,8 @@
     "dept": "MCELLBI",
     "no": "162",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88140,7 +88556,8 @@
     "dept": "MCELLBI",
     "no": "163",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88150,7 +88567,8 @@
     "dept": "MCELLBI",
     "no": "163L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88160,7 +88578,8 @@
     "dept": "MCELLBI",
     "no": "164",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88176,7 +88595,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88193,7 +88613,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88203,7 +88624,8 @@
     "dept": "MCELLBI",
     "no": "167",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -88220,7 +88642,9 @@
     "id": "mcellbi170l",
     "dept": "MCELLBI",
     "no": "170L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1,
@@ -88263,7 +88687,8 @@
     "dept": "MCELLBI",
     "no": "191",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108474,7 +108899,8 @@
     "tagIds": [
       "ls_phys",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108483,7 +108909,9 @@
     "id": "physicss105",
     "dept": "PHYSICS",
     "no": "S105",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -108492,7 +108920,8 @@
     "dept": "PHYSICS",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108504,7 +108933,8 @@
     "tagIds": [
       "ls_phys",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108514,7 +108944,8 @@
     "dept": "PHYSICS",
     "no": "110B",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108525,7 +108956,8 @@
     "no": "111A",
     "tagIds": [
       "ls_phys",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108540,7 +108972,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108549,7 +108982,9 @@
     "id": "physicss112",
     "dept": "PHYSICS",
     "no": "S112",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -108568,7 +109003,8 @@
     "dept": "PHYSICS",
     "no": "124",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108579,7 +109015,8 @@
     "no": "129",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108588,7 +109025,9 @@
     "id": "physics129a",
     "dept": "PHYSICS",
     "no": "129A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -108596,7 +109035,9 @@
     "id": "physics129b",
     "dept": "PHYSICS",
     "no": "129B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -108606,7 +109047,8 @@
     "no": "130",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108618,7 +109060,8 @@
     "tagIds": [
       "mcb_neu_elective",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108628,7 +109071,8 @@
     "dept": "PHYSICS",
     "no": "136",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108640,7 +109084,8 @@
     "tagIds": [
       "ls_phys",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108651,7 +109096,8 @@
     "no": "137B",
     "tagIds": [
       "ls_phys",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108660,7 +109106,9 @@
     "id": "physicsq137c",
     "dept": "PHYSICS",
     "no": "Q137C",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -108668,7 +109116,9 @@
     "id": "physicss137a",
     "dept": "PHYSICS",
     "no": "S137A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -108678,7 +109128,8 @@
     "no": "138",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108689,7 +109140,8 @@
     "no": "139",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108700,7 +109152,8 @@
     "no": "141A",
     "tagIds": [
       "ls_phys",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108710,7 +109163,8 @@
     "dept": "PHYSICS",
     "no": "141B",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108721,7 +109175,8 @@
     "no": "142",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108731,7 +109186,8 @@
     "dept": "PHYSICS",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108741,7 +109197,8 @@
     "dept": "PHYSICS",
     "no": "151",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108760,7 +109217,9 @@
     "id": "physicsc160b",
     "dept": "PHYSICS",
     "no": "C160B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -108769,7 +109228,8 @@
     "dept": "PHYSICS",
     "no": "C161",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108782,7 +109242,8 @@
       "mcb_bmb_elective",
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108792,7 +109253,8 @@
     "dept": "PHYSICS",
     "no": "180",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108802,7 +109264,8 @@
     "dept": "PHYSICS",
     "no": "188",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108820,7 +109283,8 @@
     "dept": "PHYSICS",
     "no": "191",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -108829,7 +109293,9 @@
     "id": "physics191a",
     "dept": "PHYSICS",
     "no": "191A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -108837,7 +109303,9 @@
     "id": "physicsc191",
     "dept": "PHYSICS",
     "no": "C191",
-    "tagIds": [],
+    "tagIds": [
+      "eecs_natural_science"
+    ],
     "equivIds": [
       "compscic191"
     ]
@@ -109676,7 +110144,9 @@
     "id": "plantbi100a",
     "dept": "PLANTBI",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -109684,7 +110154,9 @@
     "id": "plantbi100b",
     "dept": "PLANTBI",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -109701,7 +110173,8 @@
     "dept": "PLANTBI",
     "no": "101",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109711,7 +110184,8 @@
     "dept": "PLANTBI",
     "no": "101L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109728,7 +110202,9 @@
     "id": "plantbic102l",
     "dept": "PLANTBI",
     "no": "C102L",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -109737,7 +110213,8 @@
     "dept": "PLANTBI",
     "no": "C103",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109755,7 +110232,8 @@
     "dept": "PLANTBI",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109764,7 +110242,9 @@
     "id": "plantbic107",
     "dept": "PLANTBI",
     "no": "C107",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -109773,7 +110253,8 @@
     "dept": "PLANTBI",
     "no": "C107L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109782,7 +110263,9 @@
     "id": "plantbic107lf",
     "dept": "PLANTBI",
     "no": "C107LF",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 3,
@@ -109791,7 +110274,8 @@
     "dept": "PLANTBI",
     "no": "C109",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109819,7 +110303,8 @@
     "dept": "PLANTBI",
     "no": "C110L",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109831,7 +110316,8 @@
     "tagIds": [
       "mcb_bmb_elective",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109850,7 +110336,8 @@
     "no": "113",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109861,7 +110348,8 @@
     "no": "C114",
     "tagIds": [
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109872,7 +110360,8 @@
     "no": "C116",
     "tagIds": [
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109882,7 +110371,8 @@
     "dept": "PLANTBI",
     "no": "118",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109921,7 +110411,8 @@
     "dept": "PLANTBI",
     "no": "C124",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109931,7 +110422,8 @@
     "dept": "PLANTBI",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109943,7 +110435,8 @@
     "tagIds": [
       "mcb_ggd_elective_b",
       "mcb_bmb_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109957,7 +110450,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109975,7 +110469,8 @@
     "dept": "PLANTBI",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "eecs_natural_science"
     ]
   },
   {
@@ -109994,7 +110489,9 @@
     "id": "plantbic144",
     "dept": "PLANTBI",
     "no": "C144",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 2,
@@ -110010,7 +110507,9 @@
     "id": "plantbic145",
     "dept": "PLANTBI",
     "no": "C145",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -110018,7 +110517,9 @@
     "id": "plantbic146",
     "dept": "PLANTBI",
     "no": "C146",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 4,
@@ -110027,7 +110528,8 @@
     "dept": "PLANTBI",
     "no": "C148",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -110041,7 +110543,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -110063,7 +110566,8 @@
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -110082,7 +110586,8 @@
     "no": "165",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -110124,7 +110629,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "eecs_natural_science"
     ]
   },
   {
@@ -110141,7 +110647,9 @@
     "id": "plantbih196",
     "dept": "PLANTBI",
     "no": "H196",
-    "tagIds": []
+    "tagIds": [
+      "eecs_natural_science"
+    ]
   },
   {
     "units": 1.5,

@@ -24,7 +24,7 @@ eligibleCourses = eligibleCourses.map(line => {
 const allowed = ['ASTRON', 'CHEM', 'EPS', 'INTEGBI', 'MCELLBI', 'PHYSICS', 'PLANTBI']
 data.forEach((course) => {
   //if (eligibleCourses.includes(course.id.toLowerCase())) {
-  if (allowed.includes(course.dept) && course.units >= 3) {
+  if (allowed.includes(course.dept) && course.units >= 3 && course.no.replace(/[A-Za-z]/g, '') >= 100 && course.no.replace(/[A-Za-z]/g, '') < 200) {
     if (!course.tagIds.includes(TAG)) {
       console.log(course.id)
       course.tagIds = [...course.tagIds, TAG];
