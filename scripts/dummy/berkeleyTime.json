@@ -469,7 +469,9 @@
     "id": "africam7b",
     "dept": "AFRICAM",
     "no": "7B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -493,7 +495,9 @@
     "id": "africam8a",
     "dept": "AFRICAM",
     "no": "8A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -501,7 +505,9 @@
     "id": "africam8b",
     "dept": "AFRICAM",
     "no": "8B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -525,7 +531,9 @@
     "id": "africam9a",
     "dept": "AFRICAM",
     "no": "9A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -533,7 +541,9 @@
     "id": "africam9b",
     "dept": "AFRICAM",
     "no": "9B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -557,7 +567,9 @@
     "id": "africam10a",
     "dept": "AFRICAM",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -565,7 +577,9 @@
     "id": "africam10b",
     "dept": "AFRICAM",
     "no": "10B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -597,7 +611,9 @@
     "id": "africam11b",
     "dept": "AFRICAM",
     "no": "11B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -621,7 +637,9 @@
     "id": "africam12",
     "dept": "AFRICAM",
     "no": "12",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -637,7 +655,9 @@
     "id": "africam13b",
     "dept": "AFRICAM",
     "no": "13B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -661,7 +681,9 @@
     "id": "africam14a",
     "dept": "AFRICAM",
     "no": "14A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -669,7 +691,9 @@
     "id": "africam14b",
     "dept": "AFRICAM",
     "no": "14B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -693,7 +717,9 @@
     "id": "africam15a",
     "dept": "AFRICAM",
     "no": "15A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -701,7 +727,9 @@
     "id": "africam15b",
     "dept": "AFRICAM",
     "no": "15B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -733,7 +761,9 @@
     "id": "africam16b",
     "dept": "AFRICAM",
     "no": "16B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -767,7 +797,9 @@
     "id": "africam18b",
     "dept": "AFRICAM",
     "no": "18B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -775,7 +807,9 @@
     "id": "africam19a",
     "dept": "AFRICAM",
     "no": "19A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -783,7 +817,9 @@
     "id": "africam19b",
     "dept": "AFRICAM",
     "no": "19B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -823,7 +859,9 @@
     "id": "africam21a",
     "dept": "AFRICAM",
     "no": "21A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -919,7 +957,9 @@
     "id": "africam30b",
     "dept": "AFRICAM",
     "no": "30B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -943,7 +983,9 @@
     "id": "africam31a",
     "dept": "AFRICAM",
     "no": "31A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -951,7 +993,9 @@
     "id": "africam31b",
     "dept": "AFRICAM",
     "no": "31B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -7011,7 +7055,9 @@
     "id": "arabic1b",
     "dept": "ARABIC",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -7059,7 +7105,9 @@
     "id": "arabic10",
     "dept": "ARABIC",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -7115,7 +7163,9 @@
     "id": "arabic20a",
     "dept": "ARABIC",
     "no": "20A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -7123,7 +7173,9 @@
     "id": "arabic20b",
     "dept": "ARABIC",
     "no": "20B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -7139,7 +7191,9 @@
     "id": "arabic30",
     "dept": "ARABIC",
     "no": "30",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -7156,7 +7210,8 @@
     "dept": "ARABIC",
     "no": "100A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -7165,7 +7220,9 @@
     "id": "arabic100b",
     "dept": "ARABIC",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -9007,7 +9064,9 @@
     "id": "armeni1b",
     "dept": "ARMENI",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -9015,7 +9074,9 @@
     "id": "armeni101a",
     "dept": "ARMENI",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -9023,7 +9084,9 @@
     "id": "armeni101b",
     "dept": "ARMENI",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -11707,7 +11770,9 @@
     "id": "bangla1b",
     "dept": "BANGLA",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -11715,7 +11780,9 @@
     "id": "bangla101a",
     "dept": "BANGLA",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -11723,7 +11790,9 @@
     "id": "bangla101b",
     "dept": "BANGLA",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 0,
@@ -13361,7 +13430,9 @@
     "id": "boscrsr27b",
     "dept": "BOSCRSR",
     "no": "27B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -13369,7 +13440,9 @@
     "id": "boscrsr117a",
     "dept": "BOSCRSR",
     "no": "117A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -13377,7 +13450,9 @@
     "id": "boscrsr117b",
     "dept": "BOSCRSR",
     "no": "117B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -13856,7 +13931,9 @@
     "id": "bulgari118a",
     "dept": "BULGARI",
     "no": "118A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -13864,7 +13941,9 @@
     "id": "bulgari118b",
     "dept": "BULGARI",
     "no": "118B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -13880,7 +13959,9 @@
     "id": "burmese1b",
     "dept": "BURMESE",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -14133,7 +14214,9 @@
     "id": "celtic85",
     "dept": "CELTIC",
     "no": "85",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -14141,7 +14224,9 @@
     "id": "celtic86",
     "dept": "CELTIC",
     "no": "86",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -14159,7 +14244,9 @@
     "id": "celtic102b",
     "dept": "CELTIC",
     "no": "102B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -14375,7 +14462,9 @@
     "id": "celtic144a",
     "dept": "CELTIC",
     "no": "144A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -14383,7 +14472,9 @@
     "id": "celtic144b",
     "dept": "CELTIC",
     "no": "144B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -14401,7 +14492,9 @@
     "id": "celtic145a",
     "dept": "CELTIC",
     "no": "145A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -14409,7 +14502,9 @@
     "id": "celtic145b",
     "dept": "CELTIC",
     "no": "145B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -15994,7 +16089,9 @@
     "id": "chicano5",
     "dept": "CHICANO",
     "no": "5",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16042,7 +16139,9 @@
     "id": "chicano10",
     "dept": "CHICANO",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -16560,7 +16659,9 @@
     "id": "chinese1",
     "dept": "CHINESE",
     "no": "1",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16592,7 +16693,9 @@
     "id": "chinese1b",
     "dept": "CHINESE",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -16616,7 +16719,9 @@
     "id": "chinese1x",
     "dept": "CHINESE",
     "no": "1X",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16624,7 +16729,9 @@
     "id": "chinese1y",
     "dept": "CHINESE",
     "no": "1Y",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -16723,7 +16830,9 @@
     "id": "chinese10",
     "dept": "CHINESE",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16731,7 +16840,9 @@
     "id": "chinese10a",
     "dept": "CHINESE",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -16747,7 +16858,9 @@
     "id": "chinese10b",
     "dept": "CHINESE",
     "no": "10B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -16779,7 +16892,9 @@
     "id": "chinese10x",
     "dept": "CHINESE",
     "no": "10X",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16787,7 +16902,9 @@
     "id": "chinese10y",
     "dept": "CHINESE",
     "no": "10Y",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -16865,7 +16982,8 @@
     "dept": "CHINESE",
     "no": "100A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -16890,7 +17008,9 @@
     "id": "chinese100b",
     "dept": "CHINESE",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -16914,7 +17034,9 @@
     "id": "chinese100xa",
     "dept": "CHINESE",
     "no": "100XA",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -16922,7 +17044,9 @@
     "id": "chinese100xb",
     "dept": "CHINESE",
     "no": "100XB",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16930,7 +17054,9 @@
     "id": "chinese100ya",
     "dept": "CHINESE",
     "no": "100YA",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -16938,7 +17064,9 @@
     "id": "chinese100yb",
     "dept": "CHINESE",
     "no": "100YB",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -24976,7 +25104,9 @@
     "id": "comlit112b",
     "dept": "COM LIT",
     "no": "112B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -27596,7 +27726,8 @@
     "dept": "CUNEIF",
     "no": "100B",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "ls_lang"
     ]
   },
   {
@@ -27633,7 +27764,9 @@
     "id": "cuneif102b",
     "dept": "CUNEIF",
     "no": "102B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -27669,7 +27802,9 @@
     "id": "cuneif106b",
     "dept": "CUNEIF",
     "no": "106B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -28895,7 +29030,9 @@
     "id": "czech26b",
     "dept": "CZECH",
     "no": "26B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -28903,7 +29040,9 @@
     "id": "czech116a",
     "dept": "CZECH",
     "no": "116A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -28911,7 +29050,9 @@
     "id": "czech116b",
     "dept": "CZECH",
     "no": "116B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -28937,7 +29078,9 @@
     "id": "danish1b",
     "dept": "DANISH",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -30061,7 +30204,9 @@
     "id": "dutch2",
     "dept": "DUTCH",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -30123,7 +30268,8 @@
     "dept": "DUTCH",
     "no": "110",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -30159,7 +30305,8 @@
     "dept": "DUTCH",
     "no": "125",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -36855,7 +37002,8 @@
     "dept": "EGYPT",
     "no": "100B",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "ls_lang"
     ]
   },
   {
@@ -36865,7 +37013,8 @@
     "dept": "EGYPT",
     "no": "101A",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "ls_lang"
     ]
   },
   {
@@ -36875,7 +37024,8 @@
     "dept": "EGYPT",
     "no": "101B",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "ls_lang"
     ]
   },
   {
@@ -36892,7 +37042,9 @@
     "id": "egypt102b",
     "dept": "EGYPT",
     "no": "102B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -50700,7 +50852,9 @@
     "id": "filipn1b",
     "dept": "FILIPN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -50716,7 +50870,9 @@
     "id": "filipnw1y",
     "dept": "FILIPN",
     "no": "W1Y",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -50724,7 +50880,9 @@
     "id": "filipn15",
     "dept": "FILIPN",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -50732,7 +50890,9 @@
     "id": "filipnw15x",
     "dept": "FILIPN",
     "no": "W15X",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -50740,7 +50900,9 @@
     "id": "filipn100a",
     "dept": "FILIPN",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 9,
@@ -50756,7 +50918,9 @@
     "id": "filipn100b",
     "dept": "FILIPN",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -50764,7 +50928,9 @@
     "id": "filipnw100a",
     "dept": "FILIPN",
     "no": "W100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -50772,7 +50938,9 @@
     "id": "filipnw100b",
     "dept": "FILIPN",
     "no": "W100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -50781,7 +50949,8 @@
     "dept": "FILIPN",
     "no": "101A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -50790,7 +50959,9 @@
     "id": "filipn101b",
     "dept": "FILIPN",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -50798,7 +50969,9 @@
     "id": "filipnw101a",
     "dept": "FILIPN",
     "no": "W101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -50806,7 +50979,9 @@
     "id": "filipnw101b",
     "dept": "FILIPN",
     "no": "W101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -51649,7 +51824,9 @@
     "id": "finnish1b",
     "dept": "FINNISH",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -51657,7 +51834,9 @@
     "id": "finnish102a",
     "dept": "FINNISH",
     "no": "102A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -51665,7 +51844,9 @@
     "id": "finnish102b",
     "dept": "FINNISH",
     "no": "102B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -51765,7 +51946,9 @@
     "id": "french2",
     "dept": "FRENCH",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 0,
@@ -51789,7 +51972,9 @@
     "id": "french3",
     "dept": "FRENCH",
     "no": "3",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -51805,7 +51990,9 @@
     "id": "french4",
     "dept": "FRENCH",
     "no": "4",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -52013,7 +52200,8 @@
     "no": "102",
     "tagIds": [
       "ls_inter",
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -55435,7 +55623,9 @@
     "id": "german2",
     "dept": "GERMAN",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 0,
@@ -55459,7 +55649,9 @@
     "id": "german3",
     "dept": "GERMAN",
     "no": "3",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -55491,7 +55683,9 @@
     "id": "german4",
     "dept": "GERMAN",
     "no": "4",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -55974,7 +56168,8 @@
     "tagIds": [
       "ls_arts",
       "ls_inter",
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -56009,7 +56204,9 @@
     "id": "german102a",
     "dept": "GERMAN",
     "no": "102A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -58796,7 +58993,9 @@
     "id": "greek2",
     "dept": "GREEK",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 8,
@@ -58804,7 +59003,9 @@
     "id": "greek10",
     "dept": "GREEK",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -59702,7 +59903,9 @@
     "id": "hebrew1b",
     "dept": "HEBREW",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -59726,7 +59929,9 @@
     "id": "hebrew10",
     "dept": "HEBREW",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -59766,7 +59971,9 @@
     "id": "hebrew20a",
     "dept": "HEBREW",
     "no": "20A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -59774,7 +59981,9 @@
     "id": "hebrew20b",
     "dept": "HEBREW",
     "no": "20B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -59799,7 +60008,8 @@
     "dept": "HEBREW",
     "no": "100A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -59808,7 +60018,9 @@
     "id": "hebrew100b",
     "dept": "HEBREW",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -60211,7 +60423,9 @@
     "id": "hinurd15",
     "dept": "HIN-URD",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -60365,7 +60579,9 @@
     "id": "hindi1b",
     "dept": "HINDI",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -60381,7 +60597,9 @@
     "id": "hindi100a",
     "dept": "HINDI",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -60389,7 +60607,9 @@
     "id": "hindi100b",
     "dept": "HINDI",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -60399,7 +60619,8 @@
     "no": "101A",
     "tagIds": [
       "ls_arts",
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -60408,7 +60629,9 @@
     "id": "hindi101b",
     "dept": "HINDI",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -67667,7 +67890,9 @@
     "id": "iceland1b",
     "dept": "ICELAND",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -68654,7 +68879,9 @@
     "id": "indones1b",
     "dept": "INDONES",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -68662,7 +68889,9 @@
     "id": "indones100a",
     "dept": "INDONES",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -68670,7 +68899,9 @@
     "id": "indones100b",
     "dept": "INDONES",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -73410,7 +73641,9 @@
     "id": "italian1r",
     "dept": "ITALIAN",
     "no": "1R",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 6,
@@ -73418,7 +73651,9 @@
     "id": "italian1s",
     "dept": "ITALIAN",
     "no": "1S",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -73434,7 +73669,9 @@
     "id": "italian2",
     "dept": "ITALIAN",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 0,
@@ -73458,7 +73695,9 @@
     "id": "italianw2",
     "dept": "ITALIAN",
     "no": "W2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -73466,7 +73705,9 @@
     "id": "italian3",
     "dept": "ITALIAN",
     "no": "3",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -73474,7 +73715,9 @@
     "id": "italian4",
     "dept": "ITALIAN",
     "no": "4",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -73510,7 +73753,9 @@
     "id": "italian12",
     "dept": "ITALIAN",
     "no": "12",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -73518,7 +73763,9 @@
     "id": "italiann12",
     "dept": "ITALIAN",
     "no": "N12",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -73684,7 +73931,8 @@
     "no": "101",
     "tagIds": [
       "ls_inter",
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -73693,7 +73941,9 @@
     "id": "italian101a",
     "dept": "ITALIAN",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -73701,7 +73951,9 @@
     "id": "italian101b",
     "dept": "ITALIAN",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -74261,7 +74513,9 @@
     "id": "japan1",
     "dept": "JAPAN",
     "no": "1",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -74293,7 +74547,9 @@
     "id": "japan1b",
     "dept": "JAPAN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -74376,7 +74632,9 @@
     "id": "japan10",
     "dept": "JAPAN",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -74384,7 +74642,9 @@
     "id": "japan10a",
     "dept": "JAPAN",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -74408,7 +74668,9 @@
     "id": "japan10b",
     "dept": "JAPAN",
     "no": "10B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -74448,7 +74710,9 @@
     "id": "japan10x",
     "dept": "JAPAN",
     "no": "10X",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -74541,7 +74805,8 @@
     "dept": "JAPAN",
     "no": "100",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -74551,7 +74816,8 @@
     "dept": "JAPAN",
     "no": "100A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -74568,7 +74834,9 @@
     "id": "japan100b",
     "dept": "JAPAN",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -74584,7 +74852,9 @@
     "id": "japan100x",
     "dept": "JAPAN",
     "no": "100X",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -76063,7 +76333,9 @@
     "id": "khmer1b",
     "dept": "KHMER",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76071,7 +76343,9 @@
     "id": "khmer100a",
     "dept": "KHMER",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76079,7 +76353,9 @@
     "id": "khmer100b",
     "dept": "KHMER",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -76088,7 +76364,8 @@
     "dept": "KHMER",
     "no": "101A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -76097,7 +76374,9 @@
     "id": "khmer101b",
     "dept": "KHMER",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -76105,7 +76384,9 @@
     "id": "korean1",
     "dept": "KOREAN",
     "no": "1",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76129,7 +76410,9 @@
     "id": "korean1b",
     "dept": "KOREAN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76137,7 +76420,9 @@
     "id": "korean1bx",
     "dept": "KOREAN",
     "no": "1BX",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -76172,7 +76457,9 @@
     "id": "korean10",
     "dept": "KOREAN",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76180,7 +76467,9 @@
     "id": "korean10a",
     "dept": "KOREAN",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76188,7 +76477,9 @@
     "id": "korean10ax",
     "dept": "KOREAN",
     "no": "10AX",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76196,7 +76487,9 @@
     "id": "korean10b",
     "dept": "KOREAN",
     "no": "10B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76204,7 +76497,9 @@
     "id": "korean10bx",
     "dept": "KOREAN",
     "no": "10BX",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -76229,7 +76524,8 @@
     "dept": "KOREAN",
     "no": "100A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -76238,7 +76534,9 @@
     "id": "korean100ax",
     "dept": "KOREAN",
     "no": "100AX",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -76246,7 +76544,9 @@
     "id": "korean100b",
     "dept": "KOREAN",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -76254,7 +76554,9 @@
     "id": "korean100bx",
     "dept": "KOREAN",
     "no": "100BX",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -77433,7 +77735,9 @@
     "id": "latin2",
     "dept": "LATIN",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 8,
@@ -77441,7 +77745,9 @@
     "id": "latin10",
     "dept": "LATIN",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -77449,7 +77755,9 @@
     "id": "latin15",
     "dept": "LATIN",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -79885,7 +80193,9 @@
     "id": "linguis1b",
     "dept": "LINGUIS",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -79919,7 +80229,9 @@
     "id": "linguis2a",
     "dept": "LINGUIS",
     "no": "2A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -81890,7 +82202,9 @@
     "id": "malayi1b",
     "dept": "MALAY/I",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -81906,7 +82220,9 @@
     "id": "malayi100a",
     "dept": "MALAY/I",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -81914,7 +82230,9 @@
     "id": "malayi100b",
     "dept": "MALAY/I",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -93021,7 +93339,9 @@
     "id": "mongoln1b",
     "dept": "MONGOLN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -98478,7 +98798,9 @@
     "id": "norwegn1b",
     "dept": "NORWEGN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -104683,7 +105005,9 @@
     "id": "persian1b",
     "dept": "PERSIAN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -104691,7 +105015,9 @@
     "id": "persian10",
     "dept": "PERSIAN",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -104707,7 +105033,9 @@
     "id": "persian11b",
     "dept": "PERSIAN",
     "no": "11B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -104731,7 +105059,9 @@
     "id": "persian20",
     "dept": "PERSIAN",
     "no": "20",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -104739,7 +105069,9 @@
     "id": "persian20a",
     "dept": "PERSIAN",
     "no": "20A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -104747,7 +105079,9 @@
     "id": "persian20b",
     "dept": "PERSIAN",
     "no": "20B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -104764,7 +105098,8 @@
     "dept": "PERSIAN",
     "no": "100A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -104773,7 +105108,9 @@
     "id": "persian100b",
     "dept": "PERSIAN",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -115168,7 +115505,9 @@
     "id": "polish25b",
     "dept": "POLISH",
     "no": "25B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -115176,7 +115515,9 @@
     "id": "polish115a",
     "dept": "POLISH",
     "no": "115A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -115184,7 +115525,9 @@
     "id": "polish115b",
     "dept": "POLISH",
     "no": "115B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -115290,7 +115633,9 @@
     "id": "portug50",
     "dept": "PORTUG",
     "no": "50",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -115360,7 +115705,8 @@
     "no": "102",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -120246,7 +120592,9 @@
     "id": "punjabi1b",
     "dept": "PUNJABI",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -120254,7 +120602,9 @@
     "id": "punjabi15",
     "dept": "PUNJABI",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -120262,7 +120612,9 @@
     "id": "punjabi100a",
     "dept": "PUNJABI",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -120270,7 +120622,9 @@
     "id": "punjabi100b",
     "dept": "PUNJABI",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -122813,7 +123167,9 @@
     "id": "russian2",
     "dept": "RUSSIAN",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -122821,7 +123177,9 @@
     "id": "russian3",
     "dept": "RUSSIAN",
     "no": "3",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -122829,7 +123187,9 @@
     "id": "russian4",
     "dept": "RUSSIAN",
     "no": "4",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -122837,7 +123197,9 @@
     "id": "russian6a",
     "dept": "RUSSIAN",
     "no": "6A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -122845,7 +123207,9 @@
     "id": "russian6b",
     "dept": "RUSSIAN",
     "no": "6B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -122880,7 +123244,8 @@
     "dept": "RUSSIAN",
     "no": "103A",
     "tagIds": [
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -122889,7 +123254,9 @@
     "id": "russian103b",
     "dept": "RUSSIAN",
     "no": "103B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -122913,7 +123280,9 @@
     "id": "russian106a",
     "dept": "RUSSIAN",
     "no": "106A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -122921,7 +123290,9 @@
     "id": "russian106b",
     "dept": "RUSSIAN",
     "no": "106B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -123978,7 +124349,8 @@
     "dept": "SANSKR",
     "no": "100B",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "ls_lang"
     ]
   },
   {
@@ -123987,7 +124359,9 @@
     "id": "sanskr101a",
     "dept": "SANSKR",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -123995,7 +124369,9 @@
     "id": "sanskr101b",
     "dept": "SANSKR",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -124351,7 +124727,8 @@
     "dept": "SCANDIN",
     "no": "100A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "ls_lang"
     ]
   },
   {
@@ -124360,7 +124737,9 @@
     "id": "scandin100b",
     "dept": "SCANDIN",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -125379,7 +125758,8 @@
     "dept": "SEMITIC",
     "no": "100B",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "ls_lang"
     ]
   },
   {
@@ -130978,7 +131358,9 @@
     "id": "spanish2",
     "dept": "SPANISH",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 0,
@@ -131002,7 +131384,9 @@
     "id": "spanish3",
     "dept": "SPANISH",
     "no": "3",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -131010,7 +131394,9 @@
     "id": "spanishn3",
     "dept": "SPANISH",
     "no": "N3",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -131018,7 +131404,9 @@
     "id": "spanish4",
     "dept": "SPANISH",
     "no": "4",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -131026,7 +131414,9 @@
     "id": "spanishn4",
     "dept": "SPANISH",
     "no": "N4",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -131114,7 +131504,9 @@
     "id": "spanish15",
     "dept": "SPANISH",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -131146,7 +131538,9 @@
     "id": "spanish21",
     "dept": "SPANISH",
     "no": "21",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -131154,7 +131548,9 @@
     "id": "spanish22",
     "dept": "SPANISH",
     "no": "22",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -131180,7 +131576,8 @@
     "no": "25",
     "tagIds": [
       "ls_arts",
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -131457,7 +131854,8 @@
       "ls_inter",
       "ls_socio",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "ls_lang"
     ]
   },
   {
@@ -133830,7 +134228,9 @@
     "id": "swedish1b",
     "dept": "SWEDISH",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -133886,7 +134286,9 @@
     "id": "tamil1b",
     "dept": "TAMIL",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -133952,7 +134354,9 @@
     "id": "telugu1b",
     "dept": "TELUGU",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -133968,7 +134372,9 @@
     "id": "thai1b",
     "dept": "THAI",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -133984,7 +134390,9 @@
     "id": "thai100a",
     "dept": "THAI",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -133992,7 +134400,9 @@
     "id": "thai100b",
     "dept": "THAI",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -134000,7 +134410,9 @@
     "id": "thai101a",
     "dept": "THAI",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -134008,7 +134420,9 @@
     "id": "thai101b",
     "dept": "THAI",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 2,
@@ -135021,7 +135435,9 @@
     "id": "tibetan1b",
     "dept": "TIBETAN",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -135029,7 +135445,9 @@
     "id": "tibetan10a",
     "dept": "TIBETAN",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -135037,7 +135455,9 @@
     "id": "tibetan10b",
     "dept": "TIBETAN",
     "no": "10B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
@@ -135086,7 +135506,8 @@
     "dept": "TIBETAN",
     "no": "110A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "ls_lang"
     ]
   },
   {
@@ -135095,7 +135516,9 @@
     "id": "tibetan110b",
     "dept": "TIBETAN",
     "no": "110B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -135317,7 +135740,9 @@
     "id": "turkish1b",
     "dept": "TURKISH",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -135325,7 +135750,9 @@
     "id": "turkish10",
     "dept": "TURKISH",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -135365,7 +135792,9 @@
     "id": "turkish100a",
     "dept": "TURKISH",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -135373,7 +135802,9 @@
     "id": "turkish100b",
     "dept": "TURKISH",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -135381,7 +135812,9 @@
     "id": "turkish101a",
     "dept": "TURKISH",
     "no": "101A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -135389,7 +135822,9 @@
     "id": "turkish101b",
     "dept": "TURKISH",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -140210,7 +140645,9 @@
     "id": "urdu1b",
     "dept": "URDU",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -140218,7 +140655,9 @@
     "id": "urdu100a",
     "dept": "URDU",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 4,
@@ -140226,7 +140665,9 @@
     "id": "urdu100b",
     "dept": "URDU",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -140236,7 +140677,8 @@
     "no": "101A",
     "tagIds": [
       "ls_arts",
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -140245,7 +140687,9 @@
     "id": "urdu101b",
     "dept": "URDU",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -140261,7 +140705,9 @@
     "id": "vietnms1b",
     "dept": "VIETNMS",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 10,
@@ -140269,7 +140715,9 @@
     "id": "vietnms15",
     "dept": "VIETNMS",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -140277,7 +140725,9 @@
     "id": "vietnms100a",
     "dept": "VIETNMS",
     "no": "100A",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 5,
@@ -140285,7 +140735,9 @@
     "id": "vietnms100b",
     "dept": "VIETNMS",
     "no": "100B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 3,
@@ -140295,7 +140747,8 @@
     "no": "101A",
     "tagIds": [
       "ls_arts",
-      "ls_inter"
+      "ls_inter",
+      "ls_lang"
     ]
   },
   {
@@ -140304,7 +140757,9 @@
     "id": "vietnms101b",
     "dept": "VIETNMS",
     "no": "101B",
-    "tagIds": []
+    "tagIds": [
+      "ls_lang"
+    ]
   },
   {
     "units": 1,
