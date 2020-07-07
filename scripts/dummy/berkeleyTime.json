@@ -14954,7 +14954,9 @@
     "id": "chem120a",
     "dept": "CHEM",
     "no": "120A",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -14962,7 +14964,9 @@
     "id": "chem120b",
     "dept": "CHEM",
     "no": "120B",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -15049,7 +15053,8 @@
     "dept": "CHEM",
     "no": "135",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -15112,7 +15117,9 @@
     "id": "chemc170l",
     "dept": "CHEM",
     "no": "C170L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -15120,7 +15127,9 @@
     "id": "chemc178",
     "dept": "CHEM",
     "no": "C178",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -17680,7 +17689,8 @@
     "dept": "CHM ENG",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -17690,7 +17700,8 @@
     "dept": "CHM ENG",
     "no": "141",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -17719,7 +17730,9 @@
     "id": "chmeng150a",
     "dept": "CHM ENG",
     "no": "150A",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -17727,7 +17740,9 @@
     "id": "chmeng150b",
     "dept": "CHM ENG",
     "no": "150B",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 1,
@@ -17827,7 +17842,9 @@
     "id": "chmeng170a",
     "dept": "CHM ENG",
     "no": "170A",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -17835,7 +17852,9 @@
     "id": "chmeng170b",
     "dept": "CHM ENG",
     "no": "170B",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -17876,7 +17895,8 @@
     "dept": "CHM ENG",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -26053,7 +26073,8 @@
     "dept": "COMPSCI",
     "no": "70",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -28845,7 +28866,9 @@
     "id": "datac100",
     "dept": "DATA",
     "no": "C100",
-    "tagIds": [],
+    "tagIds": [
+      "bioeng_technical_topics"
+    ],
     "equivIds": [
       "compscic100"
     ]
@@ -36571,7 +36594,8 @@
     "no": "127",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -36584,7 +36608,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37032,7 +37057,8 @@
     "no": "105",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37132,7 +37158,8 @@
     "no": "117",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37163,7 +37190,8 @@
     "no": "118",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37185,7 +37213,8 @@
     "no": "120",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37226,7 +37255,8 @@
     "no": "123",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37269,7 +37299,8 @@
     "no": "126",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37315,7 +37346,8 @@
     "tagIds": [
       "eecs_upper_div",
       "eecs_design",
-      "cs_design"
+      "cs_design",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37499,7 +37531,8 @@
     "no": "142",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37522,7 +37555,8 @@
       "eecs_upper_div",
       "eecs_design",
       "cs_design",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37643,7 +37677,8 @@
     "no": "147",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -37698,7 +37733,8 @@
     "tagIds": [
       "eecs_upper_div",
       "eecs_design",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -67586,7 +67622,8 @@
     "dept": "IND ENG",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -67614,7 +67651,8 @@
     "dept": "IND ENG",
     "no": "162",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -67702,7 +67740,8 @@
     "dept": "IND ENG",
     "no": "172",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -70195,7 +70234,8 @@
     "dept": "INTEGBI",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -70248,8 +70288,7 @@
     "id": "integbi117lf",
     "dept": "INTEGBI",
     "no": "117LF",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -70419,7 +70458,9 @@
     "id": "integbi127l",
     "dept": "INTEGBI",
     "no": "127L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 3,
@@ -70500,7 +70541,8 @@
     "tagIds": [
       "ls_bio",
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -70542,7 +70584,8 @@
     "dept": "INTEGBI",
     "no": "132",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -70612,7 +70655,8 @@
     "dept": "INTEGBI",
     "no": "135",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -70901,7 +70945,8 @@
     "no": "148",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -71176,7 +71221,8 @@
     "no": "161",
     "tagIds": [
       "mcb_ggd_elective_b",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -71198,7 +71244,8 @@
     "no": "163",
     "tagIds": [
       "mcb_ggd_elective_b",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -71208,7 +71255,8 @@
     "dept": "INTEGBI",
     "no": "164",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81614,7 +81662,8 @@
     "dept": "MAT SCI",
     "no": "102",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81624,7 +81673,8 @@
     "dept": "MAT SCI",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81634,7 +81684,8 @@
     "dept": "MAT SCI",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81652,7 +81703,8 @@
     "dept": "MAT SCI",
     "no": "111",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81662,7 +81714,8 @@
     "dept": "MAT SCI",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81672,7 +81725,8 @@
     "dept": "MAT SCI",
     "no": "113",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81818,7 +81872,8 @@
     "dept": "MAT SCI",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -81920,7 +81975,8 @@
     "dept": "MAT SCI",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -83258,7 +83314,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -83465,7 +83522,8 @@
     "no": "118",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -83603,7 +83661,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -83613,7 +83672,8 @@
     "dept": "MATH",
     "no": "128A",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -83838,7 +83898,8 @@
     "no": "170",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86441,7 +86502,8 @@
       "mcb_imm_elective_c",
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86452,7 +86514,8 @@
     "no": "C100A",
     "tagIds": [
       "ls_bio",
-      "ls_phys"
+      "ls_phys",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86463,7 +86526,8 @@
     "no": "102",
     "tagIds": [
       "ls_bio",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86522,7 +86586,8 @@
     "dept": "MCELLBI",
     "no": "110",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86803,7 +86868,8 @@
       "mcb_imm_elective_b",
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86853,7 +86919,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -86872,7 +86939,9 @@
     "id": "mcellbi133l",
     "dept": "MCELLBI",
     "no": "133L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -87027,7 +87096,8 @@
       "mcb_ggd_elective_a",
       "mcb_cdb_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -87079,7 +87149,8 @@
     "dept": "MCELLBI",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -87088,7 +87159,9 @@
     "id": "mcellbi140l",
     "dept": "MCELLBI",
     "no": "140L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -87146,7 +87219,8 @@
       "mcb_ggd_elective_b",
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -87177,7 +87251,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -87245,7 +87320,9 @@
     "id": "mcellbi160l",
     "dept": "MCELLBI",
     "no": "160L",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -87335,7 +87412,8 @@
       "mcb_cdb_elective_a",
       "mcb_cdb_elective_b",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89676,7 +89754,9 @@
     "id": "meceng102b",
     "dept": "MEC ENG",
     "no": "102B",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -89695,7 +89775,8 @@
     "dept": "MEC ENG",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89739,7 +89820,8 @@
     "dept": "MEC ENG",
     "no": "106",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89785,7 +89867,8 @@
     "dept": "MEC ENG",
     "no": "109",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89821,7 +89904,8 @@
     "dept": "MEC ENG",
     "no": "118",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89831,7 +89915,8 @@
     "dept": "MEC ENG",
     "no": "119",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89919,7 +90004,8 @@
     "dept": "MEC ENG",
     "no": "132",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89929,7 +90015,8 @@
     "dept": "MEC ENG",
     "no": "133",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -89948,7 +90035,9 @@
     "id": "mecengc134",
     "dept": "MEC ENG",
     "no": "C134",
-    "tagIds": []
+    "tagIds": [
+      "bioeng_technical_topics"
+    ]
   },
   {
     "units": 4,
@@ -90187,7 +90276,8 @@
     "dept": "MEC ENG",
     "no": "167",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -90293,7 +90383,8 @@
     "dept": "MEC ENG",
     "no": "179",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -90311,7 +90402,8 @@
     "dept": "MEC ENG",
     "no": "185",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -98165,7 +98257,8 @@
     "dept": "NUC ENG",
     "no": "101",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -98221,7 +98314,8 @@
     "dept": "NUC ENG",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -98339,7 +98433,8 @@
     "dept": "NUC ENG",
     "no": "162",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -107523,7 +107618,8 @@
     "dept": "PHYSICS",
     "no": "110A",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -107554,7 +107650,8 @@
       "mcb_neu_elective",
       "mcb_ggd_elective_a",
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -107650,7 +107747,8 @@
     "dept": "PHYSICS",
     "no": "137A",
     "tagIds": [
-      "ls_phys"
+      "ls_phys",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -107779,7 +107877,8 @@
     "no": "177",
     "tagIds": [
       "mcb_bmb_elective",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -108816,7 +108915,8 @@
     "dept": "PLANTBI",
     "no": "C112",
     "tagIds": [
-      "mcb_bmb_elective"
+      "mcb_bmb_elective",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -109094,7 +109194,8 @@
     "dept": "PLANTBI",
     "no": "185",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -132079,7 +132180,8 @@
     "no": "133",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -132091,7 +132193,8 @@
     "tagIds": [
       "ls_quant",
       "mcb_ggd_elective_b",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -132112,7 +132215,8 @@
     "no": "135",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {
@@ -132145,7 +132249,8 @@
     "no": "150",
     "tagIds": [
       "ls_quant",
-      "upper_div"
+      "upper_div",
+      "bioeng_technical_topics"
     ]
   },
   {

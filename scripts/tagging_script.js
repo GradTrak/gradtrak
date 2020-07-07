@@ -1,11 +1,16 @@
 const data = require('./dummy/berkeleyTime.json');
 const fs = require('fs')
+var techTopics = fs.readFileSync('./bioeTechTopics.txt').toString()
+techTopics = techTopics.split('\n').map(line => line.split(' '))
+techTopics = techTopics.map(line => (line[0] + line[1]).toLowerCase());
+//console.log(techTopics);
+//process.exit(1)
 data.forEach((course) => {
   const no = course.no.replace(/[a-zA-Z]/, "");
-  if (no >= 100 && no <=196 && course.dept === 'ECON') {
-    if (!course.tagIds.includes('upper_div')) {
-      console.log('yippity yip')
-      course.tagIds = [...course.tagIds, 'economics_upper_div'];
+  if (techTopics.includes(course.id.toLowerCase())) {
+    if (!course.tagIds.includes('bioeng_technical_topics')) {
+      console.log(course.id)
+      course.tagIds = [...course.tagIds, 'bioeng_technical_topics'];
     }
   }
 });
