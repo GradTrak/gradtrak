@@ -636,7 +636,7 @@
           {
             "id": "ugba101a_substitutes",
             "type": "multi",
-            "name": "UGBA 101B",
+            "name": "UGBA 101A",
             "numRequired": 1,
             "hidden": true,
             "requirements": [
