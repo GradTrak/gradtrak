@@ -7,8 +7,8 @@ const nonAlphanumeric = /[^a-zA-Z0-9]/;
 
 
 //INPUTS
-const MY_FILE = './bioeTechTopics.txt'; //change to whatever
-const TAG = 'bioeng_technical_topics';
+const MY_FILE = './ugba_ud.txt'; //change to whatever
+const TAG = 'ugba_upper_div';
 
 
 

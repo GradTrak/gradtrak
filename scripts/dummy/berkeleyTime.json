@@ -135604,7 +135604,6 @@
     "dept": "UGBA",
     "no": "100",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135614,9 +135613,7 @@
     "id": "ugbac100",
     "dept": "UGBA",
     "no": "C100",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -135626,7 +135623,6 @@
     "no": "101A",
     "tagIds": [
       "ls_socio",
-      "ugba_upper_div",
       "stat_cluster"
     ]
   },
@@ -135638,7 +135634,6 @@
     "no": "101B",
     "tagIds": [
       "ls_socio",
-      "ugba_upper_div",
       "stat_cluster"
     ]
   },
@@ -135649,7 +135644,6 @@
     "dept": "UGBA",
     "no": "102A",
     "tagIds": [
-      "ugba_upper_div",
       "stat_cluster"
     ]
   },
@@ -135660,7 +135654,6 @@
     "dept": "UGBA",
     "no": "102B",
     "tagIds": [
-      "ugba_upper_div",
       "stat_cluster"
     ]
   },
@@ -135670,9 +135663,7 @@
     "id": "ugbaw102a",
     "dept": "UGBA",
     "no": "W102A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -135681,7 +135672,6 @@
     "dept": "UGBA",
     "no": "103",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
       "stat_cluster"
     ]
@@ -135693,7 +135683,6 @@
     "dept": "UGBA",
     "no": "104",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135704,7 +135693,6 @@
     "dept": "UGBA",
     "no": "105",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135715,7 +135703,6 @@
     "dept": "UGBA",
     "no": "106",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
       "stat_cluster"
     ]
@@ -135729,7 +135716,6 @@
     "tagIds": [
       "ls_philo",
       "ls_socio",
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135740,7 +135726,6 @@
     "dept": "UGBA",
     "no": "110",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135750,9 +135735,7 @@
     "id": "ugbas110",
     "dept": "UGBA",
     "no": "S110",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -135761,7 +135744,6 @@
     "dept": "UGBA",
     "no": "111",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135771,9 +135753,7 @@
     "id": "ugbas111",
     "dept": "UGBA",
     "no": "S111",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -135782,7 +135762,6 @@
     "dept": "UGBA",
     "no": "112",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135793,8 +135772,8 @@
     "dept": "UGBA",
     "no": "113",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135804,7 +135783,6 @@
     "dept": "UGBA",
     "no": "114",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135815,8 +135793,8 @@
     "dept": "UGBA",
     "no": "115",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135828,10 +135806,10 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
-      "ugba_upper_div",
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135841,9 +135819,9 @@
     "dept": "UGBA",
     "no": "119",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135853,7 +135831,6 @@
     "dept": "UGBA",
     "no": "120",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135863,9 +135840,7 @@
     "id": "ugba120a",
     "dept": "UGBA",
     "no": "120A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -135874,8 +135849,8 @@
     "dept": "UGBA",
     "no": "120AA",
     "tagIds": [
-      "ugba_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135885,8 +135860,8 @@
     "dept": "UGBA",
     "no": "120AB",
     "tagIds": [
-      "ugba_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135896,8 +135871,8 @@
     "dept": "UGBA",
     "no": "120B",
     "tagIds": [
-      "ugba_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135906,9 +135881,7 @@
     "id": "ugbas120",
     "dept": "UGBA",
     "no": "S120",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -135916,9 +135889,7 @@
     "id": "ugbas120a",
     "dept": "UGBA",
     "no": "S120A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -135926,9 +135897,7 @@
     "id": "ugbas120b",
     "dept": "UGBA",
     "no": "S120B",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -135937,8 +135906,8 @@
     "dept": "UGBA",
     "no": "121",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135947,9 +135916,7 @@
     "id": "ugbas121",
     "dept": "UGBA",
     "no": "S121",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -135958,9 +135925,9 @@
     "dept": "UGBA",
     "no": "122",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135970,8 +135937,8 @@
     "dept": "UGBA",
     "no": "123",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -135981,7 +135948,6 @@
     "dept": "UGBA",
     "no": "124",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -135992,7 +135958,6 @@
     "dept": "UGBA",
     "no": "125",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136002,9 +135967,7 @@
     "id": "ugbas125",
     "dept": "UGBA",
     "no": "S125",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136023,9 +135986,9 @@
     "dept": "UGBA",
     "no": "126",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136034,9 +135997,7 @@
     "id": "ugbas126",
     "dept": "UGBA",
     "no": "S126",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136045,8 +136006,8 @@
     "dept": "UGBA",
     "no": "128",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136055,9 +136016,7 @@
     "id": "ugba128a",
     "dept": "UGBA",
     "no": "128A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -136065,9 +136024,7 @@
     "id": "ugba128b",
     "dept": "UGBA",
     "no": "128B",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -136075,9 +136032,7 @@
     "id": "ugbas128",
     "dept": "UGBA",
     "no": "S128",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -136085,9 +136040,7 @@
     "id": "ugbas128a",
     "dept": "UGBA",
     "no": "S128A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136096,8 +136049,8 @@
     "dept": "UGBA",
     "no": "129",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136106,9 +136059,7 @@
     "id": "ugbas129",
     "dept": "UGBA",
     "no": "S129",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -136117,7 +136068,6 @@
     "dept": "UGBA",
     "no": "130",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136127,9 +136077,7 @@
     "id": "ugbas130",
     "dept": "UGBA",
     "no": "S130",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136138,10 +136086,10 @@
     "dept": "UGBA",
     "no": "131",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136151,9 +136099,9 @@
     "dept": "UGBA",
     "no": "131A",
     "tagIds": [
-      "ugba_upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136163,10 +136111,10 @@
     "dept": "UGBA",
     "no": "132",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136175,9 +136123,7 @@
     "id": "ugbas132",
     "dept": "UGBA",
     "no": "S132",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136186,9 +136132,9 @@
     "dept": "UGBA",
     "no": "133",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136197,9 +136143,7 @@
     "id": "ugbas133",
     "dept": "UGBA",
     "no": "S133",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136208,9 +136152,9 @@
     "dept": "UGBA",
     "no": "134",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136220,7 +136164,6 @@
     "dept": "UGBA",
     "no": "135",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136231,9 +136174,9 @@
     "dept": "UGBA",
     "no": "136F",
     "tagIds": [
-      "ugba_upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136243,7 +136186,6 @@
     "dept": "UGBA",
     "no": "139",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136254,7 +136196,6 @@
     "dept": "UGBA",
     "no": "140",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136264,9 +136205,7 @@
     "id": "ugbas140",
     "dept": "UGBA",
     "no": "S140",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136275,7 +136214,6 @@
     "dept": "UGBA",
     "no": "142",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136286,8 +136224,8 @@
     "dept": "UGBA",
     "no": "143",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136297,7 +136235,6 @@
     "dept": "UGBA",
     "no": "144",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136308,7 +136245,6 @@
     "dept": "UGBA",
     "no": "145",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136319,7 +136255,6 @@
     "dept": "UGBA",
     "no": "146",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136329,9 +136264,7 @@
     "id": "ugbas147",
     "dept": "UGBA",
     "no": "S147",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -136340,7 +136273,6 @@
     "dept": "UGBA",
     "no": "148",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136350,9 +136282,7 @@
     "id": "ugba149a",
     "dept": "UGBA",
     "no": "149A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136361,7 +136291,6 @@
     "dept": "UGBA",
     "no": "150",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136371,9 +136300,7 @@
     "id": "ugbas150",
     "dept": "UGBA",
     "no": "S150",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136382,8 +136309,8 @@
     "dept": "UGBA",
     "no": "151",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136394,8 +136321,8 @@
     "no": "152",
     "tagIds": [
       "ls_socio",
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136405,7 +136332,6 @@
     "dept": "UGBA",
     "no": "153",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136416,8 +136342,8 @@
     "dept": "UGBA",
     "no": "154",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136427,8 +136353,8 @@
     "dept": "UGBA",
     "no": "155",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136437,9 +136363,7 @@
     "id": "ugbac155",
     "dept": "UGBA",
     "no": "C155",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136447,9 +136371,7 @@
     "id": "ugbaw155",
     "dept": "UGBA",
     "no": "W155",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136458,7 +136380,6 @@
     "dept": "UGBA",
     "no": "156",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136481,9 +136402,9 @@
     "no": "160",
     "tagIds": [
       "ls_socio",
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136492,9 +136413,7 @@
     "id": "ugbas160",
     "dept": "UGBA",
     "no": "S160",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136503,9 +136422,9 @@
     "dept": "UGBA",
     "no": "161",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136515,9 +136434,9 @@
     "dept": "UGBA",
     "no": "162",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136537,7 +136456,6 @@
     "dept": "UGBA",
     "no": "163",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136548,8 +136466,8 @@
     "dept": "UGBA",
     "no": "164",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136558,9 +136476,7 @@
     "id": "ugbas164",
     "dept": "UGBA",
     "no": "S164",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136569,9 +136485,9 @@
     "dept": "UGBA",
     "no": "165",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136580,9 +136496,7 @@
     "id": "ugbas165",
     "dept": "UGBA",
     "no": "S165",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136591,7 +136505,6 @@
     "dept": "UGBA",
     "no": "166",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136612,9 +136525,9 @@
     "dept": "UGBA",
     "no": "169",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136623,9 +136536,7 @@
     "id": "ugbas169",
     "dept": "UGBA",
     "no": "S169",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136634,8 +136545,8 @@
     "dept": "UGBA",
     "no": "170",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136644,9 +136555,7 @@
     "id": "ugbas170",
     "dept": "UGBA",
     "no": "S170",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136655,7 +136564,6 @@
     "dept": "UGBA",
     "no": "171",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136666,7 +136574,6 @@
     "dept": "UGBA",
     "no": "172",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136687,8 +136594,8 @@
     "dept": "UGBA",
     "no": "175",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136697,9 +136604,7 @@
     "id": "ugbas175",
     "dept": "UGBA",
     "no": "S175",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136708,8 +136613,8 @@
     "dept": "UGBA",
     "no": "176",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136721,8 +136626,8 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136732,8 +136637,8 @@
     "dept": "UGBA",
     "no": "179",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136743,10 +136648,10 @@
     "dept": "UGBA",
     "no": "180",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136755,9 +136660,7 @@
     "id": "ugbas180",
     "dept": "UGBA",
     "no": "S180",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -136766,7 +136669,6 @@
     "dept": "UGBA",
     "no": "181",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136777,9 +136679,9 @@
     "dept": "UGBA",
     "no": "183",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136789,9 +136691,9 @@
     "dept": "UGBA",
     "no": "184",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ugba_upper_div"
     ]
   },
   {
@@ -136801,7 +136703,6 @@
     "dept": "UGBA",
     "no": "185",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136812,7 +136713,6 @@
     "dept": "UGBA",
     "no": "188",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136823,7 +136723,6 @@
     "dept": "UGBA",
     "no": "190",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -136833,9 +136732,7 @@
     "id": "ugba190c",
     "dept": "UGBA",
     "no": "190C",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136843,9 +136740,7 @@
     "id": "ugba190d",
     "dept": "UGBA",
     "no": "190D",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136863,9 +136758,7 @@
     "id": "ugba191a",
     "dept": "UGBA",
     "no": "191A",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136873,9 +136766,7 @@
     "id": "ugba191b",
     "dept": "UGBA",
     "no": "191B",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136954,9 +136845,7 @@
     "id": "ugba192e",
     "dept": "UGBA",
     "no": "192E",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136964,9 +136853,7 @@
     "id": "ugba192g",
     "dept": "UGBA",
     "no": "192G",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136974,9 +136861,7 @@
     "id": "ugba192h",
     "dept": "UGBA",
     "no": "192H",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -137004,9 +136889,7 @@
     "id": "ugba192s",
     "dept": "UGBA",
     "no": "192S",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -137036,8 +136919,8 @@
     "dept": "UGBA",
     "no": "194",
     "tagIds": [
-      "ugba_upper_div",
-      "upper_div"
+      "upper_div",
+      "ugba_upper_div"
     ]
   },
   {
@@ -137047,7 +136930,6 @@
     "dept": "UGBA",
     "no": "195",
     "tagIds": [
-      "ugba_upper_div",
       "upper_div"
     ]
   },
@@ -137067,9 +136949,7 @@
     "id": "ugba195b",
     "dept": "UGBA",
     "no": "195B",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -137097,9 +136977,7 @@
     "id": "ugba197",
     "dept": "UGBA",
     "no": "197",
-    "tagIds": [
-      "ugba_upper_div"
-    ]
+    "tagIds": []
   },
   {
     "units": 5,
