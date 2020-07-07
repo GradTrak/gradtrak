@@ -28,6 +28,32 @@ export abstract class StandaloneRequirement extends Requirement {
   protected abstract isFulfillableBy(course: Course): boolean;
 
   /**
+   * For standalones, a COURSE contributes if and only if it fullfills that standalone.
+   * returns false otherwise.
+   */
+  canFulfill(course: Course): boolean {
+    return this.isFulfillableBy(course);
+  }
+
+  /**
+   * For standalones the combination of courses that will fullfill it
+   * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
+   */
+  getCourseCombinations(courses: Course[]): Set<Course>[] {
+    const combinations: Set<Course>[] = courses
+      .filter((course: Course) => {
+        return this.isFulfilledWith([course]);
+      })
+      .map((course: Course) => {
+        const combination: Set<Course> = new Set<Course>();
+        combination.add(course);
+        return combination;
+      });
+    combinations.push(new Set<Course>());
+    return combinations;
+  }
+
+  /**
    * Performs a graph traversal of the graph of equivalent courses starting at the given course, returning true if any
    * equivalent course fulfills the requirement.
    */

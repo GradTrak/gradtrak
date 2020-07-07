@@ -1,12 +1,12 @@
 <ng-container *ngIf="!isLoading; else loading">
-  <h4>Account Settings</h4>
+  <h4 class="gt-modal-header">Account Settings</h4>
   <div class="form-group">
     <div class="row">
       <div class="col-6">
         <label>Email</label>
       </div>
       <div class="col-6">
-        {{ email }}
+        {{ user.username }}
       </div>
     </div>
     <div class="row">
@@ -15,9 +15,11 @@
       </div>
       <div class="col-6">
         <ng-container *ngIf="!isChangingPassword; else passwordChange">
-          ********&nbsp;<button class="gt-button" (click)="changePassword()">
+          ********&nbsp;<button class="gt-button" [disabled]="user.auth !== 'local'" (click)="changePassword()">
             <i class="material-icons">edit</i>
           </button>
+          <br />
+          <small class="form-text text-muted">You are currently authenticated through Google.</small>
         </ng-container>
         <ng-template #passwordChange>
           <input class="form-control" type="password" [(ngModel)]="newPassword" />

@@ -1,15 +1,16 @@
 <div class="container px-4 py-3">
-  <app-requirement-set
-    *ngFor="let requirementSet of getRequiredSets()"
-    [requirementSet]="requirementSet"
-    [courses]="courses"
-    [manuallyFulfilled]="manuallyFulfilled"
-  ></app-requirement-set>
   <div class="row justify-content-center">
     <div class="col-10 my-4">
       <button class="gt-button gt-button-primary goal-editor" (click)="openSelector()">Edit Majors</button>
     </div>
   </div>
+  <app-requirement-set
+    *ngFor="let requirementSet of getRequiredSets()"
+    [requirementSet]="requirementSet"
+    [courses]="courses"
+    [manuallyFulfilled]="manuallyFulfilled"
+    [fulfillmentMap]="fulfillmentMap"
+  ></app-requirement-set>
 </div>
 
 <ng-template #goalSelector>

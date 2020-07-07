@@ -1,6 +1,6 @@
 <ng-container *ngIf="requirementSets; else loading">
   <div class="row">
-    <div class="col-8">
+    <div class="col search">
       <div class="form-group">
         <input
           class="form-control"
@@ -10,35 +10,41 @@
           (keyup)="updateGoalSearch()"
         />
       </div>
-      <div class="row form-group">
-        <div *ngFor="let state of selectionStates" class="col">
-          <h4>{{ state.type | titlecase }}</h4>
-          <select class="custom-select" size="8" [(ngModel)]="state.selectedSearchedGoal">
-            <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
-          </select>
-          <button
-            class="btn btn-primary btn-sm btn-block"
-            (click)="addGoal(state.selectedSearchedGoal, state)"
-            [disabled]="!state.selectedSearchedGoal"
-          >
-            Add
-          </button>
+      <div class="row">
+        <div *ngFor="let state of selectionStates" class="form-group col">
+          <h4 *ngIf="selectionStates.length > 1">{{ state.type | titlecase }}</h4>
+          <div class="form-group">
+            <select class="custom-select" size="8" [(ngModel)]="state.selectedSearchedGoal">
+              <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button
+              class="btn btn-outline-primary btn-sm btn-block"
+              (click)="addGoal(state.selectedSearchedGoal, state)"
+              [disabled]="!state.selectedSearchedGoal"
+            >
+              Add
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-4">
-      <h3>Selected Goals</h3>
+    <div class="col-auto">
+      <div class="line"></div>
+    </div>
+    <div class="col">
+      <h4 class="gt-modal-header">Selected Goals</h4>
       <div *ngFor="let state of selectionStates">
-        <h4>{{ state.type | titlecase }}</h4>
-        <p>
-          <span *ngFor="let goal of state.chosenGoals">
-            <i class="material-icons" (click)="removeGoal(goal, state)">close</i>
-            {{ goal.name }}
-            <br />
-          </span>
-        </p>
+        <h4 *ngIf="selectionStates.length > 1">{{ state.type | titlecase }}</h4>
+        <hr />
+        <div *ngFor="let goal of state.chosenGoals">
+          <i class="material-icons remove" (click)="removeGoal(goal, state)">close</i>
+          <span class="goal">{{ goal.name }}</span>
+          <hr />
+        </div>
       </div>
-      <button class="btn btn-primary" (click)="emitGoals()">Confirm</button>
+      <button class="btn btn-primary btn-sm btn-block" (click)="emitGoals()">Confirm</button>
     </div>
   </div>
 </ng-container>

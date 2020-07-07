@@ -1,5 +1,5 @@
 # Node dependencies
 node_modules
 
-# Compiled client assets
-server/dist/
+# Build output
+build/

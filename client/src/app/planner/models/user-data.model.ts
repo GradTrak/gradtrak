@@ -12,15 +12,11 @@ export class UserData {
   constructor(
     semesters: Map<string, Semester[]>,
     goals: RequirementSet[],
-    manuallyFulfilledReqs?: Map<string, Set<string>>,
+    manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>(),
   ) {
     this.semesters = semesters;
     this.goals = goals;
-    if (manuallyFulfilledReqs) {
-      this.manuallyFulfilledReqs = manuallyFulfilledReqs;
-    } else {
-      this.manuallyFulfilledReqs = new Map<string, Set<string>>();
-    }
+    this.manuallyFulfilledReqs = manuallyFulfilledReqs;
   }
 
   static fromProto(
@@ -33,7 +29,7 @@ export class UserData {
       semesters.set(
         key,
         (value as SemesterPrototype[]).map((semesterProto: SemesterPrototype) =>
-          semesterProto ? new Semester(semesterProto, coursesMap) : null,
+          semesterProto ? Semester.fromProto(semesterProto, coursesMap) : null,
         ),
       );
     });
@@ -43,5 +39,34 @@ export class UserData {
       manuallyFulfilledReqs.set(entry[0], new Set<string>(entry[1]));
     });
     return new UserData(semesters, goals, manuallyFulfilledReqs);
+  }
+
+  static toProto(userData: UserData): UserDataPrototype {
+    const semesters: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
+    userData.semesters.forEach((academicYearSemesters, academicYearName) => {
+      semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
+        if (!semester) {
+          return null;
+        }
+        const semesterPrototype = {
+          ...semester,
+          courseIds: semester.courses.map((course: Course) => course.id),
+        };
+        delete semesterPrototype.courses;
+        return semesterPrototype;
+      });
+    });
+    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
+    const manuallyFulfilledReqs: object = Object.fromEntries(
+      Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
+        entry[0],
+        Array.from(entry[1]),
+      ]),
+    );
+    return {
+      semesters,
+      goalIds,
+      manuallyFulfilledReqs,
+    };
   }
 }

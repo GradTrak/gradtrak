@@ -1,6 +1,6 @@
 name: Angular CI
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   build:
@@ -13,9 +13,9 @@ jobs:
     - name: Install Yarn
       run: npm install --global yarn
     - name: Install Dependencies
-      run: cd client && yarn install --frozen-lockfile
+      run: yarn install --frozen-lockfile
     - name: Build Angular App
-      run: cd client && yarn build-dev
+      run: yarn build:client
   lint-and-pretty:
     runs-on: ubuntu-latest
     steps:
@@ -26,8 +26,8 @@ jobs:
     - name: Install Yarn
       run: npm install --global yarn
     - name: Install Dependencies
-      run: cd client && yarn install --frozen-lockfile
+      run: yarn install --frozen-lockfile
     - name: ESLint
-      run: cd client && yarn lint
+      run: yarn lint:client
     - name: Prettier
-      run: cd client && yarn pretty
+      run: yarn pretty:client

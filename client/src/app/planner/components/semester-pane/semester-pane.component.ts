@@ -31,6 +31,10 @@ export class SemesterPaneComponent implements OnInit {
     this.userService.updateSemesters(semestersOutput);
   }
 
+  getYears(): Semester[][] {
+    return Array.from(this.semesters.values());
+  }
+
   /** Identical to the semesterchanger :(
    * Turns a map of semesters into an array of semesters.
    * @param mapping a mapping of the academic year to their corresponding semesters

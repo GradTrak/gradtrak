@@ -3,10 +3,10 @@ const RequirementSet = require('../models/requirement-set');
 /**
 queries mongo for any requirement models and calls successCallback on what is returned
 */
-function queryRequirements() {
-  return RequirementSet.find().exec();
+async function queryRequirements() {
+  return RequirementSet.find();
 }
 
-module.exports.getRequirements = (req, res) => {
-  queryRequirements().then((reqs) => res.json(reqs));
+module.exports.getRequirements = async (req, res) => {
+  res.json(await queryRequirements());
 };
