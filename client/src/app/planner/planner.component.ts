@@ -73,6 +73,13 @@ export class PlannerComponent implements OnInit {
     this.courseService.getCourses().subscribe();
     this.requirementService.getRequirements().subscribe();
     this.tagService.getTags().subscribe();
+
+    /* Register onbeforeclose handler for save prompt */
+    window.addEventListener('beforeunload', (e) => {
+      if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
+        e.preventDefault();
+      }
+    });
   }
 
   closeModal(): void {
