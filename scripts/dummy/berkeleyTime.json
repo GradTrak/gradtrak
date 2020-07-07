@@ -15136,7 +15136,9 @@
     "id": "chemc191",
     "dept": "CHEM",
     "no": "C191",
-    "tagIds": []
+    "tagIds": [
+      "compscic191"
+    ]
   },
   {
     "units": 3,
@@ -107832,7 +107834,10 @@
     "id": "physicsc191",
     "dept": "PHYSICS",
     "no": "C191",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "compscic191"
+    ]
   },
   {
     "units": 2,
