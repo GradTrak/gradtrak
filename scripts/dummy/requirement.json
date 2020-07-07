@@ -920,6 +920,17 @@
         ]
       },
       {
+        "name": "Natural Sciences",
+        "requirements": [
+          {
+            "id": "eecs_natural_science",
+            "type": "tag",
+            "name": "Natural Science Elective",
+            "tagId": "eecs_natural_science"
+          }
+        ]
+      },
+      {
         "name": "Physics",
         "requirements": [
           {
