@@ -7,7 +7,7 @@ const nonAlphanumeric = /[^a-zA-Z0-9]/;
 
 
 //INPUTS
-const MY_FILE = './tagging_lists/ugba_ud.txt'; //change to whatever
+const MY_FILE = './tagging_lists/ls_techelect.txt'; //change to whatever
 const TAG = 'cs_technical_elective';
 
 
@@ -27,6 +27,7 @@ eligibleCourses = eligibleCourses.flatMap(courses => {
     //TODO
   }
 });
+eligibleCourses = eligibleCourses.filter(a=>a)
 eligibleCourses = eligibleCourses.flatMap(courseId => courseId.replace(nonAlphanumeric, '').toLowerCase());
 //console.log(eligibleCourses);
 //process.exit(1)

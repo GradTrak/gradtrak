@@ -4423,7 +4423,8 @@
     "no": "107",
     "tagIds": [
       "ls_bio",
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -7895,7 +7896,8 @@
     "dept": "ARCH",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -8680,7 +8682,9 @@
     "id": "arch222",
     "dept": "ARCH",
     "no": "222",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 5,
@@ -9860,7 +9864,8 @@
     "dept": "ART",
     "no": "178",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -11471,7 +11476,8 @@
     "no": "C162",
     "tagIds": [
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "cs_technical_elective"
     ]
   },
   {
@@ -23979,7 +23985,8 @@
     "dept": "CMPBIO",
     "no": "175",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32314,7 +32321,8 @@
     "no": "100A",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div"
+      "econ_upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32325,7 +32333,8 @@
     "no": "100B",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div"
+      "econ_upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32353,7 +32362,8 @@
     "tagIds": [
       "ls_socio",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32366,7 +32376,8 @@
       "ls_socio",
       "econ_upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32829,7 +32840,8 @@
     "tagIds": [
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32896,7 +32908,8 @@
     "dept": "ECON",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -32907,7 +32920,8 @@
     "no": "141",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -46590,7 +46604,8 @@
     "no": "104",
     "tagIds": [
       "upper_div",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "cs_technical_elective"
     ]
   },
   {
@@ -46780,7 +46795,8 @@
     "no": "122",
     "tagIds": [
       "upper_div",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "cs_technical_elective"
     ]
   },
   {
@@ -46882,7 +46898,8 @@
     "no": "C162",
     "tagIds": [
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "cs_technical_elective"
     ]
   },
   {
@@ -56073,7 +56090,8 @@
     "no": "142",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -56084,7 +56102,8 @@
     "no": "143",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -56664,7 +56683,8 @@
     "dept": "GEOG",
     "no": "183",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -56721,7 +56741,8 @@
     "no": "187",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -56740,7 +56761,8 @@
     "no": "C188",
     "tagIds": [
       "ls_socio",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -70738,7 +70760,8 @@
     "no": "154",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -70760,7 +70783,8 @@
     "tagIds": [
       "linguis_elective",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -70913,7 +70937,8 @@
     "dept": "INFO",
     "no": "213",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -70922,7 +70947,9 @@
     "id": "info214",
     "dept": "INFO",
     "no": "214",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 3,
@@ -70962,7 +70989,9 @@
     "id": "info219",
     "dept": "INFO",
     "no": "219",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 3,
@@ -71060,7 +71089,9 @@
     "id": "info234",
     "dept": "INFO",
     "no": "234",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 3,
@@ -71225,7 +71256,8 @@
     "dept": "INFO",
     "no": "256",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -71235,7 +71267,8 @@
     "dept": "INFO",
     "no": "257",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -71252,7 +71285,9 @@
     "id": "infoc260f",
     "dept": "INFO",
     "no": "C260F",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 4,
@@ -71260,7 +71295,9 @@
     "id": "infoc262",
     "dept": "INFO",
     "no": "C262",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 3,
@@ -82620,7 +82657,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -82652,7 +82690,8 @@
     "no": "C105",
     "tagIds": [
       "linguis_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -82770,7 +82809,8 @@
     "dept": "LINGUIS",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -83126,7 +83166,8 @@
     "no": "158",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -96745,7 +96786,8 @@
     "no": "108",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -97836,7 +97878,8 @@
     "dept": "MUSIC",
     "no": "158A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "cs_technical_elective"
     ]
   },
   {
@@ -97854,7 +97897,8 @@
     "dept": "MUSIC",
     "no": "159",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -98424,7 +98468,9 @@
     "id": "music209",
     "dept": "MUSIC",
     "no": "209",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 4,
@@ -103013,7 +103059,9 @@
     "id": "nwmediac203",
     "dept": "NWMEDIA",
     "no": "C203",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 4,
@@ -109487,7 +109535,8 @@
     "dept": "PHILOS",
     "no": "140A",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -109497,7 +109546,8 @@
     "dept": "PHILOS",
     "no": "140B",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -109530,7 +109580,8 @@
     "no": "143",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -119398,7 +119449,8 @@
     "dept": "PSYCH",
     "no": "102",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -119810,7 +119862,8 @@
     "no": "C120",
     "tagIds": [
       "ls_socio",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -119908,7 +119961,9 @@
     "id": "psychc123",
     "dept": "PSYCH",
     "no": "C123",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 3,
@@ -119968,7 +120023,8 @@
     "dept": "PSYCH",
     "no": "C126",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -138438,7 +138494,8 @@
     "dept": "THEATER",
     "no": "177",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139241,7 +139298,8 @@
     "dept": "UGBA",
     "no": "102A",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139251,7 +139309,8 @@
     "dept": "UGBA",
     "no": "102B",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139270,7 +139329,8 @@
     "no": "103",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139280,7 +139340,8 @@
     "dept": "UGBA",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139406,7 +139467,8 @@
       "upper_div",
       "econ_upper_div",
       "stat_cluster",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139437,7 +139499,9 @@
     "id": "ugba120a",
     "dept": "UGBA",
     "no": "120A",
-    "tagIds": []
+    "tagIds": [
+      "cs_technical_elective"
+    ]
   },
   {
     "units": 4,
@@ -139469,7 +139533,8 @@
     "no": "120B",
     "tagIds": [
       "stat_cluster",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -139852,7 +139917,8 @@
     "dept": "UGBA",
     "no": "146",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cs_technical_elective"
     ]
   },
   {
@@ -140248,7 +140314,8 @@
       "upper_div",
       "econ_upper_div",
       "stat_cluster",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "cs_technical_elective"
     ]
   },
   {
