@@ -20,7 +20,7 @@ api.post('/account/register', userController.register);
 api.post(
   '/account/login',
   passport.authenticate('local', { failWithError: true }),
-  userController.loginSuccess,
+  userController.loginSuccessLocal,
   // eslint-disable-next-line no-unused-vars
   (err, req, res, next) => {
     res.status(200);
@@ -30,7 +30,7 @@ api.post(
 api.get(
   '/account/login/google/callback',
   passport.authenticate('google'),
-  userController.loginSuccess,
+  userController.loginSuccessGoogle,
   // eslint-disable-next-line no-unused-vars
   (err, req, res, next) => {
     res.status(200);

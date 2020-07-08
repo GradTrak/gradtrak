@@ -71,6 +71,7 @@ exports.register = async (req, res) => {
   res.json({
     username,
     success: true,
+    auth: 'local',
   });
 
   smtp.sendMail({
@@ -90,10 +91,19 @@ exports.logout = (req, res) => {
   }
 };
 
-exports.loginSuccess = (req, res) => {
+exports.loginSuccessLocal = (req, res) => {
   res.json({
     success: true,
     username: req.user.username,
+    auth: 'local',
+  });
+};
+
+exports.loginSuccessGoogle = (req, res) => {
+  res.json({
+    success: true,
+    username: req.user.username,
+    auth: 'google',
   });
 };
 

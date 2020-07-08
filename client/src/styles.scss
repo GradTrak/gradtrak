@@ -24,9 +24,16 @@ a:hover {
 }
 
 .gt-button {
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: unset;
   border: none;
   font-weight: lighter;
+}
+
+a.gt-button {
+  color: unset;
+  text-decoration: unset;
 }
 
 .gt-button-primary {

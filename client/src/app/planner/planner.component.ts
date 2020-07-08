@@ -74,11 +74,16 @@ export class PlannerComponent implements OnInit {
     this.requirementService.getRequirements().subscribe();
     this.tagService.getTags().subscribe();
 
-    /* Register onbeforeclose handler for save prompt */
+    /* Register beforeclose handler for save prompt */
     window.addEventListener('beforeunload', (e) => {
       if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
+        /* This text isn't actually what is displayed. */
+        const confirmation: string = 'Are you sure you want to leave? Guest account changes will be lost.';
+        e.returnValue = confirmation;
         e.preventDefault();
+        return confirmation;
       }
+      return undefined;
     });
   }
 
