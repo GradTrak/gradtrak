@@ -83,7 +83,7 @@ export class PlannerComponent implements OnInit {
         e.preventDefault();
         return confirmation;
       }
-      return null;
+      return undefined;
     });
   }
 
