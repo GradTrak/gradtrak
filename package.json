@@ -24,10 +24,10 @@
     "build:server": "cd server && tsc",
     "start:server": "cd server && node ./build/bin/www.js",
     "watch:server": "cd server && nodemon --ext ts --exec \"yarn build:server && yarn start:server\"",
-    "lint:server": "cd server && eslint \"**/*.js\"",
-    "lint-fix:server": "cd server && eslint --fix \"**/*.js\"",
-    "pretty:server": "prettier --check \"server/**/*.js\"",
-    "pretty-fix:server": "prettier --check --write \"server/**/*.js\"",
+    "lint:server": "cd server && eslint \"src/**/*.ts\"",
+    "lint-fix:server": "cd server && eslint --fix \"src/**/*.ts\"",
+    "pretty:server": "prettier --check \"server/src/**/*.ts\"",
+    "pretty-fix:server": "prettier --check --write \"server/src/**/*.ts\"",
     "heroku-postbuild": "true"
   },
   "dependencies": {
