@@ -19,7 +19,9 @@
             <i class="material-icons">edit</i>
           </button>
           <br />
-          <small class="form-text text-muted">You are currently authenticated through Google.</small>
+          <small *ngIf="user.auth === 'google'" class="form-text text-muted">
+            You are currently authenticated through Google.
+          </small>
         </ng-container>
         <ng-template #passwordChange>
           <input class="form-control" type="password" [(ngModel)]="newPassword" />
