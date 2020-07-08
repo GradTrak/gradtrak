@@ -125,10 +125,6 @@ export class PlannerComponent implements OnInit {
     this.userService.logout();
   }
 
-  openHelp(): void {
-    window.open('https://docs.google.com/document/d/1sr9zSIZItja7008yAB5kYDhEZv-1SO0I7zIJtUmZ0Kk/');
-  }
-
   setUserData(userData: UserData): void {
     this.closeModal();
     this.userService.setUserData(userData);
