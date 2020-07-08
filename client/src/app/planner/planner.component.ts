@@ -78,7 +78,10 @@ export class PlannerComponent implements OnInit {
     window.addEventListener('beforeunload', (e) => {
       if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
         /* This text isn't actually what is displayed. */
-        e.returnValue = 'Are you sure you want to leave? Guest account changes will be lost.';
+        const confirmation: string = 'Are you sure you want to leave? Guest account changes will be lost.';
+        e.returnValue = confirmation;
+        e.preventDefault();
+        return confirmation;
       }
     });
   }
