@@ -1,15 +1,15 @@
-const express = require('express');
-const path = require('path');
-const compression = require('compression');
-const cookieParser = require('cookie-parser');
-const csrf = require('csurf');
-const logger = require('morgan');
-const passport = require('passport');
-const session = require('express-session');
+import express from 'express';
+import path from 'path';
+import compression from 'compression';
+import cookieParser from 'cookie-parser';
+import csrf from 'csurf';
+import logger from 'morgan';
+import passport from 'passport';
+import session from 'express-session';
 
-const db = require('./config/db');
-const { deserializeUser, googleStrategy, localStrategy, serializeUser } = require('./config/passport');
-const { api } = require('./routers/api');
+import * as db from './config/db';
+import { deserializeUser, googleStrategy, localStrategy, serializeUser } from './config/passport';
+import { api } from './routers/api';
 
 db.connect();
 
@@ -51,4 +51,5 @@ app.get(
   }),
 );
 app.use(express.static(path.join(__dirname, 'dist')));
-module.exports = app;
+
+export default app;

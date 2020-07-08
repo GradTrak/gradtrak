@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const tagSchema = new mongoose.Schema(
   {
@@ -16,4 +16,6 @@ const tagSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-module.exports = mongoose.model('Tag', tagSchema);
+const Tag = mongoose.model('Tag', tagSchema);
+
+export default Tag;

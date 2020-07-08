@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const constraintSchema = new mongoose.Schema(
   {
@@ -114,4 +114,6 @@ const requirementSetSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-module.exports = mongoose.model('RequirementSet', requirementSetSchema);
+const RequirementSet = mongoose.model('RequirementSet', requirementSetSchema);
+
+export default RequirementSet;

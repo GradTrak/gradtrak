@@ -1,10 +1,10 @@
-const argon2 = require('argon2');
-const { OAuth2Strategy: GoogleStrategy } = require('passport-google-oauth');
-const { Strategy } = require('passport-local');
+import argon2 from 'argon2';
+import { OAuth2Strategy as GoogleStrategy } from 'passport-google-oauth';
+import { Strategy } from 'passport-local';
 
-const User = require('../models/user');
+import User from '../models/user';
 
-async function verifyUser(user, inputPassword) {
+export async function verifyUser(user, inputPassword) {
   if (!user || !user.passwordHash) {
     /* Verify dummy password to prevent timing attack enumerating users */
     /* This is the hash of 'password' if anyone is curious */
@@ -17,7 +17,7 @@ async function verifyUser(user, inputPassword) {
   return true;
 }
 
-const localStrategy = new Strategy(async (username, inputPassword, done) => {
+export const localStrategy = new Strategy(async (username, inputPassword, done) => {
   try {
     const user = await User.findOne({ username });
     if (!(await verifyUser(user, inputPassword))) {
@@ -30,7 +30,7 @@ const localStrategy = new Strategy(async (username, inputPassword, done) => {
   }
 });
 
-const googleStrategy = new GoogleStrategy(
+export const googleStrategy = new GoogleStrategy(
   {
     clientID:
       process.env.GOOGLE_OAUTH2_CLIENT_ID || '193968115710-tbotc192sopukgp3b13741d1puvlarsk.apps.googleusercontent.com',
@@ -69,16 +69,12 @@ const googleStrategy = new GoogleStrategy(
 
 /* eslint-disable no-underscore-dangle */
 
-module.exports.serializeUser = (user, done) => {
+export function serializeUser(user, done) {
   done(null, user._id);
-};
+}
 
-module.exports.deserializeUser = (_id, done) => {
+export function deserializeUser(_id, done) {
   User.findOne({ _id }, done);
-};
+}
 
 /* eslint-enable no-underscore-dangle */
-
-module.exports.verifyUser = verifyUser;
-module.exports.localStrategy = localStrategy;
-module.exports.googleStrategy = googleStrategy;

@@ -1,7 +1,7 @@
-const redis = require('redis');
-const redisCache = require('express-redis-cache');
+import redis from 'redis';
+import redisCache from 'express-redis-cache';
 
-const cache = redisCache({
+export const cache = redisCache({
   client: redis.createClient(process.env.REDIS_URL),
 });
 let cacheConnRefused = false;
@@ -12,5 +12,3 @@ cache.on('error', (err) => {
     cacheConnRefused = true;
   }
 });
-
-module.exports.cache = cache;
