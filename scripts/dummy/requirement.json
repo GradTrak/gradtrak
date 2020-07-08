@@ -941,49 +941,44 @@
             "tagId": "eecs_natural_science"
           },
           {
-            "name": "Physics",
+            "id": "physics5a/7a",
+            "type": "poly",
+            "name": "Physics 7A",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
-                "id": "physics5a/7a",
-                "type": "poly",
-                "name": "Physics 7A",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "physics7a",
-                    "type": "course",
-                    "name": "PHYSICS 7A",
-                    "courseId": "physics7a"
-                  },
-                  {
-                    "id": "physics5a",
-                    "type": "course",
-                    "name": "PHYSICS 5A",
-                    "courseId": "physics5a"
-                  }
-                ]
+                "id": "physics7a",
+                "type": "course",
+                "name": "PHYSICS 7A",
+                "courseId": "physics7a"
               },
               {
-                "id": "physics5b/7b",
-                "type": "poly",
-                "name": "Physics 7B",
-                "numRequired": 1,
-                "hidden": true,
-                "requirements": [
-                  {
-                    "id": "physics7b",
-                    "type": "course",
-                    "name": "PHYSICS 7B",
-                    "courseId": "physics7b"
-                  },
-                  {
-                    "id": "physics5b",
-                    "type": "course",
-                    "name": "PHYSICS 5B",
-                    "courseId": "physics5b"
-                  }
-                ]
+                "id": "physics5a",
+                "type": "course",
+                "name": "PHYSICS 5A",
+                "courseId": "physics5a"
+              }
+            ]
+          },
+          {
+            "id": "physics5b/7b",
+            "type": "poly",
+            "name": "Physics 7B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "physics7b",
+                "type": "course",
+                "name": "PHYSICS 7B",
+                "courseId": "physics7b"
+              },
+              {
+                "id": "physics5b",
+                "type": "course",
+                "name": "PHYSICS 5B",
+                "courseId": "physics5b"
               }
             ]
           }
