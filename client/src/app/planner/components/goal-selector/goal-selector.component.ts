@@ -45,6 +45,15 @@ export class GoalSelectorComponent implements OnInit {
     });
 
     this.requirementService.getRequirements().subscribe((requirementSets: RequirementSet[]) => {
+      requirementSets.sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
       this.requirementSets = requirementSets;
       this.updateGoalSearch();
     });
