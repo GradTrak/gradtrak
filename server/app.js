@@ -29,6 +29,8 @@ app.use(
   session({
     store: new RedisStore({ client: redisClient }),
     secret: process.env.SESSION_SECRET || 'secret',
+    resave: false,
+    saveUninitialized: false,
   }),
 );
 app.use(passport.initialize());
