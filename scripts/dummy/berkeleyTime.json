@@ -62694,7 +62694,9 @@
     "id": "histart27",
     "dept": "HISTART",
     "no": "27",
-    "tagIds": []
+    "tagIds": [
+      "ls_arts"
+    ]
   },
   {
     "units": 4,
@@ -127159,7 +127161,9 @@
     "dept": "S ASIAN",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ls_arts",
+      "ls_philo"
     ]
   },
   {
