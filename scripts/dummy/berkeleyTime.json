@@ -4049,7 +4049,10 @@
     "id": "anthro1",
     "dept": "ANTHRO",
     "no": "1",
-    "tagIds": []
+    "tagIds": [
+      "ls_bio",
+      "ls_socio"
+    ]
   },
   {
     "units": 4,
@@ -17082,7 +17085,8 @@
     "dept": "CHICANO",
     "no": "174",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ls_socio"
     ]
   },
   {
