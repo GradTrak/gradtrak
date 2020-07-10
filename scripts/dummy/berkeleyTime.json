@@ -11416,7 +11416,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "data_sci_compute"
     ]
   },
   {
@@ -27759,7 +27760,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -27774,7 +27776,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -27789,7 +27792,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -27814,7 +27818,8 @@
       "ls_quant",
       "eecs_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -27830,7 +27835,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -27884,7 +27890,8 @@
       "eecs_upper_div",
       "bioeng_technical_topics",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -28017,7 +28024,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -28049,7 +28057,8 @@
       "eecs_upper_div",
       "bioeng_technical_topics",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -30458,7 +30467,8 @@
     "no": "144",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -33003,7 +33013,8 @@
     "no": "140",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -38211,7 +38222,8 @@
     "tagIds": [
       "eecs_upper_div",
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "data_sci_compute"
     ]
   },
   {
@@ -46253,7 +46265,9 @@
     "id": "enveconc118",
     "dept": "ENVECON",
     "no": "C118",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_compute"
+    ]
   },
   {
     "units": 3,
@@ -49184,7 +49198,8 @@
     "dept": "ESPM",
     "no": "174",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "data_sci_compute"
     ]
   },
   {
@@ -69453,7 +69468,9 @@
     "id": "iasc118",
     "dept": "IAS",
     "no": "C118",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_compute"
+    ]
   },
   {
     "units": 3,
@@ -70994,7 +71011,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -71017,7 +71035,8 @@
       "linguis_elective",
       "upper_div",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -111998,7 +112017,8 @@
     "tagIds": [
       "upper_div",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136729,7 +136749,8 @@
       "ls_quant",
       "upper_div",
       "bioeng_technical_topics",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136766,7 +136787,8 @@
       "ls_quant",
       "upper_div",
       "bioeng_technical_topics",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136777,7 +136799,8 @@
     "no": "151A",
     "tagIds": [
       "ls_quant",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136800,7 +136823,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136812,7 +136836,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136872,7 +136897,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -136884,7 +136910,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
