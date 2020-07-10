@@ -2771,8 +2771,8 @@
     ]
   },
   {
-    "id": "cs",
-    "name": "L&S CS Major",
+    "id": "ds",
+    "name": "Data Science Major",
     "parentId": "ls",
     "type": "major",
     "requirementCategories": [
@@ -2911,61 +2911,46 @@
         "name": "Upper Division",
         "requirements": [
           {
-            "id": "eecs_design",
-            "type": "tag",
-            "name": "EECS Design Course",
-            "tagId": "eecs_design"
+            "id": "datac100",
+            "type": "course",
+            "name": "DATA C100",
+            "courseId": "datac100"
           },
           {
-            "id": "upper_div",
+            "id": "comp_data_sci",
             "type": "unit",
             "name": "Upper Division",
-            "units": 20,
+            "units": 7,
             "requirement": {
-              "id": "eecs_upper_div",
+              "id": "compute_data_sci",
               "type": "tag",
-              "name": "EECS Upper Division Course",
-              "tagId": "eecs_upper_div"
+              "name": "Compututational and Inferential Depth",
+              "tagId": "compute_data_sci"
             }
           },
           {
-            "id": "tech_elect",
-            "type": "unit",
-            "name": "Technical Electives",
-            "units": 7,
-            "requirement": {
-              "id": "eecs_upper_div",
-              "type": "tag",
-              "name": "CS Upper Div Technical Elective",
-              "tagId": "cs_technical_elective"
-            }
+            "id": "prob_data_sci",
+            "type": "tag",
+            "name": "Probability",
+            "tagId": "prob_data_sci"
+          },
+          {
+            "id": "model_data_sci",
+            "type": "tag",
+            "name": "Modeling, Learning, and Decision Making",
+            "tagId": "model_data_sci"
+          },
+          {
+            "id": "ethics_data_sci",
+            "type": "tag",
+            "name": "Human Contexts and Ethics",
+            "tagId": "ethics_data_sci"
           }
         ]
       },
       {
-        "name": "Lower Division Requirements",
+        "name": "Domain Emphasis (not implemented)",
         "requirements": [
-          {
-            "id": "eecs16amath54",
-            "type": "multi",
-            "name": "EECS 16A",
-            "numRequired": 1,
-            "hidden": true,
-            "requirements": [
-              {
-                "id": "eecs16a",
-                "type": "course",
-                "name": "EECS 16A",
-                "courseId": "eecs16a"
-              },
-              {
-                "id": "math54",
-                "type": "course",
-                "name": "MATH 54",
-                "courseId": "math54"
-              }
-            ]
-          },
           {
             "id": "eecs16b",
             "type": "course",
