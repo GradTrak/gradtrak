@@ -661,7 +661,7 @@
               {
                 "id": "envecon100",
                 "type": "course",
-                "name": "ENVECON 100A",
+                "name": "ENVECON 100",
                 "courseId": "envecon100"
               },
               {
@@ -669,6 +669,12 @@
                 "type": "course",
                 "name": "POLECON 106",
                 "courseId": "polecon106"
+              },
+              {
+                "id": "ias106",
+                "type": "course",
+                "name": "IAS 106",
+                "courseId": "ias106"
               }
             ]
           },
@@ -680,10 +686,10 @@
             "hidden": true,
             "requirements": [
               {
-                "id": "ugba102a",
+                "id": "ugba101b",
                 "type": "course",
-                "name": "UGBA 102A",
-                "courseId": "ugba102a"
+                "name": "UGBA 101B",
+                "courseId": "ugba101b"
               },
               {
                 "id": "econ100b",
@@ -702,6 +708,12 @@
                 "type": "course",
                 "name": "POLECON 107",
                 "courseId": "polecon107"
+              },
+              {
+                "id": "ias107",
+                "type": "course",
+                "name": "IAS 107",
+                "courseId": "ias107"
               }
             ]
           },
