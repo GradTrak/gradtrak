@@ -1132,10 +1132,7 @@
     "id": "africamw111",
     "dept": "AFRICAM",
     "no": "W111",
-    "tagIds": [],
-    "equivIds": [
-      "africam111"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -1308,10 +1305,7 @@
     "id": "africamw124",
     "dept": "AFRICAM",
     "no": "W124",
-    "tagIds": [],
-    "equivIds": [
-      "africam124"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -11261,10 +11255,7 @@
     "id": "astronw12",
     "dept": "ASTRON",
     "no": "W12",
-    "tagIds": [],
-    "equivIds": [
-      "astron12"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -19348,10 +19339,7 @@
     "id": "civengw30",
     "dept": "CIV ENG",
     "no": "W30",
-    "tagIds": [],
-    "equivIds": [
-      "civeng30"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -24494,10 +24482,7 @@
     "id": "colwritw1",
     "dept": "COLWRIT",
     "no": "W1",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit1"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -25249,10 +25234,7 @@
     "id": "colwritw9",
     "dept": "COLWRIT",
     "no": "W9",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit9"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -25520,10 +25502,7 @@
     "id": "colwritw143",
     "dept": "COLWRIT",
     "no": "W143",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit143"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -25531,10 +25510,7 @@
     "id": "colwritw144",
     "dept": "COLWRIT",
     "no": "W144",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit144"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -25552,10 +25528,7 @@
     "id": "colwritw145",
     "dept": "COLWRIT",
     "no": "W145",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit145"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -25655,10 +25628,7 @@
     "id": "colwritw181",
     "dept": "COLWRIT",
     "no": "W181",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit181"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -25676,10 +25646,7 @@
     "id": "colwritw200",
     "dept": "COLWRIT",
     "no": "W200",
-    "tagIds": [],
-    "equivIds": [
-      "colwrit200"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -27313,9 +27280,6 @@
     "no": "W10",
     "tagIds": [
       "ls_quant"
-    ],
-    "equivIds": [
-      "compsci10"
     ]
   },
   {
@@ -27969,9 +27933,6 @@
     "tagIds": [
       "ls_quant",
       "eecs_upper_div"
-    ],
-    "equivIds": [
-      "compsci182"
     ]
   },
   {
@@ -28017,9 +27978,6 @@
       "bioeng_technical_topics",
       "eecs_design",
       "stat_cluster"
-    ],
-    "equivIds": [
-      "compsci186"
     ]
   },
   {
@@ -28389,9 +28347,6 @@
     "no": "W267",
     "tagIds": [
       "ls_quant"
-    ],
-    "equivIds": [
-      "compsci267"
     ]
   },
   {
@@ -30234,10 +30189,7 @@
     "id": "cyberw200",
     "dept": "CYBER",
     "no": "W200",
-    "tagIds": [],
-    "equivIds": [
-      "cyber200"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30245,10 +30197,7 @@
     "id": "cyberw202",
     "dept": "CYBER",
     "no": "W202",
-    "tagIds": [],
-    "equivIds": [
-      "cyber202"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30256,10 +30205,7 @@
     "id": "cyberw204",
     "dept": "CYBER",
     "no": "W204",
-    "tagIds": [],
-    "equivIds": [
-      "cyber204"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30267,10 +30213,7 @@
     "id": "cyberw207",
     "dept": "CYBER",
     "no": "W207",
-    "tagIds": [],
-    "equivIds": [
-      "cyber207"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30278,10 +30221,7 @@
     "id": "cyberw210",
     "dept": "CYBER",
     "no": "W210",
-    "tagIds": [],
-    "equivIds": [
-      "cyber210"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30289,10 +30229,7 @@
     "id": "cyberw211",
     "dept": "CYBER",
     "no": "W211",
-    "tagIds": [],
-    "equivIds": [
-      "cyber211"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30300,10 +30237,7 @@
     "id": "cyberw215",
     "dept": "CYBER",
     "no": "W215",
-    "tagIds": [],
-    "equivIds": [
-      "cyber215"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30311,10 +30245,7 @@
     "id": "cyberw220",
     "dept": "CYBER",
     "no": "W220",
-    "tagIds": [],
-    "equivIds": [
-      "cyber220"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30322,10 +30253,7 @@
     "id": "cyberw233",
     "dept": "CYBER",
     "no": "W233",
-    "tagIds": [],
-    "equivIds": [
-      "cyber233"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30333,10 +30261,7 @@
     "id": "cyberw242",
     "dept": "CYBER",
     "no": "W242",
-    "tagIds": [],
-    "equivIds": [
-      "cyber242"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30344,10 +30269,7 @@
     "id": "cyberw289",
     "dept": "CYBER",
     "no": "W289",
-    "tagIds": [],
-    "equivIds": [
-      "cyber289"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30355,10 +30277,7 @@
     "id": "cyberw295",
     "dept": "CYBER",
     "no": "W295",
-    "tagIds": [],
-    "equivIds": [
-      "cyber295"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -30512,10 +30431,7 @@
     "id": "datasciw200",
     "dept": "DATASCI",
     "no": "W200",
-    "tagIds": [],
-    "equivIds": [
-      "datasci200"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30523,10 +30439,7 @@
     "id": "datasciw201",
     "dept": "DATASCI",
     "no": "W201",
-    "tagIds": [],
-    "equivIds": [
-      "datasci201"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30534,10 +30447,7 @@
     "id": "datasciw203",
     "dept": "DATASCI",
     "no": "W203",
-    "tagIds": [],
-    "equivIds": [
-      "datasci203"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30545,10 +30455,7 @@
     "id": "datasciw205",
     "dept": "DATASCI",
     "no": "W205",
-    "tagIds": [],
-    "equivIds": [
-      "datasci205"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30556,10 +30463,7 @@
     "id": "datasciw207",
     "dept": "DATASCI",
     "no": "W207",
-    "tagIds": [],
-    "equivIds": [
-      "datasci207"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30567,10 +30471,7 @@
     "id": "datasciw209",
     "dept": "DATASCI",
     "no": "W209",
-    "tagIds": [],
-    "equivIds": [
-      "datasci209"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30578,10 +30479,7 @@
     "id": "datasciw210",
     "dept": "DATASCI",
     "no": "W210",
-    "tagIds": [],
-    "equivIds": [
-      "datasci210"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30589,10 +30487,7 @@
     "id": "datasciw231",
     "dept": "DATASCI",
     "no": "W231",
-    "tagIds": [],
-    "equivIds": [
-      "datasci231"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30600,10 +30495,7 @@
     "id": "datasciw241",
     "dept": "DATASCI",
     "no": "W241",
-    "tagIds": [],
-    "equivIds": [
-      "datasci241"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30611,10 +30503,7 @@
     "id": "datasciw251",
     "dept": "DATASCI",
     "no": "W251",
-    "tagIds": [],
-    "equivIds": [
-      "datasci251"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30622,10 +30511,7 @@
     "id": "datasciw261",
     "dept": "DATASCI",
     "no": "W261",
-    "tagIds": [],
-    "equivIds": [
-      "datasci261"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30633,10 +30519,7 @@
     "id": "datasciw266",
     "dept": "DATASCI",
     "no": "W266",
-    "tagIds": [],
-    "equivIds": [
-      "datasci266"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -30644,10 +30527,7 @@
     "id": "datasciw271",
     "dept": "DATASCI",
     "no": "W271",
-    "tagIds": [],
-    "equivIds": [
-      "datasci271"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -31509,10 +31389,7 @@
     "id": "devpw297",
     "dept": "DEVP",
     "no": "W297",
-    "tagIds": [],
-    "equivIds": [
-      "devp297"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -34869,10 +34746,7 @@
     "id": "educw140",
     "dept": "EDUC",
     "no": "W140",
-    "tagIds": [],
-    "equivIds": [
-      "educ140"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -34901,10 +34775,7 @@
     "id": "educw141",
     "dept": "EDUC",
     "no": "W141",
-    "tagIds": [],
-    "equivIds": [
-      "educ141"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -34924,9 +34795,6 @@
     "no": "W142",
     "tagIds": [
       "ls_socio"
-    ],
-    "equivIds": [
-      "educ142"
     ]
   },
   {
@@ -35047,10 +34915,7 @@
     "id": "educw153",
     "dept": "EDUC",
     "no": "W153",
-    "tagIds": [],
-    "equivIds": [
-      "educ153"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -35108,10 +34973,7 @@
     "id": "educw161",
     "dept": "EDUC",
     "no": "W161",
-    "tagIds": [],
-    "equivIds": [
-      "educ161"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -35137,10 +34999,7 @@
     "id": "educw164",
     "dept": "EDUC",
     "no": "W164",
-    "tagIds": [],
-    "equivIds": [
-      "educ164"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -35148,10 +35007,7 @@
     "id": "educw165",
     "dept": "EDUC",
     "no": "W165",
-    "tagIds": [],
-    "equivIds": [
-      "educ165"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -35415,10 +35271,7 @@
     "id": "educw190",
     "dept": "EDUC",
     "no": "W190",
-    "tagIds": [],
-    "equivIds": [
-      "educ190"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -37478,10 +37331,7 @@
     "id": "educw289",
     "dept": "EDUC",
     "no": "W289",
-    "tagIds": [],
-    "equivIds": [
-      "educ289"
-    ]
+    "tagIds": []
   },
   {
     "units": 0,
@@ -39124,9 +38974,6 @@
     "tagIds": [
       "eecs_upper_div",
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng130"
     ]
   },
   {
@@ -39249,9 +39096,6 @@
     "tagIds": [
       "eecs_upper_div",
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng140"
     ]
   },
   {
@@ -39286,9 +39130,6 @@
     "tagIds": [
       "eecs_upper_div",
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng141"
     ]
   },
   {
@@ -39314,9 +39155,6 @@
     "tagIds": [
       "eecs_upper_div",
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng142"
     ]
   },
   {
@@ -40189,9 +40027,6 @@
     "no": "W231",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng231"
     ]
   },
   {
@@ -40352,9 +40187,6 @@
     "no": "W240",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng240"
     ]
   },
   {
@@ -40435,9 +40267,6 @@
     "no": "W241",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng241"
     ]
   },
   {
@@ -40518,9 +40347,6 @@
     "no": "W242",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng242"
     ]
   },
   {
@@ -40571,9 +40397,6 @@
     "no": "W244",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng244"
     ]
   },
   {
@@ -40604,9 +40427,6 @@
     "no": "W245",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng245"
     ]
   },
   {
@@ -40667,9 +40487,6 @@
     "no": "W247",
     "tagIds": [
       "cs_technical_elective"
-    ],
-    "equivIds": [
-      "eleng247"
     ]
   },
   {
@@ -41030,9 +40847,6 @@
     "no": "W100",
     "tagIds": [
       "eecs_ethics"
-    ],
-    "equivIds": [
-      "eneres100"
     ]
   },
   {
@@ -41181,10 +40995,7 @@
     "id": "eneresw174",
     "dept": "ENE,RES",
     "no": "W174",
-    "tagIds": [],
-    "equivIds": [
-      "eneres174"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -41585,10 +41396,7 @@
     "id": "enginw7",
     "dept": "ENGIN",
     "no": "W7",
-    "tagIds": [],
-    "equivIds": [
-      "engin7"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -42792,7 +42600,8 @@
     "id": "english1ac",
     "dept": "ENGLISH",
     "no": "1AC",
-    "tagIds": []
+    "tagIds": [
+    ]
   },
   {
     "units": 3,
@@ -46614,10 +46423,7 @@
     "id": "epsw12",
     "dept": "EPS",
     "no": "W12",
-    "tagIds": [],
-    "equivIds": [
-      "eps12"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -49166,10 +48972,7 @@
     "id": "espmw169",
     "dept": "ESPM",
     "no": "W169",
-    "tagIds": [],
-    "equivIds": [
-      "espm169"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -52197,10 +52000,7 @@
     "id": "ewmbaw254",
     "dept": "EWMBA",
     "no": "W254",
-    "tagIds": [],
-    "equivIds": [
-      "ewmba254"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -64646,10 +64446,7 @@
     "id": "historyw5",
     "dept": "HISTORY",
     "no": "W5",
-    "tagIds": [],
-    "equivIds": [
-      "history5"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -69305,10 +69102,7 @@
     "id": "humw101",
     "dept": "HUM",
     "no": "W101",
-    "tagIds": [],
-    "equivIds": [
-      "hum101"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -70867,10 +70661,7 @@
     "id": "infow10",
     "dept": "INFO",
     "no": "W10",
-    "tagIds": [],
-    "equivIds": [
-      "info10"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -70878,10 +70669,7 @@
     "id": "infow18",
     "dept": "INFO",
     "no": "W18",
-    "tagIds": [],
-    "equivIds": [
-      "info18"
-    ]
+    "tagIds": []
   },
   {
     "units": 1,
@@ -71824,10 +71612,7 @@
     "id": "integbiw11",
     "dept": "INTEGBI",
     "no": "W11",
-    "tagIds": [],
-    "equivIds": [
-      "integbi11"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -75700,10 +75485,7 @@
     "id": "isfw187",
     "dept": "ISF",
     "no": "W187",
-    "tagIds": [],
-    "equivIds": [
-      "isf187"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -75785,10 +75567,7 @@
     "id": "italianw1",
     "dept": "ITALIAN",
     "no": "W1",
-    "tagIds": [],
-    "equivIds": [
-      "italian1"
-    ]
+    "tagIds": []
   },
   {
     "units": 5,
@@ -75824,9 +75603,6 @@
     "no": "W2",
     "tagIds": [
       "ls_lang"
-    ],
-    "equivIds": [
-      "italian2"
     ]
   },
   {
@@ -78964,10 +78740,7 @@
     "id": "lsw1",
     "dept": "L & S",
     "no": "W1",
-    "tagIds": [],
-    "equivIds": [
-      "ls1"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -85947,9 +85720,6 @@
     "no": "W53",
     "tagIds": [
       "ls_quant"
-    ],
-    "equivIds": [
-      "math53"
     ]
   },
   {
@@ -88540,10 +88310,7 @@
     "id": "mbaw254",
     "dept": "MBA",
     "no": "W254",
-    "tagIds": [],
-    "equivIds": [
-      "mba254"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -89281,10 +89048,7 @@
     "id": "mcellbiw32",
     "dept": "MCELLBI",
     "no": "W32",
-    "tagIds": [],
-    "equivIds": [
-      "mcellbi32"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -89414,10 +89178,7 @@
     "id": "mcellbiw61",
     "dept": "MCELLBI",
     "no": "W61",
-    "tagIds": [],
-    "equivIds": [
-      "mcellbi61"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -93580,10 +93341,7 @@
     "id": "mecengw85",
     "dept": "MEC ENG",
     "no": "W85",
-    "tagIds": [],
-    "equivIds": [
-      "meceng85"
-    ]
+    "tagIds": []
   },
   {
     "units": 1,
@@ -95722,10 +95480,7 @@
     "id": "mediastw10",
     "dept": "MEDIAST",
     "no": "W10",
-    "tagIds": [],
-    "equivIds": [
-      "mediast10"
-    ]
+    "tagIds": []
   },
   {
     "units": 1,
@@ -102845,10 +102600,7 @@
     "id": "nusctxw104",
     "dept": "NUSCTX",
     "no": "W104",
-    "tagIds": [],
-    "equivIds": [
-      "nusctx104"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -105055,10 +104807,7 @@
     "id": "pbhlthw108",
     "dept": "PB HLTH",
     "no": "W108",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth108"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -105280,10 +105029,7 @@
     "id": "pbhlthw142",
     "dept": "PB HLTH",
     "no": "W142",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth142"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -105704,10 +105450,7 @@
     "id": "pbhlthw200",
     "dept": "PB HLTH",
     "no": "W200",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth200"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -105843,10 +105586,7 @@
     "id": "pbhlthw202",
     "dept": "PB HLTH",
     "no": "W202",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth202"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -105918,10 +105658,7 @@
     "id": "pbhlthw204",
     "dept": "PB HLTH",
     "no": "W204",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth204"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -105937,10 +105674,7 @@
     "id": "pbhlthw205",
     "dept": "PB HLTH",
     "no": "W205",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth205"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -105996,10 +105730,7 @@
     "id": "pbhlthw206",
     "dept": "PB HLTH",
     "no": "W206",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth206"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106063,10 +105794,7 @@
     "id": "pbhlthw209",
     "dept": "PB HLTH",
     "no": "W209",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth209"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106178,10 +105906,7 @@
     "id": "pbhlthw212",
     "dept": "PB HLTH",
     "no": "W212",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth212"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106205,10 +105930,7 @@
     "id": "pbhlthw213",
     "dept": "PB HLTH",
     "no": "W213",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth213"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106336,10 +106058,7 @@
     "id": "pbhlthw218",
     "dept": "PB HLTH",
     "no": "W218",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth218"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106379,10 +106098,7 @@
     "id": "pbhlthw219",
     "dept": "PB HLTH",
     "no": "W219",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth219"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106446,10 +106162,7 @@
     "id": "pbhlthw220",
     "dept": "PB HLTH",
     "no": "W220",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth220"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106561,10 +106274,7 @@
     "id": "pbhlthw223",
     "dept": "PB HLTH",
     "no": "W223",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth223"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -106612,10 +106322,7 @@
     "id": "pbhlthw224",
     "dept": "PB HLTH",
     "no": "W224",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth224"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -107201,10 +106908,7 @@
     "id": "pbhlthw250",
     "dept": "PB HLTH",
     "no": "W250",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth250"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -107372,10 +107076,7 @@
     "id": "pbhlthw253",
     "dept": "PB HLTH",
     "no": "W253",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth253"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -107521,10 +107222,7 @@
     "id": "pbhlthw257",
     "dept": "PB HLTH",
     "no": "W257",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth257"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -107548,10 +107246,7 @@
     "id": "pbhlthw258",
     "dept": "PB HLTH",
     "no": "W258",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth258"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -107599,10 +107294,7 @@
     "id": "pbhlthw260",
     "dept": "PB HLTH",
     "no": "W260",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth260"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -108090,10 +107782,7 @@
     "id": "pbhlthw289",
     "dept": "PB HLTH",
     "no": "W289",
-    "tagIds": [],
-    "equivIds": [
-      "pbhlth289"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -114006,10 +113695,7 @@
     "id": "polsciw3",
     "dept": "POL SCI",
     "no": "W3",
-    "tagIds": [],
-    "equivIds": [
-      "polsci3"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -115616,10 +115302,7 @@
     "id": "polsciw135",
     "dept": "POL SCI",
     "no": "W135",
-    "tagIds": [],
-    "equivIds": [
-      "polsci135"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -119602,9 +119285,6 @@
     "no": "W1",
     "tagIds": [
       "ls_socio"
-    ],
-    "equivIds": [
-      "psych1"
     ]
   },
   {
@@ -122681,10 +122361,7 @@
     "id": "pubaffw202",
     "dept": "PUB AFF",
     "no": "W202",
-    "tagIds": [],
-    "equivIds": [
-      "pubaff202"
-    ]
+    "tagIds": []
   },
   {
     "units": 1,
@@ -122708,10 +122385,7 @@
     "id": "pubaffw207",
     "dept": "PUB AFF",
     "no": "W207",
-    "tagIds": [],
-    "equivIds": [
-      "pubaff207"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -122775,10 +122449,7 @@
     "id": "pubaffw270",
     "dept": "PUB AFF",
     "no": "W270",
-    "tagIds": [],
-    "equivIds": [
-      "pubaff270"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -122786,10 +122457,7 @@
     "id": "pubaffw271",
     "dept": "PUB AFF",
     "no": "W271",
-    "tagIds": [],
-    "equivIds": [
-      "pubaff271"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -122797,10 +122465,7 @@
     "id": "pubaffw272",
     "dept": "PUB AFF",
     "no": "W272",
-    "tagIds": [],
-    "equivIds": [
-      "pubaff272"
-    ]
+    "tagIds": []
   },
   {
     "units": 1,
@@ -131499,10 +131164,7 @@
     "id": "socwelw232",
     "dept": "SOC WEL",
     "no": "W232",
-    "tagIds": [],
-    "equivIds": [
-      "socwel232"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -132166,10 +131828,7 @@
     "id": "socwelw280",
     "dept": "SOC WEL",
     "no": "W280",
-    "tagIds": [],
-    "equivIds": [
-      "socwel280"
-    ]
+    "tagIds": []
   },
   {
     "units": 2,
@@ -136546,9 +136205,6 @@
     "no": "W21",
     "tagIds": [
       "ls_quant"
-    ],
-    "equivIds": [
-      "stat21"
     ]
   },
   {
@@ -140083,9 +139739,6 @@
     "no": "W125",
     "tagIds": [
       "ugba_upper_div"
-    ],
-    "equivIds": [
-      "ugba125"
     ]
   },
   {
@@ -140481,10 +140134,7 @@
     "id": "ugbaw155",
     "dept": "UGBA",
     "no": "W155",
-    "tagIds": [],
-    "equivIds": [
-      "ugba155"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -143267,10 +142917,7 @@
     "id": "ugisw5",
     "dept": "UGIS",
     "no": "W5",
-    "tagIds": [],
-    "equivIds": [
-      "ugis5"
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -143729,10 +143376,7 @@
     "id": "ugisw157",
     "dept": "UGIS",
     "no": "W157",
-    "tagIds": [],
-    "equivIds": [
-      "ugis157"
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -143740,10 +143384,7 @@
     "id": "ugisw158",
     "dept": "UGIS",
     "no": "W158",
-    "tagIds": [],
-    "equivIds": [
-      "ugis158"
-    ]
+    "tagIds": []
   },
   {
     "units": 0,

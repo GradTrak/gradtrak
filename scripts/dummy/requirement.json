@@ -2819,12 +2819,6 @@
             "courseId": "math1b"
           },
           {
-            "id": "math54",
-            "type": "course",
-            "name": "MATH 54",
-            "courseId": "math54"
-          },
-          {
             "id": "math54alts",
             "type": "multi",
             "name": "MATH 54",
@@ -2952,16 +2946,22 @@
         "name": "Domain Emphasis (not implemented)",
         "requirements": [
           {
-            "id": "eecs16b",
-            "type": "course",
-            "name": "EECS 16B",
-            "courseId": "eecs16b"
+            "id": "data_sci_domain_dummy_1",
+            "type": "tag",
+            "name": "Domain Emphasis Lower Div",
+            "courseId": "data_sci_domain_dummy"
           },
           {
-            "id": "compsci61c",
-            "type": "course",
-            "name": "COMPSCI 61C",
-            "courseId": "compsci61c"
+            "id": "data_sci_domain_dummy_2",
+            "type": "tag",
+            "name": "Domain Emphasis Upper Div 1",
+            "courseId": "data_sci_domain_dummy"
+          },
+          {
+            "id": "data_sci_domain_dummy_3",
+            "type": "tag",
+            "name": "Domain Emphasis Upper Div 2",
+            "courseId": "data_sci_domain_dummy"
           }
         ]
       }
