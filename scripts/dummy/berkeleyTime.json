@@ -38532,7 +38532,7 @@
     "id": "eleng16a",
     "dept": "EL ENG",
     "no": "16A",
-    "tagIds": [
+    "equivIds": [
       "eecs16a"
     ]
   },
@@ -38542,7 +38542,7 @@
     "id": "eleng16b",
     "dept": "EL ENG",
     "no": "16B",
-    "tagIds": [
+    "equivIds": [
       "eecs16b"
     ]
   },
