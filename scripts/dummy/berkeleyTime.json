@@ -32440,7 +32440,6 @@
     "no": "100A",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div",
       "cs_technical_elective"
     ]
   },
@@ -32452,7 +32451,6 @@
     "no": "100B",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div",
       "cs_technical_elective"
     ]
   },
@@ -32480,7 +32478,6 @@
     "no": "101A",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div",
       "stat_cluster",
       "cs_technical_elective"
     ]
@@ -32493,8 +32490,6 @@
     "no": "101B",
     "tagIds": [
       "ls_socio",
-      "econ_upper_div",
-      "econ_upper_div",
       "stat_cluster",
       "cs_technical_elective"
     ]
@@ -32506,7 +32501,6 @@
     "dept": "ECON",
     "no": "S101A",
     "tagIds": [
-      "econ_upper_div"
     ]
   },
   {
@@ -32516,7 +32510,6 @@
     "dept": "ECON",
     "no": "S101B",
     "tagIds": [
-      "econ_upper_div"
     ]
   },
   {
