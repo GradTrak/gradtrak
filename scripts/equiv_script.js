@@ -29,11 +29,7 @@ if (processEligibleCourses){
 
 data.forEach((course) => {
   if (IS_EQUIV(course)) {
-<<<<<<< HEAD
-    const courseName = course.id.replace(course.no.toLowerCase(), course.no.toLowerCase().slice(1) )
-=======
     const courseName = course.id.replace(course.no.toLowerCase(), course.no.toLowerCase().slice(1))
->>>>>>> 0f0c844019002b86f8797a27054631302ecdf839
     course.equivIds = course.equivIds || []
     if (!course.equivIds.includes(courseName)) {
       console.log(course.id)
