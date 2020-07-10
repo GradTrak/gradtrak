@@ -27,7 +27,7 @@ eligibleCourses = eligibleCourses.flatMap(courses => {
   }
 });
 eligibleCourses = eligibleCourses.filter(a=>a)
-eligibleCourses = eligibleCourses.flatMap(courseId => courseId.replace(nonAlphanumeric, '').toLowerCase());
+eligibleCourses = eligibleCourses.flatMap(courseId => courseId.replace(nonAlphanumeric, '').toLowerCase()).map(courseId => courseId.replace(nonAlphanumeric, ''));
 //console.log(eligibleCourses);
 //process.exit(1)
 data.forEach((course) => {

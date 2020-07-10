@@ -38210,7 +38210,8 @@
     "no": "126",
     "tagIds": [
       "eecs_upper_div",
-      "upper_div"
+      "upper_div",
+      "data_sci_prob"
     ]
   },
   {
@@ -38873,7 +38874,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -38923,7 +38925,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_compute"
     ]
   },
   {
@@ -69908,7 +69911,8 @@
     "no": "115",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -69951,7 +69955,8 @@
     "no": "135",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -70085,7 +70090,8 @@
     "dept": "IND ENG",
     "no": "165",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "data_sci_compute"
     ]
   },
   {
@@ -70138,7 +70144,8 @@
     "no": "172",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "data_sci_prob"
     ]
   },
   {
@@ -70148,7 +70155,8 @@
     "dept": "IND ENG",
     "no": "173",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "data_sci_compute"
     ]
   },
   {
@@ -102401,7 +102409,8 @@
     "no": "175",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_compute"
     ]
   },
   {
@@ -136725,7 +136734,8 @@
       "mcb_ggd_elective_b",
       "upper_div",
       "bioeng_technical_topics",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_prob"
     ]
   },
   {
@@ -136762,7 +136772,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_prob"
     ]
   },
   {
