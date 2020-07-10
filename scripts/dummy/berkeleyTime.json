@@ -27957,7 +27957,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_model"
     ]
   },
   {
@@ -27979,7 +27980,8 @@
     "no": "L182",
     "tagIds": [
       "ls_quant",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "data_sci_model"
     ]
   },
   {
@@ -27990,7 +27992,8 @@
     "no": "W182",
     "tagIds": [
       "ls_quant",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "data_sci_model"
     ],
     "equivIds": [
       "compsci182"
@@ -28072,7 +28075,8 @@
       "eecs_upper_div",
       "bioeng_technical_topics",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_model"
     ]
   },
   {
@@ -30449,7 +30453,9 @@
     "id": "datac102",
     "dept": "DATA",
     "no": "C102",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_model"
+    ]
   },
   {
     "units": 4,
@@ -69977,7 +69983,8 @@
     "no": "142",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_model"
     ]
   },
   {
@@ -136860,7 +136867,8 @@
     "tagIds": [
       "ls_quant",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "data_sci_model"
     ]
   },
   {
