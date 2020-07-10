@@ -1443,7 +1443,8 @@
     "dept": "AFRICAM",
     "no": "134",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "data_sci_ethics"
     ]
   },
   {
@@ -11951,7 +11952,8 @@
       "ls_philo",
       "bioeng_ethics",
       "eecs_ethics",
-      "upper_div"
+      "upper_div",
+      "data_sci_ethics"
     ]
   },
   {
@@ -29203,7 +29205,8 @@
     "dept": "CY PLAN",
     "no": "101",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "data_sci_ethics"
     ]
   },
   {
@@ -30463,7 +30466,9 @@
     "id": "datac104",
     "dept": "DATA",
     "no": "C104",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_ethics"
+    ]
   },
   {
     "units": 3,
@@ -49106,7 +49111,9 @@
     "id": "espmc167",
     "dept": "ESPM",
     "no": "C167",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_ethics"
+    ]
   },
   {
     "units": 4,
@@ -71098,7 +71105,8 @@
     "no": "188",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "data_sci_ethics"
     ]
   },
   {
@@ -75486,7 +75494,9 @@
     "id": "isf100j",
     "dept": "ISF",
     "no": "100J",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_ethics"
+    ]
   },
   {
     "units": 4,
@@ -103329,7 +103339,8 @@
     "no": "151AC",
     "tagIds": [
       "eecs_ethics",
-      "ac"
+      "ac",
+      "data_sci_ethics"
     ]
   },
   {
@@ -105401,7 +105412,9 @@
     "id": "pbhlthc160",
     "dept": "PB HLTH",
     "no": "C160",
-    "tagIds": []
+    "tagIds": [
+      "data_sci_ethics"
+    ]
   },
   {
     "units": 3,
@@ -109707,7 +109720,8 @@
     "dept": "PHILOS",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "data_sci_ethics"
     ]
   },
   {
