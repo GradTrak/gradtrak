@@ -1,14 +1,13 @@
 const data = require('./dummy/berkeleyTime.json');
 const fs = require('fs');
-const flatmap = require('flatmap'); //YOU WILL NEED TO INSTALL FLATMAP TO USE THIS.
 const hasNumber = /\d/g;
 const nonAlphanumeric = /[^a-zA-Z0-9]/;
 
 
 
 //INPUTS
-const MY_FILE = './tagging_lists/ls_techelect.txt'; //change to whatever
-const TAG = 'cs_technical_elective';
+const MY_FILE = './tagging_lists/r1b.txt'; //change to whatever
+const TAG = 'rc_b';
 
 
 
