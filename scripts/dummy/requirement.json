@@ -2769,5 +2769,217 @@
         ]
       }
     ]
+  },
+  {
+    "id": "cs",
+    "name": "L&S CS Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division Prerequisites",
+        "requirements": [
+          {
+            "id": "datac8",
+            "type": "course",
+            "name": "DATA C8",
+            "courseId": "datac8"
+          },
+          {
+            "id": "math1a10a16a",
+            "type": "multi",
+            "name": "MATH 1A",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "math1a",
+                "type": "course",
+                "name": "MATH 1A",
+                "courseId": "math1a"
+              },
+              {
+                "id": "math16a",
+                "type": "course",
+                "name": "MATH 16A",
+                "courseId": "math16a"
+              },
+              {
+                "id": "math10a",
+                "type": "course",
+                "name": "MATH 10A",
+                "courseId": "math10a"
+              }
+            ]
+          },
+          {
+            "id": "math1b",
+            "type": "course",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
+            "id": "math54",
+            "type": "course",
+            "name": "MATH 54",
+            "courseId": "math54"
+          },
+          {
+            "id": "math54alts",
+            "type": "multi",
+            "name": "MATH 54",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "math54",
+                "type": "course",
+                "name": "MATH 54",
+                "courseId": "math54"
+              },
+              {
+                "id": "stat89a",
+                "type": "course",
+                "name": "STAT 89A",
+                "courseId": "stat89a"
+              },
+              {
+                "id": "physics89",
+                "type": "course",
+                "name": "PHYSICS 89",
+                "courseId": "physics89"
+              },
+              {
+                "id": "eecs16ab",
+                "type": "multi",
+                "name": "EECS 16A+B",
+                "numRequired": 2,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "id": "eecs16a",
+                    "type": "course",
+                    "name": "EECS 16A",
+                    "courseId": "eecs16a"
+                  },
+                  {
+                    "id": "eecs16b",
+                    "type": "course",
+                    "name": "EECS 16B",
+                    "courseId": "eecs16b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "engin7comspci61a",
+            "type": "multi",
+            "name": "COMPSCI 61A",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "compsci61a",
+                "type": "course",
+                "name": "COMPSCI 61A",
+                "courseId": "compsci61a"
+              },
+              {
+                "id": "engin7",
+                "type": "course",
+                "name": "ENGIN 7",
+                "courseId": "engin7"
+              },
+              {
+                "id": "compsci88",
+                "type": "course",
+                "name": "COMPSCI 88",
+                "courseId": "compsci88"
+              }
+            ]
+          },
+          {
+            "id": "compsci61b",
+            "type": "course",
+            "name": "COMPSCI 61B",
+            "courseId": "compsci61b"
+          }
+        ]
+      },
+      {
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "id": "eecs_design",
+            "type": "tag",
+            "name": "EECS Design Course",
+            "tagId": "eecs_design"
+          },
+          {
+            "id": "upper_div",
+            "type": "unit",
+            "name": "Upper Division",
+            "units": 20,
+            "requirement": {
+              "id": "eecs_upper_div",
+              "type": "tag",
+              "name": "EECS Upper Division Course",
+              "tagId": "eecs_upper_div"
+            }
+          },
+          {
+            "id": "tech_elect",
+            "type": "unit",
+            "name": "Technical Electives",
+            "units": 7,
+            "requirement": {
+              "id": "eecs_upper_div",
+              "type": "tag",
+              "name": "CS Upper Div Technical Elective",
+              "tagId": "cs_technical_elective"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "id": "eecs16amath54",
+            "type": "multi",
+            "name": "EECS 16A",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "eecs16a",
+                "type": "course",
+                "name": "EECS 16A",
+                "courseId": "eecs16a"
+              },
+              {
+                "id": "math54",
+                "type": "course",
+                "name": "MATH 54",
+                "courseId": "math54"
+              }
+            ]
+          },
+          {
+            "id": "eecs16b",
+            "type": "course",
+            "name": "EECS 16B",
+            "courseId": "eecs16b"
+          },
+          {
+            "id": "compsci61c",
+            "type": "course",
+            "name": "COMPSCI 61C",
+            "courseId": "compsci61c"
+          }
+        ]
+      }
+    ]
   }
 ]
