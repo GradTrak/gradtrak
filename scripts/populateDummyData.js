@@ -27,26 +27,32 @@ db.connect()
     return Tag.deleteMany({});
   })
   .then(() => {
+    console.log('tags cleared');
     return Tag.insertMany(DUMMY_TAG_DATA);
   })
   .then(() => {
+    console.log('new tags inserted');
     return Promise.all(
       DUMMY_COURSE_DATA.map((course) => Course.updateOne({ id: course.id }, course, { upsert: true })),
     );
   })
   .then(() => {
+    console.log('courses updated');
     return RequirementSet.deleteMany({});
   })
   .then(() => {
+    console.log('requirements cleared');
     return RequirementSet.insertMany(DUMMY_REQUIREMENT_DATA);
   })
   .then(() => {
+    console.log('new requirements updated');
     return Promise.all(DUMMY_USERS.map((user) => User.updateOne({ username: user.username }, user, { upsert: true })));
   })
   .catch((err) => {
     console.error(err);
   })
   .finally(() => {
+    console.log('users updated. Populate complete');
     conn.close();
     cache.del('*', (err, deleted) => {
       if (err) {
