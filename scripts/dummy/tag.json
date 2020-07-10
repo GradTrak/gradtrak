@@ -172,19 +172,19 @@
     "name": "Economics Upper Division Elective"
   },
   {
-    "id": "compute_data_sci",
+    "id": "data_sci_compute",
     "name": "Computational and Inferential Depth"
   },
   {
-    "id": "prob_data_sci",
+    "id": "data_sci_prob",
     "name": "Probability"
   },
   {
-    "id": "model_data_sci",
+    "id": "data_sci_model",
     "name": "Modeling, Learning, and Decision Making"
   },
   {
-    "id": "ethics_data_sci",
+    "id": "data_sci_ethics",
     "name": "Human Contexts and Ethics"
   },
   {

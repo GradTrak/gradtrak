@@ -2916,29 +2916,29 @@
             "name": "Upper Division",
             "units": 7,
             "requirement": {
-              "id": "compute_data_sci",
+              "id": "data_sci_compute",
               "type": "tag",
               "name": "Compututational and Inferential Depth",
-              "tagId": "compute_data_sci"
+              "tagId": "data_sci_compute"
             }
           },
           {
-            "id": "prob_data_sci",
+            "id": "data_sci_prob",
             "type": "tag",
             "name": "Probability",
-            "tagId": "prob_data_sci"
+            "tagId": "data_sci_prob"
           },
           {
-            "id": "model_data_sci",
+            "id": "data_sci_model",
             "type": "tag",
             "name": "Modeling, Learning, and Decision Making",
-            "tagId": "model_data_sci"
+            "tagId": "data_sci_model"
           },
           {
-            "id": "ethics_data_sci",
+            "id": "data_sci_ethics",
             "type": "tag",
             "name": "Human Contexts and Ethics",
-            "tagId": "ethics_data_sci"
+            "tagId": "data_sci_ethics"
           }
         ]
       },
