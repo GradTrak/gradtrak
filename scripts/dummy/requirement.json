@@ -2955,7 +2955,7 @@
         ]
       },
       {
-        "name": "Domain Emphasis (not implemented)",
+        "name": "Domain Emphasis (manually fulfill)",
         "requirements": [
           {
             "id": "data_sci_domain_dummy_1",
