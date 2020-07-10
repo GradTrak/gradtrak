@@ -126465,7 +126465,9 @@
     "id": "sasianr5a",
     "dept": "S ASIAN",
     "no": "R5A",
-    "tagIds": []
+    "tagIds": [
+      "rc_a"
+    ]
   },
   {
     "units": 4,
