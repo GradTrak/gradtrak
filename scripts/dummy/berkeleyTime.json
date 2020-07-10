@@ -781,7 +781,9 @@
     "id": "africamc17ac",
     "dept": "AFRICAM",
     "no": "C17AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -851,7 +853,9 @@
     "id": "africamc20ac",
     "dept": "AFRICAM",
     "no": "C20AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -1319,7 +1323,9 @@
     "id": "africam125ac",
     "dept": "AFRICAM",
     "no": "125AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -2007,7 +2013,9 @@
     "id": "africam182ac",
     "dept": "AFRICAM",
     "no": "182AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -2686,7 +2694,9 @@
     "id": "amerstd114ac",
     "dept": "AMERSTD",
     "no": "114AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -7869,7 +7879,9 @@
     "id": "arch119ac",
     "dept": "ARCH",
     "no": "119AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -9265,7 +9277,9 @@
     "id": "artc23ac",
     "dept": "ART",
     "no": "C23AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -10199,7 +10213,8 @@
     "dept": "ASAMST",
     "no": "W20AC",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "ac"
     ]
   },
   {
@@ -25286,7 +25301,9 @@
     "id": "colwrit75ac",
     "dept": "COLWRIT",
     "no": "75AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -25691,7 +25708,9 @@
     "id": "comlit1ac",
     "dept": "COM LIT",
     "no": "1AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -25962,7 +25981,9 @@
     "id": "comlits31ac",
     "dept": "COM LIT",
     "no": "S31AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -25996,7 +26017,9 @@
     "id": "comlits36ac",
     "dept": "COM LIT",
     "no": "S36AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -26265,7 +26288,9 @@
     "id": "comlitw60ac",
     "dept": "COM LIT",
     "no": "W60AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 1,
@@ -26498,7 +26523,9 @@
     "id": "comlit156ac",
     "dept": "COM LIT",
     "no": "156AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -26546,7 +26573,9 @@
     "id": "comlit160ac",
     "dept": "COM LIT",
     "no": "160AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -29250,7 +29279,9 @@
     "id": "cyplan117ac",
     "dept": "CY PLAN",
     "no": "117AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -41734,7 +41765,9 @@
     "id": "engin130ac",
     "dept": "ENGIN",
     "no": "130AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 2,
@@ -42564,7 +42597,9 @@
     "id": "english1ac",
     "dept": "ENGLISH",
     "no": "1AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -44182,7 +44217,9 @@
     "id": "englishn135ac",
     "dept": "ENGLISH",
     "no": "N135AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -44423,7 +44460,9 @@
     "id": "english150ac",
     "dept": "ENGLISH",
     "no": "150AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -46636,7 +46675,8 @@
     "dept": "EPS",
     "no": "106AC",
     "tagIds": [
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "ac"
     ]
   },
   {
@@ -47560,7 +47600,8 @@
     "no": "C22AC",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "ac"
     ]
   },
   {
@@ -50849,7 +50890,9 @@
     "id": "ethstd130ac",
     "dept": "ETH STD",
     "no": "130AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -50905,7 +50948,9 @@
     "id": "ethstd133ac",
     "dept": "ETH STD",
     "no": "133AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -50923,7 +50968,9 @@
     "id": "ethstd135ac",
     "dept": "ETH STD",
     "no": "135AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -52994,7 +53041,9 @@
     "id": "film135ac",
     "dept": "FILM",
     "no": "135AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -53010,7 +53059,9 @@
     "id": "film140ac",
     "dept": "FILM",
     "no": "140AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -53771,7 +53822,9 @@
     "id": "french42ac",
     "dept": "FRENCH",
     "no": "42AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -55383,7 +55436,8 @@
     "no": "10AC",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "ac"
     ]
   },
   {
@@ -56504,7 +56558,9 @@
     "id": "geog167ac",
     "dept": "GEOG",
     "no": "167AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -62915,7 +62971,8 @@
     "no": "132AC",
     "tagIds": [
       "ls_arts",
-      "ls_hist"
+      "ls_hist",
+      "ac"
     ]
   },
   {
@@ -64653,7 +64710,9 @@
     "id": "history16ac",
     "dept": "HISTORY",
     "no": "16AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -66121,7 +66180,9 @@
     "id": "history128ac",
     "dept": "HISTORY",
     "no": "128AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -66304,7 +66365,9 @@
     "id": "history134ac",
     "dept": "HISTORY",
     "no": "134AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -69344,7 +69407,9 @@
     "id": "ias155ac",
     "dept": "IAS",
     "no": "155AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 1,
@@ -69548,7 +69613,9 @@
     "id": "ids100ac",
     "dept": "IDS",
     "no": "100AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -76090,7 +76157,9 @@
     "id": "italian150ac",
     "dept": "ITALIAN",
     "no": "150AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -80161,7 +80230,9 @@
     "id": "ldarch131ac",
     "dept": "LD ARCH",
     "no": "131AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -81288,7 +81359,9 @@
     "id": "legalst133ac",
     "dept": "LEGALST",
     "no": "133AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -81697,7 +81770,9 @@
     "id": "legalst173ac",
     "dept": "LEGALST",
     "no": "173AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -81885,7 +81960,9 @@
     "id": "legalst190ac",
     "dept": "LEGALST",
     "no": "190AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 5,
@@ -101003,7 +101080,9 @@
     "id": "nestud158ac",
     "dept": "NE STUD",
     "no": "158AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -102509,7 +102588,9 @@
     "id": "nusctx104ac",
     "dept": "NUSCTX",
     "no": "104AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -103010,7 +103091,8 @@
     "dept": "NWMEDIA",
     "no": "151AC",
     "tagIds": [
-      "eecs_ethics"
+      "eecs_ethics",
+      "ac"
     ]
   },
   {
@@ -123033,7 +123115,9 @@
     "id": "pubpol180ac",
     "dept": "PUB POL",
     "no": "180AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -123153,7 +123237,9 @@
     "id": "pubpol192ac",
     "dept": "PUB POL",
     "no": "192AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -125389,7 +125475,9 @@
     "id": "rhetor163ac",
     "dept": "RHETOR",
     "no": "163AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -129307,7 +129395,9 @@
     "id": "slavic49ac",
     "dept": "SLAVIC",
     "no": "49AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -132091,7 +132181,9 @@
     "id": "sociols3ac",
     "dept": "SOCIOL",
     "no": "S3AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -133144,7 +133236,9 @@
     "id": "sociol152ac",
     "dept": "SOCIOL",
     "no": "152AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -138017,7 +138111,9 @@
     "id": "theater117ac",
     "dept": "THEATER",
     "no": "117AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 4,
@@ -138152,7 +138248,9 @@
     "id": "theater137ac",
     "dept": "THEATER",
     "no": "137AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
@@ -142853,7 +142951,9 @@
     "id": "ugis20ac",
     "dept": "UGIS",
     "no": "20AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 1,
@@ -142933,7 +143033,9 @@
     "id": "ugis56ac",
     "dept": "UGIS",
     "no": "56AC",
-    "tagIds": []
+    "tagIds": [
+      "ac"
+    ]
   },
   {
     "units": 3,
