@@ -62694,7 +62694,8 @@
     "dept": "HISTART",
     "no": "27",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "ls_inter"
     ]
   },
   {
@@ -145206,7 +145207,10 @@
     "id": "xclassi10a",
     "dept": "XCLASSI",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "classic10a"
+    ]
   },
   {
     "units": 6,
