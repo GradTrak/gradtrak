@@ -318,15 +318,18 @@ export class UserService {
       return;
     }
 
-    if (manuallyFulfilledReqs.has(requirementSet.id)) {
-      manuallyFulfilledReqs.get(requirementSet.id).add(requirement.id);
-    } else {
-      const newSet: Set<string> = new Set<string>();
-      newSet.add(requirement.id);
-      manuallyFulfilledReqs.set(requirementSet.id, newSet);
-    }
+    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    nextSet.add(requirement.id);
+
+    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: nextManuallyFulfilled,
+      },
     });
   }
 
@@ -343,12 +346,20 @@ export class UserService {
       return;
     }
 
-    manuallyFulfilledReqs.get(requirementSet.id).delete(requirement.id);
-    if (manuallyFulfilledReqs.get(requirementSet.id).size === 0) {
-      manuallyFulfilledReqs.delete(requirementSet.id);
+    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+
+    nextSet.delete(requirement.id);
+    if (nextSet.size === 0) {
+      nextManuallyFulfilled.delete(requirementSet.id);
     }
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: nextManuallyFulfilled,
+      },
     });
   }
 
