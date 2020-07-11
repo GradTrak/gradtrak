@@ -145136,7 +145136,8 @@
     "id": "xafrica98",
     "dept": "XAFRICA",
     "no": "98",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": []
   },
   {
     "units": 4,
@@ -145147,6 +145148,9 @@
     "tagIds": [
       "ls_bio",
       "ls_socio"
+    ],
+    "equivIds": [
+      "anthro1"
     ]
   },
   {
@@ -145155,7 +145159,10 @@
     "id": "xanthro2ac",
     "dept": "XANTHRO",
     "no": "2AC",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "anthro2ac"
+    ]
   },
   {
     "units": 2,
@@ -145163,7 +145170,8 @@
     "id": "xart98",
     "dept": "XART",
     "no": "98",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": []
   },
   {
     "units": 4,
@@ -145171,7 +145179,10 @@
     "id": "xasamst20a",
     "dept": "XASAMST",
     "no": "20A",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "asamst20a"
+    ]
   },
   {
     "units": 4,
@@ -145181,6 +145192,9 @@
     "no": "10",
     "tagIds": [
       "ls_phys"
+    ],
+    "equivIds": [
+      "astron10"
     ]
   },
   {
@@ -145191,6 +145205,9 @@
     "no": "1A",
     "tagIds": [
       "ls_phys"
+    ],
+    "equivIds": [
+      "chem1a"
     ]
   },
   {
@@ -145199,7 +145216,10 @@
     "id": "xchem1al",
     "dept": "XCHEM",
     "no": "1AL",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "chem1al"
+    ]
   },
   {
     "units": 4,
@@ -145209,6 +145229,7 @@
     "no": "10A",
     "tagIds": [],
     "equivIds": [
+      "classic10a",
       "classic10a"
     ]
   },
@@ -145220,6 +145241,9 @@
     "no": "R1A",
     "tagIds": [
       "rc_a"
+    ],
+    "equivIds": [
+      "colwritr1a"
     ]
   },
   {
@@ -145230,6 +145254,9 @@
     "no": "R1A",
     "tagIds": [
       "rc_a"
+    ],
+    "equivIds": [
+      "comlitr1a"
     ]
   },
   {
@@ -145238,7 +145265,10 @@
     "id": "xcomlitr1b",
     "dept": "XCOMLIT",
     "no": "R1B",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "comlitr1b"
+    ]
   },
   {
     "units": 4,
@@ -145248,6 +145278,9 @@
     "no": "R1A",
     "tagIds": [
       "rc_a"
+    ],
+    "equivIds": [
+      "englishr1a"
     ]
   },
   {
@@ -145258,6 +145291,9 @@
     "no": "R1B",
     "tagIds": [
       "rc_b"
+    ],
+    "equivIds": [
+      "englishr1b"
     ]
   },
   {
@@ -145266,7 +145302,10 @@
     "id": "xenglis31ac",
     "dept": "XENGLIS",
     "no": "31AC",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "english31ac"
+    ]
   },
   {
     "units": 3,
@@ -145274,7 +145313,10 @@
     "id": "xeps20",
     "dept": "XEPS",
     "no": "20",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "eps20"
+    ]
   },
   {
     "units": 3,
@@ -145282,7 +145324,10 @@
     "id": "xepsc20",
     "dept": "XEPS",
     "no": "C20",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "epsc20"
+    ]
   },
   {
     "units": 3,
@@ -145292,6 +145337,9 @@
     "no": "80",
     "tagIds": [
       "ls_phys"
+    ],
+    "equivIds": [
+      "eps80"
     ]
   },
   {
@@ -145300,7 +145348,10 @@
     "id": "xespm15",
     "dept": "XESPM",
     "no": "15",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "espm15"
+    ]
   },
   {
     "units": 4,
@@ -145308,7 +145359,10 @@
     "id": "xespm50ac",
     "dept": "XESPM",
     "no": "50AC",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "espm50ac"
+    ]
   },
   {
     "units": 4,
@@ -145319,6 +145373,9 @@
     "tagIds": [
       "ls_hist",
       "ls_socio"
+    ],
+    "equivIds": [
+      "ethstd21ac"
     ]
   },
   {
@@ -145327,7 +145384,8 @@
     "id": "xethstd197",
     "dept": "XETHSTD",
     "no": "197",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": []
   },
   {
     "units": 4,
@@ -145337,6 +145395,9 @@
     "no": "R1A",
     "tagIds": [
       "rc_a"
+    ],
+    "equivIds": [
+      "filmr1a"
     ]
   },
   {
@@ -145347,6 +145408,9 @@
     "no": "50",
     "tagIds": [
       "ls_arts"
+    ],
+    "equivIds": [
+      "film50"
     ]
   },
   {
@@ -145358,6 +145422,9 @@
     "tagIds": [
       "ls_bio",
       "ls_phys"
+    ],
+    "equivIds": [
+      "geog30"
     ]
   },
   {
@@ -145368,6 +145435,9 @@
     "no": "50AC",
     "tagIds": [
       "ls_socio"
+    ],
+    "equivIds": [
+      "geog50ac"
     ]
   },
   {
@@ -145378,6 +145448,9 @@
     "no": "10B",
     "tagIds": [
       "ls_socio"
+    ],
+    "equivIds": [
+      "global10b"
     ]
   },
   {
@@ -145386,7 +145459,10 @@
     "id": "xgws10",
     "dept": "XGWS",
     "no": "10",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "gws10"
+    ]
   },
   {
     "units": 3,
@@ -145396,6 +145472,9 @@
     "no": "50AC",
     "tagIds": [
       "ls_socio"
+    ],
+    "equivIds": [
+      "gws50ac"
     ]
   },
   {
@@ -145404,7 +145483,10 @@
     "id": "xhistarr1b",
     "dept": "XHISTAR",
     "no": "R1B",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "histartr1b"
+    ]
   },
   {
     "units": 4,
@@ -145412,7 +145494,10 @@
     "id": "xhistar11",
     "dept": "XHISTAR",
     "no": "11",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "histart11"
+    ]
   },
   {
     "units": 4,
@@ -145423,6 +145508,9 @@
     "tagIds": [
       "ls_hist",
       "ls_socio"
+    ],
+    "equivIds": [
+      "history7b"
     ]
   },
   {
@@ -145431,7 +145519,10 @@
     "id": "xintegb31",
     "dept": "XINTEGB",
     "no": "31",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "integbi31"
+    ]
   },
   {
     "units": 3,
@@ -145441,6 +145532,9 @@
     "no": "33",
     "tagIds": [
       "ls_bio"
+    ],
+    "equivIds": [
+      "integbi33"
     ]
   },
   {
@@ -145449,7 +145543,10 @@
     "id": "xintegb41",
     "dept": "XINTEGB",
     "no": "41",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "integbi41"
+    ]
   },
   {
     "units": 2,
@@ -145457,7 +145554,13 @@
     "id": "xls1",
     "dept": "XL&S",
     "no": "1",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "ls1",
+      "milsci1",
+      "polsci1",
+      "xpolsci1"
+    ]
   },
   {
     "units": 4,
@@ -145467,6 +145570,9 @@
     "no": "R1B",
     "tagIds": [
       "rc_b"
+    ],
+    "equivIds": [
+      "legalstr1b"
     ]
   },
   {
@@ -145478,6 +145584,9 @@
     "tagIds": [
       "ls_hist",
       "ls_socio"
+    ],
+    "equivIds": [
+      "linguis55ac"
     ]
   },
   {
@@ -145486,7 +145595,10 @@
     "id": "xmath1a",
     "dept": "XMATH",
     "no": "1A",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "math1a"
+    ]
   },
   {
     "units": 4,
@@ -145494,7 +145606,10 @@
     "id": "xmath1b",
     "dept": "XMATH",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "math1b"
+    ]
   },
   {
     "units": 4,
@@ -145502,7 +145617,10 @@
     "id": "xmath10a",
     "dept": "XMATH",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "math10a"
+    ]
   },
   {
     "units": 3,
@@ -145510,7 +145628,10 @@
     "id": "xmath16a",
     "dept": "XMATH",
     "no": "16A",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "math16a"
+    ]
   },
   {
     "units": 4,
@@ -145518,7 +145639,10 @@
     "id": "xmath32",
     "dept": "XMATH",
     "no": "32",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "math32"
+    ]
   },
   {
     "units": 2,
@@ -145904,6 +146028,9 @@
     "no": "32",
     "tagIds": [
       "ls_bio"
+    ],
+    "equivIds": [
+      "mcellbi32"
     ]
   },
   {
@@ -145912,7 +146039,10 @@
     "id": "xmestu10",
     "dept": "XMESTU",
     "no": "10",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "mestu10"
+    ]
   },
   {
     "units": 2,
@@ -145920,7 +146050,10 @@
     "id": "xmestu20",
     "dept": "XMESTU",
     "no": "20",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "mestu20"
+    ]
   },
   {
     "units": 4,
@@ -145930,6 +146063,9 @@
     "no": "27",
     "tagIds": [
       "ls_arts"
+    ],
+    "equivIds": [
+      "music27"
     ]
   },
   {
@@ -145941,6 +146077,9 @@
     "tagIds": [
       "ls_philo",
       "ls_socio"
+    ],
+    "equivIds": [
+      "philos2"
     ]
   },
   {
@@ -145951,6 +146090,9 @@
     "no": "3",
     "tagIds": [
       "ls_philo"
+    ],
+    "equivIds": [
+      "philos3"
     ]
   },
   {
@@ -145959,7 +146101,10 @@
     "id": "xpolsci1",
     "dept": "XPOLSCI",
     "no": "1",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "polsci1"
+    ]
   },
   {
     "units": 4,
@@ -145970,6 +146115,9 @@
     "tagIds": [
       "ls_inter",
       "ls_socio"
+    ],
+    "equivIds": [
+      "polsci2"
     ]
   },
   {
@@ -145980,6 +146128,9 @@
     "no": "1",
     "tagIds": [
       "ls_socio"
+    ],
+    "equivIds": [
+      "psych1"
     ]
   },
   {
@@ -145990,6 +146141,9 @@
     "no": "R1A",
     "tagIds": [
       "rc_a"
+    ],
+    "equivIds": [
+      "rhetorr1a"
     ]
   },
   {
@@ -145998,7 +146152,10 @@
     "id": "xrhetorr1b",
     "dept": "XRHETOR",
     "no": "R1B",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "rhetorr1b"
+    ]
   },
   {
     "units": 2,
@@ -146006,7 +146163,10 @@
     "id": "xrhetor2",
     "dept": "XRHETOR",
     "no": "2",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "rhetor2"
+    ]
   },
   {
     "units": 4,
@@ -146014,7 +146174,10 @@
     "id": "xsociol3ac",
     "dept": "XSOCIOL",
     "no": "3AC",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "sociol3ac"
+    ]
   },
   {
     "units": 4,
@@ -146022,7 +146185,10 @@
     "id": "xstat2",
     "dept": "XSTAT",
     "no": "2",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "stat2"
+    ]
   },
   {
     "units": 5,

@@ -4,8 +4,17 @@ const MY_FILE = './tagging_lists/' + 'fpf.txt'; //change to whatever
 const processEligibleCourses = false;
 const courseArr = data.map(course => course.id);
 const IS_EQUIV = (course) => {
-  return course.no.toLowerCase()[0] === 'w' && courseArr.includes(course.id.replace(course.no.toLowerCase(), course.no.toLowerCase().slice(1)));
+  return course.dept[0] === 'X' && course.dept!=='XMBA' ;
 }
+const findEquivCourses = (course) => {
+  return data.filter(otherCourse => {
+    return otherCourse.id !== course.id &&
+      otherCourse.no === course.no &&
+      otherCourse.dept.replace(/[^A-Za-z0-9]/g, '').includes(course.dept.replace(/[^A-Za-z0-9]/g, '').slice(1))
+  })
+
+}
+
 
 let eligibleCourses;
 if (processEligibleCourses){
@@ -27,14 +36,14 @@ if (processEligibleCourses){
   process.exit(1)
 }
 
+
+
 data.forEach((course) => {
   if (IS_EQUIV(course)) {
-    const courseName = course.id.replace(course.no.toLowerCase(), course.no.toLowerCase().slice(1))
     course.equivIds = course.equivIds || []
-    if (!course.equivIds.includes(courseName)) {
-      console.log(course.id)
-      course.equivIds = [...course.equivIds, courseName];
-    }
+    const equivCourses = findEquivCourses(course).filter(equiv => !course.equivIds.includes(equiv)).map(course => course.id);
+    console.log(course.id, '=>', equivCourses);
+    course.equivIds = [...course.equivIds, ...equivCourses];
   }
 });
 //process.exit();
