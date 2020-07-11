@@ -126871,7 +126871,9 @@
     "id": "sasianr5a",
     "dept": "S ASIAN",
     "no": "R5A",
-    "tagIds": []
+    "tagIds": [
+      "rc_a",
+    ]
   },
   {
     "units": 4,
@@ -126879,7 +126881,9 @@
     "id": "sasianr5b",
     "dept": "S ASIAN",
     "no": "R5B",
-    "tagIds": []
+    "tagIds": [
+      "rc_b"
+    ]
   },
   {
     "units": 3,
@@ -145204,7 +145208,10 @@
     "id": "xclassi10a",
     "dept": "XCLASSI",
     "no": "10A",
-    "tagIds": []
+    "tagIds": [],
+    "equivIds": [
+      "classic10a"
+    ]
   },
   {
     "units": 6,
