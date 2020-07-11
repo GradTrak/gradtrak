@@ -62696,7 +62696,8 @@
     "dept": "HISTART",
     "no": "27",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "ls_inter"
     ]
   },
   {
@@ -126872,7 +126873,7 @@
     "dept": "S ASIAN",
     "no": "R5A",
     "tagIds": [
-      "rc_a",
+      "rc_a"
     ]
   },
   {
