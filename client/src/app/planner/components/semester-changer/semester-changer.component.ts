@@ -101,10 +101,14 @@ export class SemesterChangerComponent implements OnInit {
   }
 
   removeSemester(semester: Semester): void {
-    const acadYear = this.getAcademicYearName(semester);
+    const yearName = this.getAcademicYearName(semester);
     const semesterArr = semester.name.split(' ');
     const index = SemesterChangerComponent.TERM_INDEX[semesterArr[0]];
-    this.semesters.get(acadYear)[index] = null;
+    const year = this.semesters.get(yearName);
+    year[index] = null;
+    if (year.every((yearSem: Semester) => !yearSem)) {
+      this.semesters.delete(yearName);
+    }
     // an undo button would be nice here. Or an "are you sure".
     // just in case they delete a semester that's important.
   }

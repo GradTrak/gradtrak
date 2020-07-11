@@ -57,7 +57,7 @@ jobs:
         git reset &&
         git add -f package.json yarn.lock build &&
         git commit -m 'Deploy' &&
-        git push -f git@app.gradtrak.me:gradtrak.git master
+        git push -f git@app.gradtrak.me:gradtrak.git deploy:master
       env:
         GIT_AUTHOR_NAME: GitHub Action
         GIT_AUTHOR_EMAIL: info@gradtrak.me

@@ -2,6 +2,7 @@
   display: block;
   padding: 12px;
   background-color: white;
+  border-radius: 20px;
 }
 
 .semester-name {
@@ -21,12 +22,7 @@ table,
   margin-right: 12px;
 }
 
-table tr,
-.course-adder {
-  background-color: #f0f0f0;
-}
-
-table {
+.courses {
   border-collapse: separate;
   border-spacing: 0 4px;
   font-size: 0.6rem;
@@ -43,30 +39,51 @@ table {
     width: 2rem;
   }
 
-  .header {
-    background-color: transparent;
-  }
-
   td {
     padding: 0 4px;
   }
+}
 
-  td.name {
-    position: relative;
+.header {
+  font-weight: normal;
+}
 
-    .material-icons {
-      position: absolute;
-      transform: translateX(-24px);
-      font-size: 16px;
-      color: #dfae00;
-    }
+.course td,
+.course-adder {
+  background-color: #f0f0f0;
+}
+
+$course-row-rounding: 8px;
+
+.course td:first-child {
+  border-top-left-radius: $course-row-rounding;
+  border-bottom-left-radius: $course-row-rounding;
+}
+
+.course td:last-child {
+  border-top-right-radius: $course-row-rounding;
+  border-bottom-right-radius: $course-row-rounding;
+}
+
+.course-adder {
+  border-radius: $course-row-rounding;
+}
+
+.name {
+  position: relative;
+
+  .material-icons {
+    position: absolute;
+    transform: translateX(-24px);
+    font-size: 16px;
+    color: #dfae00;
   }
+}
 
-  td.units {
-    text-align: center;
-  }
+.units {
+  text-align: center;
+}
 
-  .course-more-button {
-    font-size: 1rem;
-  }
+.course-more-button {
+  font-size: 1rem;
 }

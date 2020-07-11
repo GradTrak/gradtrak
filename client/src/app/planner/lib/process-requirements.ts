@@ -456,6 +456,9 @@ export function processRequirements(
       deriveFulfillment(setReqs, setMappings, fulfillment);
     }
   });
+  manualReqs.forEach((req: Requirement) => {
+    fulfillment.set(req, 'fulfilled');
+  });
 
   reqIsFulfilledWithMapping.clear();
 

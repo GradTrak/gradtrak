@@ -7,6 +7,6 @@ export interface RequirementSetPrototype {
   parentId: string;
   type: string;
   requirementCategories: RequirementCategoryPrototype[];
-  universalConstraints: ConstraintPrototype[];
-  selfConstraints: ConstraintPrototype[];
+  universalConstraints?: ConstraintPrototype[];
+  selfConstraints?: ConstraintPrototype[];
 }

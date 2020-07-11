@@ -5,6 +5,10 @@
 .name {
   background-color: white;
   font-size: 1.2rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .dropdown-arrow {
@@ -25,4 +29,8 @@
 
 .requirements {
   margin-left: 24px;
+}
+
+::ng-deep .requirements > app-requirement:last-child > .requirement {
+  border-bottom-left-radius: 12px;
 }

@@ -4,5 +4,5 @@ import { ConstraintPrototype } from './constraint.prototype';
 export interface RequirementCategoryPrototype {
   name: string;
   requirements: RequirementPrototype[];
-  constraints: ConstraintPrototype[];
+  constraints?: ConstraintPrototype[];
 }

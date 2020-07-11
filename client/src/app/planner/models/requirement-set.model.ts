@@ -69,24 +69,26 @@ export class RequirementSet {
     };
     reqCategories.flatMap((reqCategory: RequirementCategory) => reqCategory.requirements).forEach(addReqToMap);
 
-    const universalConstraints: Constraint[] = proto.universalConstraints.map(
-      (universalConstraintProto: ConstraintPrototype) => {
-        switch (universalConstraintProto.type) {
-          case 'mutex':
-            return MutexConstraint.fromProto(universalConstraintProto, reqMap);
-          default:
-            throw new Error(`Unknown constraint type: ${universalConstraintProto.type}`);
-        }
-      },
-    );
-    const selfConstraints: Constraint[] = proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
-      switch (selfConstraintProto.type) {
-        case 'mutex':
-          return MutexConstraint.fromProto(selfConstraintProto, reqMap);
-        default:
-          throw new Error(`Unknown constraint type: ${selfConstraintProto.type}`);
-      }
-    });
+    const universalConstraints: Constraint[] = proto.universalConstraints
+      ? proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
+          switch (universalConstraintProto.type) {
+            case 'mutex':
+              return MutexConstraint.fromProto(universalConstraintProto, reqMap);
+            default:
+              throw new Error(`Unknown constraint type: ${universalConstraintProto.type}`);
+          }
+        })
+      : [];
+    const selfConstraints: Constraint[] = proto.selfConstraints
+      ? proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
+          switch (selfConstraintProto.type) {
+            case 'mutex':
+              return MutexConstraint.fromProto(selfConstraintProto, reqMap);
+            default:
+              throw new Error(`Unknown constraint type: ${selfConstraintProto.type}`);
+          }
+        })
+      : [];
 
     return new RequirementSet(
       proto.id,

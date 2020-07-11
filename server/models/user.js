@@ -41,12 +41,18 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
+      index: true,
       required: true,
       unique: true,
     },
     passwordHash: {
       type: String,
-      required: true,
+    },
+    googleId: {
+      type: String,
+      index: true,
+      unique: true,
+      sparse: true,
     },
     userdata: {
       type: userDataSchema,

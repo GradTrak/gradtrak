@@ -67,6 +67,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "aot": true,
             "browserTarget": "gradtrak:build",
             "proxyConfig": "proxy.conf.json"
           },

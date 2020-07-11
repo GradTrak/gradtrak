@@ -4,17 +4,35 @@
     <ng-container *ngIf="!state.loggedIn; else loggedIn">
       <div class="left">Guest User</div>
       <div class="right">
-        <button class="gt-button" (click)="openLogin()">Login / Register</button>
+        <button class="gt-button" (click)="openLogin()">Register to Save</button>
+        <span> | </span>
+        <a
+          class="gt-button"
+          href="https://docs.google.com/document/d/1sr9zSIZItja7008yAB5kYDhEZv-1SO0I7zIJtUmZ0Kk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Help
+        </a>
         <span> | &nbsp;</span>
         <i class="material-icons" (click)="openReportForm()">flag</i>
       </div>
     </ng-container>
     <ng-template #loggedIn>
-      <div class="left">Name: {{ state.username }}</div>
+      <div class="left">Name: {{ state.user.username }}</div>
       <div class="right">
         <button class="gt-button" (click)="openAccountEditor()">Account</button>
         <span> | </span>
         <button class="gt-button" (click)="logout()">Logout</button>
+        <span> | </span>
+        <a
+          class="gt-button"
+          href="https://docs.google.com/document/d/1sr9zSIZItja7008yAB5kYDhEZv-1SO0I7zIJtUmZ0Kk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Help
+        </a>
         <span> | &nbsp;</span>
         <i class="material-icons" (click)="openReportForm()">flag</i>
       </div>

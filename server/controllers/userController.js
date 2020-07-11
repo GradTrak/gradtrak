@@ -37,16 +37,14 @@ exports.register = async (req, res) => {
     return;
   }
   if (!validateEmail(username)) {
-    // TODO Send status code 400 once client-side validation is implemented
-    res.json({
+    res.status(400).json({
       success: false,
       error: 'Invalid email address',
     });
     return;
   }
   if (!validPassword(password)) {
-    // TODO Send status code 400 once client-side validation is implemented
-    res.json({
+    res.status(400).json({
       success: false,
       error: 'Invalid password',
     });
@@ -73,6 +71,7 @@ exports.register = async (req, res) => {
   res.json({
     username,
     success: true,
+    auth: 'local',
   });
 
   smtp.sendMail({
@@ -92,16 +91,26 @@ exports.logout = (req, res) => {
   }
 };
 
-exports.loginSuccess = (req, res) => {
+exports.loginSuccessLocal = (req, res) => {
   res.json({
     success: true,
     username: req.user.username,
+    auth: 'local',
+  });
+};
+
+exports.loginSuccessGoogle = (req, res) => {
+  res.json({
+    success: true,
+    username: req.user.username,
+    auth: 'google',
   });
 };
 
 exports.loginFailure = (req, res) => {
   res.status(200).json({
     success: false,
+    error: 'Invalid username or password',
   });
 };
 
@@ -110,6 +119,7 @@ exports.whoami = (req, res) => {
     res.json({
       loggedIn: true,
       username: req.user.username,
+      auth: req.user.googleId ? 'google' : 'local',
     });
   } else {
     res.json({
@@ -123,6 +133,13 @@ exports.changePassword = async (req, res) => {
     res.status(401).json({
       success: false,
       error: 'Not logged in',
+    });
+    return;
+  }
+  if (req.user.googleId) {
+    res.status(400).json({
+      success: false,
+      error: 'You are currently authenticated with Google',
     });
     return;
   }
