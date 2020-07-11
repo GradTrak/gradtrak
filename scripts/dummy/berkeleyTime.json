@@ -32502,8 +32502,7 @@
     "id": "econs101a",
     "dept": "ECON",
     "no": "S101A",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 4,
@@ -32511,8 +32510,7 @@
     "id": "econs101b",
     "dept": "ECON",
     "no": "S101B",
-    "tagIds": [
-    ]
+    "tagIds": []
   },
   {
     "units": 3,
@@ -126871,7 +126869,9 @@
     "id": "sasianr5a",
     "dept": "S ASIAN",
     "no": "R5A",
-    "tagIds": []
+    "tagIds": [
+      "rc_a"
+    ]
   },
   {
     "units": 4,
@@ -126879,7 +126879,9 @@
     "id": "sasianr5b",
     "dept": "S ASIAN",
     "no": "R5B",
-    "tagIds": []
+    "tagIds": [
+      "rc_b"
+    ]
   },
   {
     "units": 3,
