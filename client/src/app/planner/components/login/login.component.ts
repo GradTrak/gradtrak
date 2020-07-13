@@ -85,6 +85,10 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
+    this.regEmailMarketing = true;
+    console.log(this.username);
+    console.log(this.regEmailMarketing);
+    console.log(this.regUserTesting);
 
     this.userService
       .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
