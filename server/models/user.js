@@ -64,7 +64,7 @@ const userSchema = new mongoose.Schema(
     },
     emailMarketing: {
       type: Boolean,
-      required: true,
+      required: false,
       default: false,
     },
     userTesting: {
