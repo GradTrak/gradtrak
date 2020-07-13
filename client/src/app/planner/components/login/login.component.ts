@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   loginError: string;
 
   regError: string;
-  regEmailMarketing: boolean;
   regUserTesting: boolean;
 
   loading: boolean;
@@ -38,7 +37,6 @@ export class LoginComponent implements OnInit {
     this.password2 = '';
     this.loginError = null;
     this.regError = null;
-    this.regEmailMarketing = true;
     this.regUserTesting = false;
   }
 
@@ -85,10 +83,9 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    this.regEmailMarketing = true;
 
     this.userService
-      .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
+      .register(this.username, this.password, this.regUserTesting)
       .subscribe((error: string) => {
         if (error) {
           this.regError = error;
