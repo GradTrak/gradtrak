@@ -84,19 +84,17 @@ export class LoginComponent implements OnInit {
 
     this.loading = true;
 
-    this.userService
-      .register(this.username, this.password, this.regUserTesting)
-      .subscribe((error: string) => {
-        if (error) {
-          this.regError = error;
+    this.userService.register(this.username, this.password, this.regUserTesting).subscribe((error: string) => {
+      if (error) {
+        this.regError = error;
+        this.loading = false;
+      } else {
+        this.userService.queryWhoami().subscribe(() => {
+          this.register.emit();
           this.loading = false;
-        } else {
-          this.userService.queryWhoami().subscribe(() => {
-            this.register.emit();
-            this.loading = false;
-          });
-        }
-      });
+        });
+      }
+    });
   }
 
   private static validPassword(password: string): boolean {
