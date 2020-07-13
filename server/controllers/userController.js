@@ -19,14 +19,12 @@ exports.register = async (req, res) => {
     return;
   }
 
-  const { username, password, emailMarketing, userTesting } = req.body;
+  const { username, password, userTesting } = req.body;
   if (
     username === undefined ||
     username === null ||
     password === undefined ||
     password === null ||
-    emailMarketing === undefined ||
-    emailMarketing === null ||
     userTesting === undefined ||
     userTesting === null
   ) {
@@ -64,7 +62,6 @@ exports.register = async (req, res) => {
   const newUser = await User.create({
     username,
     passwordHash,
-    emailMarketing,
     userTesting,
   });
   await util.promisify(req.login).bind(req)(newUser);

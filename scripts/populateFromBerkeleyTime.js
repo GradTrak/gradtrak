@@ -41,7 +41,7 @@ db.connect()
   })
   .finally(() => {
     conn.close();
-    cache.del('erc:*', (err, deleted) => {
+    cache.del('*', (err, deleted) => {
       if (err) {
         console.error(err);
       } else {
