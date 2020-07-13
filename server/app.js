@@ -15,8 +15,6 @@ const { api } = require('./routers/api');
 
 db.connect();
 
-const RedisStore = connectRedis(session);
-
 const app = express();
 
 app.use(logger('dev'));
@@ -25,21 +23,33 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(csrf({ cookie: true }));
-app.use(
-  session({
-    store: new RedisStore({ client: redisClient }),
-    secret: process.env.SESSION_SECRET || 'secret',
-    resave: false,
-    saveUninitialized: false,
-  }),
-);
-app.use(passport.initialize());
-app.use(passport.session());
+
+if (process.env.NODE_ENV === 'production') {
+  const RedisStore = connectRedis(session);
+  app.use(
+    session({
+      store: new RedisStore({ client: redisClient }),
+      secret: process.env.SESSION_SECRET || 'secret',
+      resave: false,
+      saveUninitialized: false,
+    }),
+  );
+} else {
+  app.use(
+    session({
+      secret: process.env.SESSION_SECRET || 'secret',
+      resave: false,
+      saveUninitialized: false,
+    }),
+  );
+}
 
 passport.use(localStrategy);
 passport.use(googleStrategy);
 passport.serializeUser(serializeUser);
 passport.deserializeUser(deserializeUser);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.all('*', (req, res, next) => {
   res.cookie('XSRF-TOKEN', req.csrfToken());
