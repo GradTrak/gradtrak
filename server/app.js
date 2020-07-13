@@ -6,9 +6,11 @@ const csrf = require('csurf');
 const logger = require('morgan');
 const passport = require('passport');
 const session = require('express-session');
+const connectRedis = require('connect-redis');
 
 const db = require('./config/db');
 const { deserializeUser, googleStrategy, localStrategy, serializeUser } = require('./config/passport');
+const { client: redisClient } = require('./config/redis');
 const { api } = require('./routers/api');
 
 db.connect();
@@ -21,14 +23,33 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(csrf({ cookie: true }));
-app.use(session({ secret: process.env.SESSION_SECRET || 'secret' }));
-app.use(passport.initialize());
-app.use(passport.session());
+
+if (process.env.NODE_ENV === 'production') {
+  const RedisStore = connectRedis(session);
+  app.use(
+    session({
+      store: new RedisStore({ client: redisClient }),
+      secret: process.env.SESSION_SECRET || 'secret',
+      resave: false,
+      saveUninitialized: false,
+    }),
+  );
+} else {
+  app.use(
+    session({
+      secret: process.env.SESSION_SECRET || 'secret',
+      resave: false,
+      saveUninitialized: false,
+    }),
+  );
+}
 
 passport.use(localStrategy);
 passport.use(googleStrategy);
 passport.serializeUser(serializeUser);
 passport.deserializeUser(deserializeUser);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.all('*', (req, res, next) => {
   res.cookie('XSRF-TOKEN', req.csrfToken());

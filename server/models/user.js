@@ -12,7 +12,7 @@ const semesterSchema = new mongoose.Schema(
       default: [],
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
 const userDataSchema = new mongoose.Schema(
   {
@@ -34,7 +34,7 @@ const userDataSchema = new mongoose.Schema(
       default: {},
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
 
 const userSchema = new mongoose.Schema(
@@ -64,8 +64,8 @@ const userSchema = new mongoose.Schema(
     },
     emailMarketing: {
       type: Boolean,
-      required: true,
-      default: false,
+      required: false,
+      default: true,
     },
     userTesting: {
       type: Boolean,

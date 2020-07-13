@@ -56,21 +56,20 @@ export class UserService {
   }
 
   /**
-   * Registers a user with the given username, password, and emailMarketing and
+   * Registers a user with the given username, password, and
    * userTesting preferences.
    *
    * @param {string} username The user's username.
    * @param {string} password The user's password.
-   * @param {boolean} emailMarketing The user's emailMarketing preference.
    * @param {boolean} userTesting The user's userTesting preference.
    * @return {Observable<string>} An Observable that will emit an error string
    * or null if the registration was successful.
    */
-  register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
+  register(username: string, password: string, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
-    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
+    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, userTesting }).pipe(
       tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
@@ -318,15 +317,18 @@ export class UserService {
       return;
     }
 
-    if (manuallyFulfilledReqs.has(requirementSet.id)) {
-      manuallyFulfilledReqs.get(requirementSet.id).add(requirement.id);
-    } else {
-      const newSet: Set<string> = new Set<string>();
-      newSet.add(requirement.id);
-      manuallyFulfilledReqs.set(requirementSet.id, newSet);
-    }
+    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    nextSet.add(requirement.id);
+
+    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: nextManuallyFulfilled,
+      },
     });
   }
 
@@ -343,12 +345,20 @@ export class UserService {
       return;
     }
 
-    manuallyFulfilledReqs.get(requirementSet.id).delete(requirement.id);
-    if (manuallyFulfilledReqs.get(requirementSet.id).size === 0) {
-      manuallyFulfilledReqs.delete(requirementSet.id);
+    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+
+    nextSet.delete(requirement.id);
+    if (nextSet.size === 0) {
+      nextManuallyFulfilled.delete(requirementSet.id);
     }
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: nextManuallyFulfilled,
+      },
     });
   }
 
