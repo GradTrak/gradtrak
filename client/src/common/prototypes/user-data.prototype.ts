@@ -1,7 +1,11 @@
 import { SemesterPrototype } from './semester.prototype';
 
 export interface UserDataPrototype {
-  semesters: any;
+  semesters: {
+    [year: string]: SemesterPrototype[];
+  };
   goalIds: string[];
-  manuallyFulfilledReqs: object;
+  manuallyFulfilledReqs: {
+    [reqSetId: string]: string[];
+  };
 }
