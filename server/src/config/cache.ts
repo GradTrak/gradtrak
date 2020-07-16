@@ -1,9 +1,12 @@
 import redis from 'redis';
 import redisCache from 'express-redis-cache';
 
+import { client } from './redis';
+
 export const cache = redisCache({
   client: redis.createClient(process.env.REDIS_URL),
 });
+
 let cacheConnRefused = false;
 
 cache.on('error', (err) => {

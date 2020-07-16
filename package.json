@@ -42,6 +42,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "argon2": "^0.26.2",
     "compression": "^1.7.4",
+    "connect-redis": "^4.0.4",
     "cookie-parser": "~1.4.4",
     "csurf": "^1.11.0",
     "debug": "~2.6.9",
