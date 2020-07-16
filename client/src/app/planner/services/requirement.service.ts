@@ -57,6 +57,7 @@ export class RequirementService {
               (reqSetProto: RequirementSetPrototype) =>
                 !reqSetProto.parentId || reqSetIds.some((reqSetId: string) => reqSetId === reqSetProto.parentId),
             )
+            .filter((reqSetProto: RequirementSetPrototype) => !reqSetIds.includes(reqSetProto.id))
             .map((reqSetProto: RequirementSetPrototype) =>
               RequirementSet.fromProto(reqSetProto, reqSetMap, coursesMap, tagsMap),
             )
