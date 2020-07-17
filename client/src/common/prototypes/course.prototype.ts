@@ -1,4 +1,4 @@
-export interface CoursePrototype {
+export type CoursePrototype = {
   id: string;
   dept: string;
   no: string;

@@ -1,6 +1,6 @@
 import { SemesterPrototype } from './semester.prototype';
 
-export interface UserDataPrototype {
+export type UserDataPrototype = {
   semesters: {
     [year: string]: SemesterPrototype[];
   };
