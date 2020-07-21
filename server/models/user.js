@@ -12,15 +12,15 @@ const semesterSchema = new mongoose.Schema(
       default: [],
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
-
 const userDataSchema = new mongoose.Schema(
   {
     semesters: {
-      type: [semesterSchema],
+      type: Map,
+      of: [semesterSchema],
       required: true,
-      default: [],
+      default: {},
     },
     goalIds: {
       type: [String],
@@ -34,32 +34,38 @@ const userDataSchema = new mongoose.Schema(
       default: {},
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
 
 const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
+      index: true,
       required: true,
       unique: true,
     },
     passwordHash: {
       type: String,
-      required: true,
+    },
+    googleId: {
+      type: String,
+      index: true,
+      unique: true,
+      sparse: true,
     },
     userdata: {
       type: userDataSchema,
       required: true,
       default: {
-        semesters: [],
+        semesters: {},
         goalIds: [],
       },
     },
     emailMarketing: {
       type: Boolean,
-      required: true,
-      default: false,
+      required: false,
+      default: true,
     },
     userTesting: {
       type: Boolean,

@@ -1,29 +1,60 @@
 <ng-container *ngIf="requirementSets; else loading">
-  <div class="chooser">
-    <input type="text" name="search-box" [(ngModel)]="searchPrompt" (keyup)="updateGoalSearch()" />
-    <div class="selector-container">
-      <div *ngFor="let state of selectionStates" class="selector">
-        <h4>{{ state.type | titlecase }}</h4>
-        <select size="8" [(ngModel)]="state.selectedSearchedGoal">
-          <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
-        </select>
-        <button *ngIf="state.selectedSearchedGoal" (click)="addGoal(state.selectedSearchedGoal, state)">Add</button>
+  <div class="row">
+    <div class="col search">
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search for a major"
+          [(ngModel)]="searchPrompt"
+          (keyup)="updateGoalSearch()"
+        />
+      </div>
+      <div class="row">
+        <div *ngFor="let state of selectionStates" class="form-group col">
+          <h4 *ngIf="selectionStates.length > 1">{{ state.type | titlecase }}</h4>
+          <div class="form-group">
+            <select class="custom-select" size="8" [(ngModel)]="state.selectedSearchedGoal">
+              <option *ngFor="let goal of state.searchedGoals" [ngValue]="goal">{{ goal.name }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button
+              class="btn btn-outline-primary btn-sm btn-block"
+              (click)="addGoal(state.selectedSearchedGoal, state)"
+              [disabled]="!state.selectedSearchedGoal"
+            >
+              Add
+            </button>
+            <span class="request-major">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScWm1kJjcBs5eX-j_HejtM_9iV3CgP4VlgoVz4hm1PX8u9vww/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Don't see your major?
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="cart">
-    <h3>Selected Goals</h3>
-    <div *ngFor="let state of selectionStates" class="selector">
-      <h4>{{ state.type | titlecase }}</h4>
-      <p>
-        <span *ngFor="let goal of state.chosenGoals">
-          <i class="material-icons" (click)="removeGoal(goal, state)">close</i>
-          {{ goal.name }}
-          <br />
-        </span>
-      </p>
+    <div class="col-auto">
+      <div class="line"></div>
     </div>
-    <button class="gt-button gt-button-secondary" (click)="emitGoals()">Confirm</button>
+    <div class="col">
+      <h4 class="gt-modal-header">Selected Goals</h4>
+      <div *ngFor="let state of selectionStates">
+        <h4 *ngIf="selectionStates.length > 1">{{ state.type | titlecase }}</h4>
+        <hr />
+        <div *ngFor="let goal of state.chosenGoals">
+          <i class="material-icons remove" (click)="removeGoal(goal, state)">close</i>
+          <span class="goal">{{ goal.name }}</span>
+          <hr />
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm btn-block" (click)="emitGoals()">Confirm</button>
+    </div>
   </div>
 </ng-container>
 <ng-template #loading>

@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
 import { flatMap, map, tap } from 'rxjs/operators';
-import { SemesterPrototype } from 'common/prototypes/semester.prototype';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { Semester } from '../models/semester.model';
-import { State } from '../models/state.model';
+import { AuthType, State } from '../models/state.model';
 import { UserData } from '../models/user-data.model';
 import { CourseService } from './course.service';
 import { RequirementService } from './requirement.service';
@@ -19,9 +18,12 @@ import { RequirementService } from './requirement.service';
 export class UserService {
   static readonly INITIAL_STATE: State = {
     loggedIn: false,
-    username: null,
+    user: {
+      username: null,
+      auth: null,
+    },
     userData: {
-      semesters: [],
+      semesters: new Map<string, Semester[]>(),
       goals: [],
       manuallyFulfilledReqs: new Map<string, Set<string>>(),
     },
@@ -54,30 +56,33 @@ export class UserService {
   }
 
   /**
-   * Registers a user with the given username, password, and emailMarketing and userTesting preferences.
+   * Registers a user with the given username, password, and
+   * userTesting preferences.
    *
    * @param {string} username The user's username.
    * @param {string} password The user's password.
-   * @param {boolean} emailMarketing The user's emailMarketing preference.
    * @param {boolean} userTesting The user's userTesting preference.
-   * @return {Observable<string>} An Observable that will emit an error string or null if the registration was
-   * successful.
+   * @return {Observable<string>} An Observable that will emit an error string
+   * or null if the registration was successful.
    */
-  register(username: string, password: string, emailMarketing: boolean, userTesting: boolean): Observable<string> {
+  register(username: string, password: string, userTesting: boolean): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
-    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, emailMarketing, userTesting }).pipe(
-      tap((response: { success: boolean; username?: string; error?: string }) => {
+    return this.http.post(UserService.REGISTER_ENDPOINT, { username, password, userTesting }).pipe(
+      tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         }
       }),
-      map((response: { success: boolean; username?: string; error?: string }) =>
+      map((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) =>
         response.error ? response.error : null,
       ),
     );
@@ -88,24 +93,30 @@ export class UserService {
    *
    * @param {string} username The user's username.
    * @param {string} password The user's password.
-   * @return {Observable<boolean>} An Observable that will emit whether the login was successful.
+   * @return {Observable<string>} An Observable that will emit an error string
+   * or null if the login was successful.
    */
-  login(username: string, password: string): Observable<boolean> {
+  login(username: string, password: string): Observable<string> {
     if (this.currentState.loggedIn) {
       throw new Error('Tried to log in when already logged in');
     }
 
     return this.http.post(UserService.LOGIN_ENDPOINT, { username, password }).pipe(
-      tap((response: { success: boolean; username?: string }) => {
+      tap((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) => {
         if (response.success) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         }
       }),
-      map((response: { success: boolean; username?: string }) => response.success),
+      map((response: { success: boolean; username?: string; auth?: AuthType; error?: string }) =>
+        response.error ? response.error : null,
+      ),
     );
   }
 
@@ -121,31 +132,35 @@ export class UserService {
       this.state.next({
         ...this.currentState,
         loggedIn: false,
-        username: null,
+        user: null,
       });
     });
   }
 
   /**
-   * Queries the server to detect current login status and updates state accordingly.
+   * Queries the server to detect current login status and updates state
+   * accordingly.
    *
-   * @return {Observable<string>} An Observable that contains the username
-   * or null if not logged in.
+   * @return {Observable<string>} An Observable that contains the username or
+   * null if not logged in.
    */
   queryWhoami(): Observable<string> {
     return this.http.get(UserService.WHOAMI_ENDPOINT).pipe(
-      tap((response: { loggedIn: boolean; username?: string }) => {
+      tap((response: { loggedIn: boolean; username?: string; auth?: AuthType }) => {
         if (response.loggedIn) {
           this.state.next({
             ...this.currentState,
             loggedIn: true,
-            username: response.username,
+            user: {
+              username: response.username,
+              auth: response.auth,
+            },
           });
         } else {
           this.state.next({
             ...this.currentState,
             loggedIn: false,
-            username: null,
+            user: null,
           });
         }
       }),
@@ -158,9 +173,11 @@ export class UserService {
   /**
    * Changes the user's password.
    *
-   * @param {string} oldPassword The user's old password, used for verification.
+   * @param {string} oldPassword The user's old password, used for
+   * verification.
    * @param {string} newPassword the user's new password.
-   * @return {Observable<string>} The error in changing the password, null if the operation succeeded.
+   * @return {Observable<string>} The error in changing the password, null if
+   * the operation succeeded.
    */
   changePassword(oldPassword: string, newPassword: string): Observable<string> {
     return this.http
@@ -172,7 +189,8 @@ export class UserService {
   }
 
   /**
-   * Fetches the user data from the backend, instantiates the semesters, and takes the object and make it a list.
+   * Fetches the user data from the backend, instantiates the semesters, and
+   * takes the object and make it a list.
    */
   fetchUserData(): void {
     this.http
@@ -186,7 +204,7 @@ export class UserService {
         ),
       )
       .subscribe((userData: UserData) => {
-        if (userData.semesters.length > 0) {
+        if (userData.semesters.size > 0) {
           this.state.next({
             ...this.currentState,
             userData,
@@ -200,22 +218,26 @@ export class UserService {
   }
 
   saveUserData(): void {
-    this.http
-      .put(UserService.SEMESTER_API_ENDPOINT, this.getPrototypeFromUserData(this.currentState.userData))
-      .subscribe();
+    this.http.put(UserService.SEMESTER_API_ENDPOINT, UserData.toProto(this.currentState.userData)).subscribe();
   }
 
   /**
-   * Updates the list of semesters to a new list of given semesters.
+   * Updates the list of semesters to a new mapping of given semesters.
    *
-   * @param {Semester[]} newSemesters The new semesters.
+   * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
-  updateSemesters(newSemesters: Semester[]): void {
+  updateSemesters(newSemesters: Map<string, Semester[]>): void {
+    // not sure why, before the rework the list of semesters was copied, so
+    // I've copied the map here as well.
+    const newMap = new Map<string, Semester[]>();
+    newSemesters.forEach((value, key) => {
+      newMap.set(key, [...value]);
+    });
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...newSemesters],
+        semesters: newMap,
       },
     });
   }
@@ -247,13 +269,14 @@ export class UserService {
       return;
     }
 
-    // TODO Making this a function that returns a clone breaks the course-changer
+    // TODO Making this a function that returns a clone breaks the
+    // course-changer
     semester.courses = [...semester.courses, course];
     this.state.next({
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...this.currentState.userData.semesters],
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
       },
     });
   }
@@ -276,7 +299,7 @@ export class UserService {
       ...this.currentState,
       userData: {
         ...this.currentState.userData,
-        semesters: [...this.currentState.userData.semesters],
+        semesters: new Map<string, Semester[]>(this.currentState.userData.semesters),
       },
     });
   }
@@ -294,15 +317,18 @@ export class UserService {
       return;
     }
 
-    if (manuallyFulfilledReqs.has(requirementSet.id)) {
-      manuallyFulfilledReqs.get(requirementSet.id).add(requirement.id);
-    } else {
-      const newSet: Set<string> = new Set<string>();
-      newSet.add(requirement.id);
-      manuallyFulfilledReqs.set(requirementSet.id, newSet);
-    }
+    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    nextSet.add(requirement.id);
+
+    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: nextManuallyFulfilled,
+      },
     });
   }
 
@@ -319,12 +345,20 @@ export class UserService {
       return;
     }
 
-    manuallyFulfilledReqs.get(requirementSet.id).delete(requirement.id);
-    if (manuallyFulfilledReqs.get(requirementSet.id).size === 0) {
-      manuallyFulfilledReqs.delete(requirementSet.id);
+    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+
+    nextSet.delete(requirement.id);
+    if (nextSet.size === 0) {
+      nextManuallyFulfilled.delete(requirementSet.id);
     }
     this.state.next({
       ...this.currentState,
+      userData: {
+        ...this.currentState.userData,
+        manuallyFulfilledReqs: nextManuallyFulfilled,
+      },
     });
   }
 
@@ -333,29 +367,5 @@ export class UserService {
       ...this.currentState,
       userData,
     });
-  }
-
-  private getPrototypeFromUserData(userData: UserData): UserDataPrototype {
-    const semesters: SemesterPrototype[] = userData.semesters.map((semester: Semester) => {
-      const semesterPrototype = {
-        ...semester,
-        courseIds: semester.courses.map((course: Course) => course.id),
-      };
-      delete semesterPrototype.courses;
-      return semesterPrototype;
-    });
-    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
-    const manuallyFulfilledReqs: object = Object.fromEntries(
-      Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
-        entry[0],
-        Array.from(entry[1]),
-      ]),
-    );
-
-    return {
-      semesters,
-      goalIds,
-      manuallyFulfilledReqs,
-    };
   }
 }

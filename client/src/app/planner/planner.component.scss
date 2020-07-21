@@ -17,6 +17,12 @@ $header-height: 5rem;
   text-align: center;
   font-size: 1.25rem;
   padding: 8px;
+  font-weight: 500;
+}
+
+.beta {
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .name {
@@ -31,32 +37,9 @@ $header-height: 5rem;
   width: 100%;
 }
 
-.main {
-  display: grid;
-  grid-gap: 4px;
-  grid-template-columns: 0.6fr 0.4fr;
-
-  > * {
-    height: calc(100vh - #{$header-height});
-    overflow-y: scroll;
-  }
-}
-
-app-report-pane {
-  padding: 7px;
-}
-
-$report-button-width: 5rem;
-$report-button-height: 2rem;
-
-.report-button {
-  position: fixed;
-  right: ($report-button-height - $report-button-width) / 2;
-  top: calc(50vh + #{$header-height / 2 - $report-button-height / 2});
-  width: $report-button-width;
-  height: $report-button-height;
-  font-size: 0.75rem;
-  transform: rotate(-90deg);
+.main > * {
+  height: calc(100vh - #{$header-height});
+  overflow-y: scroll;
 }
 
 .left {
@@ -65,4 +48,10 @@ $report-button-height: 2rem;
 
 .right {
   float: right;
+}
+
+.material-icons {
+  cursor: pointer;
+  float: right;
+  padding-right: 6px;
 }

@@ -16,17 +16,17 @@ jobs:
     - name: Install Yarn
       run: npm install --global yarn
     - name: Install Dependencies
-      run: (cd client && yarn install --frozen-lockfile) && (cd server && yarn install --frozen-lockfile)
+      run: yarn install --frozen-lockfile
     - name: Build
       run: yarn build-dev
     - name: Deploy to Heroku
       run: |
-        cd server &&
-        rm -rf .git &&
-        git init &&
-        git add -A &&
+        (git branch -D deploy || true) &&
+        git checkout --orphan deploy &&
+        git reset &&
+        git add -f package.json yarn.lock build &&
         git commit -m 'Deploy' &&
-        git push -f https://git:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/gradtrak-dev.git master
+        git push -f https://git:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/gradtrak-dev.git deploy:master
       env:
         GIT_AUTHOR_NAME: GitHub Action
         GIT_AUTHOR_EMAIL: info@gradtrak.me

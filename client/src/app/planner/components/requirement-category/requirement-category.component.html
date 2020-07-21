@@ -1,7 +1,11 @@
 <div [ngClass]="collapsed ? 'collapsed' : null">
-  <div class="name">
-    <i class="button material-icons" (click)="toggleCollapsed()">arrow_drop_down</i>
-    {{ requirementCategory.name }}
+  <div class="name row">
+    <div class="col-auto px-1">
+      <i class="dropdown-arrow material-icons" (click)="toggleCollapsed()">arrow_drop_down</i>
+    </div>
+    <div class="col px-1">
+      {{ requirementCategory.name }}
+    </div>
   </div>
   <div class="requirements">
     <app-requirement
@@ -9,6 +13,7 @@
       [requirement]="requirement"
       [courses]="courses"
       [manuallyFulfilled]="manuallyFulfilled"
+      [fulfillmentMap]="fulfillmentMap"
       (onManualFulfill)="onManualFulfill.emit($event)"
       (onManualUnfulfill)="onManualUnfulfill.emit($event)"
     ></app-requirement>

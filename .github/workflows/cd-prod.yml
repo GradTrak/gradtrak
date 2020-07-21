@@ -6,32 +6,6 @@ on:
       - master
 
 jobs:
-  deploy-heroku:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - name: Install Yarn
-      run: npm install --global yarn
-    - name: Install Dependencies
-      run: (cd client && yarn install --frozen-lockfile) && (cd server && yarn install --frozen-lockfile)
-    - name: Build
-      run: yarn build
-    - name: Deploy to Heroku
-      run: |
-        cd server &&
-        rm -rf .git &&
-        git init &&
-        git add -A &&
-        git commit -m 'Deploy' &&
-        git push -f https://git:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/gradtrak.git master
-      env:
-        GIT_AUTHOR_NAME: GitHub Action
-        GIT_AUTHOR_EMAIL: info@gradtrak.me
-        GIT_COMMITTER_NAME: GitHub Action
-        GIT_COMMITTER_EMAIL: info@gradtrak.me
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -42,7 +16,7 @@ jobs:
     - name: Install Yarn
       run: npm install --global yarn
     - name: Install Dependencies
-      run: (cd client && yarn install --frozen-lockfile) && (cd server && yarn install --frozen-lockfile)
+      run: yarn install --frozen-lockfile
     - name: Build
       run: yarn build
     - name: Install SSH Key
@@ -52,12 +26,12 @@ jobs:
         known_hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
     - name: Deploy
       run: |
-        cd server &&
-        rm -rf .git &&
-        git init &&
-        git add -A &&
+        (git branch -D deploy || true) &&
+        git checkout --orphan deploy &&
+        git reset &&
+        git add -f package.json yarn.lock build &&
         git commit -m 'Deploy' &&
-        git push -f git@app.gradtrak.me:gradtrak.git master
+        git push -f git@app.gradtrak.me:gradtrak.git deploy:master
       env:
         GIT_AUTHOR_NAME: GitHub Action
         GIT_AUTHOR_EMAIL: info@gradtrak.me

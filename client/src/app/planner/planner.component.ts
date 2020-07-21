@@ -4,6 +4,9 @@ import { Course } from './models/course.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
 import { UserData } from './models/user-data.model';
+import { CourseService } from './services/course.service';
+import { RequirementService } from './services/requirement.service';
+import { TagService } from './services/tag.service';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -27,7 +30,13 @@ export class PlannerComponent implements OnInit {
 
   private loginPrompted: boolean;
 
-  constructor(private userService: UserService, private modalService: NgbModal) {
+  constructor(
+    private courseService: CourseService,
+    private requirementService: RequirementService,
+    private tagService: TagService,
+    private userService: UserService,
+    private modalService: NgbModal,
+  ) {
     this.isLoading = true;
   }
 
@@ -45,7 +54,7 @@ export class PlannerComponent implements OnInit {
           /* Open login modal if not opened previously */
           this.loginPrompted = true;
           this.openLogin();
-        } else if (nextState.userData.semesters.length === 0) {
+        } else if (nextState.userData.semesters.size === 0) {
           /* Open initializer if not prompting for login and empty semesters */
           this.openInitializer();
         }
@@ -59,6 +68,23 @@ export class PlannerComponent implements OnInit {
       this.currentCourses = this.getCurrentCourses();
     });
     this.userService.queryWhoami().subscribe();
+
+    /* Prefetch data */
+    this.courseService.getCourses().subscribe();
+    this.requirementService.getRequirements().subscribe();
+    this.tagService.getTags().subscribe();
+
+    /* Register beforeclose handler for save prompt */
+    window.addEventListener('beforeunload', (e) => {
+      if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
+        /* This text isn't actually what is displayed. */
+        const confirmation: string = 'Are you sure you want to leave? Guest account changes will be lost.';
+        e.returnValue = confirmation;
+        e.preventDefault();
+        return confirmation;
+      }
+      return undefined;
+    });
   }
 
   closeModal(): void {
@@ -75,7 +101,7 @@ export class PlannerComponent implements OnInit {
 
   onLoginDismiss(): void {
     this.closeModal();
-    if (this.state.userData.semesters.length === 0) {
+    if (this.state.userData.semesters.size === 0) {
       this.openInitializer();
     }
   }
@@ -108,7 +134,15 @@ export class PlannerComponent implements OnInit {
     this.userService.setUserData(userData);
   }
 
+  /**
+   * Gets a list of all the courses a user is currently taking, in
+   * the form of an array, based on the currrent state and userdata.
+   * @return a list of courses that are in the state.
+   */
   private getCurrentCourses(): Course[] {
-    return this.state.userData.semesters.flatMap((semester: Semester) => semester.courses);
+    return Array.from(this.state.userData.semesters.values())
+      .flat()
+      .filter((semester: Semester) => semester)
+      .flatMap((semester: Semester) => semester.courses);
   }
 }

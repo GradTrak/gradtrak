@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UserService } from '../../services/user.service';
 
+import { validateEmail } from '../../lib/utils';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,12 +18,12 @@ export class LoginComponent implements OnInit {
   password: string;
   password2: string;
 
+  loginError: string;
+
   regError: string;
-  regEmailMarketing: boolean;
   regUserTesting: boolean;
 
   loading: boolean;
-  failed: boolean;
   registering: boolean;
 
   constructor(private userService: UserService) {
@@ -29,13 +31,12 @@ export class LoginComponent implements OnInit {
     this.register = new EventEmitter<void>();
     this.dismissEvent = new EventEmitter<void>();
     this.loading = false;
-    this.failed = false;
     this.registering = false;
     this.username = '';
     this.password = '';
     this.password2 = '';
+    this.loginError = null;
     this.regError = null;
-    this.regEmailMarketing = true;
     this.regUserTesting = false;
   }
 
@@ -50,38 +51,53 @@ export class LoginComponent implements OnInit {
   }
 
   submitLogin(): void {
+    if (!validateEmail(this.username) || !LoginComponent.validPassword(this.password)) {
+      this.loginError = 'Invalid username or password';
+      return;
+    }
+
     this.loading = true;
 
-    this.userService.login(this.username, this.password).subscribe((success: boolean) => {
-      if (success) {
-        this.login.emit();
+    this.userService.login(this.username, this.password).subscribe((error: string) => {
+      if (error) {
+        this.loginError = error;
       } else {
-        this.failed = true;
+        this.login.emit();
       }
       this.loading = false;
     });
   }
 
   submitRegistration(): void {
-    this.loading = true;
+    if (!validateEmail(this.username)) {
+      this.regError = 'Invalid email address';
+      return;
+    }
     if (this.password !== this.password2) {
       this.regError = "Password and confirm password fields don't match!";
-      this.loading = false;
+      return;
+    }
+    if (!LoginComponent.validPassword(this.password)) {
+      this.regError = 'Invalid password';
       return;
     }
 
-    this.userService
-      .register(this.username, this.password, this.regEmailMarketing, this.regUserTesting)
-      .subscribe((error: string) => {
-        if (error) {
-          this.regError = error;
+    this.loading = true;
+
+    this.userService.register(this.username, this.password, this.regUserTesting).subscribe((error: string) => {
+      if (error) {
+        this.regError = error;
+        this.loading = false;
+      } else {
+        this.userService.queryWhoami().subscribe(() => {
+          this.register.emit();
           this.loading = false;
-        } else {
-          this.userService.queryWhoami().subscribe(() => {
-            this.register.emit();
-            this.loading = false;
-          });
-        }
-      });
+        });
+      }
+    });
+  }
+
+  private static validPassword(password: string): boolean {
+    return password.length >= 6;
   }
 }

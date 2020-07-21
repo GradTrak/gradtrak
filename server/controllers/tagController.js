@@ -3,10 +3,10 @@ const Tag = require('../models/tag');
 /**
 queries mongo for any tag models and calls successCallback on what is returned
 */
-function queryTags() {
-  return Tag.find();
+async function queryTags() {
+  return Tag.find({}, { _id: 0, __v: 0 });
 }
 
-module.exports.getTags = (req, res) => {
-  queryTags().then((tags) => res.json(tags));
+module.exports.getTags = async (req, res) => {
+  res.json(await queryTags());
 };

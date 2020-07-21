@@ -8,7 +8,7 @@
   background-color: #d8fcbc;
 
   .unfulfilled,
-  .potential {
+  .possible {
     background-color: lightgray;
   }
 }
@@ -17,7 +17,7 @@
   background-color: #fcc3bc;
 }
 
-.potential {
+.possible {
   background-color: #fbfcbc;
 }
 
@@ -33,4 +33,12 @@
 .req-more {
   float: right;
   height: 1.5rem;
+
+  .dropdown-toggle::before {
+    display: none;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
 }

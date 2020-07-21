@@ -5,16 +5,20 @@
 .name {
   background-color: white;
   font-size: 1.2rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-.button {
+.dropdown-arrow {
   cursor: pointer;
   user-select: none;
   transform: translateY(4px);
 }
 
 .collapsed {
-  .button {
+  .dropdown-arrow {
     transform: translateY(4px) rotate(-90deg);
   }
 
@@ -25,4 +29,8 @@
 
 .requirements {
   margin-left: 24px;
+}
+
+::ng-deep .requirements > app-requirement:last-child > .requirement {
+  border-bottom-left-radius: 12px;
 }

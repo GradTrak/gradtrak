@@ -1,27 +1,26 @@
-:host {
-  display: grid;
-  padding: 16px;
-  grid-template-columns: 60% 40%;
-  grid-gap: 16px;
+.search {
+  margin-top: 24px;
 }
 
-.selector-container {
-  display: flex;
-
-  > * {
-    margin: 12px;
-    width: 100%;
-  }
+.line {
+  height: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-left: solid 1px #e0e0e0;
 }
 
-.selector > select {
-  width: 100%;
+.goal {
+  color: #283adc;
 }
 
-.material-icons {
+.remove {
   position: absolute;
-  transform: translateX(-20px);
+  transform: translate(-20px, 2px);
   font-size: 1.25rem;
   color: red;
   cursor: pointer;
+}
+
+.request-major {
+  font-size: 0.85rem;
 }
