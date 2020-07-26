@@ -190,5 +190,9 @@
   {
     "id": "data_sci_domain_dummy",
     "name": "Data Science Domain (dummy since not implemented)"
+  },
+  {
+    "id": "ieor_eng_breadth",
+    "name": "IEOR Engineering Breadths"
   }
 ]

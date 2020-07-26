@@ -3036,6 +3036,55 @@
             "courseId": "physics7b"
           }
         ]
+      },
+      {
+        "name": "Programming",
+        "requirements": [
+          {
+            "id": "engin7",
+            "type": "course",
+            "name": "ENGIN 7",
+            "courseId": "engin7"
+          },
+          {
+            "id": "engin7comspci61a",
+            "type": "multi",
+            "name": "ENGIN 7 / COMPSCI 61A",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "compsci61a",
+                "type": "course",
+                "name": "COMPSCI 61A",
+                "courseId": "compsci61a"
+              },
+              {
+                "id": "compscic8",
+                "type": "course",
+                "name": "COMPSCI C8",
+                "courseId": "compscic8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Engineering Breadth",
+        "requirements": [
+          {
+            "id": "eng_breadth",
+            "type": "unit",
+            "name": "Engineering Breadth",
+            "units": 9,
+            "requirement": {
+              "id": "ieor_eng_breadth",
+              "type": "tag",
+              "name": "IEOR Engineering Breadths",
+              "tagId": "ieor_eng_breadth"
+            }
+          },
+        ]
       }
     ]
   }
