@@ -69927,7 +69927,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "ieor_elective"
     ]
   },
   {
@@ -69948,7 +69949,8 @@
     "no": "130",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_elective"
     ]
   },
   {
@@ -69993,7 +69995,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "data_sci_model"
+      "data_sci_model",
+      "ieor_elective"
     ]
   },
   {
@@ -70004,7 +70007,8 @@
     "no": "150",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_elective"
     ]
   },
   {
@@ -70015,7 +70019,8 @@
     "no": "151",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_elective"
     ]
   },
   {
@@ -70026,7 +70031,8 @@
     "no": "153",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_elective"
     ]
   },
   {
@@ -70096,7 +70102,8 @@
     "dept": "IND ENG",
     "no": "164",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ieor_elective"
     ]
   },
   {
@@ -70118,7 +70125,8 @@
     "no": "166",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_elective"
     ]
   },
   {
@@ -70128,7 +70136,8 @@
     "dept": "IND ENG",
     "no": "169",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ieor_elective"
     ]
   },
   {
@@ -70139,7 +70148,8 @@
     "no": "170",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_elective"
     ]
   },
   {
@@ -70149,7 +70159,8 @@
     "dept": "IND ENG",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "ieor_elective"
     ]
   },
   {

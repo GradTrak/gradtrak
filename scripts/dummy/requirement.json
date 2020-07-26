@@ -3011,17 +3011,38 @@
             "type": "course",
             "name": "MATH 54",
             "courseId": "math54"
-          },
+          }
         ]
       },
       {
         "name": "Sciences",
         "requirements": [
           {
-            "id": "chem1a",
-            "type": "course",
-            "name": "CHEM 1A",
-            "courseId": "chem1a"
+            "id": "chem1abio",
+            "type": "multi",
+            "name": "CHEM 1A / BIO 1A / BIO 1B",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "chem1a",
+                "type": "course",
+                "name": "CHEM 1A",
+                "courseId": "chem1a"
+              },
+              {
+                "id": "bio1a",
+                "type": "course",
+                "name": "BIO 1A",
+                "courseId": "bio1a"
+              },
+              {
+                "id": "bio1b",
+                "type": "course",
+                "name": "BIO 1B",
+                "courseId": "bio1b"
+              }
+            ]
           },
           {
             "id": "physics7a",
@@ -3038,7 +3059,7 @@
         ]
       },
       {
-        "name": "Programming",
+        "name": "Lower Division",
         "requirements": [
           {
             "id": "engin7",
@@ -3047,9 +3068,9 @@
             "courseId": "engin7"
           },
           {
-            "id": "engin7comspci61a",
+            "id": "comspscic8comspci61a",
             "type": "multi",
-            "name": "ENGIN 7 / COMPSCI 61A",
+            "name": "COMPSCI C8 / COMPSCI 61A",
             "numRequired": 1,
             "hidden": false,
             "requirements": [
@@ -3066,12 +3087,7 @@
                 "courseId": "compscic8"
               }
             ]
-          }
-        ]
-      },
-      {
-        "name": "Engineering Breadth",
-        "requirements": [
+          },
           {
             "id": "eng_breadth",
             "type": "unit",
@@ -3083,7 +3099,77 @@
               "name": "IEOR Engineering Breadths",
               "tagId": "ieor_eng_breadth"
             }
+          }
+        ]
+      },
+      {
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "id": "indeng172",
+            "type": "course",
+            "name": "INDENG 172",
+            "courseId": "indeng172"
           },
+          {
+            "id": "indeng162",
+            "type": "course",
+            "name": "INDENG 162",
+            "courseId": "indeng162"
+          },
+          {
+            "id": "indeng160",
+            "type": "course",
+            "name": "INDENG 160",
+            "courseId": "indeng160"
+          },
+          {
+            "id": "engin120",
+            "type": "course",
+            "name": "ENGIN 120",
+            "courseId": "engin120"
+          },
+          {
+            "id": "indeng165",
+            "type": "course",
+            "name": "INDENG 165",
+            "courseId": "indeng165"
+          },
+          {
+            "id": "indeng173",
+            "type": "course",
+            "name": "INDENG 173",
+            "courseId": "indeng173"
+          },
+          {
+            "id": "indeng174",
+            "type": "course",
+            "name": "INDENG 174",
+            "courseId": "indeng174"
+          },
+          {
+            "id": "indeng180",
+            "type": "course",
+            "name": "INDENG 180",
+            "courseId": "indeng180"
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Electives",
+        "requirements": [
+          {
+            "id": "upper_div",
+            "type": "unit",
+            "name": "Upper Division",
+            "units": 18,
+            "requirement": {
+              "id": "ieor_elective",
+              "type": "tag",
+              "name": "IEOR Upper Division Course",
+              "tagId": "ieor_elective"
+            }
+          }
         ]
       }
     ]

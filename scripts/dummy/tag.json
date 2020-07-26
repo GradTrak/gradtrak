@@ -194,5 +194,9 @@
   {
     "id": "ieor_eng_breadth",
     "name": "IEOR Engineering Breadths"
+  },
+  {
+    "id": "ieor_elective",
+    "name": "IEOR Upper Division Elective"
   }
 ]
