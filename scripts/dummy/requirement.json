@@ -2981,7 +2981,7 @@
   },
   {
     "id": "ieor",
-    "name": "Industrial Engineering Major",
+    "name": "Industrial Engineering & Operations Research Major",
     "parentId": "coe",
     "type": "major",
     "requirementCategories": [
@@ -3031,16 +3031,16 @@
                 "courseId": "chem1a"
               },
               {
-                "id": "bio1a",
+                "id": "biology1a",
                 "type": "course",
-                "name": "BIO 1A",
-                "courseId": "bio1a"
+                "name": "BIOLOGY 1A",
+                "courseId": "biology1a"
               },
               {
-                "id": "bio1b",
+                "id": "biology1b",
                 "type": "course",
-                "name": "BIO 1B",
-                "courseId": "bio1b"
+                "name": "BIOLOGY 1B",
+                "courseId": "biology1b"
               }
             ]
           },
@@ -3084,7 +3084,7 @@
                 "id": "compscic8",
                 "type": "course",
                 "name": "COMPSCI C8",
-                "courseId": "compscic8"
+                "courseId": "datac8"
               }
             ]
           },
@@ -3106,10 +3106,31 @@
         "name": "Upper Division",
         "requirements": [
           {
-            "id": "indeng172",
-            "type": "course",
+            "id": "indeng172/stat134/140",
+            "type": "multi",
             "name": "INDENG 172",
-            "courseId": "indeng172"
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "indeng172",
+                "type": "course",
+                "name": "INDENG 172",
+                "courseId": "indeng172"
+              },
+              {
+                "id": "stat134",
+                "type": "course",
+                "name": "STAT 134",
+                "courseId": "stat134"
+              },
+              {
+                "id": "stat140",
+                "type": "course",
+                "name": "STAT 140",
+                "courseId": "stat140"
+              }
+            ]
           },
           {
             "id": "indeng162",

@@ -11894,7 +11894,8 @@
     "dept": "BIO ENG",
     "no": "10",
     "tagIds": [
-      "ls_bio"
+      "ls_bio",
+      "ieor_eng_breadth"
     ]
   },
   {
@@ -11985,7 +11986,8 @@
       "bioeng_technical_topics",
       "bioeng_fundamentals",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "ieor_eng_breadth"
     ]
   },
   {
@@ -19348,7 +19350,9 @@
     "id": "civeng11",
     "dept": "CIV ENG",
     "no": "11",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 1,
@@ -19364,7 +19368,9 @@
     "id": "civengc30",
     "dept": "CIV ENG",
     "no": "C30",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 3,
@@ -19380,7 +19386,9 @@
     "id": "civeng60",
     "dept": "CIV ENG",
     "no": "60",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 3,
@@ -19388,7 +19396,9 @@
     "id": "civeng70",
     "dept": "CIV ENG",
     "no": "70",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 3,
@@ -19902,7 +19912,8 @@
     "no": "126",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "ieor_eng_breadth"
     ]
   },
   {
@@ -19976,7 +19987,8 @@
     "no": "132",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "ieor_eng_breadth"
     ]
   },
   {
@@ -20128,7 +20140,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "ieor_eng_breadth"
     ]
   },
   {
@@ -31106,7 +31119,9 @@
     "id": "desinv15",
     "dept": "DES INV",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 3,
@@ -38180,7 +38195,9 @@
     "id": "eecs16a",
     "dept": "EECS",
     "no": "16A",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 4,
@@ -38188,7 +38205,9 @@
     "id": "eecs16b",
     "dept": "EECS",
     "no": "16B",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 4,
@@ -41581,7 +41600,9 @@
     "id": "engin11",
     "dept": "ENGIN",
     "no": "11",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 2,
@@ -41621,7 +41642,9 @@
     "id": "engin26",
     "dept": "ENGIN",
     "no": "26",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 2,
@@ -41645,7 +41668,9 @@
     "id": "engin29",
     "dept": "ENGIN",
     "no": "29",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 2,
@@ -41677,7 +41702,9 @@
     "id": "engin40",
     "dept": "ENGIN",
     "no": "40",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 2,
@@ -84502,7 +84529,9 @@
     "id": "matsci45l",
     "dept": "MAT SCI",
     "no": "45L",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 1,
@@ -84573,7 +84602,8 @@
     "no": "111",
     "tagIds": [
       "upper_div",
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "ieor_eng_breadth"
     ]
   },
   {
@@ -93565,7 +93595,9 @@
     "id": "meceng40",
     "dept": "MEC ENG",
     "no": "40",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 3,
@@ -93581,7 +93613,9 @@
     "id": "mecengc85",
     "dept": "MEC ENG",
     "no": "C85",
-    "tagIds": []
+    "tagIds": [
+      "ieor_eng_breadth"
+    ]
   },
   {
     "units": 3,
@@ -93918,7 +93952,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "ieor_eng_breadth"
     ]
   },
   {
