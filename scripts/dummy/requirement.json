@@ -2978,5 +2978,65 @@
         ]
       }
     ]
+  },
+  {
+    "id": "ieor",
+    "name": "Industrial Engineering Major",
+    "parentId": "coe",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Mathematics",
+        "requirements": [
+          {
+            "id": "math1a",
+            "type": "course",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "id": "math1b",
+            "type": "course",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
+            "id": "math53",
+            "type": "course",
+            "name": "MATH 53",
+            "courseId": "math53"
+          },
+          {
+            "id": "math54",
+            "type": "course",
+            "name": "MATH 54",
+            "courseId": "math54"
+          },
+        ]
+      },
+      {
+        "name": "Sciences",
+        "requirements": [
+          {
+            "id": "chem1a",
+            "type": "course",
+            "name": "CHEM 1A",
+            "courseId": "chem1a"
+          },
+          {
+            "id": "physics7a",
+            "type": "course",
+            "name": "PHYSICS 7A",
+            "courseId": "physics7a"
+          },
+          {
+            "id": "physics7b",
+            "type": "course",
+            "name": "PHYSICS 7B",
+            "courseId": "physics7b"
+          }
+        ]
+      }
+    ]
   }
 ]
