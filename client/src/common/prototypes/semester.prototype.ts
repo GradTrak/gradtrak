@@ -1,4 +1,4 @@
-export interface SemesterPrototype {
+export type SemesterPrototype = {
   name: string;
   courseIds: string[];
 }

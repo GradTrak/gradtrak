@@ -35,6 +35,10 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
 
 const reqIsFulfilledWithMapping = memoize(
   (req: Requirement, reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => {
+    if (!reqToCourseMapping.has(req)) {
+      return false;
+    }
+
     const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
 
     if (typeof courses === 'boolean') {
