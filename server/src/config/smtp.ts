@@ -25,7 +25,7 @@ if (process.env.SMTP_URL) {
   });
 }
 
-export async function sendMail(options) {
+export async function sendMail(options): Promise<nodemailer.SentMessageInfo> {
   const info = await transporter.sendMail({ ...DEFAULT_OPTIONS, ...options });
 
   if (!process.env.SMTP_URL) {

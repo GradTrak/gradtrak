@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-import { SemesterPrototype } from 'common/prototypes/semester.prototype';
 import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 
 const semesterSchema = new mongoose.Schema(
@@ -89,5 +88,11 @@ const userSchema = new mongoose.Schema(
 );
 
 const User = mongoose.model<mongoose.Document & UserType>('User', userSchema);
+
+declare module 'express' {
+  export interface Request {
+    user?: mongoose.Document & UserType;
+  }
+}
 
 export default User;

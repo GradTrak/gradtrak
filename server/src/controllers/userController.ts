@@ -1,4 +1,5 @@
 import argon2 from 'argon2';
+import express from 'express';
 import util from 'util';
 
 import { verifyUser } from '../config/passport';
@@ -6,11 +7,11 @@ import * as smtp from '../config/smtp';
 import { validateEmail } from '../lib/utils';
 import User, { UserType } from '../models/user';
 
-function validPassword(password) {
+function validPassword(password): boolean {
   return password.length >= 6;
 }
 
-export async function register(req, res) {
+export async function register(req: express.Request, res: express.Response): Promise<void> {
   if (req.user) {
     res.status(400).json({
       success: false,
@@ -77,7 +78,7 @@ export async function register(req, res) {
   });
 }
 
-export function logout(req, res) {
+export function logout(req: express.Request, res: express.Response): void {
   if (req.user) {
     req.logout();
     res.status(204).send();
@@ -88,7 +89,7 @@ export function logout(req, res) {
   }
 }
 
-export function loginSuccessLocal(req, res) {
+export function loginSuccessLocal(req: express.Request, res: express.Response): void {
   res.json({
     success: true,
     username: req.user.username,
@@ -96,7 +97,7 @@ export function loginSuccessLocal(req, res) {
   });
 }
 
-export function loginSuccessGoogle(req, res) {
+export function loginSuccessGoogle(req: express.Request, res: express.Response): void {
   res.json({
     success: true,
     username: req.user.username,
@@ -104,14 +105,14 @@ export function loginSuccessGoogle(req, res) {
   });
 }
 
-export function loginFailure(req, res) {
+export function loginFailure(req: express.Request, res: express.Response): void {
   res.status(200).json({
     success: false,
     error: 'Invalid username or password',
   });
 }
 
-export function whoami(req, res) {
+export function whoami(req: express.Request, res: express.Response): void {
   if (req.user) {
     res.json({
       loggedIn: true,
@@ -125,7 +126,7 @@ export function whoami(req, res) {
   }
 }
 
-export async function changePassword(req, res) {
+export async function changePassword(req: express.Request, res: express.Response): Promise<void> {
   if (!req.user) {
     res.status(401).json({
       success: false,
@@ -174,7 +175,7 @@ export async function changePassword(req, res) {
   });
 }
 
-export function getUserData(req, res) {
+export function getUserData(req: express.Request, res: express.Response): void {
   if (!req.user) {
     res.status(401).send();
     return;
@@ -183,7 +184,7 @@ export function getUserData(req, res) {
   res.json(req.user.userdata);
 }
 
-export function setUserData(req, res) {
+export function setUserData(req: express.Request, res: express.Response): void {
   if (!req.user) {
     res.status(401).send();
     return;

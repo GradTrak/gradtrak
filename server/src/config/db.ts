@@ -7,7 +7,7 @@ const CONFIG = {
   useUnifiedTopology: true,
 };
 
-export async function connect() {
+export async function connect(): Promise<mongoose.Connection> {
   await mongoose.connect(dbUrl, CONFIG);
 
   console.log('MongoDB connected');

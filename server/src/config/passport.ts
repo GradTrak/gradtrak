@@ -1,10 +1,11 @@
 import argon2 from 'argon2';
+import mongoose from 'mongoose';
 import { OAuth2Strategy as GoogleStrategy } from 'passport-google-oauth';
 import { Strategy } from 'passport-local';
 
 import User, { UserType } from '../models/user';
 
-export async function verifyUser(user, inputPassword) {
+export async function verifyUser(user: UserType, inputPassword: string): Promise<boolean> {
   if (!user || !user.passwordHash) {
     /* Verify dummy password to prevent timing attack enumerating users */
     /* This is the hash of 'password' if anyone is curious */
@@ -67,14 +68,15 @@ export const googleStrategy = new GoogleStrategy(
   },
 );
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-underscore-dangle */
 
-export function serializeUser(user, done) {
+export function serializeUser(user: UserType & mongoose.Document, done: (err: any, id?: string) => void): void {
   done(null, user._id);
 }
-
-export function deserializeUser(_id, done) {
-  User.findOne({ _id }, done);
+export function deserializeUser(id: string, done: (err: any, user?: UserType & mongoose.Document) => void): void {
+  User.findOne({ _id: id }, done);
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-enable no-underscore-dangle */
