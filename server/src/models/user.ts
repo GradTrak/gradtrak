@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
 
+import { SemesterPrototype } from 'common/prototypes/semester.prototype';
+import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
+
 const semesterSchema = new mongoose.Schema(
   {
     name: {
@@ -36,6 +39,15 @@ const userDataSchema = new mongoose.Schema(
   },
   { strict: 'throw', _id: false },
 );
+
+export type UserType = {
+  username: string;
+  passwordHash?: string;
+  googleId?: string;
+  userdata: UserDataPrototype;
+  emailMarketing: boolean;
+  userTesting: boolean;
+};
 
 const userSchema = new mongoose.Schema(
   {
@@ -76,6 +88,6 @@ const userSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model<mongoose.Document & UserType>('User', userSchema);
 
 export default User;

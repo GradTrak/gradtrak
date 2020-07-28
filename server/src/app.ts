@@ -60,7 +60,6 @@ app.use('/api', api);
 app.get(
   '/login/google',
   passport.authenticate('google', {
-    callback: '/login/google/callback',
     scope: 'openid profile email',
   }),
 );

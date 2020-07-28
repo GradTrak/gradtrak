@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+import { CoursePrototype } from 'common/prototypes/course.prototype';
+
 const courseSchema = new mongoose.Schema(
   {
     id: {
@@ -38,6 +40,6 @@ const courseSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const Course = mongoose.model('Course', courseSchema);
+const Course = mongoose.model<mongoose.Document & CoursePrototype>('Course', courseSchema);
 
 export default Course;

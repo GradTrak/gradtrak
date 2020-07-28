@@ -2,7 +2,7 @@ import argon2 from 'argon2';
 import { OAuth2Strategy as GoogleStrategy } from 'passport-google-oauth';
 import { Strategy } from 'passport-local';
 
-import User from '../models/user';
+import User, { UserType } from '../models/user';
 
 export async function verifyUser(user, inputPassword) {
   if (!user || !user.passwordHash) {
@@ -59,7 +59,7 @@ export const googleStrategy = new GoogleStrategy(
       user = await User.create({
         username,
         googleId: profile.id,
-      });
+      } as UserType);
       done(null, user);
     } catch (err) {
       done(err);

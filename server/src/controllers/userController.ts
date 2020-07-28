@@ -4,7 +4,7 @@ import util from 'util';
 import { verifyUser } from '../config/passport';
 import * as smtp from '../config/smtp';
 import { validateEmail } from '../lib/utils';
-import User from '../models/user';
+import User, { UserType } from '../models/user';
 
 function validPassword(password) {
   return password.length >= 6;
@@ -63,7 +63,7 @@ export async function register(req, res) {
     username,
     passwordHash,
     userTesting,
-  });
+  } as UserType);
   await util.promisify(req.login).bind(req)(newUser);
   res.json({
     username,
