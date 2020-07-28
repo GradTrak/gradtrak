@@ -5,7 +5,7 @@
   "scripts": {
     "build": "yarn clean && yarn build:server && cp -R server/build build && yarn build:client && cp -R client/dist/gradtrak build/dist",
     "build-dev": "yarn clean && yarn build-dev:client && cp -R server build && cp -R client/dist/gradtrak build/dist",
-    "clean": "rm -rf build",
+    "clean": "rm -rf build common/build common/tsconfig.tsbuildinfo server/build server/tsconfig.tsbuildinfo client/dist",
     "start": "node build/bin/www",
     "watch": "concurrently -n client,server --handle-input \"yarn start:client\" \"yarn watch:server\"",
     "lint": "yarn lint:client && yarn lint:server",
@@ -21,7 +21,7 @@
     "lint-fix:client": "cd client && eslint --fix \"src/app/**/*.ts\"",
     "pretty:client": "prettier --check \"client/src/app/**/*.{html,scss,ts}\"",
     "pretty-fix:client": "prettier --check --write \"client/src/app/**/*.{html,scss,ts}\"",
-    "build:server": "cd server && tsc",
+    "build:server": "cd server && tsc --build",
     "start:server": "cd server && node ./build/bin/www.js",
     "watch:server": "cd server && nodemon --ext ts --exec \"yarn build:server && yarn start:server\"",
     "lint:server": "cd server && eslint \"src/**/*.ts\"",

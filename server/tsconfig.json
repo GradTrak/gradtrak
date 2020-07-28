@@ -6,6 +6,15 @@
     "outDir": "./build/",
     "rootDir": "./src/",
     "strict": false,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "common/*": ["../../common/src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../common/"
+    }
+  ]
 }
