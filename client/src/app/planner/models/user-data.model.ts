@@ -42,22 +42,21 @@ export class UserData {
   }
 
   static toProto(userData: UserData): UserDataPrototype {
-    const semesters: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
+    const semesters: { [year: string]: SemesterPrototype[] } = {};
     userData.semesters.forEach((academicYearSemesters, academicYearName) => {
       semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
         if (!semester) {
           return null;
         }
         const semesterPrototype = {
-          ...semester,
+          name: semester.name,
           courseIds: semester.courses.map((course: Course) => course.id),
         };
-        delete semesterPrototype.courses;
         return semesterPrototype;
       });
     });
     const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
-    const manuallyFulfilledReqs: object = Object.fromEntries(
+    const manuallyFulfilledReqs: { [reqSetId: string]: string[] } = Object.fromEntries(
       Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
         entry[0],
         Array.from(entry[1]),
