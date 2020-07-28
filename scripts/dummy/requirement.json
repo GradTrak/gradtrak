@@ -794,7 +794,7 @@
   },
   {
     "id": "cs",
-    "name": "L&S CS Major",
+    "name": "L&S Computer Science Major",
     "parentId": "ls",
     "type": "major",
     "requirementCategories": [
