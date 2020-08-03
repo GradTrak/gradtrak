@@ -64,6 +64,13 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MultiRequirement;
   }
 
+  /**
+   * Standalone requirements and unit requirements can show requirement display.
+   */
+  hasDisplay(): boolean {
+    return this.isStandalone() || this.isUnit();
+  }
+
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
     fulfillments.push(this.fulfillmentMap.get(this.requirement));

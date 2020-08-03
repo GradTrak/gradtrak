@@ -1,4 +1,6 @@
 .course-list {
   margin-left: 32px;
   font-size: 1.25rem;
+  overflow: auto;
+  max-height: 300px;
 }
