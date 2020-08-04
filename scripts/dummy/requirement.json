@@ -3194,5 +3194,229 @@
         ]
       }
     ]
+  },
+  {
+    "id": "cogsci",
+    "name": "Cognitive Science Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division Prerequisites",
+        "requirements": [
+          {
+            "name": "MATH 1A",
+            "type": "poly",
+            "id": "polymath1a",
+            "hidden": true,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MATH 1A",
+                "type": "course",
+                "courseId": "math1a",
+                "id": "math1a"
+              },
+              {
+                "name": "MATH 16A",
+                "type": "course",
+                "courseId": "math16a",
+                "id": "math16a"
+              }
+            ]
+          },
+          {
+            "name": "COMPSCI C8",
+            "type": "course",
+            "courseId": "datac8",
+            "id": "datac8"
+          },
+          {
+            "name": "compsci61a/engin7",
+            "type": "multi",
+            "id": "multicompsci61a/engin7",
+            "hidden": false,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "COMPSCI 61A",
+                "type": "course",
+                "courseId": "compsci61a",
+                "id": "compsci61a"
+              },
+              {
+                "name": "ENGIN 7",
+                "type": "course",
+                "courseId": "engin7",
+                "id": "engin7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "name": "COG SCI 1",
+            "type": "course",
+            "courseId": "cogsci1",
+            "id": "cogsci1"
+          },
+          {
+            "name": "mcellbic61/c64",
+            "type": "multi",
+            "id": "multimcellbic61/c64",
+            "hidden": false,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MCELLBI C61",
+                "type": "course",
+                "courseId": "mcellbic61",
+                "id": "mcellbic61"
+              },
+              {
+                "name": "PSYCH 110",
+                "type": "course",
+                "courseId": "psych110",
+                "id": "psych110"
+              },
+              {
+                "name": "MCELLBI C64",
+                "type": "course",
+                "courseId": "mcellbic64",
+                "id": "mcellbic64"
+              }
+            ]
+          },
+          {
+            "name": "Math 55/ CS 70",
+            "type": "multi",
+            "id": "multimath55cs70",
+            "hidden": false,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MATH 55",
+                "type": "course",
+                "courseId": "math55",
+                "id": "math55"
+              },
+              {
+                "name": "COMPSCI 70",
+                "type": "course",
+                "courseId": "compsci70",
+                "id": "compsci70"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Distribution Requirements",
+        "requirements": [
+          {
+            "name": "Cognitive Neuroscience",
+            "type": "tag",
+            "tagId": "cog_sci_neuro",
+            "id": "cog_sci_neuro"
+          },
+          {
+            "name": "Cognitive Psychology",
+            "type": "tag",
+            "tagId": "cog_sci_psych",
+            "id": "cog_sci_psych"
+          },
+          {
+            "name": "Computational Modeling",
+            "type": "multi",
+            "id": "multicomputationalmodeling",
+            "hidden": true,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "COG SCI 131",
+                "type": "course",
+                "courseId": "cogsci131",
+                "id": "cogsci131"
+              },
+              {
+                "name": "COMPSCI 188",
+                "type": "course",
+                "courseId": "compsci188",
+                "id": "compsci188"
+              }
+            ]
+          },
+          {
+            "name": "Linguistics",
+            "type": "tag",
+            "tagId": "cog_sci_ling",
+            "id": "cog_sci_ling"
+          },
+          {
+            "name": "Philosophy",
+            "type": "tag",
+            "tagId": "cog_sci_philos",
+            "id": "cog_sci_philos"
+          },
+          {
+            "name": "Society, Culture, and Cognition",
+            "type": "course",
+            "courseId": "cog_sci_society",
+            "id": "cog_sci_society"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Cognitive Science Upper Division",
+            "mutexReqIds": [
+              "cog_sci_neuro",
+              "cog_sci_psych",
+              "multicomputationalmodeling",
+              "cog_sci_ling",
+              "cog_sci_philos",
+              "cog_sci_society"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Electives",
+        "requirements": [
+          {
+            "name": "Upper Division Elective",
+            "type": "tag",
+            "tagId": "cog_sci_elective",
+            "id": "cog_sci_elective_1"
+          },
+          {
+            "name": "Upper Division Elective",
+            "type": "tag",
+            "tagId": "cog_sci_elective",
+            "id": "cog_sci_elective_2"
+          },
+          {
+            "name": "Upper Division Elective",
+            "type": "tag",
+            "tagId": "cog_sci_elective",
+            "id": "cog_sci_elective_3"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Cognitive Science Upper Division",
+            "mutexReqIds": [
+              "cog_sci_elective_1",
+              "cog_sci_elective_2",
+              "cog_sci_elective_3"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

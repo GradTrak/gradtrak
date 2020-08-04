@@ -1,0 +1,11 @@
+ANTHRO 166	Language, Culture, and Society	4
+INFO 103	History of Information	4
+ECON 119	Psychology and Economics	4
+EDUC 140AC/W140/W140A	The Art of Making Meaning: Educational Perspectives on Literacy and Learning in a Global World	4
+LINGUIS 150	Sociolinguistics	3
+PSYCH 107	Buddhist Psychology	3
+PSYCH 160	Social Psychology	3
+PSYCH 164	Social Cognition	3
+PSYCH 166AC	Cultural Psychology	3
+SOCIOL 150	Social Psychology	4
+COG SCI 181	The Cognitive Unconscious	3

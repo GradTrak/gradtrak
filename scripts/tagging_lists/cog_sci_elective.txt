@@ -1,0 +1,56 @@
+Course ListCode	Title	Units
+ANTHRO 149	Psychological Anthropology	4
+ANTHRO 160AC	Forms of Folklore	4
+ANTHRO 161	Narrative Folklore	4
+COG SCI C140/LINGUIS C160	Quantitative Methods in Linguistics	4
+COMPSCI 160	User Interface Design and Development	4
+COMPSCI 170	Efficient Algorithms and Intractable Problems	4
+COMPSCI 186	Introduction to Database Systems	4
+COMPSCI/VIS SCI C280	Computer Vision	3
+COMPSCI 287	Advanced Robotics	3
+COMPSCI 288	Natural Language Processing	4
+EDUC 224A	Mathematical Thinking and Problem Solving	3
+EDUC C229A/PSYCH C223	Proseminar: Problem Solving and Understanding	3
+LINGUIS 106	Metaphor	4
+LINGUIS 110	Phonetics	4
+LINGUIS 115	Morphology	4
+LINGUIS 120	Syntax	4
+LINGUIS 121	Formal Semantics	4
+LINGUIS 123	Pragmatics	3
+LINGUIS 125	Gesture, Cognition, and Culture	3
+LINGUIS 130	Comparative and Historical Linguistics	4
+LINGUIS/SLAVIC C139	Language Spread	3
+LINGUIS 151	Language and Gender	3
+LINGUIS 158	Computational Methods	3
+LINGUIS 170	History, Structure, and Sociolinguistics of a Particular Language	3
+LINGUIS 181	Lexical Semantics	3
+MCELLBI 160	Cellular and Molecular Neurobiology	4
+MCELLBI 160L	Neurobiology Laboratory	4
+MCELLBI 161	Circuit, Systems and Behavioral Neuroscience	4
+MCELLBI 165	Neurobiology of Disease	3
+MCELLBI 166	Biophysical Neurobiology	3
+MEDIAST 101	Visual Culture	4
+MEDIAST 102	Course Not Available	4
+MUSIC 108/108M	Music Perception and Cognition	4
+MUSIC 109/109M	Music Cognition: The Mind Behind the Musical Ear	3
+NATAMST 151	Native American Philosophy	4
+PHILOS 128	Philosophy of Science	4
+PHILOS 138	Philosophy of Society	4
+PHILOS 140A	Intermediate Logic	4
+PHILOS 140B	Intermediate Logic	4
+PHILOS 176	Hume	4
+PHILOS 178	Kant	4
+PHILOS 185	Heidegger	4
+PHILOS 186B	Later Wittgenstein	4
+PHILOS 188	Phenomenology	4
+POL SCI 161	Public Opinion, Voting and Participation	4
+POL SCI 164A	Political Psychology and Involvement	4
+PSYCH 114	Biology of Learning	3
+PSYCH 121	Animal Cognition	3
+PSYCH 125	The Developing Brain	3
+PSYCH 167AC	Stigma and Prejudice	3
+RHETOR 103A	Approaches and Paradigms in the History of Rhetorical Theory	4
+RHETOR 103B	Approaches and Paradigms in the History of Rhetorical Theory II	4
+RHETOR 110	Advanced Argumentative Writing	4
+RHETOR 170	Rhetoric of Social Science	4
+VIS SCI 265	Neural Computation	3

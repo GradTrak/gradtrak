@@ -198,5 +198,29 @@
   {
     "id": "ieor_elective",
     "name": "IEOR Upper Division Elective"
+  },
+  {
+    "id": "cog_sci_elective",
+    "name": "Cog Sci Upper Division Elective"
+  },
+  {
+    "id": "cog_sci_neuro",
+    "name": "Cog Sci Cognitive Neuroscience"
+  },
+  {
+    "id": "cog_sci_psych",
+    "name": "Cog Sci Cognitive Psychology"
+  },
+  {
+    "id": "cog_sci_ling",
+    "name": "Cog Sci Linguistics"
+  },
+  {
+    "id": "cog_sci_philos",
+    "name": "Cog Sci Philosophy"
+  },
+  {
+    "id": "cog_sci_society",
+    "name": "Cog Sci Society, Culture, and Cognition"
   }
 ]

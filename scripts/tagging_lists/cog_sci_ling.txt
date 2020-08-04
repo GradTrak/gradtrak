@@ -1,0 +1,5 @@
+COG SCI C101/LINGUIS C105	Cognitive Linguistics	4
+COG SCI/LINGUIS C142	Language and Thought	3
+LINGUIS 100	Introduction to Linguistic Science	4
+LINGUIS 108	Psycholinguistics	3
+COG SCI C147	Course Not Available

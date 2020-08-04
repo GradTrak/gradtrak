@@ -1,0 +1,10 @@
+COG SCI C100/PSYCH C120	Basic Issues in Cognition	3
+COG SCI C102/PSYCH C129	Scientific Approaches to Consciousness	3
+COG SCI/PSYCH C126	Perception	3
+COG SCI 181	The Cognitive Unconscious	3
+COG SCI 182	The Cognitive Psychology of Concept and Idea Formation	3
+LINGUIS C146/PSYCH C143	Language Acquisition	3
+PSYCH 122	Introduction to Human Learning and Memory	3
+PSYCH 164	Social Cognition	3
+PSYCH 140	Developmental Psychology	3
+PSYCH 147	Methods in Cognitive Development	3

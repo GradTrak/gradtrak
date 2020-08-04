@@ -4444,7 +4444,8 @@
     "tagIds": [
       "ls_bio",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -5448,7 +5449,8 @@
     "dept": "ANTHRO",
     "no": "149",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -5605,7 +5607,8 @@
     "dept": "ANTHRO",
     "no": "160AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "cog_sci_elective"
     ]
   },
   {
@@ -5623,7 +5626,8 @@
     "dept": "ANTHRO",
     "no": "161",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -5712,7 +5716,8 @@
     "no": "166",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_society"
     ]
   },
   {
@@ -22994,7 +22999,8 @@
     "no": "36",
     "tagIds": [
       "ls_hist",
-      "ls_philo"
+      "ls_philo",
+      "cog_sci_philos"
     ]
   },
   {
@@ -24152,7 +24158,8 @@
     "no": "C100",
     "tagIds": [
       "ls_socio",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -24172,7 +24179,8 @@
     "dept": "COG SCI",
     "no": "C101",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_ling"
     ]
   },
   {
@@ -24192,7 +24200,8 @@
     "dept": "COG SCI",
     "no": "C102",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -24237,7 +24246,8 @@
     "no": "C127",
     "tagIds": [
       "ls_bio",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -24285,7 +24295,8 @@
     "no": "C140",
     "tagIds": [
       "ls_socio",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -24313,7 +24324,8 @@
     "dept": "COG SCI",
     "no": "C147",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_ling"
     ]
   },
   {
@@ -24333,7 +24345,8 @@
     "dept": "COG SCI",
     "no": "170",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -24343,7 +24356,8 @@
     "dept": "COG SCI",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -24353,7 +24367,8 @@
     "dept": "COG SCI",
     "no": "172",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -24364,7 +24379,8 @@
     "no": "180",
     "tagIds": [
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "cog_sci_philos"
     ]
   },
   {
@@ -24374,7 +24390,9 @@
     "dept": "COG SCI",
     "no": "181",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_psych",
+      "cog_sci_society"
     ]
   },
   {
@@ -24384,7 +24402,8 @@
     "dept": "COG SCI",
     "no": "182",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_psych"
     ]
   },
   {
@@ -27754,7 +27773,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -27912,7 +27932,8 @@
       "bioeng_technical_topics",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cog_sci_elective"
     ]
   },
   {
@@ -28049,7 +28070,8 @@
       "cs_design",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cog_sci_elective"
     ]
   },
   {
@@ -28731,7 +28753,8 @@
     "dept": "COMPSCI",
     "no": "287",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "cog_sci_elective"
     ]
   },
   {
@@ -28751,7 +28774,8 @@
     "dept": "COMPSCI",
     "no": "288",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "cog_sci_elective"
     ]
   },
   {
@@ -32807,7 +32831,8 @@
     "tagIds": [
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_society"
     ]
   },
   {
@@ -34821,7 +34846,8 @@
     "no": "140AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "cog_sci_society"
     ]
   },
   {
@@ -35960,7 +35986,9 @@
     "id": "educ224a",
     "dept": "EDUC",
     "no": "224A",
-    "tagIds": []
+    "tagIds": [
+      "cog_sci_elective"
+    ]
   },
   {
     "units": 3,
@@ -36112,7 +36140,9 @@
     "id": "educc229a",
     "dept": "EDUC",
     "no": "C229A",
-    "tagIds": []
+    "tagIds": [
+      "cog_sci_elective"
+    ]
   },
   {
     "units": 3,
@@ -70965,7 +70995,8 @@
     "dept": "INFO",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_society"
     ]
   },
   {
@@ -83000,7 +83031,8 @@
       "ls_socio",
       "upper_div",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_ling"
     ]
   },
   {
@@ -83033,7 +83065,8 @@
     "tagIds": [
       "linguis_elective",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_ling"
     ]
   },
   {
@@ -83044,7 +83077,8 @@
     "no": "106",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83065,7 +83099,8 @@
     "no": "108",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_ling"
     ]
   },
   {
@@ -83098,7 +83133,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83141,7 +83177,8 @@
     "dept": "LINGUIS",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83152,7 +83189,8 @@
     "no": "120",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83180,7 +83218,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83202,7 +83241,8 @@
     "no": "123",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83224,7 +83264,8 @@
     "no": "125",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83257,7 +83298,8 @@
     "no": "130",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83356,7 +83398,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -83390,7 +83433,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_society"
     ]
   },
   {
@@ -83401,7 +83445,8 @@
     "no": "151",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83509,7 +83554,8 @@
     "tagIds": [
       "linguis_elective",
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83553,7 +83599,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83576,7 +83623,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -83610,7 +83658,8 @@
     "tagIds": [
       "ls_socio",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -90647,7 +90696,8 @@
       "upper_div",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -90660,7 +90710,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -90689,7 +90740,8 @@
       "upper_div",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -90755,7 +90807,8 @@
       "upper_div",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -90774,7 +90827,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -95787,7 +95841,8 @@
     "no": "101",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -95797,7 +95852,8 @@
     "dept": "MEDIAST",
     "no": "102",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -97155,7 +97211,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -97178,7 +97235,8 @@
       "ls_arts",
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -99713,7 +99771,8 @@
     "dept": "NATAMST",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -108947,7 +109006,8 @@
     "dept": "PHILOS",
     "no": "3",
     "tagIds": [
-      "ls_philo"
+      "ls_philo",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109080,7 +109140,8 @@
     "dept": "PHILOS",
     "no": "12A",
     "tagIds": [
-      "ls_philo"
+      "ls_philo",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109222,7 +109283,8 @@
     "no": "25A",
     "tagIds": [
       "ls_hist",
-      "ls_philo"
+      "ls_philo",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109231,7 +109293,9 @@
     "id": "philos25b",
     "dept": "PHILOS",
     "no": "25B",
-    "tagIds": []
+    "tagIds": [
+      "cog_sci_philos"
+    ]
   },
   {
     "units": 4,
@@ -109779,7 +109843,8 @@
     "dept": "PHILOS",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109837,7 +109902,8 @@
     "tagIds": [
       "ls_philo",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -109876,7 +109942,8 @@
     "no": "132",
     "tagIds": [
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109896,7 +109963,8 @@
     "tagIds": [
       "ls_philo",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109926,7 +109994,8 @@
     "no": "135",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109936,7 +110005,8 @@
     "dept": "PHILOS",
     "no": "136",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_philos"
     ]
   },
   {
@@ -109946,7 +110016,8 @@
     "dept": "PHILOS",
     "no": "138",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -109965,7 +110036,8 @@
     "no": "140A",
     "tagIds": [
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -109976,7 +110048,8 @@
     "no": "140B",
     "tagIds": [
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_elective"
     ]
   },
   {
@@ -110268,7 +110341,8 @@
     "dept": "PHILOS",
     "no": "176",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -110288,7 +110362,8 @@
     "tagIds": [
       "ls_hist",
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -110348,7 +110423,8 @@
     "dept": "PHILOS",
     "no": "185",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -110376,7 +110452,8 @@
     "dept": "PHILOS",
     "no": "186B",
     "tagIds": [
-      "ls_philo"
+      "ls_philo",
+      "cog_sci_elective"
     ]
   },
   {
@@ -110394,7 +110471,8 @@
     "dept": "PHILOS",
     "no": "188",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -116974,7 +117052,8 @@
     "dept": "POL SCI",
     "no": "161",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -117044,7 +117123,8 @@
     "dept": "POL SCI",
     "no": "164A",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "cog_sci_elective"
     ]
   },
   {
@@ -119977,7 +120057,8 @@
     "dept": "PSYCH",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_society"
     ]
   },
   {
@@ -120137,7 +120218,9 @@
     "no": "114",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_neuro",
+      "cog_sci_elective"
     ]
   },
   {
@@ -120212,7 +120295,8 @@
     "no": "117",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -120302,7 +120386,8 @@
     "tagIds": [
       "ls_socio",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "cog_sci_psych"
     ]
   },
   {
@@ -120330,7 +120415,8 @@
     "tagIds": [
       "ls_bio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -120349,7 +120435,8 @@
     "no": "122",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -120432,7 +120519,8 @@
       "ls_bio",
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -120500,7 +120588,8 @@
     "no": "C127",
     "tagIds": [
       "ls_bio",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -120626,7 +120715,8 @@
     "dept": "PSYCH",
     "no": "C129",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -120707,7 +120797,8 @@
       "ls_bio",
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_neuro"
     ]
   },
   {
@@ -120829,7 +120920,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -120911,7 +121003,8 @@
     "no": "C143",
     "tagIds": [
       "linguis_elective",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych"
     ]
   },
   {
@@ -120951,7 +121044,8 @@
     "dept": "PSYCH",
     "no": "147",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_psych"
     ]
   },
   {
@@ -121193,7 +121287,8 @@
     "dept": "PSYCH",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_society"
     ]
   },
   {
@@ -121274,7 +121369,9 @@
     "no": "164",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_psych",
+      "cog_sci_society"
     ]
   },
   {
@@ -121304,7 +121401,8 @@
     "dept": "PSYCH",
     "no": "166AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "cog_sci_society"
     ]
   },
   {
@@ -121325,7 +121423,8 @@
     "no": "167AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "cog_sci_elective"
     ]
   },
   {
@@ -121948,7 +122047,9 @@
     "id": "psychc223",
     "dept": "PSYCH",
     "no": "C223",
-    "tagIds": []
+    "tagIds": [
+      "cog_sci_elective"
+    ]
   },
   {
     "units": 3,
@@ -124984,7 +125085,8 @@
     "no": "103A",
     "tagIds": [
       "ls_arts",
-      "ls_philo"
+      "ls_philo",
+      "cog_sci_elective"
     ]
   },
   {
@@ -124993,7 +125095,9 @@
     "id": "rhetor103b",
     "dept": "RHETOR",
     "no": "103B",
-    "tagIds": []
+    "tagIds": [
+      "cog_sci_elective"
+    ]
   },
   {
     "units": 4,
@@ -125112,7 +125216,8 @@
     "dept": "RHETOR",
     "no": "110",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "cog_sci_elective"
     ]
   },
   {
@@ -125908,7 +126013,8 @@
     "no": "170",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cog_sci_elective"
     ]
   },
   {
@@ -133546,7 +133652,8 @@
     "no": "150",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "cog_sci_society"
     ]
   },
   {
@@ -144948,7 +145055,9 @@
     "id": "vissci265",
     "dept": "VIS SCI",
     "no": "265",
-    "tagIds": []
+    "tagIds": [
+      "cog_sci_elective"
+    ]
   },
   {
     "units": 3,
