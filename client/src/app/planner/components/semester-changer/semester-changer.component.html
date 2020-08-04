@@ -1,4 +1,4 @@
-<h3>Add/Remove a Semester</h3>
+<h4 class="gt-modal-header">Edit Semesters</h4>
 <div class="table">
   <h4 *ngFor="let semester of getSemArr()">
     <i class="material-icons" (click)="removeSemester(semester)">close</i>{{ semester.name }}
@@ -9,7 +9,7 @@
 
 <ng-template #semesterAdder>
   <div class="modal-body">
-    <h4 class="header">Add a semester</h4>
+    <h4 class="gt-modal-header">Add a semester</h4>
     <form (ngSubmit)="addSemester(termInput, yearNum)">
       <div class="form-group row">
         <div class="col">

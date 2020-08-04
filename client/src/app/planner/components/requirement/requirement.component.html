@@ -35,8 +35,8 @@
 <div
   class="requirement"
   [ngClass]="getFulfillment()"
-  [ngbPopover]="requirement.getAnnotation() ? annotation : null"
-  [triggers]="requirement.getAnnotation() ? 'mouseenter:mouseleave' : null"
+  [ngbPopover]="getAnnotation() ? annotation : null"
+  [triggers]="getAnnotation() ? 'mouseenter:mouseleave' : null"
 >
   <div ngbDropdown class="req-more">
     <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>

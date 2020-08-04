@@ -101,14 +101,12 @@ export class RequirementComponent implements OnInit {
   }
 
   getAnnotation(): string {
-    // FIXME Remove check for getAnnotation
-    if (this.requirement.getAnnotation) {
-      let annotation: string = this.requirement.getAnnotation();
-      if (annotation) {
-        annotation = annotation.replace(/\n/g, '<br />');
-      }
-      return annotation;
+    /* let annotation: string = this.requirement.getAnnotation();
+    if (annotation) {
+      annotation = annotation.replace(/\n/g, '<br />');
     }
+    return annotation; */
+    // TODO Custom annotations system
     return null;
   }
 

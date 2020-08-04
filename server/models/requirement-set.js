@@ -14,7 +14,7 @@ const constraintSchema = new mongoose.Schema(
       type: [String],
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
 
 const requirementSchema = new mongoose.Schema(
@@ -57,7 +57,7 @@ const requirementSchema = new mongoose.Schema(
       type: [constraintSchema],
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
 requirementSchema.requirement = requirementSchema;
 requirementSchema.requirements = [requirementSchema];
@@ -77,7 +77,7 @@ const requirementCategorySchema = new mongoose.Schema(
       type: [constraintSchema],
     },
   },
-  { strict: 'throw' },
+  { strict: 'throw', _id: false },
 );
 
 const requirementSetSchema = new mongoose.Schema(

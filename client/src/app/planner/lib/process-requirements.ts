@@ -35,6 +35,10 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
 
 const reqIsFulfilledWithMapping = memoize(
   (req: Requirement, reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => {
+    if (!reqToCourseMapping.has(req)) {
+      return false;
+    }
+
     const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
 
     if (typeof courses === 'boolean') {
@@ -455,6 +459,9 @@ export function processRequirements(
       );
       deriveFulfillment(setReqs, setMappings, fulfillment);
     }
+  });
+  manualReqs.forEach((req: Requirement) => {
+    fulfillment.set(req, 'fulfilled');
   });
 
   reqIsFulfilledWithMapping.clear();
