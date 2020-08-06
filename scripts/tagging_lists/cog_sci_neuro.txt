@@ -1,0 +1,8 @@
+ANTHRO 107	Evolution of the Human Brain	4
+COG SCI C127	Cognitive Neuroscience	3
+PSYCH 117	Human Neuropsychology	3
+PSYCH 133	Psychology of Sleep	3
+PSYCH 114	Biology of Learning	3
+COG SCI 170	Brain Damage	3
+COG SCI 171	Genetic Factors in Neuropsychology	3
+COG SCI 172	Clinical Applications in Cognitive Neuroscience	3

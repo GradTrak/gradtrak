@@ -1,0 +1,11 @@
+PHILOS 3	The Nature of Mind	4
+PHILOS 12A	Introduction to Logic	4
+PHILOS 25A	Ancient Philosophy	4
+PHILOS 25B	Modern Philosophy	4
+CLASSIC 36	Greek Philosophy	4
+PHILOS 122	Theory of Knowledge	4
+PHILOS 132	Philosophy of Mind	4
+PHILOS 133	Philosophy of Language	4
+PHILOS 135	Theory of Meaning	4
+PHILOS 136	Philosophy of Perception	4
+COG SCI 180	Mind, Brain, and Identity	3

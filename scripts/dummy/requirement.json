@@ -794,7 +794,7 @@
   },
   {
     "id": "cs",
-    "name": "L&S CS Major",
+    "name": "L&S Computer Science Major",
     "parentId": "ls",
     "type": "major",
     "requirementCategories": [
@@ -2974,6 +2974,446 @@
             "type": "tag",
             "name": "Domain Emphasis Upper Div 2",
             "courseId": "data_sci_domain_dummy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ieor",
+    "name": "Industrial Engineering & Operations Research Major",
+    "parentId": "coe",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Mathematics",
+        "requirements": [
+          {
+            "id": "math1a",
+            "type": "course",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "id": "math1b",
+            "type": "course",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
+            "id": "math53",
+            "type": "course",
+            "name": "MATH 53",
+            "courseId": "math53"
+          },
+          {
+            "id": "math54",
+            "type": "course",
+            "name": "MATH 54",
+            "courseId": "math54"
+          }
+        ]
+      },
+      {
+        "name": "Sciences",
+        "requirements": [
+          {
+            "id": "chem1abio",
+            "type": "multi",
+            "name": "CHEM 1A / BIO 1A / BIO 1B",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "chem1a",
+                "type": "course",
+                "name": "CHEM 1A",
+                "courseId": "chem1a"
+              },
+              {
+                "id": "biology1a",
+                "type": "course",
+                "name": "BIOLOGY 1A",
+                "courseId": "biology1a"
+              },
+              {
+                "id": "biology1b",
+                "type": "course",
+                "name": "BIOLOGY 1B",
+                "courseId": "biology1b"
+              }
+            ]
+          },
+          {
+            "id": "physics7a",
+            "type": "course",
+            "name": "PHYSICS 7A",
+            "courseId": "physics7a"
+          },
+          {
+            "id": "physics7b",
+            "type": "course",
+            "name": "PHYSICS 7B",
+            "courseId": "physics7b"
+          }
+        ]
+      },
+      {
+        "name": "Lower Division",
+        "requirements": [
+          {
+            "id": "engin7",
+            "type": "course",
+            "name": "ENGIN 7",
+            "courseId": "engin7"
+          },
+          {
+            "id": "comspscic8comspci61a",
+            "type": "multi",
+            "name": "COMPSCI C8 / COMPSCI 61A",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "compsci61a",
+                "type": "course",
+                "name": "COMPSCI 61A",
+                "courseId": "compsci61a"
+              },
+              {
+                "id": "compscic8",
+                "type": "course",
+                "name": "COMPSCI C8",
+                "courseId": "datac8"
+              }
+            ]
+          },
+          {
+            "id": "eng_breadth",
+            "type": "unit",
+            "name": "Engineering Breadth",
+            "units": 9,
+            "requirement": {
+              "id": "ieor_eng_breadth",
+              "type": "tag",
+              "name": "IEOR Engineering Breadths",
+              "tagId": "ieor_eng_breadth"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "id": "indeng172/stat134/140",
+            "type": "multi",
+            "name": "INDENG 172",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "indeng172",
+                "type": "course",
+                "name": "INDENG 172",
+                "courseId": "indeng172"
+              },
+              {
+                "id": "stat134",
+                "type": "course",
+                "name": "STAT 134",
+                "courseId": "stat134"
+              },
+              {
+                "id": "stat140",
+                "type": "course",
+                "name": "STAT 140",
+                "courseId": "stat140"
+              }
+            ]
+          },
+          {
+            "id": "indeng162",
+            "type": "course",
+            "name": "INDENG 162",
+            "courseId": "indeng162"
+          },
+          {
+            "id": "indeng160",
+            "type": "course",
+            "name": "INDENG 160",
+            "courseId": "indeng160"
+          },
+          {
+            "id": "engin120",
+            "type": "course",
+            "name": "ENGIN 120",
+            "courseId": "engin120"
+          },
+          {
+            "id": "indeng165",
+            "type": "course",
+            "name": "INDENG 165",
+            "courseId": "indeng165"
+          },
+          {
+            "id": "indeng173",
+            "type": "course",
+            "name": "INDENG 173",
+            "courseId": "indeng173"
+          },
+          {
+            "id": "indeng174",
+            "type": "course",
+            "name": "INDENG 174",
+            "courseId": "indeng174"
+          },
+          {
+            "id": "indeng180",
+            "type": "course",
+            "name": "INDENG 180",
+            "courseId": "indeng180"
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Electives",
+        "requirements": [
+          {
+            "id": "upper_div",
+            "type": "unit",
+            "name": "Upper Division",
+            "units": 18,
+            "requirement": {
+              "id": "ieor_elective",
+              "type": "tag",
+              "name": "IEOR Upper Division Course",
+              "tagId": "ieor_elective"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cogsci",
+    "name": "Cognitive Science Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division Prerequisites",
+        "requirements": [
+          {
+            "name": "MATH 1A",
+            "type": "poly",
+            "id": "polymath1a",
+            "hidden": true,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MATH 1A",
+                "type": "course",
+                "courseId": "math1a",
+                "id": "math1a"
+              },
+              {
+                "name": "MATH 16A",
+                "type": "course",
+                "courseId": "math16a",
+                "id": "math16a"
+              }
+            ]
+          },
+          {
+            "name": "COMPSCI C8",
+            "type": "course",
+            "courseId": "datac8",
+            "id": "datac8"
+          },
+          {
+            "name": "compsci61a/engin7",
+            "type": "multi",
+            "id": "multicompsci61a/engin7",
+            "hidden": false,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "COMPSCI 61A",
+                "type": "course",
+                "courseId": "compsci61a",
+                "id": "compsci61a"
+              },
+              {
+                "name": "ENGIN 7",
+                "type": "course",
+                "courseId": "engin7",
+                "id": "engin7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "name": "COG SCI 1",
+            "type": "course",
+            "courseId": "cogsci1",
+            "id": "cogsci1"
+          },
+          {
+            "name": "mcellbic61/c64",
+            "type": "multi",
+            "id": "multimcellbic61/c64",
+            "hidden": false,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MCELLBI C61",
+                "type": "course",
+                "courseId": "mcellbic61",
+                "id": "mcellbic61"
+              },
+              {
+                "name": "PSYCH 110",
+                "type": "course",
+                "courseId": "psych110",
+                "id": "psych110"
+              },
+              {
+                "name": "MCELLBI C64",
+                "type": "course",
+                "courseId": "mcellbic64",
+                "id": "mcellbic64"
+              }
+            ]
+          },
+          {
+            "name": "Math 55/ CS 70",
+            "type": "multi",
+            "id": "multimath55cs70",
+            "hidden": false,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MATH 55",
+                "type": "course",
+                "courseId": "math55",
+                "id": "math55"
+              },
+              {
+                "name": "COMPSCI 70",
+                "type": "course",
+                "courseId": "compsci70",
+                "id": "compsci70"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Distribution Requirements",
+        "requirements": [
+          {
+            "name": "Cognitive Neuroscience",
+            "type": "tag",
+            "tagId": "cog_sci_neuro",
+            "id": "cog_sci_neuro"
+          },
+          {
+            "name": "Cognitive Psychology",
+            "type": "tag",
+            "tagId": "cog_sci_psych",
+            "id": "cog_sci_psych"
+          },
+          {
+            "name": "Computational Modeling",
+            "type": "multi",
+            "id": "multicomputationalmodeling",
+            "hidden": true,
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "COG SCI 131",
+                "type": "course",
+                "courseId": "cogsci131",
+                "id": "cogsci131"
+              },
+              {
+                "name": "COMPSCI 188",
+                "type": "course",
+                "courseId": "compsci188",
+                "id": "compsci188"
+              }
+            ]
+          },
+          {
+            "name": "Linguistics",
+            "type": "tag",
+            "tagId": "cog_sci_ling",
+            "id": "cog_sci_ling"
+          },
+          {
+            "name": "Philosophy",
+            "type": "tag",
+            "tagId": "cog_sci_philos",
+            "id": "cog_sci_philos"
+          },
+          {
+            "name": "Society, Culture, and Cognition",
+            "type": "course",
+            "courseId": "cog_sci_society",
+            "id": "cog_sci_society"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Cognitive Science Upper Division",
+            "mutexReqIds": [
+              "cog_sci_neuro",
+              "cog_sci_psych",
+              "multicomputationalmodeling",
+              "cog_sci_ling",
+              "cog_sci_philos",
+              "cog_sci_society"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Electives",
+        "requirements": [
+          {
+            "name": "Upper Division Elective",
+            "type": "tag",
+            "tagId": "cog_sci_elective",
+            "id": "cog_sci_elective_1"
+          },
+          {
+            "name": "Upper Division Elective",
+            "type": "tag",
+            "tagId": "cog_sci_elective",
+            "id": "cog_sci_elective_2"
+          },
+          {
+            "name": "Upper Division Elective",
+            "type": "tag",
+            "tagId": "cog_sci_elective",
+            "id": "cog_sci_elective_3"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Cognitive Science Upper Division",
+            "mutexReqIds": [
+              "cog_sci_elective_1",
+              "cog_sci_elective_2",
+              "cog_sci_elective_3"
+            ]
           }
         ]
       }
