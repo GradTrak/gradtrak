@@ -16,7 +16,14 @@ export class RequirementDisplayComponent implements OnInit {
   constructor(private courseService: CourseService) {}
 
   ngOnInit(): void {}
-
+  
+  /**
+   * Filters all courses from the courseService by whether
+   * they contribute towards the requirement. This should in theory
+   * work with any requirement but is used only in standalones and unit
+   * requirements, where an additional course is guaranteed to be useful. 
+   * @return {course[]} a list of courses which are capable of fulfilling the requirement
+   */
   getFulfillingCourses(): Observable<Course[]> {
     return this.courseService.getCourses().pipe(
       map((courses: Course[]) =>
