@@ -32,13 +32,20 @@
   </div>
 </ng-template>
 
+<ng-template #unfulfilledCount>
+  {{ getCount().requirement.name }}
+</ng-template>
+
 <ng-template #countReq>
   <ng-container *ngIf="!getCount().hidden; else hiddenCount">
+    {{ requirement.toString() }}
     <div class="nested">
-      <div class="fulfilled" *ngFor="let course of getCount().getFulfillingCourses(courses)">
+      <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
+        <div *ngIf="i<getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
+          {{ getCount().getFulfillingCourses(courses)[i] }} 
+        </div>
       </div>
     </div>
-    THIS HAS NOT BEEN IMPLEMENTED YET. PLEASE MAKE YOUR COUNTREQUIREMENT HIDDEN.
   </ng-container>
 </ng-template>
 
