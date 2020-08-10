@@ -33,7 +33,7 @@
 </ng-template>
 
 <ng-template #countReq>
-  {{ getCount().countFulfilled(courses) }}/{{ getCount().count}} courses of
+  {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired}} courses of
   <br />
   {{ getCount().requirement.toString() }}
   <ng-container *ngIf="!getCount().hidden">

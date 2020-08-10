@@ -9,13 +9,13 @@ import { getAllCombinations } from '../../../../utils';
  * fulfilled if a certain number of classes fulfills the the base.
  */
 export class CountRequirement extends Requirement {
-  count: number;
+  numRequired: number;
   requirement: StandaloneRequirement;
   hidden: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
-    return this.countFulfilled(courses) >= this.count;
+    return this.countFulfilled(courses) >= this.numRequired;
   }
 
   /**
@@ -44,6 +44,6 @@ export class CountRequirement extends Requirement {
   }
 
   toString(): string {
-    return `${this.count} courses of \n${this.requirement.name}`;
+    return `${this.numRequired} courses of \n${this.requirement.name}`;
   }
 }

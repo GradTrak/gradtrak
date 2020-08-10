@@ -1995,11 +1995,11 @@
           },
           {
             "id": "fundamentals",
-            "type": "multi",
+            "type": "count",
             "name": "BioE Fundamentals",
             "numRequired": 2,
             "hidden": false,
-            "requirements": [
+            "requirement": [
               {
                 "id": "bioeng_fundamentals",
                 "type": "tag",
