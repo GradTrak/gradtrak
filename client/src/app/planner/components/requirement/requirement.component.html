@@ -32,6 +32,19 @@
   </div>
 </ng-template>
 
+<ng-template #countReq>
+  {{ getCount().countFulfilled(courses) }}/{{ getCount().count}} courses of
+  <br />
+  {{ getCount().requirement.toString() }}
+  <ng-container *ngIf="!getCount().hidden">
+    <div class="nested">
+      <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+        {{ course.getName() }}
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
 <div
   class="requirement"
   [ngClass]="getFulfillment()"

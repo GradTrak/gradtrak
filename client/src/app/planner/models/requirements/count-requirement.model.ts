@@ -11,16 +11,17 @@ import { getAllCombinations } from '../../../../utils';
 export class CountRequirement extends Requirement {
   count: number;
   requirement: StandaloneRequirement;
+  hidden: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
-    return this.numFulfilled(courses) >= this.count;
+    return this.countFulfilled(courses) >= this.count;
   }
 
   /**
    * The number of courses that can fulfill the requirement
    */
-  numFulfilled(courses: Course[]): number {
+  countFulfilled(courses: Course[]): number {
     return this.getFulfillingCourses(courses).length;
   }
 

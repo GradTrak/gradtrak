@@ -59,10 +59,6 @@ export class RequirementComponent implements OnInit {
     return this.requirement instanceof PolyRequirement;
   }
 
-  isCount(): boolean {
-    return this.requirement instanceof CountRequirement;
-  }
-
   getMulti(): MultiRequirement {
     if (!this.isMulti()) {
       throw new Error('Attempted to retreive non-MultiRequirement as MultiRequirement');
@@ -88,6 +84,17 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retreive non-UnitRequirement as UnitRequirement');
     }
     return this.requirement as UnitRequirement;
+  }
+
+  isCount(): boolean {
+    return this.requirement instanceof CountRequirement;
+  }
+
+  getCount(): CountRequirement {
+    if (!this.isCount()) {
+      throw new Error('Attempted to retrieve non-CountRequirement as CountRequirement')
+    }
+    return this.requirement as CountRequirement;
   }
 
   /**
