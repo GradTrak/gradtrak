@@ -35,7 +35,7 @@ export class CountRequirement extends Requirement {
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {
-    //FIXME: Does not take into account constraints.
+    // FIXME: Does not take into account constraints.
     return courses.filter((course) => this.requirement.isFulfilled(course));
   }
 

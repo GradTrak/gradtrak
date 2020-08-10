@@ -21,7 +21,7 @@ export class RequirementComponent implements OnInit {
   @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-@Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   displayedRequirement: Requirement;
 
@@ -92,7 +92,7 @@ export class RequirementComponent implements OnInit {
 
   getCount(): CountRequirement {
     if (!this.isCount()) {
-      throw new Error('Attempted to retrieve non-CountRequirement as CountRequirement')
+      throw new Error('Attempted to retrieve non-CountRequirement as CountRequirement');
     }
     return this.requirement as CountRequirement;
   }

@@ -41,8 +41,12 @@
     {{ requirement.toString() }}
     <div class="nested">
       <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
-        <div *ngIf="i<getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
-          {{ getCount().getFulfillingCourses(courses)[i].getName() }} 
+        <div *ngIf="i < getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
+          {{
+            getCount()
+              .getFulfillingCourses(courses)
+              [i].getName()
+          }}
         </div>
       </div>
     </div>
@@ -50,7 +54,7 @@
 </ng-template>
 
 <ng-template #hiddenCount>
-  {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired}} courses of
+  {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired }} courses of
   <br />
   {{ getCount().requirement.toString() }}
   <div class="nested">
