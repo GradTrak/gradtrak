@@ -39,7 +39,7 @@ export class GoalSelectorComponent implements OnInit {
       if (this.initialGoals) {
         // Add initial goals to each chosen goals state
         state.chosenGoals = new Set<RequirementSet>(
-          this.initialGoals.filter((initialGoal: RequirementSet) => initialGoal.type === goalType),
+          this.initialGoals.filter((initialGoal: RequirementSet) => initialGoal && (initialGoal.type === goalType)),
         );
       }
     });

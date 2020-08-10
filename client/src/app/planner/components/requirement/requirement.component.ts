@@ -21,7 +21,7 @@ export class RequirementComponent implements OnInit {
   @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-  @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+@Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   displayedRequirement: Requirement;
 
@@ -109,6 +109,9 @@ export class RequirementComponent implements OnInit {
     }
     if (this.isUnit()) {
       return this.unitReq;
+    }
+    if (this.isCount()) {
+      return this.countReq;
     }
     return this.standardReq;
   }

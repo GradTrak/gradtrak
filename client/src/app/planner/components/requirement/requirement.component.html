@@ -33,16 +33,24 @@
 </ng-template>
 
 <ng-template #countReq>
+  <ng-container *ngIf="!getCount().hidden; else hiddenCount">
+    <div class="nested">
+      <div class="fulfilled" *ngFor="let course of getCount().getFulfillingCourses(courses)">
+      </div>
+    </div>
+    THIS HAS NOT BEEN IMPLEMENTED YET. PLEASE MAKE YOUR COUNTREQUIREMENT HIDDEN.
+  </ng-container>
+</ng-template>
+
+<ng-template #hiddenCount>
   {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired}} courses of
   <br />
   {{ getCount().requirement.toString() }}
-  <ng-container *ngIf="!getCount().hidden">
-    <div class="nested">
-      <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-        {{ course.getName() }}
-      </div>
+  <div class="nested">
+    <div class="course" *ngFor="let course of getCount().getFulfillingCourses(courses)">
+      {{ course.getName() }}
     </div>
-  </ng-container>
+  </div>
 </ng-template>
 
 <div
