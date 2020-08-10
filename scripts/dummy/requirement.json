@@ -3367,20 +3367,6 @@
             "courseId": "cog_sci_society",
             "id": "cog_sci_society"
           }
-        ],
-        "constraints": [
-          {
-            "type": "mutex",
-            "name": "Cognitive Science Upper Division",
-            "mutexReqIds": [
-              "cog_sci_neuro",
-              "cog_sci_psych",
-              "multicomputationalmodeling",
-              "cog_sci_ling",
-              "cog_sci_philos",
-              "cog_sci_society"
-            ]
-          }
         ]
       },
       {
@@ -3412,7 +3398,13 @@
             "mutexReqIds": [
               "cog_sci_elective_1",
               "cog_sci_elective_2",
-              "cog_sci_elective_3"
+              "cog_sci_elective_3",
+              "cog_sci_neuro",
+              "cog_sci_psych",
+              "multicomputationalmodeling",
+              "cog_sci_ling",
+              "cog_sci_philos",
+              "cog_sci_society"
             ]
           }
         ]
