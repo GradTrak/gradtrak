@@ -70,7 +70,7 @@ export class RequirementComponent implements OnInit {
    * Standalone requirements and unit requirements can show requirement display.
    */
   hasDisplay(): boolean {
-    return this.isStandalone() || this.isUnit();
+    return this.isStandalone() || this.isUnit() || this.isCount();
   }
 
   getFulfillment(): string[] {
