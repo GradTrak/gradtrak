@@ -14,8 +14,9 @@ export class CountRequirement extends Requirement {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
-    return this.unitsFulfilled(courses) >= this.units;
+    return this.numFulfilled(courses) >= this.count;
   }
+
   /**
    * The number of courses that can fulfill the requirement
    */

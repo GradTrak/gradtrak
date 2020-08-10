@@ -7,6 +7,7 @@ import { MultiRequirement } from '../../models/requirements/multi-requirement.mo
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
+import { CountRequirement } from '../../models/requirements/count-requirement.model';
 
 @Component({
   selector: 'app-requirement',
@@ -30,6 +31,7 @@ export class RequirementComponent implements OnInit {
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
   @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
+  @ViewChild('countReq', { static: true }) private countReq: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private requirementDisplayModalReference: NgbModalRef;
@@ -55,6 +57,10 @@ export class RequirementComponent implements OnInit {
 
   isPoly(): boolean {
     return this.requirement instanceof PolyRequirement;
+  }
+
+  isCount(): boolean {
+    return this.requirement instanceof CountRequirement;
   }
 
   getMulti(): MultiRequirement {
