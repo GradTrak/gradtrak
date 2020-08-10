@@ -1999,14 +1999,12 @@
             "name": "BioE Fundamentals",
             "numRequired": 2,
             "hidden": false,
-            "requirement": [
-              {
-                "id": "bioeng_fundamentals",
-                "type": "tag",
-                "name": "BioE Fundamental",
-                "tagId": "bioeng_fundamentals"
-              }
-            ]
+            "requirement": {
+              "id": "bioeng_fundamentals",
+              "type": "tag",
+              "name": "BioE Fundamental",
+              "tagId": "bioeng_fundamentals"
+            }
           },
           {
             "id": "lab",
