@@ -184,10 +184,8 @@
             "mutexReqIds": [
               "rc_a",
               "rc_b",
-              "hss_1",
-              "hss_2",
-              "hssupper_1",
-              "hssupper_2"
+              "ld_hss",
+              "ud_hss"
             ]
           }
         ]
