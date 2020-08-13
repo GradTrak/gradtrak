@@ -36,10 +36,18 @@ export type UnitRequirementPrototype = {
   requirement: StandaloneRequirementPrototype;
 } & BaseRequirementPrototype;
 
+export type CountRequirementPrototype = {
+  type: 'count';
+  numRequired: number;
+  requirement: StandaloneRequirementPrototype;
+} & BaseRequirementPrototype;
+
+
 export type StandaloneRequirementPrototype = CourseRequirementPrototype | TagRequirementPrototype;
 export type RequirementPrototype =
   | CourseRequirementPrototype
   | MultiRequirementPrototype
   | PolyRequirementPrototype
   | TagRequirementPrototype
-  | UnitRequirementPrototype;
+  | UnitRequirementPrototype
+  | CountRequirementPrototype;

@@ -32,6 +32,38 @@
   </div>
 </ng-template>
 
+<ng-template #unfulfilledCount>
+  {{ getCount().requirement.name }}
+</ng-template>
+
+<ng-template #countReq>
+  <ng-container *ngIf="!getCount().hidden; else hiddenCount">
+    {{ requirement.toString() }}
+    <div class="nested">
+      <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
+        <div *ngIf="i < getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
+          {{
+            getCount()
+              .getFulfillingCourses(courses)
+              [i].getName()
+          }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #hiddenCount>
+  {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired }} courses of
+  <br />
+  {{ getCount().requirement.toString() }}
+  <div class="nested">
+    <div class="course" *ngFor="let course of getCount().getFulfillingCourses(courses)">
+      {{ course.getName() }}
+    </div>
+  </div>
+</ng-template>
+
 <div
   class="requirement"
   [ngClass]="getFulfillment()"
