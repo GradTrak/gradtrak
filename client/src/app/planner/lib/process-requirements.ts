@@ -1,13 +1,14 @@
 import memoize from 'memoizee';
 
 import { Course } from '../models/course.model';
-import { FulfillmentType } from '../models/fulfillment-type.model';
+import { FulfillmentType, CourseFulfillmentType } from '../models/fulfillment-type.model';
 import { Constraint, Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
 import { CourseRequirement } from '../models/requirements/course-requirement.model';
 import { MultiRequirement } from '../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
+import { CountRequirement } from '../models/requirements/count-requirement.model';
 
 /**
  * Returns a map containing the requirement and any child requirement as keys,
@@ -372,12 +373,15 @@ function deriveFulfillment(
 
 /**
  * Returns a map containing each requirement as the key mapped to its
- * fulfillment status.
+ * fulfillment status and writes to COUNTUNITMAPPING the status of 
+ * in how it fulfills the requirement.
  *
  * @param {RequirementSet[]} reqSets The requirement sets being processed.
  * @param {Course[]} courses The courses used to fulfill requirements.
  * @param {Map<string, Set<string>>} manuallyFulfilled The map mapping
  * requirement set IDs to the IDs of manually fulfilled within those sets.
+ * @param {Map<Requirement, Map<Course, CourseFulfillmentType>>} countUnitMapping
+ * A mapping to which the results of count and unit requirement children will be written.
  * @return {Map<Requirement, FulfillmentType>} The fulfillment statuses of
  * every requirement.
  */
@@ -463,8 +467,36 @@ export function processRequirements(
   manualReqs.forEach((req: Requirement) => {
     fulfillment.set(req, 'fulfilled');
   });
-
   reqIsFulfilledWithMapping.clear();
-
+  /* Take unit and countrequirements and find their nested requirement fulfillment statuses */
+  // TODO abstraction barrier? Hmm.
+  const coursePoolReqs: Requirement[] = reqSets.flatMap(reqSet => reqSet.getRequirements().filter((requirement) => {
+      return requirement instanceof UnitRequirement || requirement instanceof CountRequirement;
+      // There are isUnit and isCount functions but they remain in requirement. Possibly ove to Utils?
+    }));
   return fulfillment;
 }
+
+/**
+ * Given a list of "course pool" requirements, such as unit or 
+ * count, determines whether the courses fulfilling it is always 
+ * possible, or only fulfills it in certain situations. 
+ * @param {Requirement[]} reqs A list of course pool requirements
+ * @param {Map<Requirement, Set<Course>[]} mapping The assignment of 
+ * course to each requirement.
+ * @return {Map<Requirement, Map<Course, CourseFulfillmentType>>}
+ */
+function coursePoolReqFulfillments (reqs: Requirement[], mapping: Map<Requirement, Set<Course>[]>) {
+  const result: Map<Requirement, Map<Course, CourseFulfillmentType>> = new Map<Requirement, Map<Course, CourseFulfillmentType>>();
+  reqs.forEach(((req: Requirement) => {
+    const courseCandidates: Set<Course> = new Set<Course>();
+    mapping.get(req).forEach((fulfillmentCandidate: Set<Course>) => fulfillmentCandidate.forEach(courseCandidates.add, courseCandidates))
+    // If the requirement is fulfilled, then we do NOT mark courses as possible, since it may have been pruned. 
+    courseCandidates.forEach(course: Course => {
+      //TODO if this course is in every set, then it's fulfilled. 
+    });
+  }))
+
+}
+
+
