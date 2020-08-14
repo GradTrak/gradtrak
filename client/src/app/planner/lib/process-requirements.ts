@@ -486,17 +486,28 @@ export function processRequirements(
  * course to each requirement.
  * @return {Map<Requirement, Map<Course, CourseFulfillmentType>>}
  */
-function coursePoolReqFulfillments (reqs: Requirement[], mapping: Map<Requirement, Set<Course>[]>) {
+function coursePoolReqFulfillments (reqs: Requirement[], mapping: Map<Requirement, Set<Course>[]>): Map<Requirement, Map<Course, CourseFulfillmentType>> {
   const result: Map<Requirement, Map<Course, CourseFulfillmentType>> = new Map<Requirement, Map<Course, CourseFulfillmentType>>();
   reqs.forEach(((req: Requirement) => {
     const courseCandidates: Set<Course> = new Set<Course>();
     mapping.get(req).forEach((fulfillmentCandidate: Set<Course>) => fulfillmentCandidate.forEach(courseCandidates.add, courseCandidates))
-    // If the requirement is fulfilled, then we do NOT mark courses as possible, since it may have been pruned. 
-    courseCandidates.forEach(course: Course => {
-      //TODO if this course is in every set, then it's fulfilled. 
+    const courseFulfillments: Map<Course, CourseFulfillmentType> = new Map<Course, CourseFulfillmentType>();
+    courseCandidates.forEach((course: Course): void => {
+      if (mapping.get(req).every((possibility: Set<Course>): boolean => {
+        if (req.isFulfilledWith([...possibility])) {
+          // If the requirement is fulfilled, then we do NOT mark courses as possible, since it may have been pruned. 
+          return true;
+        }
+        return possibility.has(course);
+      })) {
+        courseFulfillments.set(course, 'fulfilled');
+      } else {
+        courseFulfillments.set(course, 'possible');
+        }
     });
+    result.set(req, courseFulfillments)
   }))
-
+  return result;
 }
 
 

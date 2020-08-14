@@ -19,6 +19,7 @@ export class UnitRequirement extends Requirement {
   }
 
   unitsFulfilled(courses: Course[]): number {
+    // TODO possible make set versions of this as well, if it saves on runtime.
     return this.getFulfillingCourses(courses)
       .map((course: Course) => course.units)
       .reduce((sum: number, units: number) => sum + units, 0);
