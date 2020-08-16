@@ -61,6 +61,10 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       const path = [];
       let current: RequirementSet = baseGoal;
       while (current !== null && !required.includes(current)) {
+        if (current === undefined) {
+          console.error('A selected goal was not found.');
+          break;
+        }
         path.push(current);
         current = current.parent;
       }
