@@ -900,7 +900,7 @@
             "requirement": {
               "id": "eecs_upper_div",
               "type": "tag",
-              "name": "CS Upper Div Technical Elective",
+              "name": "CS Upper Div Technical Elective (Manually Fulfill)",
               "tagId": "cs_technical_elective"
             }
           }
