@@ -41,7 +41,7 @@
   <div ngbDropdown class="req-more">
     <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
-      <button *ngIf="isStandalone()" ngbDropdownItem (click)="openRequirementDisplay(getStandalone())">
+      <button *ngIf="hasDisplay()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
         Show Fulfilling Courses
       </button>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
