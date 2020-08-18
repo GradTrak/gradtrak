@@ -1,0 +1,9 @@
+PB HLTH 130	Advanced Health Policy	3
+PB HLTH 170C	Drinking Water and Health	3
+PB HLTH 196	Special Topics in Public Health Senior Research Seminar OR Preparation for Public Health Practice Seminar	3
+PB HLTH H195A
+& PB HLTH H195B	Special Study for Honors Candidates in Public Health 6
+PB HLTH 207A	Public Health Aspects of Maternal and Child Nutrition	3
+PB HLTH 252C	Intervention Trial Design	3
+PB HLTH 253B	Epidemiology and Control of Infectious Diseases	3
+PB HLTH 256	Human Genome, Environment and Public Health	4

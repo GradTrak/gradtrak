@@ -1,0 +1,77 @@
+POL SCI 137A	Revolutionary Change	4
+POL SCI 138E	The Varieties of Capitalism: Political Economic Systems of the World	4
+POL SCI 138F	Immigrants, Citizenship, and the State	4
+POL SCI 138G	National Success and Failure in the Age of a Global Economy: from Pleats to Cleats	4
+POL SCI 139B	Development Politics	4
+POL SCI 139D	Urban and Sub-national Politics in Developing Countries	4
+POL SCI C139	Urban and Sub-national Politics in Developing Countries	4
+POL SCI 140A
+POL SCI 140B
+POL SCI 140C
+POL SCI 140D
+POL SCI 140E
+POL SCI 140F
+POL SCI 140G
+POL SCI 140H
+POL SCI 140I
+POL SCI 140J
+POL SCI 140K
+POL SCI 140L
+POL SCI 140M
+POL SCI 140N
+POL SCI 140O
+POL SCI 140P
+POL SCI 140Q
+POL SCI 140R
+POL SCI 140S
+POL SCI 140T
+POL SCI 140U
+POL SCI 140V
+POL SCI 140W
+POL SCI 140X
+POL SCI 140Y
+POL SCI 140Z
+POL SCI 141C	Politics and Government in Eastern Europe	4
+POL SCI 142A	Middle East Politics	4
+POL SCI 143A	Northeast Asian Politics	4
+POL SCI 143B	Japanese Politics	4
+POL SCI 143C	Chinese Politics	4
+POL SCI 143T	Chinese Politics and Society	4
+POL SCI 144	American Foreign Policy Toward Asia	4
+POL SCI 144B	Politics of Divided Korea	4
+POL SCI 145A	South Asian Politics	4
+POL SCI 145B	South Asian Politics	4
+POL SCI W145A	Understanding Political Developments in India	4
+POL SCI 146A	African Politics	4
+POL SCI 146D	Environment, Culture, and Peacebuilding	6
+POL SCI N146C	Conflict and Change in Southern Africa	4
+POL SCI 147F	Contemporary French Politics: The Republican Model in Transition	4
+POL SCI 147G	The Welfare State in Comparative Perspective	4
+POL SCI 147T	German History and Politics	4
+POL SCI 148A	Latin American Politics	4
+POL SCI 149A
+POL SCI 149B
+POL SCI 149C
+POL SCI 149D
+POL SCI 149E
+POL SCI 149F
+POL SCI 149G
+POL SCI 149H
+POL SCI 149I
+POL SCI 149J
+POL SCI 149K
+POL SCI 149L
+POL SCI 149M
+POL SCI 149N
+POL SCI 149O
+POL SCI 149P
+POL SCI 149Q
+POL SCI 149R
+POL SCI 149S
+POL SCI 149T
+POL SCI 149U
+POL SCI 149V
+POL SCI 149W
+POL SCI 149X
+POL SCI 149Y
+POL SCI 149Z

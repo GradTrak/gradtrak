@@ -408,7 +408,8 @@
     "tagIds": [
       "ls_arts",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -417,7 +418,9 @@
     "id": "africam4b",
     "dept": "AFRICAM",
     "no": "4B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 3,
@@ -425,7 +428,9 @@
     "id": "africamn4a",
     "dept": "AFRICAM",
     "no": "N4A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 3,
@@ -1107,7 +1112,8 @@
     "tagIds": [
       "ls_hist",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -10447,7 +10453,8 @@
     "dept": "ASAMST",
     "no": "143AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -14447,7 +14454,8 @@
     "no": "70",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -15510,7 +15518,8 @@
       "ls_phys",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -15523,7 +15532,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -17095,7 +17105,8 @@
     "no": "174",
     "tagIds": [
       "upper_div",
-      "ls_socio"
+      "ls_socio",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -17106,7 +17117,8 @@
     "no": "176",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -19621,7 +19633,8 @@
     "no": "111",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -19653,7 +19666,8 @@
     "no": "113",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -19674,7 +19688,8 @@
     "no": "114",
     "tagIds": [
       "upper_div",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -22854,7 +22869,8 @@
     "tagIds": [
       "ls_arts",
       "ls_hist",
-      "ls_philo"
+      "ls_philo",
+      "poli_sci_history"
     ]
   },
   {
@@ -22863,7 +22879,9 @@
     "id": "classic10b",
     "dept": "CLASSIC",
     "no": "10B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -29445,7 +29463,8 @@
     "dept": "CY PLAN",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -30704,7 +30723,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -32772,7 +32792,8 @@
     "no": "113",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -32819,7 +32840,8 @@
       "ls_inter",
       "ls_socio",
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -33240,7 +33262,8 @@
     "tagIds": [
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -33309,7 +33332,8 @@
       "ls_inter",
       "econ_upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -41048,7 +41072,8 @@
       "ls_phys",
       "ls_socio",
       "eecs_ethics",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -41082,7 +41107,8 @@
     "no": "102",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -46348,7 +46374,8 @@
     "tagIds": [
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -46436,7 +46463,8 @@
     "no": "C151",
     "tagIds": [
       "ls_inter",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -46456,7 +46484,8 @@
     "tagIds": [
       "upper_div",
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -46467,7 +46496,8 @@
     "no": "153",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -46489,7 +46519,8 @@
     "no": "161",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -46523,7 +46554,8 @@
     "no": "C176",
     "tagIds": [
       "econ_upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -48092,7 +48124,8 @@
     "dept": "ESPM",
     "no": "102D",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -48737,7 +48770,8 @@
     "dept": "ESPM",
     "no": "C138",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -49092,7 +49126,8 @@
     "no": "162A",
     "tagIds": [
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -49114,7 +49149,8 @@
     "tagIds": [
       "ac",
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -49168,7 +49204,8 @@
     "dept": "ESPM",
     "no": "C167",
     "tagIds": [
-      "data_sci_ethics"
+      "data_sci_ethics",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -49180,7 +49217,8 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -49192,7 +49230,8 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -50726,7 +50765,8 @@
     "tagIds": [
       "ac",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -50783,7 +50823,8 @@
     "tagIds": [
       "ac",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -55856,7 +55897,9 @@
     "id": "geogc55",
     "dept": "GEOG",
     "no": "C55",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -56193,7 +56236,8 @@
     "dept": "GEOG",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -56314,7 +56358,8 @@
     "no": "138",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -57045,7 +57090,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -58941,7 +58987,9 @@
     "id": "german160a",
     "dept": "GERMAN",
     "no": "160A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -58959,7 +59007,8 @@
     "no": "160C",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -60481,7 +60530,8 @@
     "no": "45",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64645,7 +64695,8 @@
     "no": "4A",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64654,7 +64705,9 @@
     "id": "history4b",
     "dept": "HISTORY",
     "no": "4B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -64670,7 +64723,9 @@
     "id": "history5",
     "dept": "HISTORY",
     "no": "5",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -64715,7 +64770,8 @@
     "no": "6A",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64724,7 +64780,9 @@
     "id": "history6b",
     "dept": "HISTORY",
     "no": "6B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 0,
@@ -64744,7 +64802,8 @@
       "ac",
       "ah",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64755,7 +64814,8 @@
     "no": "7B",
     "tagIds": [
       "ac",
-      "ah"
+      "ah",
+      "poli_sci_history"
     ]
   },
   {
@@ -64782,7 +64842,8 @@
     "no": "8A",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64791,7 +64852,9 @@
     "id": "history8b",
     "dept": "HISTORY",
     "no": "8B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -64865,7 +64928,8 @@
     "no": "10",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64884,7 +64948,8 @@
     "no": "11",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64903,7 +64968,8 @@
     "no": "12",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -64938,7 +65004,8 @@
     "no": "14",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -65687,7 +65754,9 @@
     "id": "history105a",
     "dept": "HISTORY",
     "no": "105A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -65695,7 +65764,9 @@
     "id": "history105b",
     "dept": "HISTORY",
     "no": "105B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -65721,7 +65792,9 @@
     "id": "history106a",
     "dept": "HISTORY",
     "no": "106A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -65731,7 +65804,8 @@
     "no": "106B",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -65799,7 +65873,8 @@
     "dept": "HISTORY",
     "no": "108",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -65942,7 +66017,9 @@
     "id": "history112b",
     "dept": "HISTORY",
     "no": "112B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -66200,7 +66277,8 @@
     "dept": "HISTORY",
     "no": "120AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -66248,7 +66326,8 @@
     "tagIds": [
       "ac",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -66258,7 +66337,8 @@
     "dept": "HISTORY",
     "no": "123",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -66286,7 +66366,8 @@
     "dept": "HISTORY",
     "no": "124A",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -66296,7 +66377,8 @@
     "dept": "HISTORY",
     "no": "124B",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -66444,7 +66526,8 @@
     "dept": "HISTORY",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -66493,7 +66576,8 @@
     "no": "131B",
     "tagIds": [
       "ac",
-      "ah"
+      "ah",
+      "poli_sci_history"
     ]
   },
   {
@@ -66581,7 +66665,8 @@
     "no": "133A",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -66728,7 +66813,8 @@
     "dept": "HISTORY",
     "no": "137AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -66804,7 +66890,8 @@
     "dept": "HISTORY",
     "no": "C139B",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -66814,7 +66901,8 @@
     "dept": "HISTORY",
     "no": "C139C",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -66824,7 +66912,8 @@
     "dept": "HISTORY",
     "no": "C139D",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -66859,7 +66948,9 @@
     "id": "history140b",
     "dept": "HISTORY",
     "no": "140B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -66893,7 +66984,9 @@
     "id": "history141b",
     "dept": "HISTORY",
     "no": "141B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -66902,7 +66995,8 @@
     "dept": "HISTORY",
     "no": "142",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -66912,7 +67006,8 @@
     "dept": "HISTORY",
     "no": "143",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -66969,7 +67064,9 @@
     "id": "history149b",
     "dept": "HISTORY",
     "no": "149B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 0,
@@ -66995,7 +67092,9 @@
     "id": "history150b",
     "dept": "HISTORY",
     "no": "150B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67021,7 +67120,9 @@
     "id": "history151a",
     "dept": "HISTORY",
     "no": "151A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67029,7 +67130,9 @@
     "id": "history151b",
     "dept": "HISTORY",
     "no": "151B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67039,7 +67142,8 @@
     "no": "151C",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -67066,7 +67170,9 @@
     "id": "history152a",
     "dept": "HISTORY",
     "no": "152A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67112,7 +67218,9 @@
     "id": "history155a",
     "dept": "HISTORY",
     "no": "155A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67120,7 +67228,9 @@
     "id": "history155b",
     "dept": "HISTORY",
     "no": "155B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 0,
@@ -67172,7 +67282,9 @@
     "id": "historyc157",
     "dept": "HISTORY",
     "no": "C157",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 0,
@@ -67190,7 +67302,9 @@
     "id": "history158a",
     "dept": "HISTORY",
     "no": "158A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67198,7 +67312,9 @@
     "id": "history158b",
     "dept": "HISTORY",
     "no": "158B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67206,7 +67322,9 @@
     "id": "history158c",
     "dept": "HISTORY",
     "no": "158C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67265,7 +67383,8 @@
     "dept": "HISTORY",
     "no": "159A",
     "tagIds": [
-      "econ_upper_div"
+      "econ_upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -67275,7 +67394,8 @@
     "dept": "HISTORY",
     "no": "159B",
     "tagIds": [
-      "econ_upper_div"
+      "econ_upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -67286,7 +67406,8 @@
     "no": "160",
     "tagIds": [
       "upper_div",
-      "econ_upper_div"
+      "econ_upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -67313,7 +67434,9 @@
     "id": "history162a",
     "dept": "HISTORY",
     "no": "162A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67321,7 +67444,9 @@
     "id": "history162b",
     "dept": "HISTORY",
     "no": "162B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67389,7 +67514,9 @@
     "id": "history164a",
     "dept": "HISTORY",
     "no": "164A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67397,7 +67524,9 @@
     "id": "history164b",
     "dept": "HISTORY",
     "no": "164B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67431,7 +67560,9 @@
     "id": "history165a",
     "dept": "HISTORY",
     "no": "165A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67439,7 +67570,9 @@
     "id": "history165b",
     "dept": "HISTORY",
     "no": "165B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67483,7 +67616,8 @@
     "no": "166B",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -67492,7 +67626,9 @@
     "id": "history166c",
     "dept": "HISTORY",
     "no": "166C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 0,
@@ -67510,7 +67646,9 @@
     "id": "history167a",
     "dept": "HISTORY",
     "no": "167A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67518,7 +67656,9 @@
     "id": "history167b",
     "dept": "HISTORY",
     "no": "167B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67526,7 +67666,9 @@
     "id": "history167c",
     "dept": "HISTORY",
     "no": "167C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67554,7 +67696,8 @@
     "no": "168A",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -67581,7 +67724,9 @@
     "id": "history169a",
     "dept": "HISTORY",
     "no": "169A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67590,7 +67735,8 @@
     "dept": "HISTORY",
     "no": "170",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -67617,7 +67763,9 @@
     "id": "history171a",
     "dept": "HISTORY",
     "no": "171A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67627,7 +67775,8 @@
     "no": "171B",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -67636,7 +67785,9 @@
     "id": "history171c",
     "dept": "HISTORY",
     "no": "171C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67672,7 +67823,9 @@
     "id": "history173b",
     "dept": "HISTORY",
     "no": "173B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67682,7 +67835,8 @@
     "no": "173C",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -67768,7 +67922,9 @@
     "id": "historyc175b",
     "dept": "HISTORY",
     "no": "C175B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67794,7 +67950,9 @@
     "id": "history177a",
     "dept": "HISTORY",
     "no": "177A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67804,7 +67962,8 @@
     "no": "177B",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -67953,7 +68112,9 @@
     "id": "history185a",
     "dept": "HISTORY",
     "no": "185A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -67961,7 +68122,9 @@
     "id": "history185b",
     "dept": "HISTORY",
     "no": "185B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -68032,7 +68195,9 @@
     "id": "historyc191",
     "dept": "HISTORY",
     "no": "C191",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 3,
@@ -68608,7 +68773,9 @@
     "id": "hmedscic133",
     "dept": "HMEDSCI",
     "no": "C133",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 2,
@@ -72799,7 +72966,8 @@
     "no": "114",
     "tagIds": [
       "upper_div",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -72832,7 +73000,8 @@
     "dept": "INTEGBI",
     "no": "116L",
     "tagIds": [
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -72853,7 +73022,8 @@
     "no": "117",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -73156,7 +73326,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -73203,7 +73374,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -73326,7 +73498,8 @@
       "mcb_cdb_elective_b",
       "upper_div",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -73358,7 +73531,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -73389,7 +73563,8 @@
       "mcb_cdb_elective_b",
       "upper_div",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -73410,7 +73585,8 @@
     "no": "141",
     "tagIds": [
       "upper_div",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -75510,7 +75686,8 @@
     "dept": "ISF",
     "no": "100D",
     "tagIds": [
-      "eecs_ethics"
+      "eecs_ethics",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -75537,7 +75714,8 @@
     "no": "100G",
     "tagIds": [
       "ls_philo",
-      "bioeng_ethics"
+      "bioeng_ethics",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -75592,7 +75770,8 @@
     "dept": "ISF",
     "no": "C100G",
     "tagIds": [
-      "bioeng_ethics"
+      "bioeng_ethics",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -81371,7 +81550,8 @@
       "ls_hist",
       "ls_philo",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -81423,7 +81603,8 @@
     "tagIds": [
       "ls_philo",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -82000,7 +82181,8 @@
     "dept": "LEGALST",
     "no": "168",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -85976,7 +86158,8 @@
     "dept": "MATH",
     "no": "53",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -86047,7 +86230,8 @@
     "dept": "MATH",
     "no": "54",
     "tagIds": [
-      "ls_quant"
+      "ls_quant",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -89694,7 +89878,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -89709,7 +89894,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -89915,7 +90101,8 @@
       "mcb_bmb_elective",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -90140,7 +90327,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -90495,7 +90683,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -90620,7 +90809,8 @@
       "bioeng_technical_topics",
       "stat_cluster",
       "eecs_natural_science",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -90697,7 +90887,8 @@
       "stat_cluster",
       "eecs_natural_science",
       "cs_technical_elective",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -95934,7 +96125,8 @@
     "dept": "MEDIAST",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -100392,7 +100584,8 @@
     "no": "10",
     "tagIds": [
       "ls_hist",
-      "ls_inter"
+      "ls_inter",
+      "poli_sci_history"
     ]
   },
   {
@@ -100536,7 +100729,8 @@
     "tagIds": [
       "ls_hist",
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_history"
     ]
   },
   {
@@ -100804,7 +100998,8 @@
     "no": "109",
     "tagIds": [
       "ls_hist",
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -101102,7 +101297,9 @@
     "id": "nestud130a",
     "dept": "NE STUD",
     "no": "130A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 3,
@@ -101110,7 +101307,9 @@
     "id": "nestud130b",
     "dept": "NE STUD",
     "no": "130B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 4,
@@ -101335,7 +101534,8 @@
     "tagIds": [
       "ls_hist",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -101550,7 +101750,9 @@
     "id": "nestud173a",
     "dept": "NE STUD",
     "no": "173A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 3,
@@ -101558,7 +101760,9 @@
     "id": "nestud173b",
     "dept": "NE STUD",
     "no": "173B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_history"
+    ]
   },
   {
     "units": 3,
@@ -101577,7 +101781,8 @@
     "dept": "NE STUD",
     "no": "175",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -102885,7 +103090,9 @@
     "id": "nusctx20",
     "dept": "NUSCTX",
     "no": "20",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 1,
@@ -103001,7 +103208,8 @@
     "tagIds": [
       "mcb_cdb_elective_b",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -103105,7 +103313,8 @@
     "no": "160",
     "tagIds": [
       "mcb_cdb_elective_b",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -103153,7 +103362,8 @@
     "dept": "NUSCTX",
     "no": "166",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -104691,7 +104901,8 @@
     "dept": "PACS",
     "no": "125AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_history"
     ]
   },
   {
@@ -105050,7 +105261,9 @@
     "id": "pbhlth14",
     "dept": "PB HLTH",
     "no": "14",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 3,
@@ -105066,7 +105279,9 @@
     "id": "pbhlth15",
     "dept": "PB HLTH",
     "no": "15",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 1,
@@ -105085,7 +105300,8 @@
     "tagIds": [
       "ls_philo",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105114,7 +105330,9 @@
     "id": "pbhlth104a",
     "dept": "PB HLTH",
     "no": "104A",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 2,
@@ -105151,7 +105369,8 @@
     "dept": "PB HLTH",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105160,7 +105379,9 @@
     "id": "pbhlthw108",
     "dept": "PB HLTH",
     "no": "W108",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 4,
@@ -105170,7 +105391,8 @@
     "no": "112",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105219,7 +105441,8 @@
     "no": "116",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105237,7 +105460,8 @@
     "dept": "PB HLTH",
     "no": "118",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105258,7 +105482,8 @@
     "no": "126",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105269,7 +105494,8 @@
     "no": "129",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105287,7 +105513,8 @@
     "dept": "PB HLTH",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_capstone"
     ]
   },
   {
@@ -105428,7 +105655,8 @@
     "dept": "PB HLTH",
     "no": "145",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105511,7 +105739,9 @@
     "id": "pbhlthc155",
     "dept": "PB HLTH",
     "no": "C155",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 4,
@@ -105520,7 +105750,8 @@
     "dept": "PB HLTH",
     "no": "C160",
     "tagIds": [
-      "data_sci_ethics"
+      "data_sci_ethics",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105542,7 +105773,8 @@
     "tagIds": [
       "ls_bio",
       "mcb_cdb_elective_b",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105587,7 +105819,9 @@
     "id": "pbhlth170c",
     "dept": "PB HLTH",
     "no": "170C",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_capstone"
+    ]
   },
   {
     "units": 3,
@@ -105679,7 +105913,8 @@
     "no": "181",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -105736,7 +105971,9 @@
     "id": "pbhlthh195a",
     "dept": "PB HLTH",
     "no": "H195A",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_capstone"
+    ]
   },
   {
     "units": 3,
@@ -107373,7 +107610,9 @@
     "id": "pbhlth252c",
     "dept": "PB HLTH",
     "no": "252C",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_capstone"
+    ]
   },
   {
     "units": 4,
@@ -107405,7 +107644,9 @@
     "id": "pbhlth253b",
     "dept": "PB HLTH",
     "no": "253B",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_capstone"
+    ]
   },
   {
     "units": 3,
@@ -107542,7 +107783,8 @@
     "dept": "PB HLTH",
     "no": "256",
     "tagIds": [
-      "mcb_ggd_elective_b"
+      "mcb_ggd_elective_b",
+      "pb_hlth_capstone"
     ]
   },
   {
@@ -113404,7 +113646,8 @@
     "no": "C110L",
     "tagIds": [
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -113449,7 +113692,8 @@
     "tagIds": [
       "mcb_bmb_elective",
       "stat_cluster",
-      "eecs_natural_science"
+      "eecs_natural_science",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -114015,7 +114259,8 @@
     "no": "1",
     "tagIds": [
       "ai",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_amer_pol"
     ]
   },
   {
@@ -114036,7 +114281,8 @@
     "dept": "POL SCI",
     "no": "N1AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_amer_pol"
     ]
   },
   {
@@ -114061,7 +114307,9 @@
     "id": "polsci2",
     "dept": "POL SCI",
     "no": "2",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol"
+    ]
   },
   {
     "units": 4,
@@ -114069,7 +114317,9 @@
     "id": "polscin2",
     "dept": "POL SCI",
     "no": "N2",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol"
+    ]
   },
   {
     "units": 4,
@@ -114297,7 +114547,9 @@
     "no": "102",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -114331,7 +114583,10 @@
     "dept": "POL SCI",
     "no": "103",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -114340,7 +114595,10 @@
     "id": "polsci103w",
     "dept": "POL SCI",
     "no": "103W",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
+    ]
   },
   {
     "units": 3,
@@ -114357,7 +114615,9 @@
     "dept": "POL SCI",
     "no": "104",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -114383,7 +114643,9 @@
     "dept": "POL SCI",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -114410,7 +114672,10 @@
     "id": "polsci106a",
     "dept": "POL SCI",
     "no": "106A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -114755,7 +115020,11 @@
     "dept": "POL SCI",
     "no": "111AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper",
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
     ]
   },
   {
@@ -114788,7 +115057,10 @@
     "id": "polsci112a",
     "dept": "POL SCI",
     "no": "112A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114796,7 +115068,10 @@
     "id": "polsci112b",
     "dept": "POL SCI",
     "no": "112B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114804,7 +115079,10 @@
     "id": "polsci112c",
     "dept": "POL SCI",
     "no": "112C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114812,7 +115090,10 @@
     "id": "polsci112d",
     "dept": "POL SCI",
     "no": "112D",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114860,7 +115141,10 @@
     "id": "polscin113a",
     "dept": "POL SCI",
     "no": "N113A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114894,7 +115178,10 @@
     "id": "polsci114a",
     "dept": "POL SCI",
     "no": "114A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114934,7 +115221,10 @@
     "id": "polsci116a",
     "dept": "POL SCI",
     "no": "116A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114942,7 +115232,10 @@
     "id": "polsci116b",
     "dept": "POL SCI",
     "no": "116B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114950,7 +115243,10 @@
     "id": "polsci116c",
     "dept": "POL SCI",
     "no": "116C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114958,7 +115254,10 @@
     "id": "polsci116d",
     "dept": "POL SCI",
     "no": "116D",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114966,7 +115265,10 @@
     "id": "polsci116e",
     "dept": "POL SCI",
     "no": "116E",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114974,7 +115276,10 @@
     "id": "polsci116f",
     "dept": "POL SCI",
     "no": "116F",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114982,7 +115287,10 @@
     "id": "polsci116g",
     "dept": "POL SCI",
     "no": "116G",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114990,7 +115298,10 @@
     "id": "polsci116h",
     "dept": "POL SCI",
     "no": "116H",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -114998,7 +115309,10 @@
     "id": "polsci116i",
     "dept": "POL SCI",
     "no": "116I",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115006,7 +115320,10 @@
     "id": "polsci116j",
     "dept": "POL SCI",
     "no": "116J",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115014,7 +115331,10 @@
     "id": "polsci116k",
     "dept": "POL SCI",
     "no": "116K",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115022,7 +115342,10 @@
     "id": "polsci116l",
     "dept": "POL SCI",
     "no": "116L",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115030,7 +115353,10 @@
     "id": "polsci116m",
     "dept": "POL SCI",
     "no": "116M",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115038,7 +115364,10 @@
     "id": "polsci116n",
     "dept": "POL SCI",
     "no": "116N",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115046,7 +115375,10 @@
     "id": "polsci116o",
     "dept": "POL SCI",
     "no": "116O",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115054,7 +115386,10 @@
     "id": "polsci116p",
     "dept": "POL SCI",
     "no": "116P",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115062,7 +115397,10 @@
     "id": "polsci116q",
     "dept": "POL SCI",
     "no": "116Q",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115070,7 +115408,10 @@
     "id": "polsci116r",
     "dept": "POL SCI",
     "no": "116R",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115078,7 +115419,10 @@
     "id": "polsci116s",
     "dept": "POL SCI",
     "no": "116S",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115086,7 +115430,10 @@
     "id": "polsci116t",
     "dept": "POL SCI",
     "no": "116T",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115094,7 +115441,10 @@
     "id": "polsci116u",
     "dept": "POL SCI",
     "no": "116U",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115102,7 +115452,10 @@
     "id": "polsci116v",
     "dept": "POL SCI",
     "no": "116V",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115110,7 +115463,10 @@
     "id": "polsci116w",
     "dept": "POL SCI",
     "no": "116W",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115118,7 +115474,10 @@
     "id": "polsci116x",
     "dept": "POL SCI",
     "no": "116X",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115126,7 +115485,10 @@
     "id": "polsci116y",
     "dept": "POL SCI",
     "no": "116Y",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115134,7 +115496,10 @@
     "id": "polsci116z",
     "dept": "POL SCI",
     "no": "116Z",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115143,7 +115508,9 @@
     "dept": "POL SCI",
     "no": "117",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_poli_theory",
+      "poli_sci_poli_theory_upper"
     ]
   },
   {
@@ -115256,7 +115623,10 @@
     "id": "polsci122a",
     "dept": "POL SCI",
     "no": "122A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115280,7 +115650,10 @@
     "id": "polsci123a",
     "dept": "POL SCI",
     "no": "123A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115288,7 +115661,10 @@
     "id": "polsci123b",
     "dept": "POL SCI",
     "no": "123B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115296,7 +115672,10 @@
     "id": "polsci123c",
     "dept": "POL SCI",
     "no": "123C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115304,7 +115683,10 @@
     "id": "polsci123d",
     "dept": "POL SCI",
     "no": "123D",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115312,7 +115694,10 @@
     "id": "polsci123e",
     "dept": "POL SCI",
     "no": "123E",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115320,7 +115705,10 @@
     "id": "polsci123f",
     "dept": "POL SCI",
     "no": "123F",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115328,7 +115716,10 @@
     "id": "polsci123g",
     "dept": "POL SCI",
     "no": "123G",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115336,7 +115727,10 @@
     "id": "polsci123h",
     "dept": "POL SCI",
     "no": "123H",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115344,7 +115738,10 @@
     "id": "polsci123i",
     "dept": "POL SCI",
     "no": "123I",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115352,7 +115749,10 @@
     "id": "polsci123j",
     "dept": "POL SCI",
     "no": "123J",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115360,7 +115760,10 @@
     "id": "polsci123k",
     "dept": "POL SCI",
     "no": "123K",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115368,7 +115771,10 @@
     "id": "polsci123l",
     "dept": "POL SCI",
     "no": "123L",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115376,7 +115782,10 @@
     "id": "polsci123m",
     "dept": "POL SCI",
     "no": "123M",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115384,7 +115793,10 @@
     "id": "polsci123n",
     "dept": "POL SCI",
     "no": "123N",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115392,7 +115804,10 @@
     "id": "polsci123o",
     "dept": "POL SCI",
     "no": "123O",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115400,7 +115815,10 @@
     "id": "polsci123p",
     "dept": "POL SCI",
     "no": "123P",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115408,7 +115826,10 @@
     "id": "polsci123q",
     "dept": "POL SCI",
     "no": "123Q",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115416,7 +115837,10 @@
     "id": "polsci123r",
     "dept": "POL SCI",
     "no": "123R",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115424,7 +115848,10 @@
     "id": "polsci123s",
     "dept": "POL SCI",
     "no": "123S",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115432,7 +115859,10 @@
     "id": "polsci123t",
     "dept": "POL SCI",
     "no": "123T",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115440,7 +115870,10 @@
     "id": "polsci123u",
     "dept": "POL SCI",
     "no": "123U",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115448,7 +115881,10 @@
     "id": "polsci123v",
     "dept": "POL SCI",
     "no": "123V",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115456,7 +115892,10 @@
     "id": "polsci123w",
     "dept": "POL SCI",
     "no": "123W",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115464,7 +115903,10 @@
     "id": "polsci123x",
     "dept": "POL SCI",
     "no": "123X",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115472,7 +115914,10 @@
     "id": "polsci123y",
     "dept": "POL SCI",
     "no": "123Y",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115480,7 +115925,10 @@
     "id": "polsci123z",
     "dept": "POL SCI",
     "no": "123Z",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115491,7 +115939,9 @@
     "tagIds": [
       "ls_hist",
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
     ]
   },
   {
@@ -115508,7 +115958,10 @@
     "id": "polsci124c",
     "dept": "POL SCI",
     "no": "124C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115517,7 +115970,9 @@
     "dept": "POL SCI",
     "no": "124M",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
     ]
   },
   {
@@ -115528,7 +115983,9 @@
     "no": "125",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
     ]
   },
   {
@@ -115539,7 +115996,9 @@
     "no": "126A",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
     ]
   },
   {
@@ -115591,7 +116050,9 @@
     "dept": "POL SCI",
     "no": "128",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
     ]
   },
   {
@@ -115600,7 +116061,10 @@
     "id": "polsci128a",
     "dept": "POL SCI",
     "no": "128A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
+    ]
   },
   {
     "units": 4,
@@ -115675,7 +116139,9 @@
     "dept": "POL SCI",
     "no": "C131A",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "poli_sci_emp_theory",
+      "poli_sci_emp_theory_upper"
     ]
   },
   {
@@ -115721,7 +116187,10 @@
     "id": "polscic135",
     "dept": "POL SCI",
     "no": "C135",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_emp_theory",
+      "poli_sci_emp_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115729,7 +116198,10 @@
     "id": "polsciw135",
     "dept": "POL SCI",
     "no": "W135",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_emp_theory",
+      "poli_sci_emp_theory_upper"
+    ]
   },
   {
     "units": 4,
@@ -115761,7 +116233,10 @@
     "id": "polsci137a",
     "dept": "POL SCI",
     "no": "137A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115827,7 +116302,9 @@
     "no": "138E",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -115836,7 +116313,10 @@
     "id": "polsci138f",
     "dept": "POL SCI",
     "no": "138F",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115844,7 +116324,10 @@
     "id": "polsci138g",
     "dept": "POL SCI",
     "no": "138G",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115860,7 +116343,10 @@
     "id": "polsci139b",
     "dept": "POL SCI",
     "no": "139B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115877,7 +116363,9 @@
     "dept": "POL SCI",
     "no": "139D",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -115886,7 +116374,10 @@
     "id": "polscic139",
     "dept": "POL SCI",
     "no": "C139",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115904,7 +116395,10 @@
     "id": "polsci140a",
     "dept": "POL SCI",
     "no": "140A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115912,7 +116406,10 @@
     "id": "polsci140b",
     "dept": "POL SCI",
     "no": "140B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115920,7 +116417,10 @@
     "id": "polsci140c",
     "dept": "POL SCI",
     "no": "140C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115928,7 +116428,10 @@
     "id": "polsci140d",
     "dept": "POL SCI",
     "no": "140D",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115936,7 +116439,10 @@
     "id": "polsci140e",
     "dept": "POL SCI",
     "no": "140E",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115944,7 +116450,10 @@
     "id": "polsci140f",
     "dept": "POL SCI",
     "no": "140F",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115952,7 +116461,10 @@
     "id": "polsci140g",
     "dept": "POL SCI",
     "no": "140G",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115960,7 +116472,10 @@
     "id": "polsci140h",
     "dept": "POL SCI",
     "no": "140H",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115968,7 +116483,10 @@
     "id": "polsci140i",
     "dept": "POL SCI",
     "no": "140I",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115976,7 +116494,10 @@
     "id": "polsci140j",
     "dept": "POL SCI",
     "no": "140J",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115984,7 +116505,10 @@
     "id": "polsci140k",
     "dept": "POL SCI",
     "no": "140K",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -115993,7 +116517,9 @@
     "dept": "POL SCI",
     "no": "140L",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -116002,7 +116528,10 @@
     "id": "polsci140m",
     "dept": "POL SCI",
     "no": "140M",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116010,7 +116539,10 @@
     "id": "polsci140n",
     "dept": "POL SCI",
     "no": "140N",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116018,7 +116550,10 @@
     "id": "polsci140o",
     "dept": "POL SCI",
     "no": "140O",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116026,7 +116561,10 @@
     "id": "polsci140p",
     "dept": "POL SCI",
     "no": "140P",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116034,7 +116572,10 @@
     "id": "polsci140q",
     "dept": "POL SCI",
     "no": "140Q",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116042,7 +116583,10 @@
     "id": "polsci140r",
     "dept": "POL SCI",
     "no": "140R",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116050,7 +116594,10 @@
     "id": "polsci140s",
     "dept": "POL SCI",
     "no": "140S",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116058,7 +116605,10 @@
     "id": "polsci140t",
     "dept": "POL SCI",
     "no": "140T",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116066,7 +116616,10 @@
     "id": "polsci140u",
     "dept": "POL SCI",
     "no": "140U",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116074,7 +116627,10 @@
     "id": "polsci140v",
     "dept": "POL SCI",
     "no": "140V",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116082,7 +116638,10 @@
     "id": "polsci140w",
     "dept": "POL SCI",
     "no": "140W",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116090,7 +116649,10 @@
     "id": "polsci140x",
     "dept": "POL SCI",
     "no": "140X",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116098,7 +116660,10 @@
     "id": "polsci140y",
     "dept": "POL SCI",
     "no": "140Y",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116106,7 +116671,10 @@
     "id": "polsci140z",
     "dept": "POL SCI",
     "no": "140Z",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 3,
@@ -116154,7 +116722,10 @@
     "id": "polsci141c",
     "dept": "POL SCI",
     "no": "141C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116170,7 +116741,10 @@
     "id": "polsci142a",
     "dept": "POL SCI",
     "no": "142A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116194,7 +116768,10 @@
     "id": "polsci143a",
     "dept": "POL SCI",
     "no": "143A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116202,7 +116779,10 @@
     "id": "polsci143b",
     "dept": "POL SCI",
     "no": "143B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116210,7 +116790,10 @@
     "id": "polsci143c",
     "dept": "POL SCI",
     "no": "143C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116234,7 +116817,10 @@
     "id": "polsci143t",
     "dept": "POL SCI",
     "no": "143T",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116259,7 +116845,11 @@
     "dept": "POL SCI",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper",
+      "poli_sci_int_rel",
+      "poli_sci_int_rel_upper"
     ]
   },
   {
@@ -116276,7 +116866,10 @@
     "id": "polsci144b",
     "dept": "POL SCI",
     "no": "144B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116286,7 +116879,9 @@
     "no": "145A",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -116295,7 +116890,10 @@
     "id": "polsci145b",
     "dept": "POL SCI",
     "no": "145B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116303,7 +116901,10 @@
     "id": "polsciw145a",
     "dept": "POL SCI",
     "no": "W145A",
-    "tagIds": [],
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ],
     "equivIds": [
       "polsci145a"
     ]
@@ -116314,7 +116915,10 @@
     "id": "polsci146a",
     "dept": "POL SCI",
     "no": "146A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116338,7 +116942,10 @@
     "id": "polsci146d",
     "dept": "POL SCI",
     "no": "146D",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116346,7 +116953,10 @@
     "id": "polscin146c",
     "dept": "POL SCI",
     "no": "N146C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116418,7 +117028,10 @@
     "id": "polsci147f",
     "dept": "POL SCI",
     "no": "147F",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116428,7 +117041,9 @@
     "no": "147G",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -116445,7 +117060,10 @@
     "id": "polsci147t",
     "dept": "POL SCI",
     "no": "147T",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116477,7 +117095,10 @@
     "id": "polsci148a",
     "dept": "POL SCI",
     "no": "148A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116509,7 +117130,10 @@
     "id": "polsci149a",
     "dept": "POL SCI",
     "no": "149A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116517,7 +117141,10 @@
     "id": "polsci149b",
     "dept": "POL SCI",
     "no": "149B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116525,7 +117152,10 @@
     "id": "polsci149c",
     "dept": "POL SCI",
     "no": "149C",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116533,7 +117163,10 @@
     "id": "polsci149d",
     "dept": "POL SCI",
     "no": "149D",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116542,7 +117175,9 @@
     "dept": "POL SCI",
     "no": "149E",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -116551,7 +117186,10 @@
     "id": "polsci149f",
     "dept": "POL SCI",
     "no": "149F",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116559,7 +117197,10 @@
     "id": "polsci149g",
     "dept": "POL SCI",
     "no": "149G",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116567,7 +117208,10 @@
     "id": "polsci149h",
     "dept": "POL SCI",
     "no": "149H",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116575,7 +117219,10 @@
     "id": "polsci149i",
     "dept": "POL SCI",
     "no": "149I",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116583,7 +117230,10 @@
     "id": "polsci149j",
     "dept": "POL SCI",
     "no": "149J",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116591,7 +117241,10 @@
     "id": "polsci149k",
     "dept": "POL SCI",
     "no": "149K",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116599,7 +117252,10 @@
     "id": "polsci149l",
     "dept": "POL SCI",
     "no": "149L",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116607,7 +117263,10 @@
     "id": "polsci149m",
     "dept": "POL SCI",
     "no": "149M",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116615,7 +117274,10 @@
     "id": "polsci149n",
     "dept": "POL SCI",
     "no": "149N",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116623,7 +117285,10 @@
     "id": "polsci149o",
     "dept": "POL SCI",
     "no": "149O",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116631,7 +117296,10 @@
     "id": "polsci149p",
     "dept": "POL SCI",
     "no": "149P",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116639,7 +117307,10 @@
     "id": "polsci149q",
     "dept": "POL SCI",
     "no": "149Q",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116648,7 +117319,9 @@
     "dept": "POL SCI",
     "no": "149R",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
     ]
   },
   {
@@ -116657,7 +117330,10 @@
     "id": "polsci149s",
     "dept": "POL SCI",
     "no": "149S",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116665,7 +117341,10 @@
     "id": "polsci149t",
     "dept": "POL SCI",
     "no": "149T",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116673,7 +117352,10 @@
     "id": "polsci149u",
     "dept": "POL SCI",
     "no": "149U",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116681,7 +117363,10 @@
     "id": "polsci149v",
     "dept": "POL SCI",
     "no": "149V",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116689,7 +117374,10 @@
     "id": "polsci149w",
     "dept": "POL SCI",
     "no": "149W",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116697,7 +117385,10 @@
     "id": "polsci149x",
     "dept": "POL SCI",
     "no": "149X",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116705,7 +117396,10 @@
     "id": "polsci149y",
     "dept": "POL SCI",
     "no": "149Y",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -116713,7 +117407,10 @@
     "id": "polsci149z",
     "dept": "POL SCI",
     "no": "149Z",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_comp_pol",
+      "poli_sci_comp_pol_upper"
+    ]
   },
   {
     "units": 3,
@@ -116730,7 +117427,10 @@
     "dept": "POL SCI",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117017,7 +117717,10 @@
     "id": "polsci157a",
     "dept": "POL SCI",
     "no": "157A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -117025,7 +117728,10 @@
     "id": "polsci157b",
     "dept": "POL SCI",
     "no": "157B",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -117053,7 +117759,9 @@
     "no": "161",
     "tagIds": [
       "upper_div",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117124,7 +117832,9 @@
     "no": "164A",
     "tagIds": [
       "ls_socio",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117141,7 +117851,10 @@
     "id": "polscin164a",
     "dept": "POL SCI",
     "no": "N164A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -117150,7 +117863,9 @@
     "dept": "POL SCI",
     "no": "166",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117160,7 +117875,9 @@
     "dept": "POL SCI",
     "no": "167",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117171,7 +117888,9 @@
     "no": "167AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117197,7 +117916,9 @@
     "dept": "POL SCI",
     "no": "169",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117218,7 +117939,10 @@
     "no": "171",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117253,7 +117977,10 @@
     "id": "polsci175a",
     "dept": "POL SCI",
     "no": "175A",
-    "tagIds": []
+    "tagIds": [
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
+    ]
   },
   {
     "units": 4,
@@ -117325,7 +118052,9 @@
     "no": "181",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -117391,7 +118120,9 @@
     "dept": "POL SCI",
     "no": "186",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "poli_sci_amer_pol",
+      "poli_sci_amer_pol_upper"
     ]
   },
   {
@@ -119391,7 +120122,8 @@
     "tagIds": [
       "ls_hist",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -120816,7 +121548,8 @@
     "dept": "PSYCH",
     "no": "134",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -123234,7 +123967,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -123256,7 +123990,8 @@
     "tagIds": [
       "ls_philo",
       "ls_socio",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -123277,7 +124012,8 @@
     "no": "117AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -123305,7 +124041,8 @@
     "dept": "PUB POL",
     "no": "156",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -123560,7 +124297,8 @@
     "dept": "PUB POL",
     "no": "179",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -123632,7 +124370,8 @@
     "tagIds": [
       "ls_phys",
       "ls_socio",
-      "stat_cluster"
+      "stat_cluster",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -128644,7 +129383,8 @@
     "no": "123",
     "tagIds": [
       "ls_hist",
-      "upper_div"
+      "upper_div",
+      "poli_sci_history"
     ]
   },
   {
@@ -131225,7 +131965,8 @@
     "dept": "SOC WEL",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -133054,7 +133795,9 @@
     "id": "sociol115g",
     "dept": "SOCIOL",
     "no": "115G",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 4,
@@ -133062,7 +133805,9 @@
     "id": "sociolc115",
     "dept": "SOCIOL",
     "no": "C115",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 4,
@@ -133173,7 +133918,8 @@
     "no": "121",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -133477,7 +134223,8 @@
     "tagIds": [
       "ac",
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -133842,7 +134589,8 @@
     "no": "166",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -135573,7 +136321,9 @@
     "id": "spanish102c",
     "dept": "SPANISH",
     "no": "102C",
-    "tagIds": []
+    "tagIds": [
+      "pb_hlth_elective"
+    ]
   },
   {
     "units": 3,
@@ -136902,7 +137652,8 @@
       "ls_quant",
       "upper_div",
       "bioeng_technical_topics",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -136917,7 +137668,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "cs_technical_elective",
-      "data_sci_prob"
+      "data_sci_prob",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -136942,7 +137694,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "cs_technical_elective",
-      "data_sci_compute"
+      "data_sci_compute",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -136981,7 +137734,8 @@
       "upper_div",
       "bioeng_technical_topics",
       "cs_technical_elective",
-      "data_sci_compute"
+      "data_sci_compute",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -136993,7 +137747,8 @@
     "tagIds": [
       "ls_quant",
       "cs_technical_elective",
-      "data_sci_compute"
+      "data_sci_compute",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -137030,7 +137785,8 @@
       "ls_quant",
       "upper_div",
       "cs_technical_elective",
-      "data_sci_compute"
+      "data_sci_compute",
+      "pb_hlth_elective"
     ]
   },
   {
@@ -143750,7 +144506,8 @@
     "tagIds": [
       "ls_hist",
       "ls_philo",
-      "ls_socio"
+      "ls_socio",
+      "pb_hlth_elective"
     ]
   },
   {

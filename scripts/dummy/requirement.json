@@ -3410,5 +3410,624 @@
         ]
       }
     ]
+  },
+  {
+    "id": "publichealth",
+    "name": "Public Health",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "name": "Biological Sciences",
+            "type": "unit",
+            "id": "publichealthunitbiologicalsciences",
+            "units": 7,
+            "requirement": {
+              "name": "Biological Sciences",
+              "type": "multi",
+              "id": "multibiologicalsciences",
+              "numRequired": 1,
+              "hidden": true,
+              "requirements": [
+                {
+                  "name": "Biology 1A",
+                  "type": "course",
+                  "courseId": "biology1a",
+                  "id": "biology1a"
+                },
+                {
+                  "name": "Biology 1B",
+                  "type": "course",
+                  "courseId": "biology1b",
+                  "id": "biology1b"
+                },
+                {
+                  "name": "MCB 32",
+                  "type": "course",
+                  "courseId": "mcellbi32",
+                  "id": "mcellbi32"
+                },
+                {
+                  "name": "MCB 50",
+                  "type": "course",
+                  "courseId": "mcellbi50",
+                  "id": "mcellbi50"
+                },
+                {
+                  "name": "MCB 55",
+                  "type": "course",
+                  "courseId": "mcellbi55",
+                  "id": "mcellbi55"
+                },
+                {
+                  "name": "MCB C61",
+                  "type": "course",
+                  "courseId": "mcbc61",
+                  "id": "mcbc61"
+                },
+                {
+                  "name": "Nutrisci 10",
+                  "type": "course",
+                  "courseId": "NUSCTX10",
+                  "id": "NUSCTX10"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Data 8",
+            "type": "course",
+            "courseId": "datac8",
+            "id": "datac8"
+          },
+          {
+            "name": "Mathematics",
+            "type": "multi",
+            "id": "publichealthmultimathematics",
+            "numRequired": 2,
+            "requirements": [
+              {
+                "name": "Math 1A",
+                "type": "course",
+                "courseId": "math1a",
+                "id": "math1a"
+              },
+              {
+                "name": "Math 1B",
+                "type": "course",
+                "courseId": "math1b",
+                "id": "math1b"
+              },
+              {
+                "name": "Math 10A",
+                "type": "course",
+                "courseId": "math10a",
+                "id": "math10a"
+              },
+              {
+                "name": "Math 10B",
+                "type": "course",
+                "courseId": "math10b",
+                "id": "math10b"
+              },
+              {
+                "name": "Math 16A",
+                "type": "course",
+                "courseId": "math16a",
+                "id": "math16a"
+              },
+              {
+                "name": "Math 16b",
+                "type": "course",
+                "courseId": "math16b",
+                "id": "math16b"
+              },
+              {
+                "name": "Math 32",
+                "type": "course",
+                "courseId": "math32",
+                "id": "math32"
+              }
+            ]
+          },
+          {
+            "name": "Social Science",
+            "type": "multi",
+            "id": "publichealthmultisocialscience",
+            "numRequired": 3,
+            "requirements": [
+              {
+                "name": "Anthro 3",
+                "type": "course",
+                "courseId": "anthro3",
+                "id": "anthro3"
+              },
+              {
+                "name": "Econ 1",
+                "type": "course",
+                "courseId": "econ1",
+                "id": "econ1"
+              },
+              {
+                "name": "Econ 2",
+                "type": "course",
+                "courseId": "econ2",
+                "id": "econ2"
+              },
+              {
+                "name": "Econ 3",
+                "type": "course",
+                "courseId": "econ3",
+                "id": "econ3"
+              },
+              {
+                "name": "Polisci 2",
+                "type": "course",
+                "courseId": "polsci2",
+                "id": "polsci2"
+              },
+              {
+                "name": "Polisci 4",
+                "type": "course",
+                "courseId": "polsci4",
+                "id": "polsci4"
+              },
+              {
+                "name": "Psych 1",
+                "type": "course",
+                "courseId": "psych1",
+                "id": "psych1"
+              },
+              {
+                "name": "Psych 2",
+                "type": "course",
+                "courseId": "psych2",
+                "id": "psych2"
+              },
+              {
+                "name": "Sociol 1",
+                "type": "course",
+                "courseId": "sociol1",
+                "id": "sociol1"
+              },
+              {
+                "name": "Sociol 3AC",
+                "type": "course",
+                "courseId": "sociol3ac",
+                "id": "sociol3ac"
+              },
+              {
+                "name": "Sociol 5",
+                "type": "course",
+                "courseId": "sociol5",
+                "id": "sociol5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "name": "PB HLTH 142",
+            "type": "course",
+            "courseId": "pbhlth142",
+            "id": "pbhlth142"
+          },
+          {
+            "name": "PB HLTH 150A",
+            "type": "course",
+            "courseId": "pbhlth150a",
+            "id": "pbhlth150a"
+          },
+          {
+            "name": "PB HLTH 150B",
+            "type": "course",
+            "courseId": "pbhlth150b",
+            "id": "pbhlth150b"
+          },
+          {
+            "name": "PB HLTH 150D",
+            "type": "course",
+            "courseId": "pbhlth150d",
+            "id": "pbhlth150d"
+          },
+          {
+            "name": "PB HLTH 150E",
+            "type": "course",
+            "courseId": "pbhlth150e",
+            "id": "pbhlth150e"
+          },
+          {
+            "name": "Capstone Requirement",
+            "type": "tag",
+            "tagId": "pb_hlth_capstone",
+            "id": "pb_hlth_capstone"
+          }
+        ]
+      },
+      {
+        "name": "Elective Requirements",
+        "requirements": [
+          {
+            "name": "Electives",
+            "type": "unit",
+            "id": "publichealthunitelectives",
+            "units": 10,
+            "requirement": {
+              "name": "Public Health Elective",
+              "type": "tag",
+              "tagId": "pb_hlth_elective",
+              "id": "pb_hlth_elective"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "polisci",
+    "name": "Political Science Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "type": "multi",
+            "name": "Lower Division Prereqs",
+            "id": "poliscimultilowerdivisionprereqs",
+            "numRequired": 2,
+            "requirements": [
+              {
+                "name": "POL SCI 1",
+                "type": "multi",
+                "id": "multipolsci1",
+                "numRequired": 1,
+                "requirements": [
+                  {
+                    "name": "POL SCI 1",
+                    "type": "course",
+                    "courseId": "polsci1",
+                    "id": "polsci1"
+                  },
+                  {
+                    "name": "POL SCI N1AC",
+                    "type": "course",
+                    "courseId": "polscin1ac",
+                    "id": "polscin1ac"
+                  }
+                ],
+                "hidden": true
+              },
+              {
+                "name": "POL SCI 2",
+                "type": "multi",
+                "id": "multipolsci2",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "name": "POL SCI 2",
+                    "type": "course",
+                    "courseId": "polsci2",
+                    "id": "polsci2"
+                  },
+                  {
+                    "name": "POL SCI N2",
+                    "type": "course",
+                    "courseId": "polscin2",
+                    "id": "polscin2"
+                  }
+                ]
+              },
+              {
+                "name": "POL SCI 4",
+                "type": "course",
+                "courseId": "polsci4",
+                "id": "polsci4"
+              },
+              {
+                "name": "POL SCI 5",
+                "type": "course",
+                "courseId": "polsci5",
+                "id": "polsci5"
+              }
+            ]
+          },
+          {
+            "name": "POL SCI 3",
+            "type": "multi",
+            "id": "poliscimultipolsci3",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "name": "POL SCI 3",
+                "type": "course",
+                "courseId": "polsci3",
+                "id": "polsci3"
+              },
+              {
+                "name": "POL SCI N3",
+                "type": "course",
+                "courseId": "polscin3",
+                "id": "polscin3"
+              },
+              {
+                "name": "POL SCI W3",
+                "type": "course",
+                "courseId": "polsciw3",
+                "id": "polsciw3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "History/Distribution Requirements",
+        "requirements": [
+          {
+            "name": "History Requirement",
+            "type": "tag",
+            "tagId": "poli_sci_history",
+            "id": "poli_sci_history"
+          },
+          {
+            "name": "American Politics",
+            "type": "tag",
+            "tagId": "poli_sci_amer_pol",
+            "id": "poli_sci_amer_pol"
+          },
+          {
+            "name": "Comparative Politics",
+            "type": "tag",
+            "tagId": "poli_sci_comp_pol",
+            "id": "poli_sci_comp_pol"
+          },
+          {
+            "name": "Emp. Theory and Quant. Methods",
+            "type": "tag",
+            "tagId": "poli_sci_emp_theory",
+            "id": "poli_sci_emp_theory"
+          },
+          {
+            "name": "Political Theory",
+            "type": "tag",
+            "tagId": "poli_sci_poli_theory",
+            "id": "poli_sci_poli_theory"
+          },
+          {
+            "name": "International Relations",
+            "type": "tag",
+            "tagId": "poli_sci_int_rel",
+            "id": "poli_sci_int_rel"
+          }
+        ]
+      },
+      {
+        "name": "Subfield Specialization",
+        "requirements": [
+          {
+            "name": "Subfield",
+            "type": "multi",
+            "id": "poliscimultisubfield",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "name": "American Politics",
+                "type": "multi",
+                "id": "multiamericanpolitics",
+                "numRequired": 2,
+                "requirements": [
+                  {
+                    "name": "POL SCI 1",
+                    "type": "multi",
+                    "id": "multipolsci1",
+                    "hidden": true,
+                    "numRequired": 1,
+                    "requirements": [
+                      {
+                        "name": "POL SCI 1",
+                        "type": "course",
+                        "courseId": "polsci1",
+                        "id": "polsci1"
+                      },
+                      {
+                        "name": "POL SCI N1AC",
+                        "type": "course",
+                        "courseId": "polscin1ac",
+                        "id": "polscin1ac"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "American Politics Upper Div",
+                    "type": "count",
+                    "id": "countamericanpoliticsupperdiv",
+                    "numRequired": 2,
+                    "requirement": {
+                      "name": "American Politics Upper Division",
+                      "type": "tag",
+                      "tagId": "poli_sci_amer_pol_upper",
+                      "id": "poli_sci_amer_pol_upper"
+                    },
+                    "hidden": true
+                  }
+                ]
+              },
+              {
+                "name": "Comparative Politics",
+                "type": "multi",
+                "id": "multicomparativepolitics",
+                "numRequired": 2,
+                "requirements": [
+                  {
+                    "name": "POL SCI 2",
+                    "type": "multi",
+                    "id": "multipolsci2",
+                    "hidden": true,
+                    "numRequired": 1,
+                    "requirements": [
+                      {
+                        "name": "POL SCI 2",
+                        "type": "course",
+                        "courseId": "polsci2",
+                        "id": "polsci2"
+                      },
+                      {
+                        "name": "POL SCI N2",
+                        "type": "course",
+                        "courseId": "polscin2",
+                        "id": "polscin1ac"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Comparative Politics Upper Div",
+                    "type": "count",
+                    "id": "countcomparativepoliticsupperdiv",
+                    "numRequired": 2,
+                    "requirement": {
+                      "name": "Comparative Politics Upper Division",
+                      "type": "tag",
+                      "tagId": "poli_sci_comp_pol_upper",
+                      "id": "poli_sci_comp_pol_upper"
+                    },
+                    "hidden": true
+                  }
+                ]
+              },
+              {
+                "name": "Emp. Theory and Quant. Methods",
+                "type": "multi",
+                "id": "multiemptheory",
+                "numRequired": 2,
+                "requirements": [
+                  {
+                    "name": "POL SCI 3",
+                    "type": "multi",
+                    "id": "multipolsci3",
+                    "hidden": true,
+                    "numRequired": 1,
+                    "requirements": [
+                      {
+                        "name": "POL SCI 3",
+                        "type": "course",
+                        "courseId": "polsci3",
+                        "id": "polsci3"
+                      },
+                      {
+                        "name": "POL SCI N3",
+                        "type": "course",
+                        "courseId": "polscin3",
+                        "id": "polscin3"
+                      },
+                      {
+                        "name": "POL SCI W3",
+                        "type": "course",
+                        "courseId": "polsciw3",
+                        "id": "polsciw3"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Emp. Theory and Quant. Methods Upper Div",
+                    "type": "count",
+                    "id": "countemptheoryupperdiv",
+                    "numRequired": 2,
+                    "requirement": {
+                      "name": "Emp. Theory and Quant. Methods Upper Division",
+                      "type": "tag",
+                      "tagId": "poli_sci_emp_theory_upper",
+                      "id": "poli_sci_emp_theory_upper"
+                    },
+                    "hidden": true
+                  }
+                ]
+              },
+              {
+                "name": "Political Theory",
+                "type": "multi",
+                "id": "multipolitheory",
+                "numRequired": 2,
+                "requirements": [
+                  {
+                    "name": "POL SCI 4",
+                    "type": "course",
+                    "courseId": "polsci4",
+                    "id": "polsci4"
+                  },
+                  {
+                    "name": "Political Theory Upper Div",
+                    "type": "count",
+                    "id": "countpoliticaltheoryupperdiv",
+                    "numRequired": 2,
+                    "requirement": {
+                      "name": "Political Theory Upper Division",
+                      "type": "tag",
+                      "tagId": "poli_sci_poli_theory_upper",
+                      "id": "poli_sci_poli_theory_upper"
+                    },
+                    "hidden": true
+                  }
+                ]
+              },
+              {
+                "name": "International Relations",
+                "type": "multi",
+                "id": "multiinternationalrelations",
+                "numRequired": 2,
+                "requirements": [
+                  {
+                    "name": "POL SCI 5",
+                    "type": "course",
+                    "courseId": "polsci5",
+                    "id": "polsci5"
+                  },
+                  {
+                    "name": "International Relations Upper Div",
+                    "type": "count",
+                    "id": "internationalrelationsupperdiv",
+                    "numRequired": 2,
+                    "requirement": {
+                      "name": "International Relations Upper Division",
+                      "type": "tag",
+                      "tagId": "poli_sci_int_rel_upper",
+                      "id": "poli_sci_int_rel_upper"
+                    },
+                    "hidden": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "name": "Upper Division Requirements",
+            "type": "count",
+            "id": "poliscicountupperdivisionrequirements",
+            "hidden": true,
+            "numRequired": 8,
+            "requirement": {
+              "name": "Political Science Upper Div",
+              "type": "tag",
+              "tagId": "poli_sci_upper_div",
+              "id": "poli_sci_upper_div"
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

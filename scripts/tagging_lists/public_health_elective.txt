@@ -1,0 +1,113 @@
+COMPSCI/STAT C100	Principles & Techniques of Data Science	4
+DEMOG 110	Introduction to Population Analysis	3
+MATH 53	Multivariable Calculus	4
+MATH 54	Linear Algebra and Differential Equations	4
+PB HLTH 145	Statistical Analysis of Continuous Outcome Data	4
+STAT 133	Concepts in Computing with Data	3
+STAT 134	Concepts of Probability	4
+STAT 135	Concepts of Statistics	4
+STAT 150	Stochastic Processes	3
+STAT 151A	Linear Modelling: Theory and Applications	4
+STAT 153	Introduction to Time Series	4
+CHEM 135	Chemical Biology	3
+ESPM C138/MCELLBI C114/PLANTBI C114	Introduction to Comparative Virology	4
+INTEGBI 114	Infectious Disease Dynamics	4
+INTEGBI 116L	Medical Parasitology	4
+INTEGBI 131	General Human Anatomy	3
+INTEGBI 132	Survey of Human Physiology	4
+INTEGBI 137	Human Endocrinology	4
+INTEGBI 139	The Neurobiology of Stress	4
+INTEGBI 141	Human Genetics	3
+MCELLBI C100A/CHEM C130	Biophysical Chemistry: Physical Principles and the Molecules of Life	4
+MCELLBI 102	Survey of the Principles of Biochemistry and Molecular Biology	4
+MCELLBI C114	Introduction to Comparative Virology	4
+MCELLBI 130	Cell and Systems Biology	4
+MCELLBI 140	General Genetics	4
+MCELLBI 150	Molecular Immunology	4
+MCELLBI 160	Cellular and Molecular Neurobiology	4
+PLANTBI C110L	Biology of Fungi with Laboratory	4
+PB HLTH 162A	Public Health Microbiology	3
+DEMOG 110	Introduction to Population Analysis	3
+DEMOG/SOCIOL C126	Sex, Death, and Data	4
+GEOG 130	Food and the Environment	4
+INTEGBI 131	General Human Anatomy	3
+INTEGBI 132	Survey of Human Physiology	4
+INTEGBI 140	Biology of Human Reproduction	4
+MCELLBI 140	General Genetics	4
+PB HLTH 112	Global Health: A Multidisciplinary Examination	4
+CIV ENG 111	Environmental Engineering	3
+CIV ENG 113	Ecological Engineering for Water Quality Improvement	3
+CIV ENG 114	Environmental Microbiology	3
+ECON/ENVECON C102	Natural Resource Economics	4
+ECON C171/ENVECON C151	Development Economics	4
+ECON/ENVECON C181	International Trade	4
+ENE,RES C100/PUB POL C184	Energy and Society	4
+ENE,RES 102	Quantitative Aspects of Global Environmental Problems	4
+ENVECON 131	Globalization and the Natural Environment	3
+ENVECON 152	Advanced Topics in Development and International Trade	3
+ENVECON 153	Population, Environment, and Development	3
+ENVECON 161	Advanced Topics in Environmental and Resource Economics	4
+ESPM 162A	Health, Medicine, Society and Environment	4
+ESPM 163AC	Environmental Justice: Race, Class, Equity, and the Environment	4
+ESPM 168	Political Ecology	4
+ESPM 169	International Environmental Politics	4
+GEOG 123/DEV STD 150	Postcolonial Geographies	4
+GEOG 130	Food and the Environment	4
+GEOG 138	Global Environmental Politics	4
+GEOG 187	Geographic Information Analysis	4
+GEOG/LD ARCH C188	Geographic Information Systems	4
+HISTORY 120AC	American Environmental and Cultural History	4
+INTEGBI 117	Medical Ethnobotany	2
+IAS/ENVECON C175	The Economics of Climate Change	4
+ISF 100D	Introduction to Technology, Society, and Culture	4
+ISF 100G	Introduction to Science, Society, and Ethics	4
+NUSCTX 20	Personal Food Security and Wellness	2
+NUSCTX 110	Toxicology	4
+NUSCTX 160	Metabolic Bases of Human Health and Diseases	4
+PB HLTH C160/ESPM C167	Environmental Health and Development	4
+SOCIOL 121	Innovation and Entrepreneurship: Social and Cultural Context	4
+SOCIOL 166	Society and Technology	4
+ENVECON C151/ECON C171	Development Economics	4
+ENVECON/ECON C181	International Trade	4
+ESPM C167	Environmental Health and Development	4
+CY PLAN 120	Community Planning and Public Policy for Disability	3
+ECON 157	Health Economics	4
+ESPM 102D	Climate and Energy Policy	4
+ENVECON C176	Climate Change Economics	4
+LEGALST 103	Theories of Law and Society	4
+LEGALST 107	Theories of Justice	4
+LEGALST 168	Sex, Reproduction and the Law	4
+PB HLTH 116	Seminar on Social, Political, and Ethical Issues in Health and Medicine	3
+MEDIAST 112	Media Theories and Processes	4
+PB HLTH 126	Health Economics and Public Policy	3
+PB HLTH 181	Poverty and Population	3
+POL SCI 103	Congress	4
+POL SCI 150	The American Legal System	4
+POL SCI 171	California Politics	4
+PUB POL 101	Introduction to Public Policy Analysis	4
+PUB POL C103	Wealth and Poverty	4
+PUB POL 117AC	Race, Ethnicity, and Public Policy	4
+PUB POL 156	Program and Policy Design	4
+PUB POL 179	Public Budgeting	4
+SOCIOL 115G	Health in a Global Society	4
+SOC WEL 112	Social Welfare Policy	3
+SPANISH 102C	Advanced Writing Workshop (Volunteering, Global Education, and Good Writing)	4
+ASAMST 143AC	Asian American Health	3
+CHICANO 174	Chicanos, Law, and Criminal Justice	4
+CHICANO 176	Chicanos and Health Care	3
+ESPM 163AC/SOCIOL 137AC	Environmental Justice: Race, Class, Equity, and the Environment	4
+ISF C100G	Introduction to Science, Technology, and Society	4
+HISTORY C191/HMEDSCI C133/UGIS C133	Death, Dying, and Modern Medicine: Historical and Contemporary Perspectives	4
+NUSCTX 166	Nutrition in the Community	3
+PB HLTH 14	Healthy People: Introduction to Health Promotion	4
+PB HLTH 15	Introduction to Global Health Equity	3
+PB HLTH 101	A Sustainable World: Challenges and Opportunities	3
+PB HLTH 104A
+& PB HLTH 104B	Health Promotion in a College Setting
+and Health Promotion in a College Setting	4
+PB HLTH 107	Violence, Social Justice, and Public Health	2
+PB HLTH W108	Women's Health, Gender And Empowerment	3
+PB HLTH 118	Nutrition in Developing Countries	3
+PB HLTH 129	The Aging Human Brain	3
+PB HLTH C155/SOCIOL C115	Sociology of Health and Medicine	4
+PSYCH 134	Health Psychology	3

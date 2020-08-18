@@ -1,0 +1,24 @@
+POL SCI 1	Introduction to American Politics	4
+POL SCI N1AC	Introduction to American Politics
+POL SCI 102	The American Presidency	4
+POL SCI 103	Congress	4
+POL SCI 103W	The Congress	4
+POL SCI 104	Political Parties	4
+POL SCI 105	The Politician	4
+POL SCI 106A	American Politics: Campaign Strategy - Media	4
+POL SCI 109 A–Z
+POL SCI 111AC	The Politics of Displacement	4
+POL SCI 150	The American Legal System	4
+POL SCI 157A	Constitutional Law of the United States	4
+POL SCI 157B	Constitutional Law of the United States	4
+POL SCI 161	Public Opinion, Voting and Participation	4
+POL SCI 164A	Political Psychology and Involvement	4
+POL SCI N164A	Psychology of Politics	4
+POL SCI 166	Latinos and the U.S. Political System	4
+POL SCI 167	Racial and Ethnic Politics in the New American Century	4
+POL SCI 167AC	Racial and Ethnic Politics in the New American Century	4
+POL SCI 169	Selected Topics in Political Behavior	4
+POL SCI 171	California Politics	4
+POL SCI 175A	Urban and Metropolitan Government and Politics	4
+POL SCI 181	Public Organization and Administration	4
+POL SCI 186	Public Problems	4

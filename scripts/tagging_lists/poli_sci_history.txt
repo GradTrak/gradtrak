@@ -1,0 +1,100 @@
+AFRICAM 4A	Africa: History and Culture	4
+AFRICAM N4A	Africa: History and Culture
+AFRICAM 4B	Africa: History and Culture	4
+AFRICAM 111	Race, Class, and Gender in the United States	3
+CELTIC 70	The World of the Celts	4
+CLASSIC 10A	Introduction to Greek Civilization	4
+CLASSIC 10B	Introduction to Roman Civilization	4
+ECON 113	U.S Economic History	4
+ECON 115	The World Economy in the Twentieth Century	4
+ETH STD 10AC	A History of Race and Ethnicity in Western North America, 1598-Present (or XETHSTD 21AC)	4
+ETH STD 21AC	A Comparative Survey of Racial and Ethnic Groups in the U.S	4
+GEOG C55	Introduction to Central Asia	3
+GERMAN 160A	Politics and Culture in 20th-Century Germany: A Century of Extremes	4
+GERMAN 160C	Politics and Culture in 20th-Century Germany: A Divided Nation. Politics and Culture in Germany 1945-1990	4
+GLOBAL 45	Survey of World History	4
+HISTORY 4A	Origins of Western Civilization: The Ancient Mediterranean World	4
+HISTORY 4B	Origins of Western Civilization: Medieval Europe	4
+HISTORY 5	European Civilization from the Renaissance to the Present	4
+HISTORY 6A	History of China: Origins to the Mongol Conquest	4
+HISTORY 6B	Introduction to Chinese History from the Mongols to Mao	4
+HISTORY 7A	Introduction to the History of the United States: The United States from Settlement to Civil War	4
+HISTORY 7B	Introduction to the History of the United States: The United States from Civil War to Present	4
+HISTORY 10	African History	4
+HISTORY 8A	Latin American History: Becoming Latin America, 1492 to 1824	4
+HISTORY 8B	Latin American History: Modern Latin America	4
+HISTORY 11	India	4
+HISTORY 12	The Middle East	4
+HISTORY 14	Introduction to the History of Japan	4
+HISTORY 105A	Ancient Greece: Archaic and Classical Greek History	4
+HISTORY 105B	Ancient Greece: The Greek World: 403-31 BCE	4
+HISTORY 106A	Ancient Rome: The Roman Republic	4
+HISTORY 106B	Ancient Rome: The Roman Empire	4
+HISTORY 108	Byzantium	4
+HISTORY 112B	Africa: Modern South Africa, 1652-Present	4
+HISTORY 122AC	Antebellum America: The Advent of Mass Society	4
+HISTORY 123	Civil War and Reconstruction	4
+HISTORY 124A	The Recent United States: The United States from the Late 19th Century to the Eve of World War II	4
+HISTORY 124B	The Recent United States: The United States from World War II	4
+HISTORY 130	American Foreign Policy	4
+HISTORY 131B	Social History of the United States: Creating Modern American Society: From the End of the Civil War to the Global Age	4
+HISTORY 133A	The History of American Capitalism	4
+HISTORY 137AC	The Repeopling of America	4
+HISTORY C139B	The American Immigrant Experience	4
+HISTORY C139C	Civil Rights and Social Movements in U.S. History	4
+HISTORY C139D	From Civil Rights Era to the New Gilded Age: Struggles for Racial Equality and Economic Equity from 'Double Victory' to 'Occupy'	4
+HISTORY 140B	Mexico: Modern Mexico	4
+HISTORY 141B	Social History of Latin America: Social History of Modern Latin America	4
+HISTORY 142	Cuba in World History	4
+HISTORY 143	Brazil	4
+HISTORY 149B	Medieval Italy: Italy in the Age of Dante (1000-1350)	4
+HISTORY 150B	Medieval England: From the Conquest to 1290	4
+HISTORY 151A	Early Modern Britain, 1485-1750: Reformation to Revolution, Island to Empire	4
+HISTORY 151B	Britain 1485-Present: Britain, 1660-1851	4
+HISTORY 151C	The Peculiar Modernity of Britain, 1750-present	4
+HISTORY 152A	Topics in the History of the British Isles: Ireland Since the Union	4
+HISTORY 155A	Medieval Europe: From the Late Empire to the Investiture Conflict	4
+HISTORY 155B	Medieval Europe: From the Investiture Conflict to the Fifteenth Century	4
+HISTORY C157	The Renaissance and the Reformation	4
+HISTORY 158A	Modern Europe: Old Regime and Revolutionary Europe, 1715-1815	4
+HISTORY 158B	Modern Europe: Europe in the 19th Century	4
+HISTORY 158C	Modern Europe: Old and New Europe, 1914-Present	4
+HISTORY 159A	European Economic History	4
+HISTORY 159B	European Economic History	4
+HISTORY 160	The International Economy of the 20th Century	4
+HISTORY 162A	Europe and the World: Wars, Empires, Nations 1648-1914	4
+HISTORY 162B	War and Peace: International Relations since 1914	4
+HISTORY 164A	The Birth of Modern Thought: European Intellectual History, 1500-1800	4
+HISTORY 164B	Modern European Intellectual History: European Intellectual History from Enlightenment to 1870	4
+HISTORY 165A	Topics in Modern European History: The Reformations of Christendom	4
+HISTORY 165B	Topics in Modern European History: The World, the Picture, and the Page: The Revolution in European Culture since the late 18th Century	4
+HISTORY 166B	Modern France: Renaissance to Revolution	4
+HISTORY 166C	Modern France	4
+HISTORY 167A	Modern Germany: Early Modern Germany	4
+HISTORY 167B	Modern Germany: The Rise and Fall of the Second Reich: Germany 1770-1918	4
+HISTORY 167C	Modern Germany: Germany 1914 to the Present	4
+HISTORY 168A	Spain and Portugal: The Spanish and Portuguese Empires in the Golden Age: 1450-1700	4
+HISTORY 169A	Modern Italy: Renaissance and Baroque Italy 1350-1800	4
+HISTORY 170	The Netherlands	4
+HISTORY 171A	Russia: Russia to 1700	4
+HISTORY 171B	Autocracy and Society in Romanov Russia	4
+HISTORY 171C	Russia: History of the Soviet Union	4
+HISTORY 173B	History of Eastern Europe: The Habsburg Empire, 1740-1918	4
+HISTORY 173C	History of Eastern Europe: History of Eastern Europe: From 1900 to the Present	4
+HISTORY C175B	Jewish Civilization: Modern Period	4
+HISTORY 177A	Armenia: Armenia from Ethnogenesis to the Dark Ages	4
+HISTORY 177B	Armenia: From Pre-modern Empires to the Present	4
+HISTORY 185A	History of Christianity: History of Christianity to 1250	4
+HISTORY 185B	History of Christianity: History of Christianity from 1250	4
+NE STUD 10	Introduction to the Near East	4
+NE STUD C26	Introduction to Central Asia	3
+NE STUD 109	Mesopotamian History	3
+NE STUD 130A	History of Ancient Israel	3
+NE STUD 130B	History of Ancient Israel	3
+NE STUD 147	The Rise of Islamic Civilization	4
+NE STUD 173A	Topics in the History of Central Asia and the Turks	3
+NE STUD 173B	Topics in the History of Central Asia and the Turks	3
+NE STUD 175	History and Culture of Afghanistan	3
+PACS 125AC	War, Culture, and Society	4
+PORTUG 113	Brazilian Civilization	4
+SCANDIN 123	Viking and Medieval Scandinavia	4

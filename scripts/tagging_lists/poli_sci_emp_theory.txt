@@ -1,0 +1,3 @@
+POL SCI C131A	Applied Econometrics and Public Policy	4
+POL SCI C135	Game Theory in the Social Sciences	4
+POL SCI W135	Game Theory in the Social Sciences	4

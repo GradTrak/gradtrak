@@ -222,5 +222,57 @@
   {
     "id": "cog_sci_society",
     "name": "Cog Sci Society, Culture, and Cognition"
+  },
+  {
+    "id": "poli_sci_amer_pol",
+    "name": "Poli Sci American Politics"
+  },
+  {
+    "id": "poli_sci_comp_pol",
+    "name": "Poli Sci Comparative Politics"
+  },
+  {
+    "id": "poli_sci_emp_theory",
+    "name": "Poli Sci Emp. Theory and Quant. Methods"
+  },
+  {
+    "id": "poli_sci_int_rel",
+    "name": "Poli Sci International Relations"
+  },
+  {
+    "id": "poli_sci_poli_theory",
+    "name": "Poli Sci Political Theory"
+  },
+  {
+    "id": "poli_sci_amer_pol_upper",
+    "name": "Poli Sci American Politics Upper Div"
+  },
+  {
+    "id": "poli_sci_comp_pol_upper",
+    "name": "Poli Sci Comparative Politics Upper Div"
+  },
+  {
+    "id": "poli_sci_emp_theory_upper",
+    "name": "Poli Sci Emp. Theory and Quant. Methods Upper Div"
+  },
+  {
+    "id": "poli_sci_int_rel_upper",
+    "name": "Poli Sci International Relations Upper Div"
+  },
+  {
+    "id": "poli_sci_poli_theory_upper",
+    "name": "Poli Sci Political Theory Upper Div"
+  },
+  {
+    "id": "poli_sci_history",
+    "name": "Poli Sci History"
+  },
+  {
+    "id": "pb_hlth_capstone",
+    "name": "Public Health Capstone"
+  },
+  {
+    "id": "pb_hlth_elective",
+    "name": "Public Health Elective"
   }
 ]

@@ -6,8 +6,8 @@ const nonAlphanumeric = /[^a-zA-Z0-9]/;
 
 
 //INPUTS
-const MY_FILE = './tagging_lists/cog_sci_elective.txt'; //change to whatever
-const TAG = 'cog_sci_elective';
+const MY_FILE = './tagging_lists/poli_sci_int_rel.txt'; //change to whatever
+const TAG = 'poli_sci_int_rel_upper';
 
 
 
