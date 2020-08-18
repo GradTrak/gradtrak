@@ -402,12 +402,14 @@ function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course>|boolean
  * @return {Map<Requirement, Map<Course, CourseFulfillmentType>>}
  */
 function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Map<Requirement, Set<Course>>[], coursePoolMapping: Map<Requirement, Map<Course, CourseFulfillmentType>>): Map<Requirement, Map<Course, CourseFulfillmentType>> {
-  
-
   reqs.forEach((req: Requirement) => {
+    console.log(reqToCourseMappings)
     const courseCandidates: Set<Course> = new Set<Course>();
     reqToCourseMappings.forEach((reqToCourseMapping: Map<Requirement, Set<Course>>) => {
       const fulfillmentCandidate: Set<Course> = reqToCourseMapping.get(req);
+      if (!fulfillmentCandidate) {
+        return;
+      }
       fulfillmentCandidate.forEach(courseCandidates.add, courseCandidates);
     });
     const courseFulfillments: Map<Course, CourseFulfillmentType> = new Map<Course, CourseFulfillmentType>();
@@ -420,9 +422,12 @@ function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Ma
         }
         return possibility.has(course);
       })) {
+        console.log('fulfilled')
         courseFulfillments.set(course, 'fulfilled');
       } else {
+        console.log('possible')
         courseFulfillments.set(course, 'possible');
+        console.log(courseFulfillments)
         }
     });
     coursePoolMapping.set(req, courseFulfillments);

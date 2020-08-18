@@ -40,13 +40,13 @@
   <ng-container *ngIf="!getCount().hidden; else hiddenCount">
     {{ requirement.toString() }}
     <div class="nested">
-      <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
-        <div *ngIf="i < getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
-          {{
-            getCount()
-              .getFulfillingCourses(courses)
-              [i].getName()
-          }}
+      <div *ngFor="let course of getCourseOrdering(coursePoolMap.get(requirement))">
+        <div *ngIf="course; else unfulfilledCount">
+          <div [ngClass]="(coursePoolMap.get(requirement).get(course)==='fulfilled')?'course':'possible'">
+            {{
+              course.getName()
+            }}
+          </div>
         </div>
       </div>
     </div>

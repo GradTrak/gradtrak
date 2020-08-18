@@ -71,6 +71,7 @@ export class RequirementComponent implements OnInit {
    * Standalone requirements and unit requirements can show requirement display.
    */
   hasDisplay(): boolean {
+    // TODO use coursePool instead for abstraction
     return this.isStandalone() || this.isUnit() || this.isCount();
   }
 
@@ -153,5 +154,35 @@ export class RequirementComponent implements OnInit {
 
   closeRequirementDisplay(): void {
     this.requirementDisplayModalReference.close();
+  }
+
+  /**
+   * For a course pool requirement, processes the 
+   * corresponding coursePoolMap to return an 
+   * ngFor-iterable array of items in order such that
+   * fulfillled come before possible. For course requirements,
+   * it will append nulls to the end until arr.length 
+   * is numRequired.
+   * @param {Map<Course, CourseFulfillmentType>} fulfillment
+   * @return {Course[]} the ordered list of courses, and nulls.
+   */
+  getCourseOrdering(courseFulfillment: Map<Course, CourseFulfillmentType>): Course[] {
+    const resultArray = [];
+    courseFulfillment.forEach(([course, fulfillmentType]) => {
+      if (fulfillmentType === 'fulfilled') {
+        resultArray.push(course);
+      }
+    })
+    courseFulfillment.forEach(([course, fulfillmentType]) => {
+      if (fulfillmentType === 'possible') {
+        resultArray.push(course);
+      }
+    })
+    if (this.isCount()) {
+      while (resultArray.length < this.getCount().numRequired) {
+        resultArray.push(null);
+      }
+    }
+    return resultArray;
   }
 }
