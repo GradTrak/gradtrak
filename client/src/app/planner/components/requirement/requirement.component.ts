@@ -7,6 +7,7 @@ import { MultiRequirement } from '../../models/requirements/multi-requirement.mo
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
+import { CountRequirement } from '../../models/requirements/count-requirement.model';
 
 @Component({
   selector: 'app-requirement',
@@ -30,6 +31,7 @@ export class RequirementComponent implements OnInit {
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
   @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
+  @ViewChild('countReq', { static: true }) private countReq: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private requirementDisplayModalReference: NgbModalRef;
@@ -64,6 +66,13 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MultiRequirement;
   }
 
+  /**
+   * Standalone requirements and unit requirements can show requirement display.
+   */
+  hasDisplay(): boolean {
+    return this.isStandalone() || this.isUnit() || this.isCount();
+  }
+
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
     fulfillments.push(this.fulfillmentMap.get(this.requirement));
@@ -84,6 +93,17 @@ export class RequirementComponent implements OnInit {
     return this.requirement as UnitRequirement;
   }
 
+  isCount(): boolean {
+    return this.requirement instanceof CountRequirement;
+  }
+
+  getCount(): CountRequirement {
+    if (!this.isCount()) {
+      throw new Error('Attempted to retrieve non-CountRequirement as CountRequirement');
+    }
+    return this.requirement as CountRequirement;
+  }
+
   /**
    * Returns the HTML template of the requirement based on its type.
    *
@@ -96,6 +116,9 @@ export class RequirementComponent implements OnInit {
     }
     if (this.isUnit()) {
       return this.unitReq;
+    }
+    if (this.isCount()) {
+      return this.countReq;
     }
     return this.standardReq;
   }
