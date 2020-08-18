@@ -397,11 +397,11 @@ function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course>|boolean
  * @param {Requirement[]} reqs A list of course pool requirements
  * @param {Map<Requirement, boolean|Set<Course>[]} reqToCourseMappings The assignment of 
  * course to each requirement.
- * @param {Map<Requirement, Map<Course, CourseFulfillmentType>>} countUnitMapping
+ * @param {Map<Requirement, Map<Course, CourseFulfillmentType>>} coursePoolMapping
  * The mapping which will be written to and returned.
  * @return {Map<Requirement, Map<Course, CourseFulfillmentType>>}
  */
-function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Map<Requirement, Set<Course>>[], countUnitMapping: Map<Requirement, Map<Course, CourseFulfillmentType>>): Map<Requirement, Map<Course, CourseFulfillmentType>> {
+function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Map<Requirement, Set<Course>>[], coursePoolMapping: Map<Requirement, Map<Course, CourseFulfillmentType>>): Map<Requirement, Map<Course, CourseFulfillmentType>> {
   
 
   reqs.forEach((req: Requirement) => {
@@ -425,9 +425,9 @@ function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Ma
         courseFulfillments.set(course, 'possible');
         }
     });
-    countUnitMapping.set(req, courseFulfillments);
+    coursePoolMapping.set(req, courseFulfillments);
   });
-  return countUnitMapping;
+  return coursePoolMapping;
 }
 
 
@@ -440,7 +440,7 @@ function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Ma
  * @param {Course[]} courses The courses used to fulfill requirements.
  * @param {Map<string, Set<string>>} manuallyFulfilled The map mapping
  * requirement set IDs to the IDs of manually fulfilled within those sets.
- * @param {Map<Requirement, Map<Course, CourseFulfillmentType>>} countUnitMapping
+ * @param {Map<Requirement, Map<Course, CourseFulfillmentType>>} coursePoolMapping
  * A mapping to which the results of count and unit requirement children will be written.
  * @return {Map<Requirement, FulfillmentType>} The fulfillment statuses of
  * every requirement.
@@ -449,7 +449,7 @@ export function processRequirements(
   reqSets: RequirementSet[],
   courses: Course[],
   manuallyFulfilled: Map<string, Set<string>>,
-  countUnitMapping: Map<Requirement, Map<Course, CourseFulfillmentType>>
+  coursePoolMapping: Map<Requirement, Map<Course, CourseFulfillmentType>>
 ): Map<Requirement, FulfillmentType> {
   /* Precompute applicable constraints */
   const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
@@ -508,7 +508,7 @@ export function processRequirements(
             );
             deriveFulfillment([req], reqMappings, fulfillment);
             /* Take unit and countrequirements and find their nested requirement fulfillment statuses */
-            coursePoolReqFulfillments(coursePoolReqs, reqMappings.map(filterBooleanFromMapping), countUnitMapping); 
+            coursePoolReqFulfillments(coursePoolReqs, reqMappings.map(filterBooleanFromMapping), coursePoolMapping); 
           });
         } else {
           const categoryMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
@@ -518,7 +518,7 @@ export function processRequirements(
             manualReqs,
           );
           deriveFulfillment(reqCategory.requirements, categoryMappings, fulfillment);
-          coursePoolReqFulfillments(coursePoolReqs, categoryMappings.map(filterBooleanFromMapping), countUnitMapping); 
+          coursePoolReqFulfillments(coursePoolReqs, categoryMappings.map(filterBooleanFromMapping), coursePoolMapping); 
         }
       });
     } else {
@@ -531,7 +531,7 @@ export function processRequirements(
       );
       deriveFulfillment(setReqs, setMappings, fulfillment);
       /* Take unit and countrequirements and find their nested requirement fulfillment statuses */
-      coursePoolReqFulfillments(coursePoolReqs, setMappings.map(filterBooleanFromMapping), countUnitMapping); 
+      coursePoolReqFulfillments(coursePoolReqs, setMappings.map(filterBooleanFromMapping), coursePoolMapping); 
     }
   });
   manualReqs.forEach((req: Requirement) => {

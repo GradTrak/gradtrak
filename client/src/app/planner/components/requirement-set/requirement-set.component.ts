@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
+import { FulfillmentType, CourseFulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { UserService } from '../../services/user.service';
@@ -15,6 +15,7 @@ export class RequirementSetComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
+  @Input() readonly coursePoolMap: Map<Requirement, Map<Course, CourseFulfillmentType>>;
 
   collapsed: boolean;
 

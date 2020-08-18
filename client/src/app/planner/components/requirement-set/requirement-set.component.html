@@ -14,6 +14,7 @@
       [courses]="courses"
       [manuallyFulfilled]="manuallyFulfilled.get(requirementSet.id)"
       [fulfillmentMap]="fulfillmentMap"
+      [coursePoolMap]="coursePoolMap"
       (onManualFulfill)="manuallyFulfill($event)"
       (onManualUnfulfill)="manuallyUnfulfill($event)"
     ></app-requirement-category>
