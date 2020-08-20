@@ -192,6 +192,10 @@
     "name": "Data Science Domain (dummy since not implemented)"
   },
   {
+    "id": "english_elective",
+    "name": "English Elective"
+  },
+  {
     "id": "ieor_eng_breadth",
     "name": "IEOR Engineering Breadths"
   },

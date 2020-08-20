@@ -42826,7 +42826,9 @@
     "id": "english1ac",
     "dept": "ENGLISH",
     "no": "1AC",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42834,7 +42836,9 @@
     "id": "english1an",
     "dept": "ENGLISH",
     "no": "1AN",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42842,7 +42846,9 @@
     "id": "english1b",
     "dept": "ENGLISH",
     "no": "1B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42850,7 +42856,9 @@
     "id": "englishn1a",
     "dept": "ENGLISH",
     "no": "N1A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42858,7 +42866,9 @@
     "id": "englishn1b",
     "dept": "ENGLISH",
     "no": "N1B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42877,7 +42887,8 @@
     "dept": "ENGLISH",
     "no": "R1AN",
     "tagIds": [
-      "rc_a"
+      "rc_a",
+      "english_elective"
     ]
   },
   {
@@ -42896,7 +42907,9 @@
     "id": "englishs1a",
     "dept": "ENGLISH",
     "no": "S1A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42904,7 +42917,9 @@
     "id": "englishs1ax",
     "dept": "ENGLISH",
     "no": "S1AX",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42912,7 +42927,9 @@
     "id": "englishs1b",
     "dept": "ENGLISH",
     "no": "S1B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42920,7 +42937,9 @@
     "id": "english10",
     "dept": "ENGLISH",
     "no": "10",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42928,7 +42947,9 @@
     "id": "english17",
     "dept": "ENGLISH",
     "no": "17",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -42936,7 +42957,9 @@
     "id": "english17w",
     "dept": "ENGLISH",
     "no": "17W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42944,7 +42967,9 @@
     "id": "englishn17",
     "dept": "ENGLISH",
     "no": "N17",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42953,7 +42978,8 @@
     "dept": "ENGLISH",
     "no": "20",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -42962,7 +42988,9 @@
     "id": "english20w",
     "dept": "ENGLISH",
     "no": "20W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -42970,7 +42998,9 @@
     "id": "englishn20",
     "dept": "ENGLISH",
     "no": "N20",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 1,
@@ -42978,7 +43008,9 @@
     "id": "english24",
     "dept": "ENGLISH",
     "no": "24",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42986,7 +43018,9 @@
     "id": "english25",
     "dept": "ENGLISH",
     "no": "25",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -42994,7 +43028,9 @@
     "id": "english25a",
     "dept": "ENGLISH",
     "no": "25A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43002,7 +43038,9 @@
     "id": "english25e",
     "dept": "ENGLISH",
     "no": "25E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43010,7 +43048,9 @@
     "id": "englishn25",
     "dept": "ENGLISH",
     "no": "N25",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43018,7 +43058,9 @@
     "id": "english26",
     "dept": "ENGLISH",
     "no": "26",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43026,7 +43068,9 @@
     "id": "english26w",
     "dept": "ENGLISH",
     "no": "26W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43034,7 +43078,9 @@
     "id": "englishn26",
     "dept": "ENGLISH",
     "no": "N26",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43042,7 +43088,9 @@
     "id": "englishs26",
     "dept": "ENGLISH",
     "no": "S26",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43050,7 +43098,9 @@
     "id": "english27",
     "dept": "ENGLISH",
     "no": "27",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43058,7 +43108,9 @@
     "id": "english27w",
     "dept": "ENGLISH",
     "no": "27W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43066,7 +43118,9 @@
     "id": "englishn27",
     "dept": "ENGLISH",
     "no": "N27",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43074,7 +43128,9 @@
     "id": "english28",
     "dept": "ENGLISH",
     "no": "28",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43082,7 +43138,9 @@
     "id": "english28w",
     "dept": "ENGLISH",
     "no": "28W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43090,7 +43148,9 @@
     "id": "englishn28",
     "dept": "ENGLISH",
     "no": "N28",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43098,7 +43158,9 @@
     "id": "englishs28",
     "dept": "ENGLISH",
     "no": "S28",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43106,7 +43168,9 @@
     "id": "english29",
     "dept": "ENGLISH",
     "no": "29",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43114,7 +43178,9 @@
     "id": "english30",
     "dept": "ENGLISH",
     "no": "30",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43122,7 +43188,9 @@
     "id": "english30a",
     "dept": "ENGLISH",
     "no": "30A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43130,7 +43198,9 @@
     "id": "english30aw",
     "dept": "ENGLISH",
     "no": "30AW",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43138,7 +43208,9 @@
     "id": "english30bw",
     "dept": "ENGLISH",
     "no": "30BW",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43146,7 +43218,9 @@
     "id": "english30w",
     "dept": "ENGLISH",
     "no": "30W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43154,7 +43228,9 @@
     "id": "englishn30a",
     "dept": "ENGLISH",
     "no": "N30A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43162,7 +43238,9 @@
     "id": "englishn30b",
     "dept": "ENGLISH",
     "no": "N30B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43170,7 +43248,9 @@
     "id": "english31",
     "dept": "ENGLISH",
     "no": "31",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43180,7 +43260,8 @@
     "no": "31AC",
     "tagIds": [
       "ac",
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43189,7 +43270,9 @@
     "id": "englishn31",
     "dept": "ENGLISH",
     "no": "N31",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43198,7 +43281,8 @@
     "dept": "ENGLISH",
     "no": "N31AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -43208,7 +43292,8 @@
     "dept": "ENGLISH",
     "no": "33",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43217,7 +43302,9 @@
     "id": "english37",
     "dept": "ENGLISH",
     "no": "37",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43225,7 +43312,9 @@
     "id": "english39",
     "dept": "ENGLISH",
     "no": "39",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43233,7 +43322,9 @@
     "id": "english39a",
     "dept": "ENGLISH",
     "no": "39A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43241,7 +43332,9 @@
     "id": "english39b",
     "dept": "ENGLISH",
     "no": "39B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43249,7 +43342,9 @@
     "id": "english39c",
     "dept": "ENGLISH",
     "no": "39C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43257,7 +43352,9 @@
     "id": "english39d",
     "dept": "ENGLISH",
     "no": "39D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43265,7 +43362,9 @@
     "id": "english39e",
     "dept": "ENGLISH",
     "no": "39E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43273,7 +43372,9 @@
     "id": "english39f",
     "dept": "ENGLISH",
     "no": "39F",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43281,7 +43382,9 @@
     "id": "english39g",
     "dept": "ENGLISH",
     "no": "39G",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43289,7 +43392,9 @@
     "id": "english39h",
     "dept": "ENGLISH",
     "no": "39H",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43297,7 +43402,9 @@
     "id": "english39i",
     "dept": "ENGLISH",
     "no": "39I",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43305,7 +43412,9 @@
     "id": "english39j",
     "dept": "ENGLISH",
     "no": "39J",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43313,7 +43422,9 @@
     "id": "english39k",
     "dept": "ENGLISH",
     "no": "39K",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43321,7 +43432,9 @@
     "id": "english39l",
     "dept": "ENGLISH",
     "no": "39L",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43329,7 +43442,9 @@
     "id": "english39m",
     "dept": "ENGLISH",
     "no": "39M",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43337,7 +43452,9 @@
     "id": "english39n",
     "dept": "ENGLISH",
     "no": "39N",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43345,7 +43462,9 @@
     "id": "english39o",
     "dept": "ENGLISH",
     "no": "39O",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43353,7 +43472,9 @@
     "id": "english39p",
     "dept": "ENGLISH",
     "no": "39P",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43361,7 +43482,9 @@
     "id": "english39q",
     "dept": "ENGLISH",
     "no": "39Q",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43369,7 +43492,9 @@
     "id": "english39r",
     "dept": "ENGLISH",
     "no": "39R",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43377,7 +43502,9 @@
     "id": "english39s",
     "dept": "ENGLISH",
     "no": "39S",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43385,7 +43512,9 @@
     "id": "english39t",
     "dept": "ENGLISH",
     "no": "39T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43393,7 +43522,9 @@
     "id": "english39u",
     "dept": "ENGLISH",
     "no": "39U",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43401,7 +43532,9 @@
     "id": "english39v",
     "dept": "ENGLISH",
     "no": "39V",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43409,7 +43542,9 @@
     "id": "english39w",
     "dept": "ENGLISH",
     "no": "39W",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43417,7 +43552,9 @@
     "id": "english39x",
     "dept": "ENGLISH",
     "no": "39X",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43425,7 +43562,9 @@
     "id": "english39y",
     "dept": "ENGLISH",
     "no": "39Y",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43433,7 +43572,9 @@
     "id": "english39z",
     "dept": "ENGLISH",
     "no": "39Z",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43441,7 +43582,9 @@
     "id": "english40",
     "dept": "ENGLISH",
     "no": "40",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43449,7 +43592,9 @@
     "id": "englishs40",
     "dept": "ENGLISH",
     "no": "S40",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43457,7 +43602,9 @@
     "id": "english42",
     "dept": "ENGLISH",
     "no": "42",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43465,7 +43612,9 @@
     "id": "english43a",
     "dept": "ENGLISH",
     "no": "43A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43473,7 +43622,9 @@
     "id": "english43b",
     "dept": "ENGLISH",
     "no": "43B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43481,7 +43632,9 @@
     "id": "english43d",
     "dept": "ENGLISH",
     "no": "43D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43489,7 +43642,9 @@
     "id": "english43n",
     "dept": "ENGLISH",
     "no": "43N",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43497,7 +43652,9 @@
     "id": "englishn43a",
     "dept": "ENGLISH",
     "no": "N43A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43505,7 +43662,9 @@
     "id": "englishn43b",
     "dept": "ENGLISH",
     "no": "N43B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43513,7 +43672,9 @@
     "id": "englishn43d",
     "dept": "ENGLISH",
     "no": "N43D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43521,7 +43682,9 @@
     "id": "english44a",
     "dept": "ENGLISH",
     "no": "44A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43529,7 +43692,9 @@
     "id": "english44aw",
     "dept": "ENGLISH",
     "no": "44AW",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43537,7 +43702,9 @@
     "id": "english44b",
     "dept": "ENGLISH",
     "no": "44B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 6,
@@ -43545,7 +43712,9 @@
     "id": "english44bw",
     "dept": "ENGLISH",
     "no": "44BW",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43553,7 +43722,9 @@
     "id": "english44c",
     "dept": "ENGLISH",
     "no": "44C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43561,7 +43732,9 @@
     "id": "englishn44a",
     "dept": "ENGLISH",
     "no": "N44A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43569,7 +43742,9 @@
     "id": "englishn44b",
     "dept": "ENGLISH",
     "no": "N44B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43578,7 +43753,8 @@
     "dept": "ENGLISH",
     "no": "45A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43588,7 +43764,8 @@
     "dept": "ENGLISH",
     "no": "45B",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43598,7 +43775,8 @@
     "dept": "ENGLISH",
     "no": "45C",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43607,7 +43785,9 @@
     "id": "englishn45a",
     "dept": "ENGLISH",
     "no": "N45A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43615,7 +43795,9 @@
     "id": "englishn45b",
     "dept": "ENGLISH",
     "no": "N45B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43623,7 +43805,9 @@
     "id": "englishn45c",
     "dept": "ENGLISH",
     "no": "N45C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43631,7 +43815,9 @@
     "id": "english46a",
     "dept": "ENGLISH",
     "no": "46A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43639,7 +43825,9 @@
     "id": "english46b",
     "dept": "ENGLISH",
     "no": "46B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43647,7 +43835,9 @@
     "id": "englishn50",
     "dept": "ENGLISH",
     "no": "N50",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43655,7 +43845,9 @@
     "id": "englishr50",
     "dept": "ENGLISH",
     "no": "R50",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43664,7 +43856,8 @@
     "dept": "ENGLISH",
     "no": "53",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43673,7 +43866,9 @@
     "id": "englishc77",
     "dept": "ENGLISH",
     "no": "C77",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43681,7 +43876,9 @@
     "id": "english80k",
     "dept": "ENGLISH",
     "no": "80K",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43689,7 +43886,9 @@
     "id": "english91a",
     "dept": "ENGLISH",
     "no": "91A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 2,
@@ -43697,7 +43896,9 @@
     "id": "english95",
     "dept": "ENGLISH",
     "no": "95",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43705,7 +43906,9 @@
     "id": "english96",
     "dept": "ENGLISH",
     "no": "96",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 2,
@@ -43713,7 +43916,9 @@
     "id": "english97",
     "dept": "ENGLISH",
     "no": "97",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 1,
@@ -43721,7 +43926,9 @@
     "id": "english98bc",
     "dept": "ENGLISH",
     "no": "98BC",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43731,7 +43938,8 @@
     "no": "101",
     "tagIds": [
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43741,7 +43949,8 @@
     "dept": "ENGLISH",
     "no": "S101",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "english_elective"
     ]
   },
   {
@@ -43751,7 +43960,8 @@
     "dept": "ENGLISH",
     "no": "102",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43762,7 +43972,8 @@
     "no": "104",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43772,7 +43983,8 @@
     "dept": "ENGLISH",
     "no": "105",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43781,7 +43993,9 @@
     "id": "english105a",
     "dept": "ENGLISH",
     "no": "105A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43789,7 +44003,9 @@
     "id": "english105b",
     "dept": "ENGLISH",
     "no": "105B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43798,7 +44014,8 @@
     "dept": "ENGLISH",
     "no": "106",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43807,7 +44024,9 @@
     "id": "english106a",
     "dept": "ENGLISH",
     "no": "106A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43815,7 +44034,9 @@
     "id": "english106b",
     "dept": "ENGLISH",
     "no": "106B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43824,7 +44045,8 @@
     "dept": "ENGLISH",
     "no": "107",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43833,7 +44055,9 @@
     "id": "englishc107",
     "dept": "ENGLISH",
     "no": "C107",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43841,7 +44065,9 @@
     "id": "englishn107",
     "dept": "ENGLISH",
     "no": "N107",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43849,7 +44075,9 @@
     "id": "englishs107",
     "dept": "ENGLISH",
     "no": "S107",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43858,7 +44086,8 @@
     "dept": "ENGLISH",
     "no": "110",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43867,7 +44096,9 @@
     "id": "english110a",
     "dept": "ENGLISH",
     "no": "110A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43875,7 +44106,9 @@
     "id": "english110b",
     "dept": "ENGLISH",
     "no": "110B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43884,7 +44117,8 @@
     "dept": "ENGLISH",
     "no": "111",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43894,7 +44128,8 @@
     "dept": "ENGLISH",
     "no": "112",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43903,7 +44138,9 @@
     "id": "english114a",
     "dept": "ENGLISH",
     "no": "114A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43911,7 +44148,9 @@
     "id": "english114b",
     "dept": "ENGLISH",
     "no": "114B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43919,7 +44158,9 @@
     "id": "englishn114a",
     "dept": "ENGLISH",
     "no": "N114A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43927,7 +44168,9 @@
     "id": "englishn114b",
     "dept": "ENGLISH",
     "no": "N114B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43935,7 +44178,9 @@
     "id": "english115a",
     "dept": "ENGLISH",
     "no": "115A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43944,7 +44189,8 @@
     "dept": "ENGLISH",
     "no": "115B",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -43953,7 +44199,9 @@
     "id": "englishn115a",
     "dept": "ENGLISH",
     "no": "N115A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -43961,7 +44209,9 @@
     "id": "englishn115b",
     "dept": "ENGLISH",
     "no": "N115B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43970,7 +44220,8 @@
     "dept": "ENGLISH",
     "no": "116",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -43979,7 +44230,9 @@
     "id": "english117a",
     "dept": "ENGLISH",
     "no": "117A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43987,7 +44240,9 @@
     "id": "english117b",
     "dept": "ENGLISH",
     "no": "117B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -43995,7 +44250,9 @@
     "id": "english117e",
     "dept": "ENGLISH",
     "no": "117E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44003,7 +44260,9 @@
     "id": "english117f",
     "dept": "ENGLISH",
     "no": "117F",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44011,7 +44270,9 @@
     "id": "english117j",
     "dept": "ENGLISH",
     "no": "117J",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44020,7 +44281,8 @@
     "dept": "ENGLISH",
     "no": "117S",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44029,7 +44291,9 @@
     "id": "english117t",
     "dept": "ENGLISH",
     "no": "117T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44037,7 +44301,9 @@
     "id": "englishn117s",
     "dept": "ENGLISH",
     "no": "N117S",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44045,7 +44311,9 @@
     "id": "englishs117s",
     "dept": "ENGLISH",
     "no": "S117S",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44055,7 +44323,8 @@
     "no": "118",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44064,7 +44333,9 @@
     "id": "englishn118",
     "dept": "ENGLISH",
     "no": "N118",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44073,7 +44344,8 @@
     "dept": "ENGLISH",
     "no": "119",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44083,7 +44355,8 @@
     "dept": "ENGLISH",
     "no": "120",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44093,7 +44366,8 @@
     "dept": "ENGLISH",
     "no": "121",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44102,7 +44376,9 @@
     "id": "englishn121",
     "dept": "ENGLISH",
     "no": "N121",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44111,7 +44387,8 @@
     "dept": "ENGLISH",
     "no": "122",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44121,7 +44398,8 @@
     "dept": "ENGLISH",
     "no": "124",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44130,7 +44408,9 @@
     "id": "english125a",
     "dept": "ENGLISH",
     "no": "125A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44138,7 +44418,9 @@
     "id": "english125b",
     "dept": "ENGLISH",
     "no": "125B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44146,7 +44428,9 @@
     "id": "english125c",
     "dept": "ENGLISH",
     "no": "125C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44154,7 +44438,9 @@
     "id": "english125d",
     "dept": "ENGLISH",
     "no": "125D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44162,7 +44448,9 @@
     "id": "english125e",
     "dept": "ENGLISH",
     "no": "125E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44170,7 +44458,9 @@
     "id": "englishn125b",
     "dept": "ENGLISH",
     "no": "N125B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44178,7 +44468,9 @@
     "id": "englishn125d",
     "dept": "ENGLISH",
     "no": "N125D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44186,7 +44478,9 @@
     "id": "englishn125e",
     "dept": "ENGLISH",
     "no": "N125E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44194,7 +44488,9 @@
     "id": "englishs125b",
     "dept": "ENGLISH",
     "no": "S125B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44202,7 +44498,9 @@
     "id": "englishs125d",
     "dept": "ENGLISH",
     "no": "S125D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44211,7 +44509,8 @@
     "dept": "ENGLISH",
     "no": "126",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44221,7 +44520,8 @@
     "dept": "ENGLISH",
     "no": "127",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44230,7 +44530,9 @@
     "id": "englishs127",
     "dept": "ENGLISH",
     "no": "S127",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44239,7 +44541,8 @@
     "dept": "ENGLISH",
     "no": "128",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44248,7 +44551,9 @@
     "id": "english130a",
     "dept": "ENGLISH",
     "no": "130A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44257,7 +44562,8 @@
     "dept": "ENGLISH",
     "no": "130B",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44266,7 +44572,9 @@
     "id": "english130c",
     "dept": "ENGLISH",
     "no": "130C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44274,7 +44582,9 @@
     "id": "english130d",
     "dept": "ENGLISH",
     "no": "130D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44282,7 +44592,9 @@
     "id": "englishn130a",
     "dept": "ENGLISH",
     "no": "N130A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44290,7 +44602,9 @@
     "id": "englishn130b",
     "dept": "ENGLISH",
     "no": "N130B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44298,7 +44612,9 @@
     "id": "englishn130d",
     "dept": "ENGLISH",
     "no": "N130D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44306,7 +44622,9 @@
     "id": "englishs130d",
     "dept": "ENGLISH",
     "no": "S130D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44316,7 +44634,8 @@
     "no": "131",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44327,7 +44646,8 @@
     "no": "132",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44336,7 +44656,9 @@
     "id": "englishn132",
     "dept": "ENGLISH",
     "no": "N132",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44344,7 +44666,9 @@
     "id": "englishs132",
     "dept": "ENGLISH",
     "no": "S132",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44353,7 +44677,8 @@
     "dept": "ENGLISH",
     "no": "133",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44362,7 +44687,9 @@
     "id": "english133a",
     "dept": "ENGLISH",
     "no": "133A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44371,7 +44698,8 @@
     "dept": "ENGLISH",
     "no": "133B",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44380,7 +44708,9 @@
     "id": "english133t",
     "dept": "ENGLISH",
     "no": "133T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44389,7 +44719,8 @@
     "dept": "ENGLISH",
     "no": "134",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44398,7 +44729,9 @@
     "id": "englishn134",
     "dept": "ENGLISH",
     "no": "N134",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44406,7 +44739,9 @@
     "id": "englishs134",
     "dept": "ENGLISH",
     "no": "S134",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44415,7 +44750,8 @@
     "dept": "ENGLISH",
     "no": "135",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44425,7 +44761,8 @@
     "dept": "ENGLISH",
     "no": "135AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44435,7 +44772,8 @@
     "dept": "ENGLISH",
     "no": "N135",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44445,7 +44783,8 @@
     "dept": "ENGLISH",
     "no": "N135AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44455,7 +44794,8 @@
     "dept": "ENGLISH",
     "no": "S135",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44465,7 +44805,8 @@
     "dept": "ENGLISH",
     "no": "136",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44475,7 +44816,8 @@
     "dept": "ENGLISH",
     "no": "C136",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44484,7 +44826,9 @@
     "id": "englishs136",
     "dept": "ENGLISH",
     "no": "S136",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44493,7 +44837,8 @@
     "dept": "ENGLISH",
     "no": "137",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44502,7 +44847,9 @@
     "id": "english137a",
     "dept": "ENGLISH",
     "no": "137A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44511,7 +44858,8 @@
     "dept": "ENGLISH",
     "no": "137B",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44520,7 +44868,9 @@
     "id": "english137t",
     "dept": "ENGLISH",
     "no": "137T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44530,7 +44880,8 @@
     "no": "138",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44540,7 +44891,8 @@
     "dept": "ENGLISH",
     "no": "139",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44549,7 +44901,9 @@
     "id": "englishs139",
     "dept": "ENGLISH",
     "no": "S139",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44559,7 +44913,8 @@
     "no": "141",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44568,7 +44923,9 @@
     "id": "englishn141",
     "dept": "ENGLISH",
     "no": "N141",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44576,7 +44933,9 @@
     "id": "english142a",
     "dept": "ENGLISH",
     "no": "142A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44584,7 +44943,9 @@
     "id": "english142d",
     "dept": "ENGLISH",
     "no": "142D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44593,7 +44954,8 @@
     "dept": "ENGLISH",
     "no": "143A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44603,7 +44965,8 @@
     "dept": "ENGLISH",
     "no": "143B",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44613,7 +44976,8 @@
     "dept": "ENGLISH",
     "no": "143C",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44622,7 +44986,9 @@
     "id": "english143d",
     "dept": "ENGLISH",
     "no": "143D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44630,7 +44996,9 @@
     "id": "english143e",
     "dept": "ENGLISH",
     "no": "143E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44639,7 +45007,8 @@
     "dept": "ENGLISH",
     "no": "143N",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44648,7 +45017,9 @@
     "id": "english143t",
     "dept": "ENGLISH",
     "no": "143T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44657,7 +45028,8 @@
     "dept": "ENGLISH",
     "no": "C143V",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44667,7 +45039,8 @@
     "dept": "ENGLISH",
     "no": "144",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44678,7 +45051,8 @@
     "no": "145",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44688,7 +45062,8 @@
     "dept": "ENGLISH",
     "no": "150AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44698,7 +45073,8 @@
     "dept": "ENGLISH",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44707,7 +45083,9 @@
     "id": "english151c",
     "dept": "ENGLISH",
     "no": "151C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44715,7 +45093,9 @@
     "id": "english151g",
     "dept": "ENGLISH",
     "no": "151G",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44723,7 +45103,9 @@
     "id": "english151m",
     "dept": "ENGLISH",
     "no": "151M",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44731,7 +45113,9 @@
     "id": "english151s",
     "dept": "ENGLISH",
     "no": "151S",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44740,7 +45124,8 @@
     "dept": "ENGLISH",
     "no": "152",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44749,7 +45134,9 @@
     "id": "englishn152",
     "dept": "ENGLISH",
     "no": "N152",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44757,7 +45144,9 @@
     "id": "englishs152",
     "dept": "ENGLISH",
     "no": "S152",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44765,7 +45154,9 @@
     "id": "english153t",
     "dept": "ENGLISH",
     "no": "153T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44774,7 +45165,8 @@
     "dept": "ENGLISH",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44785,7 +45177,8 @@
     "no": "161",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44794,7 +45187,9 @@
     "id": "englishs161",
     "dept": "ENGLISH",
     "no": "S161",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44803,7 +45198,8 @@
     "dept": "ENGLISH",
     "no": "162",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44812,7 +45208,9 @@
     "id": "english165",
     "dept": "ENGLISH",
     "no": "165",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44821,7 +45219,8 @@
     "dept": "ENGLISH",
     "no": "165AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44831,7 +45230,8 @@
     "dept": "ENGLISH",
     "no": "166",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -44841,7 +45241,8 @@
     "dept": "ENGLISH",
     "no": "166AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -44850,7 +45251,9 @@
     "id": "englishn166",
     "dept": "ENGLISH",
     "no": "N166",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44858,7 +45261,9 @@
     "id": "englishs166",
     "dept": "ENGLISH",
     "no": "S166",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 2,
@@ -44866,7 +45271,9 @@
     "id": "english167",
     "dept": "ENGLISH",
     "no": "167",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44876,7 +45283,8 @@
     "no": "170",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44885,7 +45293,9 @@
     "id": "englishs170",
     "dept": "ENGLISH",
     "no": "S170",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44894,7 +45304,8 @@
     "dept": "ENGLISH",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44903,7 +45314,9 @@
     "id": "englishs171",
     "dept": "ENGLISH",
     "no": "S171",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44912,7 +45325,8 @@
     "dept": "ENGLISH",
     "no": "172",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44922,7 +45336,8 @@
     "dept": "ENGLISH",
     "no": "173",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44931,7 +45346,9 @@
     "id": "englishn173",
     "dept": "ENGLISH",
     "no": "N173",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -44939,7 +45356,9 @@
     "id": "englishs173",
     "dept": "ENGLISH",
     "no": "S173",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44948,7 +45367,8 @@
     "dept": "ENGLISH",
     "no": "174",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44957,7 +45377,9 @@
     "id": "englishs174",
     "dept": "ENGLISH",
     "no": "S174",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44968,7 +45390,8 @@
     "tagIds": [
       "ls_arts",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44977,7 +45400,9 @@
     "id": "englishs175",
     "dept": "ENGLISH",
     "no": "S175",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -44986,7 +45411,8 @@
     "dept": "ENGLISH",
     "no": "176",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -44995,7 +45421,9 @@
     "id": "englishn176",
     "dept": "ENGLISH",
     "no": "N176",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45003,7 +45431,9 @@
     "id": "englishs176",
     "dept": "ENGLISH",
     "no": "S176",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45012,7 +45442,8 @@
     "dept": "ENGLISH",
     "no": "177",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -45021,7 +45452,9 @@
     "id": "englishn177",
     "dept": "ENGLISH",
     "no": "N177",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45029,7 +45462,9 @@
     "id": "englishs177",
     "dept": "ENGLISH",
     "no": "S177",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45038,7 +45473,8 @@
     "dept": "ENGLISH",
     "no": "178",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -45048,7 +45484,8 @@
     "dept": "ENGLISH",
     "no": "178AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "english_elective"
     ]
   },
   {
@@ -45060,7 +45497,8 @@
     "tagIds": [
       "ls_arts",
       "linguis_elective",
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -45070,7 +45508,8 @@
     "dept": "ENGLISH",
     "no": "180A",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -45079,7 +45518,9 @@
     "id": "english180c",
     "dept": "ENGLISH",
     "no": "180C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45087,7 +45528,9 @@
     "id": "english180e",
     "dept": "ENGLISH",
     "no": "180E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45096,7 +45539,8 @@
     "dept": "ENGLISH",
     "no": "180H",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "english_elective"
     ]
   },
   {
@@ -45105,7 +45549,9 @@
     "id": "english180j",
     "dept": "ENGLISH",
     "no": "180J",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45113,7 +45559,9 @@
     "id": "english180l",
     "dept": "ENGLISH",
     "no": "180L",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45121,7 +45569,9 @@
     "id": "english180n",
     "dept": "ENGLISH",
     "no": "180N",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45129,7 +45579,9 @@
     "id": "english180r",
     "dept": "ENGLISH",
     "no": "180R",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45137,7 +45589,9 @@
     "id": "english180s",
     "dept": "ENGLISH",
     "no": "180S",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45145,7 +45599,9 @@
     "id": "english180t",
     "dept": "ENGLISH",
     "no": "180T",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45153,7 +45609,9 @@
     "id": "english180z",
     "dept": "ENGLISH",
     "no": "180Z",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45161,7 +45619,9 @@
     "id": "englishn180a",
     "dept": "ENGLISH",
     "no": "N180A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45169,7 +45629,9 @@
     "id": "englishn180h",
     "dept": "ENGLISH",
     "no": "N180H",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45177,7 +45639,9 @@
     "id": "englishn180z",
     "dept": "ENGLISH",
     "no": "N180Z",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45185,7 +45649,9 @@
     "id": "englishs180e",
     "dept": "ENGLISH",
     "no": "S180E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45193,7 +45659,9 @@
     "id": "englishs180z",
     "dept": "ENGLISH",
     "no": "S180Z",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45202,7 +45670,8 @@
     "dept": "ENGLISH",
     "no": "190",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -45212,7 +45681,8 @@
     "dept": "ENGLISH",
     "no": "193",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "english_elective"
     ]
   },
   {
@@ -45221,7 +45691,9 @@
     "id": "englishh195a",
     "dept": "ENGLISH",
     "no": "H195A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45229,7 +45701,9 @@
     "id": "englishh195b",
     "dept": "ENGLISH",
     "no": "H195B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45237,7 +45711,9 @@
     "id": "english196a",
     "dept": "ENGLISH",
     "no": "196A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45245,7 +45721,9 @@
     "id": "english196b",
     "dept": "ENGLISH",
     "no": "196B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 1,
@@ -45253,7 +45731,9 @@
     "id": "english198bc",
     "dept": "ENGLISH",
     "no": "198BC",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45261,7 +45741,9 @@
     "id": "english200",
     "dept": "ENGLISH",
     "no": "200",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45269,7 +45751,9 @@
     "id": "english201a",
     "dept": "ENGLISH",
     "no": "201A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45277,7 +45761,9 @@
     "id": "english201b",
     "dept": "ENGLISH",
     "no": "201B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45285,7 +45771,9 @@
     "id": "english202",
     "dept": "ENGLISH",
     "no": "202",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45293,7 +45781,9 @@
     "id": "english203",
     "dept": "ENGLISH",
     "no": "203",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 2,
@@ -45301,7 +45791,9 @@
     "id": "english204a",
     "dept": "ENGLISH",
     "no": "204A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 2,
@@ -45309,7 +45801,9 @@
     "id": "english204b",
     "dept": "ENGLISH",
     "no": "204B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45317,7 +45811,9 @@
     "id": "english205a",
     "dept": "ENGLISH",
     "no": "205A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45325,7 +45821,9 @@
     "id": "english205b",
     "dept": "ENGLISH",
     "no": "205B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45333,7 +45831,9 @@
     "id": "english206",
     "dept": "ENGLISH",
     "no": "206",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45341,7 +45841,9 @@
     "id": "english207a",
     "dept": "ENGLISH",
     "no": "207A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45349,7 +45851,9 @@
     "id": "english207b",
     "dept": "ENGLISH",
     "no": "207B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45357,7 +45861,9 @@
     "id": "english211",
     "dept": "ENGLISH",
     "no": "211",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45365,7 +45871,9 @@
     "id": "english212",
     "dept": "ENGLISH",
     "no": "212",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45373,7 +45881,9 @@
     "id": "english217",
     "dept": "ENGLISH",
     "no": "217",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45381,7 +45891,9 @@
     "id": "english218",
     "dept": "ENGLISH",
     "no": "218",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45389,7 +45901,9 @@
     "id": "english220",
     "dept": "ENGLISH",
     "no": "220",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45397,7 +45911,9 @@
     "id": "english243a",
     "dept": "ENGLISH",
     "no": "243A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45405,7 +45921,9 @@
     "id": "english243b",
     "dept": "ENGLISH",
     "no": "243B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45413,7 +45931,9 @@
     "id": "english243n",
     "dept": "ENGLISH",
     "no": "243N",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 0,
@@ -45421,7 +45941,9 @@
     "id": "english246",
     "dept": "ENGLISH",
     "no": "246",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45429,7 +45951,9 @@
     "id": "english246a",
     "dept": "ENGLISH",
     "no": "246A",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45437,7 +45961,9 @@
     "id": "english246b",
     "dept": "ENGLISH",
     "no": "246B",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45445,7 +45971,9 @@
     "id": "english246c",
     "dept": "ENGLISH",
     "no": "246C",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45453,7 +45981,9 @@
     "id": "english246d",
     "dept": "ENGLISH",
     "no": "246D",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45461,7 +45991,9 @@
     "id": "english246e",
     "dept": "ENGLISH",
     "no": "246E",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45469,7 +46001,9 @@
     "id": "english246f",
     "dept": "ENGLISH",
     "no": "246F",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45477,7 +46011,9 @@
     "id": "english246g",
     "dept": "ENGLISH",
     "no": "246G",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45485,7 +46021,9 @@
     "id": "english246h",
     "dept": "ENGLISH",
     "no": "246H",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45493,7 +46031,9 @@
     "id": "english246i",
     "dept": "ENGLISH",
     "no": "246I",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45501,7 +46041,9 @@
     "id": "english246j",
     "dept": "ENGLISH",
     "no": "246J",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45509,7 +46051,9 @@
     "id": "english246k",
     "dept": "ENGLISH",
     "no": "246K",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45517,7 +46061,9 @@
     "id": "english246l",
     "dept": "ENGLISH",
     "no": "246L",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45525,7 +46071,9 @@
     "id": "english250",
     "dept": "ENGLISH",
     "no": "250",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45533,7 +46081,9 @@
     "id": "english251",
     "dept": "ENGLISH",
     "no": "251",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45541,7 +46091,9 @@
     "id": "english270",
     "dept": "ENGLISH",
     "no": "270",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45549,7 +46101,9 @@
     "id": "english271",
     "dept": "ENGLISH",
     "no": "271",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45557,7 +46111,9 @@
     "id": "english301",
     "dept": "ENGLISH",
     "no": "301",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45565,7 +46121,9 @@
     "id": "english302",
     "dept": "ENGLISH",
     "no": "302",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45573,7 +46131,9 @@
     "id": "english303",
     "dept": "ENGLISH",
     "no": "303",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45581,7 +46141,9 @@
     "id": "english304",
     "dept": "ENGLISH",
     "no": "304",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45589,7 +46151,9 @@
     "id": "english364",
     "dept": "ENGLISH",
     "no": "364",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45597,7 +46161,9 @@
     "id": "english365",
     "dept": "ENGLISH",
     "no": "365",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 4,
@@ -45605,7 +46171,9 @@
     "id": "english366",
     "dept": "ENGLISH",
     "no": "366",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45613,7 +46181,9 @@
     "id": "english375",
     "dept": "ENGLISH",
     "no": "375",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,
@@ -45621,7 +46191,9 @@
     "id": "english397",
     "dept": "ENGLISH",
     "no": "397",
-    "tagIds": []
+    "tagIds": [
+      "english_elective"
+    ]
   },
   {
     "units": 3,

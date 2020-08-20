@@ -372,6 +372,132 @@
     ]
   },
   {
+    "id": "english",
+    "name": "English",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Foundational Courses",
+        "requirements": [
+          {
+            "name": "English 45A",
+            "type": "course",
+            "courseId": "english45a",
+            "id": "english45a"
+          },
+          {
+            "name": "English 45B",
+            "type": "course",
+            "courseId": "english45b",
+            "id": "english45b"
+          },
+          {
+            "name": "English 45C",
+            "type": "course",
+            "courseId": "english45c",
+            "id": "english45c"
+          },
+          {
+            "name": "Shakespeare",
+            "type": "poly",
+            "id": "englishpolyshakespeare",
+            "hidden": true,
+            "requirements": [
+              {
+                "name": "English 17",
+                "type": "course",
+                "courseId": "english17",
+                "id": "english17"
+              },
+              {
+                "name": "English 117A",
+                "type": "course",
+                "courseId": "english117a",
+                "id": "english117a"
+              },
+              {
+                "name": "English 117B",
+                "type": "course",
+                "courseId": "english117b",
+                "id": "english117b"
+              },
+              {
+                "name": "English 117J",
+                "type": "course",
+                "courseId": "english117j",
+                "id": "english117j"
+              },
+              {
+                "name": "English 117S",
+                "type": "course",
+                "courseId": "english117s",
+                "id": "english117s"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Major requirements",
+        "requirements": [
+          {
+            "name": "Pre-1800 Course",
+            "type": "tag",
+            "tagId": "english_pre1800",
+            "id": "english_pre1800"
+          },
+          {
+            "name": "Seminar Course",
+            "type": "multi",
+            "id": "englishmultiseminarcourse",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "English 190",
+                "type": "course",
+                "courseId": "english190",
+                "id": "english190"
+              },
+              {
+                "name": "Honors Seminar",
+                "type": "multi",
+                "id": "englishmultihonorsseminar",
+                "numRequired": 2,
+                "requirements": [
+                  {
+                    "name": "English H195A",
+                    "type": "course",
+                    "courseId": "englishh195a",
+                    "id": "englishh195a"
+                  },
+                  {
+                    "name": "English H195B",
+                    "type": "course",
+                    "courseId": "englishh195b",
+                    "id": "englishh195b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Elective Courses",
+            "type": "count",
+            "id": "englishcountelectivecourses",
+            "numRequired": 6,
+            "requirement": {
+              "name": "English Elective",
+              "type": "tag",
+              "tagId": "english_elective",
+              "id": "english_elective"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "haas",
     "name": "Business Administration",
     "parentId": "ucb",
