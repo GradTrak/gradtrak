@@ -9,6 +9,7 @@ import { MultiRequirement } from './requirements/multi-requirement.model';
 import { PolyRequirement } from './requirements/poly-requirement.model';
 import { TagRequirement } from './requirements/tag-requirement.model';
 import { UnitRequirement } from './requirements/unit-requirement.model';
+import { CountRequirement } from './requirements/count-requirement.model';
 import { Tag } from './tag.model';
 
 /**
@@ -68,11 +69,11 @@ export class RequirementCategory {
     const protoClone: any = { ...proto }; // eslint-disable-line @typescript-eslint/no-explicit-any
 
     let requirement: Requirement;
-    switch (protoClone.type) {
+    switch (proto.type) {
       case 'course': {
-        protoClone.course = coursesMap.get(protoClone.courseId);
+        protoClone.course = coursesMap.get(proto.courseId);
         if (!protoClone.course) {
-          console.error(`No Course object found for course ID: ${protoClone.courseId}`);
+          console.error(`No Course object found for course ID: ${proto.courseId}`);
         }
         delete protoClone.courseId;
         requirement = new CourseRequirement(protoClone);
@@ -80,44 +81,46 @@ export class RequirementCategory {
       }
 
       case 'tag': {
-        protoClone.tag = tagsMap.get(protoClone.tagId);
+        protoClone.tag = tagsMap.get(proto.tagId);
         if (!protoClone.tag) {
-          console.error(`No Tag object found for tag ID: ${protoClone.tagId}`);
+          console.error(`No Tag object found for tag ID: ${proto.tagId}`);
         }
         delete protoClone.tagId;
         requirement = new TagRequirement(protoClone);
         break;
       }
 
-      case 'multi':
-      case 'poly': {
-        protoClone.requirements = protoClone.requirements.map((childReqProto: RequirementPrototype) =>
+      case 'multi': {
+        protoClone.requirements = proto.requirements.map((childReqProto: RequirementPrototype) =>
           RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
         );
-        switch (protoClone.type) {
-          case 'multi':
-            requirement = new MultiRequirement(protoClone);
-            break;
+        requirement = new MultiRequirement(protoClone);
+        break;
+      }
 
-          case 'poly':
-            requirement = new PolyRequirement(protoClone);
-            break;
-
-          default:
-            // Do nothing
-            break;
-        }
+      case 'poly': {
+        protoClone.requirements = proto.requirements.map((childReqProto: RequirementPrototype) =>
+          RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
+        );
+        requirement = new PolyRequirement(protoClone);
         break;
       }
 
       case 'unit': {
-        protoClone.requirement = RequirementCategory.reqFromProto(protoClone.requirement, coursesMap, tagsMap);
+        protoClone.requirement = RequirementCategory.reqFromProto(proto.requirement, coursesMap, tagsMap);
         requirement = new UnitRequirement(protoClone);
         break;
       }
 
+      case 'count': {
+        protoClone.requirement = RequirementCategory.reqFromProto(protoClone.requirement, coursesMap, tagsMap);
+        requirement = new CountRequirement(protoClone);
+        break;
+      }
+
       default: {
-        console.error(`Requirement ${protoClone.name} has unknown Requirement type: ${protoClone.type}`);
+        const unknownProto: RequirementPrototype = proto as RequirementPrototype;
+        console.error(`Requirement ${unknownProto.name} has unknown Requirement type: ${unknownProto.type}`);
         break;
       }
     }
