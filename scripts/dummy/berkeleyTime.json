@@ -43973,7 +43973,8 @@
     "tagIds": [
       "ls_arts",
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -43984,7 +43985,8 @@
     "no": "105",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44087,7 +44089,8 @@
     "no": "110",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44118,7 +44121,8 @@
     "no": "111",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44129,7 +44133,8 @@
     "no": "112",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44139,7 +44144,8 @@
     "dept": "ENGLISH",
     "no": "114A",
     "tagIds": [
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44149,7 +44155,8 @@
     "dept": "ENGLISH",
     "no": "114B",
     "tagIds": [
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44179,7 +44186,8 @@
     "dept": "ENGLISH",
     "no": "115A",
     "tagIds": [
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44190,7 +44198,8 @@
     "no": "115B",
     "tagIds": [
       "ls_arts",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44324,7 +44333,8 @@
     "tagIds": [
       "ls_arts",
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44345,7 +44355,8 @@
     "no": "119",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44356,7 +44367,8 @@
     "no": "120",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44409,7 +44421,8 @@
     "dept": "ENGLISH",
     "no": "125A",
     "tagIds": [
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
@@ -44552,7 +44565,8 @@
     "dept": "ENGLISH",
     "no": "130A",
     "tagIds": [
-      "english_elective"
+      "english_elective",
+      "english_pre1800"
     ]
   },
   {
