@@ -370,12 +370,6 @@ function deriveFulfillment(
       // There are isUnit and isCount functions but they remain in requirement. Possibly move to Utils?
       // isCoursePool is probably useful too.
     });
-
-  /* Take unit and countrequirements and find their nested requirement fulfillment statuses */
-  coursePoolReqFulfillments(coursePoolReqs, reqToCourseMappings.map(filterBooleanFromMapping), coursePoolMapping); 
-  baseReqs.forEach((req: Requirement) => {
-    deriveReqFulfillment(req, maxMappings, fulfillment);
-  });
   return maxMappings;
 }
 
@@ -455,7 +449,7 @@ function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Ma
  * its ultimate fulfillment status, and coursePool is the status of 
  * each course to its fulfillment type, one for each requirement.
  */
-function processOptimalMappings(reqs: Requirement[], optimalMappings: Map<Requirement, Set<Course> | boolean>[]): {requirementFulfillment: Map<Requirement, FulfillmentType>, coursePoolFulfillment: Map<Requirement, Map<Course, CourseFulfillmentType>>} {
+function processOptimalMappings(reqs: Requirement[], optimalMappings: Map<Requirement, Set<Course> | boolean>[]): {requirementFulfillment: Map<Requirement, FulfillmentType>, coursePoolReqFulfillment: Map<Requirement, Map<Course, CourseFulfillmentType>>} {
   const reqMap: Map<Requirement, FulfillmentType> = new Map<Requirement, FulfillmentType>();
   const coursePoolMap: Map<Requirement, Map<Course, CourseFulfillmentType>> = new Map<Requirement, Map<Course, CourseFulfillmentType>>();
   reqs.forEach((req: Requirement) => {

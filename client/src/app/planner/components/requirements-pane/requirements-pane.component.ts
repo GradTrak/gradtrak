@@ -38,7 +38,10 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
 
   ngOnChanges(): void {
     // processRequirements also updates coursePoolMap as an impure function
-    this.fulfillmentMap = processRequirements(this.getRequiredSets(), this.courses, this.manuallyFulfilled, this.coursePoolMap);
+    const fulfillments = processRequirements(args)
+    this.fulfillmentMap = fulfillments.requirementFulfillment;
+    this.coursePoolMap = fulfillments.coursePoolReqFulfillment;
+    processRequirements(this.getRequiredSets(), this.courses, this.manuallyFulfilled, this.coursePoolMap);
   }
 
   openSelector(): void {
