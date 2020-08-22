@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
-import { FulfillmentType, CourseFulfillmentType } from '../../models/fulfillment-type.model';
+import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
@@ -20,7 +20,6 @@ export class RequirementComponent implements OnInit {
   @Input() readonly override: string;
   @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
-  @Input() readonly coursePoolMap: Map<Requirement, Map<Course, CourseFulfillmentType>>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
@@ -77,7 +76,7 @@ export class RequirementComponent implements OnInit {
 
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
-    fulfillments.push(this.fulfillmentMap.get(this.requirement));
+    fulfillments.push(this.fulfillmentMap.get(this.requirement).reqFulfillment);
     if (this.isManuallyFulfilled()) {
       fulfillments.push('manual');
     }
@@ -163,21 +162,21 @@ export class RequirementComponent implements OnInit {
    * fulfillled come before possible. For course requirements,
    * it will append nulls to the end until arr.length 
    * is numRequired.
-   * @param {Map<Course, CourseFulfillmentType>} fulfillment
+   * @param {Map<Course, FulfillmentType>} fulfillment
    * @return {Course[]} the ordered list of courses, and nulls.
    */
-  getCourseOrdering(courseFulfillment: Map<Course, CourseFulfillmentType>): Course[] {
+  getCourseOrdering(fulfillments: Map<Course, FulfillmentType>): Course[] {
     const resultArray = [];
-    courseFulfillment.forEach(([course, fulfillmentType]) => {
-      if (fulfillmentType === 'fulfilled') {
+    fulfillments.forEach((fulfillment, course) => {
+      if (fulfillment.reqFulfillment === 'fulfilled') {
         resultArray.push(course);
       }
-    })
-    courseFulfillment.forEach(([course, fulfillmentType]) => {
-      if (fulfillmentType === 'possible') {
+    });
+    fulfillments.forEach((fulfillment, course) => {
+      if (fulfillment.reqFulfillment === 'possible') {
         resultArray.push(course);
       }
-    })
+    });
     if (this.isCount()) {
       while (resultArray.length < this.getCount().numRequired) {
         resultArray.push(null);

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../../models/course.model';
-import { FulfillmentType, CourseFulfillmentType } from '../../models/fulfillment-type.model';
+import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { UserService } from '../../services/user.service';

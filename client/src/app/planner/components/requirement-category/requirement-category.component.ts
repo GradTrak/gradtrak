@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../../models/course.model';
-import { FulfillmentType, CourseFulfillmentType } from '../../models/fulfillment-type.model';
+import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementCategory } from '../../models/requirement-category.model';
 
@@ -14,7 +14,6 @@ export class RequirementCategoryComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
-  @Input() readonly coursePoolMap: Map<Requirement, Map<Course, CourseFulfillmentType>>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
