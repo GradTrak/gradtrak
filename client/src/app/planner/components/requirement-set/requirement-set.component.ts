@@ -15,7 +15,6 @@ export class RequirementSetComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
-  @Input() readonly coursePoolMap: Map<Requirement, Map<Course, CourseFulfillmentType>>;
 
   collapsed: boolean;
 

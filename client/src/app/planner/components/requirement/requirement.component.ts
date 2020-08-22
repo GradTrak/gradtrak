@@ -185,3 +185,4 @@ export class RequirementComponent implements OnInit {
     return resultArray;
   }
 }
+
