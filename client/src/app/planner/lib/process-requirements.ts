@@ -302,12 +302,13 @@ function deriveReqFulfillment(
   fulfillments: Map<Requirement, FulfillmentType>,
 ): void {
   // TODO type guard
-  if (fulfillments.has(req)) {
+  if (fulfillments.get(req).reqFulfillment) {
     return;
   }
   if (req instanceof MultiRequirement) {
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
     const optimalMapping = findOptimalMapping(req.requirements, bestMappings);
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     processOptimalMapping(req.requirements, optimalMapping, fulfillments);
     const childFulfillments: FulfillmentType[] = req.requirements.map((childReq: Requirement) =>
       fulfillments.get(childReq),
@@ -528,7 +529,6 @@ export function processRequirements(
             );
             const optimalMapping = findOptimalMapping([req], reqMappings);
             processOptimalMapping([req], optimalMapping, fulfillments);
-            deriveReqFulfillment(req, optimalMapping, fulfillments);
           });
         } else {
           const categoryMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
@@ -538,9 +538,8 @@ export function processRequirements(
             manualReqs,
           );
           const optimalMapping = findOptimalMapping(reqCategory.requirements, categoryMappings);
-          reqCategory.requirements.forEach((req: Requirement) => {
-            deriveReqFulfillment(req, optimalMapping, fulfillments);
-          })
+          // eslint-disable-next-line @typescript-eslint/no-use-before-define
+          processOptimalMapping(reqCategory.requirements, optimalMapping, fulfillments);
         }
       });
     } else {
@@ -552,9 +551,8 @@ export function processRequirements(
         manualReqs,
       );
       const optimalMapping = findOptimalMapping(setReqs, setMappings);
-      setReqs.forEach((req: Requirement) => {
-        deriveReqFulfillment(req, optimalMapping, fulfillments)
-      });
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      processOptimalMapping(setReqs, optimalMapping, fulfillments);
     }
   });
   manualReqs.forEach((req: Requirement) => {

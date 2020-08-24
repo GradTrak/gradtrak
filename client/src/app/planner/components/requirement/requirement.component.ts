@@ -64,7 +64,7 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retreive non-MultiRequirement as MultiRequirement');
     }
     return this.requirement as MultiRequirement;
-  }
+    }
 
   /**
    * Standalone requirements and unit requirements can show requirement display.
