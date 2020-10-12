@@ -21,6 +21,10 @@ export class SemesterComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  getUnitCount(): number {
+    return this.semester.courses.reduce((a: number, b: Course): number => (a + b.units), 0)
+  }
+
   isDuplicate(course: Course): boolean {
     return this.getSemestersWithCourse(course).length > 1;
   }
