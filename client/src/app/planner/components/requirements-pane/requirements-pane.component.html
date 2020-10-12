@@ -1,7 +1,7 @@
 <div class="container px-4 py-3">
   <div class="row justify-content-center">
     <div class="col-10 my-4">
-      <button class="gt-button gt-button-primary goal-editor" (click)="openSelector()">Edit Majors</button>
+      <button class="gt-button gt-button-primary goal-editor" (click)="openGoalSelector.emit()">Edit Majors</button>
     </div>
   </div>
   <app-requirement-set
@@ -12,13 +12,3 @@
     [fulfillmentMap]="fulfillmentMap"
   ></app-requirement-set>
 </div>
-
-<ng-template #goalSelector>
-  <div class="modal-body">
-    <app-goal-selector
-      [initialGoals]="goals"
-      (selectGoals)="setGoals($event)"
-      (selectGoals)="closeSelector()"
-    ></app-goal-selector>
-  </div>
-</ng-template>

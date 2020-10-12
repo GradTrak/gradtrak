@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from './models/course.model';
+import { RequirementSet } from './models/requirement-set.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
 import { UserData } from './models/user-data.model';
@@ -24,6 +25,7 @@ export class PlannerComponent implements OnInit {
   @ViewChild('initializer', { static: true }) private initializerTemplate: TemplateRef<any>;
   @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
+  @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
@@ -125,8 +127,17 @@ export class PlannerComponent implements OnInit {
     this.modalInstance = this.modalService.open(this.reportFormTemplate);
   }
 
+  openGoalSelector(): void {
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
+  }
+
   logout(): void {
     this.userService.logout();
+  }
+
+  setGoals(goals: RequirementSet[]): void {
+    this.userService.updateGoals(goals);
   }
 
   setUserData(userData: UserData): void {

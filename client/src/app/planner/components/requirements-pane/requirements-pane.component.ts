@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
 import { FulfillmentType } from '../../models/fulfillment-type.model';
@@ -18,34 +18,21 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly goals: RequirementSet[];
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>; // Maps from a requirementSet id to a list of requirement ids.
+  @Output() openGoalSelector: EventEmitter<void>;
 
   fulfillmentMap: Map<Requirement, FulfillmentType>;
 
-  @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
 
-  constructor(
-    private modalService: NgbModal,
-    private requirementService: RequirementService,
-    private userService: UserService,
-  ) {
+  constructor() {
     this.fulfillmentMap = new Map<Requirement, FulfillmentType>();
+    this.openGoalSelector = new EventEmitter<void>();
   }
 
   ngOnInit(): void {}
 
   ngOnChanges(): void {
     this.fulfillmentMap = processRequirements(this.getRequiredSets(), this.courses, this.manuallyFulfilled);
-  }
-
-  openSelector(): void {
-    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
-  }
-
-  closeSelector(): void {
-    if (this.modalInstance) {
-      this.modalInstance.close();
-    }
   }
 
   /**
@@ -73,9 +60,5 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       required.push(...path);
     });
     return required;
-  }
-
-  setGoals(goals: RequirementSet[]): void {
-    this.userService.updateGoals(goals);
   }
 }

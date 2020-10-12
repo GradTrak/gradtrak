@@ -48,6 +48,7 @@
         [courses]="currentCourses"
         [goals]="state.userData.goals"
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
+        (openGoalSelector)="openGoalSelector()"
       ></app-requirements-pane>
     </div>
   </ng-container>
@@ -80,5 +81,15 @@
 <ng-template #accountEditor>
   <div class="modal-body">
     <app-account-editor (onClose)="closeModal()"></app-account-editor>
+  </div>
+</ng-template>
+
+<ng-template #goalSelector>
+  <div class="modal-body">
+    <app-goal-selector
+      [initialGoals]="state.userData.goals"
+      (selectGoals)="setGoals($event)"
+      (selectGoals)="closeModal()"
+    ></app-goal-selector>
   </div>
 </ng-template>
