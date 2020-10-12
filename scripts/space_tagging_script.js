@@ -1,11 +1,11 @@
 const data = require('./dummy/berkeleyTime.json');
 const fs = require('fs')
 const MY_FILE = './tagging_lists/' + 'fpf.txt'; //change to whatever
-const TAG = 'english_elective';
-//const allowed = ['BIO ENG', 'CHEM', 'CHM ENG', 'CIV ENG', 'MATH', 'EL ENG', 'ING ENG', 'MECH ENG', 'MCELLBI', 'PHYSICS', 'STAT']//'ASTRON', 'CHEM', 'EPS', 'INTEGBI', 'MCELLBI', 'PHYSICS', 'PLANTBI']
+const TAG = 'poli_sci_upper_div';
+const allowed = ['POLSCI']//'ASTRON', 'CHEM', 'EPS', 'INTEGBI', 'MCELLBI', 'PHYSICS', 'PLANTBI']
 const TAG_OR_NOT_FUNC = (course) => {
-  return course.dept === 'ENGLISH' && course.no !== 'R1A' && course.no !== 'R1B';
-  return course.no.toLowerCase().match(/ac$/) && (course.dept[0]!== 'X')
+  return (course.dept === 'POL SCI') &&( (course.no > ('102')) && (course.no < ('189')) || (course.no === ('191')) || (course.no === ('C196A')));
+  return course.no.toLowerCase().match(/ac$/)
 };
 const processEligibleCourses = false;
 let eligibleCourses;
