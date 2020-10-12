@@ -46,6 +46,7 @@
         class="col-8"
         [semesters]="state.userData.semesters"
         (openSemesterChanger)="openSemesterChanger()"
+        (openCourseAdder)="openCourseAdder($event)"
       ></app-semester-pane>
       <app-requirements-pane
         class="col-4"
@@ -105,5 +106,12 @@
       (semesterChanged)="setSemesters($event)"
       (semesterChanged)="closeModal()"
     ></app-semester-changer>
+  </div>
+</ng-template>
+
+<ng-template #courseAdder>
+  <div class="modal-body">
+    <h4>Add a class to {{ courseAdderSemester.name }}</h4>
+    <app-course-searcher (courseReturned)="addCourse($event)"></app-course-searcher>
   </div>
 </ng-template>

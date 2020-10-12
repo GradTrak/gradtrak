@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Semester } from '../../models/semester.model';
 import { UserService } from '../../services/user.service';
@@ -11,10 +11,12 @@ import { UserService } from '../../services/user.service';
 export class SemesterPaneComponent implements OnInit {
   @Input() readonly semesters: Map<string, Semester[]>;
   @Output() openSemesterChanger: EventEmitter<void>;
+  @Output() openCourseAdder: EventEmitter<Semester>;
   semesterArr: Semester[];
 
   constructor() {
     this.openSemesterChanger = new EventEmitter<void>();
+    this.openCourseAdder = new EventEmitter<Semester>();
   }
 
   ngOnInit(): void {}

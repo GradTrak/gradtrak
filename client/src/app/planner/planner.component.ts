@@ -27,9 +27,11 @@ export class PlannerComponent implements OnInit {
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>;
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
+  @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
+  private courseAdderSemester: Semester;
 
   private loginPrompted: boolean;
 
@@ -138,6 +140,11 @@ export class PlannerComponent implements OnInit {
     this.modalInstance = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
   }
 
+  openCourseAdder(semester: Semester): void {
+    this.courseAdderSemester = semester;
+    this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
+  }
+
   logout(): void {
     this.userService.logout();
   }
@@ -150,8 +157,11 @@ export class PlannerComponent implements OnInit {
     this.userService.updateSemesters(semestersOutput);
   }
 
+  addCourse(course: Course): void {
+    this.userService.addCourse(course, this.courseAdderSemester);
+  }
+
   setUserData(userData: UserData): void {
-    this.closeModal();
     this.userService.setUserData(userData);
   }
 

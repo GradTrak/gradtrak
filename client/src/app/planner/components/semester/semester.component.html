@@ -48,11 +48,4 @@
     <tr></tr>
   </tbody>
 </table>
-<button class="gt-button course-adder" (click)="openAdder()">+</button>
-
-<ng-template #courseAdder>
-  <div class="modal-body">
-    <h4>Add a class to {{ semester.name }}</h4>
-    <app-course-searcher (courseReturned)="addCourse($event)"></app-course-searcher>
-  </div>
-</ng-template>
+<button class="gt-button course-adder" (click)="openCourseAdder.emit()">+</button>

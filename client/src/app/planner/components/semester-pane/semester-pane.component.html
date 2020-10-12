@@ -10,7 +10,11 @@
   <div class="container px-4 py-3">
     <div class="row">
       <div *ngFor="let semester of getSemArr(semesters)" class="col-6 semester">
-        <app-semester [semester]="semester" [currentSemesters]="getSemArr(semesters)"></app-semester>
+        <app-semester
+          [semester]="semester"
+          [currentSemesters]="getSemArr(semesters)"
+          (openCourseAdder)="openCourseAdder.emit(semester)"
+        ></app-semester>
       </div>
     </div>
   </div>
