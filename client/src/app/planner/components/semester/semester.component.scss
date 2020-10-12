@@ -6,20 +6,18 @@
 }
 
 .semester-name {
+  text-align: left;
   color: #1337f1;
   font-size: 1rem;
-  text-align: center;
 }
 
-.unit-count {
-  background-color: black;
-}
 
 hr {
   margin: 8px;
 }
 
 table,
+.header,
 .course-adder {
   width: calc(100% - 24px);
   margin-left: 12px;
@@ -48,11 +46,12 @@ table,
   }
 }
 
-.header {
+.table-header {
   font-weight: normal;
 }
 
 .course td,
+.unit-count,
 .course-adder {
   background-color: #f0f0f0;
 }
@@ -70,6 +69,11 @@ $course-row-rounding: 8px;
 }
 
 .course-adder {
+  border-radius: $course-row-rounding;
+}
+
+.unit-count {
+  text-align: right;
   border-radius: $course-row-rounding;
 }
 

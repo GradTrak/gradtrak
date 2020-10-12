@@ -1,4 +1,9 @@
-<div class="semester-name">{{ semester.name }}</div>
+<div class="container">
+  <div class="row header">
+    <div class="col semester-name">{{ semester.name }}</div>
+    <div class="col-auto unit-count">{{ getUnitCount() }}</div>
+  </div>
+</div>
 <hr />
 <table class="courses">
   <colgroup>
@@ -8,7 +13,7 @@
     <col class="button-cell" />
   </colgroup>
   <tbody>
-    <tr class="header">
+    <tr class="table-header">
       <td>Class</td>
       <td>Title</td>
       <td>Units</td>
@@ -49,7 +54,6 @@
   </tbody>
 </table>
 <button class="gt-button course-adder" (click)="openAdder()">+</button>
-<div class="unit-count">{{ getUnitCount() }}</div>
 
 <ng-template #courseAdder>
   <div class="modal-body">
