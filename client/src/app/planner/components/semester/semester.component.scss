@@ -6,11 +6,12 @@
 }
 
 .semester-name {
-  text-align: left;
   color: #1337f1;
-  font-size: 1rem;
 }
 
+.unit-count {
+  text-align: right;
+}
 
 hr {
   margin: 8px;
@@ -51,7 +52,6 @@ table,
 }
 
 .course td,
-.unit-count,
 .course-adder {
   background-color: #f0f0f0;
 }
@@ -69,11 +69,6 @@ $course-row-rounding: 8px;
 }
 
 .course-adder {
-  border-radius: $course-row-rounding;
-}
-
-.unit-count {
-  text-align: right;
   border-radius: $course-row-rounding;
 }
 
