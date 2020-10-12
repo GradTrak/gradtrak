@@ -54,6 +54,7 @@
         [goals]="state.userData.goals"
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
         (openGoalSelector)="openGoalSelector()"
+        (openRequirementDisplay)="openRequirementDisplay($event)"
       ></app-requirements-pane>
     </div>
   </ng-container>
@@ -113,5 +114,11 @@
   <div class="modal-body">
     <h4>Add a class to {{ courseAdderSemester.name }}</h4>
     <app-course-searcher (courseReturned)="addCourse($event)"></app-course-searcher>
+  </div>
+</ng-template>
+
+<ng-template #requirementDisplayTemplate>
+  <div class="modal-body">
+    <app-requirement-display [requirementInput]="displayedRequirement"></app-requirement-display>
   </div>
 </ng-template>

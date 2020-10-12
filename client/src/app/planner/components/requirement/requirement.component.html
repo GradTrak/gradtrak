@@ -73,7 +73,7 @@
   <div ngbDropdown class="req-more">
     <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
-      <button *ngIf="hasDisplay()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
+      <button *ngIf="hasDisplay()" ngbDropdownItem (click)="openRequirementDisplay.emit(requirement)">
         Show Fulfilling Courses
       </button>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
@@ -90,10 +90,4 @@
 <!-- FIXME This can also be an XSS vector -->
 <ng-template #annotation>
   <div [outerHTML]="getAnnotation()"></div>
-</ng-template>
-
-<ng-template #requirementDisplayTemplate>
-  <div class="modal-body">
-    <app-requirement-display [requirementInput]="displayedRequirement"></app-requirement-display>
-  </div>
 </ng-template>

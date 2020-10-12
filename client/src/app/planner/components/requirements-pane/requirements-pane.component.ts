@@ -15,13 +15,13 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly goals: RequirementSet[];
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>; // Maps from a requirementSet id to a list of requirement ids.
-  @Output() openGoalSelector: EventEmitter<void>;
+  @Output() openGoalSelector: EventEmitter<void> = new EventEmitter<void>();
+  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   fulfillmentMap: Map<Requirement, FulfillmentType>;
 
   constructor() {
     this.fulfillmentMap = new Map<Requirement, FulfillmentType>();
-    this.openGoalSelector = new EventEmitter<void>();
   }
 
   ngOnInit(): void {}

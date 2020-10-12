@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from './models/course.model';
+import { Requirement } from './models/requirement.model';
 import { RequirementSet } from './models/requirement-set.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
@@ -21,6 +22,7 @@ export class PlannerComponent implements OnInit {
   isLoading: boolean;
 
   courseAdderSemester: Semester;
+  displayedRequirement: Requirement;
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
@@ -30,6 +32,7 @@ export class PlannerComponent implements OnInit {
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>;
   @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>;
+  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
@@ -142,8 +145,15 @@ export class PlannerComponent implements OnInit {
   }
 
   openCourseAdder(semester: Semester): void {
+    this.closeModal();
     this.courseAdderSemester = semester;
     this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
+  }
+
+  openRequirementDisplay(displayedRequirement: Requirement): void {
+    this.closeModal();
+    this.displayedRequirement = displayedRequirement;
+    this.modalInstance = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
   }
 
   logout(): void {

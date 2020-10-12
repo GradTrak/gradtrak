@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
 import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
@@ -22,21 +21,15 @@ export class RequirementComponent implements OnInit {
   @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-
-  displayedRequirement: Requirement;
+  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
   @ViewChild('multiReq', { static: true }) private multiReq: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
-  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
   @ViewChild('countReq', { static: true }) private countReq: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
-
-  private requirementDisplayModalReference: NgbModalRef;
-
-  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
@@ -143,14 +136,5 @@ export class RequirementComponent implements OnInit {
 
   manuallyUnfulfill(requirement: Requirement): void {
     this.onManualUnfulfill.emit(requirement);
-  }
-
-  openRequirementDisplay(requirement: Requirement): void {
-    this.displayedRequirement = requirement;
-    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
-  }
-
-  closeRequirementDisplay(): void {
-    this.requirementDisplayModalReference.close();
   }
 }
