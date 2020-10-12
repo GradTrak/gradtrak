@@ -1,11 +1,8 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, TemplateRef } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Course } from '../../models/course.model';
 import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
-import { RequirementService } from '../../services/requirement.service';
-import { UserService } from '../../services/user.service';
 
 import { processRequirements } from '../../lib/process-requirements';
 
@@ -21,8 +18,6 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Output() openGoalSelector: EventEmitter<void>;
 
   fulfillmentMap: Map<Requirement, FulfillmentType>;
-
-  private modalInstance: NgbModalRef;
 
   constructor() {
     this.fulfillmentMap = new Map<Requirement, FulfillmentType>();

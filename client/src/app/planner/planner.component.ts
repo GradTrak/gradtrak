@@ -20,6 +20,8 @@ export class PlannerComponent implements OnInit {
   currentCourses: Course[];
   isLoading: boolean;
 
+  courseAdderSemester: Semester;
+
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
   @ViewChild('initializer', { static: true }) private initializerTemplate: TemplateRef<any>;
@@ -31,7 +33,6 @@ export class PlannerComponent implements OnInit {
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
-  private courseAdderSemester: Semester;
 
   private loginPrompted: boolean;
 
