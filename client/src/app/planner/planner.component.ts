@@ -26,6 +26,7 @@ export class PlannerComponent implements OnInit {
   @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>;
+  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
@@ -132,12 +133,21 @@ export class PlannerComponent implements OnInit {
     this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
   }
 
+  openSemesterChanger(): void {
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
+  }
+
   logout(): void {
     this.userService.logout();
   }
 
   setGoals(goals: RequirementSet[]): void {
     this.userService.updateGoals(goals);
+  }
+
+  setSemesters(semestersOutput: Map<string, Semester[]>): void {
+    this.userService.updateSemesters(semestersOutput);
   }
 
   setUserData(userData: UserData): void {

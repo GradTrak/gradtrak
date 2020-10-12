@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Semester } from '../../models/semester.model';
 import { UserService } from '../../services/user.service';
@@ -10,26 +10,14 @@ import { UserService } from '../../services/user.service';
 })
 export class SemesterPaneComponent implements OnInit {
   @Input() readonly semesters: Map<string, Semester[]>;
+  @Output() openSemesterChanger: EventEmitter<void>;
   semesterArr: Semester[];
 
-  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-  private semesterChangerModalReference: NgbModalRef;
-
-  constructor(private modalService: NgbModal, private userService: UserService) {}
+  constructor() {
+    this.openSemesterChanger = new EventEmitter<void>();
+  }
 
   ngOnInit(): void {}
-
-  openSemesterChanger(): void {
-    this.semesterChangerModalReference = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
-  }
-
-  closeSemesterChanger(): void {
-    this.semesterChangerModalReference.close();
-  }
-
-  setSemesters(semestersOutput: Map<string, Semester[]>): void {
-    this.userService.updateSemesters(semestersOutput);
-  }
 
   getYears(): Semester[][] {
     return Array.from(this.semesters.values());

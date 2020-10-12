@@ -42,7 +42,11 @@
 <div class="body">
   <ng-container *ngIf="!isLoading; else loading">
     <div class="row no-gutters main">
-      <app-semester-pane class="col-8" [semesters]="state.userData.semesters"></app-semester-pane>
+      <app-semester-pane
+        class="col-8"
+        [semesters]="state.userData.semesters"
+        (openSemesterChanger)="openSemesterChanger()"
+      ></app-semester-pane>
       <app-requirements-pane
         class="col-4"
         [courses]="currentCourses"
@@ -91,5 +95,15 @@
       (selectGoals)="setGoals($event)"
       (selectGoals)="closeModal()"
     ></app-goal-selector>
+  </div>
+</ng-template>
+
+<ng-template #semesterChangerTemplate>
+  <div class="modal-body">
+    <app-semester-changer
+      [semestersInput]="state.userData.semesters"
+      (semesterChanged)="setSemesters($event)"
+      (semesterChanged)="closeModal()"
+    ></app-semester-changer>
   </div>
 </ng-template>
