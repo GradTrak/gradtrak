@@ -5,12 +5,15 @@
   border-radius: 20px;
 }
 
+$content-font-size: 0.7rem;
+
 .semester-name {
   color: #1337f1;
 }
 
 .unit-count {
   text-align: right;
+  font-size: $content-font-size;
 }
 
 hr {
@@ -18,7 +21,6 @@ hr {
 }
 
 table,
-.header,
 .course-adder {
   width: calc(100% - 24px);
   margin-left: 12px;
@@ -28,7 +30,7 @@ table,
 .courses {
   border-collapse: separate;
   border-spacing: 0 4px;
-  font-size: 0.6rem;
+  font-size: $content-font-size;
 
   col.name {
     width: 5rem;
