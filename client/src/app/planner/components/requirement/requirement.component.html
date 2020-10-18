@@ -26,7 +26,7 @@
   <br />
   {{ getUnit().requirement.toString() }}
   <div class="nested">
-    <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+    <div class="course" *ngFor="let course of retrieveCoursePoolCourseList(fulfillmentMap, getUnit())">
       {{ course.getName() }}
     </div>
   </div>
@@ -56,7 +56,7 @@
   <br />
   {{ getCount().requirement.toString() }}
   <div class="nested">
-    <div class="course" *ngFor="let course of getCount().getFulfillingCourses(courses)">
+    <div class="course" *ngFor="let course of retrieveCoursePoolCourseList(fulfillmentMap, getCount())">
       {{ course.getName() }}
     </div>
   </div>

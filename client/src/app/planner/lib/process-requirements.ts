@@ -357,6 +357,9 @@ function findOptimalMapping(
 ): Map<Requirement, Set<Course> | boolean>[] {
   /* A mapping of each requirement-to-course map to the number of requirements
    * it fulfills */
+  // TODO: consider doing with num courses used instead of numreqs, since right now 
+  // it can't distinguish between a half-fulfilled countreq vs an empty one, even 
+  // though the former is visible to the user. 
   const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
     Map<Requirement, Set<Course> | boolean>,
     number

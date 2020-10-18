@@ -201,7 +201,7 @@ export class RequirementComponent implements OnInit {
    * is not a coursepool. 
    * @param {Map<Requirement, FulfillmentType>} fulfillments A list of fulfillment statuses for courses
    * @param {Requirement} req The requirement whose set of courses we are interested in displaying
-   * @return {Set<Course>} A set of courses to display for that coursePool requirement.
+   * @return {Course[]} A list of courses to display for that coursePool requirement.
    */
   retrieveCoursePoolCourseList(fulfillments: Map<Requirement, FulfillmentType>, req: Requirement): Course[] {
     // TODO: if we want a non-arbitrary way of selecting courses, we can do that here. 
@@ -210,7 +210,14 @@ export class RequirementComponent implements OnInit {
       return null;
     }
 
-    return [...fulfillments.get(req).courseFulfillment[0]];
+    const possibleSets: Set<Course>[] = fulfillments.get(req).courseFulfillment;
+    const aSet: Set<Course> = possibleSets[0];
+    const sizes: number[] = [...possibleSets].map((possibleSet: Set<Course>) => [...possibleSet].length)
+    const bestSize: number = Math.max(...sizes);
+    const bestSets: Set<Course>[] = possibleSets.filter((possibleSet: Set<Course>) => ([...possibleSet].length) === bestSize);
+    return [...bestSets[0]];
+    // For some reason, set.size() does not compile. I've SETtled for [...set].length
+
   }
 }
 
