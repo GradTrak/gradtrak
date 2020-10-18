@@ -44,6 +44,11 @@ export class RequirementComponent implements OnInit {
     return this.requirement instanceof StandaloneRequirement;
   }
 
+  isCoursePool(): boolean {
+    return this.isUnit() || this.isCount();
+    // TODO: create an actual class for course pool.
+  }
+
   getStandalone(): StandaloneRequirement {
     if (!this.isStandalone()) {
       throw new Error('Attempted to retreive non-StandaloneRequirement as StandaloneRequirement');
@@ -103,6 +108,11 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retrieve non-CountRequirement as CountRequirement');
     }
     return this.requirement as CountRequirement;
+  }
+
+  getCoursePool(): Requirement {
+    return this.requirement;
+    // TODO: actually implment coursepool reqs as a type.
   }
 
   /**
@@ -183,6 +193,24 @@ export class RequirementComponent implements OnInit {
       }
     }
     return resultArray;
+  }
+
+  /**
+   * Retrives a list of courses to display for a 
+   * coursePool requirement. Will error if the passed in requirement
+   * is not a coursepool. 
+   * @param {Map<Requirement, FulfillmentType>} fulfillments A list of fulfillment statuses for courses
+   * @param {Requirement} req The requirement whose set of courses we are interested in displaying
+   * @return {Set<Course>} A set of courses to display for that coursePool requirement.
+   */
+  retrieveCoursePoolCourseList(fulfillments: Map<Requirement, FulfillmentType>, req: Requirement): Course[] {
+    // TODO: if we want a non-arbitrary way of selecting courses, we can do that here. 
+    if (!this.isCoursePool()) {
+      console.error('Attempted to retrieve course pool course list for a non course pool course.', req);
+      return null;
+    }
+
+    return [...fulfillments.get(req).courseFulfillment[0]];
   }
 }
 

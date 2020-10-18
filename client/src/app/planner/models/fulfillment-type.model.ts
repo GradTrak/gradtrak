@@ -8,5 +8,5 @@ import { Course } from './course.model';
  */
 export type FulfillmentType = {
   reqFulfillment: 'fulfilled' | 'unfulfilled' | 'possible';
-  courseFulfillment?: Map<Course, 'fulfilled' | 'possible'>;
+  courseFulfillment?: Set<Course>[];
 }

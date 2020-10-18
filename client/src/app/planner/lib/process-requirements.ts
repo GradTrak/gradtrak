@@ -396,14 +396,13 @@ function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course>|boolean
 
 /**
  * Filters requirements into a list of "course pool" requirements, such as unit or 
- * count, and determines whether the courses fulfilling it is always 
- * possible, or only fulfills it in certain situations. 
- * @param {Requirement[]} reqs A list of course pool requirements
- * @param {Map<Requirement, boolean|Set<Course>[]} reqToCourseMappings The assignment of 
- * course to each requirement.
- * @param {Map<Requirement, Map<Course, CourseFulfillmentType>>} coursePoolMapping
- * The mapping which will be written to and returned.
- * @return {Map<Requirement, Map<Course, CourseFulfillmentType>>}
+ * count, and populates the course pool fulfillment with an array of a set of 
+ * courses, for each possible combination.
+ * @param {Requirement[]} reqs A list of course pool requirements. This does get filtered, though.
+ * @param {Map<Requirement, boolean|Set<Course>>[]} reqToCourseMappings All the "good" possible assignments of 
+ * course to each requirement. 
+ * @param {Map<Requirement, FulfillmentType} The fulfillmentType to which we update the 
+ * possible course fulfillments for a coursePool Requirement.
  */
 function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Map<Requirement, Set<Course>>[], fulfillments: Map<Requirement, FulfillmentType>): void {
    const coursePoolReqs: Requirement[] = reqs.filter((requirement) => {
@@ -413,31 +412,14 @@ function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Ma
     });
 
   reqs.forEach((req: Requirement) => {
-    const courseCandidates: Set<Course> = new Set<Course>();
-    reqToCourseMappings.forEach((reqToCourseMapping: Map<Requirement, Set<Course>>) => {
-      const fulfillmentCandidate: Set<Course> = reqToCourseMapping.get(req);
-      if (!fulfillmentCandidate) {
-        return;
-      }
-      fulfillmentCandidate.forEach(courseCandidates.add, courseCandidates);
-    });
-    const courseFulfillments: Map<Course, 'fulfilled' | 'possible'> = new Map<Course, 'fulfilled' | 'possible'>();
-    courseCandidates.forEach((course: Course): void => {
-      if (reqToCourseMappings.every((reqToCourseMapping: Map<Requirement, Set<Course>>) => {
-        const possibility = reqToCourseMapping.get(req);
-        if (req.isFulfilledWith([...possibility])) {
-          // If the requirement is fulfilled, then we do NOT mark courses as possible, since it may have been pruned. 
-          return true;
-        }
-        return possibility.has(course);
-      })) {
-        courseFulfillments.set(course, 'fulfilled');
-      } else {
-        courseFulfillments.set(course, 'possible');
-        }
-    });
-    fulfillments.get(req).courseFulfillment = courseFulfillments;
+      fulfillments.get(req).courseFulfillment = [];
   });
+  reqToCourseMappings.forEach((reqToCourseMapping: Map<Requirement, Set<Course>>): void => {
+    reqs.forEach((req: Requirement): void => {
+      // Save every possible combination of Set of courses that we've found so far into fulfillments.
+      fulfillments.get(req).courseFulfillment.push(reqToCourseMapping.get(req));
+    });
+  })
 }
 
 /**
@@ -447,7 +429,7 @@ function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Ma
  * which do the heavy-duty processing. 
  *
  * @param {Requirement[]} reqs A list of requirements in consideration.
- * @param {Map<Requirement, Set<Course> | boolean>[]} optimalMapping
+ * @param {Map<Requirement, Set<Course> | boolean>>[]} optimalMapping
  * @param {Map<Requirement, FulfillmentType>} the map which will be written to
  * The ideal mapping for which the other functions can be executed as
  */
