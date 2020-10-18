@@ -69,7 +69,7 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retreive non-MultiRequirement as MultiRequirement');
     }
     return this.requirement as MultiRequirement;
-    }
+  }
 
   /**
    * Standalone requirements and unit requirements can show requirement display.
@@ -166,11 +166,11 @@ export class RequirementComponent implements OnInit {
   }
 
   /**
-   * For a course pool requirement, processes the 
-   * corresponding coursePoolMap to return an 
+   * For a course pool requirement, processes the
+   * corresponding coursePoolMap to return an
    * ngFor-iterable array of items in order such that
    * fulfillled come before possible. For course requirements,
-   * it will append nulls to the end until arr.length 
+   * it will append nulls to the end until arr.length
    * is numRequired.
    * @param {Map<Course, FulfillmentType>} fulfillment
    * @return {Course[]} the ordered list of courses, and nulls.
@@ -196,20 +196,19 @@ export class RequirementComponent implements OnInit {
   }
 
   /**
-   * Retrives a list of courses to display for a 
+   * Retrives a list of courses to display for a
    * coursePool requirement. Will error if the passed in requirement
-   * is not a coursepool. 
+   * is not a coursepool.
    * @param {Map<Requirement, FulfillmentType>} fulfillments A list of fulfillment statuses for courses
    * @param {Requirement} req The requirement whose set of courses we are interested in displaying
    * @return {Course[]} A list of courses to display for that coursePool requirement.
    */
   retrieveCoursePoolCourseList(fulfillments: Map<Requirement, FulfillmentType>, req: Requirement): Course[] {
-    // TODO: if we want a non-arbitrary way of selecting courses, we can do that here. 
+    // TODO: if we want a non-arbitrary way of selecting courses, we can do that here.
     if (!this.isCoursePool()) {
       console.error('Attempted to retrieve course pool course list for a non course pool course.', req);
       return null;
     }
-    console.log(req.name, fulfillments.get(req).courseFulfillment)
     return [...fulfillments.get(req).courseFulfillment[0]];
   }
 
@@ -221,4 +220,3 @@ export class RequirementComponent implements OnInit {
     return Array(Math.max(remainder, 0));
   }
 }
-

@@ -37,16 +37,12 @@
     {{ requirement.toString() }}
     <div class="nested">
       <div *ngFor="let course of retrieveCoursePoolCourseList(fulfillmentMap, getCoursePool())">
-        <div class="fulfilled" *ngIf="course; else unfulfilledCount">
-          {{
-            course.getName()
-          }}
+        <div class="fulfilled">
+          {{ course.getName() }}
         </div>
       </div>
       <div *ngFor="let number of countReqResiduals(retrieveCoursePoolCourseList(fulfillmentMap, getCoursePool()))">
-        {{
-          getCount().requirement.name
-          }}
+        {{ getCount().requirement.name }}
       </div>
     </div>
   </ng-container>

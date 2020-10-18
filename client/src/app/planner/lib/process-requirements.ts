@@ -1,7 +1,7 @@
 import memoize from 'memoizee';
 
 import { Course } from '../models/course.model';
-import { FulfillmentType} from '../models/fulfillment-type.model';
+import { FulfillmentType } from '../models/fulfillment-type.model';
 import { Constraint, Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
@@ -319,8 +319,8 @@ function deriveReqFulfillment(
     // note: this assumes that requirements with child reqs are not course pool
     // Requirements, which are set to null.
     const fulfillment: FulfillmentType = {
-      reqFulfillment: numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled', 
-    }
+      reqFulfillment: numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled',
+    };
     fulfillments.set(req, fulfillment);
   } else if (
     bestMappings.every((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
@@ -341,22 +341,21 @@ function deriveReqFulfillment(
 }
 /**
  * Removes suboptimal course assignments and returns the best
- * available possible req to course mappings, as determined by 
- * the number of requirements fulfilled, then by the number 
+ * available possible req to course mappings, as determined by
+ * the number of requirements fulfilled, then by the number
  * of courses used to fulfill those requirements.
- * 
+ *
  * @param {Requirement} baseReqs The requirements that count towards overall
  * goal progress.
  * @param {Map<Requirement, Set<Course> | boolean>[]} mappings The possible
  * course mappings.
- * @return {Map<Requirement, Set<Course> | boolean>[]} mappings The 
+ * @return {Map<Requirement, Set<Course> | boolean>[]} mappings The
  * non-suboptimal mappings which should be considered.
  */
 function findOptimalMapping(
   baseReqs: Requirement[],
   reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
 ): Map<Requirement, Set<Course> | boolean>[] {
-
   /* Finds the number of courses that are used to fulfill requirements. Used as a tiebreaker for when numebr of requirements fulfilled is equal. */
   const findCourseContribution = (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>): number => {
     let totalContribution: number = 0;
@@ -366,7 +365,7 @@ function findOptimalMapping(
       }
     });
     return totalContribution;
-  }
+  };
 
   /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
   const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
@@ -381,9 +380,9 @@ function findOptimalMapping(
   const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
   const maxReqMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
     (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-      mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled
+      mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
   );
-   /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
+  /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
   const mappingCourseCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
     Map<Requirement, Set<Course> | boolean>,
     number
@@ -395,27 +394,22 @@ function findOptimalMapping(
   );
   const maxCourse: number = Math.max(...mappingCourseCounts.values());
   const maxMappings: Map<Requirement, Set<Course> | boolean>[] = maxReqMappings.filter(
-    (maxReqMapping: Map<Requirement, Set<Course> | boolean>) =>
-      mappingCourseCounts.get(maxReqMapping) === maxCourse
+    (maxReqMapping: Map<Requirement, Set<Course> | boolean>) => mappingCourseCounts.get(maxReqMapping) === maxCourse,
   );
-    maxMappings.forEach(mapping => {
-     // console.log(mapping, mappingFulfillmentCounts.get(mapping), mappingCourseCounts.get(mapping), maxFulfilled, maxCourse)
-    })
-   return maxMappings;
+ return maxMappings;
 }
 
-
 /**
- * Removes a requirement from a fulfillment map and 
+ * Removes a requirement from a fulfillment map and
  * returns a copy of the map without booleans
- * @param {Map<Requirement, Set<Course>|boolean} withBool the mapping 
- * with booleans to be removed. 
- * @return {Map<Requirement, Set<Course>} the mapping without the booleans or 
- * the requirements they were linked to. 
+ * @param {Map<Requirement, Set<Course>|boolean} withBool the mapping
+ * with booleans to be removed.
+ * @return {Map<Requirement, Set<Course>} the mapping without the booleans or
+ * the requirements they were linked to.
  */
-function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course>|boolean>) {
+function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course> | boolean>) {
   const ret = new Map<Requirement, Set<Course>>();
-  withBool.forEach((value: Set<Course>|boolean, key: Requirement) => {
+  withBool.forEach((value: Set<Course> | boolean, key: Requirement) => {
     if (typeof value === 'boolean') {
       return;
     }
@@ -425,55 +419,63 @@ function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course>|boolean
 }
 
 /**
- * Filters requirements into a list of "course pool" requirements, such as unit or 
- * count, and populates the course pool fulfillment with an array of a set of 
+ * Filters requirements into a list of "course pool" requirements, such as unit or
+ * count, and populates the course pool fulfillment with an array of a set of
  * courses, for each possible combination.
  * @param {Requirement[]} reqs A list of course pool requirements. This does get filtered, though.
- * @param {Map<Requirement, boolean|Set<Course>>[]} reqToCourseMappings All the "good" possible assignments of 
- * course to each requirement. 
- * @param {Map<Requirement, FulfillmentType} The fulfillmentType to which we update the 
+ * @param {Map<Requirement, boolean|Set<Course>>[]} reqToCourseMappings All the "good" possible assignments of
+ * course to each requirement.
+ * @param {Map<Requirement, FulfillmentType} The fulfillmentType to which we update the
  * possible course fulfillments for a coursePool Requirement.
  */
-function coursePoolReqFulfillments (reqs: Requirement[], reqToCourseMappings: Map<Requirement, Set<Course>>[], fulfillments: Map<Requirement, FulfillmentType>): void {
-   const coursePoolReqs: Requirement[] = reqs.filter((requirement) => {
-      return requirement instanceof UnitRequirement || requirement instanceof CountRequirement;
-      // There are isUnit and isCount functions but they remain in requirement. Possibly move to Utils?
-      // isCoursePool is probably useful too.
-    });
+function coursePoolReqFulfillments(
+  reqs: Requirement[],
+  reqToCourseMappings: Map<Requirement, Set<Course>>[],
+  fulfillments: Map<Requirement, FulfillmentType>,
+): void {
+  const coursePoolReqs: Requirement[] = reqs.filter((requirement) => {
+    return requirement instanceof UnitRequirement || requirement instanceof CountRequirement;
+    // There are isUnit and isCount functions but they remain in requirement. Possibly move to Utils?
+    // isCoursePool is probably useful too.
+  });
 
   reqs.forEach((req: Requirement) => {
-      fulfillments.get(req).courseFulfillment = [];
+    fulfillments.get(req).courseFulfillment = [];
   });
   reqToCourseMappings.forEach((reqToCourseMapping: Map<Requirement, Set<Course>>): void => {
     reqs.forEach((req: Requirement): void => {
       // Save every possible combination of Set of courses that we've found so far into fulfillments.
       fulfillments.get(req).courseFulfillment.push(reqToCourseMapping.get(req));
     });
-  })
+  });
 }
 
 /**
- * Handles the optimal mapping by identifying 
+ * Handles the optimal mapping by identifying
  * requirement fulfillment status and identifying course pool
  * fulfillment statuses. Wrapper for multiple other functions
- * which do the heavy-duty processing. 
+ * which do the heavy-duty processing.
  *
  * @param {Requirement[]} reqs A list of requirements in consideration.
  * @param {Map<Requirement, Set<Course> | boolean>>[]} optimalMapping
  * @param {Map<Requirement, FulfillmentType>} the map which will be written to
  * The ideal mapping for which the other functions can be executed as
  */
-function processOptimalMapping(reqs: Requirement[], optimalMapping: Map<Requirement, Set<Course> | boolean>[], fulfillments: Map<Requirement, FulfillmentType>): void {
+function processOptimalMapping(
+  reqs: Requirement[],
+  optimalMapping: Map<Requirement, Set<Course> | boolean>[],
+  fulfillments: Map<Requirement, FulfillmentType>,
+): void {
   reqs.forEach((req: Requirement) => {
-    fulfillments.set(req, fulfillments.get(req) || {reqFulfillment: null});
+    fulfillments.set(req, fulfillments.get(req) || { reqFulfillment: null });
     deriveReqFulfillment(req, optimalMapping, fulfillments);
-  })
-  coursePoolReqFulfillments(reqs, optimalMapping.map(filterBooleanFromMapping), fulfillments)
+  });
+  coursePoolReqFulfillments(reqs, optimalMapping.map(filterBooleanFromMapping), fulfillments);
 }
 
 /**
  * Returns a map containing each requirement as the key mapped to its
- * fulfillment status and writes to COUNTUNITMAPPING the status of 
+ * fulfillment status and writes to COUNTUNITMAPPING the status of
  * in how it fulfills the requirement.
  *
  * @param {RequirementSet[]} reqSets The requirement sets being processed.
@@ -573,4 +575,3 @@ export function processRequirements(
   reqIsFulfilledWithMapping.clear();
   return fulfillments;
 }
-
