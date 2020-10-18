@@ -3407,8 +3407,8 @@
           },
           {
             "name": "Society, Culture, and Cognition",
-            "type": "course",
-            "courseId": "cog_sci_society",
+            "type": "tag",
+            "tagId": "cog_sci_society",
             "id": "cog_sci_society"
           }
         ]
@@ -3509,14 +3509,14 @@
                 {
                   "name": "MCB C61",
                   "type": "course",
-                  "courseId": "mcbc61",
-                  "id": "mcbc61"
+                  "courseId": "mcellbic61",
+                  "id": "mcellbic61"
                 },
                 {
                   "name": "Nutrisci 10",
                   "type": "course",
-                  "courseId": "NUSCTX10",
-                  "id": "NUSCTX10"
+                  "courseId": "nusctx10",
+                  "id": "nusctx10"
                 }
               ]
             }
