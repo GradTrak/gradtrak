@@ -396,7 +396,7 @@ function findOptimalMapping(
   const maxMappings: Map<Requirement, Set<Course> | boolean>[] = maxReqMappings.filter(
     (maxReqMapping: Map<Requirement, Set<Course> | boolean>) => mappingCourseCounts.get(maxReqMapping) === maxCourse,
   );
- return maxMappings;
+  return maxMappings;
 }
 
 /**
