@@ -443,7 +443,7 @@ function coursePoolReqFulfillments(
     fulfillments.get(req).courseFulfillment = [];
   });
   reqToCourseMappings.forEach((reqToCourseMapping: Map<Requirement, Set<Course>>): void => {
-    reqs.forEach((req: Requirement): void => {
+    coursePoolReqs.forEach((req: Requirement): void => {
       // Save every possible combination of Set of courses that we've found so far into fulfillments.
       fulfillments.get(req).courseFulfillment.push(reqToCourseMapping.get(req));
     });
