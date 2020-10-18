@@ -342,7 +342,8 @@ function deriveReqFulfillment(
 /**
  * Removes suboptimal course assignments and returns the best
  * available possible req to course mappings, as determined by 
- * the number of requirements fulfilled.
+ * the number of requirements fulfilled, then by the number 
+ * of courses used to fulfill those requirements.
  * 
  * @param {Requirement} baseReqs The requirements that count towards overall
  * goal progress.
@@ -355,8 +356,9 @@ function findOptimalMapping(
   baseReqs: Requirement[],
   reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
 ): Map<Requirement, Set<Course> | boolean>[] {
-  /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
-  const findCourseContribution = (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => {
+
+  /* Finds the number of courses that are used to fulfill requirements. Used as a tiebreaker for when numebr of requirements fulfilled is equal. */
+  const findCourseContribution = (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>): number => {
     let totalContribution: number = 0;
     [...reqToCourseMapping.values()].forEach((fulfiller: Set<Course> | boolean) => {
       if (typeof fulfiller !== 'boolean') {
@@ -365,20 +367,40 @@ function findOptimalMapping(
     });
     return totalContribution;
   }
+
+  /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
   const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
     Map<Requirement, Set<Course> | boolean>,
     number
   >(
     reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => [
       reqToCourseMapping,
-      findCourseContribution(reqToCourseMapping)
+      baseReqs.filter((req: Requirement) => reqIsFulfilledWithMapping(req, reqToCourseMapping)).length,
     ]),
   );
   const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
-  const maxMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
+  const maxReqMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
     (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-      mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
+      mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled
   );
+   /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
+  const mappingCourseCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
+    Map<Requirement, Set<Course> | boolean>,
+    number
+  >(
+    maxReqMappings.map((maxReqMapping: Map<Requirement, Set<Course> | boolean>) => [
+      maxReqMapping,
+      findCourseContribution(maxReqMapping),
+    ]),
+  );
+  const maxCourse: number = Math.max(...mappingCourseCounts.values());
+  const maxMappings: Map<Requirement, Set<Course> | boolean>[] = maxReqMappings.filter(
+    (maxReqMapping: Map<Requirement, Set<Course> | boolean>) =>
+      mappingCourseCounts.get(maxReqMapping) === maxCourse
+  );
+    maxMappings.forEach(mapping => {
+     // console.log(mapping, mappingFulfillmentCounts.get(mapping), mappingCourseCounts.get(mapping), maxFulfilled, maxCourse)
+    })
    return maxMappings;
 }
 

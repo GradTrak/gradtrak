@@ -209,6 +209,7 @@ export class RequirementComponent implements OnInit {
       console.error('Attempted to retrieve course pool course list for a non course pool course.', req);
       return null;
     }
+    console.log(req.name, fulfillments.get(req).courseFulfillment)
     return [...fulfillments.get(req).courseFulfillment[0]];
   }
 
