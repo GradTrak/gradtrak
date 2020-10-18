@@ -209,14 +209,7 @@ export class RequirementComponent implements OnInit {
       console.error('Attempted to retrieve course pool course list for a non course pool course.', req);
       return null;
     }
-
-    const possibleSets: Set<Course>[] = fulfillments.get(req).courseFulfillment;
-    const aSet: Set<Course> = possibleSets[0];
-    const sizes: number[] = [...possibleSets].map((possibleSet: Set<Course>) => [...possibleSet].length)
-    const bestSize: number = Math.max(...sizes);
-    const bestSets: Set<Course>[] = possibleSets.filter((possibleSet: Set<Course>) => ([...possibleSet].length) === bestSize);
-    return [...bestSets[0]];
-    // For some reason, set.size() does not compile. I've SETtled for [...set].length
+    return [...fulfillments.get(req).courseFulfillment[0]];
   }
 
   /**

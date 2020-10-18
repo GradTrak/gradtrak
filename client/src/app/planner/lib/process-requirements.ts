@@ -355,18 +355,23 @@ function findOptimalMapping(
   baseReqs: Requirement[],
   reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
 ): Map<Requirement, Set<Course> | boolean>[] {
-  /* A mapping of each requirement-to-course map to the number of requirements
-   * it fulfills */
-  // TODO: consider doing with num courses used instead of numreqs, since right now 
-  // it can't distinguish between a half-fulfilled countreq vs an empty one, even 
-  // though the former is visible to the user. 
+  /* A mapping of each requirement-to-course map to the number of courses that go twards fulfilling */
+  const findCourseContribution = (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => {
+    let totalContribution: number = 0;
+    [...reqToCourseMapping.values()].forEach((fulfiller: Set<Course> | boolean) => {
+      if (typeof fulfiller !== 'boolean') {
+        totalContribution += fulfiller.size;
+      }
+    });
+    return totalContribution;
+  }
   const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
     Map<Requirement, Set<Course> | boolean>,
     number
   >(
     reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => [
       reqToCourseMapping,
-      baseReqs.filter((req: Requirement) => reqIsFulfilledWithMapping(req, reqToCourseMapping)).length,
+      findCourseContribution(reqToCourseMapping)
     ]),
   );
   const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
