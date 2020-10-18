@@ -217,7 +217,14 @@ export class RequirementComponent implements OnInit {
     const bestSets: Set<Course>[] = possibleSets.filter((possibleSet: Set<Course>) => ([...possibleSet].length) === bestSize);
     return [...bestSets[0]];
     // For some reason, set.size() does not compile. I've SETtled for [...set].length
+  }
 
+  /**
+   * Returns an array with one element for each "empty" unfulfilled cell in a countrequriement.
+   */
+  countReqResiduals(displayedCourses: Course[]): Array<number> {
+    const remainder: number = this.getCount().numRequired - displayedCourses.length;
+    return Array(Math.max(remainder, 0));
   }
 }
 
