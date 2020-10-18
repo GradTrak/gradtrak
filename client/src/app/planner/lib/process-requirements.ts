@@ -407,7 +407,7 @@ function findOptimalMapping(
  * @return {Map<Requirement, Set<Course>} the mapping without the booleans or
  * the requirements they were linked to.
  */
-function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course> | boolean>) {
+function filterBooleanFromMapping(withBool: Map<Requirement, Set<Course> | boolean>): Map<Requirement, Set<Course>> {
   const ret = new Map<Requirement, Set<Course>>();
   withBool.forEach((value: Set<Course> | boolean, key: Requirement) => {
     if (typeof value === 'boolean') {
@@ -439,7 +439,7 @@ function coursePoolReqFulfillments(
     // isCoursePool is probably useful too.
   });
 
-  reqs.forEach((req: Requirement) => {
+  coursePoolReqs.forEach((req: Requirement) => {
     fulfillments.get(req).courseFulfillment = [];
   });
   reqToCourseMappings.forEach((reqToCourseMapping: Map<Requirement, Set<Course>>): void => {
