@@ -27263,7 +27263,9 @@
       "ls_quant"
     ],
     "equivIds": [
-      "datac8"
+      "datac8",
+      "infoc8",
+      "statc8"
     ]
   },
   {
@@ -30497,7 +30499,11 @@
     "id": "datac8",
     "dept": "DATA",
     "no": "C8",
-    "tagIds": []
+    "tagIds": [
+      "compscic8",
+      "infoc8",
+      "statc8"
+    ]
   },
   {
     "units": 4,
@@ -71678,7 +71684,9 @@
     "no": "C8",
     "tagIds": [],
     "equivIds": [
-      "datac8"
+      "datac8",
+      "compscic8",
+      "statc8"
     ]
   },
   {
@@ -138400,7 +138408,9 @@
       "ls_quant"
     ],
     "equivIds": [
-      "datac8"
+      "datac8",
+      "compscic8",
+      "infoc8"
     ]
   },
   {
