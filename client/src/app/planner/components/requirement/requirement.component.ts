@@ -83,6 +83,10 @@ export class RequirementComponent implements OnInit {
     return fulfillments;
   }
 
+  getFulfillingCourses(): string[] {
+    return Array.from(this.fulfillmentMap.get(this.requirement).coursesUsed).map((course: Course) => course.getName());
+  }
+
   isUnit(): boolean {
     return this.requirement instanceof UnitRequirement;
   }

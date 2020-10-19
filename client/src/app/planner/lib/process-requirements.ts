@@ -376,6 +376,9 @@ function deriveFulfillment(
   reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
   fulfillment: Map<Requirement, ProcessedFulfillmentType>,
 ): void {
+  let bestMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings;
+
+  /* Filter whichever mappings have the most fulfillment requirements */
   /* A mapping of each requirement-to-course map to the number of requirements
    * it fulfills */
   const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
@@ -388,12 +391,35 @@ function deriveFulfillment(
     ]),
   );
   const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
-  const maxMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
+  bestMappings = bestMappings.filter(
     (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
       mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
   );
+
+  /* Filter remaining mappings which use the most courses */
+  /* A mapping of each requirement-to-course map to the number of courses used */
+  const mappingCourseCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
+    Map<Requirement, Set<Course> | boolean>,
+    number
+  >(
+    bestMappings.map((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => [
+      reqToCourseMapping,
+      new Set(
+        Array.from(reqToCourseMapping.values())
+          .filter((courses: Set<Course> | boolean) => typeof courses !== 'boolean')
+          .map((courses: Set<Course>) => Array.from(courses))
+          .flat(),
+      ).size,
+    ]),
+  );
+  const maxCourses: number = Math.max(...mappingCourseCounts.values());
+  bestMappings = bestMappings.filter(
+    (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
+      mappingCourseCounts.get(reqToCourseMapping) === maxCourses,
+  );
+
   baseReqs.forEach((req: Requirement) => {
-    deriveReqFulfillment(req, maxMappings, fulfillment);
+    deriveReqFulfillment(req, bestMappings, fulfillment);
   });
 }
 
