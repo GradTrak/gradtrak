@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { CountRequirement } from '../../models/requirements/count-requirement.model';
+
+import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirement',
@@ -19,7 +20,7 @@ export class RequirementComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
   @Input() readonly manuallyFulfilled: Set<string>;
-  @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
+  @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
@@ -75,7 +76,7 @@ export class RequirementComponent implements OnInit {
 
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
-    fulfillments.push(this.fulfillmentMap.get(this.requirement));
+    fulfillments.push(this.fulfillmentMap.get(this.requirement).status);
     if (this.isManuallyFulfilled()) {
       fulfillments.push('manual');
     }

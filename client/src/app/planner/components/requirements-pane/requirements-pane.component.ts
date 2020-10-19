@@ -1,13 +1,12 @@
 import { Component, Input, OnChanges, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { RequirementService } from '../../services/requirement.service';
 import { UserService } from '../../services/user.service';
 
-import { processRequirements } from '../../lib/process-requirements';
+import { processRequirements, ProcessedFulfillmentType } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirements-pane',
@@ -19,7 +18,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>; // Maps from a requirementSet id to a list of requirement ids.
 
-  fulfillmentMap: Map<Requirement, FulfillmentType>;
+  fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
 
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   private modalInstance: NgbModalRef;
@@ -29,7 +28,7 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
     private requirementService: RequirementService,
     private userService: UserService,
   ) {
-    this.fulfillmentMap = new Map<Requirement, FulfillmentType>();
+    this.fulfillmentMap = new Map<Requirement, ProcessedFulfillmentType>();
   }
 
   ngOnInit(): void {}
