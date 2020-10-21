@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
-import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
+import { Requirement } from '../../models/requirement.model';
 import { CourseService } from '../../services/course.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { CourseService } from '../../services/course.service';
   styleUrls: ['./requirement-display.component.scss'],
 })
 export class RequirementDisplayComponent implements OnInit {
-  @Input() requirementInput: StandaloneRequirement;
+  @Input() requirementInput: Requirement;
 
   constructor(private courseService: CourseService) {}
 
@@ -21,7 +21,7 @@ export class RequirementDisplayComponent implements OnInit {
     return this.courseService.getCourses().pipe(
       map((courses: Course[]) =>
         courses.filter((course) => {
-          return this.requirementInput.isFulfilled(course);
+          return this.requirementInput.canFulfill(course);
         }),
       ),
     );

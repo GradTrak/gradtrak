@@ -24,9 +24,41 @@
 <ng-template #unitReq>
   {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
   <br />
-  {{ getUnit().requirement.toString() }}
+  {{ getUnit().requirement.name }}
   <div class="nested">
     <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
+      {{ course.getName() }}
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #unfulfilledCount>
+  {{ getCount().requirement.name }}
+</ng-template>
+
+<ng-template #countReq>
+  <ng-container *ngIf="!getCount().hidden; else hiddenCount">
+    {{ requirement.name }}
+    <div class="nested">
+      <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
+        <div *ngIf="i < getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
+          {{
+            getCount()
+              .getFulfillingCourses(courses)
+              [i].getName()
+          }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #hiddenCount>
+  {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired }} courses of
+  <br />
+  {{ getCount().requirement.toString() }}
+  <div class="nested">
+    <div class="course" *ngFor="let course of getCount().getFulfillingCourses(courses)">
       {{ course.getName() }}
     </div>
   </div>
@@ -41,7 +73,7 @@
   <div ngbDropdown class="req-more">
     <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
-      <button *ngIf="isStandalone()" ngbDropdownItem (click)="openRequirementDisplay(getStandalone())">
+      <button *ngIf="hasDisplay()" ngbDropdownItem (click)="openRequirementDisplay(requirement)">
         Show Fulfilling Courses
       </button>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">
