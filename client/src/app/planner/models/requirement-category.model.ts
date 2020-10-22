@@ -10,6 +10,7 @@ import { PolyRequirement } from './requirements/poly-requirement.model';
 import { TagRequirement } from './requirements/tag-requirement.model';
 import { UnitRequirement } from './requirements/unit-requirement.model';
 import { CountRequirement } from './requirements/count-requirement.model';
+import { RegexRequirement } from './requirements/regex-requirement.model';
 import { Tag } from './tag.model';
 
 /**
@@ -115,6 +116,13 @@ export class RequirementCategory {
       case 'count': {
         protoClone.requirement = RequirementCategory.reqFromProto(protoClone.requirement, coursesMap, tagsMap);
         requirement = new CountRequirement(protoClone);
+        break;
+      }
+
+      case 'regex': {
+        protoClone.deptRegex = new RegExp(proto.deptRegex);
+        protoClone.numberRegex = new RegExp(proto.numberRegex);
+        requirement = new RegexRequirement(protoClone);
         break;
       }
 

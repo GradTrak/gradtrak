@@ -42,6 +42,11 @@ export type CountRequirementPrototype = {
   requirement: StandaloneRequirementPrototype;
 } & BaseRequirementPrototype;
 
+export type RegexRequirementPrototype = {
+  type: 'regex';
+  deptRegex: string;
+  numberRegex: string;
+} & BaseRequirementPrototype;
 
 export type StandaloneRequirementPrototype = CourseRequirementPrototype | TagRequirementPrototype;
 export type RequirementPrototype =
@@ -50,4 +55,5 @@ export type RequirementPrototype =
   | PolyRequirementPrototype
   | TagRequirementPrototype
   | UnitRequirementPrototype
-  | CountRequirementPrototype;
+  | CountRequirementPrototype
+  | RegexRequirementPrototype;
