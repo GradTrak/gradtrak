@@ -12,8 +12,9 @@ export class RegexRequirement extends StandaloneRequirement {
     return this.deptRegex.test(course.dept) && this.numberRegex.test(course.no);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
-    return courses.some((course: Course[]) => {
+    return courses.some((course: Course) => {
       return this.isFulfillableBy(course);
     });
   }

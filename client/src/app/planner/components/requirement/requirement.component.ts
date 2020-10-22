@@ -116,7 +116,6 @@ export class RequirementComponent implements OnInit {
     return this.requirement as RegexRequirement;
   }
 
-
   /**
    * Returns the HTML template of the requirement based on its type.
    *
