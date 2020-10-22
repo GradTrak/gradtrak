@@ -12,7 +12,17 @@ export class RegexRequirement extends StandaloneRequirement {
     return this.deptRegex.test(course.dept) && this.numberRegex.test(course.no);
   }
 
+  isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
+    return courses.some((course: Course[]) => {
+      return this.isFulfillableBy(course);
+    });
+  }
+
   toString(): string {
     return this.name;
+  }
+
+  canFulfill(course: Course): boolean {
+    return this.isFulfillableBy(course);
   }
 }
