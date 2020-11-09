@@ -1138,6 +1138,17 @@
               "tagId": "cs_technical_elective"
             }
           }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "L&S Computer Science Mutex",
+            "mutexReqIds": [
+              "eecs_design",
+              "cs_upper_div",
+              "eecs_upper_div"
+            ]
+          }
         ]
       }
     ]

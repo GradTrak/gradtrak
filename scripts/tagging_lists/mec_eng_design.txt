@@ -1,0 +1,24 @@
+ENGIN 128
+Advanced Engineering Design Graphics [3] 1
+MEC ENG 101
+Introduction to Lean Manufacturing Systems [3]
+MEC ENG 110
+Introduction to Product Development [3]
+MEC ENG/BIO ENG C117
+Structural Aspects of Biomaterials [4]
+MEC ENG 119
+Introduction to MEMS (Microelectromechanical Systems) [3]
+MEC ENG 130
+Design of Planar Machinery [3]
+MEC ENG 135
+Design of Microprocessor-Based Mechanical Systems [4]
+MEC ENG 146
+Energy Conversion Principles [3]
+MEC ENG 165
+Ocean-Environment Mechanics [3]
+MEC ENG C176/
+BIO ENG C119
+Orthopedic Biomechanics [4]
+MEC ENG C178/
+BIO ENG C137
+Designing for the Human Body [4]

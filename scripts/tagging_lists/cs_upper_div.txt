@@ -1,0 +1,20 @@
+COMPSCI 152	Computer Architecture and Engineering	4
+COMPSCI 160	User Interface Design and Development	4
+COMPSCI 161	Computer Security (effective Spring 2019)	4
+COMPSCI 162	Operating Systems and System Programming	4
+COMPSCI 164	Programming Languages and Compilers	4
+COMPSCI 169	Software Engineering	4
+COMPSCI 184	Foundations of Computer Graphics	4
+COMPSCI 186	Introduction to Database Systems	4
+COMPSCI/STAT C100	Principles & Techniques of Data Science	4
+DATA C100	Principles & Techniques of Data Science
+COMPSCI 161	Computer Security	4
+COMPSCI 168	Introduction to the Internet: Architecture and Protocols	4
+COMPSCI 170	Efficient Algorithms and Intractable Problems	4
+COMPSCI 172	Computability and Complexity	4
+COMPSCI 176	Algorithms for Computational Biology	4
+COMPSCI 186	Introduction to Database Systems	4
+COMPSCI 188	Introduction to Artificial Intelligence	4
+COMPSCI 189	Introduction to Machine Learning	4
+COMPSCI C191	Quantum Information Science and Technology	3
+COMPSCI 194	Special Topics (15-Parallel Computing, 16-Introduction to Data Science [discontinued], 26-Computational Photography, 30-Practical Networking, 31-Technology and Social Networks, 32-Computing for Social Good, 34-Cryptography [spring 2019], 73-Software Engineering for Scientific Computing, 126-PCP Design, 129-Designing, Visualizing and Understanding Deep Neural Networks [also fulfills design requirement], 131-Designing Technology to Counter Violent Extremism [Des Inv 190 does not count], 133-Collaborative Intelligent Agents and The DARPA Spectrum Challenge, and 138-Cyberwar)	1-4
