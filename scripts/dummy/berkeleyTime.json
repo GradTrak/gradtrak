@@ -12217,7 +12217,8 @@
       "bioeng_upper_div",
       "bioeng_technical_topics",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "meceng_design"
     ]
   },
   {
@@ -20055,7 +20056,8 @@
     "no": "C133",
     "tagIds": [
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "meceng_qs"
     ]
   },
   {
@@ -39158,7 +39160,8 @@
       "cs_design",
       "bioeng_technical_topics",
       "stat_cluster",
-      "cs_technical_elective"
+      "cs_technical_elective",
+      "meceng_qs"
     ]
   },
   {
@@ -41987,7 +41990,8 @@
     "no": "117",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_qs"
     ]
   },
   {
@@ -42059,7 +42063,8 @@
     "dept": "ENGIN",
     "no": "128",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "meceng_design"
     ]
   },
   {
@@ -42117,7 +42122,8 @@
     "dept": "ENGIN",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "meceng_qs"
     ]
   },
   {
@@ -42304,7 +42310,8 @@
     "dept": "ENGIN",
     "no": "177",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "meceng_qs"
     ]
   },
   {
@@ -94595,7 +94602,8 @@
     "no": "101",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -94755,7 +94763,8 @@
     "no": "110",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -94799,7 +94808,8 @@
     "tagIds": [
       "upper_div",
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -94810,7 +94820,8 @@
     "no": "120",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_qs"
     ]
   },
   {
@@ -94870,7 +94881,8 @@
     "no": "130",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -94881,7 +94893,8 @@
     "no": "131",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_qs"
     ]
   },
   {
@@ -94927,7 +94940,8 @@
     "no": "C134",
     "tagIds": [
       "bioeng_technical_topics",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_qs"
     ]
   },
   {
@@ -94938,7 +94952,8 @@
     "no": "135",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -94948,7 +94963,8 @@
     "dept": "MEC ENG",
     "no": "136",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "meceng_qs"
     ]
   },
   {
@@ -95001,7 +95017,8 @@
     "no": "146",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -95149,7 +95166,8 @@
     "no": "165",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -95263,7 +95281,8 @@
     "dept": "MEC ENG",
     "no": "C176",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -95283,7 +95302,8 @@
     "dept": "MEC ENG",
     "no": "C178",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_design"
     ]
   },
   {
@@ -95304,7 +95324,8 @@
     "dept": "MEC ENG",
     "no": "C180",
     "tagIds": [
-      "stat_cluster"
+      "stat_cluster",
+      "meceng_qs"
     ]
   },
   {
