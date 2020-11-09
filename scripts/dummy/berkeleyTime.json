@@ -27804,7 +27804,8 @@
       "eecs_upper_div",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_upper_div"
     ]
   },
   {
@@ -27832,7 +27833,8 @@
       "cs_design",
       "upper_div",
       "stat_cluster",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "cs_upper_div"
     ]
   },
   {
@@ -27860,7 +27862,8 @@
       "cs_design",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cs_upper_div"
     ]
   },
   {
@@ -27876,7 +27879,8 @@
       "cs_design",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cs_upper_div"
     ]
   },
   {
@@ -27892,7 +27896,8 @@
       "cs_design",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cs_upper_div"
     ]
   },
   {
@@ -27918,7 +27923,8 @@
       "eecs_upper_div",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cs_upper_div"
     ]
   },
   {
@@ -27935,7 +27941,8 @@
       "cs_design",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cs_upper_div"
     ]
   },
   {
@@ -27991,7 +27998,8 @@
       "upper_div",
       "stat_cluster",
       "data_sci_compute",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "cs_upper_div"
     ]
   },
   {
@@ -28016,7 +28024,8 @@
       "ls_quant",
       "eecs_upper_div",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_upper_div"
     ]
   },
   {
@@ -28042,7 +28051,8 @@
       "eecs_upper_div",
       "bioeng_technical_topics",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_upper_div"
     ]
   },
   {
@@ -28111,7 +28121,8 @@
       "eecs_design",
       "cs_design",
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "cs_upper_div"
     ]
   },
   {
@@ -28129,7 +28140,8 @@
       "upper_div",
       "stat_cluster",
       "data_sci_compute",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "cs_upper_div"
     ]
   },
   {
@@ -28162,7 +28174,8 @@
       "bioeng_technical_topics",
       "upper_div",
       "stat_cluster",
-      "data_sci_compute"
+      "data_sci_compute",
+      "cs_upper_div"
     ]
   },
   {
@@ -28177,7 +28190,8 @@
       "bioeng_technical_topics",
       "upper_div",
       "stat_cluster",
-      "data_sci_model"
+      "data_sci_model",
+      "cs_upper_div"
     ]
   },
   {
@@ -28211,7 +28225,8 @@
     "tagIds": [
       "ls_quant",
       "bioeng_technical_topics",
-      "eecs_upper_div"
+      "eecs_upper_div",
+      "cs_upper_div"
     ]
   },
   {
@@ -30550,7 +30565,8 @@
     "dept": "DATA",
     "no": "C100",
     "tagIds": [
-      "bioeng_technical_topics"
+      "bioeng_technical_topics",
+      "cs_upper_div"
     ],
     "equivIds": [
       "compscic100"

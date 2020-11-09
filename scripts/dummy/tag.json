@@ -72,6 +72,10 @@
     "name": "EECS Upper Division Course"
   },
   {
+    "id": "cs_upper_div",
+    "name": "EECS Upper Division Course"
+  },
+  {
     "id": "eecs_design",
     "name": "EECS Upper Division Design Course"
   },

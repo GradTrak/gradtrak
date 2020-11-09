@@ -1106,13 +1106,24 @@
             "id": "upper_div",
             "type": "unit",
             "name": "Upper Division",
-            "units": 20,
+            "units": 8,
             "requirement": {
-              "id": "eecs_upper_div",
+              "id": "cs_upper_div",
               "type": "tag",
-              "name": "EECS Upper Division Course",
+              "name": "CS Upper Division Course",
               "tagId": "eecs_upper_div"
-            }
+            },
+            {
+              "id": "upper_div",
+              "type": "unit",
+              "name": "Upper Division",
+              "units": 8,
+              "requirement": {
+                "id": "eecs_upper_div",
+                "type": "tag",
+                "name": "EECS Upper Division Course",
+                "tagId": "eecs_upper_div"
+              }
           },
           {
             "id": "tech_elect",
@@ -1122,7 +1133,7 @@
             "requirement": {
               "id": "eecs_upper_div",
               "type": "tag",
-              "name": "CS Upper Div Technical Elective (Manually Fulfill)",
+              "name": "Upper Div Technical Elective (Manually Fulfill)",
               "tagId": "cs_technical_elective"
             }
           }
@@ -4237,7 +4248,7 @@
         ]
       }
     ]
-  },  
+  },
   {
     "id": "media",
     "name": "Media Studies",
@@ -4462,7 +4473,7 @@
         ]
       }
     ]
-  }, 
+  },
   {
     "id": "polisci",
     "name": "Political Science Major",
