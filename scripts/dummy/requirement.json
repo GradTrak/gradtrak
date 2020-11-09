@@ -122,7 +122,7 @@
             "name": "upper division H/SS",
             "numRequired": 2,
             "hidden": false,
-              "requirement": {
+            "requirement": {
               "id": "hssupper_1",
               "type": "poly",
               "name": "H/SS Upper Division",
@@ -429,12 +429,14 @@
           {
             "name": "SOCIOL 1",
             "type": "course",
-            "courseId": "sociol1"
+            "courseId": "sociol1",
+            "id": "sociol1"
           },
           {
             "name": "SOCIOL 5",
             "type": "course",
-            "courseId": "sociol5"
+            "courseId": "sociol5",
+            "id": "sociol5"
           },
           {
             "name": "Sociology Prerequisite Elective",
@@ -445,42 +447,50 @@
               {
                 "name": "STAT 2",
                 "type": "course",
-                "courseId": "stat2"
+                "courseId": "stat2",
+                "id": "stat2"
               },
               {
                 "name": "DATA C8",
                 "type": "course",
-                "courseId": "datac8"
+                "courseId": "datac8",
+                "id": "datac8"
               },
               {
                 "name": "SOCIOL 7",
                 "type": "course",
-                "courseId": "sociol7"
+                "courseId": "sociol7",
+                "id": "sociol7"
               },
               {
                 "name": "STAT 20",
                 "type": "course",
-                "courseId": "stat20"
+                "courseId": "stat20",
+                "id": "stat20"
               },
               {
                 "name": "STAT 21",
                 "type": "course",
-                "courseId": "stat21"
+                "courseId": "stat21",
+                "id": "stat21"
               },
               {
                 "name": "STAT 131A",
                 "type": "course",
-                "courseId": "stat131a"
+                "courseId": "stat131a",
+                "id": "stat131a"
               },
               {
                 "name": "PSYCH 101",
                 "type": "course",
-                "courseId": "psych101"
+                "courseId": "psych101",
+                "id": "psych101"
               },
               {
                 "name": "PHILOS 12a",
                 "type": "course",
-                "courseId": "philos12a"
+                "courseId": "philos12a",
+                "id": "philos12a"
               }
             ]
           }
@@ -492,12 +502,14 @@
           {
             "name": "SOCIOL 101",
             "type": "course",
-            "courseId": "sociol101"
+            "courseId": "sociol101",
+            "id": "sociol101"
           },
           {
             "name": "SOCIOL 102",
             "type": "course",
-            "courseId": "sociol102"
+            "courseId": "sociol102",
+            "id": "sociol102"
           },
           {
             "name": "Sociology Survey ",
@@ -508,32 +520,38 @@
               {
                 "name": "SOCIOL 110",
                 "type": "course",
-                "courseId": "sociol110"
+                "courseId": "sociol110",
+                "id": "sociol110"
               },
               {
                 "name": "SOCIOL 120",
                 "type": "course",
-                "courseId": "sociol120"
+                "courseId": "sociol120",
+                "id": "sociol120"
               },
               {
                 "name": "SOCIOL130",
                 "type": "course",
-                "courseId": "sociol130"
+                "courseId": "sociol130",
+                "id": "sociol130"
               },
               {
                 "name": "SOCIOL140",
                 "type": "course",
-                "courseId": "sociol140"
+                "courseId": "sociol140",
+                "id": "sociol140"
               },
               {
                 "name": "SOCIOL150",
                 "type": "course",
-                "courseId": "sociol150"
+                "courseId": "sociol150",
+                "id": "sociol150"
               },
               {
                 "name": "SOCIOL160",
                 "type": "course",
-                "courseId": "sociol160"
+                "courseId": "sociol160",
+                "id": "sociol160"
               },
               {
                 "name": "SOCIOL 180",
@@ -543,17 +561,20 @@
                   {
                     "name": "SOCIOL 180C",
                     "type": "course",
-                    "courseId": "sociol180c"
+                    "courseId": "sociol180c",
+                    "id": "sociol180c"
                   },
                   {
                     "name": "SOCIOL 180I",
                     "type": "course",
-                    "courseId": "sociol180i"
+                    "courseId": "sociol180i",
+                    "id": "sociol180i"
                   },
                   {
                     "name": "SOCIOL 180P",
                     "type": "course",
-                    "courseId": "sociol180p"
+                    "courseId": "sociol180p",
+                    "id": "sociol180p"
                   }
                 ]
               }
@@ -580,12 +601,14 @@
               {
                 "name": "SOCIOL 190",
                 "type": "course",
-                "courseId": "sociol190"
+                "courseId": "sociol190",
+                "id": "sociol190"
               },
               {
                 "name": "SOCIOL H190B",
                 "type": "course",
-                "courseId": "sociolh190b"
+                "courseId": "sociolh190b",
+                "id": "sociolh190b"
               }
             ]
           }
@@ -2625,28 +2648,24 @@
           {
             "id": "math1a",
             "type": "course",
-            "id": "math1a",
             "name": "MATH 1A",
             "courseId": "math1a"
           },
           {
             "id": "math1b",
             "type": "course",
-            "id": "math1b",
             "name": "MATH 1B",
             "courseId": "math1b"
           },
           {
             "id": "math53",
             "type": "course",
-            "id": "math53",
             "name": "MATH 53",
             "courseId": "math53"
           },
           {
             "id": "math54",
             "type": "course",
-            "id": "math54",
             "name": "MATH 54",
             "courseId": "math54"
           }
@@ -2845,7 +2864,7 @@
                   "id": "bioeng_upper_div",
                   "type": "regex",
                   "name": "BioE Upper Division Course",
-                  "deptRegex" : "BIO ENG",
+                  "deptRegex": "BIO ENG",
                   "numberRegex": "1\\d{2}"
                 }
               },
@@ -4184,12 +4203,14 @@
               {
                 "name": "PHILOS 122",
                 "type": "course",
-                "courseId": "philos122"
+                "courseId": "philos122",
+                "id": "philos122"
               },
               {
                 "name": "PHILOS 125",
                 "type": "course",
-                "courseId": "philos125"
+                "courseId": "philos125",
+                "id": "philos125"
               },
               {
                 "name": "Group C",
@@ -4313,22 +4334,26 @@
               {
                 "name": "HISTORY 7B",
                 "type": "course",
-                "courseId": "history7b"
+                "courseId": "history7b",
+                "id": "history7b"
               },
               {
                 "name": "HISTORY 124A",
                 "type": "course",
-                "courseId": "history124a"
+                "courseId": "history124a",
+                "id": "history124a"
               },
               {
                 "name": "HISTORY 124B",
                 "type": "course",
-                "courseId": "history124b"
+                "courseId": "history124b",
+                "id": "history124b"
               },
               {
                 "name": "HISTORY 131B",
                 "type": "course",
-                "courseId": "history131b"
+                "courseId": "history131b",
+                "id": "history131b"
               }
             ]
           },
@@ -4341,37 +4366,44 @@
               {
                 "name": "ANTHRO 3AC",
                 "type": "course",
-                "courseId": "anthro3ac"
+                "courseId": "anthro3ac",
+                "id": "anthro3ac"
               },
               {
                 "name": "ECON 1",
                 "type": "course",
-                "courseId": "econ1"
+                "courseId": "econ1",
+                "id": "econ1"
               },
               {
                 "name": "ECON 2",
                 "type": "course",
-                "courseId": "econ2"
+                "courseId": "econ2",
+                "id": "econ2"
               },
               {
                 "name": "PSYCH 1",
                 "type": "course",
-                "courseId": "psych1"
+                "courseId": "psych1",
+                "id": "psych1"
               },
               {
                 "name": "PSYCH 2",
                 "type": "course",
-                "courseId": "psych2"
+                "courseId": "psych2",
+                "id": "psych2"
               },
               {
                 "name": "SOCIOL 1",
                 "type": "course",
-                "courseId": "sociol1"
+                "courseId": "sociol1",
+                "id": "sociol1"
               },
               {
                 "name": "SOCIOL 3AC",
                 "type": "course",
-                "courseId": "sociol3ac"
+                "courseId": "sociol3ac",
+                "id": "sociol3ac"
               }
             ]
           }
@@ -4383,17 +4415,20 @@
           {
             "name": "MEDIAST 111",
             "type": "course",
-            "courseId": "mediast111"
+            "courseId": "mediast111",
+            "id": "mediast111"
           },
           {
             "name": "MEDIAST 112",
             "type": "course",
-            "courseId": "mediast112"
+            "courseId": "mediast112",
+            "id": "mediast112"
           },
           {
             "name": "MEDIAST 113",
             "type": "course",
-            "courseId": "mediast113"
+            "courseId": "mediast113",
+            "id": "mediast113"
           }
         ]
       },
@@ -4409,32 +4444,38 @@
               {
                 "name": "MEDIAST 130",
                 "type": "course",
-                "courseId": "mediast130"
+                "courseId": "mediast130",
+                "id": "mediast130"
               },
               {
                 "name": "POL SCI 3",
                 "type": "course",
-                "courseId": "polsci3"
+                "courseId": "polsci3",
+                "id": "polsci 3"
               },
               {
                 "name": "PSYCH 101",
                 "type": "course",
-                "courseId": "psych101"
+                "courseId": "psych101",
+                "id": "psych101"
               },
               {
                 "name": "SOCIOL 5",
                 "type": "course",
-                "courseId": "sociol5"
+                "courseId": "sociol5",
+                "id": "sociol5"
               },
               {
                 "name": "SOCIOL 7",
                 "type": "course",
-                "courseId": "sociol7"
+                "courseId": "sociol7",
+                "id": "sociol7"
               },
               {
                 "name": "SOCIOL 105",
                 "type": "course",
-                "courseId": "sociol105"
+                "courseId": "sociol105",
+                "id": "sociol105"
               }
             ]
           }
@@ -5064,5 +5105,4 @@
       }
     ]
   }
-
 ]
