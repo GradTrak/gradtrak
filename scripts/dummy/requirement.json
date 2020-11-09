@@ -569,8 +569,7 @@
               "type": "regex",
               "deptRegex": "SOCIOL",
               "numberRegex": "1\\d\\d",
-              "name": "TODO: regex UD",
-              "courseId": "todoregexud"
+              "name": "Sociology Elective"
             }
           },
           {
@@ -4135,9 +4134,9 @@
           },
           {
             "name": "PHILOS 160-178",
-            "type": "course",
-            "courseId": "TODO:regex",
-            "id": "TODO:regex"
+            "type": "regex",
+            "deptRegex": "PHILOS",
+            "numberRegex": "1(6\\d|7[0-8])"
           },
           {
             "name": "History Course",
@@ -4211,21 +4210,21 @@
             "numRequired": 2,
             "requirements": [
               {
-                "name": "any philos course",
-                "type": "course",
-                "courseId": "regex",
-                "id": "regex"
+                "name": "Philosophy Elective",
+                "type": "regex",
+                "deptRegex": "PHILOS",
+                "numberRegex": "."
               },
               {
-                "name": "Upper division elective",
+                "name": "Upper Division Elective",
                 "type": "count",
                 "id": "countupperdivisionelective",
                 "numRequired": 2,
                 "requirement": {
                   "name": "upper div philos elective",
-                  "type": "course",
-                  "courseId": "TODO:REGEX",
-                  "id": "TODO:REGEX"
+                  "type": "regex",
+                  "deptRegex": "PHILOS",
+                  "numberRegex": "1\\d\\d"
                 }
               }
             ]
