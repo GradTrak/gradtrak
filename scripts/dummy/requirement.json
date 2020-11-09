@@ -590,6 +590,7 @@
               "type": "regex",
               "deptRegex": "SOCIOL",
               "numberRegex": "1\\d\\d",
+              "id": "sociologyupelective",
               "name": "Sociology Elective"
             }
           },
@@ -4183,12 +4184,6 @@
             ]
           },
           {
-            "name": "PHILOS 160-178",
-            "type": "regex",
-            "deptRegex": "PHILOS",
-            "numberRegex": "1(6\\d|7[0-8])"
-          },
-          {
             "name": "History Course",
             "type": "tag",
             "tagId": "philos_hist",
@@ -4269,6 +4264,7 @@
               {
                 "name": "Philosophy Elective",
                 "type": "regex",
+                "id": "philosregexelective",
                 "deptRegex": "PHILOS",
                 "numberRegex": "."
               },
@@ -4280,6 +4276,7 @@
                 "requirement": {
                   "name": "upper div philos elective",
                   "type": "regex",
+                  "id": "philosregexupperdivelective",
                   "deptRegex": "PHILOS",
                   "numberRegex": "1\\d\\d"
                 }
