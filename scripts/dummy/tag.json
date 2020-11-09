@@ -232,6 +232,22 @@
     "name": "Cog Sci Society, Culture, and Cognition"
   },
   {
+    "id": "philos_hist",
+    "name": "Philos History"
+  },
+  {
+    "id": "media_group_a",
+    "name": "Media Studies Group A"
+  },
+  {
+    "id": "media_group_b",
+    "name": "Media Studies Group B"
+  },
+  {
+    "id": "media_group_c",
+    "name": "Media Studies Group C"
+  },
+  {
     "id": "poli_sci_amer_pol",
     "name": "Poli Sci American Politics"
   },
@@ -286,5 +302,13 @@
   {
     "id": "poli_sci_upper_div",
     "name": "Poli Sci Upper Div"
-  }
+  },
+  {
+    "name": "Mec Eng Design Course",
+    "id": "meceng_design"
+  },
+  {
+    "name": "Mec Eng Quantitative Science Course",
+    "id": "meceng_qs"
+  },
 ]

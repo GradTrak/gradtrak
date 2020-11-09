@@ -1,0 +1,39 @@
+PHILOS 153
+PHILOS 155
+Medieval Philosophy [4]	
+PHILOS 156A
+Foundations of Analytic Philosophy: Frege [4]	
+PHILOS 160
+Plato [4]	
+PHILOS 161
+Aristotle [4]	
+PHILOS 163
+Special Topics in Greek Philosophy [4]	
+PHILOS 170
+Descartes [4]	
+PHILOS 171
+Hobbes [4]	
+PHILOS 172
+Spinoza [4]	
+PHILOS 173
+Leibniz [4]	
+PHILOS 176
+Hume [4]	
+PHILOS 178
+Kant [4]	
+PHILOS 181
+Hegel [4]	
+PHILOS 183
+Schopenhauer and Nietzsche [4]	
+PHILOS 184
+Nietzsche [4]	
+PHILOS 185
+Heidegger [4]	
+PHILOS 186B
+Later Wittgenstein [4]	
+PHILOS 187
+Special Topics in the History of Philosophy [4]	
+PHILOS 188
+Phenomenology [4]	
+PHILOS N188
+Phenomenology [4]

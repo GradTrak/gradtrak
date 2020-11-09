@@ -1,0 +1,48 @@
+AFRICAM 142A	Third World Cinema	4
+AFRICAM 142AC	Race and American Film	4
+ANTHRO 138A	History and Theory of Ethnographic Film	4
+ASAMST 171	Asian Americans in Film and Video	4
+CHICANO 135A	Latino Narrative Film: to the 1980s	4
+CHICANO 135B	Latino Narrative Film Since 1990	4
+CHICANO 135C	Latino Documentary Film	4
+CHINESE 172	Contemporary Chinese Language Cinema	4
+DEMOG 161	Population Apocalypse in Film and Science	3
+EA LANG 181	East Asian Film: Special Topics in Genre	4
+EDUC 183	High School, The Movie	3
+ENGLISH 173	The Language and Literature of Films	4
+ENGLISH 176	Literature and Popular Culture	4
+ETH STD 122AC	Ethnicity and Race in Contemporary American Films	4
+FILM 108	Special Topics in Film Genre	4
+FILM 128	Documentary	4
+FILM 129	History of Avant-Garde Film	4
+FILM 140AC	Be/longings: Cinema and the Immigrant Experience in America	4
+FILM 151	Auteur Theory	4
+FILM 160	National Cinema	4
+FILM 177	Entertainment Law	4
+FILM 179	Understanding Film Sound	4
+FRENCH 177A	History and Criticism of Film	4
+GWS 125	Women and Film	4
+INFO C167	Virtual Communities/Social Media	4
+ISF 100J	The Social Life of Computing	4
+ITALIAN 170	The Italian Cinema: History, Genres, Authors	4
+ITALIAN 175	Film and Literature (in English)	4
+JAPAN 185	Introduction to Japanese Cinema	4
+JOURN 111	Social Media and Journalism	3
+KOREAN 186	Introduction to Korean Cinema	4
+KOREAN 187	History and Memory in Korean Cinema	4
+KOREAN 188	Cold War Culture in Korea: Literature and Film	4
+MEDIAST 150	Topics in Film	4
+MEDIAST 165	Internet and Culture	4
+MEDIAST 180	Television Studies	4
+MEDIAST N180	Television Studies	3
+NATAMST 158	Native Americans and the Cinema	4
+NATAMST N158	Native Americans and the Cinema	3
+NE STUD 165	Film and Fiction of Iran	4
+RHETOR 114	Rhetoric of New Media	4
+RHETOR 130	Novel into Film	4
+RHETOR 132T	Auteur in Film	4
+RHETOR 138	Television Criticism	4
+SCANDIN 115	Studies in Drama and Film	4
+SOCIOL 167	Virtual Communities/Social Media	4
+SOCIOL C167	Virtual Communities/Social Media	4
+THEATER 118AC	Performance, Television, and Social Media	4
