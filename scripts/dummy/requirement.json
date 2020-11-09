@@ -418,6 +418,183 @@
     ]
   },
   {
+    "id": "sociol",
+    "name": "Sociology",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Prerequisites",
+        "requirements": [
+          {
+            "name": "SOCIOL 1",
+            "type": "course",
+            "courseId": "sociol1"
+          },
+          {
+            "name": "SOCIOL 5",
+            "type": "course",
+            "courseId": "sociol5"
+          },
+          {
+            "name": "Sociology Prerequisite Elective",
+            "type": "multi",
+            "id": "sociolmultisociologyprerequisiteelective",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "STAT 2",
+                "type": "course",
+                "courseId": "stat2"
+              },
+              {
+                "name": "DATA C8",
+                "type": "course",
+                "courseId": "datac8"
+              },
+              {
+                "name": "SOCIOL 7",
+                "type": "course",
+                "courseId": "sociol7"
+              },
+              {
+                "name": "STAT 20",
+                "type": "course",
+                "courseId": "stat20"
+              },
+              {
+                "name": "STAT 21",
+                "type": "course",
+                "courseId": "stat21"
+              },
+              {
+                "name": "STAT 131A",
+                "type": "course",
+                "courseId": "stat131a"
+              },
+              {
+                "name": "PSYCH 101",
+                "type": "course",
+                "courseId": "psych101"
+              },
+              {
+                "name": "PHILOS 12a",
+                "type": "course",
+                "courseId": "philos12a"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "name": "SOCIOL 101",
+            "type": "course",
+            "courseId": "sociol101"
+          },
+          {
+            "name": "SOCIOL 102",
+            "type": "course",
+            "courseId": "sociol102"
+          },
+          {
+            "name": "Sociology Survey ",
+            "type": "multi",
+            "id": "sociolmultisociologysurvey",
+            "numRequired": 2,
+            "requirements": [
+              {
+                "name": "SOCIOL 110",
+                "type": "course",
+                "courseId": "sociol110"
+              },
+              {
+                "name": "SOCIOL 120",
+                "type": "course",
+                "courseId": "sociol120"
+              },
+              {
+                "name": "SOCIOL130",
+                "type": "course",
+                "courseId": "sociol130"
+              },
+              {
+                "name": "SOCIOL140",
+                "type": "course",
+                "courseId": "sociol140"
+              },
+              {
+                "name": "SOCIOL150",
+                "type": "course",
+                "courseId": "sociol150"
+              },
+              {
+                "name": "SOCIOL160",
+                "type": "course",
+                "courseId": "sociol160"
+              },
+              {
+                "name": "SOCIOL 180",
+                "type": "poly",
+                "id": "polysociol180",
+                "requirements": [
+                  {
+                    "name": "SOCIOL 180C",
+                    "type": "course",
+                    "courseId": "sociol180c"
+                  },
+                  {
+                    "name": "SOCIOL 180I",
+                    "type": "course",
+                    "courseId": "sociol180i"
+                  },
+                  {
+                    "name": "SOCIOL 180P",
+                    "type": "course",
+                    "courseId": "sociol180p"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sociology Elective",
+            "type": "count",
+            "id": "sociolcountsociologyelective",
+            "numRequired": 3,
+            "hidden": false,
+            "requirement": {
+              "type": "regex",
+              "deptRegex": "SOCIOL",
+              "numberRegex": "1\\d\\d",
+              "name": "TODO: regex UD",
+              "courseId": "todoregexud"
+            }
+          },
+          {
+            "name": "Sociology Capstone/seminar",
+            "type": "poly",
+            "id": "sociolpolysociologycapstoneseminar",
+            "requirements": [
+              {
+                "name": "SOCIOL 190",
+                "type": "course",
+                "courseId": "sociol190"
+              },
+              {
+                "name": "SOCIOL H190B",
+                "type": "course",
+                "courseId": "sociolh190b"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "haas",
     "name": "Business Administration",
     "parentId": "ucb",
