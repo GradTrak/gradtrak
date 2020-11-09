@@ -1,7 +1,6 @@
 import memoize from 'memoizee';
 
 import { Course } from '../models/course.model';
-import { FulfillmentType } from '../models/fulfillment-type.model';
 import { Constraint, Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
@@ -9,10 +8,22 @@ import { CourseRequirement } from '../models/requirements/course-requirement.mod
 import { MultiRequirement } from '../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
 
-export type ProcessedFulfillmentType = {
-  status: FulfillmentType;
+export type FulfillmentType = 'fulfilled' | 'possible' | 'unfulfilled';
+
+type CourseFulfillmentMethodType = {
+  method: 'courses';
   coursesUsed: Set<Course>;
 };
+
+type ManualFulfillmentMethodType = {
+  method: 'manual';
+};
+
+type FulfillmentMethodType = CourseFulfillmentMethodType | ManualFulfillmentMethodType;
+
+export type ProcessedFulfillmentType = {
+  status: FulfillmentType;
+} & FulfillmentMethodType;
 
 /**
  * Returns a map containing the requirement and any child requirement as keys,
@@ -319,15 +330,18 @@ function deriveReqFulfillment(
     const coursesUsed: Set<Course> = new Set<Course>();
     /* Union all courses used from children */
     childFulfillments.forEach((childFulfillment: ProcessedFulfillmentType) => {
-      childFulfillment.coursesUsed.forEach((course: Course) => {
-        coursesUsed.add(course);
-      });
+      if (childFulfillment.method === 'courses') {
+        childFulfillment.coursesUsed.forEach((course: Course) => {
+          coursesUsed.add(course);
+        });
+      }
     });
     const numFulfilled: number = childFulfillments.filter(
       (childFulfillment: ProcessedFulfillmentType) => childFulfillment.status === 'fulfilled',
     ).length;
     const reqFulfillment: ProcessedFulfillmentType = {
       status: numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled',
+      method: 'courses',
       coursesUsed,
     };
     fulfillment.set(req, reqFulfillment);
@@ -343,7 +357,6 @@ function deriveReqFulfillment(
     ) {
       /* Requirement is fulfilled */
       status = 'fulfilled';
-      fulfillment.set(req, { status: 'fulfilled', coursesUsed: typeof coursesUsed !== 'boolean' ? coursesUsed : null });
     } else if (
       bestMappings.some((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
         reqIsFulfilledWithMapping(req, reqToCourseMapping),
@@ -355,7 +368,18 @@ function deriveReqFulfillment(
       /* Requirement is unfulfilled */
       status = 'unfulfilled';
     }
-    fulfillment.set(req, { status, coursesUsed: typeof coursesUsed !== 'boolean' ? coursesUsed : null });
+    if (coursesUsed instanceof Set) {
+      fulfillment.set(req, {
+        status,
+        method: 'courses',
+        coursesUsed,
+      });
+    } else {
+      fulfillment.set(req, {
+        status,
+        method: 'manual',
+      });
+    }
   }
 }
 
@@ -514,7 +538,10 @@ export function processRequirements(
     }
   });
   manualReqs.forEach((req: Requirement) => {
-    fulfillment.set(req, { status: 'fulfilled', coursesUsed: null });
+    fulfillment.set(req, {
+      status: 'fulfilled',
+      method: 'manual',
+    });
   });
 
   reqIsFulfilledWithMapping.clear();

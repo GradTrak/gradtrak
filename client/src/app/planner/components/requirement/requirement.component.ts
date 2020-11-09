@@ -84,7 +84,12 @@ export class RequirementComponent implements OnInit {
   }
 
   getFulfillingCourses(): string[] {
-    return Array.from(this.fulfillmentMap.get(this.requirement).coursesUsed).map((course: Course) => course.getName());
+    const fulfillment: ProcessedFulfillmentType = this.fulfillmentMap.get(this.requirement);
+    if (fulfillment.method === 'courses') {
+      return Array.from(fulfillment.coursesUsed).map((course: Course) => course.getName());
+    } else {
+      return [];
+    }
   }
 
   isUnit(): boolean {
