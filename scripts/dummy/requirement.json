@@ -4073,5 +4073,212 @@
         ]
       }
     ]
+  },
+  {
+    "id": "meche",
+    "name": "Mechanical Engineering",
+    "parentId": "coe",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Math",
+        "requirements": [
+          {
+            "name": "MATH 1A",
+            "type": "course",
+            "courseId": "math1a",
+            "id": "math1a"
+          },
+          {
+            "name": "MATH 1B",
+            "type": "course",
+            "courseId": "math1b",
+            "id": "math1b"
+          },
+          {
+            "name": "MATH 53",
+            "type": "course",
+            "courseId": "math53",
+            "id": "math53"
+          },
+          {
+            "name": "MATH 54",
+            "type": "course",
+            "courseId": "math54",
+            "id": "math54"
+          }
+        ]
+      },
+      {
+        "name": "Natural Sciences",
+        "requirements": [
+          {
+            "name": "Chemistry",
+            "type": "multi",
+            "id": "mechemultichemistry",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "CHEM 1A",
+                "type": "course",
+                "courseId": "chem1a",
+                "id": "chem1a"
+              },
+              {
+                "name": "CHEM 4A",
+                "type": "course",
+                "courseId": "chem4a",
+                "id": "chem4a"
+              }
+            ],
+            "hidden": true
+          },
+          {
+            "name": "Physics",
+            "type": "multi",
+            "id": "mechemultiphysics",
+            "hidden": true,
+            "requirements": [
+              {
+                "name": "PHYSICS 7A",
+                "type": "course",
+                "courseId": "physics7a",
+                "id": "physics7a"
+              },
+              {
+                "name": "PHYSICS 7B",
+                "type": "course",
+                "courseId": "physics7b",
+                "id": "physics7b"
+              }
+            ],
+            "numRequired": 2
+          }
+        ]
+      },
+      {
+        "name": "Lower Division Engineering",
+        "requirements": [
+          {
+            "name": "ENGIN 7",
+            "type": "course",
+            "courseId": "engin7",
+            "id": "engin7"
+          },
+          {
+            "name": "ENGIN 26",
+            "type": "course",
+            "courseId": "engin26",
+            "id": "engin26"
+          },
+          {
+            "name": "ENGIN 29",
+            "type": "course",
+            "courseId": "engin29",
+            "id": "engin29"
+          },
+          {
+            "name": "ENGIN 78",
+            "type": "course",
+            "courseId": "engin78",
+            "id": "engin78"
+          },
+          {
+            "name": "MEC ENG 40",
+            "type": "course",
+            "courseId": "meceng40",
+            "id": "meceng40"
+          },
+          {
+            "name": "MEC ENG C85",
+            "type": "course",
+            "courseId": "mecengc85",
+            "id": "mecengc85"
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Core",
+        "requirements": [
+          {
+            "name": "MEC ENG 100",
+            "type": "course",
+            "courseId": "meceng100",
+            "id": "meceng100"
+          },
+          {
+            "name": "MEC ENG 102B",
+            "type": "course",
+            "courseId": "meceng102b",
+            "id": "meceng102b"
+          },
+          {
+            "name": "MEC ENG 103",
+            "type": "course",
+            "courseId": "meceng103",
+            "id": "meceng103"
+          },
+          {
+            "name": "MEC ENG 104",
+            "type": "course",
+            "courseId": "meceng104",
+            "id": "meceng104"
+          },
+          {
+            "name": "MEC ENG 106",
+            "type": "course",
+            "courseId": "meceng105",
+            "id": "meceng105"
+          },
+          {
+            "name": "MEC ENG 108",
+            "type": "course",
+            "courseId": "meceng108",
+            "id": "meceng108"
+          },
+          {
+            "name": "MEC ENG 109",
+            "type": "course",
+            "courseId": "meceng109",
+            "id": "meceng109"
+          },
+          {
+            "name": "MEC ENG 132",
+            "type": "course",
+            "courseId": "meceng132",
+            "id": "meceng132"
+          }
+        ]
+      },
+      {
+        "name": "Technical Electives",
+        "requirements": [
+          {
+            "name": "Mec Eng Design Course",
+            "type": "tag",
+            "tagId": "meceng_design",
+            "id": "meceng_design"
+          },
+          {
+            "name": "Mec Eng Quantitative Science Course",
+            "type": "tag",
+            "tagId": "meceng_qs",
+            "id": "meceng_qs"
+          },
+          {
+            "name": "Upper Division",
+            "type": "unit",
+            "requirement": {
+              "type": "REGENTS",
+              "name": "Mec Eng Upper Division Course",
+              "tagId": "meceng_upper_div",
+              "id": "meceng_upper_div"
+            },
+            "units": 15
+          }
+        ]
+      }
+    ]
   }
+
 ]
