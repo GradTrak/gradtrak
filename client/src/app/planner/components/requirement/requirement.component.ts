@@ -8,6 +8,7 @@ import { UnitRequirement } from '../../models/requirements/unit-requirement.mode
 import { PolyRequirement } from '../../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { CountRequirement } from '../../models/requirements/count-requirement.model';
+import { RegexRequirement } from '../../models/requirements/regex-requirement.model';
 
 @Component({
   selector: 'app-requirement',
@@ -102,6 +103,17 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retrieve non-CountRequirement as CountRequirement');
     }
     return this.requirement as CountRequirement;
+  }
+
+  isRegex(): boolean {
+    return this.requirement instanceof RegexRequirement;
+  }
+
+  getRegex(): RegexRequirement {
+    if (!this.isRegex()) {
+      throw new Error('Attempted to retrieve non-RegexRequirement as RegexRequirement');
+    }
+    return this.requirement as RegexRequirement;
   }
 
   /**

@@ -2815,7 +2815,11 @@
         ]
       },
       {
-        "name": "Upper Division",
+        "id": "upper_div_units",
+        "type": "multi",
+        "name": "Minimum 36 units, including 24 BioE courses",
+        "numRequired": 2,
+        "hidden": false,
         "requirements": [
           {
             "id": "upper_div_units_bioe",
@@ -2824,9 +2828,10 @@
             "units": 24,
             "requirement": {
               "id": "bioeng_upper_div",
-              "type": "tag",
+              "type": "regex",
               "name": "BioE Upper Division Course",
-              "tagId": "bioeng_upper_div"
+              "deptRegex" : "BIO ENG",
+              "numberRegex": "1\\d{2}"
             }
           },
           {
