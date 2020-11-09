@@ -1,0 +1,7 @@
+COMPSCI 182	Designing, Visualizing and Understanding Deep Neural Networks	4
+COMPSCI L182	Designing, Visualizing and Understanding Deep Neural Networks	4
+COMPSCI W182	Designing, Visualizing and Understanding Deep Neural Networks	4
+COMPSCI 189	Introduction to Machine Learning	4
+DATA C102	Data, Inference, and Decisions	4
+IND ENG 142	Introduction to Machine Learning and Data Analytics	3
+STAT 154	Modern Statistical Prediction and Machine Learning	4 

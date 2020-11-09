@@ -1,0 +1,4 @@
+EECS 126	Probability and Random Processes	4
+IND ENG 172	Probability and Risk Analysis for Engineers	4
+STAT 134	Concepts of Probability	4
+STAT 140	Probability for Data Science	4

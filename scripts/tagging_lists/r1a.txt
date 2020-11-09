@@ -1,0 +1,35 @@
+AFRICAM R1A	Freshman Composition	
+AFRICAM R1AN	Reading and Composition
+ASAMST R2A	Reading and Composition
+CELTIC R1A	Voices of the Celtic World
+CHICANO R1A	Reading and Composition
+CHICANO R1AN	Reading and Composition
+COLWRIT R1A	Accelerated Reading and Composition
+COLWRIT R4A	Reading and Composition
+COM LIT H1A	English Composition in Connection with the Reading of World Literature
+COM LIT N1A	English Composition in Connection with the Reading of World Literature
+COM LIT R1A	English Composition in Connection with the Reading of World Literature
+COM LIT R2A	English Composition in Connection with Reading of World and French Literature
+COM LIT R3A	English Composition in Connection with Reading of World and Hispanic Literature
+ENGLISH R1A	Reading and Composition
+ENGLISH R1AN	First-Year Reading and Composition
+FILM R1A	The Craft of Writing - Film Focus
+FRENCH R1A	English Composition in Connection with the Reading of Literature
+GERMAN R5A	Reading and Composition
+ITALIAN R5A	Reading and Composition
+LEGALST R1A	Reading and Composition in Connection with the Law as a Social Institution
+NATAMST R1A	Native American Studies Reading and Composition
+NE STUD R1A	Reading and Composition in Near Eastern Studies
+RHETOR R1A	The Craft of Writing
+SASIAN R5A	Great Books of India
+SCANDIN R5A	Reading and Composition
+SEASIAN R5A	Self, Representation, and Nation
+SLAVIC R5A	Reading and Composition
+SPANISH R1A	Reading and Composition Through Readings from the Spanish-Speaking World
+THEATER R1A	Performance: Writing and Research
+XCOLWRI R1A	Accelerated Reading and Composition
+XCOMLIT R1A	English Composition in Connection with the Reading of World Literature
+XENGLIS R1A	Reading and Composition
+XFILM R1A	The Craft of Writing - Film Focus
+XRHETOR R1A	The Craft of Writing
+XSEASIA R5A	Self, Representation, and Nation

@@ -1,0 +1,255 @@
+AFRICAM 7B Elementary Wolof
+AFRICAM 8A Intermediate Wolof
+AFRICAM 8B Intermediate Wolof
+AFRICAM 9A Advanced Wolof
+AFRICAM 9B Advanced Wolof
+AFRICAM 10A Intermediate Swahili
+AFRICAM 10B Intermediate Swahili
+AFRICAM 11B Elementary Swahili
+AFRICAM 12 Intensive Elementary Swahili
+AFRICAM 13B Elementary Zulu
+AFRICAM 14A Intermediate Zulu
+AFRICAM 14B Intermediate Zulu
+AFRICAM 15A Advanced Swahili
+AFRICAM 15B Advanced Swahili
+AFRICAM 16B Elementary Igbo
+AFRICAM 18B Elementary Amharic
+AFRICAM 21A Intermediate Amharic
+AFRICAM 19A Advanced Zulu
+AFRICAM 19B Advanced Zulu
+AFRICAM 30B Elementary Chichewa
+AFRICAM 31A Intermediate Chichewa
+AFRICAM 31B Intermediate Chichewa
+ARABIC 1B Elementary Arabic
+ARABIC 10 Intensive Elementary Arabic
+ARABIC 30 Intermediate Arabic
+ARABIC 20A Intermediate Arabic
+ARABIC 20B Intermediate Arabic
+ARABIC 100A Advanced Arabic
+ARABIC 100B Advanced Arabic
+ARMENI 1B Introductory Armenian
+ARMENI 101A Continuing Armenian
+ARMENI 101B Continuing Armenian
+BANGLA 1B Introductory Bengali
+BANGLA 101A Intermediate Bengali
+BANGLA 101B Intermediate Bengali
+BOSCRSR 27B Introductory Bosnian/Croatian/Serbian
+BOSCRSR 117A Continuing Bosnian/Croatian/Serbian
+BOSCRSR 117B Continuing Bosnian/Croatian/Serbian
+BULGARI 26B Introductory Bulgarian
+BULGARI 118A Continuing Bulgarian
+BULGARI 118B Continuing Bulgarian
+BURMESE 1B Introductory Burmese
+Berkeley Courses Approved for the Foreign Language Requirement
+(Courses must be completed with a C- or higher)
+CELTIC 85 Intermediate Modern Irish
+CELTIC 86 Intermediate Modern Welsh
+CELTIC 102B Advanced Breton
+CELTIC 144A Modern Welsh Level 3
+CELTIC 144B Modern Welsh Level 4
+CELTIC 145A Intermediate Irish Language
+CELTIC 145B Modern Irish Level Four
+CHICANO 5 Intensive Elementary Spanish Language and Latin American Culture
+CHICANO 10 Intensive Intermediate Spanish Language and Mexican Culture
+CHINESE 1 Intensive Elementary Chinese
+CHINESE 1B Elementary Chinese
+CHINESE 1X Elementary Chinese for Mandarin Speakers
+CHINESE 1Y Elementary Chinese for Dialect Speakers
+CHINESE 10 Intensive Intermediate Chinese
+CHINESE 10A Intermediate Chinese
+CHINESE 10B Intermediate Chinese
+CHINESE 10X Intermediate Chinese for Mandarin Speakers
+CHINESE 10Y Intermediate Chinese for Dialect Speakers
+CHINESE 100A Advanced Chinese
+CHINESE 100B Advanced Chinese
+CHINESE 100XA Advanced Chinese for Mandarin Speakers
+CHINESE 100XB Advanced Chinese for Mandarin Speakers
+CHINESE 100YA Advanced Chinese for Dialect Speakers
+CHINESE 100YB Advanced Chinese for Dialect Speakers
+COMLIT 112B Modern Greek Composition
+CUNEIF 100B Elementary Akkadian
+CUNEIF 102B Elementary Sumerian
+CUNEIF 106B Elementary Hittite
+CZECH 26B Introductory Czech
+CZECH 116A Continuing Czech
+CZECH 116B Continuing Czech
+DANISH 1B Beginning Danish
+DUTCH 2 Elementary Dutch
+DUTCH 110 Advanced Dutch
+DUTCH 125 Conversation and Composition
+EGYPT 100B Elementary Egyptian
+EGYPT 101A Intermediate Egyptian
+EGYPT 101B Intermediate Egyptian
+EGYPT 102B Elementary Coptic
+FILIPN 1B Introductory Filipino
+FILIPN W1Y Introductory Filipino for Heritage Learners Online
+FILIPN 15 Intensive Introductory Filipino
+FILIPN W15X Intensive Intro Filipino for Heritage Learners Online
+Berkeley Courses Approved for the Foreign Language Requirement
+(Courses must be completed with a C- or higher)
+FILIPN 100A Intermediate Filipino
+FILIPN 100B Intermediate Filipino
+FILIPN W100A Intermediate Filipino Online
+FILIPN W100B Intermediate Filipino Online
+FILIPN 101A Advanced Filipino
+FILIPN 101B Advanced Filipino
+FILIPN W101A Advanced Filipino Online
+FILIPN W101B Advanced Filipino Online
+FINNISH 1B Beginning Finnish
+FINNISH 102A Intermediate Finnish
+FINNISH 102B Intermediate Finnish
+FRENCH 2 Elementary French
+FRENCH 3 Intermediate French
+FRENCH 4 Advanced Intermediate French
+FRENCH 102 Reading and Writing Skills in French
+GERMAN 2 Elementary German
+GERMAN 3 Intermediate German I
+GERMAN 4 Intermediate German II
+GERMAN 101 Advanced German: Conversation, Composition and Style
+GERMAN 102A Advanced Language Practice: German Performance
+GREEK 2 Elementary Greek
+GREEK 10 Intensive Elementary Greek
+HEBREW 1B Elementary Hebrew
+HEBREW 10 Intensive Elementary Hebrew
+HEBREW 20A Intermediate Hebrew
+HEBREW 20B Intermediate Hebrew
+HEBREW 100A Advanced Hebrew
+HEBREW 100B Advanced Hebrew
+HINDI 1B Introductory Hindi
+HINDI 100A Intermediate Hindi
+HINDI 100B Intermediate Hindi
+HINDI 101A Readings in Modern Hindi
+HINDI 101B Readings in Modern Hindi
+HINURD 15 Intensive Elementary Hindi-Urdu
+HUNGARI 1B Introductory Hungarian
+ICELAND 1B Beginning Icelandic II
+INDONES 1B Introductory Indonesian
+INDONES 100A Intermediate Indonesian
+INDONES 100B Intermediate Indonesian
+ITALIAN 1R Intensive Italian for Romance Languages Speakers
+ITALIAN 1S Intensive Italian for Romance Languages Speakers
+ITALIAN 2 Elementary Italian
+ITALIAN W2 Elementary Italian (Hybrid)
+Berkeley Courses Approved for the Foreign Language Requirement
+(Courses must be completed with a C- or higher)
+ITALIAN 3 Intermediate Italian
+ITALIAN 4 Intermediate Italian
+ITALIAN 12 Advanced Conversational Italian
+ITALIAN N12 Italian Conversation
+ITALIAN 101 Advanced Writing Workshop
+ITALIAN 101A Advanced Grammar, Reading, and Composition
+ITALIAN 101B Advanced Grammar, Reading, and Composition
+JAPAN 1 Intensive Elementary Japanese
+JAPAN 1B Elementary Japanese
+JAPAN 10 Intensive Intermediate Japanese
+JAPAN 10A Intermediate Japanese
+JAPAN 10B Intermediate Japanese
+JAPAN 10X Intermediate Japanese for Heritage Learners
+JAPAN 100 Intensive Advanced Japanese
+JAPAN 100A Advanced Japanese
+JAPAN 100B Advanced Japanese
+JAPAN 100X Advanced Japanese for Heritage Learners
+KHMER 1B Introductory Khmer
+KHMER 100A Intermediate Khmer
+KHMER 100B Intermediate Khmer
+KHMER 101A Advanced Khmer
+KHMER 101B Advanced Khmer
+KOREAN 1 Intensive Elementary Korean
+KOREAN 1B Elementary Korean
+KOREAN 1BX Elementary Korean for Heritage Speakers
+KOREAN 10 Intensive Intermediate Korean
+KOREAN 10A Intermediate Korean
+KOREAN 10AX Intermediate Korean for Heritage Speakers
+KOREAN 10B Intermediate Korean
+KOREAN 10BX Intermediate Korean for Heritage Speakers
+KOREAN 100A Advanced Korean
+KOREAN 100AX Advanced Koriean for Heritage Speakers
+KOREAN 100B Advanced Korean
+KOREAN 100BX Advanced Korean for Heritage Speakers
+LATIN 2 Elementary Latin
+LATIN 10 Intensive Elementary Latin
+LATIN 15 The Latin Workshop
+LINGUIS 1B American Sign Language II
+LINGUIS 2A American Sign Language III
+MALAYI 1B Introductory Indonesian
+MALAYI 100A Intermediate Indonesian
+MALAYI 100B Intermediate Indonesian
+MONGOLN 1B Elementary Mongolian
+Berkeley Courses Approved for the Foreign Language Requirement
+(Courses must be completed with a C- or higher)
+NORWEGN 1B Beginning Norwegian
+PERSIAN 1B Elementary Modern Persian
+PERSIAN 10 Intensive Elementary Persian
+PERSIAN 11B Reading and Composition for Persian Speaking Students
+PERSIAN 20 Intensive Intermediate Persian
+PERSIAN 20A Intermediate Modern Persian
+PERSIAN 20B Intermediate Modern Persian
+PERSIAN 100A Advanced Persian
+PERSIAN 100B Advanced Persian
+POLISH 25B Introductory Polish
+POLISH 115A Continuing Polish
+POLISH 115B Continuing Polish
+PORTUG 50 Intensive Portuguese for Spanish Speakers
+PORTUG 102 Readings in Portuguese
+PUNJABI 1B Introductory Punjabi
+PUNJABI 15 Intensive Elementary Punjabi
+PUNJABI 100A Intermediate Punjabi
+PUNJABI 100B Intermediate Punjabi
+RUSSIAN 2 Elementary Russian
+RUSSIAN 3 Intermediate Russian
+RUSSIAN 4 Intermediate Russian
+RUSSIAN 6A Introductory Russian for Heritage Speakers
+RUSSIAN 6B Introductory Russian for Heritage Speakers
+RUSSIAN 103A Advanced Russian
+RUSSIAN 103B Advanced Russian
+RUSSIAN 106A Advanced Russian for Heritage Speakers (effective fa15)
+RUSSIAN 106B Advanced Russian for Heritage Speakers (effective fa15)
+SANSKR 100B Elementary Sanskrit
+SANSKR 101A Intermediate Sanskrit: Epic and Puracic Sanskrit
+SANSKR 101B Intermediate Sanskrit: Sastraic (Scientific) Sanskrit
+SCANDIN 100A Intermediate Scandinavian Languages
+SCANDIN 100B Intermediate Scandinavian Languages
+SEMITIC 100B Aramaic
+SPANISH 2 Elementary Spanish
+SPANISH 3 Intermediate Spanish
+SPANISH N3 Intermediate Spanish
+SPANISH 4 Intermediate Spanish
+SPANISH N4 Intermediate Spanish
+SPANISH 15 Intensive Beginning Spanish Workshop
+SPANISH 21 Spanish for Bilingual Students, First Course
+SPANISH 22 Spanish for Bilingual Students, Second Course
+SPANISH 25 Reading and Analysis of Literary Texts
+SPANISH 100 Introduction to Hispanic Linguistics
+Berkeley Courses Approved for the Foreign Language Requirement
+(Courses must be completed with a C- or higher)
+SWEDISH 1B Beginning Swedish
+TAMIL 1B Introductory Tamil
+TELUGU 1B Elementary Telugu
+THAI 1B Introduction to Thai
+THAI 100A Intermediate Thai
+THAI 100B Intermediate Thai
+THAI 101A Advanced Thai
+THAI 101B Advanced Thai
+TIBETAN 1B Elementary Tibetan
+TIBETAN 10A Intermediate Tibetan
+TIBETAN 10B Intermediate Tibetan
+TIBETAN 110A Intensive Readings in Tibetan
+TIBETAN 110B Intensive Readings in Tibetan
+TURKISH 1B Elementary Modern Turkish
+TURKISH 10 Elementary Turkish
+TURKISH 100A Intermediate Modern Turkish
+TURKISH 100B Intermediate Modern Turkish
+TURKISH 101A Readings in Modern Turkish
+TURKISH 101B Readings in Modern Turkish
+URDU 1B Introductory Urdu
+URDU 100A Intermediate Urdu
+URDU 100B Intermediate Urdu
+URDU 101A Advanced Urdu
+URDU 101B Advanced Urdu
+VIETNMS 1B Introductory Vietnamese
+VIETNMS 15 Intensive Introductory Vietnamese
+VIETNMS 100A Intermediate Vietnamese
+VIETNMS 100B Intermedidate Vietnamese
+VIETNMS 101A Advanced Vietnamese
+VIETNMS 101B Advanced vietnamese
+YIDDISH 102

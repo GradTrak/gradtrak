@@ -1,0 +1,108 @@
+CHEM 120A	Physical Chemistry	3
+CHEM 120B	Physical Chemistry	3
+CHEM C130/MCELLBI C100A	Biophysical Chemistry: Physical Principles and the Molecules of Life 3	4
+CHEM 135	Chemical Biology	3
+CHEM/CHM ENG C170L	Biochemical Engineering Laboratory	3
+CHEM/CHM ENG C178	Polymer Science and Technology	3
+CHEM/COMPSCI/PHYSICS C191	Quantum Information Science and Technology	3
+CHM ENG 140	Introduction to Chemical Process Analysis	4
+CHM ENG 141	Chemical Engineering Thermodynamics	4
+CHM ENG 150A	Transport Processes	4
+CHM ENG 150B	Transport and Separation Processes	4
+CHM ENG 170A	Biochemical Engineering	3
+CHM ENG 170B	Biochemical Engineering	3
+CHM ENG/CHEM C170L	Biochemical Engineering Laboratory	3
+CHM ENG 171	Transport Phenomena	3
+CHM ENG/CHEM C178	Polymer Science and Technology	3
+COMPSCI 70	Discrete Mathematics and Probability Theory 2	4
+COMPSCI/STAT/DATA C100	Principles & Techniques of Data Science	4
+COMPSCI 160	User Interface Design and Development	4
+COMPSCI 161	Computer Security	4
+COMPSCI 169	Software Engineering	4
+COMPSCI 170	Efficient Algorithms and Intractable Problems	4
+COMPSCI 176	Algorithms for Computational Biology	4
+COMPSCI 186	Introduction to Database Systems	4
+COMPSCI 188	Introduction to Artificial Intelligence	4
+COMPSCI 189	Introduction to Machine Learning	4
+COMPSCI/CHEM/PHYSICS C191	Quantum Information Science and Technology	3
+DATA/COMPSCI/STAT C100	Principles & Techniques of Data Science	4
+EECS 127	Optimization Models in Engineering	4
+EECS 149	Introduction to Embedded Systems	4
+EL ENG 105	Microelectronic Devices and Circuits	4
+EL ENG 117	Electromagnetic Fields and Waves	4
+EL ENG 118	Introduction to Optical Engineering	3
+EL ENG 120	Signals and Systems	4
+EL ENG 123	Digital Signal Processing	4
+EL ENG 126	Probability and Random Processes	4
+EL ENG C128/MEC ENG C134	Feedback Control Systems	4
+EL ENG 142	Integrated Circuits for Communications	4
+EL ENG 143	Microfabrication Technology	4
+EL ENG 147	Introduction to Microelectromechanical Systems (MEMS)	3
+EL ENG 192	Mechatronic Design Laboratory	4
+INTEGBI 115	Introduction to Systems in Biology and Medicine	4
+INTEGBI 127L	Motor Control with Laboratory	3
+INTEGBI 131	General Human Anatomy	3
+INTEGBI 132	Survey of Human Physiology	4
+INTEGBI 135	The Mechanics of Organisms	4
+INTEGBI 148	Comparative Animal Physiology	3
+INTEGBI 161	Population and Evolutionary Genetics	4
+INTEGBI 163	Molecular and Genomic Evolution	3
+INTEGBI 164	Human Genetics and Genomics	4
+IND ENG 160	Nonlinear and Discrete Optimization	3
+IND ENG 162	Linear Programming and Network Flows	3
+IND ENG 172	Probability and Risk Analysis for Engineers	4
+MAT SCI 102	Bonding, Crystallography, and Crystal Defects	3
+MAT SCI 103	Phase Transformations and Kinetics	3
+MAT SCI 104	Materials Characterization	3
+MAT SCI 111	Properties of Electronic Materials	4
+MAT SCI 112	Corrosion (Chemical Properties)	3
+MAT SCI 113	Mechanical Behavior of Engineering Materials	3
+MAT SCI 130	Experimental Materials Science and Design	3
+MAT SCI 151	Polymeric Materials	3
+MATH 110	Linear Algebra	4
+MATH 118	Fourier Analysis, Wavelets, and Signal Processing	4
+MATH 127	Mathematical and Computational Methods in Molecular Biology	4
+MATH 128A	Numerical Analysis	4
+MATH 170	Mathematical Methods for Optimization	4
+MCELLBI C100A/CHEM C130	Biophysical Chemistry: Physical Principles and the Molecules of Life (Students should take BioE 103 instead of MCB C100A, credit applied for those who have already taken C100A before F17) 3	4
+MCELLBI 100B	Biochemistry: Pathways, Mechanisms, and Regulation	4
+MCELLBI 102	Survey of the Principles of Biochemistry and Molecular Biology	4
+MCELLBI 110	Molecular Biology: Macromolecular Synthesis and Cellular Function	4
+MCELLBI/PLANTBI C112	General Microbiology	4
+MCELLBI 130	Cell and Systems Biology	4
+MCELLBI 132	Biology of Human Cancer	4
+MCELLBI 133L	Physiology and Cell Biology Laboratory	4
+MCELLBI 136	Physiology	4
+MCELLBI 140	General Genetics	4
+MCELLBI 140L	Genetics Laboratory	4
+MCELLBI/PLANTBI C148	Microbial Genomics and Genetics	4
+MCELLBI 150	Molecular Immunology	4
+MCELLBI 160L	Neurobiology Laboratory	4
+MCELLBI 166	Biophysical Neurobiology	3
+MEC ENG 102B	Mechatronics Design	4
+MEC ENG 104	Engineering Mechanics II	3
+MEC ENG 106	Fluid Mechanics	3
+MEC ENG 109	Heat Transfer	3
+MEC ENG 118	Introduction to Nanotechnology and Nanoscience	3
+MEC ENG 119	Introduction to MEMS (Microelectromechanical Systems)	3
+MEC ENG 132	Dynamic Systems and Feedback	3
+MEC ENG 133	Mechanical Vibrations	3
+MEC ENG C134/EL ENG C128	Feedback Control Systems	4
+MEC ENG 167	Microscale Fluid Mechanics	3
+MEC ENG 179	Augmenting Human Dexterity	4
+MEC ENG 185	Introduction to Continuum Mechanics	3
+NUC ENG 101	Nuclear Reactions and Radiation	4
+NUC ENG 107	Introduction to Imaging	3
+NUC ENG 162	Radiation Biophysics and Dosimetry	3
+PHYSICS 110A	Electromagnetism and Optics	4
+PHYSICS 112	Introduction to Statistical and Thermal Physics	4
+PHYSICS 137A	Quantum Mechanics	4
+PHYSICS 177	Principles of Molecular Biophysics	3
+PHYSICS/CHEM/COMPSCI C191	Quantum Information Science and Technology	3
+PLANTBI/MCELLBI C112	General Microbiology	4
+PLANTBI/MCELLBI C148	Microbial Genomics and Genetics	4
+PLANTBI 185	Techniques in Light Microscopy	3
+STAT/COMPSCI/DATA C100	Principles & Techniques of Data Science	4
+STAT 133	Concepts in Computing with Data	3
+STAT 134	Concepts of Probability	4
+STAT 135	Concepts of Statistics	4

@@ -1,0 +1,77 @@
+UGBA 113	Course Not Available
+UGBA 115	Competitive Strategy	3
+UGBA 117	Special Topics in Economic Analysis and Policy	1-4
+UGBA 118	International Trade	3
+UGBA 119	Leading Strategy Implementation	3
+UGBA 120AA	Intermediate Financial Accounting 1	4
+UGBA 120AB	Intermediate Financial Accounting 2	4
+UGBA 120B	Advanced Financial Accounting	4
+UGBA 121	Federal Income Tax Accounting	4
+UGBA 122	Financial Information Analysis	4
+UGBA 123	Operating and Financial Reporting Issues in the Financial Services Industry	3
+UGBA W125	Course Not Available	3
+UGBA 126	Auditing	4
+UGBA 127	Special Topics in Accounting	1-4
+UGBA 128	Strategic Cost Management	3
+UGBA 129	Course Not Available	3
+UGBA 131	Corporate Finance and Financial Statement Analysis	3
+UGBA 131A	Corporate Strategy and Valuation	3
+UGBA 132	Financial Institutions and Markets	3
+UGBA 133	Investments	3
+UGBA 134	Introduction to Financial Engineering	3
+UGBA 136F	Behavioral Finance	3
+UGBA 137	Special Topics in Finance	1-4
+UGBA 141	Production and Operations Management	2-3
+UGBA 143	Game Theory and Business Decisions	3
+UGBA 147	Special Topics in Operations and Information Technology Management	1-4
+UGBA 151	Management of Human Resources	3
+UGBA 152	Negotiation and Conflict Resolution	3
+UGBA 154	Power and Politics in Organizations	3
+UGBA 155	Leadership	3
+UGBA 156AC	Course Not Available
+UGBA 157	Special Topics in the Management of Organizations	1-4
+UGBA 160	Consumer Behavior	3
+UGBA 161	Market Research: Tools and Techniques for Data Collection and Analysis	3
+UGBA 162	Brand Management and Strategy	3
+UGBA 162A	Product Branding and Branded Entertainment	2
+UGBA 164	Marketing Strategy	3
+UGBA 165	Advertising Strategy	3
+UGBA 167	Special Topics in Marketing	1-4
+UGBA 168B	Course Not Available	3
+UGBA 169	Pricing	3
+UGBA 170	Course Not Available
+UGBA C172	History of American Business	3
+UGBA 175	Legal Aspects of Management	3
+UGBA 176	Innovations in Communications and Public Relations	2
+UGBA 177	Special Topics in Business and Public Policy	1-4
+UGBA 178	Introduction to International Business	3
+UGBA 179	International Consulting for Small and Medium-Sized Enterprises	3
+UGBA 180	Introduction to Real Estate and Urban Land Economics	3
+UGBA 183	Introduction to Real Estate Finance	3
+UGBA 184	Urban and Real Estate Economics	3
+UGBA 187	Special Topics in Real Estate Economics and Finance	1-4
+UGBA 190S	Strategy for the Information Technology Firm	3
+UGBA 190T	Special Topics in Innovation and Design	1-4
+UGBA 190V	Course Not Available	2
+UGBA 191C	Communication for Leaders	2
+UGBA 191I	Improvisational Leadership	3
+UGBA 191L	Leadership Communication	1
+UGBA 191P	Leadership and Personal Development	3
+UGBA 192A	Leading Nonprofit and Social Enterprises	3
+UGBA 192AC	Social Movements and Social Media	3
+UGBA 192B	Strategic Philanthropy	2
+UGBA 192L	Applied Impact Evaluation	2
+UGBA 192N	Topics in Social Sector Leadership	1-5
+UGBA 192P	Sustainable Business Consulting Projects	3
+UGBA 192T	Topics in Corporate Social Responsibility	1-4
+UGBA 193B	Energy & Civilization	4
+UGBA 193C	Curricular Practical Training for International Students	0.0
+UGBA 193I	Business Abroad	4-6
+UGBA 194	Undergraduate Colloquium on Business Topics	1
+UGBA 195A	Entrepreneurship	3
+UGBA 195P	Entrepreneurship: How to Successfully start a New Business	3
+UGBA 195S	Entrepreneurship To Address Global Poverty	3
+UGBA 195T	Topics in Entrepreneurship	1-3
+UGBA 196	Special Topics in Business Administration	1-4
+UGBA 198	Directed Study	1-4
+UGBA 199	Supervised Independent Study and Research	1-4

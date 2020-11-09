@@ -1,0 +1,10 @@
+AFRICAM 134	Information Technology and Society	4
+or AFRICAM/AMERSTD C134	Information Technology and Society
+BIO ENG 100	Ethics in Science and Engineering	3
+CY PLAN 101	Introduction to Urban Data Analytics	4
+DATA C104	Human Contexts and Ethics of Data - DATA/History/STS	4
+INFO 188	Behind the Data: Humans and Values	3
+ISF 100J	The Social Life of Computing	4
+NWMEDIA 151AC	Transforming Tech: Issues and Interventions in STEM and Silicon Valley	4
+PHILOS 121	Moral Questions of Data Science	4
+PB HLTH C160/ESPM C167	Environmental Health and Development	4

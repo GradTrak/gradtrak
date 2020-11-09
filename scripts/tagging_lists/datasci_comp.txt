@@ -1,0 +1,38 @@
+ASTRON 128	Astronomy Data Science Laboratory	4
+COMPSCI 161	Computer Security	4
+COMPSCI 162	Operating Systems and System Programming	4
+COMPSCI 164	Programming Languages and Compilers	4
+COMPSCI 168	Introduction to the Internet: Architecture and Protocols	4
+COMPSCI 169	Software Engineering	4
+or COMPSCI 169A	Introduction to Software Engineering
+or COMPSCI W169A	Software Engineering
+COMPSCI 170	Efficient Algorithms and Intractable Problems	4
+COMPSCI 186	Introduction to Database Systems	4
+or COMPSCI W186	Introduction to Database Systems
+COMPSCI 188	Introduction to Artificial Intelligence	4
+DATA 144	Data Mining and Analytics	3
+ECON 140	Economic Statistics and Econometrics	4
+or ECON 141	Econometric Analysis
+EECS 127	Optimization Models in Engineering	4
+EL ENG 120	Signals and Systems	4
+EL ENG 123	Digital Signal Processing	4
+ENVECON C118	Introductory Applied Econometrics	4
+ESPM 174	Design and Analysis of Ecological Research	4
+IAS C118	Introductory Applied Econometrics	4
+IND ENG 115	Industrial and Commercial Data Systems	3
+IND ENG 135	Applied Data Science with Venture Applications	3
+IND ENG 165	Engineering Statistics, Quality Control, and Forecasting	4
+IND ENG 173	Introduction to Stochastic Processes	3
+INFO 154	Data Mining and Analytics	3
+INFO 159	Natural Language Processing	4
+INFO 190	Special Topics in Information (Introduction to Data Visualization - only when offered on this topic)	4
+NUC ENG 175	Methods of Risk Analysis	3
+PHYSICS 188	Bayesian Data Analysis and Machine Learning for Physical Sciences (previously PHYSICS 188)	4
+STAT 135	Concepts of Statistics	4
+STAT 150	Stochastic Processes	3
+STAT 151A	Linear Modelling: Theory and Applications	4
+STAT 152	Sampling Surveys	4
+STAT 153	Introduction to Time Series	4
+STAT 158	The Design and Analysis of Experiments	4
+STAT 159	Reproducible and Collaborative Statistical Data Science	4
+UGBA 147	Special Topics in Operations and Information Technology Management (Advanced Business Analytics - only when offered on this topic)	1-4

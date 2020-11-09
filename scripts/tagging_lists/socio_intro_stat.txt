@@ -1,0 +1,16 @@
+SOCIOL 7
+The Power of Numbers: Quantitative Data in Social Sciences [4] 2	
+STAT 2
+Introduction to Statistics [4]	
+STAT/COMPSCI/INFO C8
+Foundations of Data Science [4]	
+STAT 20
+Introduction to Probability and Statistics [4]	
+STAT 21
+Introductory Probability and Statistics for Business [4]	
+STAT 131A
+Course Not Available [4]	
+PSYCH 101
+Research and Data Analysis in Psychology [4]	
+PHILOS 12A
+Introduction to Logic [4]

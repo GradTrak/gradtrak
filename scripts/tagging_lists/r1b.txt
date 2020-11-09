@@ -1,0 +1,41 @@
+AFRICAM R1B	Freshman Composition
+ANTHRO R5B	Reading and Composition in Anthropology
+ASAMST R2B	Reading and Composition
+CELTIC R1B	Voices of the Celtic World
+CHICANO R1B	Reading and Composition
+COLWRIT R4B	Reading, Composition, and Research
+COM LIT H1B	English Composition in Connection with the Reading of World Literature
+COM LIT N1B	English Composition in Connection with the Reading of World Literature
+COM LIT R1B	English Composition in Connection with the Reading of World Literature
+COM LIT R2B	English Composition in Connection with Reading of World and French Literature
+COM LIT R3B	English Composition in Connection with Reading of World and Hispanic Literature
+EA LANG R1B	Reading and Composition on topics in East Asian Humanities
+ENGLISH R1B	Reading and Composition
+ENV DES R3B	Reading and Composition in Energy, Society, and Environmental Design
+FILM R1B	The Craft of Writing - Film Focus
+FRENCH R1B	English Composition in Connection with the Reading of Literature
+GERMAN R5B	Reading and Composition
+GWS N1B	Reading and Composition
+GWS R1B	Reading and Composition
+HISTART R1B	Reading and Writing about Visual Experience
+HISTORY R1B	Reading and Composition in History
+ITALIAN R5B	Reading and Composition
+LEGALST R1B	Reading and Composition in Connection with the Law as a Social Institution
+LINGUIS R1B	Endangered Languages: Why does linguistic diversity matter?
+LINGUIS R2B	Language and Linguistics in Science Fiction
+MUSIC R1B	Reading and Writing about Music
+NATAMST R1B	Native American Studies Reading and Composition
+NE STUD R1B	Reading and Composition in Near Eastern Studies
+NWMEDIA R1B	New Media Reading and Composition
+PHILOS R1B	Reading and Composition Through Philosophy
+RHETOR R1B	The Craft of Writing
+SASIAN R5B	India in the Writer's Eye
+SCANDIN R5B	Reading and Composition
+SEASIAN R5B	Under Western Eyes
+SLAVIC R5B	Reading and Composition
+SOCIOL R1B	Sociological Reading & Composition
+SPANISH R1B	Reading and Composition Through Readings from the Spanish-Speaking World
+THEATER R1B	Performance: Writing and Research
+XENGLIS R1B	Reading and Composition
+XLEGALS R1B	Reading and Composition in Connection with the Law as a Social Institution
+CLASSIC R44	Roots of Western Civilization

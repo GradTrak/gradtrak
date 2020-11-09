@@ -1,0 +1,550 @@
+ANTHRO C100	Human Paleontology	5
+ANTHRO C103	Introduction to Human Osteology	6
+ANTHRO 115	Introduction to Medical Anthropology	4
+ANTHRO 121C	Historical Archaeology: Historical Artifact Identification and Analysis	4
+ANTHRO C124C/INTEGBI C187	Human Biogeography of the Pacific	3
+ANTHRO 127A	Bioarchaeology: Introduction to Skeletal Biology and Bioarchaeology	4
+ANTHRO 127B	Bioarchaeology: Reconstruction of Life in Bioarchaeology	4
+ANTHRO C129D/INTEGBI C155	Holocene Paleoecology: How Humans Changed the Earth	3
+ANTHRO 132A	Analysis of Archaeological Materials: Analysis of Archaeological Ceramics	4
+ANTHRO 135	Paleoethnobotany: Archaeological Methods and Laboratory Techniques	4
+ANTHRO 169B	Research Theory and Methods in Socio-Cultural Anthropology	5
+ARCH 140	Energy and Environment	4
+ARCH 150	Introduction to Structures	4
+ARCH 154	Design and Computer Analysis of Structure	3
+ASTRON 128	Astronomy Data Science Laboratory	4
+ASTRON 160	Stellar Physics	4
+ASTRON C161	Relativistic Astrophysics and Cosmology	4
+ASTRON C162	Planetary Astrophysics	4
+bioeng 104	Biological Transport Phenomena	4
+bioeng C112	Molecular Biomechanics and Mechanobiology of the Cell	4
+bioeng C117	Structural Aspects of Biomaterials	4
+bioeng C119	Orthopedic Biomechanics	4
+bioeng C125	Introduction to Robotics	4
+bioeng C125B	Robotic Manipulation and Interaction	4
+bioeng 131	Introduction to Computational Molecular and Cell Biology	4
+bioeng C136L	Laboratory in the Mechanics of Organisms	3
+bioeng C137	Designing for the Human Body	4
+bioeng 144	Introduction to Protein Informatics	4
+bioeng C145L	Introductory Electronic Transducers Laboratory	3
+bioeng C145M	Introductory Microcomputer Interfacing Laboratory	3
+bioeng 147	Principles of Synthetic Biology	4
+bioeng C165	Medical Imaging Signals and Systems	4
+bioeng C181	The Berkeley Lectures on Energy: Energy from Biomass	3
+CHM ENG 140	Introduction to Chemical Process Analysis	4
+CHM ENG 141	Chemical Engineering Thermodynamics	4
+CHM ENG C195A	The Berkeley Lectures on Energy: Energy from Biomass	3
+CHEM C110L	General Biochemistry and Molecular Biology Laboratory	4
+CHEM 120A	Physical Chemistry	3
+CHEM 120B	Physical Chemistry	3
+CHEM C130	Biophysical Chemistry: Physical Principles and the Molecules of Life	4
+CHEM C138	The Berkeley Lectures on Energy: Energy from Biomass	3
+cypla 101	Introduction to Urban Data Analytics	4
+cyplan 118AC	The Urban Community	4
+cyplan 119	Planning for Sustainability	4
+CIV ENG 100	Elementary Fluid Mechanics	4
+CIV ENG 103	Introduction to Hydrology	3
+CIV ENG C106	Air Pollution	3
+CIV ENG C116	Chemistry of Soils	3
+CIV ENG C133	Engineering Analysis Using the Finite Element Method	3
+CIV ENG 155	Transportation Systems Engineering	3
+COG SCI C100	Basic Issues in Cognition	3
+COG SCI C101	Cognitive Linguistics	4
+COG SCI C102	Scientific Approaches to Consciousness	3
+COG SCI C126	Perception	3
+COG SCI C127	Cognitive Neuroscience	3
+COG SCI 131	Computational Models of Cognition	4
+COG SCI C140	Quantitative Methods in Linguistics	4
+COG SCI C147	Course Not Available	3
+COMPSCI C149	Course Not Available	4
+COMPSCI 152	Computer Architecture and Engineering	4
+COMPSCI 160	User Interface Design and Development	4
+COMPSCI 161	Computer Security	4
+COMPSCI 162	Operating Systems and System Programming	4
+COMPSCI 164	Programming Languages and Compilers	4
+COMPSCI 168	Introduction to the Internet: Architecture and Protocols	4
+COMPSCI 169	Software Engineering	4
+COMPSCI 169A	Introduction to Software Engineering	3
+COMPSCI W169A	Software Engineering	3
+COMPSCI 170	Efficient Algorithms and Intractable Problems	4
+COMPSCI 172	Computability and Complexity	4
+COMPSCI 176	Algorithms for Computational Biology	4
+COMPSCI 182	Designing, Visualizing and Understanding Deep Neural Networks 4	4
+COMPSCI 184	Foundations of Computer Graphics	4
+COMPSCI 186	Introduction to Database Systems	4
+COMPSCI W186	Introduction to Database Systems	4
+COMPSCI 188	Introduction to Artificial Intelligence	4
+COMPSCI 189	Introduction to Machine Learning 4	4
+NOT COMPSCI/DATA/STAT C100
+DATA 144	Data Mining and Analytics	3
+DEMOG 110	Introduction to Population Analysis	3
+DEMOG C126	Sex, Death, and Data	4
+DEMOG C175	Economic Demography	4
+DEMOG 180	Social Networks	4
+DEMOG 260	Special Topics in Demography Seminar	1-4
+EPS 101	Field Geology and Digital Mapping	4
+EPS C129	Biometeorology	3
+EPS 130	Strong Motion Seismology	3
+EPS C146	Geological Oceanography	4
+EPS C162	Planetary Astrophysics	4
+EPS C180	Air Pollution	3
+EPS C181	Atmospheric Physics and Dynamics	3
+ECON 101A	Economic Theory--Micro	4
+ECON 101B	Economic Theory--Macro	4
+ECON C102	Natural Resource Economics	4
+ECON C103	Introduction to Mathematical Economics	4
+ECON 104	Advanced Microeconomic Theory	4
+ECON 119	Psychology and Economics	4
+ECON 121	Industrial Organization and Public Policy	4
+ECON C125	Environmental Economics	4
+ECON 131	Public Economics	4
+ECON 136	Financial Economics 6	4
+ECON 138	Financial and Behavioral Economics	4
+ECON 139	Intermediate Financial Economics	4
+ECON 141	Econometric Analysis	4
+ECON C142	Applied Econometrics and Public Policy	4
+ECON 157	Health Economics	4
+ECON C171	Development Economics	4
+ECON 174	Global Poverty and Impact Evaluation	4
+ECON C175	Economic Demography	3
+or ECON N175	Economic Demography
+ECON C181	International Trade	4
+ECON 182	International Monetary Economics	4
+EL ENG 100	Course Not Available
+EL ENG 105	Microelectronic Devices and Circuits	4
+EL ENG C106A	Introduction to Robotics	4
+EL ENG C106B	Robotic Manipulation and Interaction	4
+EL ENG 113	Power Electronics	4
+EL ENG 117	Electromagnetic Fields and Waves	4
+EL ENG 118	Introduction to Optical Engineering	3
+EL ENG 120	Signals and Systems	4
+EL ENG 121	Introduction to Digital Communication Systems	4
+EL ENG 122	Introduction to Communication Networks	4
+EL ENG 123	Digital Signal Processing	4
+EL ENG 127	Course Not Available
+EL ENG C128	Feedback Control Systems	4
+EL ENG 129	Course Not Available	3
+EL ENG 130	Integrated-Circuit Devices	4
+EL ENG 134	Fundamentals of Photovoltaic Devices	4
+EL ENG 137A	Introduction to Electric Power Systems	4
+EL ENG 137B	Introduction to Electric Power Systems	4
+EL ENG 140	Linear Integrated Circuits	4
+EL ENG 142	Integrated Circuits for Communications	4
+EL ENG 143	Microfabrication Technology	4
+EL ENG 144	Fundamental Algorithms for Systems Modeling, Analysis, and Optimization	4
+EL ENG C145B	Medical Imaging Signals and Systems	4
+EL ENG C145L	Introductory Electronic Transducers Laboratory	3
+EL ENG C145M	Introductory Microcomputer Interfacing Laboratory	3
+EL ENG C145O	Laboratory in the Mechanics of Organisms	3
+EL ENG 147	Introduction to Microelectromechanical Systems (MEMS)	3
+EL ENG C149	Course Not Available	4
+ENE,RES C100	Energy and Society	4
+ENE,RES 102	Quantitative Aspects of Global Environmental Problems	4
+ENE,RES 131	Data, Environment and Society	4
+ENE,RES 175	Water and Development	4
+ENE,RES C176	Climate Change Economics	4
+ENGIN 115	Course Not Available	4
+ENGIN 117	Methods of Engineering Analysis	3
+ENGIN 120	Principles of Engineering Economics 6	3
+ENVECON C101	Environmental Economics	4
+ENVECON C102	Natural Resource Economics	4
+ENVECON C115	Modeling and Management of Biological Resources	4
+ENVECON 131	Globalization and the Natural Environment	3
+ENVECON 140AC	Economics of Race, Agriculture, and the Environment	3
+ENVECON 141	Agricultural and Environmental Policy	4
+ENVECON 142	Industrial Organization with Applications to Agriculture and Natural Resources	4
+ENVECON 143	Economics of Innovation and Intellectual Property	4
+ENVECON 145	Health and Environmental Economic Policy	4
+ENVECON 147	Regulation of Energy and the Environment	4
+ENVECON C151	Development Economics	4
+ENVECON 152	Advanced Topics in Development and International Trade	3
+ENVECON 153	Population, Environment, and Development	3
+ENVECON 154	Economics of Poverty and Technology	3
+ENVECON 161	Advanced Topics in Environmental and Resource Economics	4
+ENVECON 162	Economics of Water Resources	3
+ENVECON C175	The Economics of Climate Change	4
+ENVECON C176	Climate Change Economics	4
+ENVECON C181	International Trade	4
+ENVECON C183	Forest Ecosystem Management	4
+ESPM 100	Environmental Problem Solving	4
+ESPM 102A	Course Not Available	4
+ESPM 102C	Resource Management	4
+ESPM 102D	Climate and Energy Policy	4
+ESPM C103	Principles of Conservation Biology	4
+ESPM C104	Modeling and Management of Biological Resources	4
+ESPM C107	Biology and Geomorphology of Tropical Islands	13
+ESPM 108A	Trees: Taxonomy, Growth, and Structures	3
+ESPM 108B	Environmental Change Genetics	3
+ESPM 111	Ecosystem Ecology	4
+ESPM 112	Microbial Ecology	3
+ESPM 114	Wildlife Ecology	3
+ESPM 115C	Fish Ecology	3
+ESPM 116B	Grassland and Woodland Ecology	4
+ESPM 116C	Tropical Forest Ecology	3
+ESPM 117	Urban Garden Ecosystems	4
+ESPM 118	Agricultural Ecology	4
+ESPM 120	Science of Soils	3
+ESPM 121	Development and Classification of Soils	3
+ESPM C126	Animal Behavior	4
+ESPM C128	Chemistry of Soils	3
+ESPM C129	Biometeorology	3
+ESPM 131	Soil Microbiology and Biogeochemistry	3
+ESPM 132	Spider Biology	4
+ESPM C138	Introduction to Comparative Virology	4
+ESPM 140	General Entomology	4
+ESPM 142	Insect Behavior	3
+ESPM 144	Insect Physiology	3
+ESPM C148	Pesticide Chemistry and Toxicology	3
+ESPM C149	Molecular Ecology	4
+ESPM 152	Global Change Biology	3
+ESPM C159	Human Diet	4
+ESPM 165	International Rural Development Policy	4
+ESPM 166	Course Not Available	4
+ESPM 172	Remote Sensing of the Environment	3
+ESPM 173	Introduction to Ecological Data Analysis	3
+ESPM C177	GIS and Environmental Spatial Data Analysis	4
+ESPM C180	Air Pollution	3
+ESPM 181A	Fire Ecology	3
+ESPM 182	Forest Operations Management	3
+ESPM 183	Forest Ecosystem Management and Planning	4
+ESPM C183	Forest Ecosystem Management	4
+ESPM 185	Applied Forest Ecology	4
+ESPM 186	Management and Conservation of Rangeland Ecosystems	4
+ESPM 187	Restoration Ecology	4
+GEOG C136	Terrestrial Hydrology	4
+GEOG C139	Atmospheric Physics and Dynamics	3
+GEOG 140A	Physical Landscapes: Process and Form	4
+GEOG 142	Climate Dynamics	4
+GEOG 143	Global Change Biogeochemistry	3
+GEOG C145	Geological Oceanography	4
+GEOG 148	Course Not Available	4
+GEOG 187	Geographic Information Analysis	4
+GEOG C188	Geographic Information Systems	4
+IND ENG 115	Industrial and Commercial Data Systems	3
+IND ENG 130	Methods of Manufacturing Improvement	3
+IND ENG 131	Course Not Available
+IND ENG 135	Applied Data Science with Venture Applications	3
+IND ENG 142	Introduction to Machine Learning and Data Analytics 4	3
+IND ENG 150	Production Systems Analysis	3
+IND ENG 151	Service Operations Design and Analysis	3
+IND ENG 153	Logistics Network Design and Supply Chain Management	3
+IND ENG 160	Nonlinear and Discrete Optimization 8	3
+IND ENG 162	Linear Programming and Network Flows 8	3
+IND ENG 166	Decision Analytics	3
+IND ENG 170	Industrial Design and Human Factors	3
+IND ENG 221	Introduction to Financial Engineering	3
+IND ENG 222	Financial Engineering Systems I	3
+NOT Ind Eng 165, Ind Eng 171, Ind Eng 172 or Ind Eng 173
+INFO 154	Data Mining and Analytics	3
+INFO 159	Natural Language Processing	4
+INFO 188	Behind the Data: Humans and Values	3
+INFO 213	User Interface Design and Development	4
+INFO 232	Applied Behavioral Economics for Information Systems	3
+INFO 247	Information Visualization and Presentation	4
+INFO 253	Course Not Available	3
+INFO 256	Applied Natural Language Processing	3
+INFO 257	Database Management	3
+INFO 271B	Quantitative Research Methods for Information Systems and Management	3
+INFO 272	Qualitative Research Methods for Information Systems and Management	3
+INTEGBI 102LF	Introduction to California Plant Life with Laboratory	4
+INTEGBI 103LF	Invertebrate Zoology with Laboratory	5
+INTEGBI 104LF	Natural History of the Vertebrates with Laboratory	5
+INTEGBI 106A	Physical and Chemical Environment of the Ocean	4
+INTEGBI C107L	Principles of Plant Morphology with Laboratory	4
+INTEGBI C109	Evolution and Ecology of Development	3
+INTEGBI C110L	Biology of Fungi with Laboratory	4
+INTEGBI 113L	Paleobiological Perspectives on Ecology and Evolution	4
+INTEGBI 115	Introduction to Systems in Biology and Medicine	4
+INTEGBI 117
+& 117LF	Medical Ethnobotany
+and Medical Ethnobotany Laboratory	4
+INTEGBI 118	Organismal Microbiomes and Host-Pathogen Interactions	4
+INTEGBI 119	Evaluating Scientific Evidence in Medicine	3
+INTEGBI 123AL	Exercise and Environmental Physiology with Laboratory	5
+INTEGBI C125L	Introduction to the Biomechanical Analysis of Human Movement	4
+INTEGBI 128	Sports Medicine	3
+INTEGBI C129L	Human Physiological Assessment	3
+INTEGBI 131	General Human Anatomy	3
+INTEGBI 132	Survey of Human Physiology	4
+INTEGBI 135	The Mechanics of Organisms	4
+INTEGBI C135L	Laboratory in the Mechanics of Organisms	3
+INTEGBI 137	Human Endocrinology	4
+INTEGBI 138	Comparative Endocrinology	4
+INTEGBI 139	The Neurobiology of Stress	4
+INTEGBI 140	Biology of Human Reproduction	4
+INTEGBI C142L	Introduction to Human Osteology	6
+INTEGBI C143A	Biological Clocks: Physiology and Behavior	3
+INTEGBI C143B	Hormones and Behavior	3
+INTEGBI C144	Animal Behavior	4
+INTEGBI 146LF	Behavioral Ecology with Laboratory	5
+INTEGBI 148	Comparative Animal Physiology	3
+INTEGBI C149	Molecular Ecology	4
+INTEGBI 151	Plant Physiological Ecology	4
+INTEGBI 152	Environmental Toxicology	4
+INTEGBI 153	Ecology	3
+INTEGBI 154	Plant Ecology	3
+INTEGBI C155	Holocene Paleoecology: How Humans Changed the Earth	3
+INTEGBI C156	Principles of Conservation Biology	4
+INTEGBI 157LF	Ecosystems of California	4
+INTEGBI 158LF	Biology and Geomorphology of Tropical Islands	13
+INTEGBI 160	Evolution	4
+INTEGBI 161	Population and Evolutionary Genetics	4
+INTEGBI 162	Ecological Genetics	4
+INTEGBI 164	Human Genetics and Genomics	4
+INTEGBI 166	Course Not Available
+INTEGBI 168L	Systematics of Vascular Plants with Laboratory	4
+INTEGBI 169	Evolutionary Medicine	4
+INTEGBI 173LF	Mammalogy with Laboratory	5
+INTEGBI 174LF	Ornithology with Laboratory	4
+INTEGBI 175LF	Herpetology with Laboratory	4
+INTEGBI 181L	Paleobotany - The 500-Million Year History of a Greening Planet	4
+INTEGBI 183L	Evolution of the Vertebrates with Laboratory	4
+INTEGBI 184L	Morphology of the Vertebrate Skeleton with Laboratory	4
+INTEGBI C185L	Human Paleontology	5
+INTEGBI C187	Human Biogeography of the Pacific	3
+IAS C175	The Economics of Climate Change	4
+IAS C176	Climate Change Economics	4
+LD ARCH 122	Hydrology for Planners	4
+LD ARCH C177	GIS and Environmental Spatial Data Analysis	4
+LD ARCH C188	Geographic Information Systems	4
+L & S C180U	Wealth and Poverty	4
+LEGALST 123	Data, Prediction & Law	4
+LINGUIS 100	Introduction to Linguistic Science	4
+LINGUIS C105	Cognitive Linguistics	4
+LINGUIS 110	Phonetics	4
+LINGUIS 113	Experimental Phonetics	3
+LINGUIS 140	Field Methods	3
+LINGUIS C146	Language Acquisition	3
+LINGUIS C147	Course Not Available
+LINGUIS C160	Quantitative Methods in Linguistics	4
+MATH C103	Introduction to Mathematical Economics	4
+MATH 104	Introduction to Analysis	4
+MATH H104	Honors Introduction to Analysis	4
+MATH 105	Second Course in Analysis	4
+MATH 110	Linear Algebra 7	4
+MATH H110	Honors Linear Algebra 7	4
+MATH 113	Introduction to Abstract Algebra	4
+MATH H113	Honors Introduction to Abstract Algebra	4
+MATH 114	Second Course in Abstract Algebra	4
+MATH 115	Introduction to Number Theory	4
+MATH 116	Cryptography	4
+MATH 118	Fourier Analysis, Wavelets, and Signal Processing	4
+MATH 121A	Mathematical Tools for the Physical Sciences	4
+MATH 121B	Mathematical Tools for the Physical Sciences	4
+MATH 123	Ordinary Differential Equations	4
+MATH 125A	Mathematical Logic	4
+MATH 126	Introduction to Partial Differential Equations	4
+MATH 127	Mathematical and Computational Methods in Molecular Biology	4
+MATH 128A	Numerical Analysis	4
+MATH 128B	Numerical Analysis	4
+MATH 130	Groups and Geometries	4
+MATH 135	Introduction to the Theory of Sets	4
+MATH 136	Incompleteness and Undecidability	4
+MATH 140	Metric Differential Geometry	4
+MATH 141	Elementary Differential Topology	4
+MATH 142	Elementary Algebraic Topology	4
+MATH 143	Elementary Algebraic Geometry	4
+MATH 170	Mathematical Methods for Optimization 8	4
+MATH 172	Combinatorics	4
+MATH 185	Introduction to Complex Analysis	4
+MATH H185	Honors Introduction to Complex Analysis	4
+MATH 189	Mathematical Methods in Classical and Quantum Mechanics	4
+MATH 221	Advanced Matrix Computations	4
+MEC ENG 101	Introduction to Lean Manufacturing Systems	3
+MEC ENG 102A	Course Not Available	4
+MEC ENG 102B	Mechatronics Design	4
+MEC ENG 104	Engineering Mechanics II	3
+MEC ENG 106	Fluid Mechanics	3
+MEC ENG 107	Course Not Available	3
+MEC ENG 108	Mechanical Behavior of Engineering Materials	4
+MEC ENG 109	Heat Transfer	3
+MEC ENG 110	Introduction to Product Development	3
+MEC ENG C115	Molecular Biomechanics and Mechanobiology of the Cell	4
+MEC ENG C117	Structural Aspects of Biomaterials	4
+MEC ENG 118	Introduction to Nanotechnology and Nanoscience	3
+MEC ENG 119	Introduction to MEMS (Microelectromechanical Systems)	3
+MEC ENG 120	Computational Biomechanics Across Multiple Scales	3
+MEC ENG 122	Processing of Materials in Manufacturing	3
+MEC ENG 130	Design of Planar Machinery	3
+MEC ENG 131	Vehicle Dynamics and Control	4
+MEC ENG 132	Dynamic Systems and Feedback	3
+MEC ENG 133	Mechanical Vibrations	3
+MEC ENG C134	Feedback Control Systems	4
+MEC ENG 135	Design of Microprocessor-Based Mechanical Systems	4
+MEC ENG 138	Introduction to Micro/Nano Mechanical Systems Laboratory	3
+MEC ENG 140	Combustion Processes	3
+MEC ENG 146	Energy Conversion Principles	3
+MEC ENG 150A	Solar-Powered Vehicles: Analysis, Design and Fabrication	3
+MEC ENG 151	Advanced Heat Transfer	3
+MEC ENG 163	Engineering Aerodynamics	3
+MEC ENG 164	Marine Statics and Structures	3
+MEC ENG 165	Ocean-Environment Mechanics	3
+MEC ENG 167	Microscale Fluid Mechanics	3
+MEC ENG 168	Mechanics of Offshore Systems	3
+MEC ENG 170	Engineering Mechanics III	3
+MEC ENG 173	Fundamentals of Acoustics	3
+MEC ENG 175	Intermediate Dynamics	3
+MEC ENG C176	Orthopedic Biomechanics	4
+MEC ENG C178	Designing for the Human Body	4
+MEC ENG C180	Engineering Analysis Using the Finite Element Method	3
+MEC ENG 185	Introduction to Continuum Mechanics	3
+MCELLBI 100B	Biochemistry: Pathways, Mechanisms, and Regulation	4
+MCELLBI C100A	Biophysical Chemistry: Physical Principles and the Molecules of Life	4
+MCELLBI 102	Survey of the Principles of Biochemistry and Molecular Biology	4
+MCELLBI C103	Bacterial Pathogenesis	3
+MCELLBI 104	Genetics, Genomics, and Cell Biology	4
+MCELLBI 110	Molecular Biology: Macromolecular Synthesis and Cellular Function	4
+MCELLBI C110L	General Biochemistry and Molecular Biology Laboratory	4
+MCELLBI C112	General Microbiology	4
+MCELLBI C114	Introduction to Comparative Virology	4
+MCELLBI C116	Microbial Diversity	3
+MCELLBI 130	Cell and Systems Biology	4
+MCELLBI 132	Biology of Human Cancer	4
+MCELLBI 133L	Physiology and Cell Biology Laboratory	4
+MCELLBI C134	Chromosome Biology/Cytogenetics	3
+MCELLBI 135A	Topics in Cell and Developmental Biology: Molecular Endocrinology	3
+MCELLBI 136	Physiology	4
+MCELLBI 137L	Physical Biology of the Cell	3
+MCELLBI 140	General Genetics	4
+MCELLBI 140L	Genetics Laboratory	4
+MCELLBI 141	Developmental Biology	4
+MCELLBI 143	Evolution of Genomes, Cells, and Development	3
+MCELLBI C148	Microbial Genomics and Genetics	4
+MCELLBI 149	The Human Genome	3
+MCELLBI 150	Molecular Immunology	4
+MCELLBI 150L	Immunology Laboratory	4
+MCELLBI 160	Cellular and Molecular Neurobiology	4
+MCELLBI 160L	Neurobiology Laboratory	4
+MCELLBI 161	Circuit, Systems and Behavioral Neuroscience	4
+MCELLBI 163L	Mammalian Neuroanatomy Lab	4
+MCELLBI 165	Neurobiology of Disease	3
+MCELLBI 166	Biophysical Neurobiology	3
+MUSIC 108	Music Perception and Cognition	4
+MUSIC 108M	Music Perception and Cognition	4
+MUSIC 109	Music Cognition: The Mind Behind the Musical Ear	3
+MUSIC 109M	Music Cognition: The Mind Behind the Musical Ear	3
+NUC ENG 100	Introduction to Nuclear Energy and Technology	3
+NUC ENG 130	Analytical Methods for Non-proliferation	3
+NUC ENG 175	Methods of Risk Analysis	3
+NUSCTX 103	Nutrient Function and Metabolism	3
+NUSCTX 110	Toxicology	4
+NUSCTX C114	Pesticide Chemistry and Toxicology	3
+NUSCTX 121	Computational Toxicology	3
+NUSCTX C159	Human Diet	4
+PHILOS 128	Philosophy of Science	4
+PHILOS 140A	Intermediate Logic	4
+PHILOS 140B	Intermediate Logic	4
+PHILOS 142	Philosophical Logic	4
+PHILOS 143	Modal Logic	4
+PHILOS 146	Philosophy of Mathematics	4
+PHYS ED C129	Human Physiological Assessment	3
+PHYS ED C165	Introduction to the Biomechanical Analysis of Human Movement	4
+PHYSICS 105	Analytic Mechanics	4
+PHYSICS 110A	Electromagnetism and Optics	4
+PHYSICS 110B	Electromagnetism and Optics	4
+PHYSICS 111A	Instrumentation Laboratory	3
+PHYSICS 111B	Advanced Experimentation Laboratory (only when taken for 3 units)	3
+PHYSICS 112	Introduction to Statistical and Thermal Physics	4
+PHYSICS 129	Particle Physics	4
+PHYSICS 130	Quantum and Nonlinear Optics	3
+PHYSICS 137A	Quantum Mechanics	4
+PHYSICS 137B	Quantum Mechanics	4
+PHYSICS 138	Modern Atomic Physics	3
+PHYSICS 139	Special Relativity and General Relativity	3
+PHYSICS 141A	Solid State Physics	4
+PHYSICS 141B	Solid State Physics	3
+PHYSICS 142	Introduction to Plasma Physics	4
+PHYSICS 151	Elective Physics: Special Topics	3
+PHYSICS C161	Relativistic Astrophysics and Cosmology	4
+PHYSICS 177	Principles of Molecular Biophysics	3
+PLANTBI 101L	Experimental Plant Biology Laboratory	3
+PLANTBI C103	Bacterial Pathogenesis	3
+PLANTBI C107L	Principles of Plant Morphology with Laboratory	4
+PLANTBI C109	Evolution and Ecology of Development	3
+PLANTBI C110L	Biology of Fungi with Laboratory	4
+PLANTBI C112	General Microbiology	4
+PLANTBI 113	California Mushrooms	3
+PLANTBI C114	Introduction to Comparative Virology	4
+PLANTBI C116	Microbial Diversity	3
+PLANTBI 120
+& 120L	Biology of Algae
+and Laboratory for Biology of Algae	4
+PLANTBI C124	The Berkeley Lectures on Energy: Energy from Biomass	3
+PLANTBI C134	Chromosome Biology/Cytogenetics	3
+PLANTBI 135	Physiology and Biochemistry of Plants	3
+PLANTBI C148	Microbial Genomics and Genetics	4
+PLANTBI 150	Plant Cell Biology	3
+PLANTBI 160	Plant Molecular Genetics	3
+PLANTBI 165	Plant-Microbe Interactions	3
+PLANTBI 185	Techniques in Light Microscopy	3
+PLANTBI 190	Special Topics in Plant and Microbial Biology (only when taken for 3-4 units)	3-4
+POL SCI C131A	Applied Econometrics and Public Policy	4
+POL SCI 133	Selected Topics in Quantitative Methods	4
+PSYCH 110	Introduction to Biological Psychology	3
+PSYCH C113	Biological Clocks: Physiology and Behavior	3
+PSYCH 114	Biology of Learning	3
+PSYCH C116	Hormones and Behavior	3
+PSYCH 117	Human Neuropsychology	3
+PSYCH C120	Basic Issues in Cognition	3
+PSYCH 121	Animal Cognition	3
+PSYCH 122	Introduction to Human Learning and Memory	3
+PSYCH 125	The Developing Brain	3
+PSYCH C126	Perception	3
+PSYCH C127	Cognitive Neuroscience	3
+PSYCH C129	Scientific Approaches to Consciousness	3
+PSYCH 130	Clinical Psychology	3
+PSYCH 131	Developmental Psychopathology	3
+PSYCH 133	Psychology of Sleep	3
+PSYCH 140	Developmental Psychology	3
+PSYCH 141	Development During Infancy	3
+PSYCH C143	Language Acquisition	3
+PSYCH 150	Psychology of Personality	3
+PSYCH 164	Social Cognition	3
+PB HLTH C102	Course Not Available
+PB HLTH 112	Global Health: A Multidisciplinary Examination	4
+PB HLTH 126	Health Economics and Public Policy	3
+PB HLTH 129	The Aging Human Brain	3
+PB HLTH 150A	Introduction to Epidemiology and Human Disease	4
+PB HLTH 150B	Human Health and the Environment in a Changing World	3
+PB HLTH 162A	Public Health Microbiology	4
+PB HLTH 170B	Course Not Available	3
+PB HLTH 250A	Epidemiologic Methods I	3
+PB HLTH 252B	Modeling the Dynamics of Infectious Disease Processes (only when taken for 3-4 units)	3-4
+NOT Pb Hlth 141, 142, 142AB, W142, or 145
+PUB POL 101	Introduction to Public Policy Analysis	4
+PUB POL C103	Wealth and Poverty	4
+PUB POL C142	Applied Econometrics and Public Policy	4
+PUB POL C184	Energy and Society	4
+RHETOR 107	Rhetoric of Scientific Discourse	4
+RHETOR 170	Rhetoric of Social Science	4
+SOCIOL 105	Research Design and Sociological Methods	5
+SOCIOL 106	Quantitative Sociological Methods	4
+SOCIOL 108	Advanced Methods: In-depth Interviewing	4
+UGBA 101A	Microeconomic Analysis for Business Decisions	3
+UGBA 101B	Macroeconomic Analysis for Business Decisions	3
+UGBA 102A	Financial Accounting 5	3
+UGBA 102B	Managerial Accounting 5	3
+UGBA 103	Introduction to Finance 6	4
+UGBA 106	Marketing 5	3
+UGBA 118	International Trade	3
+UGBA 119	Leading Strategy Implementation	3
+UGBA 120AA	Intermediate Financial Accounting 1	4
+UGBA 120AB	Intermediate Financial Accounting 2	4
+UGBA 120B	Advanced Financial Accounting	4
+UGBA 122	Financial Information Analysis	4
+UGBA 126	Auditing	4
+UGBA 131	Corporate Finance and Financial Statement Analysis	3
+UGBA 131A	Corporate Strategy and Valuation	3
+UGBA 132	Financial Institutions and Markets	3
+UGBA 133	Investments	3
+UGBA 134	Introduction to Financial Engineering	3
+UGBA 136F	Behavioral Finance	3
+UGBA 141	Production and Operations Management	2-3
+UGBA 160	Consumer Behavior	3
+UGBA 161	Market Research: Tools and Techniques for Data Collection and Analysis	3
+UGBA 162	Brand Management and Strategy	3
+UGBA 165	Advertising Strategy	3
+UGBA 169	Pricing	3
+UGBA 180	Introduction to Real Estate and Urban Land Economics	3
+UGBA 183	Introduction to Real Estate Finance	3
+UGBA 184	Urban and Real Estate Economics	3

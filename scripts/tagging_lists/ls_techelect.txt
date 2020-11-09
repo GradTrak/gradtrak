@@ -1,0 +1,94 @@
+ANTHRO 107	Evolution of the Human Brain	4
+ARCH 122	Principles of Computer Aided Architectural Design	4
+ARCH 129	Special Topics in Digital Design Theories and Methods	4
+ARCH 222	Principles of Computer Aided Architectural Design	4
+ARCH 229	Special Topics in Digital Design Theories and Methods	4
+ART 178	Game Design Methods	4
+ASTRON C162	Planetary Astrophysics	4
+All technical upper division undergraduate and graduate courses in BIO ENG, except BIO ENG 100, C181, 190, 192, and 196
+All technical upper division undergraduate and graduate courses in CHEM
+All technical upper division undergraduate and graduate courses in CHEM ENG, except CHEM ENG 180 and 185
+All technical upper division undergraduate and graduate courses in CIV ENG, except CIV ENG 167, CIV ENG 192, CIV ENG 252L, and CIV ENG 290R
+CMPBIO 175	Introduction to Computational Biology and Precision Medicine	3
+COG SCI C100	Basic Issues in Cognition	3
+COG SCI N100	Basic Issues in Cognition
+COG SCI C101	Cognitive Linguistics	4
+COG SCI C126	Perception	3
+PSYCH C126	Perception
+COG SCI C127	Cognitive Neuroscience	3
+COG SCI 131	Computational Models of Cognition	4
+COG SCI C131	Computational Models of Cognition
+ECON 100A	Economic Analysis--Micro	4
+ECON 100B	Economic Analysis--Macro	4
+ECON 101A	Economic Theory--Micro	4
+ECON 101B	Economic Theory--Macro	4
+ECON 136	Financial Economics	4
+ECON 140	Economic Statistics and Econometrics	4
+ECON 141	Econometric Analysis	4
+ECON/DEMOG C175	Economic Demography	4
+All technical upper division undergraduate and approved graduate courses in EL ENG
+All technical upper division undergraduate and graduate courses in ENGIN, except ENGIN 102, 125, 157AC
+EPS 104	Mathematical Methods in Geophysics	4
+EPS 122	Physics of the Earth and Planetary Interiors	3
+EPS C162	Planetary Astrophysics	4
+GEOG 142	Climate Dynamics	4
+GEOG 143	Global Change Biogeochemistry	3
+GEOG 183	Cartographic Representation	5
+GEOG 187	Geographic Information Analysis	4
+GEOG C188	Geographic Information Systems	4
+IND ENG 185	Challenge Lab (Blockchain)	4
+IND ENG 185	Challenge Lab (Internet and Data Privacy)	4
+All technical upper division undergraduate and graduate courses in IND ENG, except IND ENG 171, select 185, 186, 190 series, and 191 series
+INFO 154	Data Mining and Analytics	3
+INFO 159	Natural Language Processing	4
+INFO 213	User Interface Design and Development	4
+INFO 214	User Experience Research	3
+INFO 219	Privacy, Security, and Cryptography	3
+INFO 234	Information Technology Economics, Strategy, and Policy	3
+INFO 256	Applied Natural Language Processing	3
+INFO 257	Database Management	3
+INFO C260F	Machine Learning in Education	3
+INFO C262	Theory and Practice of Tangible User Interfaces	4
+All technical upper division undergraduate and graduate courses in integrative biology
+LINGUIS C105	Cognitive Linguistics	4
+LINGUIS 100	Introduction to Linguistic Science	4
+LINGUIS 120	Syntax	4
+LINGUIS 158	Computational Methods	3
+All technical upper division undergraduate and graduate courses in MATH, except MATH 160
+All technical upper division undergraduate and graduate courses in MECH ENG, except 191K
+All technical upper division undergraduate and graduate courses in MCELLBI
+MUSIC 108	Music Perception and Cognition	4
+MUSIC 158A	Sound and Music Computing with CNMAT Technologies	4
+MUSIC 159	Computer Programming fMusic Applications	4
+MUSIC 209	Advanced Topics in Computer Music	4
+All technical upper division undergraduate and graduate courses in PHYSICS
+NWMEDIA 190	Special Topics in New Media (1/290-Critical Practices)	4
+NWMEDIA C203/MEC ENG C205	Critical Making	4
+NWMEDIA 290	Special Topics in New Media (Making Sense of Cultural Data)	4
+PHILOS 140A	Intermediate Logic	4
+PHILOS 140B	Intermediate Logic	4
+PHILOS 143	Modal Logic	4
+POL SCI C135	Game Theory in the Social Sciences	4
+POL SCI W135	Game Theory in the Social Sciences	4
+PSYCH 102	Methods fResearch in Psychological Sciences	3
+PSYCH C120	Basic Issues in Cognition	3
+PSYCH C123	Computational Models of Cognition	4
+PSYCH 128/290Q	Topical Seminars in Cognitive Psychology	3
+PB HLTH 142	Introduction to Probability and Statistics in Biology and Public Health	4
+PB HLTH 150A	Introduction to Epidemiology and Human Disease	4
+PB HLTH 162A	Public Health Microbiology	4
+PB HLTH 252B	Modeling the Dynamics of Infectious Disease Processes	2-4
+PB HLTH 253B	Epidemiology and Control of Infectious Diseases (only if taken fat least 3 units)	3
+All technical upper division undergraduate and graduate courses in STAT
+THEATER 177	Sound Design fPerformance	4
+UGBA 102A	Financial Accounting	3
+UGBA 102B	Managerial Accounting	3
+UGBA 103	Introduction to Finance	4
+UGBA 104	Introduction to Business Analytics	3
+UGBA 118	International Trade	3
+UGBA 120A	Intermediate Financial Accounting 1	4
+UGBA 120B	Intermediate Financial Accounting 2	4
+UGBA 141	Production and Operations Management	3
+UGBA 146	Project Management	2
+UGBA 180	Introduction to Real Estate and Urban Land Economics	3
+VIS SCI 265	Neural Computation
