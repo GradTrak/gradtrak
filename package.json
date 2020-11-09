@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "yarn clean && yarn build:server && cp -R server/build build && yarn build:client && cp -R client/dist/gradtrak build/dist",
-    "build-dev": "yarn clean && yarn build-dev:client && cp -R server build && cp -R client/dist/gradtrak build/dist",
+    "build-dev": "yarn clean && yarn build:server && cp -R server/build build && yarn build-dev:client && cp -R client/dist/gradtrak build/dist",
     "clean": "rm -rf build common/build common/tsconfig.tsbuildinfo server/build server/tsconfig.tsbuildinfo client/dist",
     "start": "node build/bin/www",
     "watch": "concurrently -n client,server --handle-input \"yarn start:client\" \"yarn watch:server\"",
