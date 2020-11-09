@@ -232,6 +232,22 @@
     "name": "Cog Sci Society, Culture, and Cognition"
   },
   {
+    "id": "philos_hist",
+    "name": "Philos History"
+  },
+  {
+    "id": "media_group_a",
+    "name": "Media Studies Group A"
+  },
+  {
+    "id": "media_group_b",
+    "name": "Media Studies Group B"
+  },
+  {
+    "id": "media_group_c",
+    "name": "Media Studies Group C"
+  },
+  {
     "id": "poli_sci_amer_pol",
     "name": "Poli Sci American Politics"
   },

@@ -1450,7 +1450,8 @@
     "no": "134",
     "tagIds": [
       "upper_div",
-      "data_sci_ethics"
+      "data_sci_ethics",
+      "media_group_c"
     ]
   },
   {
@@ -1459,7 +1460,9 @@
     "id": "africamc134",
     "dept": "AFRICAM",
     "no": "C134",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 3,
@@ -1568,7 +1571,10 @@
     "id": "africam142a",
     "dept": "AFRICAM",
     "no": "142A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a",
+      "media_group_b"
+    ]
   },
   {
     "units": 4,
@@ -1577,7 +1583,8 @@
     "dept": "AFRICAM",
     "no": "142AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_b"
     ]
   },
   {
@@ -2611,7 +2618,8 @@
     "no": "101",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_a"
     ]
   },
   {
@@ -2622,7 +2630,8 @@
     "no": "101AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "media_group_a"
     ]
   },
   {
@@ -2672,7 +2681,8 @@
     "no": "C112A",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "media_group_a"
     ]
   },
   {
@@ -2681,7 +2691,9 @@
     "id": "amerstdc112b",
     "dept": "AMERSTD",
     "no": "C112B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -3012,7 +3024,8 @@
     "dept": "AMERSTD",
     "no": "C134",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "media_group_c"
     ]
   },
   {
@@ -3538,7 +3551,8 @@
     "no": "C172",
     "tagIds": [
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "media_group_a"
     ]
   },
   {
@@ -5259,7 +5273,9 @@
     "id": "anthroc136k",
     "dept": "ANTHRO",
     "no": "C136K",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -5288,7 +5304,8 @@
     "dept": "ANTHRO",
     "no": "138A",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "media_group_b"
     ]
   },
   {
@@ -5306,7 +5323,8 @@
     "dept": "ANTHRO",
     "no": "139",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -5468,7 +5486,8 @@
     "tagIds": [
       "ls_philo",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -5528,7 +5547,8 @@
     "dept": "ANTHRO",
     "no": "155",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -5547,7 +5567,9 @@
     "id": "anthro156a",
     "dept": "ANTHRO",
     "no": "156A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -5555,7 +5577,9 @@
     "id": "anthro156b",
     "dept": "ANTHRO",
     "no": "156B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -5614,7 +5638,8 @@
     "no": "160AC",
     "tagIds": [
       "ac",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "media_group_c"
     ]
   },
   {
@@ -5645,7 +5670,8 @@
     "tagIds": [
       "ls_arts",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -5723,7 +5749,8 @@
     "tagIds": [
       "linguis_elective",
       "upper_div",
-      "cog_sci_society"
+      "cog_sci_society",
+      "media_group_c"
     ]
   },
   {
@@ -10392,7 +10419,8 @@
     "dept": "ASAMST",
     "no": "132",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -10402,7 +10430,8 @@
     "dept": "ASAMST",
     "no": "132AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_c"
     ]
   },
   {
@@ -10412,7 +10441,8 @@
     "dept": "ASAMST",
     "no": "138",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -10599,7 +10629,8 @@
       "ls_arts",
       "ls_hist",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -16857,7 +16888,8 @@
     "tagIds": [
       "ls_arts",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "media_group_b"
     ]
   },
   {
@@ -16869,7 +16901,8 @@
     "tagIds": [
       "ls_arts",
       "ls_hist",
-      "ls_socio"
+      "ls_socio",
+      "media_group_b"
     ]
   },
   {
@@ -16878,7 +16911,9 @@
     "id": "chicano135c",
     "dept": "CHICANO",
     "no": "135C",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 3,
@@ -18127,7 +18162,8 @@
     "tagIds": [
       "ls_arts",
       "ls_inter",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -30799,7 +30835,8 @@
     "dept": "DEMOG",
     "no": "161",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -30874,7 +30911,8 @@
     "no": "180",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "media_group_c"
     ]
   },
   {
@@ -31876,7 +31914,8 @@
     "no": "171AC",
     "tagIds": [
       "ac",
-      "ls_hist"
+      "ls_hist",
+      "media_group_c"
     ]
   },
   {
@@ -32096,7 +32135,8 @@
     "tagIds": [
       "ls_arts",
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "media_group_a"
     ]
   },
   {
@@ -32332,7 +32372,8 @@
     "dept": "EA LANG",
     "no": "181",
     "tagIds": [
-      "ls_arts"
+      "ls_arts",
+      "media_group_b"
     ]
   },
   {
@@ -35277,7 +35318,8 @@
     "no": "183",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -45383,7 +45425,8 @@
     "no": "173",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "media_group_b"
     ]
   },
   {
@@ -45458,7 +45501,8 @@
     "no": "176",
     "tagIds": [
       "upper_div",
-      "english_elective"
+      "english_elective",
+      "media_group_b"
     ]
   },
   {
@@ -46567,7 +46611,9 @@
     "id": "envdesc169a",
     "dept": "ENV DES",
     "no": "C169A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -46575,7 +46621,9 @@
     "id": "envdesc169b",
     "dept": "ENV DES",
     "no": "C169B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 3,
@@ -51655,7 +51703,8 @@
     "dept": "ETH STD",
     "no": "122AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_b"
     ]
   },
   {
@@ -53829,7 +53878,9 @@
     "id": "film108",
     "dept": "FILM",
     "no": "108",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 4,
@@ -53892,7 +53943,8 @@
     "dept": "FILM",
     "no": "128",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -53902,7 +53954,8 @@
     "dept": "FILM",
     "no": "129",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -53940,7 +53993,8 @@
     "dept": "FILM",
     "no": "140AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_b"
     ]
   },
   {
@@ -53960,7 +54014,8 @@
     "dept": "FILM",
     "no": "151",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -54026,7 +54081,8 @@
     "dept": "FILM",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -54082,7 +54138,8 @@
     "dept": "FILM",
     "no": "177",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -54102,7 +54159,8 @@
     "dept": "FILM",
     "no": "179",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -55625,7 +55683,9 @@
     "id": "french177a",
     "dept": "FRENCH",
     "no": "177A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 4,
@@ -57340,7 +57400,9 @@
     "id": "geogc160a",
     "dept": "GEOG",
     "no": "C160A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -57348,7 +57410,9 @@
     "id": "geogc160b",
     "dept": "GEOG",
     "no": "C160B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -59525,7 +59589,9 @@
     "id": "german157d",
     "dept": "GERMAN",
     "no": "157D",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -61151,7 +61217,9 @@
     "id": "global100s",
     "dept": "GLOBAL",
     "no": "100S",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -62100,7 +62168,8 @@
     "dept": "GWS",
     "no": "125",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -62209,7 +62278,8 @@
     "dept": "GWS",
     "no": "140",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -62274,7 +62344,9 @@
     "id": "gwsc146b",
     "dept": "GWS",
     "no": "C146B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -66919,7 +66991,8 @@
       "ac",
       "ls_hist",
       "ls_socio",
-      "poli_sci_history"
+      "poli_sci_history",
+      "media_group_a"
     ]
   },
   {
@@ -67108,7 +67181,8 @@
     "dept": "HISTORY",
     "no": "128AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_a"
     ]
   },
   {
@@ -67286,7 +67360,8 @@
     "dept": "HISTORY",
     "no": "134A",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_a"
     ]
   },
   {
@@ -68638,7 +68713,9 @@
     "id": "history182a",
     "dept": "HISTORY",
     "no": "182A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 4,
@@ -68655,7 +68732,8 @@
     "dept": "HISTORY",
     "no": "C182C",
     "tagIds": [
-      "bioeng_ethics"
+      "bioeng_ethics",
+      "media_group_a"
     ]
   },
   {
@@ -71757,7 +71835,8 @@
     "no": "103",
     "tagIds": [
       "upper_div",
-      "cog_sci_society"
+      "cog_sci_society",
+      "media_group_a"
     ]
   },
   {
@@ -71899,7 +71978,9 @@
     "id": "infoc167",
     "dept": "INFO",
     "no": "C167",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 3,
@@ -76270,7 +76351,8 @@
     "dept": "ISF",
     "no": "100C",
     "tagIds": [
-      "linguis_elective"
+      "linguis_elective",
+      "media_group_c"
     ]
   },
   {
@@ -76281,7 +76363,8 @@
     "no": "100D",
     "tagIds": [
       "eecs_ethics",
-      "pb_hlth_elective"
+      "pb_hlth_elective",
+      "media_group_a"
     ]
   },
   {
@@ -76309,7 +76392,8 @@
     "tagIds": [
       "ls_philo",
       "bioeng_ethics",
-      "pb_hlth_elective"
+      "pb_hlth_elective",
+      "media_group_a"
     ]
   },
   {
@@ -76318,7 +76402,9 @@
     "id": "isf100h",
     "dept": "ISF",
     "no": "100H",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -76328,7 +76414,8 @@
     "no": "100I",
     "tagIds": [
       "ls_inter",
-      "ls_socio"
+      "ls_socio",
+      "media_group_c"
     ]
   },
   {
@@ -76338,7 +76425,8 @@
     "dept": "ISF",
     "no": "100J",
     "tagIds": [
-      "data_sci_ethics"
+      "data_sci_ethics",
+      "media_group_b"
     ]
   },
   {
@@ -77290,7 +77378,8 @@
     "no": "170",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -77300,7 +77389,8 @@
     "dept": "ITALIAN",
     "no": "175",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -78350,7 +78440,8 @@
     "dept": "JAPAN",
     "no": "178",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -78382,7 +78473,8 @@
     "tagIds": [
       "ls_arts",
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -78428,7 +78520,8 @@
     "dept": "JAPAN",
     "no": "185",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -78674,7 +78767,8 @@
     "dept": "JOURN",
     "no": "111",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -79570,7 +79664,8 @@
     "dept": "KOREAN",
     "no": "109",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -79723,7 +79818,8 @@
     "dept": "KOREAN",
     "no": "185",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -79733,7 +79829,8 @@
     "dept": "KOREAN",
     "no": "186",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -79743,7 +79840,8 @@
     "dept": "KOREAN",
     "no": "187",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -79769,7 +79867,8 @@
     "dept": "KOREAN",
     "no": "188",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -83139,7 +83238,9 @@
     "id": "lgbtc146b",
     "dept": "LGBT",
     "no": "C146B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -84210,7 +84311,8 @@
       "ls_socio",
       "linguis_elective",
       "upper_div",
-      "cog_sci_society"
+      "cog_sci_society",
+      "media_group_c"
     ]
   },
   {
@@ -96627,7 +96729,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "media_group_c"
     ]
   },
   {
@@ -96666,7 +96769,9 @@
     "id": "mediast104a",
     "dept": "MEDIAST",
     "no": "104A",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 3,
@@ -96674,7 +96779,9 @@
     "id": "mediast104b",
     "dept": "MEDIAST",
     "no": "104B",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 3,
@@ -96683,7 +96790,8 @@
     "dept": "MEDIAST",
     "no": "104D",
     "tagIds": [
-      "ls_socio"
+      "ls_socio",
+      "media_group_c"
     ]
   },
   {
@@ -96692,7 +96800,9 @@
     "id": "mediast104e",
     "dept": "MEDIAST",
     "no": "104E",
-    "tagIds": []
+    "tagIds": [
+      "media_group_a"
+    ]
   },
   {
     "units": 3,
@@ -96752,7 +96862,8 @@
     "no": "140",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -96762,7 +96873,8 @@
     "dept": "MEDIAST",
     "no": "150",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -96774,7 +96886,8 @@
     "tagIds": [
       "ls_inter",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -96785,7 +96898,8 @@
     "no": "165",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -96796,7 +96910,8 @@
     "no": "170",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_a"
     ]
   },
   {
@@ -96807,7 +96922,8 @@
     "no": "180",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -96816,7 +96932,9 @@
     "id": "mediastn180",
     "dept": "MEDIAST",
     "no": "N180",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 3,
@@ -98677,7 +98795,9 @@
     "id": "musicc138",
     "dept": "MUSIC",
     "no": "C138",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 4,
@@ -100514,7 +100634,8 @@
     "no": "120AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "media_group_a"
     ]
   },
   {
@@ -100639,7 +100760,8 @@
     "no": "158",
     "tagIds": [
       "ls_arts",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -100648,7 +100770,9 @@
     "id": "natamstn158",
     "dept": "NATAMST",
     "no": "N158",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 3,
@@ -102273,7 +102397,8 @@
     "dept": "NE STUD",
     "no": "165",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -111006,7 +111131,8 @@
     "tagIds": [
       "ls_hist",
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111034,7 +111160,8 @@
     "dept": "PHILOS",
     "no": "155",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111053,7 +111180,9 @@
     "id": "philos156a",
     "dept": "PHILOS",
     "no": "156A",
-    "tagIds": []
+    "tagIds": [
+      "philos_hist"
+    ]
   },
   {
     "units": 4,
@@ -111070,7 +111199,8 @@
     "dept": "PHILOS",
     "no": "160",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111080,7 +111210,8 @@
     "dept": "PHILOS",
     "no": "161",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111089,7 +111220,9 @@
     "id": "philos163",
     "dept": "PHILOS",
     "no": "163",
-    "tagIds": []
+    "tagIds": [
+      "philos_hist"
+    ]
   },
   {
     "units": 3,
@@ -111109,7 +111242,8 @@
       "ls_arts",
       "ls_hist",
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111127,7 +111261,8 @@
     "dept": "PHILOS",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111137,7 +111272,8 @@
     "dept": "PHILOS",
     "no": "172",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111147,7 +111283,8 @@
     "dept": "PHILOS",
     "no": "173",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111178,7 +111315,8 @@
     "no": "176",
     "tagIds": [
       "upper_div",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "philos_hist"
     ]
   },
   {
@@ -111199,7 +111337,8 @@
       "ls_hist",
       "ls_philo",
       "upper_div",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "philos_hist"
     ]
   },
   {
@@ -111209,7 +111348,8 @@
     "dept": "PHILOS",
     "no": "181",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111237,7 +111377,8 @@
     "dept": "PHILOS",
     "no": "183",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111249,7 +111390,8 @@
     "tagIds": [
       "ls_hist",
       "ls_philo",
-      "upper_div"
+      "upper_div",
+      "philos_hist"
     ]
   },
   {
@@ -111260,7 +111402,8 @@
     "no": "185",
     "tagIds": [
       "upper_div",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "philos_hist"
     ]
   },
   {
@@ -111289,7 +111432,8 @@
     "no": "186B",
     "tagIds": [
       "ls_philo",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "philos_hist"
     ]
   },
   {
@@ -111298,7 +111442,9 @@
     "id": "philos187",
     "dept": "PHILOS",
     "no": "187",
-    "tagIds": []
+    "tagIds": [
+      "philos_hist"
+    ]
   },
   {
     "units": 4,
@@ -111308,7 +111454,8 @@
     "no": "188",
     "tagIds": [
       "upper_div",
-      "cog_sci_elective"
+      "cog_sci_elective",
+      "philos_hist"
     ]
   },
   {
@@ -111317,7 +111464,9 @@
     "id": "philosn188",
     "dept": "PHILOS",
     "no": "N188",
-    "tagIds": []
+    "tagIds": [
+      "philos_hist"
+    ]
   },
   {
     "units": 4,
@@ -115280,7 +115429,8 @@
     "tagIds": [
       "poli_sci_amer_pol",
       "poli_sci_amer_pol_upper",
-      "poli_sci_upper_div"
+      "poli_sci_upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -118756,7 +118906,8 @@
       "cog_sci_elective",
       "poli_sci_amer_pol",
       "poli_sci_amer_pol_upper",
-      "poli_sci_upper_div"
+      "poli_sci_upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -118836,7 +118987,8 @@
       "cog_sci_elective",
       "poli_sci_amer_pol",
       "poli_sci_amer_pol_upper",
-      "poli_sci_upper_div"
+      "poli_sci_upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -123065,7 +123217,8 @@
     "no": "160",
     "tagIds": [
       "upper_div",
-      "cog_sci_society"
+      "cog_sci_society",
+      "media_group_c"
     ]
   },
   {
@@ -123074,7 +123227,9 @@
     "id": "psychn160",
     "dept": "PSYCH",
     "no": "N160",
-    "tagIds": []
+    "tagIds": [
+      "media_group_c"
+    ]
   },
   {
     "units": 3,
@@ -123179,7 +123334,8 @@
     "no": "166AC",
     "tagIds": [
       "ac",
-      "cog_sci_society"
+      "cog_sci_society",
+      "media_group_c"
     ]
   },
   {
@@ -125035,7 +125191,8 @@
       "ls_philo",
       "ls_socio",
       "stat_cluster",
-      "pb_hlth_elective"
+      "pb_hlth_elective",
+      "media_group_c"
     ]
   },
   {
@@ -127072,7 +127229,8 @@
     "dept": "RHETOR",
     "no": "114",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -127315,7 +127473,8 @@
     "dept": "RHETOR",
     "no": "130",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -127360,7 +127519,9 @@
     "id": "rhetor132t",
     "dept": "RHETOR",
     "no": "132T",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 4,
@@ -127443,7 +127604,8 @@
     "dept": "RHETOR",
     "no": "138",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -127523,7 +127685,8 @@
     "dept": "RHETOR",
     "no": "145",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -127807,7 +127970,8 @@
     "dept": "RHETOR",
     "no": "171",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_a"
     ]
   },
   {
@@ -130368,7 +130532,8 @@
     "dept": "SCANDIN",
     "no": "115",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -132083,7 +132248,8 @@
     "dept": "SLAVIC",
     "no": "139",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -134676,7 +134842,8 @@
     "no": "110",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -134705,7 +134872,8 @@
     "no": "111AC",
     "tagIds": [
       "ac",
-      "ls_socio"
+      "ls_socio",
+      "media_group_c"
     ]
   },
   {
@@ -134894,7 +135062,8 @@
     "dept": "SOCIOL",
     "no": "117",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135217,7 +135386,8 @@
     "no": "133",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135305,7 +135475,8 @@
     "no": "140",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135324,7 +135495,8 @@
     "no": "141",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135374,7 +135546,8 @@
     "dept": "SOCIOL",
     "no": "145",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135444,7 +135617,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "cog_sci_society"
+      "cog_sci_society",
+      "media_group_c"
     ]
   },
   {
@@ -135574,7 +135748,8 @@
     "tagIds": [
       "ls_arts",
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135612,7 +135787,8 @@
     "dept": "SOCIOL",
     "no": "163",
     "tagIds": [
-      "upper_div"
+      "upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -135634,7 +135810,8 @@
     "tagIds": [
       "ls_socio",
       "upper_div",
-      "pb_hlth_elective"
+      "pb_hlth_elective",
+      "media_group_c"
     ]
   },
   {
@@ -135645,7 +135822,8 @@
     "no": "167",
     "tagIds": [
       "ls_socio",
-      "upper_div"
+      "upper_div",
+      "media_group_b"
     ]
   },
   {
@@ -135654,7 +135832,9 @@
     "id": "sociolc167",
     "dept": "SOCIOL",
     "no": "C167",
-    "tagIds": []
+    "tagIds": [
+      "media_group_b"
+    ]
   },
   {
     "units": 4,
@@ -140415,7 +140595,8 @@
     "dept": "THEATER",
     "no": "118AC",
     "tagIds": [
-      "ac"
+      "ac",
+      "media_group_b"
     ]
   },
   {
@@ -141760,7 +141941,8 @@
     "no": "106",
     "tagIds": [
       "upper_div",
-      "stat_cluster"
+      "stat_cluster",
+      "media_group_c"
     ]
   },
   {
@@ -142471,7 +142653,8 @@
       "ls_socio",
       "upper_div",
       "stat_cluster",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -142554,7 +142737,8 @@
     "tagIds": [
       "upper_div",
       "stat_cluster",
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "media_group_c"
     ]
   },
   {
@@ -142651,7 +142835,8 @@
     "dept": "UGBA",
     "no": "C172",
     "tagIds": [
-      "ugba_upper_div"
+      "ugba_upper_div",
+      "media_group_a"
     ]
   },
   {

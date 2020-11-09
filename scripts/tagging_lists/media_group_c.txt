@@ -1,0 +1,58 @@
+AFRICAM 134	Information Technology and Society	4
+AFRICAM C134	Information Technology and Society	4
+AMERSTD C134	Information Technology and Society	4
+ANTHRO 139	Controlling Processes	4
+ANTHRO 150	Utopia: Art and Power in Modern Times	4
+ANTHRO 155	Modernity	4
+ANTHRO 156A	Politics and Anthropology	4
+ANTHRO 156B	Culture and Power	4
+ANTHRO 160AC	Forms of Folklore	4
+ANTHRO 162	Topics in Folklore	4
+ANTHRO 166	Language, Culture, and Society	4
+ASAMST 132	Islamaphobia and Constructing Otherness	4
+ASAMST 132AC	Islamophobia and Constructing Otherness	4
+ASAMST 138	Topics in Asian Popular Culture	4
+DEMOG 180	Social Networks	4
+DUTCH 171AC	From New Amsterdam to New York: Race, Culture, and Identity in New Netherland	4
+GWS 140	Feminist Cultural Studies	4
+GWS C146B	Cultural Representations of Sexualities: Queer Visual Culture	4
+GLOBAL 100S	Global Societies and Cultures	4
+ISF 100C	Language and Identity	4
+ISF 100H	Introduction to Media and International Relations	4
+ISF 100I	Consumer Society and Culture	4
+JAPAN 178	Murakami Haruki and Miyazaki Hayao: the Politics of Japanese Culture from the Bubble to the Present	4
+JAPAN 181	Reframing Disasters: Fukushima, Before and After	4
+KOREAN 109	Korean Language in Popular Media	4
+KOREAN 185	Picturing Korea	4
+LGBT C146B	Cultural Representations of Sexualities: Queer Visual Culture	4
+L & S C138	Art and Activism	4
+L & S C180U	Wealth and Poverty	4
+LINGUIS 150	Sociolinguistics	3
+MEDIAST 101	Visual Culture	4
+MEDIAST 104D	Privacy in the Digital Age	3
+MEDIAST 140	Media and Politics	4
+MEDIAST 160	International Media	4
+MUSIC C138	Art and Activism	4
+POL SCI 106A	American Politics: Campaign Strategy - Media	4
+POL SCI 161	Public Opinion, Voting and Participation	4
+POL SCI 164A	Political Psychology and Involvement	4
+PSYCH 160	Social Psychology	3
+PSYCH N160	Social Psychology	3
+PSYCH 166AC	Cultural Psychology	3
+PUB POL C103	Wealth and Poverty	4
+RHETOR 145	Science, Narrative, and Image	4
+SLAVIC 139	Post-Soviet Cultures	4
+SOCIOL 110	Organizations and Social Institutions	4
+SOCIOL 111AC	Sociology of the Family	4
+SOCIOL 117	Sport As a Social Institution	4
+SOCIOL 133	Sociology of Gender	4
+SOCIOL 140	Politics and Social Change	4
+SOCIOL 141	Social Movements and Political Action	4
+SOCIOL 145	Social Change	4
+SOCIOL 150	Social Psychology	4
+SOCIOL 160	Sociology of Culture	4
+SOCIOL 163	Popular Culture	3
+SOCIOL 166	Society and Technology	4
+UGBA 106	Marketing	3
+UGBA 160	Customer Insights	3
+UGBA 165	Advertising Strategy	3

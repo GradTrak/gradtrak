@@ -3714,6 +3714,399 @@
     ]
   },
   {
+    "id": "philosophy",
+    "name": "Philosophy Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division",
+        "requirements": [
+          {
+            "name": "PHILOS 12A",
+            "type": "course",
+            "courseId": "philos12a"
+          },
+          {
+            "name": "PHILOS 25A",
+            "type": "course",
+            "courseId": "philos25a"
+          },
+          {
+            "name": "PHILOS 25B",
+            "type": "course",
+            "courseId": "philos25b"
+          }
+        ]
+      },
+      {
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "name": "PHILOS 100",
+            "type": "course",
+            "courseId": "philos100"
+          },
+          {
+            "name": "Ethics",
+            "type": "multi",
+            "id": "philosophymultiethics",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "PHILOS 104",
+                "type": "course",
+                "courseId": "philos104"
+              },
+              {
+                "name": "PHILOS 107",
+                "type": "course",
+                "courseId": "philos107"
+              },
+              {
+                "name": "PHILOS 108",
+                "type": "course",
+                "courseId": "philos108"
+              },
+              {
+                "name": "PHILOS 114",
+                "type": "course",
+                "courseId": "philos114"
+              },
+              {
+                "name": "PHILOS 115",
+                "type": "course",
+                "courseId": "philos115"
+              }
+            ]
+          },
+          {
+            "name": "PHILOS 160-178",
+            "type": "course",
+            "courseId": "TODO:regex",
+            "id": "TODO:regex"
+          },
+          {
+            "name": "History Course",
+            "type": "tag",
+            "tagId": "philos_hist",
+            "id": "philos_hist"
+          },
+          {
+            "name": "Epistemology/Metaphysics",
+            "type": "multi",
+            "id": "philosophymultiepistemologymetaphysics",
+            "numRequired": 2,
+            "requirements": [
+              {
+                "name": "PHILOS 122",
+                "type": "course",
+                "courseId": "philos122"
+              },
+              {
+                "name": "PHILOS 125",
+                "type": "course",
+                "courseId": "philos125"
+              },
+              {
+                "name": "Group C",
+                "type": "multi",
+                "id": "multigroupc",
+                "numRequired": 1,
+                "requirements": [
+                  {
+                    "name": "PHILOS 132",
+                    "type": "course",
+                    "courseId": "philos132"
+                  },
+                  {
+                    "name": "PHILOS 136",
+                    "type": "course",
+                    "courseId": "philos136"
+                  }
+                ]
+              },
+              {
+                "name": "Group D",
+                "type": "multi",
+                "id": "multigroupd",
+                "numRequired": 1,
+                "requirements": [
+                  {
+                    "name": "PHILOS 133",
+                    "type": "course",
+                    "courseId": "philos133"
+                  },
+                  {
+                    "name": "PHILOS 134",
+                    "type": "course",
+                    "courseId": "philos134"
+                  },
+                  {
+                    "name": "PHILOS 135",
+                    "type": "course",
+                    "courseId": "philos135"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Electives",
+            "type": "multi",
+            "id": "philosophymultielectives",
+            "numRequired": 2,
+            "requirements": [
+              {
+                "name": "any philos course",
+                "type": "course",
+                "courseId": "regex",
+                "id": "regex"
+              },
+              {
+                "name": "Upper division elective",
+                "type": "count",
+                "id": "countupperdivisionelective",
+                "numRequired": 2,
+                "requirement": {
+                  "name": "upper div philos elective",
+                  "type": "course",
+                  "courseId": "TODO:REGEX",
+                  "id": "TODO:REGEX"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },  
+  {
+    "id": "media",
+    "name": "Media Studies",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Prerequisites",
+        "requirements": [
+          {
+            "name": "MEDIAST 10",
+            "type": "poly",
+            "id": "mediapolymediast10",
+            "hidden": true,
+            "requirements": [
+              {
+                "name": "MEDIAST 10",
+                "type": "course",
+                "courseId": "mediast10"
+              },
+              {
+                "name": "MEDIAST W10",
+                "type": "course",
+                "courseId": "mediastw10"
+              }
+            ]
+          },
+          {
+            "name": "POL SCI 1",
+            "type": "course",
+            "courseId": "polsci1"
+          },
+          {
+            "name": "History ",
+            "type": "multi",
+            "id": "mediamultihistory",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "HISTORY 7B",
+                "type": "course",
+                "courseId": "history7b"
+              },
+              {
+                "name": "HISTORY 124A",
+                "type": "course",
+                "courseId": "history124a"
+              },
+              {
+                "name": "HISTORY 124B",
+                "type": "course",
+                "courseId": "history124b"
+              },
+              {
+                "name": "HISTORY 131B",
+                "type": "course",
+                "courseId": "history131b"
+              }
+            ]
+          },
+          {
+            "name": "Social Science",
+            "type": "multi",
+            "id": "mediamultisocialscience",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "ANTHRO 3AC",
+                "type": "course",
+                "courseId": "anthro3ac"
+              },
+              {
+                "name": "ECON 1",
+                "type": "course",
+                "courseId": "econ1"
+              },
+              {
+                "name": "ECON 2",
+                "type": "course",
+                "courseId": "econ2"
+              },
+              {
+                "name": "PSYCH 1",
+                "type": "course",
+                "courseId": "psych1"
+              },
+              {
+                "name": "PSYCH 2",
+                "type": "course",
+                "courseId": "psych2"
+              },
+              {
+                "name": "SOCIOL 1",
+                "type": "course",
+                "courseId": "sociol1"
+              },
+              {
+                "name": "SOCIOL 3AC",
+                "type": "course",
+                "courseId": "sociol3ac"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Core Courses",
+        "requirements": [
+          {
+            "name": "MEDIAST 111",
+            "type": "course",
+            "courseId": "mediast111"
+          },
+          {
+            "name": "MEDIAST 112",
+            "type": "course",
+            "courseId": "mediast112"
+          },
+          {
+            "name": "MEDIAST 113",
+            "type": "course",
+            "courseId": "mediast113"
+          }
+        ]
+      },
+      {
+        "name": "Methods",
+        "requirements": [
+          {
+            "name": "Methods",
+            "type": "multi",
+            "id": "mediamultimethods",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "MEDIAST 130",
+                "type": "course",
+                "courseId": "mediast130"
+              },
+              {
+                "name": "POL SCI 3",
+                "type": "course",
+                "courseId": "polsci3"
+              },
+              {
+                "name": "PSYCH 101",
+                "type": "course",
+                "courseId": "psych101"
+              },
+              {
+                "name": "SOCIOL 5",
+                "type": "course",
+                "courseId": "sociol5"
+              },
+              {
+                "name": "SOCIOL 7",
+                "type": "course",
+                "courseId": "sociol7"
+              },
+              {
+                "name": "SOCIOL 105",
+                "type": "course",
+                "courseId": "sociol105"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Electives",
+        "requirements": [
+          {
+            "name": "Upper Division Electives",
+            "type": "count",
+            "id": "mediacountupperdivisionelectives",
+            "numRequired": 5,
+            "requirement": {
+              "name": "Groups A,B,C",
+              "type": "poly",
+              "id": "polygroupsabc",
+              "hidden": true,
+              "requirements": [
+                {
+                  "name": "Group A",
+                  "type": "tag",
+                  "tagId": "media_group_a",
+                  "id": "inner_media_group_a"
+                },
+                {
+                  "name": "Group B",
+                  "type": "tag",
+                  "tagId": "media_group_b",
+                  "id": "inner_media_group_b"
+                },
+                {
+                  "name": "Group C",
+                  "type": "tag",
+                  "tagId": "media_group_c",
+                  "id": "inner_media_group_c"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Group A: History",
+            "type": "tag",
+            "tagId": "media_group_a",
+            "id": "media_group_a"
+          },
+          {
+            "name": "Group B: Specialization",
+            "type": "tag",
+            "tagId": "media_group_b",
+            "id": "media_group_b"
+          },
+          {
+            "name": "Group C: Theory and Application",
+            "type": "tag",
+            "tagId": "media_group_c",
+            "id": "media_group_c"
+          }
+        ]
+      }
+    ]
+  }, 
+  {
     "id": "polisci",
     "name": "Political Science Major",
     "parentId": "ls",

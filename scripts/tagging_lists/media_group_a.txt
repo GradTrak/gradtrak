@@ -1,0 +1,29 @@
+AFRICAM 142A	Third World Cinema	4
+AMERSTD 101	Examining U.S. Cultures in Time	4
+AMERSTD 101AC	Examining U.S. Cultures in Time	4
+AMERSTD C112A	American Cultural Landscapes, 1600 to 1900	4
+AMERSTD C112B	American Cultural Landscapes, 1900 to Present	4
+AMERSTD C172	History of American Business	3
+ANTHRO C136K	Who Owns the Past? Cultural Heritage in a Digital Age	4
+EA LANG 105	Dynamics of Romantic Core Values in East Asian Premodern Literature and Contemporary Film	4
+ENV DES C169A	American Cultural Landscapes, 1600 to 1900	4
+ENV DES C169B	American Cultural Landscapes, 1900 to Present	4
+GEOG C160A	American Cultural Landscapes, 1600 to 1900	4
+GERMAN 157D	German Intellectual History in a European Context: Historical Figures and Contemporary Reflections: Adorno, Benjamin, Habermas	4
+GEOG C160B	American Cultural Landscapes, 1900 to Present	4
+HISTORY 122AC	Antebellum America: The Advent of Mass Society	4
+HISTORY 128AC	California, the West, and the World	4
+HISTORY 134A	The Age of the City: The Age of the City, 1825-1933	4
+HISTORY 182A	Science, Technology, and Society	4
+HISTORY C182C	Introduction to Science, Technology, and Society	4
+INFO 103	History of Information	4
+ISF 100D	Introduction to Technology, Society, and Culture	4
+ISF 100G	Introduction to Science, Society, and Ethics	4
+L & S C180W	Who Owns the Past? Cultural Heritage in a Digital Age	4
+MEDIAST 104A	Freedom of Speech and the Press	3
+MEDIAST 104B	The History of Journalism	3
+MEDIAST 104E	History and Development of Online News	4
+MEDIAST 170	Cultural History of Advertising	4
+NATAMST 120AC	Photography and the American Indian: Manifest Destiny, American Frontier, and Images of American Indians	4
+RHETOR 171	The Problem of Mass Culture and the Rhetoric of Social Theory	4
+UGBA C172	History of American Business	3
