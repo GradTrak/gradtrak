@@ -955,6 +955,182 @@
     ]
   },
   {
+    "id": "applied_math",
+    "name": "Applied Math",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "name": "Math 1A",
+            "type": "multi",
+            "courseId": "math1a",
+            "id": "appliedmathmultimath1a",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "Math 1A",
+                "type": "course",
+                "courseId": "math1a",
+                "id": "math1a"
+              },
+              {
+                "name": "Math N1A",
+                "type": "course",
+                "courseId": "mathn1a",
+                "id": "mathn1a"
+              }
+            ]
+          },
+          {
+            "name": "Math 1B",
+            "type": "multi",
+            "courseId": "math1b",
+            "id": "appliedmathmultimath1b",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "Math 1B",
+                "type": "course",
+                "courseId": "math1b",
+                "id": "math1b"
+              },
+              {
+                "name": "Math N1B",
+                "type": "course",
+                "courseId": "mathn1b",
+                "id": "mathn1b"
+              }
+            ]
+          },
+          {
+            "name": "Math 53",
+            "type": "multi",
+            "courseId": "math53",
+            "id": "appliedmathmultimath53",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "Math 53",
+                "type": "course",
+                "courseId": "math53",
+                "id": "math53"
+              },
+              {
+                "name": "Math N53",
+                "type": "course",
+                "courseId": "mathn53",
+                "id": "mathn53"
+              }
+            ]
+          },
+          {
+            "name": "Math 54",
+            "type": "multi",
+            "courseId": "math54",
+            "id": "appliedmathmultimath54",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "Math 54",
+                "type": "course",
+                "courseId": "math54",
+                "id": "math54"
+              },
+              {
+                "name": "Math N54",
+                "type": "course",
+                "courseId": "mathn54",
+                "id": "mathn54"
+              }
+            ]
+          },
+          {
+            "name": "Math 55",
+            "type": "multi",
+            "courseId": "math55",
+            "id": "appliedmathmultimath55",
+            "numRequired": 1,
+            "requirements": [
+              {
+                "name": "Math 55",
+                "type": "course",
+                "courseId": "math55",
+                "id": "math55"
+              },
+              {
+                "name": "Math N55",
+                "type": "course",
+                "courseId": "mathn55",
+                "id": "mathn55"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division Requirements",
+        "requirements": [
+          {
+            "name": "Math 104",
+            "type": "course",
+            "courseId": "math104",
+            "id": "math104"
+          },
+          {
+            "name": "Math 110",
+            "type": "course",
+            "courseId": "math110",
+            "id": "math110"
+          },
+          {
+            "name": "Math 113",
+            "type": "course",
+            "courseId": "math113",
+            "id": "math113"
+          },
+          {
+            "name": "Math 128A",
+            "type": "course",
+            "courseId": "math128a",
+            "id": "math128a"
+          },
+          {
+            "name": "Math 185",
+            "type": "course",
+            "courseId": "math185",
+            "id": "math185"
+          }
+        ]
+      },
+      {
+        "name": "Clustered Electives",
+        "requirements": [
+          {
+            "name": "Applied Math Cluster",
+            "type": "tag",
+            "tagId": "applied_math_cluster",
+            "id": "applied_math_cluster"
+          },
+          {
+            "name": "Applied Math Cluster",
+            "type": "tag",
+            "tagId": "applied_math_cluster",
+            "id": "applied_math_cluster"
+          },
+          {
+            "name": "Applied Math Cluster",
+            "type": "tag",
+            "tagId": "applied_math_cluster",
+            "id": "applied_math_cluster"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eecs",
     "name": "EECS Major",
     "parentId": "coe",
