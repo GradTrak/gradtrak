@@ -4099,16 +4099,19 @@
           {
             "name": "PHILOS 12A",
             "type": "course",
+            "id": "philos12a",
             "courseId": "philos12a"
           },
           {
             "name": "PHILOS 25A",
             "type": "course",
+            "id": "philos25a",
             "courseId": "philos25a"
           },
           {
             "name": "PHILOS 25B",
             "type": "course",
+            "id": "philos25b",
             "courseId": "philos25b"
           }
         ]
@@ -4119,6 +4122,7 @@
           {
             "name": "PHILOS 100",
             "type": "course",
+            "id": "philos100",
             "courseId": "philos100"
           },
           {
@@ -4130,26 +4134,31 @@
               {
                 "name": "PHILOS 104",
                 "type": "course",
+                "id": "philos104",
                 "courseId": "philos104"
               },
               {
                 "name": "PHILOS 107",
                 "type": "course",
+                "id": "philos107",
                 "courseId": "philos107"
               },
               {
                 "name": "PHILOS 108",
                 "type": "course",
+                "id": "philos108",
                 "courseId": "philos108"
               },
               {
                 "name": "PHILOS 114",
                 "type": "course",
+                "id": "philos114",
                 "courseId": "philos114"
               },
               {
                 "name": "PHILOS 115",
                 "type": "course",
+                "id": "philos115",
                 "courseId": "philos115"
               }
             ]
@@ -4191,11 +4200,13 @@
                   {
                     "name": "PHILOS 132",
                     "type": "course",
+                    "id": "philos132",
                     "courseId": "philos132"
                   },
                   {
                     "name": "PHILOS 136",
                     "type": "course",
+                    "id": "philos136",
                     "courseId": "philos136"
                   }
                 ]
@@ -4209,16 +4220,19 @@
                   {
                     "name": "PHILOS 133",
                     "type": "course",
+                    "id": "philos133",
                     "courseId": "philos133"
                   },
                   {
                     "name": "PHILOS 134",
                     "type": "course",
+                    "id": "philos134",
                     "courseId": "philos134"
                   },
                   {
                     "name": "PHILOS 135",
                     "type": "course",
+                    "id": "philos135",
                     "courseId": "philos135"
                   }
                 ]
@@ -4273,11 +4287,13 @@
               {
                 "name": "MEDIAST 10",
                 "type": "course",
+                "id": "mediast10",
                 "courseId": "mediast10"
               },
               {
                 "name": "MEDIAST W10",
                 "type": "course",
+                "id": "mediastw10",
                 "courseId": "mediastw10"
               }
             ]
@@ -4285,6 +4301,7 @@
           {
             "name": "POL SCI 1",
             "type": "course",
+            "id": "polsci1",
             "courseId": "polsci1"
           },
           {
