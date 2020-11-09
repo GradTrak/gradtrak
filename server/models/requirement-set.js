@@ -56,6 +56,12 @@ const requirementSchema = new mongoose.Schema(
     constraints: {
       type: [constraintSchema],
     },
+    deptRegex: {
+      type: String
+    },
+    numberRegex: {
+      type: String
+    }
   },
   { strict: 'throw', _id: false },
 );
