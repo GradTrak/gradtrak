@@ -1,4 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
+import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
 
 const semesterSchema = new mongoose.Schema(
   {
@@ -36,6 +38,15 @@ const userDataSchema = new mongoose.Schema(
   },
   { strict: 'throw', _id: false },
 );
+
+export type UserType = {
+  username: string;
+  passwordHash?: string;
+  googleId?: string;
+  userdata: UserDataPrototype;
+  emailMarketing: boolean;
+  userTesting: boolean;
+};
 
 const userSchema = new mongoose.Schema(
   {
@@ -76,4 +87,12 @@ const userSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model<mongoose.Document & UserType>('User', userSchema);
+
+declare module 'express' {
+  export interface Request {
+    user?: mongoose.Document & UserType;
+  }
+}
+
+export default User;

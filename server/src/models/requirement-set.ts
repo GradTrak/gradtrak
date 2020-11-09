@@ -1,4 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
+import { RequirementSetPrototype } from 'common/prototypes/requirement-set.prototype';
 
 const constraintSchema = new mongoose.Schema(
   {
@@ -59,8 +61,14 @@ const requirementSchema = new mongoose.Schema(
   },
   { strict: 'throw', _id: false },
 );
-requirementSchema.requirement = requirementSchema;
-requirementSchema.requirements = [requirementSchema];
+requirementSchema.add({
+  requirement: {
+    type: requirementSchema,
+  },
+  requirements: {
+    type: [requirementSchema],
+  },
+});
 
 const requirementCategorySchema = new mongoose.Schema(
   {
@@ -114,4 +122,9 @@ const requirementSetSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-module.exports = mongoose.model('RequirementSet', requirementSetSchema);
+const RequirementSet = mongoose.model<mongoose.Document & RequirementSetPrototype>(
+  'RequirementSet',
+  requirementSetSchema,
+);
+
+export default RequirementSet;

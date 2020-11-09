@@ -1,17 +1,19 @@
-const express = require('express');
-const path = require('path');
-const compression = require('compression');
-const cookieParser = require('cookie-parser');
-const csrf = require('csurf');
-const logger = require('morgan');
-const passport = require('passport');
-const session = require('express-session');
-const connectRedis = require('connect-redis');
+import express from 'express';
+import path from 'path';
+import compression from 'compression';
+import cookieParser from 'cookie-parser';
+import csrf from 'csurf';
+import mongoose from 'mongoose';
+import logger from 'morgan';
+import passport from 'passport';
+import session from 'express-session';
+import connectRedis from 'connect-redis';
 
-const db = require('./config/db');
-const { deserializeUser, googleStrategy, localStrategy, serializeUser } = require('./config/passport');
-const { client: redisClient } = require('./config/redis');
-const { api } = require('./routers/api');
+import * as db from './config/db';
+import { deserializeUser, googleStrategy, localStrategy, serializeUser } from './config/passport';
+import { client as redisClient } from './config/redis';
+import { UserType } from './models/user';
+import { api } from './routers/api';
 
 db.connect();
 
@@ -46,8 +48,8 @@ if (process.env.NODE_ENV === 'production') {
 
 passport.use(localStrategy);
 passport.use(googleStrategy);
-passport.serializeUser(serializeUser);
-passport.deserializeUser(deserializeUser);
+passport.deserializeUser<UserType & mongoose.Document, string>(deserializeUser);
+passport.serializeUser<UserType & mongoose.Document, string>(serializeUser);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -60,7 +62,6 @@ app.use('/api', api);
 app.get(
   '/login/google',
   passport.authenticate('google', {
-    callback: '/login/google/callback',
     scope: 'openid profile email',
   }),
 );
@@ -72,4 +73,5 @@ app.get(
   }),
 );
 app.use(express.static(path.join(__dirname, 'dist')));
-module.exports = app;
+
+export default app;
