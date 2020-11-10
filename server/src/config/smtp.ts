@@ -1,11 +1,11 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-const DEFAULT_OPTIONS = {
+export const DEFAULT_OPTIONS = {
   from: 'GradTrak <app@gradtrak.me>',
   replyTo: 'GradTrak <support@gradtrak.me>',
 };
 
-const WELCOME_EMAIL = {
+export const WELCOME_EMAIL = {
   subject: 'Welcome to GradTrak!',
   text: `Hi!
 
@@ -15,7 +15,6 @@ Best,
 
 The GradTrak Team`,
 };
-module.exports.WELCOME_EMAIL = WELCOME_EMAIL;
 
 let transporter;
 if (process.env.SMTP_URL) {
@@ -26,7 +25,7 @@ if (process.env.SMTP_URL) {
   });
 }
 
-async function sendMail(options) {
+export async function sendMail(options): Promise<nodemailer.SentMessageInfo> {
   const info = await transporter.sendMail({ ...DEFAULT_OPTIONS, ...options });
 
   if (!process.env.SMTP_URL) {
@@ -36,4 +35,3 @@ async function sendMail(options) {
 
   return info;
 }
-module.exports.sendMail = sendMail;

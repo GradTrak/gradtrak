@@ -1,14 +1,15 @@
-const express = require('express');
-const passport = require('passport');
+import express from 'express';
+import passport from 'passport';
 
-const { cache } = require('../config/cache');
+import { cache } from '../config/cache';
 
-const courseController = require('../controllers/courseController');
-const requirementController = require('../controllers/requirementController');
-const tagController = require('../controllers/tagController');
-const userController = require('../controllers/userController');
+import * as courseController from '../controllers/courseController';
+import * as requirementController from '../controllers/requirementController';
+import * as tagController from '../controllers/tagController';
+import * as userController from '../controllers/userController';
 
-const api = express.Router();
+export const api = express.Router();
+
 api.get('/courses', cache.route(), courseController.getCourses);
 api.get('/requirements', cache.route(), requirementController.getRequirements);
 api.get('/tags', cache.route(), tagController.getTags);
@@ -21,7 +22,7 @@ api.post(
   '/account/login',
   passport.authenticate('local', { failWithError: true }),
   userController.loginSuccessLocal,
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   (err, req, res, next) => {
     res.status(200);
     userController.loginFailure(req, res);
@@ -31,7 +32,7 @@ api.get(
   '/account/login/google/callback',
   passport.authenticate('google'),
   userController.loginSuccessGoogle,
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   (err, req, res, next) => {
     res.status(200);
     userController.loginFailure(req, res);
@@ -40,5 +41,3 @@ api.get(
 api.post('/account/logout', userController.logout);
 api.get('/account/whoami', userController.whoami);
 api.post('/account/password', userController.changePassword);
-
-exports.api = api;

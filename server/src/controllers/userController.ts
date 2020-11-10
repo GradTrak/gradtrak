@@ -1,16 +1,17 @@
-const argon2 = require('argon2');
-const util = require('util');
+import argon2 from 'argon2';
+import express from 'express';
+import util from 'util';
 
-const { verifyUser } = require('../config/passport');
-const smtp = require('../config/smtp');
-const { validateEmail } = require('../lib/utils');
-const User = require('../models/user');
+import { verifyUser } from '../config/passport';
+import * as smtp from '../config/smtp';
+import { validateEmail } from '../lib/utils';
+import User, { UserType } from '../models/user';
 
-function validPassword(password) {
+function validPassword(password): boolean {
   return password.length >= 6;
 }
 
-exports.register = async (req, res) => {
+export async function register(req: express.Request, res: express.Response): Promise<void> {
   if (req.user) {
     res.status(400).json({
       success: false,
@@ -63,7 +64,7 @@ exports.register = async (req, res) => {
     username,
     passwordHash,
     userTesting,
-  });
+  } as UserType);
   await util.promisify(req.login).bind(req)(newUser);
   res.json({
     username,
@@ -75,9 +76,9 @@ exports.register = async (req, res) => {
     to: username,
     ...smtp.WELCOME_EMAIL,
   });
-};
+}
 
-exports.logout = (req, res) => {
+export function logout(req: express.Request, res: express.Response): void {
   if (req.user) {
     req.logout();
     res.status(204).send();
@@ -86,32 +87,32 @@ exports.logout = (req, res) => {
       error: 'Not logged in',
     });
   }
-};
+}
 
-exports.loginSuccessLocal = (req, res) => {
+export function loginSuccessLocal(req: express.Request, res: express.Response): void {
   res.json({
     success: true,
     username: req.user.username,
     auth: 'local',
   });
-};
+}
 
-exports.loginSuccessGoogle = (req, res) => {
+export function loginSuccessGoogle(req: express.Request, res: express.Response): void {
   res.json({
     success: true,
     username: req.user.username,
     auth: 'google',
   });
-};
+}
 
-exports.loginFailure = (req, res) => {
+export function loginFailure(req: express.Request, res: express.Response): void {
   res.status(200).json({
     success: false,
     error: 'Invalid username or password',
   });
-};
+}
 
-exports.whoami = (req, res) => {
+export function whoami(req: express.Request, res: express.Response): void {
   if (req.user) {
     res.json({
       loggedIn: true,
@@ -123,9 +124,9 @@ exports.whoami = (req, res) => {
       loggedIn: false,
     });
   }
-};
+}
 
-exports.changePassword = async (req, res) => {
+export async function changePassword(req: express.Request, res: express.Response): Promise<void> {
   if (!req.user) {
     res.status(401).json({
       success: false,
@@ -166,24 +167,24 @@ exports.changePassword = async (req, res) => {
     return;
   }
 
-  req.user.passwordHash = await argon2.hash(newPassword, { mode: argon2.argon2id });
+  req.user.passwordHash = await argon2.hash(newPassword, { type: argon2.argon2id });
   await req.user.save();
 
   res.json({
     success: true,
   });
-};
+}
 
-exports.getUserData = (req, res) => {
+export function getUserData(req: express.Request, res: express.Response): void {
   if (!req.user) {
     res.status(401).send();
     return;
   }
 
   res.json(req.user.userdata);
-};
+}
 
-exports.setUserData = (req, res) => {
+export function setUserData(req: express.Request, res: express.Response): void {
   if (!req.user) {
     res.status(401).send();
     return;
@@ -193,4 +194,4 @@ exports.setUserData = (req, res) => {
   req.user.save().then(() => {
     res.status(204).send();
   });
-};
+}
