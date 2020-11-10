@@ -308,6 +308,10 @@
     "name": "Poli Sci Upper Div"
   },
   {
+    "name": "Applied Math Cluster",
+    "id": "applied_math_cluster"
+  },
+  {
     "name": "Mec Eng Design Course",
     "id": "meceng_design"
   },

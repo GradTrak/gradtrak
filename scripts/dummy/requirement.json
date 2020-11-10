@@ -1181,6 +1181,7 @@
             "courseId": "math1a",
             "id": "appliedmathmultimath1a",
             "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
                 "name": "Math 1A",
@@ -1200,6 +1201,7 @@
             "name": "Math 1B",
             "type": "multi",
             "courseId": "math1b",
+            "hidden": true,
             "id": "appliedmathmultimath1b",
             "numRequired": 1,
             "requirements": [
@@ -1221,6 +1223,7 @@
             "name": "Math 53",
             "type": "multi",
             "courseId": "math53",
+            "hidden": true,
             "id": "appliedmathmultimath53",
             "numRequired": 1,
             "requirements": [
@@ -1242,6 +1245,7 @@
             "name": "Math 54",
             "type": "multi",
             "courseId": "math54",
+            "hidden": true,
             "id": "appliedmathmultimath54",
             "numRequired": 1,
             "requirements": [
@@ -1263,6 +1267,7 @@
             "name": "Math 55",
             "type": "multi",
             "courseId": "math55",
+            "hidden": true,
             "id": "appliedmathmultimath55",
             "numRequired": 1,
             "requirements": [
@@ -4489,6 +4494,7 @@
             "requirement": {
               "name": "Groups A,B,C",
               "type": "poly",
+              "numRequired": 1,
               "id": "polygroupsabc",
               "hidden": true,
               "requirements": [
@@ -5091,11 +5097,13 @@
             "name": "Upper Division",
             "type": "unit",
             "requirement": {
-              "type": "REGENTS",
+              "type": "regex",
               "name": "Mec Eng Upper Division Course",
-              "tagId": "meceng_upper_div",
-              "id": "meceng_upper_div"
+              "deptRegex": "MEC ENG",
+              "numberRegex": "1\\d\\d",
+              "id": "mecheregexupperdiv"
             },
+            "id": "meceng_upper_div",
             "units": 15
           }
         ]
