@@ -48,7 +48,11 @@ export type RegexRequirementPrototype = {
   numberRegex: string;
 } & BaseRequirementPrototype;
 
-export type StandaloneRequirementPrototype = CourseRequirementPrototype | TagRequirementPrototype;
+export type StandaloneRequirementPrototype =
+  | CourseRequirementPrototype
+  | TagRequirementPrototype
+  | PolyRequirementPrototype
+  | RegexRequirementPrototype;
 export type RequirementPrototype =
   | CourseRequirementPrototype
   | MultiRequirementPrototype
