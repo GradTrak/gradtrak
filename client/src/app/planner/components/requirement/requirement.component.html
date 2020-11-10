@@ -23,7 +23,6 @@
 
 <ng-template #unitReq>
   {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
-  <br />
   {{ getUnit().requirement.name }}
   <div class="nested">
     <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
