@@ -4548,7 +4548,18 @@
             "tagId": "media_group_c",
             "id": "media_group_c"
           }
-        ]
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Media Studies Upper Divs",
+            "mutexReqIds": [
+              "mediacountupperdivisionelectives",
+              "media_group_a",
+              "media_group_b",
+              "media_group_c"
+            ]
+          }
       }
     ]
   },
@@ -5117,7 +5128,16 @@
             "id": "meceng_upper_div",
             "units": 15
           }
-        ]
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Mec Eng Design and QS",
+            "mutexReqIds": [
+              "meceng_design",
+              "meceng_qs"
+            ]
+          }
       }
     ]
   }
