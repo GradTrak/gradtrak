@@ -1,0 +1,18 @@
+ENGIN 117
+Methods of Engineering Analysis [3] 1
+ENGIN 150
+Basic Modeling and Simulation Tools for Industrial Research Applications [3] 1
+ENGIN 177
+Advanced Programming with MATLAB [3] 1
+MEC ENG 120
+Computational Biomechanics Across Multiple Scales [3]
+MEC ENG 131
+Vehicle Dynamics and Control [4]
+MEC ENG C134/
+EL ENG C128
+Feedback Control Systems [4]
+MEC ENG 136
+Introduction to Control of Unmanned Aerial Vehicles [3]
+MEC ENG C180/
+CIV ENG C133
+Engineering Analysis Using the Finite Element Method [3]
