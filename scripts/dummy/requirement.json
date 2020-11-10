@@ -4297,6 +4297,28 @@
                   "numberRegex": "1\\d\\d"
                 }
               }
+            ],
+            "constraints": [
+              {
+                "type": "mutex",
+                "name": "Philosophy Elective Regex",
+                "mutexReqIds": [
+                  "philosregexelective",
+                  "countupperdivisionelective"
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "Philosophy Upper Divs",
+            "mutexReqIds": [
+              "philosophymultielectives",
+              "philosophymultiepistemologymetaphysics",
+              "philosophymultiethics",
+              "philos100"
             ]
           }
         ]
@@ -4560,6 +4582,7 @@
               "media_group_c"
             ]
           }
+        ]
       }
     ]
   },
@@ -5138,6 +5161,7 @@
               "meceng_qs"
             ]
           }
+        ]
       }
     ]
   }
