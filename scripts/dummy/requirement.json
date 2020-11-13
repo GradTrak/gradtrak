@@ -4227,6 +4227,7 @@
                 "name": "Group C",
                 "type": "multi",
                 "id": "multigroupc",
+                "hidden": true,
                 "numRequired": 1,
                 "requirements": [
                   {
@@ -4247,6 +4248,7 @@
                 "name": "Group D",
                 "type": "multi",
                 "id": "multigroupd",
+                "hidden": true,
                 "numRequired": 1,
                 "requirements": [
                   {
@@ -4285,7 +4287,7 @@
                 "numberRegex": "."
               },
               {
-                "name": "Upper Division Elective",
+                "name": "Philosophy Upper Division Elective",
                 "type": "count",
                 "id": "countupperdivisionelective",
                 "numRequired": 2,
@@ -4520,12 +4522,30 @@
         "name": "Upper Division Electives",
         "requirements": [
           {
+            "name": "Group A: History",
+            "type": "tag",
+            "tagId": "media_group_a",
+            "id": "media_group_a"
+          },
+          {
+            "name": "Group B: Specialization",
+            "type": "tag",
+            "tagId": "media_group_b",
+            "id": "media_group_b"
+          },
+          {
+            "name": "Group C: Theory and Application",
+            "type": "tag",
+            "tagId": "media_group_c",
+            "id": "media_group_c"
+          },
+          {
             "name": "Upper Division Electives",
             "type": "count",
             "id": "mediacountupperdivisionelectives",
             "numRequired": 5,
             "requirement": {
-              "name": "Groups A,B,C",
+              "name": "Media Studies Upper Division Elective",
               "type": "poly",
               "numRequired": 1,
               "id": "polygroupsabc",
@@ -4551,24 +4571,6 @@
                 }
               ]
             }
-          },
-          {
-            "name": "Group A: History",
-            "type": "tag",
-            "tagId": "media_group_a",
-            "id": "media_group_a"
-          },
-          {
-            "name": "Group B: Specialization",
-            "type": "tag",
-            "tagId": "media_group_b",
-            "id": "media_group_b"
-          },
-          {
-            "name": "Group C: Theory and Application",
-            "type": "tag",
-            "tagId": "media_group_c",
-            "id": "media_group_c"
           }
         ],
         "constraints": [
