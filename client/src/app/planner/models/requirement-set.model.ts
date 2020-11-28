@@ -117,3 +117,27 @@ export class RequirementSet {
     return constraints;
   }
 }
+
+/**
+ * Given an array of requirementSets, reqturn a list of constraints
+ * which account for double major and minor overlap policies.
+ */
+export function generateOverlapConstraints(reqSets: RequirementSet[]): Map<RequirementSet, Constraint> {
+  for (let i = 0; i < reqSets.length; i++) {
+    for (let j = i+1; j < reqSets.length; j++) {
+      const reqSetA: RequirementSet = reqSets[i];
+      const reqSetB: RequirementSet = reqSets[j];
+      if (!(reqSetA.type === 'major' || reqSetB.type === 'major')) {
+        // Overlap rules only defined for majors
+        continue;
+      } else if (reqSetA.type === 'major' && reqSetB.type === 'major') {
+        
+        // TODO double major. The ONLY one that is different is coe
+      } else if (reqSetA.type === 'minor' || reqSetB.type === 'minor') {
+        // TODO minor-major overlap
+      }
+      // We don't support overlaps for things like certificates and whatnot for now.
+    }
+  }
+  return new Map();
+}

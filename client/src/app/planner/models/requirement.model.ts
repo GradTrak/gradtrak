@@ -64,3 +64,11 @@ export abstract class Constraint {
    */
   abstract isValidMapping(mapping: Map<Requirement, FulfillmentMethodType>): boolean;
 }
+
+/**
+ * Given an array of requirementSets, reqturn a list of constraints
+ * which account for double major and minor overlap policies.
+ */
+export function generateOverlapConstraints(reqSets: RequirementSet[]) {
+
+}
