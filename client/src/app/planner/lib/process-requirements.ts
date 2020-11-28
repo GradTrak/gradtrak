@@ -507,6 +507,7 @@ export function processRequirements(
 ): Map<Requirement, ProcessedFulfillmentType> {
   /* Precompute applicable constraints */
   const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
+  const MultiGoalConstraints = generateOverlapConstraints(reqSets);
   reqSets.forEach((reqSet: RequirementSet) => {
     const setConstraints: Constraint[] = reqSet.getConstraints();
     reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
@@ -514,7 +515,7 @@ export function processRequirements(
       reqCategory.requirements.forEach((req: Requirement) => {
         const reqConstraints: Map<Requirement, Constraint[]> = fetchReqConstraints(req);
         reqConstraints.forEach((value: Constraint[], key: Requirement) => {
-          constraints.set(key, [...setConstraints, ...categoryConstraints, ...value]);
+          constraints.set(key, [...setConstraints, ...categoryConstraints, ...value, ...MultiGoalConstraints.get(reqSet)]);
         });
       });
     });
