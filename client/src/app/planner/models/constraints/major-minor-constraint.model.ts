@@ -35,10 +35,7 @@ export class MajorMinorConstraint extends Constraint {
   }
 
   /**
-   * Returns true if and only if the two majors don't have more than 2 overlaps. 
-   * Or, in the case of the engineering double major, a 5+5 rule where you need 5 
-   * independent courses towards each befoe you can have a total of 5 overlap courses
-   * courses.
+   * Returns true if and only if the two majors don't have more than 1 overlaps. 
    */
   isValidMapping(mapping: Map<Requirement, FulfillmentMethodType>): boolean {
     const mutexCourses: Set<Course> = new Set<Course>();

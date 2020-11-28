@@ -3,6 +3,8 @@ import memoize from 'memoizee';
 import { Course } from '../models/course.model';
 import { CourseFulfillmentMethodType, FulfillmentMethodType, FulfillmentType } from '../models/fulfillment-type';
 import { Constraint, Requirement } from '../models/requirement.model';
+import { DoubleMajorConstraint } from '../models/constraints/double-major-constraint.model';
+import { MajorMinorConstraint } from '../models/constraints/major-minor-constraint.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
 import { CourseRequirement } from '../models/requirements/course-requirement.model';
@@ -37,6 +39,39 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
   return mapping;
 }
 
+/**
+ * Given an array of requirementSets, reqturn a list of constraints
+ * which account for double major and minor overlap policies.
+ */
+export function generateOverlapConstraints(reqSets: RequirementSet[]): Map<RequirementSet, Constraint[]> {
+  const ret = new Map<RequirementSet, Constraint[]>();
+  for (let i = 0; i < reqSets.length; i++) {
+    for (let j = i+1; j < reqSets.length; j++) {
+      const reqSetA: RequirementSet = reqSets[i];
+      const reqSetB: RequirementSet = reqSets[j];
+      if (!ret.has(reqSetA)) {
+        ret.set(reqSetA, []);
+      }
+      if (!ret.has(reqSetB)) {
+        ret.set(reqSetB, []);
+      }
+      if (!(reqSetA.type === 'major' || reqSetB.type === 'major')) {
+        // Overlap rules only defined for majors
+        continue;
+      } else if (reqSetA.type === 'major' && reqSetB.type === 'major') {
+        const constraint = new DoubleMajorConstraint(reqSetA, reqSetB);
+        ret.get(reqSetA).push(constraint);
+        ret.get(reqSetB).push(constraint);
+      } else if (reqSetA.type === 'minor' || reqSetB.type === 'minor') {
+        const constraint = new MajorMinorConstraint(reqSetA, reqSetB);
+        ret.get(reqSetA).push(constraint);
+        ret.get(reqSetB).push(constraint);
+      }
+      // We don't support overlaps for things like certificates and whatnot for now.
+    }
+  }
+  return new Map();
+}
 const reqIsFulfilledWithMapping = memoize(
   (req: Requirement, reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) => {
     if (!reqToCourseMapping.has(req)) {
