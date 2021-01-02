@@ -164,4 +164,11 @@ export class CourseSearcherComponent implements OnInit {
       this.searchedCourse = null;
     }
   }
+
+  getBerkeleyTimeUrl(): string {
+    if (!this.searchedCourse) {
+      return null;
+    }
+    return `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`
+  }
 }
