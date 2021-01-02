@@ -192,6 +192,7 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   berkeleyTimeStatus(): number {
+    console.log(this.searchedCourse);
     if (!(this.searchedCourse instanceof Course)) {
       return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
     }
@@ -228,15 +229,15 @@ export class CourseSearcherComponent implements OnInit {
   onIframeLoad(): void {
 
     console.log('hello world')
-    return
     const isIFrame = (input: HTMLElement | null): input is HTMLIFrameElement =>
       input !== null && input.tagName === 'IFRAME';
-    const iframe = document.getElementById("btime-iframe");
+    //catch something here idk
+    const iframe = document.getElementById("btime-iframe") as HTMLIFrameElement;
     const div = document.getElementById("berkeleytime-table");
-    /*if (isIFrame(iframe) && iframe.contentWindow) {
+    if (isIFrame(iframe) && iframe.contentWindow) {
       div.innerHTML = iframe.contentWindow.document.getElementsByClassName("grades-graph")[0].innerHTML;
     } else {
       console.error('got non-iframe object in berkeleytime info.');
-    }*/
+    }
   }
 }
