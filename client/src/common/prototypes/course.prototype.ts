@@ -4,6 +4,7 @@ export type CoursePrototype = {
   no: string;
   title: string;
   units: number;
+  berkeleyTimeId: string;
   tagIds: string[];
   equivIds: string[];
 }
