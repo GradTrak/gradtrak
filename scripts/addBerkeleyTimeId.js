@@ -46,7 +46,7 @@ const main = (bTimeInfo) => {
 }
 
 
-https.get('https://berkeleytime.com/api/catalog/catalog_json/', (res) => {
+https.get('https://berkeleytime.com/api/grades/grades_json/', (res) => {
     let data = '';
 
     // called when a data chunk is received.
