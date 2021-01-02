@@ -33,7 +33,6 @@ export class DoubleMajorConstraint extends Constraint {
    * courses.
    */
   isValidMapping(mapping: Map<Requirement, FulfillmentMethodType>): boolean {
-    const mutexCourses: Set<Course> = new Set<Course>();
     const coursesA: Set<Course> = new Set();
     const coursesB: Set<Course> = new Set();
     const union: Set<Course> = new Set();
@@ -43,6 +42,7 @@ export class DoubleMajorConstraint extends Constraint {
         if (fulfillment.method === 'courses') {
           fulfillment.coursesUsed.forEach((course: Course) => {
             if (parseInt(course.no.replace(/[^0-9]/, ''), 10) >= 100) {
+              //console.log(`upper div used: ${course} for major a: ${this.majorA.id}`)
               coursesA.add(course);
             }
           })
@@ -56,7 +56,9 @@ export class DoubleMajorConstraint extends Constraint {
           fulfillment.coursesUsed.forEach((course: Course) => {
             if (parseInt(course.no.replace(/[^0-9]/, ''), 10) >= 100) {
               coursesB.add(course);
+              //console.log(`upper div used: ${course} for major b ${this.majorB.id}`)
               if (coursesA.has(course)) {
+                console.log(`overlap spotted`)
                 union.add(course);
               }
             }
@@ -71,7 +73,7 @@ export class DoubleMajorConstraint extends Constraint {
       // courses that are not overlapping
       const noOverlapA = coursesA.size - union.size;
       const noOverlapB = coursesB.size - union.size;
-      if (union.size <= 5 && noOverlapA && noOverlapB) {
+      if (union.size <= 5 && noOverlapA >= 5 && noOverlapB >= 5) {
         return true;
       }
       return false;

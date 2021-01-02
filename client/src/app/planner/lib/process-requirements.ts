@@ -70,8 +70,44 @@ export function generateOverlapConstraints(reqSets: RequirementSet[]): Map<Requi
       // We don't support overlaps for things like certificates and whatnot for now.
     }
   }
-  return new Map();
+  return ret;
 }
+
+/**
+ * Given a mapping of requirementSets to any cross-requirementSet 
+ * constraints (which is done by the function generateOverlapCosntraints),
+ * group them into independent sets, where we want as many sets as possible
+ * that do not have constraints (ie edges) between each reqSet
+ */
+function generateReqSetConstraintGroups(reqSetConstraints: Map<RequirementSet, Constraint[]>): Set<Set<RequirementSet>> {
+  console.log(reqSetConstraints)
+  const allReqSets: Set<RequirementSet> = new Set(reqSetConstraints.keys());
+  const ret: Set<Set<RequirementSet>> = new Set();
+  while (allReqSets.size) {
+    // First, initialize by taking a random entry and putting it in queue, deleting it.
+    const queue: RequirementSet[] = [[...allReqSets.values()][0]];
+    allReqSets.delete(queue[0])
+    const curSet: Set<RequirementSet> = new Set();
+    ret.add(curSet);
+    while (queue.length) {
+      // add neighbors to queue and add this to the grouping
+      const current: RequirementSet = queue.pop();
+      curSet.add(current);
+      allReqSets.forEach((other: RequirementSet) => {
+        const sharesConstraint: boolean = reqSetConstraints.get(current).some((c: Constraint) => {
+          return reqSetConstraints.get(other).includes(c);
+        })
+        if (sharesConstraint) {
+          // For each neighbor, add to queue and delete from main pool
+          allReqSets.delete(other);
+          queue.push(other);
+        }
+      })
+    }
+  }
+  return ret;
+}
+
 const reqIsFulfilledWithMapping = memoize(
   (req: Requirement, reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) => {
     if (!reqToCourseMapping.has(req)) {
@@ -507,7 +543,7 @@ export function processRequirements(
 ): Map<Requirement, ProcessedFulfillmentType> {
   /* Precompute applicable constraints */
   const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
-  const MultiGoalConstraints = generateOverlapConstraints(reqSets);
+  const multiGoalConstraints: Map<RequirementSet, Constraint[]> = generateOverlapConstraints(reqSets);
   reqSets.forEach((reqSet: RequirementSet) => {
     const setConstraints: Constraint[] = reqSet.getConstraints();
     reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
@@ -515,7 +551,7 @@ export function processRequirements(
       reqCategory.requirements.forEach((req: Requirement) => {
         const reqConstraints: Map<Requirement, Constraint[]> = fetchReqConstraints(req);
         reqConstraints.forEach((value: Constraint[], key: Requirement) => {
-          constraints.set(key, [...setConstraints, ...categoryConstraints, ...value, ...MultiGoalConstraints.get(reqSet)]);
+          constraints.set(key, [...setConstraints, ...categoryConstraints, ...value, ...multiGoalConstraints.get(reqSet)]);
         });
       });
     });
@@ -539,47 +575,72 @@ export function processRequirements(
     }
   });
 
+  /* "Groups" of requirement sets. We put two requirementSets in a group if 
+   * there are constraints in between them. Ie not being in a group means you can process seperately
+   */
+  const reqSetConstraintGroups: Set<Set<RequirementSet>> = generateReqSetConstraintGroups(multiGoalConstraints)
+  if (!reqSets.every((rs: RequirementSet) => [...reqSetConstraintGroups].some((group: Set<RequirementSet>) => {return group.has(rs)}))) {
+    console.error('A requirement set has not been accounted for when generating groups based on constraints.');
+  }
+
   const fulfillment: Map<Requirement, ProcessedFulfillmentType> = new Map();
-  reqSets.forEach((reqSet: RequirementSet): void => {
-    const setConstraints: Constraint[] = reqSet.getConstraints();
-    if (setConstraints.length === 0) {
-      /* If a set has no constraints, we can derive fulfillment at the level
-       * of a category */
-      reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
-        const categoryConstraints: Constraint[] = reqCategory.getConstraints();
-        if (categoryConstraints.length === 0) {
-          /* If a category has no constraints, we can derive fulfillment at
-           * the level of a requirement */
-          reqCategory.requirements.forEach((req: Requirement) => {
-            const reqMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
-              [req],
+  
+  reqSetConstraintGroups.forEach((constraintGroup: Set<RequirementSet>) => {
+    /* If a set is alone in the group then there are no constraints and we 
+     * can fulfill at the level of each set */
+    if (constraintGroup.size === 1) {
+      const reqSet = [...constraintGroup][0];
+      const setConstraints: Constraint[] = reqSet.getConstraints();
+      if (setConstraints.length === 0) {
+        /* If a set has no constraints, we can derive fulfillment at the level
+         * of a category */
+        reqSet.requirementCategories.forEach((reqCategory: RequirementCategory) => {
+          const categoryConstraints: Constraint[] = reqCategory.getConstraints();
+          if (categoryConstraints.length === 0) {
+            /* If a category has no constraints, we can derive fulfillment at
+             * the level of a requirement */
+            reqCategory.requirements.forEach((req: Requirement) => {
+              const reqMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
+                [req],
+                courses,
+                constraints,
+                manualReqs,
+              );
+              deriveFulfillment([req], reqMappings, fulfillment);
+            });
+          } else {
+            const categoryMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
+              reqCategory.requirements,
               courses,
               constraints,
               manualReqs,
             );
-            deriveFulfillment([req], reqMappings, fulfillment);
-          });
-        } else {
-          const categoryMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
-            reqCategory.requirements,
-            courses,
-            constraints,
-            manualReqs,
-          );
-          deriveFulfillment(reqCategory.requirements, categoryMappings, fulfillment);
-        }
-      });
+            deriveFulfillment(reqCategory.requirements, categoryMappings, fulfillment);
+          }
+        });
+      } else {
+        const setReqs: Requirement[] = reqSet.getRequirements();
+        const setMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
+          setReqs,
+          courses,
+          constraints,
+          manualReqs,
+        );
+        deriveFulfillment(setReqs, setMappings, fulfillment);
+      }
     } else {
-      const setReqs: Requirement[] = reqSet.getRequirements();
-      const setMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
-        setReqs,
+      const groupReqs: Requirement[] = [...constraintGroup].flatMap((reqSet: RequirementSet): Requirement[] => {
+        return reqSet.getRequirements();
+      });
+      const groupMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
+        groupReqs,
         courses,
         constraints,
-        manualReqs,
+        manualReqs
       );
-      deriveFulfillment(setReqs, setMappings, fulfillment);
+      deriveFulfillment(groupReqs, groupMappings, fulfillment);
     }
-  });
+  })
   manualReqs.forEach((req: Requirement) => {
     fulfillment.set(req, {
       status: 'fulfilled',
