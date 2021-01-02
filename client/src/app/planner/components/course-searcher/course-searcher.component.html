@@ -18,7 +18,9 @@
   </form>
   <div [ngSwitch]="berkeleyTimeStatus()">
     <div *ngSwitchCase="BERKELEYTIME_AVAILABLE">
-      <iframe [src]="getBerkeleyTimeUrl()" width="100%" height="404"></iframe>
+      <!-- note that we hide the iframe and put the relevant information in the div -->
+      <iframe [src]="getBerkeleyTimeUrl()" width="100%" height="404" class="btime-iframe"></iframe>
+      <div id="berkeleytime-table"></div>
     </div>
     <div *ngSwitchCase="BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED">
     </div>

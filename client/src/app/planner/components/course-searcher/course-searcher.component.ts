@@ -169,7 +169,6 @@ export class CourseSearcherComponent implements OnInit {
     }
   }
 
-
   berkeleyTimeStatus(): number {
     if (!(this.searchedCourse instanceof Course)) {
       return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
@@ -193,7 +192,22 @@ export class CourseSearcherComponent implements OnInit {
       // TODO handle these cases
       return this.sanitizer.bypassSecurityTrustResourceUrl('https://berkeleytime.com/grades');
     }
-    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all#grades-graph`;
+    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  onIframeLoad(): void {
+
+    console.log('hello world')
+    return
+    const isIFrame = (input: HTMLElement | null): input is HTMLIFrameElement =>
+      input !== null && input.tagName === 'IFRAME';
+    const iframe = document.getElementById("btime-iframe");
+    const div = document.getElementById("berkeleytime-table");
+    if (isIFrame(iframe) && iframe.contentWindow) {
+      div.innerHTML = iframe.contentWindow.document.getElementsByClassName("grades-graph")[0].innerHTML;
+    } else {
+      console.error('got non-iframe object in berkeleytime info.');
+    }
   }
 }
