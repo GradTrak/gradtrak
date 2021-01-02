@@ -1,9 +1,31 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Directive, Input, ElementRef, Renderer2 } from '@angular/core';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
+
+@Directive({
+  selector: 'iframe'
+})
+export class CachedSrcDirective {
+
+    @Input() 
+    public get cachedSrc(): string {
+        return this.elRef.nativeElement.src;
+    }
+
+    public set cachedSrc(src: string) {
+        if (this.elRef.nativeElement.src !== src) {
+            this.renderer.setAttribute(this.elRef.nativeElement, 'src', src);
+        }
+    }
+
+    constructor(
+        private elRef: ElementRef,
+        private renderer: Renderer2
+        ) { }
+}
 
 @Component({
   selector: 'app-course-searcher',
@@ -183,17 +205,24 @@ export class CourseSearcherComponent implements OnInit {
     return this.BERKELEYTIME_AVAILABLE;
   }
 
+  /*
+   * Generates the url for the selected course, assuming there 
+   * is a valid one. Does not check for whether the course actually exists 
+   * in berkeleytime or whether the course is valid in terms of 
+   * amount of grading
+   */
   getBerkeleyTimeUrl(): any {
     // TODO fix the tslint stuff with the "any"
+    const defaultUrl = 'https://berkeleytime.com/grades';
     if (!this.searchedCourse) {
-      return this.sanitizer.bypassSecurityTrustResourceUrl('https://berkeleytime.com/grades');
+      return defaultUrl;
     }
     if (this.searchedCourse.berkeleyTimeId === '') {
       // TODO handle these cases
-      return this.sanitizer.bypassSecurityTrustResourceUrl('https://berkeleytime.com/grades');
+      return defaultUrl;
     }
     const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`;
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    return url;
   }
 
   onIframeLoad(): void {
@@ -204,10 +233,10 @@ export class CourseSearcherComponent implements OnInit {
       input !== null && input.tagName === 'IFRAME';
     const iframe = document.getElementById("btime-iframe");
     const div = document.getElementById("berkeleytime-table");
-    if (isIFrame(iframe) && iframe.contentWindow) {
+    /*if (isIFrame(iframe) && iframe.contentWindow) {
       div.innerHTML = iframe.contentWindow.document.getElementsByClassName("grades-graph")[0].innerHTML;
     } else {
       console.error('got non-iframe object in berkeleytime info.');
-    }
+    }*/
   }
 }
