@@ -24,25 +24,24 @@ const main = (bTimeInfo) => {
       connection = c;
       return Course.find()
     }).then(courses => {
-      courses.forEach(course => {
+      Promise.all(courses.map(course => {
         const key = `${course.dept} ${course.no.toUpperCase()}`
         const bTimeId = mapping[key]
         if (!bTimeId) {
           console.log(key)
-          course.berkeleyTimeId = '';
+          course.berkeleyTimeId = undefined;
         } else {
           course.berkeleyTimeId = bTimeId;
         }
-        course.save();
-      })
+        return course.save().catch(console.error);
+      })).then(() => {
+        connection.close();
+        console.log("CONNECTION CLOSED")
+      });
     })
     .catch((err) => {
       console.error(err);
     })
-    .finally(() => {
-      connection.close();
-      console.log("CONNECTION CLOSED")
-    });
 }
 
 

@@ -195,7 +195,7 @@ export class CourseSearcherComponent implements OnInit {
     if (!(this.searchedCourse instanceof Course)) {
       return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
     }
-    if (this.searchedCourse.berkeleyTimeId === '') {
+    if (!this.searchedCourse.berkeleyTimeId) {
       return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
     }
     if (false) {
@@ -209,7 +209,7 @@ export class CourseSearcherComponent implements OnInit {
    * Generates the url for the selected course, assuming there 
    * is a valid one. Does not check for whether the course actually exists 
    * in berkeleytime or whether the course is valid in terms of 
-   * amount of grading
+   * amount of grading information we have.
    */
   getBerkeleyTimeUrl(): any {
     // TODO fix the tslint stuff with the "any"
@@ -217,7 +217,7 @@ export class CourseSearcherComponent implements OnInit {
     if (!this.searchedCourse) {
       return defaultUrl;
     }
-    if (this.searchedCourse.berkeleyTimeId === '') {
+    if (!this.searchedCourse.berkeleyTimeId) {
       // TODO handle these cases
       return defaultUrl;
     }

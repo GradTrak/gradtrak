@@ -15,7 +15,7 @@ export class Course {
   equivIds: string[];
   equiv: Course[];
 
-  constructor(id: string, dept: string, no: string, title: string, units: number, berkeleyTimeId: string, tags?: Tag[], equivIds?: string[]) {
+  constructor(id: string, dept: string, no: string, title: string, units: number, berkeleyTimeId?: string, tags?: Tag[], equivIds?: string[]) {
     this.id = id;
     this.dept = dept;
     this.no = no;
