@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+import { DomSanitizer } from "@angular/platform-browser";
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
 
@@ -58,7 +59,7 @@ export class CourseSearcherComponent implements OnInit {
     ['VIETNMS', ['VIETNAMESE']],
   ]);
 
-  constructor(private courseService: CourseService) {}
+  constructor(private sanitizer: DomSanitizer, private courseService: CourseService) {}
 
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
@@ -165,10 +166,16 @@ export class CourseSearcherComponent implements OnInit {
     }
   }
 
-  getBerkeleyTimeUrl(): string {
+  getBerkeleyTimeUrl(): any {
+    // TODO fix the tslint stuff
     if (!this.searchedCourse) {
       return null;
     }
-    return `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`
+    if (this.searchedCourse.berkeleyTimeId === '') {
+      // TODO handle these cases
+      return null;
+    }
+    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

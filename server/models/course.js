@@ -24,6 +24,10 @@ const courseSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    berkeleyTimeId: {
+      type: String,
+      required: true,
+    },
     tagIds: {
       type: [String],
       required: true,

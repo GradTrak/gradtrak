@@ -10,16 +10,18 @@ export class Course {
   no: string;
   title: string;
   units: number;
+  berkeleyTimeId: string;
   tags: Tag[];
   equivIds: string[];
   equiv: Course[];
 
-  constructor(id: string, dept: string, no: string, title: string, units: number, tags?: Tag[], equivIds?: string[]) {
+  constructor(id: string, dept: string, no: string, title: string, units: number, berkeleyTimeId: string, tags?: Tag[], equivIds?: string[]) {
     this.id = id;
     this.dept = dept;
     this.no = no;
     this.title = title;
     this.units = units;
+    this.berkeleyTimeId = berkeleyTimeId;
     this.tags = tags;
     this.equivIds = equivIds;
     this.equiv = null;
@@ -32,6 +34,7 @@ export class Course {
       proto.no,
       proto.title,
       proto.units,
+      proto.berkeleyTimeId,
       proto.tagIds.map((tagId: string) => tagMap.get(tagId)),
       proto.equivIds,
     );
