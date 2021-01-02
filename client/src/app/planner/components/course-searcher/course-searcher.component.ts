@@ -11,6 +11,9 @@ import { CourseService } from '../../services/course.service';
   styleUrls: ['./course-searcher.component.scss'],
 })
 export class CourseSearcherComponent implements OnInit {
+  readonly BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED = 0;
+  readonly BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED = 1;
+  readonly BERKELEYTIME_AVAILABLE = 2;
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   searchedCourse: Course;
   allCourses: Course[];
@@ -166,16 +169,31 @@ export class CourseSearcherComponent implements OnInit {
     }
   }
 
+
+  berkeleyTimeStatus(): number {
+    if (!(this.searchedCourse instanceof Course)) {
+      return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
+    }
+    if (this.searchedCourse.berkeleyTimeId === '') {
+      return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
+    }
+    if (false) {
+      // If berkeleytime returns poop...
+      return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
+    }
+    return this.BERKELEYTIME_AVAILABLE;
+  }
+
   getBerkeleyTimeUrl(): any {
-    // TODO fix the tslint stuff
+    // TODO fix the tslint stuff with the "any"
     if (!this.searchedCourse) {
-      return null;
+      return this.sanitizer.bypassSecurityTrustResourceUrl('https://berkeleytime.com/grades');
     }
     if (this.searchedCourse.berkeleyTimeId === '') {
       // TODO handle these cases
-      return null;
+      return this.sanitizer.bypassSecurityTrustResourceUrl('https://berkeleytime.com/grades');
     }
-    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`;
+    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all#grades-graph`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

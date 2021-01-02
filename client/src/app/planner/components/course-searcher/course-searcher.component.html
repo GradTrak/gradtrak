@@ -16,8 +16,15 @@
       </div>
     </div>
   </form>
-  <div>
-    <iframe [src]="getBerkeleyTimeUrl()" width="100%" height="404"></iframe>
+  <div [ngSwitch]="berkeleyTimeStatus()">
+    <div *ngSwitchCase="BERKELEYTIME_AVAILABLE">
+      <iframe [src]="getBerkeleyTimeUrl()" width="100%" height="404"></iframe>
+    </div>
+    <div *ngSwitchCase="BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED">
+    </div>
+    <div *ngSwitchCase="BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED">
+      <p> This course does not have berkeleytime information available </p>
+    </div>
   </div>
 </ng-container>
 
