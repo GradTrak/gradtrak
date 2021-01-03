@@ -228,13 +228,17 @@ export class CourseSearcherComponent implements OnInit {
 
   onIframeLoad(): void {
 
-    console.log('hello world')
     const isIFrame = (input: HTMLElement | null): input is HTMLIFrameElement =>
       input !== null && input.tagName === 'IFRAME';
     //catch something here idk
     const iframe = document.getElementById("btime-iframe") as HTMLIFrameElement;
     const div = document.getElementById("berkeleytime-table");
     if (isIFrame(iframe) && iframe.contentWindow) {
+      console.log(iframe.contentWindow)
+      //let x = iframe.contentWindow.document
+      //x.documentElement.cloneNode();
+      //x = x.getElementsByClassName('123')
+      return;
       div.innerHTML = iframe.contentWindow.document.getElementsByClassName("grades-graph")[0].innerHTML;
     } else {
       console.error('got non-iframe object in berkeleytime info.');
