@@ -31,7 +31,7 @@ const requirementSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      enum: ['course', 'multi', 'poly', 'tag', 'unit', 'count'],
+      enum: ['course', 'multi', 'poly', 'tag', 'unit', 'count', 'regex'],
       required: true,
     },
     courseId: {
@@ -57,6 +57,12 @@ const requirementSchema = new mongoose.Schema(
     },
     constraints: {
       type: [constraintSchema],
+    },
+    deptRegex: {
+      type: String,
+    },
+    numberRegex: {
+      type: String,
     },
   },
   { strict: 'throw', _id: false },
