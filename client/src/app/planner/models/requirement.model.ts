@@ -1,4 +1,5 @@
 import { Course } from './course.model';
+import { FulfillmentMethodType } from './fulfillment-type';
 
 /**
  * The Requirement class represents a single requirement that can be fulfilled by taking certain {@link Course}s and is
@@ -61,5 +62,5 @@ export abstract class Constraint {
    * requirement to courses or a boolean indicating manual fulfillment.
    * @return {boolean} Whether the mapping is valid.
    */
-  abstract isValidMapping(mapping: Map<Requirement, Set<Course> | boolean>): boolean;
+  abstract isValidMapping(mapping: Map<Requirement, FulfillmentMethodType>): boolean;
 }

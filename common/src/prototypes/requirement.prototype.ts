@@ -42,12 +42,22 @@ export type CountRequirementPrototype = {
   requirement: StandaloneRequirementPrototype;
 } & BaseRequirementPrototype;
 
+export type RegexRequirementPrototype = {
+  type: 'regex';
+  deptRegex: string;
+  numberRegex: string;
+} & BaseRequirementPrototype;
 
-export type StandaloneRequirementPrototype = CourseRequirementPrototype | TagRequirementPrototype;
+export type StandaloneRequirementPrototype =
+  | CourseRequirementPrototype
+  | TagRequirementPrototype
+  | PolyRequirementPrototype
+  | RegexRequirementPrototype;
 export type RequirementPrototype =
   | CourseRequirementPrototype
   | MultiRequirementPrototype
   | PolyRequirementPrototype
   | TagRequirementPrototype
   | UnitRequirementPrototype
-  | CountRequirementPrototype;
+  | CountRequirementPrototype
+  | RegexRequirementPrototype;

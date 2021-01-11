@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 
-import { processRequirements } from '../../lib/process-requirements';
+import { processRequirements, ProcessedFulfillmentType } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirements-pane',
@@ -18,10 +17,10 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Output() openGoalSelector: EventEmitter<void> = new EventEmitter<void>();
   @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
-  fulfillmentMap: Map<Requirement, FulfillmentType>;
+  fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
 
   constructor() {
-    this.fulfillmentMap = new Map<Requirement, FulfillmentType>();
+    this.fulfillmentMap = new Map<Requirement, ProcessedFulfillmentType>();
   }
 
   ngOnInit(): void {}

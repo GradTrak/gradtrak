@@ -23,11 +23,10 @@
 
 <ng-template #unitReq>
   {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
-  <br />
-  {{ getUnit().requirement.toString() }}
+  {{ getUnit().requirement.name }}
   <div class="nested">
-    <div class="course" *ngFor="let course of getUnit().getFulfillingCourses(courses)">
-      {{ course.getName() }}
+    <div class="course" *ngFor="let course of getFulfillingCourses()">
+      {{ course }}
     </div>
   </div>
 </ng-template>
@@ -38,15 +37,11 @@
 
 <ng-template #countReq>
   <ng-container *ngIf="!getCount().hidden; else hiddenCount">
-    {{ requirement.toString() }}
+    {{ requirement.name }}
     <div class="nested">
       <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
-        <div *ngIf="i < getCount().getFulfillingCourses(courses).length; else unfulfilledCount" class="fulfilled">
-          {{
-            getCount()
-              .getFulfillingCourses(courses)
-              [i].getName()
-          }}
+        <div *ngIf="i < getFulfillingCourses().length; else unfulfilledCount" class="fulfilled">
+          {{ getFulfillingCourses()[i] }}
         </div>
       </div>
     </div>
