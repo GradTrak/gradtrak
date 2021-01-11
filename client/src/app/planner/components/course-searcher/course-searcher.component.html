@@ -9,6 +9,7 @@
           placeholder="Search for a class"
           [(ngModel)]="searchedCourse"
           [ngbTypeahead]="updateAutoComplete"
+          (change)="getBerkeleytime()"
         />
       </div>
       <div class="col-auto">
@@ -19,6 +20,14 @@
   <div [ngSwitch]="berkeleyTimeStatus()">
     <div *ngSwitchCase="BERKELEYTIME_AVAILABLE">
       <iframe [cachedSrc]="getBerkeleyTimeUrl()" width="100%" height="404" id="btime-iframe"></iframe>
+      <div *ngIf="searchedCourseGrade && searchedCourseSemOffered">
+        <p>
+          Average grade: {{searchedCourseGrade}}
+        </p>
+        <p>
+          Semesters previously offered: {{searchedCourseSemOffered}}
+        </p>
+      </div>
     </div>
     <div *ngSwitchCase="BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED">
     </div>

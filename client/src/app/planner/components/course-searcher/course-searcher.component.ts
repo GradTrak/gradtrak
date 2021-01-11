@@ -24,7 +24,7 @@ export class CachedSrcDirective {
 
     constructor(
         private elRef: ElementRef,
-        private renderer: Renderer2
+        private renderer: Renderer2,
         ) { }
 }
 
@@ -40,6 +40,8 @@ export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   searchedCourse: Course;
   allCourses: Course[];
+  searchedCourseGrade: string;
+  searchedCourseSemOffered: string[];
 
   // TODO Put this somewhere more reasonable
   private static readonly DEPT_ALIASES = new Map<string, string[]>([
@@ -91,8 +93,6 @@ export class CourseSearcherComponent implements OnInit {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
       this.allCourses = courses;
     });
-    let yikes = this.berkeleytimeService.getGrades(undefined).subscribe();
-    console.log(yikes);
   }
 
   /**
@@ -186,6 +186,23 @@ export class CourseSearcherComponent implements OnInit {
       // TODO: sort this by search rankings for relevance
     );
   };
+
+  /**
+   * Updates the this.searchedCourseGrade and this.searchedCourseSemOffered based
+   * on searchedCourse
+   */
+  getBerkeleytime = (): void => {
+    this.berkeleytimeService.getGrades(this.searchedCourse).subscribe(grade => {
+      this.searchedCourseGrade = grade;
+      console.log(this.searchedCourseGrade)
+    });
+    this.berkeleytimeService.getSemesters(this.searchedCourse).subscribe(semesters => {
+      this.searchedCourseSemOffered = semesters;
+      console.log(this.searchedCourseSemOffered)
+    });
+    console.log(this.searchedCourseGrade);
+    console.log(this.searchedCourseSemOffered);
+  }
 
   returnCourse(): void {
     if (this.searchedCourse instanceof Course) {
