@@ -16,6 +16,7 @@
       [fulfillmentMap]="fulfillmentMap"
       (onManualFulfill)="manuallyFulfill($event)"
       (onManualUnfulfill)="manuallyUnfulfill($event)"
+      (openRequirementDisplay)="openRequirementDisplay.emit($event)"
     ></app-requirement-category>
   </div>
 </div>

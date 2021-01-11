@@ -1,6 +1,8 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from './models/course.model';
+import { Requirement } from './models/requirement.model';
+import { RequirementSet } from './models/requirement-set.model';
 import { Semester } from './models/semester.model';
 import { State } from './models/state.model';
 import { UserData } from './models/user-data.model';
@@ -19,11 +21,18 @@ export class PlannerComponent implements OnInit {
   currentCourses: Course[];
   isLoading: boolean;
 
+  courseAdderSemester: Semester;
+  displayedRequirement: Requirement;
+
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
   @ViewChild('initializer', { static: true }) private initializerTemplate: TemplateRef<any>;
   @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
+  @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>;
+  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
+  @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>;
+  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
@@ -125,12 +134,45 @@ export class PlannerComponent implements OnInit {
     this.modalInstance = this.modalService.open(this.reportFormTemplate);
   }
 
+  openGoalSelector(): void {
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
+  }
+
+  openSemesterChanger(): void {
+    this.closeModal();
+    this.modalInstance = this.modalService.open(this.semesterChangerTemplate, { size: 'lg' });
+  }
+
+  openCourseAdder(semester: Semester): void {
+    this.closeModal();
+    this.courseAdderSemester = semester;
+    this.modalInstance = this.modalService.open(this.courseAdderTemplate, { size: 'lg' });
+  }
+
+  openRequirementDisplay(displayedRequirement: Requirement): void {
+    this.closeModal();
+    this.displayedRequirement = displayedRequirement;
+    this.modalInstance = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
+  }
+
   logout(): void {
     this.userService.logout();
   }
 
+  setGoals(goals: RequirementSet[]): void {
+    this.userService.updateGoals(goals);
+  }
+
+  setSemesters(semestersOutput: Map<string, Semester[]>): void {
+    this.userService.updateSemesters(semestersOutput);
+  }
+
+  addCourse(course: Course): void {
+    this.userService.addCourse(course, this.courseAdderSemester);
+  }
+
   setUserData(userData: UserData): void {
-    this.closeModal();
     this.userService.setUserData(userData);
   }
 

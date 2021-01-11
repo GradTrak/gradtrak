@@ -3,15 +3,19 @@ name: Express CI
 on: pull_request
 
 jobs:
-  syntax:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: Check Syntax
-      run: find . -not -path './node_modules/*' -name '*.js' -exec node -c {} \;
+    - name: Install Yarn
+      run: npm install --global yarn
+    - name: Install Dependencies
+      run: yarn install --frozen-lockfile
+    - name: Build Express
+      run: yarn build:server
   lint-and-pretty:
     runs-on: ubuntu-latest
     steps:

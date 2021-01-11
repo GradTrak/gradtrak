@@ -1,4 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
+import { CoursePrototype } from 'common/prototypes/course.prototype';
 
 const courseSchema = new mongoose.Schema(
   {
@@ -42,4 +44,6 @@ const courseSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-module.exports = mongoose.model('Course', courseSchema);
+const Course = mongoose.model<mongoose.Document & CoursePrototype>('Course', courseSchema);
+
+export default Course;

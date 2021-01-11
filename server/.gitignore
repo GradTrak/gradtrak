@@ -58,3 +58,7 @@ typings/
 
 # next.js build output
 .next
+
+# TypeScript build output
+build/
+tsconfig.tsbuildinfo

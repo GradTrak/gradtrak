@@ -1,13 +1,9 @@
-import { Component, Input, OnChanges, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
-import { RequirementService } from '../../services/requirement.service';
-import { UserService } from '../../services/user.service';
 
-import { processRequirements } from '../../lib/process-requirements';
+import { processRequirements, ProcessedFulfillmentType } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirements-pane',
@@ -18,34 +14,19 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly goals: RequirementSet[];
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>; // Maps from a requirementSet id to a list of requirement ids.
+  @Output() openGoalSelector: EventEmitter<void> = new EventEmitter<void>();
+  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
-  fulfillmentMap: Map<Requirement, FulfillmentType>;
+  fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
 
-  @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
-  private modalInstance: NgbModalRef;
-
-  constructor(
-    private modalService: NgbModal,
-    private requirementService: RequirementService,
-    private userService: UserService,
-  ) {
-    this.fulfillmentMap = new Map<Requirement, FulfillmentType>();
+  constructor() {
+    this.fulfillmentMap = new Map<Requirement, ProcessedFulfillmentType>();
   }
 
   ngOnInit(): void {}
 
   ngOnChanges(): void {
     this.fulfillmentMap = processRequirements(this.getRequiredSets(), this.courses, this.manuallyFulfilled);
-  }
-
-  openSelector(): void {
-    this.modalInstance = this.modalService.open(this.goalSelectorTemplate, { size: 'lg' });
-  }
-
-  closeSelector(): void {
-    if (this.modalInstance) {
-      this.modalInstance.close();
-    }
   }
 
   /**
@@ -73,9 +54,5 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
       required.push(...path);
     });
     return required;
-  }
-
-  setGoals(goals: RequirementSet[]): void {
-    this.userService.updateGoals(goals);
   }
 }

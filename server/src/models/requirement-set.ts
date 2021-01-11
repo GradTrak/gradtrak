@@ -1,4 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
+import { RequirementSetPrototype } from 'common/prototypes/requirement-set.prototype';
 
 const constraintSchema = new mongoose.Schema(
   {
@@ -29,7 +31,7 @@ const requirementSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      enum: ['course', 'multi', 'poly', 'tag', 'unit', 'count'],
+      enum: ['course', 'multi', 'poly', 'tag', 'unit', 'count', 'regex'],
       required: true,
     },
     courseId: {
@@ -56,11 +58,23 @@ const requirementSchema = new mongoose.Schema(
     constraints: {
       type: [constraintSchema],
     },
+    deptRegex: {
+      type: String,
+    },
+    numberRegex: {
+      type: String,
+    },
   },
   { strict: 'throw', _id: false },
 );
-requirementSchema.requirement = requirementSchema;
-requirementSchema.requirements = [requirementSchema];
+requirementSchema.add({
+  requirement: {
+    type: requirementSchema,
+  },
+  requirements: {
+    type: [requirementSchema],
+  },
+});
 
 const requirementCategorySchema = new mongoose.Schema(
   {
@@ -114,4 +128,9 @@ const requirementSetSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-module.exports = mongoose.model('RequirementSet', requirementSetSchema);
+const RequirementSet = mongoose.model<mongoose.Document & RequirementSetPrototype>(
+  'RequirementSet',
+  requirementSetSchema,
+);
+
+export default RequirementSet;
