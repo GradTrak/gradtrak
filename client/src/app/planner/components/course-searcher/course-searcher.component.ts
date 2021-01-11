@@ -193,11 +193,11 @@ export class CourseSearcherComponent implements OnInit {
    * on searchedCourse
    */
   getBerkeleytime = (): void => {
-    this.berkeleytimeService.getGrades(this.searchedCourse).subscribe(grade => {
-      this.searchedCourseGrade = grade? grade: 'unavailale';
+    this.berkeleytimeService.getGrade(this.searchedCourse).subscribe(grade => {
+      this.searchedCourseGrade = grade || 'unavailale';
     });
     this.berkeleytimeService.getSemesters(this.searchedCourse).subscribe(semesters => {
-      this.searchedCourseSemOffered = semesters? semesters: ['unavailable'];
+      this.searchedCourseSemOffered = semesters || ['unavailable'];
     });
   }
 

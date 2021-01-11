@@ -119,6 +119,6 @@
 
 <ng-template #requirementDisplayTemplate>
   <div class="modal-body">
-    <app-requirement-display [requirementInput]="displayedRequirement"></app-requirement-display>
+    <app-requirement-display [requirementInput]="displayedRequirement" (berkeleytimeViewed)="viewBerkeleytime($event)"></app-requirement-display>
   </div>
 </ng-template>

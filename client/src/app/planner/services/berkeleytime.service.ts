@@ -15,20 +15,20 @@ import { Course } from '../models/course.model';
  * course enrollment history.
  */
 export class BerkeleytimeService {
-  //private static readonly GRADE_API_ENDPOINT = 'https://berkeleytime.com/api/grades/grades_json/';
+  // private static readonly GRADE_API_ENDPOINT = 'https://berkeleytime.com/api/grades/grades_json/';
   private static readonly GRADE_API_ENDPOINT = '/api/grades/';
 
   /* A function that returns an observable that gives the grade of a class */
-  getGrades(course: Course): Observable<string> {
-    let subject = new BehaviorSubject<string>(undefined);
+  getGrade(course: Course): Observable<string> {
+    const subject = new BehaviorSubject<string>('B-');
     return subject;
-    //return this.http.get(BerkeleytimeService.GRADE_API_ENDPOINT + `?course_id=${course.berkeleyTimeId}`);
+    // return this.http.get(BerkeleytimeService.GRADE_API_ENDPOINT + `?course_id=${course.berkeleyTimeId}`);
   }
 
   /* A function that returns an observable that gives the semesters a class was offered */
   getSemesters(course: Course): Observable<string[]> {
-    let subject = new BehaviorSubject<string[]>(['haiyaaaa', 'Fall 2019', 'Spring 2019']);
+    const subject = new BehaviorSubject<string[]>(['haiyaaaa', 'Fall 2019', 'Spring 2019']);
     return subject;
-    //return this.http.get(BerkeleytimeService.GRADE_API_ENDPOINT + `?course_id=${course.berkeleyTimeId}`);
+    // return this.http.get(BerkeleytimeService.GRADE_API_ENDPOINT + `?course_id=${course.berkeleyTimeId}`);
   }
 }
