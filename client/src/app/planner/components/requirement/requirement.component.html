@@ -22,39 +22,22 @@
 </ng-template>
 
 <ng-template #unitReq>
-  {{ getUnit().unitsFulfilled(courses) }}/{{ getUnit().units }} units of
+  {{ getFulfilledUnits() }}/{{ getUnit().units }} units of
   {{ getUnit().requirement.name }}
   <div class="nested">
     <div class="course" *ngFor="let course of getFulfillingCourses()">
-      {{ course }}
+      {{ course.getName() }}
     </div>
   </div>
 </ng-template>
 
-<ng-template #unfulfilledCount>
-  {{ getCount().requirement.name }}
-</ng-template>
-
 <ng-template #countReq>
-  <ng-container *ngIf="!getCount().hidden; else hiddenCount">
-    {{ requirement.name }}
-    <div class="nested">
-      <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
-        <div *ngIf="i < getFulfillingCourses().length; else unfulfilledCount" class="fulfilled">
-          {{ getFulfillingCourses()[i] }}
-        </div>
-      </div>
-    </div>
-  </ng-container>
-</ng-template>
-
-<ng-template #hiddenCount>
-  {{ getCount().countFulfilled(courses) }}/{{ getCount().numRequired }} courses of
-  <br />
-  {{ getCount().requirement.toString() }}
+  {{ requirement.name }}
   <div class="nested">
-    <div class="course" *ngFor="let course of getCount().getFulfillingCourses(courses)">
-      {{ course.getName() }}
+    <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
+      <div class="{{ i < getFulfillingCourses().length ? 'fulfilled' : null }}">
+        {{ i < getFulfillingCourses().length ? getFulfillingCourses()[i].getName() : getCount().requirement.name }}
+      </div>
     </div>
   </div>
 </ng-template>
