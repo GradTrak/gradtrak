@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output, Directive, Input, ElementRef, Renderer2 } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Course } from '../../models/course.model';
@@ -208,7 +209,6 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   berkeleyTimeStatus(): number {
-    console.log(this.searchedCourse);
     if (!(this.searchedCourse instanceof Course)) {
       return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
     }
