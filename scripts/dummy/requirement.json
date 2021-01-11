@@ -1894,9 +1894,10 @@
                 "units": 24,
                 "requirement": {
                   "id": "bioeng_upper_div",
-                  "type": "tag",
+                  "type": "regex",
                   "name": "BioE Upper Division Course",
-                  "tagId": "bioeng_upper_div"
+                  "deptRegex" : "BIO ENG",
+                  "numberRegex": "1\\d{2}"
                 }
               },
               {

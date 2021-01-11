@@ -1,13 +1,17 @@
 import memoize from 'memoizee';
 
 import { Course } from '../models/course.model';
-import { FulfillmentType } from '../models/fulfillment-type.model';
+import { CourseFulfillmentMethodType, FulfillmentMethodType, FulfillmentType } from '../models/fulfillment-type';
 import { Constraint, Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
 import { CourseRequirement } from '../models/requirements/course-requirement.model';
 import { MultiRequirement } from '../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
+
+export type ProcessedFulfillmentType = {
+  status: FulfillmentType;
+} & FulfillmentMethodType;
 
 /**
  * Returns a map containing the requirement and any child requirement as keys,
@@ -34,26 +38,29 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
 }
 
 const reqIsFulfilledWithMapping = memoize(
-  (req: Requirement, reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => {
+  (req: Requirement, reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) => {
     if (!reqToCourseMapping.has(req)) {
       return false;
     }
 
-    const courses: Set<Course> | boolean = reqToCourseMapping.get(req);
+    const fulfillmentMethod: FulfillmentMethodType = reqToCourseMapping.get(req);
 
-    if (typeof courses === 'boolean') {
-      return courses;
+    if (fulfillmentMethod.method === 'manual') {
+      return true;
+    } else if (fulfillmentMethod.method === 'courses') {
+      if (req instanceof MultiRequirement) {
+        const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) =>
+          reqIsFulfilledWithMapping(childReq, reqToCourseMapping),
+        );
+        const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
+        return numFulfilled >= req.numRequired;
+      } else {
+        return req.isFulfilledWith(Array.from(fulfillmentMethod.coursesUsed));
+      }
+    } else {
+      /* Not reached. */
+      throw new Error('Unknown fulfillment method type');
     }
-
-    if (!(req instanceof MultiRequirement)) {
-      return req.isFulfilledWith(Array.from(courses));
-    }
-
-    const childrenFulfilled: boolean[] = req.requirements.map((childReq: Requirement) =>
-      reqIsFulfilledWithMapping(childReq, reqToCourseMapping),
-    );
-    const numFulfilled: number = childrenFulfilled.filter((childFulfilled: boolean) => childFulfilled).length;
-    return numFulfilled >= req.numRequired;
   },
 );
 
@@ -71,7 +78,7 @@ const reqIsFulfilledWithMapping = memoize(
  *
  * @param {Requirement[]} reqs The complete list of requirements being looked
  * at.
- * @param {Map<Requirement, Set<Course> | boolean>} mapping A map of
+ * @param {Map<Requirement, FulfillmentMethodType>} mapping A map of
  * requirements to courses that fulfill that requirement, used as a pruning
  * tool.
  * @param {boolean} root Whether root requirement pruning can be performed.
@@ -89,24 +96,32 @@ function getMappings(
   constraints: Map<Requirement, Constraint[]>,
   manuallyFulfilled: Set<Requirement>,
   root: boolean = true,
-  mapping: Map<Requirement, Set<Course> | boolean> = new Map<Requirement, Set<Course> | boolean>(),
+  mapping: Map<Requirement, FulfillmentMethodType> = new Map<Requirement, FulfillmentMethodType>(),
   numFulfilled: number = 0,
   alpha: number = 0,
   i: number = 0,
-): Map<Requirement, Set<Course> | boolean>[] {
+): Map<Requirement, FulfillmentMethodType>[] {
   /* If, assuming all remaining requirements are fulfilled, we still aren't
    * able to reach alpha, or if we managed to fulfill every single requirement,
    * prune. */
   const numRemaining: number = reqs.length - i;
   if (numFulfilled + numRemaining < alpha || alpha === reqs.length) {
     return [
-      new Map<Requirement, Set<Course> | boolean>(reqs.slice(i).map((req: Requirement) => [req, new Set<Course>()])),
+      new Map<Requirement, FulfillmentMethodType>(
+        reqs.slice(i).map((req: Requirement) => [
+          req,
+          {
+            method: 'courses',
+            coursesUsed: new Set<Course>(),
+          },
+        ]),
+      ),
     ];
   }
 
   /* Base case */
   if (reqs.length === i) {
-    return [new Map<Requirement, Set<Course> | boolean>()];
+    return [new Map<Requirement, FulfillmentMethodType>()];
   }
 
   const req: Requirement = reqs[i];
@@ -121,7 +136,7 @@ function getMappings(
   // TODO typeguard without violating abstraction
   if (req instanceof MultiRequirement) {
     /* Process the children requirements and add it to our current map. */
-    const subMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
+    const subMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
       req.requirements,
       courses,
       constraints,
@@ -132,24 +147,26 @@ function getMappings(
     /* Take each submap from the result from the requirements and assumes that
      * we are using it, setting the contents of the submap to mapping and using
      * it to find all the future possibilities */
-    const finalMappings: Map<Requirement, Set<Course> | boolean>[] = subMappings.flatMap(
-      (submap: Map<Requirement, Set<Course> | boolean>) => {
+    const finalMappings: Map<Requirement, FulfillmentMethodType>[] = subMappings.flatMap(
+      (submap: Map<Requirement, FulfillmentMethodType>) => {
         const union: Set<Course> = new Set<Course>();
-        submap.forEach((subReqCourses: Set<Course> | boolean) => {
-          if (typeof subReqCourses === 'boolean') {
-            return;
+        submap.forEach((subReqFulfillment: FulfillmentMethodType) => {
+          if (subReqFulfillment.method === 'courses') {
+            subReqFulfillment.coursesUsed.forEach((course: Course) => {
+              union.add(course);
+            });
           }
-          subReqCourses.forEach((course: Course) => {
-            union.add(course);
-          });
         });
-        submap.forEach((subReqCourses: Set<Course> | boolean, subReq: Requirement) => {
+        submap.forEach((subReqCourses: FulfillmentMethodType, subReq: Requirement) => {
           mapping.set(subReq, subReqCourses);
         });
-        mapping.set(req, union);
+        mapping.set(req, {
+          method: 'courses',
+          coursesUsed: union,
+        });
         /* Find the future mappings, with the assumption that we are using the
          * current submap */
-        const rest: Map<Requirement, Set<Course> | boolean>[] = getMappings(
+        const rest: Map<Requirement, FulfillmentMethodType>[] = getMappings(
           reqs,
           courses,
           constraints,
@@ -160,17 +177,20 @@ function getMappings(
           alpha,
           i + 1,
         );
-        submap.forEach((subReqCourses: Set<Course> | boolean, subReq: Requirement) => {
+        submap.forEach((subReqCourses: FulfillmentMethodType, subReq: Requirement) => {
           /* Revert so that we can use the mapping later to prune properly */
           mapping.delete(subReq);
         });
         mapping.delete(req);
         /* Take the potential results and add the current combination */
-        rest.forEach((restCombination: Map<Requirement, Set<Course> | boolean>) => {
-          submap.forEach((subReqCourses: Set<Course> | boolean, subReq: Requirement) => {
+        rest.forEach((restCombination: Map<Requirement, FulfillmentMethodType>) => {
+          submap.forEach((subReqCourses: FulfillmentMethodType, subReq: Requirement) => {
             restCombination.set(subReq, subReqCourses);
           });
-          restCombination.set(req, union);
+          restCombination.set(req, {
+            method: 'courses',
+            coursesUsed: union,
+          });
         });
         return rest;
       },
@@ -178,17 +198,24 @@ function getMappings(
     return finalMappings;
   }
 
-  let combinations: (Set<Course> | boolean)[];
+  let combinations: FulfillmentMethodType[];
   if (manuallyFulfilled.has(req)) {
-    combinations = [true];
+    combinations = [
+      {
+        method: 'manual',
+      },
+    ];
   } else {
     /* The filter prunes the combination. Takes the course combinations of each
      * course, adds it to the current mapping, and then tests to see if the new
      * mapping is still valid with the constraint. */
-    combinations = req.getCourseCombinations(courses);
+    let courseCombinations: Set<Course>[] = req.getCourseCombinations(courses);
     /* Prune invalid mappings */
-    combinations = combinations.filter((combination: Set<Course>) => {
-      mapping.set(req, combination);
+    courseCombinations = courseCombinations.filter((combination: Set<Course>) => {
+      mapping.set(req, {
+        method: 'courses',
+        coursesUsed: combination,
+      });
       const valid: boolean = constraints.get(req).every((constraint: Constraint) => constraint.isValidMapping(mapping));
       mapping.delete(req);
       return valid;
@@ -197,19 +224,19 @@ function getMappings(
       /* Prune possibilities that don't fulfill a necessary course requirement
        * if we can */
       if (req instanceof CourseRequirement) {
-        combinations = combinations.filter((combination: Set<Course>) => {
+        courseCombinations = courseCombinations.filter((combination: Set<Course>) => {
           return req.isFulfilledWith(Array.from(combination));
         });
-        if (combinations.length === 0) {
-          combinations = [new Set<Course>()];
+        if (courseCombinations.length === 0) {
+          courseCombinations = [new Set<Course>()];
         }
       }
       /* Prune unnecessary unit requirement possibilities if we can */
       if (req instanceof UnitRequirement) {
-        // FIXME Fix unit requirement checking logic (prune combinations where
+        // FIXME Fix unit requirement checking logic (prune courseCombinations where
         // removing a course would still be enough)
         const unitsPerCombination: Map<Set<Course>, number> = new Map<Set<Course>, number>();
-        combinations.forEach((combination: Set<Course>) => {
+        courseCombinations.forEach((combination: Set<Course>) => {
           unitsPerCombination.set(
             combination,
             Array.from(combination)
@@ -226,11 +253,16 @@ function getMappings(
         } else {
           unitTarget = maxUnits;
         }
-        combinations = combinations.filter(
+        courseCombinations = courseCombinations.filter(
           (combination: Set<Course>) => unitsPerCombination.get(combination) === unitTarget,
         );
       }
     }
+
+    combinations = courseCombinations.map((combination: Set<Course>) => ({
+      method: 'courses',
+      coursesUsed: combination,
+    }));
   }
 
   /* For each possible combination of courses, which are to be used to fulfill
@@ -238,17 +270,17 @@ function getMappings(
    * from the recursive call, add the possible combination to each of those
    * possible mappings. */
 
-  const finalMappings: Map<Requirement, Set<Course> | boolean>[] = [];
+  const finalMappings: Map<Requirement, FulfillmentMethodType>[] = [];
   let nextAlpha: number = alpha;
 
-  combinations.forEach((combination: Set<Course> | boolean) => {
+  combinations.forEach((combination: FulfillmentMethodType) => {
     const fulfillsReq: boolean =
-      typeof combination === 'boolean' ? combination : req.isFulfilledWith(Array.from(combination));
+      combination.method === 'manual' || req.isFulfilledWith(Array.from(combination.coursesUsed));
     const nextNumFulfilled: number = fulfillsReq ? numFulfilled + 1 : numFulfilled;
 
     /* Recurse */
     mapping.set(req, combination);
-    const restMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
+    const restMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
       reqs,
       courses,
       constraints,
@@ -265,7 +297,7 @@ function getMappings(
     nextAlpha = Math.max(
       nextAlpha,
       ...restMappings.map(
-        (restMapping: Map<Requirement, Set<Course> | boolean>) =>
+        (restMapping: Map<Requirement, FulfillmentMethodType>) =>
           nextNumFulfilled +
           Array.from(restMapping.keys()).filter((restReq: Requirement) =>
             reqIsFulfilledWithMapping(restReq, restMapping),
@@ -274,7 +306,7 @@ function getMappings(
     );
 
     /* Edit resulting mappings to include current requirement */
-    restMappings.forEach((restMapping: Map<Requirement, Set<Course> | boolean>) => {
+    restMappings.forEach((restMapping: Map<Requirement, FulfillmentMethodType>) => {
       restMapping.set(req, combination);
     });
 
@@ -290,45 +322,71 @@ function getMappings(
  * requirements).
  *
  * @param {Requirement} req The requirement whose fulfillment status to derive.
- * @param {Map<Requirement, Set<Course> | boolean>[]} bestMappings The mappings
+ * @param {Map<Requirement, FulfillmentMethodType>[]} bestMappings The mappings
  * to be considered.
- * @param {Map<Requirement, FulfillmentType>} fulfillment The map to which we
+ * @param {Map<Requirement, ProcessedFulfillmentType>} fulfillment The map to which we
  * assign the derived fulfillment statuses.
  */
 function deriveReqFulfillment(
   req: Requirement,
-  bestMappings: Map<Requirement, Set<Course> | boolean>[],
-  fulfillment: Map<Requirement, FulfillmentType>,
+  bestMappings: Map<Requirement, FulfillmentMethodType>[],
+  fulfillment: Map<Requirement, ProcessedFulfillmentType>,
 ): void {
   // TODO type guard
   if (fulfillment.has(req)) {
     return;
   }
   if (req instanceof MultiRequirement) {
+    /* Handle MultiRequirements by recursing down its children */
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
     deriveFulfillment(req.requirements, bestMappings, fulfillment);
-    const childFulfillments: FulfillmentType[] = req.requirements.map((childReq: Requirement) =>
+    const childFulfillments: ProcessedFulfillmentType[] = req.requirements.map((childReq: Requirement) =>
       fulfillment.get(childReq),
     );
+    const coursesUsed: Set<Course> = new Set<Course>();
+    /* Union all courses used from children */
+    childFulfillments.forEach((childFulfillment: ProcessedFulfillmentType) => {
+      if (childFulfillment.method === 'courses') {
+        childFulfillment.coursesUsed.forEach((course: Course) => {
+          coursesUsed.add(course);
+        });
+      }
+    });
     const numFulfilled: number = childFulfillments.filter(
-      (childFulfillment: FulfillmentType) => childFulfillment === 'fulfilled',
+      (childFulfillment: ProcessedFulfillmentType) => childFulfillment.status === 'fulfilled',
     ).length;
-    const reqFulfillment: FulfillmentType = numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled';
+    const reqFulfillment: ProcessedFulfillmentType = {
+      status: numFulfilled >= req.numRequired ? 'fulfilled' : 'unfulfilled',
+      method: 'courses',
+      coursesUsed,
+    };
     fulfillment.set(req, reqFulfillment);
-  } else if (
-    bestMappings.every((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-      reqIsFulfilledWithMapping(req, reqToCourseMapping),
-    )
-  ) {
-    fulfillment.set(req, 'fulfilled');
-  } else if (
-    bestMappings.some((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
-      reqIsFulfilledWithMapping(req, reqToCourseMapping),
-    )
-  ) {
-    fulfillment.set(req, 'possible');
   } else {
-    fulfillment.set(req, 'unfulfilled');
+    const chosenMapping: Map<Requirement, FulfillmentMethodType> = bestMappings[0];
+    const fulfillmentMethod: FulfillmentMethodType = chosenMapping.get(req);
+    let status: FulfillmentType;
+    if (
+      bestMappings.every((reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) =>
+        reqIsFulfilledWithMapping(req, reqToCourseMapping),
+      )
+    ) {
+      /* Requirement is fulfilled */
+      status = 'fulfilled';
+    } else if (
+      bestMappings.some((reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) =>
+        reqIsFulfilledWithMapping(req, reqToCourseMapping),
+      )
+    ) {
+      /* Requirement is possibly fulfilled */
+      status = 'possible';
+    } else {
+      /* Requirement is unfulfilled */
+      status = 'unfulfilled';
+    }
+    fulfillment.set(req, {
+      status,
+      ...fulfillmentMethod,
+    });
   }
 }
 
@@ -339,34 +397,60 @@ function deriveReqFulfillment(
  *
  * @param {Requirement} baseReqs The requirements that count towards overall
  * goal progress.
- * @param {Map<Requirement, Set<Course> | boolean>[]} mappings The possible
+ * @param {Map<Requirement, FulfillmentMethodType>[]} mappings The possible
  * course mappings.
- * @param {Map<Requirement, FulfillmentType} fulfillment The map to which we
+ * @param {Map<Requirement, ProcessedFulfillmentType} fulfillment The map to which we
  * assign the derived fulfillment statuses.
  */
 function deriveFulfillment(
   baseReqs: Requirement[],
-  reqToCourseMappings: Map<Requirement, Set<Course> | boolean>[],
-  fulfillment: Map<Requirement, FulfillmentType>,
+  reqToCourseMappings: Map<Requirement, FulfillmentMethodType>[],
+  fulfillment: Map<Requirement, ProcessedFulfillmentType>,
 ): void {
+  let bestMappings: Map<Requirement, FulfillmentMethodType>[] = reqToCourseMappings;
+
+  /* Filter whichever mappings have the most fulfillment requirements */
   /* A mapping of each requirement-to-course map to the number of requirements
    * it fulfills */
-  const mappingFulfillmentCounts: Map<Map<Requirement, Set<Course> | boolean>, number> = new Map<
-    Map<Requirement, Set<Course> | boolean>,
+  const mappingFulfillmentCounts: Map<Map<Requirement, FulfillmentMethodType>, number> = new Map<
+    Map<Requirement, FulfillmentMethodType>,
     number
   >(
-    reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) => [
+    reqToCourseMappings.map((reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) => [
       reqToCourseMapping,
       baseReqs.filter((req: Requirement) => reqIsFulfilledWithMapping(req, reqToCourseMapping)).length,
     ]),
   );
   const maxFulfilled: number = Math.max(...mappingFulfillmentCounts.values());
-  const maxMappings: Map<Requirement, Set<Course> | boolean>[] = reqToCourseMappings.filter(
-    (reqToCourseMapping: Map<Requirement, Set<Course> | boolean>) =>
+  bestMappings = bestMappings.filter(
+    (reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) =>
       mappingFulfillmentCounts.get(reqToCourseMapping) === maxFulfilled,
   );
+
+  /* Filter remaining mappings which use the most courses */
+  /* A mapping of each requirement-to-course map to the number of courses used */
+  const mappingCourseCounts: Map<Map<Requirement, FulfillmentMethodType>, number> = new Map<
+    Map<Requirement, FulfillmentMethodType>,
+    number
+  >(
+    bestMappings.map((reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) => [
+      reqToCourseMapping,
+      new Set(
+        Array.from(reqToCourseMapping.values())
+          .filter((fulfillmentMethod: FulfillmentMethodType) => fulfillmentMethod.method === 'courses')
+          .map((fulfillmentMethod: CourseFulfillmentMethodType) => Array.from(fulfillmentMethod.coursesUsed))
+          .flat(),
+      ).size,
+    ]),
+  );
+  const maxCourses: number = Math.max(...mappingCourseCounts.values());
+  bestMappings = bestMappings.filter(
+    (reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) =>
+      mappingCourseCounts.get(reqToCourseMapping) === maxCourses,
+  );
+
   baseReqs.forEach((req: Requirement) => {
-    deriveReqFulfillment(req, maxMappings, fulfillment);
+    deriveReqFulfillment(req, bestMappings, fulfillment);
   });
 }
 
@@ -378,14 +462,14 @@ function deriveFulfillment(
  * @param {Course[]} courses The courses used to fulfill requirements.
  * @param {Map<string, Set<string>>} manuallyFulfilled The map mapping
  * requirement set IDs to the IDs of manually fulfilled within those sets.
- * @return {Map<Requirement, FulfillmentType>} The fulfillment statuses of
+ * @return {Map<Requirement, ProcessedFulfillmentType>} The fulfillment statuses of
  * every requirement.
  */
 export function processRequirements(
   reqSets: RequirementSet[],
   courses: Course[],
   manuallyFulfilled: Map<string, Set<string>>,
-): Map<Requirement, FulfillmentType> {
+): Map<Requirement, ProcessedFulfillmentType> {
   /* Precompute applicable constraints */
   const constraints: Map<Requirement, Constraint[]> = new Map<Requirement, Constraint[]>();
   reqSets.forEach((reqSet: RequirementSet) => {
@@ -419,7 +503,7 @@ export function processRequirements(
     }
   });
 
-  const fulfillment: Map<Requirement, FulfillmentType> = new Map();
+  const fulfillment: Map<Requirement, ProcessedFulfillmentType> = new Map();
   reqSets.forEach((reqSet: RequirementSet): void => {
     const setConstraints: Constraint[] = reqSet.getConstraints();
     if (setConstraints.length === 0) {
@@ -431,7 +515,7 @@ export function processRequirements(
           /* If a category has no constraints, we can derive fulfillment at
            * the level of a requirement */
           reqCategory.requirements.forEach((req: Requirement) => {
-            const reqMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
+            const reqMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
               [req],
               courses,
               constraints,
@@ -440,7 +524,7 @@ export function processRequirements(
             deriveFulfillment([req], reqMappings, fulfillment);
           });
         } else {
-          const categoryMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
+          const categoryMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
             reqCategory.requirements,
             courses,
             constraints,
@@ -451,7 +535,7 @@ export function processRequirements(
       });
     } else {
       const setReqs: Requirement[] = reqSet.getRequirements();
-      const setMappings: Map<Requirement, Set<Course> | boolean>[] = getMappings(
+      const setMappings: Map<Requirement, FulfillmentMethodType>[] = getMappings(
         setReqs,
         courses,
         constraints,
@@ -461,7 +545,10 @@ export function processRequirements(
     }
   });
   manualReqs.forEach((req: Requirement) => {
-    fulfillment.set(req, 'fulfilled');
+    fulfillment.set(req, {
+      status: 'fulfilled',
+      method: 'manual',
+    });
   });
 
   reqIsFulfilledWithMapping.clear();

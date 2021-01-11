@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./build/",
+    "rootDir": "./src/",
+    "strict": false,
+    "esModuleInterop": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "common/*": ["../../common/src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../common/"
+    }
+  ]
+}
