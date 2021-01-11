@@ -193,15 +193,11 @@ export class CourseSearcherComponent implements OnInit {
    */
   getBerkeleytime = (): void => {
     this.berkeleytimeService.getGrades(this.searchedCourse).subscribe(grade => {
-      this.searchedCourseGrade = grade;
-      console.log(this.searchedCourseGrade)
+      this.searchedCourseGrade = grade? grade: 'unavailale';
     });
     this.berkeleytimeService.getSemesters(this.searchedCourse).subscribe(semesters => {
-      this.searchedCourseSemOffered = semesters;
-      console.log(this.searchedCourseSemOffered)
+      this.searchedCourseSemOffered = semesters? semesters: ['unavailable'];
     });
-    console.log(this.searchedCourseGrade);
-    console.log(this.searchedCourseSemOffered);
   }
 
   returnCourse(): void {
@@ -227,12 +223,12 @@ export class CourseSearcherComponent implements OnInit {
   }
 
   /*
-   * Generates the url for the selected course, assuming there 
+   * Generates the grade url for the selected course, assuming there 
    * is a valid one. Does not check for whether the course actually exists 
    * in berkeleytime or whether the course is valid in terms of 
    * amount of grading information we have.
    */
-  getBerkeleyTimeUrl(): any {
+  getBerkeleyTimeGradeUrl(): string {
     // TODO fix the tslint stuff with the "any"
     const defaultUrl = 'https://berkeleytime.com/grades';
     if (!this.searchedCourse) {

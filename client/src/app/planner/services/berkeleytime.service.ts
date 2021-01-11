@@ -18,13 +18,9 @@ export class BerkeleytimeService {
   //private static readonly GRADE_API_ENDPOINT = 'https://berkeleytime.com/api/grades/grades_json/';
   private static readonly GRADE_API_ENDPOINT = '/api/grades/';
 
-  private sharedGradesMap: Observable<Map<string, Course>>;
-
-  constructor(private http: HttpClient) {}
-
   /* A function that returns an observable that gives the grade of a class */
   getGrades(course: Course): Observable<string> {
-    let subject = new BehaviorSubject<string>('B+');
+    let subject = new BehaviorSubject<string>(undefined);
     return subject;
     //return this.http.get(BerkeleytimeService.GRADE_API_ENDPOINT + `?course_id=${course.berkeleyTimeId}`);
   }
