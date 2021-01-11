@@ -6,7 +6,7 @@
       <th> Course Name</th>
       <th> Average Grade </th>
     <tr>
-    <tr *ngFor="let course of getFulfillingCourses() | async" (click)="viewCourseBerkeleytime(course)">
+    <tr class="course-table-row" *ngFor="let course of getFulfillingCourses() | async" (click)="viewCourseBerkeleytime(course)">
       <td> {{ course.dept }} {{ course.no }} </td>
       <td> {{ course.title }}</td>
       <td> {{ berkeleytimeService.getGrade(course) | async }} </td>
