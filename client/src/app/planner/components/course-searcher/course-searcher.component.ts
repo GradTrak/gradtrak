@@ -91,7 +91,7 @@ export class CourseSearcherComponent implements OnInit {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
       this.allCourses = courses;
     });
-    let yikes = this.berkeleytimeService.getGrades();
+    let yikes = this.berkeleytimeService.getGrades(undefined).subscribe();
     console.log(yikes);
   }
 

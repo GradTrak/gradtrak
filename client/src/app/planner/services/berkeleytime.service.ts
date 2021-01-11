@@ -9,14 +9,15 @@ import { Course } from '../models/course.model';
   providedIn: 'root',
 })
 export class BerkeleytimeService {
-  private static readonly GRADE_API_ENDPOINT = '/api/grades/grades_json/';
+  private static readonly GRADE_API_ENDPOINT = 'https://berkeleytime.com/api/grades/grades_json/';
 
   private sharedGradesMap: Observable<Map<string, Course>>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
 
-  getGrades(course: Course): String {
-    
-    return 'no.'
+  }
+
+  getGrades(course: Course): Observable<Object> {
+    return this.http.get(BerkeleytimeService.GRADE_API_ENDPOINT);
   }
 }
