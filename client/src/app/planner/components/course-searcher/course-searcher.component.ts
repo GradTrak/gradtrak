@@ -4,6 +4,7 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
+import { BerkeleytimeService } from '../../services/berkeleytime.service';
 
 @Directive({
   selector: 'iframe'
@@ -84,12 +85,14 @@ export class CourseSearcherComponent implements OnInit {
     ['VIETNMS', ['VIETNAMESE']],
   ]);
 
-  constructor(private sanitizer: DomSanitizer, private courseService: CourseService) {}
+  constructor(private sanitizer: DomSanitizer, private courseService: CourseService, private berkeleytimeService: BerkeleytimeService) {}
 
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
       this.allCourses = courses;
     });
+    let yikes = this.berkeleytimeService.getGrades();
+    console.log(yikes);
   }
 
   /**

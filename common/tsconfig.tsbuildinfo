@@ -1,0 +1,2068 @@
+{
+  "program": {
+    "fileInfos": {
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.d.ts": {
+        "version": "49ff9798f592c8b7e628fd881401e68810c1b3589ecd7a41b32b3c287374cde0",
+        "signature": "49ff9798f592c8b7e628fd881401e68810c1b3589ecd7a41b32b3c287374cde0"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0",
+        "signature": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
+        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4",
+        "signature": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
+        "signature": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.scripthost.d.ts": {
+        "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
+        "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
+        "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21",
+        "signature": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
+        "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
+        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
+        "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
+        "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
+        "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
+        "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+        "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
+        "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts": {
+        "version": "5786f9b20c251ce2dbb4305a529b48e4dbb658383da9cad7b765e52879f0b319",
+        "signature": "3bf8fc2dc79b0189f6d62ded1110188cbfb23f3b59488653419be5461ef0f1ea"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/course.prototype.ts": {
+        "version": "1560d8c5d35f942142b704c19b0feb32321a83b9fe7fdd5e88abff2ccb52c444",
+        "signature": "8f7262c40784322172f6b9f8db1c904b027ab7fe119e1c68b3761e7303d51dc1"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement.prototype.ts": {
+        "version": "f948cf63400e006a137e355e809f86d0f86e4db6510a284d927660f6d67f8a4b",
+        "signature": "08f9238886877dbbb0cc6a633e6786fbf7bf77bf08bd90dbc24a9cf4839904ec"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-category.prototype.ts": {
+        "version": "24792b3eb1bbaefeb36079bbb98fcf6a896b491946f3a4ae984ac211002e6c2b",
+        "signature": "9c214f2e83083928f1100eb57375b4f675b5fe91d90b87fc4e70ee5921b3de6d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-set.prototype.ts": {
+        "version": "db4d5103969b88c4ae2bb69563dc2c9c56d3e87d03e705f27746c6e46527a036",
+        "signature": "0a4d1422c430b5c4c4f813e77819aace7392ea61d1bf272c96884404539c3e3b"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/semester.prototype.ts": {
+        "version": "40e090e425aec60ee5743ebad58dbbe44a5153ee7f0a64f1fb3d9b261a636b70",
+        "signature": "0ba7ec728f59adf34377a3e4a583a57c593e7e5fe3a8e11c5982e370a8cbcb36"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/tag.prototype.ts": {
+        "version": "206ab5681a983c8bf6f6190e77640647d3550f1eae4a81d6a56d4304d12cfd9a",
+        "signature": "63fa899adc21f33ee57b100b4bfe0bed5f0c86a42264e044abe965ce55c221ce"
+      },
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/user-data.prototype.ts": {
+        "version": "2962d2e9bb9b1f14fd6c3df3485b3f75a5963a07f13697c86466527ad9908d20",
+        "signature": "c3bb2ec7a9c724c8eb9021d0c5ee597769d38b4227cc8b97ef6dd7e8036455fc"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/color-name/index.d.ts": {
+        "version": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e",
+        "signature": "f0cb4b3ab88193e3e51e9e2622e4c375955003f1f81239d72c5b7a95415dad3e"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/eslint-visitor-keys/index.d.ts": {
+        "version": "725d9be2fd48440256f4deb00649adffdbc5ecd282b09e89d4e200663792c34c",
+        "signature": "725d9be2fd48440256f4deb00649adffdbc5ecd282b09e89d4e200663792c34c"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts": {
+        "version": "ff95c94cf8daa2130cdb26fde51161973eeafb3af6ffb6e6e4c0089b1fa9c5d4",
+        "signature": "ff95c94cf8daa2130cdb26fde51161973eeafb3af6ffb6e6e4c0089b1fa9c5d4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "96e547b51f95ee76bdb25731c92420fa6f93b59c3f38f23d505be36e2de394ee",
+        "signature": "96e547b51f95ee76bdb25731c92420fa6f93b59c3f38f23d505be36e2de394ee"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/buffer.d.ts": {
+        "version": "61215c1a376bbe8f51cab4cc4ddbf3746387015113c37a84d981d4738c21b878",
+        "signature": "61215c1a376bbe8f51cab4cc4ddbf3746387015113c37a84d981d4738c21b878"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts": {
+        "version": "f4eedfe23b0fe472978ae1b46d0bdccfe1bb00ba690039a721f0a297dd8d6aed",
+        "signature": "f4eedfe23b0fe472978ae1b46d0bdccfe1bb00ba690039a721f0a297dd8d6aed"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/cluster.d.ts": {
+        "version": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a",
+        "signature": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/constants.d.ts": {
+        "version": "0279383034fae92db8097d0a41350293553599cc9c3c917b60e2542d0dfcbd44",
+        "signature": "0279383034fae92db8097d0a41350293553599cc9c3c917b60e2542d0dfcbd44"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts": {
+        "version": "d3841c8071ad936ffcde84c2d1c60cedd78d1817927827a956ba368322103261",
+        "signature": "d3841c8071ad936ffcde84c2d1c60cedd78d1817927827a956ba368322103261"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dgram.d.ts": {
+        "version": "387656ed4d6444031a0042c38701167e77ff5f4698ada32737082fbee76b1db0",
+        "signature": "387656ed4d6444031a0042c38701167e77ff5f4698ada32737082fbee76b1db0"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts": {
+        "version": "ef226a42de7022eacdfa0f15aabf73b46c47af93044c8ebfab8aa8e3cf6c330c",
+        "signature": "ef226a42de7022eacdfa0f15aabf73b46c47af93044c8ebfab8aa8e3cf6c330c"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/domain.d.ts": {
+        "version": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa",
+        "signature": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts": {
+        "version": "3ad728027671c2c3c829e21803f8d7a15b29d808293644d50d928213280c072d",
+        "signature": "3ad728027671c2c3c829e21803f8d7a15b29d808293644d50d928213280c072d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts": {
+        "version": "b24e8f57a4eaabbaa25a1c391a13ca9dc50da97895e1fd6c0425c9d46fff8758",
+        "signature": "b24e8f57a4eaabbaa25a1c391a13ca9dc50da97895e1fd6c0425c9d46fff8758"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts": {
+        "version": "ad573a6d6b035f4361907c2cb006e9c67ae26c86413527254a1b2c83ed79455d",
+        "signature": "ad573a6d6b035f4361907c2cb006e9c67ae26c86413527254a1b2c83ed79455d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http2.d.ts": {
+        "version": "272c8598c3a29a3fa3027bd0a645c5f49b3f7832dfcf8e47b7260843ec8a40f3",
+        "signature": "272c8598c3a29a3fa3027bd0a645c5f49b3f7832dfcf8e47b7260843ec8a40f3"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/https.d.ts": {
+        "version": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6",
+        "signature": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/inspector.d.ts": {
+        "version": "4218ced3933a31eed1278d350dd63c5900df0f0904f57d61c054d7a4b83dbe4c",
+        "signature": "4218ced3933a31eed1278d350dd63c5900df0f0904f57d61c054d7a4b83dbe4c"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts": {
+        "version": "358398fe4034395d85c87c319cca7a04001434b13dc68d067481ecb374385bfc",
+        "signature": "358398fe4034395d85c87c319cca7a04001434b13dc68d067481ecb374385bfc"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/os.d.ts": {
+        "version": "d9bc6f1917c24d862a68d2633e4a32fd586bfe3e412e5d11fd07d8266b94ced5",
+        "signature": "d9bc6f1917c24d862a68d2633e4a32fd586bfe3e412e5d11fd07d8266b94ced5"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/path.d.ts": {
+        "version": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36",
+        "signature": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f",
+        "signature": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/process.d.ts": {
+        "version": "0e0d58f5e90c0a270dac052b9c5ad8ccdfc8271118c2105b361063218d528d6e",
+        "signature": "0e0d58f5e90c0a270dac052b9c5ad8ccdfc8271118c2105b361063218d528d6e"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/punycode.d.ts": {
+        "version": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1",
+        "signature": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts": {
+        "version": "66ce86394b4ced375bd59338265a190a5cbe0b78a15bdf64e34b46d3a5ffaa5d",
+        "signature": "66ce86394b4ced375bd59338265a190a5cbe0b78a15bdf64e34b46d3a5ffaa5d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts": {
+        "version": "2ca26a43dec700c4b0bdc04b123094f4becffda70e3960f3e10b025f7a15ba8f",
+        "signature": "2ca26a43dec700c4b0bdc04b123094f4becffda70e3960f3e10b025f7a15ba8f"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/repl.d.ts": {
+        "version": "30b9c2c0949e27506c7e751bd51749ca5ecb0d0a3ea854064039ffaa3707fad4",
+        "signature": "30b9c2c0949e27506c7e751bd51749ca5ecb0d0a3ea854064039ffaa3707fad4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts": {
+        "version": "4bcf11181d2d8c95e4f48baeb53c5083f648c7001aadc2c1070ae9bc2c8904c4",
+        "signature": "4bcf11181d2d8c95e4f48baeb53c5083f648c7001aadc2c1070ae9bc2c8904c4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "7e62aac2cc9c0710d772047ad89e8d7117f52592c791eb995ce1f865fedab432",
+        "signature": "7e62aac2cc9c0710d772047ad89e8d7117f52592c791eb995ce1f865fedab432"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts": {
+        "version": "40fa0ba2b8093ec2ec228f2a4a2128c58c91fd2698cae0dd19b0b570ccfcbba4",
+        "signature": "40fa0ba2b8093ec2ec228f2a4a2128c58c91fd2698cae0dd19b0b570ccfcbba4"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/trace_events.d.ts": {
+        "version": "a77fdb357c78b70142b2fdbbfb72958d69e8f765fd2a3c69946c1018e89d4638",
+        "signature": "a77fdb357c78b70142b2fdbbfb72958d69e8f765fd2a3c69946c1018e89d4638"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts": {
+        "version": "3c2ac350c3baa61fd2b1925844109e098f4376d0768a4643abc82754fd752748",
+        "signature": "3c2ac350c3baa61fd2b1925844109e098f4376d0768a4643abc82754fd752748"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts": {
+        "version": "ae25aec5ed3795a3edfc356a7bc091554917ad0e0009a3cdffd7115ba22bd28d",
+        "signature": "ae25aec5ed3795a3edfc356a7bc091554917ad0e0009a3cdffd7115ba22bd28d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts": {
+        "version": "5fed88e3a2384ac5b50bc3c706575d824129cf1c98e78b0152da521e35e13334",
+        "signature": "5fed88e3a2384ac5b50bc3c706575d824129cf1c98e78b0152da521e35e13334"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/v8.d.ts": {
+        "version": "4407bd5f1d6f748590ba125195eb1d7a003c2de2f3b057456d3ac76a742d2561",
+        "signature": "4407bd5f1d6f748590ba125195eb1d7a003c2de2f3b057456d3ac76a742d2561"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts": {
+        "version": "a0baa0860e17f8ed646315d6330b79c5c192f10e94975ea8c76105d626afb08f",
+        "signature": "a0baa0860e17f8ed646315d6330b79c5c192f10e94975ea8c76105d626afb08f"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "03875b79a32f707b6db3e94545ee4864fdae0b68bfc3a2b9030a338592149e18",
+        "signature": "03875b79a32f707b6db3e94545ee4864fdae0b68bfc3a2b9030a338592149e18"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/zlib.d.ts": {
+        "version": "f409183966a1dd93d3a9cd1d54fbeb85c73101e87cd5b19467c5e37b252f3fd8",
+        "signature": "f409183966a1dd93d3a9cd1d54fbeb85c73101e87cd5b19467c5e37b252f3fd8"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/base.d.ts": {
+        "version": "2026b7041e063d40039177d4ee3f916b2ef69a6741a0ed092301dee65eea4149",
+        "signature": "2026b7041e063d40039177d4ee3f916b2ef69a6741a0ed092301dee65eea4149"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts": {
+        "version": "12b2608d6074167c331c9c3c6994a57819f6ff934c7fd4527e23aabf56d4c8d1",
+        "signature": "12b2608d6074167c331c9c3c6994a57819f6ff934c7fd4527e23aabf56d4c8d1"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "4926e99d2ad39c0bbd36f2d37cc8f52756bc7a5661ad7b12815df871a4b07ba1",
+        "signature": "4926e99d2ad39c0bbd36f2d37cc8f52756bc7a5661ad7b12815df871a4b07ba1"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/base.d.ts": {
+        "version": "4cef33b2997388559c39b2f98c37e8319ad61e30a1f0edc55c53913f2250bade",
+        "signature": "4cef33b2997388559c39b2f98c37e8319ad61e30a1f0edc55c53913f2250bade"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/globals.global.d.ts": {
+        "version": "2708349d5a11a5c2e5f3a0765259ebe7ee00cdcc8161cb9990cb4910328442a1",
+        "signature": "2708349d5a11a5c2e5f3a0765259ebe7ee00cdcc8161cb9990cb4910328442a1"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/base.d.ts": {
+        "version": "0e65e3845a015b8e8830c90b2354b4521ed8c01e2f290ff2be24fe4fe906ea8e",
+        "signature": "0e65e3845a015b8e8830c90b2354b4521ed8c01e2f290ff2be24fe4fe906ea8e"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/assert.d.ts": {
+        "version": "09cfde84978c69335d287e281d34c877eed08e040793697b58e8d63bb2faa78f",
+        "signature": "09cfde84978c69335d287e281d34c877eed08e040793697b58e8d63bb2faa78f"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts": {
+        "version": "dfa51c21dbdb83ab0800e904f983b55062edc301262dd3e4352b590c20f07fa5",
+        "signature": "dfa51c21dbdb83ab0800e904f983b55062edc301262dd3e4352b590c20f07fa5"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/minimatch/index.d.ts": {
+        "version": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
+        "signature": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/glob/index.d.ts": {
+        "version": "64ef5112114bdd77304acb548f93777b263bbf57272776139425a58f68a10775",
+        "signature": "64ef5112114bdd77304acb548f93777b263bbf57272776139425a58f68a10775"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasmine/ts3.1/index.d.ts": {
+        "version": "7db7a68c87f2a758e3edeeb442ae2422c1525b5d85ad80608594f749620cd18d",
+        "signature": "7db7a68c87f2a758e3edeeb442ae2422c1525b5d85ad80608594f749620cd18d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasminewd2/index.d.ts": {
+        "version": "9d84ea614c151a66d555f97e47b59976437dc7e060b93f67ebd3eae9da8880d3",
+        "signature": "9d84ea614c151a66d555f97e47b59976437dc7e060b93f67ebd3eae9da8880d3"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json-schema/index.d.ts": {
+        "version": "ecdf947a5111318568ba99f2a87b8498382d8871207f1bc6271ff3b9536a2448",
+        "signature": "ecdf947a5111318568ba99f2a87b8498382d8871207f1bc6271ff3b9536a2448"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json5/index.d.ts": {
+        "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
+        "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/memoizee/index.d.ts": {
+        "version": "767827f974f68830e795df4cc173f21f04d4dba14d6e613477de7d5acecb556d",
+        "signature": "767827f974f68830e795df4cc173f21f04d4dba14d6e613477de7d5acecb556d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/q/index.d.ts": {
+        "version": "026aa0540cf6376b64fff7c22f4dc127c2bbe7885daeabbc88f0a3513faaf78a",
+        "signature": "026aa0540cf6376b64fff7c22f4dc127c2bbe7885daeabbc88f0a3513faaf78a"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts": {
+        "version": "f6347d3913f8a74952f8f7b76b0c735e0250af2336ea3c4a6865056ecf3ab6a7",
+        "signature": "f6347d3913f8a74952f8f7b76b0c735e0250af2336ea3c4a6865056ecf3ab6a7"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts": {
+        "version": "eec632398d8634f151c2d53596c28b223a25bbea092a925e58e88013e2397d7d",
+        "signature": "eec632398d8634f151c2d53596c28b223a25bbea092a925e58e88013e2397d7d"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/chrome.d.ts": {
+        "version": "2fa05bd69948d76ef4513626a8aaf427f818eb4ff6e905dfe664f808441a5553",
+        "signature": "2fa05bd69948d76ef4513626a8aaf427f818eb4ff6e905dfe664f808441a5553"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/edge.d.ts": {
+        "version": "d4fd0745a2c152be86bc27e4acd08efcce7beec83de39dace9eb742682e7674e",
+        "signature": "d4fd0745a2c152be86bc27e4acd08efcce7beec83de39dace9eb742682e7674e"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/firefox.d.ts": {
+        "version": "b80ebb1b98c07eff3b4d489fd7be8589d175bd7a8fead09398d968537988db2a",
+        "signature": "b80ebb1b98c07eff3b4d489fd7be8589d175bd7a8fead09398d968537988db2a"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/ie.d.ts": {
+        "version": "d18a5e48d10a4a792c8cb2a20c1f682207973a80dd81ecf62c2ce4d4918c3b84",
+        "signature": "d18a5e48d10a4a792c8cb2a20c1f682207973a80dd81ecf62c2ce4d4918c3b84"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/opera.d.ts": {
+        "version": "86dfbbb377eb292dfd702390c9bf386012a5ec24b3269fbd87d3eef71a402cd7",
+        "signature": "86dfbbb377eb292dfd702390c9bf386012a5ec24b3269fbd87d3eef71a402cd7"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/safari.d.ts": {
+        "version": "6ebb7c2a7f339a3968de46421dbdbd65d0233199cf572e6d2de31033f5704386",
+        "signature": "6ebb7c2a7f339a3968de46421dbdbd65d0233199cf572e6d2de31033f5704386"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts": {
+        "version": "253ad34774a7cb9cc2748179bfcdf355ea6745c30622925b5f4dca1411679ad5",
+        "signature": "253ad34774a7cb9cc2748179bfcdf355ea6745c30622925b5f4dca1411679ad5"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/source-list-map/index.d.ts": {
+        "version": "67fc055eb86a0632e2e072838f889ffe1754083cb13c8c80a06a7d895d877aae",
+        "signature": "67fc055eb86a0632e2e072838f889ffe1754083cb13c8c80a06a7d895d877aae"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/source-map/source-map.d.ts": {
+        "version": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
+        "signature": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579"
+      },
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/webpack-sources/index.d.ts": {
+        "version": "d55cc13acdfa6c943725250fe4ee3b269e2b0f4098aef46713bc2fbec38d197f",
+        "signature": "d55cc13acdfa6c943725250fe4ee3b269e2b0f4098aef46713bc2fbec38d197f"
+      }
+    },
+    "options": {
+      "incremental": true,
+      "target": 1,
+      "module": 1,
+      "outDir": "/Users/danialkhan/Documents/GitHub/gradtrak/common/build/",
+      "rootDir": "/Users/danialkhan/Documents/GitHub/gradtrak/common/src/",
+      "composite": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "configFilePath": "/Users/danialkhan/Documents/GitHub/gradtrak/common/tsconfig.json"
+    },
+    "referencedMap": {
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/course.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-category.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-set.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-category.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/semester.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/tag.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/user-data.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/semester.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/color-name/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/buffer.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/cluster.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/console.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/constants.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dgram.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/domain.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http2.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/https.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/inspector.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/module.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/os.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/path.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/perf_hooks.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/process.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/punycode.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/repl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/string_decoder.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/timers.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/trace_events.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/v8.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/worker_threads.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/zlib.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/base.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/buffer.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/cluster.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/console.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/constants.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dgram.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/domain.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http2.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/https.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/inspector.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/module.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/os.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/path.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/perf_hooks.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/process.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/punycode.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/repl.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/string_decoder.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/timers.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/trace_events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/v8.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/worker_threads.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/zlib.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/base.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/base.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/globals.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/globals.global.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/base.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/base.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/globals.global.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/assert.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/base.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/assert.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/minimatch/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/glob/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/minimatch/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasmine/ts3.1/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasminewd2/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasmine/ts3.1/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json-schema/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json5/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/memoizee/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/q/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/chrome.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/edge.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/firefox.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/ie.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/opera.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/safari.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/chrome.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/edge.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/firefox.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/ie.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/opera.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/safari.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/source-list-map/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/source-map/source-map.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/webpack-sources/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/source-map/source-map.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/source-list-map/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-set.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-category.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-category.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement.prototype.ts",
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/user-data.prototype.ts": [
+        "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/semester.prototype.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/color-name/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/base.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/buffer.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/cluster.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/console.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/constants.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dgram.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/domain.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http2.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/https.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/inspector.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/module.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/os.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/path.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/perf_hooks.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/process.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/punycode.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/repl.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/string_decoder.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/timers.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/trace_events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/v8.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/worker_threads.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/zlib.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/base.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/base.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/globals.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/base.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/base.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/globals.global.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/base.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/assert.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/webpack-sources/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/source-map/source-map.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/source-list-map/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/glob/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/minimatch/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/perf_hooks.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/buffer.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/cluster.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/console.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/constants.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/https.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http2.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dgram.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/process.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/domain.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/worker_threads.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/zlib.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/v8.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/repl.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/source-map/source-map.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/source-list-map/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/chrome.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/edge.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/firefox.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/ie.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/opera.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/safari.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/safari.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/opera.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/ie.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/firefox.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/edge.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/chrome.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/q/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/memoizee/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json5/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json-schema/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasminewd2/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasmine/ts3.1/index.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasmine/ts3.1/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/minimatch/index.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/assert.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/globals.global.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/trace_events.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/timers.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/string_decoder.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/punycode.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/path.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/os.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/module.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/inspector.d.ts": [
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+        "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es5.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.dom.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.scripthost.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/constraint.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/course.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-category.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/requirement-set.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/semester.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/tag.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/common/src/prototypes/user-data.prototype.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/color-name/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/eslint-visitor-keys/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/globals.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/async_hooks.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/buffer.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/child_process.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/cluster.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/console.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/constants.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/crypto.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dgram.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/dns.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/domain.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/events.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/fs.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/http2.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/https.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/inspector.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/module.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/net.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/os.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/path.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/perf_hooks.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/process.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/punycode.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/querystring.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/readline.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/repl.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/stream.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/string_decoder.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/timers.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tls.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/trace_events.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/tty.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/url.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/util.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/v8.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/vm.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/worker_threads.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/zlib.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/base.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/fs.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/util.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/globals.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.2/base.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/globals.global.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/base.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/assert.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/node/ts3.4/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/minimatch/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/glob/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasmine/ts3.1/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/jasminewd2/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json-schema/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/json5/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/memoizee/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/q/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/remote.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/http.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/chrome.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/edge.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/firefox.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/ie.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/opera.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/safari.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/selenium-webdriver/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/source-list-map/index.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/source-map/source-map.d.ts",
+      "/users/danialkhan/documents/github/gradtrak/node_modules/@types/webpack-sources/index.d.ts"
+    ]
+  },
+  "version": "3.5.3"
+}
