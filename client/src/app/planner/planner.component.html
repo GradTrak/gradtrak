@@ -100,7 +100,7 @@
   </div>
 </ng-template>
 
-<ng-template #semesterChangerTemplate>
+<ng-template #semesterChanger>
   <div class="modal-body">
     <app-semester-changer
       [semestersInput]="state.userData.semesters"
@@ -117,8 +117,14 @@
   </div>
 </ng-template>
 
-<ng-template #requirementDisplayTemplate>
+<ng-template #requirementDisplay>
   <div class="modal-body">
-    <app-requirement-display [requirementInput]="displayedRequirement" (berkeleytimeViewed)="viewBerkeleytime($event)"></app-requirement-display>
+    <app-requirement-display [requirementInput]="displayedRequirement" (berkeleytimeViewed)="openBerkeleytime($event)"></app-requirement-display>
+  </div>
+</ng-template>
+
+<ng-template #berkeleytime>
+  <div class="modal-body">
+    <p> Displaying berkeleytime for this course: {{ berkeleytimeCourse }}</p>
   </div>
 </ng-template>
