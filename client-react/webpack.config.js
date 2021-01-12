@@ -48,5 +48,8 @@ module.exports = {
   devServer: {
     compress: true,
     hot: true,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
 };

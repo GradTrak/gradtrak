@@ -10,11 +10,7 @@
     "jsx": "react",
     "sourceMap": true,
     "rootDir": "./src/",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "strict": false,
     "esModuleInterop": true,
     "baseUrl": "./src/",
     "paths": {
