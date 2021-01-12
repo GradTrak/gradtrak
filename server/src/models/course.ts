@@ -26,9 +26,19 @@ const courseSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    berkeleyTimeId: {
-      type: String,
-      required: false,
+    berkeleyTimeData: {
+      berkeleyTimeId: {
+        type: String,
+        required: false,
+      },
+      averageGrade: {
+        type: String,
+        required: false,
+      },
+      semestersOffered: {
+        type: [String],
+        required: false,
+      },
     },
     tagIds: {
       type: [String],

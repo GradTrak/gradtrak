@@ -4,7 +4,11 @@ export type CoursePrototype = {
   no: string;
   title: string;
   units: number;
-  berkeleyTimeId: string;
+  berkeleyTimeData: {
+    berkeleyTimeId: string;
+    averageGrade: string;
+    semestersOffered: string[];
+  };
   tagIds: string[];
   equivIds: string[];
 }
