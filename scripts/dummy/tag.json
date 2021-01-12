@@ -72,6 +72,14 @@
     "name": "EECS Upper Division Course"
   },
   {
+    "id": "eecs_design",
+    "name": "EECS Upper Division Design Course"
+  },
+  {
+    "id": "cs_design",
+    "name": "CS Upper Division Design Course"
+  },
+  {
     "id": "linguis_elective",
     "name": "Linguistics Elective"
   },
@@ -116,8 +124,16 @@
     "name": "MCB NEU Elective"
   },
   {
+    "id": "ugba_upper_div",
+    "name": "Business Upper Division Course"
+  },
+  {
+    "id": "non_ugba_upper_div",
+    "name": "Non-business Upper Division Course"
+  },
+  {
     "id": "bioeng_ethics",
-    "name": "Bioengineering Ethics Course"
+    "name": "BioE Ethics Course"
   },
   {
     "id": "bioeng_design_research",
