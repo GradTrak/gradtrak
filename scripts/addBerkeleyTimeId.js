@@ -33,6 +33,7 @@ const main = (bTimeInfo) => {
         } else {
           course.berkeleyTimeId = bTimeId;
         }
+        //course.berkeleyTimeData = undefined;
         return course.save().catch(console.error);
       })).then(() => {
         connection.close();
