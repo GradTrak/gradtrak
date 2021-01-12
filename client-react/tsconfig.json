@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsx": "react",
+    "sourceMap": true,
+    "rootDir": "./src/",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "common/*": ["../../common/src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "../common/"
+    }
+  ]
+}
