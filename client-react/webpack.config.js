@@ -1,12 +1,20 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'production',
   entry: './src/index.tsx',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
+    }),
+  ],
   module: {
     rules: [
       {
@@ -25,7 +33,7 @@ module.exports = {
       },
       {
         type: 'asset/resource',
-        exclude: /\.(js|jsx|ts|tsx|css)$/,
+        exclude: /\.(js|jsx|ts|tsx|css|html)$/,
       },
     ],
   },
