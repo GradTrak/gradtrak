@@ -40,4 +40,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
+  devServer: {
+    compress: true,
+    hot: true,
+  },
 };

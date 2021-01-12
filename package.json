@@ -12,15 +12,13 @@
     "lint-fix": "yarn lint-fix:client && yarn lint-fix:server",
     "pretty": "yarn pretty:client && yarn pretty:server",
     "pretty-fix": "yarn pretty-fix:client && yarn pretty-fix:server",
-    "start:client": "cd client && ng serve",
-    "build:client": "cd client && ng build --prod",
-    "build-dev:client": "cd client && ng build --aot",
-    "test:client": "cd client && ng test",
-    "e2e:client": "cd client && ng e2e",
-    "lint:client": "cd client && eslint \"src/app/**/*.ts\"",
-    "lint-fix:client": "cd client && eslint --fix \"src/app/**/*.ts\"",
-    "pretty:client": "prettier --check \"client/src/app/**/*.{html,scss,ts}\"",
-    "pretty-fix:client": "prettier --check --write \"client/src/app/**/*.{html,scss,ts}\"",
+    "start:client": "cd client-react && webpack serve",
+    "build:client": "cd client-react && webpack bundle",
+    "build-dev:client": "echo \"Not yet implemented\" && false",
+    "lint:client": "cd client-react && eslint \"src/**/*.{ts,tsx}\"",
+    "lint-fix:client": "cd client-react && eslint --fix \"src/**/*.{ts,tsx}\"",
+    "pretty:client": "prettier --check \"client/src/**/*.{html,scss,ts,tsx}\"",
+    "pretty-fix:client": "prettier --check --write \"client/src/**/*.{html,scss,ts,tsx}\"",
     "build:server": "cd server && tsc --build",
     "start:server": "cd server && node ./build/bin/www.js",
     "watch:server": "cd server && nodemon --ext ts --exec \"yarn build:server && yarn start:server\"",
@@ -121,7 +119,8 @@
     "ts-node": "~7.0.0",
     "typescript": "~3.5.3",
     "webpack": "^5.13.0",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
   },
   "engines": {
     "node": "12"
