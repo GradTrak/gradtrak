@@ -5,7 +5,6 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
-import { BerkeleytimeService } from '../../services/berkeleytime.service';
 
 @Directive({
   selector: 'iframe'
@@ -41,8 +40,6 @@ export class CourseSearcherComponent implements OnInit {
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   searchedCourse: Course;
   allCourses: Course[];
-  searchedCourseGrade: string;
-  searchedCourseSemOffered: string[];
 
   // TODO Put this somewhere more reasonable
   private static readonly DEPT_ALIASES = new Map<string, string[]>([
@@ -88,7 +85,7 @@ export class CourseSearcherComponent implements OnInit {
     ['VIETNMS', ['VIETNAMESE']],
   ]);
 
-  constructor(private sanitizer: DomSanitizer, private courseService: CourseService, private berkeleytimeService: BerkeleytimeService) {}
+  constructor(private sanitizer: DomSanitizer, private courseService: CourseService) {}
 
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
@@ -187,19 +184,6 @@ export class CourseSearcherComponent implements OnInit {
       // TODO: sort this by search rankings for relevance
     );
   };
-
-  /**
-   * Updates the this.searchedCourseGrade and this.searchedCourseSemOffered based
-   * on searchedCourse
-   */
-  getBerkeleytime = (): void => {
-    this.berkeleytimeService.getGrade(this.searchedCourse).subscribe(grade => {
-      this.searchedCourseGrade = grade || 'unavailale';
-    });
-    this.berkeleytimeService.getSemesters(this.searchedCourse).subscribe(semesters => {
-      this.searchedCourseSemOffered = semesters || ['unavailable'];
-    });
-  }
 
   returnCourse(): void {
     if (this.searchedCourse instanceof Course) {

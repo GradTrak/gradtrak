@@ -9,7 +9,7 @@
     <tr class="course-table-row" *ngFor="let course of getFulfillingCourses() | async" (click)="viewCourseBerkeleytime(course)">
       <td> {{ course.dept }} {{ course.no }} </td>
       <td> {{ course.title }}</td>
-      <td> {{ course.berkeleytimeInfo.grade }} </td>
+      <td> {{ course.berkeleytimeData.grade }} </td>
     </tr>
   </table>
   <br />

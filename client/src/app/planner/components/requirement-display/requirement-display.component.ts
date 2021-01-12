@@ -4,7 +4,6 @@ import { map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
 import { Requirement } from '../../models/requirement.model';
 import { CourseService } from '../../services/course.service';
-import { BerkeleytimeService } from '../../services/berkeleytime.service';
 
 @Component({
   selector: 'app-requirement-display',
@@ -19,7 +18,7 @@ export class RequirementDisplayComponent implements OnInit {
   // TODO: use this.NO and whatnot? instead of fixed strings?
   sortField: 'no' | 'title' | 'grade' = 'no';
 
-  constructor(private courseService: CourseService, private berkeleytimeService: BerkeleytimeService) {}
+  constructor(private courseService: CourseService) {}
 
   ngOnInit(): void {}
 
@@ -44,8 +43,8 @@ export class RequirementDisplayComponent implements OnInit {
             break;
           case 'grade':
             courses.sort((a: Course, b: Course) => {
-              const gradeA = this.berkeleytimeService.getGrade(a);
-              const gradeB = this.berkeleytimeService.getGrade(b);
+              const gradeA = a.berkeleytimeData.grade;
+              const gradeB = b.berkeleytimeData.grade;
               if (gradeA === gradeB) {
                 // Default to the course Dept and No.
                 return a.getName() < b.getName()? 1: -1;
