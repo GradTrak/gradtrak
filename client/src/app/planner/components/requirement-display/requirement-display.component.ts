@@ -81,8 +81,7 @@ export class RequirementDisplayComponent implements OnInit {
    * accordingly. Defaults to descending and switches the sort 
    * order if you click on the same field multiple times.
    */
-  changeSort(clicked: 'no' | 'name' | 'grade') {
-    console.log(clicked, this.sortField, this.sortDescending)
+  changeSort(clicked: 'no' | 'title' | 'grade') {
     if (clicked === this.sortField) {
       this.sortDescending = !this.sortDescending;
     } else {

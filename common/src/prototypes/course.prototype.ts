@@ -4,9 +4,9 @@ export type CoursePrototype = {
   no: string;
   title: string;
   units: number;
-  berkeleyTimeData: {
-    berkeleyTimeId: string;
-    averageGrade: string;
+  berkeleytimeData: {
+    berkeleytimeId: string;
+    grade: string;
     semestersOffered: string[];
   };
   tagIds: string[];

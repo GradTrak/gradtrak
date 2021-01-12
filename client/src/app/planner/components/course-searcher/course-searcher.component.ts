@@ -208,11 +208,11 @@ export class CourseSearcherComponent implements OnInit {
     }
   }
 
-  berkeleyTimeStatus(): number {
+  berkeleytimeStatus(): number {
     if (!(this.searchedCourse instanceof Course)) {
       return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
     }
-    if (!this.searchedCourse.berkeleyTimeId) {
+    if (!this.searchedCourse.berkeleytimeData.berkeleytimeId) {
       return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
     }
     if (false) {
@@ -228,17 +228,17 @@ export class CourseSearcherComponent implements OnInit {
    * in berkeleytime or whether the course is valid in terms of 
    * amount of grading information we have.
    */
-  getBerkeleyTimeGradeUrl(): string {
+  getBerkeleytimeGradeUrl(): string {
     // TODO fix the tslint stuff with the "any"
     const defaultUrl = 'https://berkeleytime.com/grades';
     if (!this.searchedCourse) {
       return defaultUrl;
     }
-    if (!this.searchedCourse.berkeleyTimeId) {
+    if (!this.searchedCourse.berkeleytimeData.berkeleytimeId) {
       // TODO handle these cases
       return defaultUrl;
     }
-    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleyTimeId}-all-all`;
+    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleytimeData.berkeleytimeId}-all-all`;
     return url;
   }
 }

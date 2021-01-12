@@ -26,12 +26,12 @@ const courseSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    berkeleyTimeData: {
-      berkeleyTimeId: {
+    berkeleytimeData: {
+      berkeleytimeId: {
         type: String,
         required: false,
       },
-      averageGrade: {
+      grade: {
         type: String,
         required: false,
       },
