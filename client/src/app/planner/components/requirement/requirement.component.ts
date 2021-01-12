@@ -77,13 +77,23 @@ export class RequirementComponent implements OnInit {
     return fulfillments;
   }
 
-  getFulfillingCourses(): string[] {
+  getFulfillingCourses(): Course[] {
     const fulfillment: ProcessedFulfillmentType = this.fulfillmentMap.get(this.requirement);
     if (fulfillment.method === 'courses') {
-      return Array.from(fulfillment.coursesUsed).map((course: Course) => course.getName());
+      return Array.from(fulfillment.coursesUsed);
     } else {
       return [];
     }
+  }
+
+  getFulfilledUnits(): number {
+    return this.getFulfillingCourses()
+      .map((course: Course) => course.units)
+      .reduce((a: number, b: number) => a + b, 0);
+  }
+
+  getFulfilledCount(): number {
+    return this.getFulfillingCourses().length;
   }
 
   isUnit(): boolean {

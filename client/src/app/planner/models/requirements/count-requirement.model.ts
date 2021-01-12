@@ -11,7 +11,6 @@ import { getAllCombinations } from '../../../../utils';
 export class CountRequirement extends Requirement {
   numRequired: number;
   requirement: StandaloneRequirement;
-  hidden: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {

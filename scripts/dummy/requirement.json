@@ -292,36 +292,413 @@
     ]
   },
   {
+    "id": "haas",
+    "name": "Haas School of Business",
+    "parentId": "ucb",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Prerequisites",
+        "requirements": [
+          {
+            "id": "rc_a",
+            "type": "tag",
+            "name": "R&C Part A",
+            "tagId": "rc_a"
+          },
+          {
+            "id": "rc_b",
+            "type": "tag",
+            "name": "R&C Part B",
+            "tagId": "rc_b"
+          },
+          {
+            "id": "ugba10",
+            "type": "course",
+            "name": "UGBA 10",
+            "courseId": "ugba10"
+          },
+          {
+            "id": "ugba_math",
+            "type": "multi",
+            "name": "Calculus",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "math1a16a",
+                "type": "multi",
+                "name": "MATH 1A / MATH 16A",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "id": "math1a",
+                    "type": "course",
+                    "name": "MATH 1A",
+                    "courseId": "math1a"
+                  },
+                  {
+                    "id": "math16a",
+                    "type": "course",
+                    "name": "MATH 16A",
+                    "courseId": "math16a"
+                  }
+                ]
+              },
+              {
+                "id": "math1b16b",
+                "type": "multi",
+                "name": "MATH 1B / MATH 16B",
+                "numRequired": 1,
+                "hidden": true,
+                "requirements": [
+                  {
+                    "id": "math1b",
+                    "type": "course",
+                    "name": "MATH 1B",
+                    "courseId": "math1b"
+                  },
+                  {
+                    "id": "math16b",
+                    "type": "course",
+                    "name": "MATH 16B",
+                    "courseId": "math16b"
+                  }
+                ]
+              },
+              {
+                "id": "math53",
+                "type": "course",
+                "name": "MATH 53",
+                "courseId": "math53"
+              },
+              {
+                "id": "math54",
+                "type": "course",
+                "name": "MATH 54",
+                "courseId": "math54"
+              }
+            ]
+          },
+          {
+            "id": "econ1/2",
+            "type": "multi",
+            "name": "Econ 1/2",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ1",
+                "type": "course",
+                "name": "ECON 1",
+                "courseId": "econ1"
+              },
+              {
+                "id": "econ2",
+                "type": "course",
+                "name": "ECON 2",
+                "courseId": "econ2"
+              }
+            ]
+          },
+          {
+            "id": "haas_stat",
+            "type": "multi",
+            "name": "Statistics",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "stat20",
+                "type": "course",
+                "name": "STAT 20",
+                "courseId": "stat20"
+              },
+              {
+                "id": "statw21",
+                "type": "course",
+                "name": "STAT W21",
+                "courseId": "statw21"
+              },
+              {
+                "id": "stat131a",
+                "type": "course",
+                "name": "STAT 131A",
+                "courseId": "stat131a"
+              },
+              {
+                "id": "stat134",
+                "type": "course",
+                "name": "STAT 134",
+                "courseId": "stat134"
+              },
+              {
+                "id": "data8connector",
+                "type": "multi",
+                "name": "Data 8 and STAT/UGBA 88",
+                "numRequired": 2,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "datac8",
+                    "type": "course",
+                    "name": "DATA C8",
+                    "courseId": "datac8"
+                  },
+                  {
+                    "id": "stat88/ugba88",
+                    "type": "multi",
+                    "name": "STAT/UGBA 88",
+                    "numRequired": 1,
+                    "hidden": true,
+                    "requirements": [
+                      {
+                        "id": "stat88",
+                        "type": "course",
+                        "name": "STAT 88",
+                        "courseId": "stat88"
+                      },
+                      {
+                        "id": "ugba88",
+                        "type": "course",
+                        "name": "UGBA 88",
+                        "courseId": "ugba88"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Breadth Requirements",
+        "requirements": [
+          {
+            "id": "ls_arts",
+            "type": "tag",
+            "name": "Arts and Literature",
+            "tagId": "ls_arts"
+          },
+          {
+            "id": "ls_bio",
+            "type": "tag",
+            "name": "Biological Science",
+            "tagId": "ls_bio"
+          },
+          {
+            "id": "ls_hist",
+            "type": "tag",
+            "name": "Historical Studies",
+            "tagId": "ls_hist"
+          },
+          {
+            "id": "ls_inter",
+            "type": "tag",
+            "name": "International Studies",
+            "tagId": "ls_inter"
+          },
+          {
+            "id": "ls_philo",
+            "type": "tag",
+            "name": "Philosophy and Values",
+            "tagId": "ls_philo"
+          },
+          {
+            "id": "ls_phys",
+            "type": "tag",
+            "name": "Physical Science",
+            "tagId": "ls_phys"
+          },
+          {
+            "id": "ls_socio",
+            "type": "tag",
+            "name": "Social and Behavioral Science",
+            "tagId": "ls_socio"
+          }
+        ],
+        "constraints": [
+          {
+            "type": "mutex",
+            "name": "L&S Breadth Requirements Mutex",
+            "mutexReqIds": [
+              "ls_bio",
+              "ls_phys",
+              "ls_philo",
+              "ls_socio",
+              "ls_inter",
+              "ls_arts",
+              "ls_hist"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UGBA Core",
+        "requirements": [
+          {
+            "id": "ugba100",
+            "type": "course",
+            "name": "UGBA 100",
+            "courseId": "ugba100"
+          },
+          {
+            "id": "ugba101a_substitutes",
+            "type": "multi",
+            "name": "UGBA 101B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "ugba101a",
+                "type": "course",
+                "name": "UGBA 101A",
+                "courseId": "ugba101a"
+              },
+              {
+                "id": "econ100a",
+                "type": "course",
+                "name": "ECON 100A",
+                "courseId": "econ100a"
+              },
+              {
+                "id": "econ101a",
+                "type": "course",
+                "name": "ECON 101A",
+                "courseId": "econ101a"
+              },
+              {
+                "id": "envecon100",
+                "type": "course",
+                "name": "ENVECON 100A",
+                "courseId": "envecon100"
+              },
+              {
+                "id": "polecon106",
+                "type": "course",
+                "name": "POLECON 106",
+                "courseId": "polecon106"
+              }
+            ]
+          },
+          {
+            "id": "ugba101b_substitutes",
+            "type": "multi",
+            "name": "UGBA 101B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "ugba102a",
+                "type": "course",
+                "name": "UGBA 102A",
+                "courseId": "ugba102a"
+              },
+              {
+                "id": "econ100b",
+                "type": "course",
+                "name": "ECON 100B",
+                "courseId": "econ100b"
+              },
+              {
+                "id": "econ101b",
+                "type": "course",
+                "name": "ECON 101B",
+                "courseId": "econ101b"
+              },
+              {
+                "id": "polecon107",
+                "type": "course",
+                "name": "POLECON 107",
+                "courseId": "polecon107"
+              }
+            ]
+          },
+          {
+            "id": "ugba102a",
+            "type": "course",
+            "name": "UGBA 102A",
+            "courseId": "ugba102a"
+          },
+          {
+            "id": "ugba102b",
+            "type": "course",
+            "name": "UGBA 102b",
+            "courseId": "ugba102b"
+          },
+          {
+            "id": "ugba103",
+            "type": "course",
+            "name": "UGBA 103",
+            "courseId": "ugba103"
+          },
+          {
+            "id": "ugba104",
+            "type": "course",
+            "name": "UGBA 104",
+            "courseId": "ugba104"
+          },
+          {
+            "id": "ugba105",
+            "type": "course",
+            "name": "UGBA 105",
+            "courseId": "ugba105"
+          },
+          {
+            "id": "ugba106",
+            "type": "course",
+            "name": "UGBA 106",
+            "courseId": "ugba106"
+          },
+          {
+            "id": "ugba107",
+            "type": "course",
+            "name": "UGBA 107",
+            "courseId": "ugba107"
+          }
+        ]
+      },
+      {
+        "name": "Unit requirements",
+        "requirements": [
+          {
+            "id": "ugba_upper_div",
+            "type": "unit",
+            "name": "Upper Division Business Units",
+            "units": 38,
+            "requirement": {
+              "id": " ugba_upper_div_tag",
+              "type": "tag",
+              "name": "Upper Division Business Course",
+              "tagId": "ugba_upper_div"
+            }
+          },
+          {
+            "id": "non_ugba_upper_div",
+            "type": "unit",
+            "name": "Upper Division Non-Business Units",
+            "units": 12,
+            "requirement": {
+              "id": " non_ugba_upper_div_tag",
+              "type": "tag",
+              "name": "Upper Division Non-Business Course",
+              "tagId": "non_ugba_upper_div"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "cs",
     "name": "L&S CS Major",
     "parentId": "ls",
     "type": "major",
     "requirementCategories": [
       {
-        "name": "Math",
-        "requirements": [
-          {
-            "id": "math1a",
-            "type": "course",
-            "name": "MATH 1A",
-            "courseId": "math1a"
-          },
-          {
-            "id": "math1b",
-            "type": "course",
-            "name": "MATH 1B",
-            "courseId": "math1b"
-          },
-          {
-            "id": "compsci70",
-            "type": "course",
-            "name": "COMPSCI 70",
-            "courseId": "compsci70"
-          }
-        ]
-      },
-      {
-        "name": "Lower Division",
+        "name": "Lower Division Prerequisites",
         "requirements": [
           {
             "id": "compsci61a",
@@ -336,16 +713,54 @@
             "courseId": "compsci61b"
           },
           {
+            "id": "compsci70",
+            "type": "course",
+            "name": "COMPSCI 70",
+            "courseId": "compsci70"
+          }
+        ]
+      },
+      {
+        "name": "Lower Division Requirements",
+        "requirements": [
+          {
+            "id": "math1a",
+            "type": "course",
+            "name": "MATH 1A",
+            "courseId": "math1a"
+          },
+          {
+            "id": "math1b",
+            "type": "course",
+            "name": "MATH 1B",
+            "courseId": "math1b"
+          },
+          {
             "id": "compsci61c",
             "type": "course",
             "name": "COMPSCI 61C",
             "courseId": "compsci61c"
           },
           {
-            "id": "eecs16a",
-            "type": "course",
+            "id": "eecs16amath54",
+            "type": "multi",
             "name": "EECS 16A",
-            "courseId": "eecs16a"
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "eecs16a",
+                "type": "course",
+                "name": "EECS 16A",
+                "courseId": "math54"
+              },
+              {
+                "id": "math54",
+                "type": "course",
+                "name": "MATH 54",
+                "courseId": "math54"
+              }
+            ]
           },
           {
             "id": "eecs16b",
@@ -358,6 +773,12 @@
       {
         "name": "Upper Division",
         "requirements": [
+          {
+            "id": "eecs_design",
+            "type": "tag",
+            "name": "EECS Design Course",
+            "tagId": "eecs_design"
+          },
           {
             "id": "upper_div",
             "type": "unit",
@@ -503,6 +924,12 @@
       {
         "name": "Upper Division",
         "requirements": [
+          {
+            "id": "eecs_design",
+            "type": "tag",
+            "name": "EECS Design Course",
+            "tagId": "eecs_design"
+          },
           {
             "id": "upper_div",
             "type": "unit",
@@ -1719,11 +2146,11 @@
         "name": "Physics",
         "requirements": [
           {
-            "id": "physics",
-            "type": "multi",
-            "name": "Physics 7A/B",
-            "numRequired": 2,
-            "hidden": false,
+            "id": "physics5a/7a",
+            "type": "poly",
+            "name": "Physics 7A",
+            "numRequired": 1,
+            "hidden": true,
             "requirements": [
               {
                 "id": "physics7a",
@@ -1732,10 +2159,31 @@
                 "courseId": "physics7a"
               },
               {
+                "id": "physics5a",
+                "type": "course",
+                "name": "PHYSICS 5A",
+                "courseId": "physics5a"
+              }
+            ]
+          },
+          {
+            "id": "physics5b/7b",
+            "type": "poly",
+            "name": "Physics 7B",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
                 "id": "physics7b",
                 "type": "course",
                 "name": "PHYSICS 7B",
                 "courseId": "physics7b"
+              },
+              {
+                "id": "physics5b",
+                "type": "course",
+                "name": "PHYSICS 5B",
+                "courseId": "physics5b"
               }
             ]
           }
@@ -1745,83 +2193,74 @@
         "name": "Chemistry",
         "requirements": [
           {
-            "id": "chem",
+            "id": "chem1al4",
             "type": "multi",
-            "name": "Chemistry",
-            "numRequired": 2,
+            "name": "CHEM 1A/L",
+            "numRequired": 1,
             "hidden": false,
             "requirements": [
               {
-                "id": "chem1al4",
+                "id": "chem1a1al",
                 "type": "multi",
-                "name": "CHEM 1A/L",
-                "numRequired": 1,
+                "name": "Chem 1A/L",
+                "numRequired": 2,
                 "hidden": true,
                 "requirements": [
                   {
-                    "id": "chem1a1al",
-                    "type": "multi",
-                    "name": "Chem 1A/L",
-                    "numRequired": 2,
-                    "hidden": true,
-                    "requirements": [
-                      {
-                        "id": "chem1a",
-                        "type": "course",
-                        "name": "CHEM 1A",
-                        "courseId": "chem1a"
-                      },
-                      {
-                        "id": "chem1al",
-                        "type": "course",
-                        "name": "CHEM 1AL",
-                        "courseId": "chem1al"
-                      }
-                    ]
+                    "id": "chem1a",
+                    "type": "course",
+                    "name": "CHEM 1A",
+                    "courseId": "chem1a"
                   },
                   {
-                    "id": "chem4a",
+                    "id": "chem1al",
                     "type": "course",
-                    "name": "CHEM 4A",
-                    "courseId": "chem4a"
+                    "name": "CHEM 1AL",
+                    "courseId": "chem1al"
                   }
                 ]
               },
               {
-                "id": "chem3al12",
+                "id": "chem4a",
+                "type": "course",
+                "name": "CHEM 4A",
+                "courseId": "chem4a"
+              }
+            ]
+          },
+          {
+            "id": "chem3al12",
+            "type": "multi",
+            "name": "CHEM 3A/L",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "chem3a3al",
                 "type": "multi",
-                "name": "CHEM 3A/L",
-                "numRequired": 1,
+                "name": "Chem 3A/L",
+                "numRequired": 2,
                 "hidden": true,
                 "requirements": [
                   {
-                    "id": "chem3a3al",
-                    "type": "multi",
-                    "name": "Chem 3A/L",
-                    "numRequired": 2,
-                    "hidden": true,
-                    "requirements": [
-                      {
-                        "id": "chem3a",
-                        "type": "course",
-                        "name": "CHEM 3A",
-                        "courseId": "chem3a"
-                      },
-                      {
-                        "id": "chem3al",
-                        "type": "course",
-                        "name": "CHEM 3AL",
-                        "courseId": "chem3al"
-                      }
-                    ]
+                    "id": "chem3a",
+                    "type": "course",
+                    "name": "CHEM 3A",
+                    "courseId": "chem3a"
                   },
                   {
-                    "id": "chem12a",
+                    "id": "chem3al",
                     "type": "course",
-                    "name": "CHEM 12A",
-                    "courseId": "chem12a"
+                    "name": "CHEM 3AL",
+                    "courseId": "chem3al"
                   }
                 ]
+              },
+              {
+                "id": "chem12a",
+                "type": "course",
+                "name": "CHEM 12A",
+                "courseId": "chem12a"
               }
             ]
           }
@@ -1949,6 +2388,255 @@
             "type": "tag",
             "name": "Bioengineering Ethics Course",
             "tagId": "bioeng_ethics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "econ",
+    "name": "Economics Major",
+    "parentId": "ls",
+    "type": "major",
+    "requirementCategories": [
+      {
+        "name": "Prerequisites",
+        "requirements": [
+          {
+            "id": "math1a16a",
+            "type": "multi",
+            "name": "MATH 1A / MATH 16A",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "math1a",
+                "type": "course",
+                "name": "MATH 1A",
+                "courseId": "math1a"
+              },
+              {
+                "id": "math16a",
+                "type": "course",
+                "name": "MATH 16A",
+                "courseId": "math16a"
+              }
+            ]
+          },
+          {
+            "id": "math1b16b",
+            "type": "multi",
+            "name": "MATH 1B / MATH 16B",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "math1b",
+                "type": "course",
+                "name": "MATH 1B",
+                "courseId": "math1b"
+              },
+              {
+                "id": "math16b",
+                "type": "course",
+                "name": "MATH 16B",
+                "courseId": "math16b"
+              }
+            ]
+          },
+          {
+            "id": "Statistics Course",
+            "type": "multi",
+            "name": "Statistics Course",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "stat20",
+                "type": "course",
+                "name": "STAT 20",
+                "courseId": "stat20"
+              },
+              {
+                "id": "stat21",
+                "type": "course",
+                "name": "STAT 21",
+                "courseId": "stat21"
+              },
+              {
+                "id": "statw21",
+                "type": "course",
+                "name": "STAT w21",
+                "courseId": "statw21"
+              },
+              {
+                "id": "stat88",
+                "type": "course",
+                "name": "STAT 88",
+                "courseId": "stat88"
+              },
+              {
+                "id": "stat131a",
+                "type": "course",
+                "name": "STAT 131A",
+                "courseId": "stat131a"
+              },
+              {
+                "id": "stat135",
+                "type": "course",
+                "name": "STAT 135",
+                "courseId": "stat135"
+              },
+              {
+                "id": "stat140",
+                "type": "course",
+                "name": "STAT 140",
+                "courseId": "stat140"
+              }
+            ]
+          },
+          {
+            "id": "econ1econ2",
+            "type": "multi",
+            "name": "ECON 1 / ECON 2",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ1",
+                "type": "course",
+                "name": "ECON 1",
+                "courseId": "econ1"
+              },
+              {
+                "id": "econ2",
+                "type": "course",
+                "name": "ECON 2",
+                "courseId": "econ2"
+              }
+            ]
+          },
+          {
+            "id": "econupperdivprereq",
+            "type": "multi",
+            "name": "Economics Upper Div",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "id": "econ100a",
+                "type": "course",
+                "name": "ECON 100A",
+                "courseId": "econ100a"
+              },
+              {
+                "id": "econ100b",
+                "type": "course",
+                "name": "ECON 100B",
+                "courseId": "econ100b"
+              },
+              {
+                "id": "econ101a",
+                "type": "course",
+                "name": "ECON 101A",
+                "courseId": "econ101a"
+              },
+              {
+                "id": "econ101b",
+                "type": "course",
+                "name": "ECON 101B",
+                "courseId": "econ101b"
+              },
+              {
+                "id": "econ140",
+                "type": "course",
+                "name": "ECON 140",
+                "courseId": "econ140"
+              },
+              {
+                "id": "econ141",
+                "type": "course",
+                "name": "ECON 141",
+                "courseId": "econ141"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Upper Division",
+        "requirements": [
+          {
+            "id": "econ100econ101",
+            "type": "multi",
+            "name": "ECON 100 / ECON 101",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ100",
+                "type": "multi",
+                "name": "ECON 100 Series",
+                "numRequired": 2,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "econ100a",
+                    "type": "course",
+                    "name": "ECON 100A",
+                    "courseId": "econ100a"
+                  },
+                  {
+                    "id": "econ100b",
+                    "type": "course",
+                    "name": "ECON 100B",
+                    "courseId": "econ100b"
+                  }
+                ]
+              },
+              {
+                "id": "econ101",
+                "type": "multi",
+                "name": "ECON 101 Series",
+                "numRequired": 2,
+                "hidden": false,
+                "requirements": [
+                  {
+                    "id": "econ101a",
+                    "type": "course",
+                    "name": "ECON 101A",
+                    "courseId": "econ101a"
+                  },
+                  {
+                    "id": "econ101b",
+                    "type": "course",
+                    "name": "ECON 101B",
+                    "courseId": "econ101b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "econ140econ141",
+            "type": "multi",
+            "name": "ECON 140/141 Series",
+            "numRequired": 1,
+            "hidden": false,
+            "requirements": [
+              {
+                "id": "econ140",
+                "type": "course",
+                "name": "ECON 140",
+                "courseId": "econ140"
+              },
+              {
+                "id": "econ141",
+                "type": "course",
+                "name": "ECON 141",
+                "courseId": "econ141"
+              }
+            ]
           }
         ]
       }
