@@ -1,13 +1,13 @@
-const Course = require('../server/models/course');
-const RequirementSet = require('../server/models/requirement-set');
-const Tag = require('../server/models/tag');
-const User = require('../server/models/user');
-const db = require('../server/config/db');
+import Course from 'server/models/course';
+import RequirementSet from 'server/models/requirement-set';
+import Tag from 'server/models/tag';
+import User from 'server/models/user';
+import { connect } from 'server/config/db';
 
 const https = require('https');
 
 
-const promiseGet = (url) => {
+function promiseGet(url: string): any {
   return new Promise((resolve, reject) => {
 
     https.get(url, (res) => {
@@ -32,37 +32,37 @@ const promiseGet = (url) => {
 }
 
 /**
- * bTimeInfo should be the course information from the berkeleytime API.
+ * btimeInfo should be the course information from the berkeleytime API.
  * queries the courses and converts it by adding a berkeleytime field, and saves it back
  */
 const main = async () => {
-  bTimeInfo = await promiseGet('https://berkeleytime.com/api/catalog/catalog_json/');
+  const btimeInfo = await promiseGet('https://berkeleytime.com/api/catalog/catalog_json/');
   const mapping = {};
-  const fetchCourseInfo = async (bTimeCourseObj) => {
-    const key = `${bTimeCourseObj.abbreviation} ${bTimeCourseObj.course_number.toUpperCase()}`
-    const courseBoxObj = (await promiseGet(`https://berkeleytime.com/api/catalog/catalog_json/course_box/?course_id=${bTimeCourseObj.id}`)).course
-    const semestersOfferedArr = await promiseGet(`https://berkeleytime.com/api/enrollment/sections/${bTimeCourseObj.id}/`)
+  const fetchCourseInfo = async (btimeCourseObj: {id: string, abbreviation: string, course_number: string}) => {
+    const key: string = `${btimeCourseObj.abbreviation} ${btimeCourseObj.course_number.toUpperCase()}`
+    const courseBoxObj = (await promiseGet(`https://berkeleytime.com/api/catalog/catalog_json/course_box/?course_id=${btimeCourseObj.id}`)).course
+    const semestersOfferedArr: {semester: string, year: string}[] = await promiseGet(`https://berkeleytime.com/api/enrollment/sections/${btimeCourseObj.id}/`)
     mapping[key] = {
-      berkeleyTimeId: bTimeCourseObj.id,
+      berkeleytimeId: btimeCourseObj.id,
       averageGrade: courseBoxObj && courseBoxObj.letter_average,
       semestersOffered: semestersOfferedArr? semestersOfferedArr.map(sem => `${sem.semester} ${sem.year}`): undefined,
     };
     console.log(key)
   }
-  for await (let bTimeCourse of bTimeInfo.courses) {
-    await fetchCourseInfo(bTimeCourse);
+  for await (let btimeCourse of btimeInfo.courses.slice(5, 10)) {
+    await fetchCourseInfo(btimeCourse);
   }
   let connection;
-  db.connect()
+  connect()
     .then((c) => {
       connection = c;
       return Course.find()
     }).then(courses => {
       Promise.all(courses.map(course => {
         const key = `${course.dept} ${course.no.toUpperCase()}`
-        const bTimeData = mapping[key]
-        course.berkeleyTimeId = undefined;
-        course.berkeleyTimeData = bTimeData;
+        const btimeData = mapping[key]
+        course.berkeleytimeId = undefined;
+        course.berkeleytimeData = btimeData;
         return course.save().catch(console.error);
       })).then(() => {
         connection.close();
