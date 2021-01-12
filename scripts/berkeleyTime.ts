@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fetch = require('node-fetch');
-const fs = require('fs');
-const https = require('https');
+import fetch from 'node-fetch';
+import fs from 'fs';
+import https from 'https';
 
 const LIST_ENDPOINT =
   'https://berkeleytime.com/api/catalog/filter/?filters=22619,22620,22621,22622,22623,22624,22625,22626';
@@ -11,7 +11,7 @@ const COURSE_ENDPOINT = 'https://berkeleytime.com/api/catalog/catalog_json/cours
 
 const DUMMY_COURSE_DATA = './dummy/berkeleyTime.json';
 
-const TAG_MAP = new Map([
+const TAG_MAP = new Map<string, string>([
   ['American Cultures', 'ac'],
   ['American History', 'ah'],
   ['American Institutions', 'ai'],
@@ -28,7 +28,7 @@ const TAG_MAP = new Map([
   ['Social and Behavioral Sciences', 'ls_socio'],
 ]);
 
-const globalTagIds = new Set(TAG_MAP.values());
+const globalTagIds = new Set<string>(TAG_MAP.values());
 
 if (!fs.existsSync('cache')) {
   fs.mkdirSync('cache');
@@ -37,10 +37,9 @@ if (!fs.existsSync('cache')) {
 const agent = new https.Agent({
   keepAlive: true,
 });
-
-async function fetchCourse(courseId) {
+async function fetchCourse(courseId: string): Promise<any> {
   if (fs.existsSync(`cache/${courseId}.json`)) {
-    return JSON.parse(fs.readFileSync(`cache/${courseId}.json`));
+    return JSON.parse(fs.readFileSync(`cache/${courseId}.json`).toString());
   } else {
     const courseUrl = COURSE_ENDPOINT + courseId;
     const res = await fetch(courseUrl, { agent });
@@ -54,7 +53,7 @@ async function fetchCourse(courseId) {
   }
 }
 
-async function fetchCourseTags(course) {
+async function fetchCourseTags(course: any): Promise<string[]> {
   try {
     const courseData = await fetchCourse(course._id);
     return courseData.requirements
@@ -74,7 +73,7 @@ async function fetchCourseTags(course) {
   let validCourses = data.filter(
     (course) => course.units && (course.units.match(/^\d+\.\d+$/) || course.units.match(/^\d+$/)),
   );
-  const courseMap = new Map();
+  const courseMap = new Map<string, any>();
 
   validCourses.forEach((course) => {
     delete course.open_seats;
@@ -106,13 +105,15 @@ async function fetchCourseTags(course) {
 
   let existingCoursesMap;
   if (fs.existsSync(DUMMY_COURSE_DATA)) {
-    existingCoursesMap = new Map(JSON.parse(fs.readFileSync(DUMMY_COURSE_DATA)).map((course) => [course.id, course]));
+    existingCoursesMap = new Map<string, any>(
+      JSON.parse(fs.readFileSync(DUMMY_COURSE_DATA).toString()).map((course) => [course.id, course]),
+    );
   } else {
-    existingCoursesMap = new Map();
+    existingCoursesMap = new Map<string, any>();
   }
 
   let i = 0;
-  for (let [courseId, course] of courseMap) {
+  for (let [courseId, course] of Array.from(courseMap.entries())) {
     course.tagIds = await fetchCourseTags(course);
     course.tagIds.sort();
     delete course._id;
@@ -136,7 +137,7 @@ async function fetchCourseTags(course) {
 
   let courses = Array.from(existingCoursesMap.values());
 
-  courses.sort((a, b) => {
+  courses.sort((a: any, b: any) => {
     if (a.dept === b.dept) {
       const aNo = parseInt(a.no.replace(/[^\d]/g, ''));
       const bNo = parseInt(b.no.replace(/[^\d]/g, ''));
