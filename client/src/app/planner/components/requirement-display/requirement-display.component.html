@@ -2,9 +2,9 @@
 <div class="course-list">
   <table>
     <tr>
-      <th> Course No. </th>
-      <th> Course Name</th>
-      <th> Average Grade </th>
+      <th (click)="changeSort('no')"> Course No. </th>
+      <th (click)="changeSort('title')"> Course Title</th>
+      <th (click)="changeSort('grade')"> Average Grade </th>
     <tr>
     <tr class="course-table-row" *ngFor="let course of getFulfillingCourses() | async" (click)="viewCourseBerkeleytime(course)">
       <td> {{ course.dept }} {{ course.no }} </td>

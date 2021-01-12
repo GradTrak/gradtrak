@@ -16,7 +16,8 @@ export class RequirementDisplayComponent implements OnInit {
   /* Views the berkeleytime information about a course */
   @Output() berkeleytimeViewed: EventEmitter<Course> = new EventEmitter<Course>();
   sortDescending: boolean = false;
-  sortField: 'no' | 'name' | 'grade' = 'no';
+  // TODO: use this.NO and whatnot? instead of fixed strings?
+  sortField: 'no' | 'title' | 'grade' = 'no';
 
   constructor(private courseService: CourseService, private berkeleytimeService: BerkeleytimeService) {}
 
@@ -30,21 +31,15 @@ export class RequirementDisplayComponent implements OnInit {
         }),
       ),
       map((courses: Course[]) => {
-        const sortByNo = (a: Course, b: Course) => {
-          if (a.dept === b.dept) {
-            return parseInt(a.no.replace(/\D/g,''), 10) - parseInt(b.no.replace(/\D/g,''), 10)
-              || a.no < b.no? 1: -1;
-              // First sort by number, if numbers are the same then by the string
-          }
-          return a.dept < b.dept? 1: -1;
-        }
         switch (this.sortField) {
           case 'no':
-            courses.sort(sortByNo);
-            break;
-          case 'name':
             courses.sort((a: Course, b: Course) => {
               return a.getName() < b.getName()? 1: -1;
+            });
+            break;
+          case 'title':
+            courses.sort((a: Course, b: Course) => {
+              return a.title < b.title? 1: -1;
             })
             break;
           case 'grade':
@@ -52,7 +47,8 @@ export class RequirementDisplayComponent implements OnInit {
               const gradeA = this.berkeleytimeService.getGrade(a);
               const gradeB = this.berkeleytimeService.getGrade(b);
               if (gradeA === gradeB) {
-                return sortByNo(a, b)
+                // Default to the course Dept and No.
+                return a.getName() < b.getName()? 1: -1;
               }
               if (gradeA[0] === gradeB[0]) {
                 let score = 0;
@@ -78,5 +74,20 @@ export class RequirementDisplayComponent implements OnInit {
 
   viewCourseBerkeleytime(course: Course): void {
     this.berkeleytimeViewed.emit(course);
+  }
+
+  /**
+   * Given an input of what the user clicked, change the sorting
+   * accordingly. Defaults to descending and switches the sort 
+   * order if you click on the same field multiple times.
+   */
+  changeSort(clicked: 'no' | 'name' | 'grade') {
+    console.log(clicked, this.sortField, this.sortDescending)
+    if (clicked === this.sortField) {
+      this.sortDescending = !this.sortDescending;
+    } else {
+      this.sortField = clicked;
+      this.sortDescending = false;
+    }
   }
 }
