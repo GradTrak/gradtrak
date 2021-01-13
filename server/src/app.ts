@@ -48,8 +48,8 @@ if (process.env.NODE_ENV === 'production') {
 
 passport.use(localStrategy);
 passport.use(googleStrategy);
-passport.deserializeUser<UserType & mongoose.Document, string>(deserializeUser);
-passport.serializeUser<UserType & mongoose.Document, string>(serializeUser);
+passport.deserializeUser<string>(deserializeUser);
+passport.serializeUser<string>(serializeUser);
 app.use(passport.initialize());
 app.use(passport.session());
 
