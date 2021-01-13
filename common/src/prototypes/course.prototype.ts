@@ -6,4 +6,4 @@ export type CoursePrototype = {
   units: number;
   tagIds: string[];
   equivIds: string[];
-}
+};
