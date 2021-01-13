@@ -1,8 +1,9 @@
-import Course from 'server/models/course';
-import RequirementSet from 'server/models/requirement-set';
-import Tag from 'server/models/tag';
-import User from 'server/models/user';
-import { connect } from 'server/config/db';
+import Course from '../server/src/models/course';
+import RequirementSet from '../server/src/models/requirement-set';
+import Tag from '../server/src/models/tag';
+import User from '../server/src/models/user';
+import { connect } from '../server/src/config/db';
+
 
 const https = require('https');
 
@@ -44,14 +45,12 @@ const main = async () => {
     const semestersOfferedArr: {semester: string, year: string}[] = await promiseGet(`https://berkeleytime.com/api/enrollment/sections/${btimeCourseObj.id}/`)
     mapping[key] = {
       berkeleytimeId: btimeCourseObj.id,
-      averageGrade: courseBoxObj && courseBoxObj.letter_average,
+      grade: courseBoxObj && courseBoxObj.letter_average,
       semestersOffered: semestersOfferedArr? semestersOfferedArr.map(sem => `${sem.semester} ${sem.year}`): undefined,
     };
-    console.log(key)
+    console.log(key, courseBoxObj && courseBoxObj.letter_average)
   }
-  for await (let btimeCourse of btimeInfo.courses.slice(5, 10)) {
-    await fetchCourseInfo(btimeCourse);
-  }
+  await(Promise.all(btimeInfo.courses.map(btimeCourse => fetchCourseInfo(btimeCourse))))
   let connection;
   connect()
     .then((c) => {
