@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
+import { Col, Container, Modal, Row } from 'react-bootstrap';
+
 import { Course } from './models/course.model';
 import { Requirement } from './models/requirement.model';
 import { RequirementSet } from './models/requirement-set.model';
@@ -7,6 +8,9 @@ import { Semester } from './models/semester.model';
 import { StandaloneRequirement } from './models/requirements/standalone-requirement.model';
 import { UserData } from './models/user-data.model';
 import User, { AuthType } from './lib/user';
+
+import SemesterPane from './components/SemesterPane';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -304,10 +308,10 @@ class App extends React.Component<AppProps, AppState> {
   /**
    * Removes a course from a given semester.
    *
-   * @param {Course} course The course to remove.
    * @param {Semester} semester The semester from which to remove the course.
+   * @param {Course} course The course to remove.
    */
-  removeCourse = (course: Course, semester: Semester): void => {
+  removeCourse = (semester: Semester, course: Course): void => {
     if (!semester.courses.includes(course)) {
       console.error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
       return;
@@ -462,22 +466,27 @@ class App extends React.Component<AppProps, AppState> {
   private renderBody(): React.ReactElement {
     if (!this.state.isLoading) {
       return (
-        <div className="row no-gutters main">
-          <SemesterPane
-            className="col-8"
-            semesters={this.state.userData.semesters}
-            onOpenSemesterChanger={this.openSemesterChanger()}
-            onOpenCourseAdder={this.openCourseAdder}
-          />
-          <RequirementsPane
-            className="col-4"
-            courses={this.getCurrentCourses()}
-            goals={this.state.userData.goals}
-            manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
-            onOpenGoalSelector={this.openGoalSelector}
-            onOpenRequirementDisplay={this.openRequirementDisplay}
-          />
-        </div>
+        <Container>
+          <Row className="main" noGutters>
+            <Col xs={8}>
+              <SemesterPane
+                semesters={this.state.userData.semesters}
+                onOpenSemesterChanger={this.openSemesterChanger}
+                onOpenCourseAdder={this.openCourseAdder}
+                onRemoveCourse={this.removeCourse}
+              />
+            </Col>
+            <Col xs={4}>
+              <RequirementsPane
+                courses={this.getCurrentCourses()}
+                goals={this.state.userData.goals}
+                manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
+                onOpenGoalSelector={this.openGoalSelector}
+                onOpenRequirementDisplay={this.openRequirementDisplay}
+              />
+            </Col>
+          </Row>
+        </Container>
       );
     } else {
       /* Loading. */
