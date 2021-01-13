@@ -2,6 +2,7 @@ import { RequirementSetPrototype } from 'common/prototypes/requirement-set.proto
 import { RequirementSet } from '../models/requirement-set.model';
 import Courses from './courses';
 import Tags from './tags';
+import { get } from './utils';
 
 namespace Requirements {
   const REQUIREMENT_API_ENDPOINT = '/api/requirements';
@@ -10,7 +11,7 @@ namespace Requirements {
 
   async function fetchRequirementData(): Promise<Map<string, RequirementSet>> {
     const [res, coursesMap, tagsMap] = await Promise.all([
-      fetch(REQUIREMENT_API_ENDPOINT),
+      get(REQUIREMENT_API_ENDPOINT),
       Courses.getCoursesMap(),
       Tags.getTagsMap(),
     ]);

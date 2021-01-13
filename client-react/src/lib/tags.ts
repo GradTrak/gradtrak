@@ -1,12 +1,13 @@
 import { TagPrototype } from 'common/prototypes/tag.prototype';
 import { Tag } from '../models/tag.model';
+import { get } from './utils';
 
 namespace Tags {
   const API_TAG_ENDPOINT = '/api/tags';
   let tagsMap: Map<string, Tag> = null;
 
   async function fetchTagData(): Promise<Map<string, Tag>> {
-    const res = await fetch(API_TAG_ENDPOINT);
+    const res = await get(API_TAG_ENDPOINT);
     const data = (await res.json()) as TagPrototype[];
     const tagArr = data.map((tagProto) => Tag.fromProto(tagProto));
     return new Map<string, Tag>(tagArr.map((tag) => [tag.id, tag]));

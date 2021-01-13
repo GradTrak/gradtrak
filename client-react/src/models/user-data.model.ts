@@ -9,16 +9,6 @@ export class UserData {
   goals: RequirementSet[];
   manuallyFulfilledReqs: Map<string, Set<string>>;
 
-  constructor(
-    semesters: Map<string, Semester[]>,
-    goals: RequirementSet[],
-    manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>(),
-  ) {
-    this.semesters = semesters;
-    this.goals = goals;
-    this.manuallyFulfilledReqs = manuallyFulfilledReqs;
-  }
-
   static fromProto(
     proto: UserDataPrototype,
     coursesMap: Map<string, Course>,
@@ -38,7 +28,11 @@ export class UserData {
     Object.entries(proto.manuallyFulfilledReqs).forEach((entry) => {
       manuallyFulfilledReqs.set(entry[0], new Set<string>(entry[1]));
     });
-    return new UserData(semesters, goals, manuallyFulfilledReqs);
+    return {
+      semesters,
+      goals,
+      manuallyFulfilledReqs,
+    };
   }
 
   static toProto(userData: UserData): UserDataPrototype {
@@ -69,3 +63,5 @@ export class UserData {
     };
   }
 }
+
+export default UserData;

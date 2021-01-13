@@ -2,6 +2,7 @@ import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Course } from '../models/course.model';
 import { Tag } from '../models/tag.model';
 import Tags from './tags';
+import { get } from './utils';
 
 namespace Courses {
   const COURSE_API_ENDPOINT = '/api/courses';
@@ -13,7 +14,7 @@ namespace Courses {
    * an instance of the Course class.
    */
   async function fetchCourseData(): Promise<Map<string, Course>> {
-    const [res, tagsMap] = await Promise.all([fetch(COURSE_API_ENDPOINT), Tags.getTagsMap()]);
+    const [res, tagsMap] = await Promise.all([get(COURSE_API_ENDPOINT), Tags.getTagsMap()]);
     const data = await res.json();
     const courseArr = data.map((courseProto) => Course.fromProto(courseProto, tagsMap));
     return new Map<string, Course>(courseArr.map((course) => [course.id, course]));
