@@ -1,4 +1,5 @@
 import React from 'react';
+import { Modal } from 'react-bootstrap';
 import { Course } from './models/course.model';
 import { Requirement } from './models/requirement.model';
 import { RequirementSet } from './models/requirement-set.model';
@@ -69,7 +70,7 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
-  onLoginDismiss = (): void => {
+  handleLoginDismiss = (): void => {
     this.closeModal();
     if (this.state.userData.semesters.size === 0) {
       this.openInitializer();
@@ -108,12 +109,22 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
+  handleSelectGoals = (goals: RequirementSet[]) => {
+    this.setGoals(goals);
+    this.closeModal();
+  };
+
   openSemesterChanger = (): void => {
     this.setState({
       modal: {
         type: 'semester-changer',
       },
     });
+  };
+
+  handleChangeSemester = (semesters: Map<string, Semester[]>) => {
+    this.setSemesters(semesters);
+    this.closeModal();
   };
 
   openCourseAdder = (semester: Semester): void => {
@@ -123,6 +134,13 @@ class App extends React.Component<AppProps, AppState> {
         semester,
       },
     });
+  };
+
+  handleAddCourse = (course: Course): void => {
+    if (this.state.modal?.type !== 'course-adder') {
+      throw new Error('Course adder tried to add course while closed');
+    }
+    this.addCourse(course, this.state.modal.semester);
   };
 
   openRequirementDisplay = (requirement: StandaloneRequirement): void => {
@@ -192,7 +210,6 @@ class App extends React.Component<AppProps, AppState> {
     const res = await User.whoami();
     if (res.loggedIn) {
       this.setState({
-        ...this.state,
         loggedIn: true,
         user: {
           username: res.username,
@@ -201,7 +218,6 @@ class App extends React.Component<AppProps, AppState> {
       });
     } else {
       this.setState({
-        ...this.state,
         loggedIn: false,
         user: null,
       });
@@ -222,31 +238,9 @@ class App extends React.Component<AppProps, AppState> {
     const userData = await User.fetchUserData();
     if (userData.semesters.size > 0) {
       this.setState({
-        ...this.state,
         userData,
       });
     }
-  };
-
-  /**
-   * Updates the list of semesters to a new mapping of given semesters.
-   *
-   * @param {Map<string, Semester[]>} newSemesters The new semesters.
-   */
-  updateSemesters = (newSemesters: Map<string, Semester[]>): void => {
-    // not sure why, before the rework the list of semesters was copied, so
-    // I've copied the map here as well.
-    const newMap = new Map<string, Semester[]>();
-    newSemesters.forEach((value, key) => {
-      newMap.set(key, [...value]);
-    });
-    this.setState({
-      ...this.state,
-      userData: {
-        ...this.state.userData,
-        semesters: newMap,
-      },
-    });
   };
 
   /**
@@ -254,12 +248,31 @@ class App extends React.Component<AppProps, AppState> {
    *
    * @param {RequirementSet[]} newGoals The new goals.
    */
-  updateGoals = (newGoals: RequirementSet[]): void => {
+  setGoals = (newGoals: RequirementSet[]): void => {
     this.setState({
-      ...this.state,
       userData: {
         ...this.state.userData,
         goals: [...newGoals],
+      },
+    });
+  };
+
+  /**
+   * Updates the list of semesters to a new mapping of given semesters.
+   *
+   * @param {Map<string, Semester[]>} newSemesters The new semesters.
+   */
+  setSemesters = (newSemesters: Map<string, Semester[]>): void => {
+    // not sure why, before the rework the list of semesters was copied, so
+    // I've copied the map here as well.
+    const newMap = new Map<string, Semester[]>();
+    newSemesters.forEach((value, key) => {
+      newMap.set(key, [...value]);
+    });
+    this.setState({
+      userData: {
+        ...this.state.userData,
+        semesters: newMap,
       },
     });
   };
@@ -482,6 +495,61 @@ class App extends React.Component<AppProps, AppState> {
           <div className="name">{this.renderName()}</div>
         </div>
         <div className="body">{this.renderBody()}</div>
+        <Modal show={this.state.modal?.type === 'login'}>
+          <Modal.Body>
+            <Login onLogin={this.closeModal} onRegister={this.closeModal} onDismiss={this.handleLoginDismiss} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'initializer'}>
+          <Modal.Body>
+            <Initializer onInitializeData={this.setUserData} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'initializer'}>
+          <Modal.Body>
+            <Initializer onInitializeData={this.setUserData} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'report-form'}>
+          <Modal.Body>
+            <ReportForm />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'account-editor'}>
+          <Modal.Body>
+            <AccountEditor onClose={this.closeModal} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'goal-selector'}>
+          <Modal.Body>
+            <GoalSelector initialGoals={this.state.userData.goals} onSelectGoals={this.handleSelectGoals} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'semester-changer'}>
+          <Modal.Body>
+            <SemesterChanger
+              initialSemester={this.state.userData.semesters}
+              onChangeSemester={this.handleChangeSemester}
+            />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'course-adder'}>
+          <Modal.Header>
+            <Modal.Title>
+              Add a class to {this.state.modal?.type === 'course-adder' && this.state.modal.semester.name}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <CourseSearcher onSelectCourse={this.handleAddCourse} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'requirement-display'}>
+          <Modal.Body>
+            <RequirementDisplay
+              requirement={this.state.modal?.type === 'requirement-display' && this.state.modal.requirement}
+            />
+          </Modal.Body>
+        </Modal>
       </>
     );
   }
