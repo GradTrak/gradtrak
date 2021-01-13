@@ -61,7 +61,6 @@ const main = async () => {
       Promise.all(courses.map(course => {
         const key = `${course.dept} ${course.no.toUpperCase()}`
         const btimeData = mapping[key]
-        course.berkeleytimeId = undefined;
         course.berkeleytimeData = btimeData;
         return course.save().catch(console.error);
       })).then(() => {
