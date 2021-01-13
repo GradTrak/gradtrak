@@ -48,9 +48,12 @@ const main = async () => {
       grade: courseBoxObj && courseBoxObj.letter_average,
       semestersOffered: semestersOfferedArr? semestersOfferedArr.map(sem => `${sem.semester} ${sem.year}`): undefined,
     };
-    console.log(key, courseBoxObj && courseBoxObj.letter_average)
+    console.log(`${key}, ${mapping[key].grade}, ${mapping[key].semestersOffered}`)
   }
-  await(Promise.all(btimeInfo.courses.map(btimeCourse => fetchCourseInfo(btimeCourse))))
+  const stepSize: number = 10;
+  for (let i = 0; i < btimeInfo.courses.length; i += stepSize) {
+    await(Promise.all(btimeInfo.courses.slice(i, i+stepSize).map(btimeCourse => fetchCourseInfo(btimeCourse))))
+  }
   let connection;
   connect()
     .then((c) => {
