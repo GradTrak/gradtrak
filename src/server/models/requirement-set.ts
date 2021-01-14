@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { RequirementSetPrototype } from 'common/prototypes/requirement-set.prototype';
+import { RequirementSetPrototype } from '../../common/prototypes/requirement-set.prototype';
 
 const constraintSchema = new mongoose.Schema(
   {

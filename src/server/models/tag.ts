@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { TagPrototype } from 'common/prototypes/tag.prototype';
+import { TagPrototype } from '../../common/prototypes/tag.prototype';
 
 const tagSchema = new mongoose.Schema(
   {

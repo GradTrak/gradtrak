@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { CoursePrototype } from 'common/prototypes/course.prototype';
+import { CoursePrototype } from '../../common/prototypes/course.prototype';
 
 const courseSchema = new mongoose.Schema(
   {

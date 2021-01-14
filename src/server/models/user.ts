@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { UserDataPrototype } from 'common/prototypes/user-data.prototype';
+import { UserDataPrototype } from '../../common/prototypes/user-data.prototype';
 
 const semesterSchema = new mongoose.Schema(
   {
