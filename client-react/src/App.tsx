@@ -7,8 +7,9 @@ import { RequirementSet } from './models/requirement-set.model';
 import { Semester } from './models/semester.model';
 import { StandaloneRequirement } from './models/requirements/standalone-requirement.model';
 import { UserData } from './models/user-data.model';
-import User, { AuthType } from './lib/user';
+import User, { Account } from './lib/user';
 
+import AccountEditor from './components/AccountEditor';
 import RequirementPane from './components/RequirementPane';
 import SemesterPane from './components/SemesterPane';
 
@@ -32,10 +33,7 @@ type ModalState =
 
 type AppState = {
   loggedIn: boolean;
-  user: {
-    username: string;
-    auth: AuthType;
-  };
+  user: Account;
   userData: UserData;
   isLoading: boolean;
   modal: ModalState;
@@ -167,10 +165,7 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: {
-          username: res.username,
-          auth: res.auth,
-        },
+        user: res.user,
       });
     }
     return res.success;
@@ -186,10 +181,7 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: {
-          username: res.username,
-          auth: res.auth,
-        },
+        user: res.user,
       });
     }
     return res.success;
@@ -216,10 +208,7 @@ class App extends React.Component<AppProps, AppState> {
     if (res.loggedIn) {
       this.setState({
         loggedIn: true,
-        user: {
-          username: res.username,
-          auth: res.auth,
-        },
+        user: res.user,
       });
     } else {
       this.setState({
@@ -227,16 +216,7 @@ class App extends React.Component<AppProps, AppState> {
         user: null,
       });
     }
-    return res.loggedIn ? res.username : null;
-  };
-
-  changePassword = async (oldPassword: string, newPassword: string): Promise<boolean> => {
-    if (!this.state.loggedIn || this.state.user.auth !== 'local') {
-      throw new Error('Tried to change password in invalid state');
-    }
-
-    const res = await User.changePassword(oldPassword, newPassword);
-    return Boolean(res.error);
+    return res.loggedIn ? res.user.username : null;
   };
 
   fetchUserData = async (): Promise<void> => {

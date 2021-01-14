@@ -67,9 +67,11 @@ export async function register(req: express.Request, res: express.Response): Pro
   } as UserType);
   await util.promisify(req.login).bind(req)(newUser);
   res.json({
-    username,
     success: true,
-    auth: 'local',
+    user: {
+      username,
+      auth: 'local',
+    },
   });
 
   smtp.sendMail({
@@ -92,16 +94,20 @@ export function logout(req: express.Request, res: express.Response): void {
 export function loginSuccessLocal(req: express.Request, res: express.Response): void {
   res.json({
     success: true,
-    username: req.user.username,
-    auth: 'local',
+    user: {
+      username: req.user.username,
+      auth: 'local',
+    },
   });
 }
 
 export function loginSuccessGoogle(req: express.Request, res: express.Response): void {
   res.json({
     success: true,
-    username: req.user.username,
-    auth: 'google',
+    user: {
+      username: req.user.username,
+      auth: 'google',
+    },
   });
 }
 
@@ -116,8 +122,10 @@ export function whoami(req: express.Request, res: express.Response): void {
   if (req.user) {
     res.json({
       loggedIn: true,
-      username: req.user.username,
-      auth: req.user.googleId ? 'google' : 'local',
+      user: {
+        username: req.user.username,
+        auth: req.user.googleId ? 'google' : 'local',
+      },
     });
   } else {
     res.json({

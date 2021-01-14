@@ -4,7 +4,12 @@ import Courses from './courses';
 import Requirements from './requirements';
 import { get, post, put } from './utils';
 
-export type AuthType = 'local' | 'google';
+type AuthType = 'local' | 'google';
+
+export type Account = {
+  username: string;
+  auth: AuthType;
+};
 
 namespace User {
   const REGISTER_ENDPOINT = '/api/account/register';
@@ -17,9 +22,8 @@ namespace User {
   // TODO Specify this type and other API types as a union.
   type RegisterResponse = {
     success: boolean;
-    username?: string;
-    auth?: AuthType;
     error?: string;
+    user?: Account;
   };
 
   /**
@@ -39,9 +43,8 @@ namespace User {
 
   type LoginResponse = {
     success: boolean;
-    username?: string;
-    auth?: AuthType;
     error?: string;
+    user?: Account;
   };
 
   /**
@@ -66,8 +69,7 @@ namespace User {
 
   type WhoamiResponse = {
     loggedIn: boolean;
-    username?: string;
-    auth?: AuthType;
+    user?: Account;
   };
 
   /**
