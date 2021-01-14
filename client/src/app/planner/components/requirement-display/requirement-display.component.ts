@@ -45,9 +45,20 @@ export class RequirementDisplayComponent implements OnInit {
             courses.sort((a: Course, b: Course) => {
               const gradeA = a.berkeleytimeData.grade;
               const gradeB = b.berkeleytimeData.grade;
-              if (gradeA === gradeB) {
-                // Default to the course Dept and No.
+              if (gradeA === gradeB || (!(gradeA || gradeB))) {
+                // Default to the course Dept and No. if equal or both null
                 return a.getName() < b.getName()? 1: -1;
+              }
+              if ((!gradeA) !== (!gradeB)) {
+                // if one is truthy and the other isn't
+                if (!gradeA) {
+                  // If grade A is null but b isn't 
+                  return 1;
+                }
+                if (!gradeB) {
+                  // If grade B is null but A isn't 
+                  return -1;
+                }
               }
               if (gradeA[0] === gradeB[0]) {
                 let score = 0;
