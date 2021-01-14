@@ -24,6 +24,7 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         options: {
+          projectReferences: true,
           transpileOnly: true,
         },
       },
