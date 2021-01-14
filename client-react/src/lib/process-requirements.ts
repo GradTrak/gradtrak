@@ -465,7 +465,7 @@ function deriveFulfillment(
  * @return {Map<Requirement, ProcessedFulfillmentType>} The fulfillment statuses of
  * every requirement.
  */
-export function processRequirements(
+function processRequirements(
   reqSets: RequirementSet[],
   courses: Course[],
   manuallyFulfilled: Map<string, Set<string>>,
@@ -555,3 +555,5 @@ export function processRequirements(
 
   return fulfillment;
 }
+
+export default processRequirements;

@@ -23,9 +23,9 @@ function SemesterPane(props: SemesterPaneProps): React.ReactElement {
 
   return (
     // TODO Restore spacing from Angular.
-    <Container>
+    <Container className="px-4 py-3">
       <Row className="justify-content-center">
-        <Col xs={8}>
+        <Col className="my-4" xs={8}>
           <button className="gt-button gt-button-primary semester-changer" onClick={props.onOpenSemesterChanger}>
             Edit Semesters
           </button>

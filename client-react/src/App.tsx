@@ -9,6 +9,7 @@ import { StandaloneRequirement } from './models/requirements/standalone-requirem
 import { UserData } from './models/user-data.model';
 import User, { AuthType } from './lib/user';
 
+import RequirementPane from './components/RequirementPane';
 import SemesterPane from './components/SemesterPane';
 
 import logo from './logo.svg';
@@ -477,12 +478,14 @@ class App extends React.Component<AppProps, AppState> {
               />
             </Col>
             <Col xs={4}>
-              <RequirementsPane
+              <RequirementPane
                 courses={this.getCurrentCourses()}
                 goals={this.state.userData.goals}
                 manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
                 onOpenGoalSelector={this.openGoalSelector}
                 onOpenRequirementDisplay={this.openRequirementDisplay}
+                onManualFulfill={this.manuallyFulfill}
+                onManualUnfulfill={this.manuallyUnfulfill}
               />
             </Col>
           </Row>

@@ -12,14 +12,14 @@ type SemesterBoxProps = {
 };
 
 function SemesterBox(props: SemesterBoxProps): React.ReactElement {
-  const unitCount = props.semester.courses.reduce((a: number, b: Course): number => a + b.units, 0);
+  const unitCount = props.semester.courses.reduce((a, b) => a + b.units, 0);
 
   const renderCourse = (course: Course) => {
     const semestersWithCourse = props.currentSemesters.filter((semester) => semester.courses.includes(course));
     let duplicateCourseIcon: React.ReactElement = null;
     if (semestersWithCourse.length > 1) {
       const duplicatePopover = (
-        <Popover id="semester-popover">
+        <Popover id="semester-duplicate-popover">
           This course is duplicated in:
           <ul>
             {semestersWithCourse.map((semester) => (
