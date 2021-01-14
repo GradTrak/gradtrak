@@ -15,7 +15,6 @@ import { RequirementsPaneComponent } from './components/requirements-pane/requir
 import { RequirementComponent } from './components/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 import { CourseSearcherComponent, CachedSrcDirective } from './components/course-searcher/course-searcher.component';
-import { BerkeleytimeInfoComponent} from './components/berkeleytime-info/berkeleytime-info.component';
 import { GoalSelectorComponent } from './components/goal-selector/goal-selector.component';
 import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
 import { RequirementDisplayComponent } from './components/requirement-display/requirement-display.component';
@@ -30,7 +29,6 @@ import { InitializerComponent } from './components/initializer/initializer.compo
     SemesterPaneComponent,
     SemesterComponent,
     CourseSearcherComponent,
-    BerkeleytimeInfoComponent,
     GoalSelectorComponent,
     RequirementComponent,
     RequirementSetComponent,

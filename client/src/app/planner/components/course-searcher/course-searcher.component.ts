@@ -5,7 +5,6 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { DomSanitizer } from "@angular/platform-browser";
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
-import { BerkeleytimeInfoComponent } from '../berkeleytime-info/berkeleytime-info.component';
 
 @Directive({
   selector: 'iframe'
