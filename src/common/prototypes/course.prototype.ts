@@ -11,4 +11,4 @@ export type CoursePrototype = {
   };
   tagIds: string[];
   equivIds: string[];
-}
+};

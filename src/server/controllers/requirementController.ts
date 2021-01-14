@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { RequirementSetPrototype } from 'common/prototypes/requirement-set.prototype';
+import { RequirementSetPrototype } from '../../common/prototypes/requirement-set.prototype';
 import RequirementSet from '../models/requirement-set';
 
 /**

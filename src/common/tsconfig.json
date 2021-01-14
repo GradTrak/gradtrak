@@ -3,9 +3,10 @@
     "incremental": true,
     "target": "es5",
     "module": "commonjs",
-    "outDir": "./build/",
-    "rootDir": "./src/",
+    "outDir": "../../build/common",
+    "rootDir": ".",
     "composite": true,
+    "tsBuildInfoFile": "../../build/common.tsbuildinfo",
     "strict": true,
     "esModuleInterop": true
   }

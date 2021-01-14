@@ -4,13 +4,13 @@
 
 import fs from 'fs';
 
-import { cache } from 'server/config/cache';
-import * as db from 'server/config/db';
+import { cache } from '../server/config/cache';
+import * as db from '../server/config/db';
 
-import Course from 'server/models/course';
-import RequirementSet from 'server/models/requirement-set';
-import Tag from 'server/models/tag';
-import User from 'server/models/user';
+import Course from '../server/models/course';
+import RequirementSet from '../server/models/requirement-set';
+import Tag from '../server/models/tag';
+import User from '../server/models/user';
 
 const DUMMY_DIR = 'dummy';
 

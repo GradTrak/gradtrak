@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { TagPrototype } from 'common/prototypes/tag.prototype';
+import { TagPrototype } from '../../common/prototypes/tag.prototype';
 import Tag from '../models/tag';
 
 /**

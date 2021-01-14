@@ -8,4 +8,4 @@ export type UserDataPrototype = {
   manuallyFulfilledReqs: {
     [reqSetId: string]: string[];
   };
-}
+};
