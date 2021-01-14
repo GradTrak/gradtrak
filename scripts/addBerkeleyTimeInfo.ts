@@ -7,11 +7,14 @@ import { connect } from '../server/src/config/db';
 
 const https = require('https');
 
+const agent = new https.Agent({
+  keepAlive: true,
+});
 
-function promiseGet(url: string): any {
+function promiseGet(url: string, attemptsRemaining: number = 3): any {
   return new Promise((resolve, reject) => {
 
-    https.get(url, (res) => {
+    https.get(url, { agent: agent }, (res) => {
         let data = '';
 
         // called when a data chunk is received.
@@ -22,7 +25,11 @@ function promiseGet(url: string): any {
         // called when the complete response is received.
         res.on('end', () => {
           const ret = JSON.parse(data);
-          resolve(ret);
+          if (Object.keys(ret).length === 0 && attemptsRemaining > 0) {
+            promiseGet(url, attemptsRemaining - 1).then(resolve).catch(reject);
+          } else {
+            resolve(ret);
+          }
         });
 
     }).on("error", (err) => {
@@ -42,17 +49,25 @@ const main = async () => {
   const fetchCourseInfo = async (btimeCourseObj: {id: string, abbreviation: string, course_number: string}) => {
     const key: string = `${btimeCourseObj.abbreviation} ${btimeCourseObj.course_number.toUpperCase()}`
     const courseBoxObj = (await promiseGet(`https://berkeleytime.com/api/catalog/catalog_json/course_box/?course_id=${btimeCourseObj.id}`)).course
-    const semestersOfferedArr: {semester: string, year: string}[] = await promiseGet(`https://berkeleytime.com/api/enrollment/sections/${btimeCourseObj.id}/`)
+    const semestersOfferedArr: {semester: string, year: string}[] = await promiseGet(`https://berkeleytime.com/api/enrollment/sections/${btimeCourseObj.id}/`).catch(()=>[])
+    //console.log(semestersOfferedArr)
     mapping[key] = {
       berkeleytimeId: btimeCourseObj.id,
       grade: courseBoxObj && courseBoxObj.letter_average,
-      semestersOffered: semestersOfferedArr? semestersOfferedArr.map(sem => `${sem.semester} ${sem.year}`): undefined,
+      semestersOffered: Array.isArray(semestersOfferedArr)? semestersOfferedArr.map(sem => `${sem.semester} ${sem.year}`): undefined,
     };
+    if (mapping[key].grade === undefined) {
+      console.log(courseBoxObj)
+    }
     console.log(`${key}, ${mapping[key].grade}, ${mapping[key].semestersOffered}`)
   }
-  const stepSize: number = 10;
+  const stepSize: number = 25;
+  // for (let i = 900; i < 1000; i += stepSize) {
   for (let i = 0; i < btimeInfo.courses.length; i += stepSize) {
-    await(Promise.all(btimeInfo.courses.slice(i, i+stepSize).map(btimeCourse => fetchCourseInfo(btimeCourse))))
+    await(Promise.all(btimeInfo.courses.slice(i, i+stepSize).map(btimeCourse => fetchCourseInfo(btimeCourse).catch((e)=> {
+      console.log(e);
+    }))))
+    console.log('______________________________________________')
   }
   let connection;
   connect()
