@@ -5,4 +5,4 @@ export type RequirementCategoryPrototype = {
   name: string;
   requirements: RequirementPrototype[];
   constraints?: ConstraintPrototype[];
-}
+};

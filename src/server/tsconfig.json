@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "../../build/server",
+    "rootDir": ".",
+    "composite": true,
+    "tsBuildInfoFile": "../../build/server.tsbuildinfo",
+    "strict": false,
+    "esModuleInterop": true
+  },
+  "references": [
+    {
+      "path": "../common"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { CoursePrototype } from 'common/prototypes/course.prototype';
+import { CoursePrototype } from '../../common/prototypes/course.prototype';
 import Course from '../models/course';
 
 /**

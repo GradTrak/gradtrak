@@ -9,4 +9,4 @@ export type RequirementSetPrototype = {
   requirementCategories: RequirementCategoryPrototype[];
   universalConstraints?: ConstraintPrototype[];
   selfConstraints?: ConstraintPrototype[];
-}
+};
