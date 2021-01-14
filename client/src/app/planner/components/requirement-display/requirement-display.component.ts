@@ -33,12 +33,12 @@ export class RequirementDisplayComponent implements OnInit {
         switch (this.sortField) {
           case 'no':
             courses.sort((a: Course, b: Course) => {
-              return a.getName() < b.getName() ? 1 : -1;
+              return a.getName() < b.getName() ? -1 : 1;
             });
             break;
           case 'title':
             courses.sort((a: Course, b: Course) => {
-              return a.title < b.title ? 1 : -1;
+              return a.title < b.title ? -1 : 1;
             });
             break;
           case 'grade':
