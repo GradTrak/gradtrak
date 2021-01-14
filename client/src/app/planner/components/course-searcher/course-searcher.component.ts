@@ -1,32 +1,10 @@
-import { Component, EventEmitter, OnInit, Output, Directive, Input, ElementRef, Renderer2 } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
-import { DomSanitizer } from "@angular/platform-browser";
+import { DomSanitizer } from '@angular/platform-browser';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
-
-@Directive({
-  selector: 'iframe'
-})
-export class CachedSrcDirective {
-
-    @Input() 
-    public get cachedSrc(): string {
-        return this.elRef.nativeElement.src;
-    }
-
-    public set cachedSrc(src: string) {
-        if (this.elRef.nativeElement.src !== src) {
-            this.renderer.setAttribute(this.elRef.nativeElement, 'src', src);
-        }
-    }
-
-    constructor(
-        private elRef: ElementRef,
-        private renderer: Renderer2,
-        ) { }
-}
 
 @Component({
   selector: 'app-course-searcher',
@@ -38,6 +16,7 @@ export class CourseSearcherComponent implements OnInit {
   readonly BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED = 1;
   readonly BERKELEYTIME_AVAILABLE = 2;
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
+  @Output() openBerkeleytime: EventEmitter<Course> = new EventEmitter<Course>();
   searchedCourse: Course;
   allCourses: Course[];
 
@@ -192,6 +171,13 @@ export class CourseSearcherComponent implements OnInit {
     }
   }
 
+  /**
+   * Emit event to open berkeleytime modal
+   */
+  showBerkeleytimeDistribution(): void {
+    this.openBerkeleytime.emit(this.searchedCourse);
+  }
+
   berkeleytimeStatus(): number {
     if (!(this.searchedCourse instanceof Course)) {
       return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
@@ -199,30 +185,29 @@ export class CourseSearcherComponent implements OnInit {
     if (!this.searchedCourse.berkeleytimeData.berkeleytimeId) {
       return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
     }
-    if (false) {
+    let badBerkeleytime: boolean = !this.searchedCourse.berkeleytimeData.grade;
+    badBerkeleytime =
+      badBerkeleytime &&
+      !(
+        Array.isArray(this.searchedCourse.berkeleytimeData.semestersOffered) &&
+        this.searchedCourse.berkeleytimeData.semestersOffered.length
+      );
+    if (badBerkeleytime) {
       // If berkeleytime returns poop...
       return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
     }
     return this.BERKELEYTIME_AVAILABLE;
   }
 
-  /*
-   * Generates the grade url for the selected course, assuming there 
-   * is a valid one. Does not check for whether the course actually exists 
-   * in berkeleytime or whether the course is valid in terms of 
-   * amount of grading information we have.
+  /**
+   * What to display for the semester
    */
-  getBerkeleytimeGradeUrl(): string {
-    // TODO fix the tslint stuff with the "any"
-    const defaultUrl = 'https://berkeleytime.com/grades';
-    if (!this.searchedCourse) {
-      return defaultUrl;
+  getSemesterText(): string[] {
+    if (!Array.isArray(this.searchedCourse.berkeleytimeData.semestersOffered)) {
+      return ['unavailable'];
     }
-    if (!this.searchedCourse.berkeleytimeData.berkeleytimeId) {
-      // TODO handle these cases
-      return defaultUrl;
-    }
-    const url = `https://berkeleytime.com/grades/0-${this.searchedCourse.berkeleytimeData.berkeleytimeId}-all-all`;
-    return url;
+    return this.searchedCourse.berkeleytimeData.semestersOffered.length
+      ? this.searchedCourse.berkeleytimeData.semestersOffered
+      : ['unavailable'];
   }
 }

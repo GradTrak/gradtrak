@@ -160,7 +160,7 @@ export class PlannerComponent implements OnInit {
 
   openBerkeleytime(course: Course): void {
     this.berkeleytimeCourse = course;
-    this.modalInstance = this.modalService.open(this.berkeleytimeTemplate, { size: 'lg' });
+    this.modalInstance = this.modalService.open(this.berkeleytimeTemplate, { size: 'xl' });
   }
 
   logout(): void {

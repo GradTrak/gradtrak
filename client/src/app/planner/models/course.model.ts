@@ -20,9 +20,16 @@ export class Course {
   equivIds: string[];
   equiv: Course[];
 
-  constructor(id: string, dept: string, no: string, title: string, units: number, 
-                berkeleytimeData: {berkeleytimeId?: string; grade?: string; semestersOffered?: string[]},
-                tags?: Tag[], equivIds?: string[]) {
+  constructor(
+    id: string,
+    dept: string,
+    no: string,
+    title: string,
+    units: number,
+    berkeleytimeData: { berkeleytimeId?: string; grade?: string; semestersOffered?: string[] },
+    tags?: Tag[],
+    equivIds?: string[],
+  ) {
     this.id = id;
     this.dept = dept;
     this.no = no;
@@ -31,7 +38,7 @@ export class Course {
     this.berkeleytimeData = {
       berkeleytimeId: berkeleytimeData.berkeleytimeId,
       grade: berkeleytimeData.grade,
-      semestersOffered: berkeleytimeData.semestersOffered
+      semestersOffered: berkeleytimeData.semestersOffered,
     };
     this.tags = tags;
     this.equivIds = equivIds;

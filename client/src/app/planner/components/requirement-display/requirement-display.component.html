@@ -2,24 +2,34 @@
 <div class="course-list">
   <table>
     <tr>
-      <th (click)="changeSort('no')"> Course No. 
-        <p *ngIf="sortField==='no' && !sortDescending"> &#8593; </p>
-        <p *ngIf="sortField==='no' && sortDescending"> &#8595; </p>
+      <th (click)="changeSort('no')">
+        Course No.
+        <p *ngIf="sortField === 'no' && !sortDescending">&#8593;</p>
+        <p *ngIf="sortField === 'no' && sortDescending">&#8595;</p>
       </th>
-      <th (click)="changeSort('title')"> Course Title
-        <p *ngIf="sortField==='title' && !sortDescending"> &#8593; </p>
-        <p *ngIf="sortField==='title' && sortDescending"> &#8595; </p>
+      <th (click)="changeSort('title')">
+        Course Title
+        <p *ngIf="sortField === 'title' && !sortDescending">&#8593;</p>
+        <p *ngIf="sortField === 'title' && sortDescending">&#8595;</p>
       </th>
-      <th (click)="changeSort('grade')"> Average Grade 
-        <p *ngIf="sortField==='grade' && !sortDescending"> &#8593; </p>
-        <p *ngIf="sortField==='grade' && sortDescending"> &#8595; </p>
+      <th (click)="changeSort('grade')">
+        Average Grade
+        <p *ngIf="sortField === 'grade' && !sortDescending">&#8593;</p>
+        <p *ngIf="sortField === 'grade' && sortDescending">&#8595;</p>
       </th>
-    <tr>
-    <tr class="course-table-row" *ngFor="let course of getFulfillingCourses() | async" (click)="viewCourseBerkeleytime(course)">
-      <td> {{ course.dept }} {{ course.no }} </td>
-      <td> {{ course.title }}</td>
-      <td> {{ course.berkeleytimeData.grade }} </td>
+    </tr>
+
+    <tr></tr>
+    <tr
+      class="course-table-row"
+      *ngFor="let course of getFulfillingCourses() | async"
+      (click)="viewCourseBerkeleytime(course)"
+    >
+      <td>{{ course.dept }} {{ course.no }}</td>
+      <td>{{ course.title }}</td>
+      <td>{{ course.berkeleytimeData.grade }}</td>
     </tr>
   </table>
+
   <br />
 </div>
