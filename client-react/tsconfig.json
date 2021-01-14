@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "incremental": true,
     "target": "es6",
     "module": "commonjs",
     "lib": [
@@ -9,6 +10,7 @@
     ],
     "jsx": "react",
     "sourceMap": true,
+    "outDir": "./build/",
     "rootDir": "./src/",
     "strict": false,
     "esModuleInterop": true,

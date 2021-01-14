@@ -1,1 +1,6 @@
+# Webpack build output.
 dist/
+
+# TypeScript build output.
+build/
+tsconfig.tsbuildinfo
