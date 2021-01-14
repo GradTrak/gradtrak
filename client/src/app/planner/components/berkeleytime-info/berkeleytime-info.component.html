@@ -1,0 +1,15 @@
+<div [ngSwitch]="berkeleytimeStatus()">
+  <div *ngSwitchCase="BERKELEYTIME_AVAILABLE">
+    <p>
+    Average grade: {{ searchedCourse.berkeleytimeData.grade || 'unavailable' }}
+    </p>
+    <p>
+      Semesters previously offered: {{ searchedCourse.berkeleytimeData.semestersOffered || 'unavailable'}}
+    </p>
+  </div>
+  <div *ngSwitchCase="BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED">
+  </div>
+  <div *ngSwitchCase="BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED">
+    <p> This course does not have berkeleytime information available </p>
+  </div>
+</div>
