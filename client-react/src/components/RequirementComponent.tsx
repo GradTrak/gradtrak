@@ -9,7 +9,6 @@ import { MultiRequirement } from '../models/requirements/multi-requirement.model
 import { PolyRequirement } from '../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
-
 type RequirementComponentProps = {
   requirement: Requirement;
   courses: Course[];
@@ -22,9 +21,11 @@ type RequirementComponentProps = {
 };
 
 function RequirementComponent(props: RequirementComponentProps): React.ReactElement {
+  const fulfillment = props.fulfillmentMap.get(props.requirement);
+
   /* Fulfillment CSS classes. */
-  const fulfillments: string[] = [props.fulfillmentMap.get(props.requirement).status];
-  if (this.isManuallyFulfilled()) {
+  const fulfillments: string[] = [fulfillment.status];
+  if (fulfillment.method === 'manual') {
     fulfillments.push('manual');
   }
 
@@ -49,16 +50,15 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
   const manuallyFulfilled = props.manuallyFulfilled.has(props.requirement.id);
 
   /* Requirement element based on the requirement type. */
-  let reqElem: React.ReactElement = null;
+  // TODO This probably belongs in separate files.
+  let reqElem: React.ReactNode = null;
   if (
     (props.requirement instanceof MultiRequirement || props.requirement instanceof PolyRequirement) &&
     !props.requirement.hidden
   ) {
     /* Multi-requirement display, showing nested requirements underneath.
      * Hidden requirements do not show this. */
-    const numFulfilled = props.requirement.requirements.filter(
-      (childReq) => props.fulfillmentMap.get(childReq).status === 'fulfilled',
-    ).length;
+    const numFulfilled = props.requirement.requirements.filter((childReq) => fulfillment.status === 'fulfilled').length;
     reqElem = (
       <>
         {props.requirement.numRequired === 1
@@ -80,14 +80,38 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
         ))}
       </>
     );
+  } else if (props.requirement instanceof UnitRequirement) {
+    const fulfillingCourses = fulfillment.method === 'courses' ? Array.from(fulfillment.coursesUsed) : [];
+    const fulfilledUnits = fulfillingCourses.map((course) => course.units).reduce((a, b) => a + b, 0);
+    reqElem = (
+      <>
+        {fulfilledUnits}/{props.requirement.units} units of {props.requirement.name}
+        <div className="nested">
+          {fulfillingCourses.map((course) => (
+            <div className="course">{course.getName()}</div>
+          ))}
+        </div>
+      </>
+    );
+  } else if (props.requirement instanceof CountRequirement) {
+    const fulfillingCourses = fulfillment.method === 'courses' ? Array.from(fulfillment.coursesUsed) : [];
+    reqElem = (
+      <>
+        {props.requirement.name}
+        <div className="nested">
+          {fulfillingCourses.map((course) => (
+            <div className="fulfilled">{course.getName()}</div>
+          ))}
+          {new Array(Math.max(props.requirement.numRequired, fulfillingCourses.length, 0)).fill(
+            <div>{props.requirement.name}</div>,
+          )}
+        </div>
+      </>
+    );
+  } else {
+    /* Standard requirement. */
+    reqElem = '';
   }
-  if (this.isUnit()) {
-    return this.unitReq;
-  }
-  if (this.isCount()) {
-    return this.countReq;
-  }
-  return this.standardReq;
 
   return (
     <OverlayTrigger trigger="hover" overlay={annotation}>
