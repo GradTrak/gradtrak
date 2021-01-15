@@ -22,14 +22,14 @@ namespace Courses {
 
   export async function getCourses(): Promise<Course[]> {
     if (!coursesMap) {
-      coursesMap = await this.fetchCourseData();
+      coursesMap = await fetchCourseData();
     }
     return Array.from(coursesMap.values());
   }
 
   export async function getCoursesMap(): Promise<Map<string, Course>> {
     if (!coursesMap) {
-      coursesMap = await this.fetchCourseData();
+      coursesMap = await fetchCourseData();
     }
     return coursesMap;
   }
