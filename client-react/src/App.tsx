@@ -7,6 +7,9 @@ import { RequirementSet } from './models/requirement-set.model';
 import { Semester } from './models/semester.model';
 import { StandaloneRequirement } from './models/requirements/standalone-requirement.model';
 import { UserData } from './models/user-data.model';
+import Courses from './lib/courses';
+import Requirements from './lib/requirements';
+import Tags from './lib/tags';
 import User, { Account } from './lib/user';
 
 import AccountEditor from './components/AccountEditor';
@@ -64,7 +67,58 @@ class App extends React.Component<AppProps, AppState> {
       isLoading: true,
       modal: null,
     };
+
+    this.fetchInitialData();
+    this.prefetchData();
+    this.registerSavePrompt();
   }
+
+  private fetchInitialData = async (): Promise<void> => {
+    const res = await User.whoami();
+
+    if (res.loggedIn) {
+      this.setState({
+        user: res.user,
+      });
+
+      /* Fetch user data. */
+      const userData = await User.fetchUserData();
+
+      this.setState({
+        userData,
+      });
+
+      /* If there are no semesters, open the initializer. */
+      if (userData.semesters.size === 0) {
+        this.openInitializer();
+      }
+    } else {
+      this.openLogin();
+    }
+
+    this.setState({
+      isLoading: false,
+    });
+  };
+
+  private prefetchData = async (): Promise<void> => {
+    Courses.getCourses();
+    Requirements.getRequirements();
+    Tags.getTags();
+  };
+
+  private registerSavePrompt = (): void => {
+    window.addEventListener('beforeunload', (e) => {
+      if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
+        /* This text isn't actually what is displayed. */
+        const confirmation: string = 'Are you sure you want to leave? Guest account changes will be lost.';
+        e.returnValue = confirmation;
+        e.preventDefault();
+        return confirmation;
+      }
+      return undefined;
+    });
+  };
 
   closeModal = (): void => {
     this.setState({
