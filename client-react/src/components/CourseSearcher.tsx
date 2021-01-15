@@ -58,7 +58,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
             />
           </Col>
           <Col xs="auto">
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={this.handleSubmit}>
               Add
             </Button>
           </Col>

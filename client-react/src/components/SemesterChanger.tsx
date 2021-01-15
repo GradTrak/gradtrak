@@ -167,7 +167,12 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
         <Modal>
           <Modal.Body>
             <h4 className="gt-modal-header">Add a semester</h4>
-            <Form onSubmit={this.addSemester}>
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                this.addSemester();
+              }}
+            >
               <Form.Group as={Row}>
                 <Col>
                   <Form.Label>Semester</Form.Label>

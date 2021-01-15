@@ -54,7 +54,7 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
     this.setState({
       user: res.user,
     });
-  }
+  };
 
   showChangePassword = () => {
     this.setState({
@@ -134,7 +134,12 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
             </div>
           </div>
         </div>
-        <Form onSubmit={this.handleSubmit}>
+        <Form
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.handleSubmit();
+          }}
+        >
           <Form.Group>
             <Row>
               <Col xs={6}>

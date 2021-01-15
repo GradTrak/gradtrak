@@ -139,7 +139,13 @@ class Login extends React.Component<LoginProps, LoginState> {
             </div>
           </div>
           <hr className="or" />
-          <Form className="login" onSubmit={this.handleSubmitLogin}>
+          <Form
+            className="login"
+            onSubmit={(e) => {
+              e.preventDefault();
+              this.handleSubmitLogin();
+            }}
+          >
             <Form.Group>
               <Form.Label>Email</Form.Label>
               <Form.Control type="text" name="username" ref={this.usernameRef} />
@@ -150,7 +156,6 @@ class Login extends React.Component<LoginProps, LoginState> {
             </Form.Group>
             <div className="my-4 failure">{this.state.error}</div>
             <Form.Group className="my-4">
-              {' '}
               <Button variant="primary" block type="submit" disabled={this.state.loading}>
                 Login
               </Button>
@@ -182,7 +187,13 @@ class Login extends React.Component<LoginProps, LoginState> {
             </div>
           </div>
           <hr className="or" />
-          <Form className="login" onSubmit={this.handleSubmitLogin}>
+          <Form
+            className="login"
+            onSubmit={(e) => {
+              e.preventDefault();
+              this.handleSubmitLogin;
+            }}
+          >
             <Form.Group>
               <Form.Label>Email</Form.Label>
               <Form.Control type="text" name="username" ref={this.usernameRef} />
