@@ -10,6 +10,9 @@ import { UserData } from './models/user-data.model';
 import User, { Account } from './lib/user';
 
 import AccountEditor from './components/AccountEditor';
+import GoalSelector from './components/GoalSelector';
+import Initializer from './components/Initializer';
+import Login from './components/Login';
 import RequirementPane from './components/RequirementPane';
 import SemesterPane from './components/SemesterPane';
 
@@ -71,6 +74,24 @@ class App extends React.Component<AppProps, AppState> {
         type: 'login',
       },
     });
+  };
+
+  handleLogin = async (username: string, password: string): Promise<string> => {
+    const err = await this.login(username, password);
+    if (!err) {
+      return err;
+    }
+    this.closeModal();
+    return null;
+  };
+
+  handleRegister = async (username: string, password: string, userTesting: boolean): Promise<string> => {
+    const err = await this.register(username, password, userTesting);
+    if (!err) {
+      return err;
+    }
+    this.closeModal();
+    return null;
   };
 
   handleLoginDismiss = (): void => {
@@ -155,7 +176,7 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
-  register = async (username: string, password: string, userTesting: boolean): Promise<boolean> => {
+  register = async (username: string, password: string, userTesting: boolean): Promise<string> => {
     if (this.state.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
@@ -168,10 +189,10 @@ class App extends React.Component<AppProps, AppState> {
         user: res.user,
       });
     }
-    return res.success;
+    return res.error || null;
   };
 
-  login = async (username: string, password: string): Promise<boolean> => {
+  login = async (username: string, password: string): Promise<string> => {
     if (this.state.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
@@ -184,7 +205,7 @@ class App extends React.Component<AppProps, AppState> {
         user: res.user,
       });
     }
-    return res.success;
+    return res.error || null;
   };
 
   /**
@@ -489,27 +510,22 @@ class App extends React.Component<AppProps, AppState> {
         <div className="body">{this.renderBody()}</div>
         <Modal show={this.state.modal?.type === 'login'}>
           <Modal.Body>
-            <Login onLogin={this.closeModal} onRegister={this.closeModal} onDismiss={this.handleLoginDismiss} />
+            <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
           </Modal.Body>
         </Modal>
         <Modal show={this.state.modal?.type === 'initializer'}>
           <Modal.Body>
             <Initializer onInitializeData={this.setUserData} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'initializer'}>
-          <Modal.Body>
-            <Initializer onInitializeData={this.setUserData} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'report-form'}>
-          <Modal.Body>
-            <ReportForm />
           </Modal.Body>
         </Modal>
         <Modal show={this.state.modal?.type === 'account-editor'}>
           <Modal.Body>
             <AccountEditor onClose={this.closeModal} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal?.type === 'report-form'}>
+          <Modal.Body>
+            <ReportForm />
           </Modal.Body>
         </Modal>
         <Modal show={this.state.modal?.type === 'goal-selector'}>
