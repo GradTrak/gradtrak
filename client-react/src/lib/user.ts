@@ -127,9 +127,11 @@ namespace User {
 
   /**
    * Saves the given user data to the server.
+   *
+   * @param {UserData} userData The user data to save.
    */
-  export async function saveUserData(): Promise<void> {
-    await put(SEMESTER_API_ENDPOINT, UserData.toProto(this.currentState.userData));
+  export async function saveUserData(userData: UserData): Promise<void> {
+    await put(SEMESTER_API_ENDPOINT, UserData.toProto(userData));
   }
 }
 

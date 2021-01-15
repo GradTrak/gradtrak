@@ -74,6 +74,20 @@ class App extends React.Component<AppProps, AppState> {
     this.registerSavePrompt();
   }
 
+  componentDidUpdate(prevProps: AppProps, prevState: AppState): void {
+    /* Save user data to server if we are logged in, the current user data is
+     * non-null, the previous user data was not null (which means it was just
+     * loaded), and the data has changed. */
+    if (
+      this.state.loggedIn &&
+      this.state.userData &&
+      prevState.userData !== null &&
+      prevState.userData !== this.state.userData
+    ) {
+      User.saveUserData(this.state.userData);
+    }
+  }
+
   private fetchInitialData = async (): Promise<void> => {
     const res = await User.whoami();
 
@@ -165,9 +179,9 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    this.setState({
-      userData: User.EMPTY_USER_DATA,
-    });
+    if (this.state.userData.semesters.size !== 0) {
+      User.saveUserData(this.state.userData);
+    }
 
     this.openInitializer();
 
