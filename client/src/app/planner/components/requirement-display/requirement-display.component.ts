@@ -33,22 +33,22 @@ export class RequirementDisplayComponent implements OnInit {
           return this.requirementInput.canFulfill(course);
         }),
       ),
-      map((courses: Course[]) => {
-        courses = [...courses]
+      map((coursesInput: Course[]) => {
+        const courses = [...coursesInput];
         let comparator;
         switch (this.sortField) {
           case 'no':
-            comparator = (a: Course, b: Course) => {
+            comparator = (a: Course, b: Course): number => {
               return a.getName() < b.getName() ? -1 : 1;
             };
             break;
           case 'title':
-            comparator = (a: Course, b: Course) => {
+            comparator = (a: Course, b: Course): number => {
               return a.title < b.title ? -1 : 1;
             };
             break;
           case 'grade':
-            comparator = (a: Course, b: Course) => {
+            comparator = (a: Course, b: Course): number => {
               const gradeA = a.berkeleytimeData.grade;
               const gradeB = b.berkeleytimeData.grade;
               if (gradeA === gradeB || !(gradeA || gradeB)) {
@@ -77,8 +77,10 @@ export class RequirementDisplayComponent implements OnInit {
               return gradeA[0] < gradeB[0] ? -1 : 1;
             };
             break;
+          default:
+            break;
         }
-        
+
         courses.sort(comparator);
         if (this.sortDescending) {
           courses.reverse();

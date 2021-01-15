@@ -1,7 +1,6 @@
 import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Tag } from './tag.model';
 
-
 export interface BerkeleytimeData {
   berkeleytimeId: string;
   // grade: 'A+' | 'A' | 'A-' | 'B+' | 'B' | 'B-' | 'C+' | 'C' | 'C-' | 'D+' | 'D' | 'D-' | 'F+' | '';

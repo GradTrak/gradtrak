@@ -5,6 +5,8 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
 
+type availabilityType = 'no-course-selected' | 'unavailable' | 'available';
+
 @Component({
   selector: 'app-course-searcher',
   templateUrl: './course-searcher.component.html',
@@ -16,6 +18,7 @@ export class CourseSearcherComponent implements OnInit {
   readonly BERKELEYTIME_AVAILABLE = 2;
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   @Output() openBerkeleytime: EventEmitter<Course> = new EventEmitter<Course>();
+  berkeleyTimeAvailability: availabilityType;
   searchedCourse: Course;
   allCourses: Course[];
 
@@ -177,12 +180,12 @@ export class CourseSearcherComponent implements OnInit {
     this.openBerkeleytime.emit(this.searchedCourse);
   }
 
-  berkeleytimeStatus(): number {
+  berkeleytimeStatus(): availabilityType {
     if (!(this.searchedCourse instanceof Course)) {
-      return this.BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED;
+      return 'no-course-selected';
     }
     if (!this.searchedCourse.berkeleytimeData.berkeleytimeId) {
-      return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
+      return 'unavailable';
     }
     let badBerkeleytime: boolean = !this.searchedCourse.berkeleytimeData.grade;
     badBerkeleytime =
@@ -193,9 +196,9 @@ export class CourseSearcherComponent implements OnInit {
       );
     if (badBerkeleytime) {
       // If berkeleytime returns poop...
-      return this.BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED;
+      return 'unavailable';
     }
-    return this.BERKELEYTIME_AVAILABLE;
+    return 'available';
   }
 
   /**

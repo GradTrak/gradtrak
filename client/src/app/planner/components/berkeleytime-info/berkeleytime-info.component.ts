@@ -1,10 +1,11 @@
 import { Component, OnInit, Directive, Input, ElementRef, Renderer2 } from '@angular/core';
+import { BerkeleytimeData } from '../../models/course.model';
 
 /**
  * Without the directive, the iframe will
- * refresh everything the src function is called, 
- * even if it's the same function. This results in refreshing 
- * the iframe when focus is lost and whatnot. This cache 
+ * refresh everything the src function is called,
+ * even if it's the same function. This results in refreshing
+ * the iframe when focus is lost and whatnot. This cache
  * addresses it by only changing when the source changes
  * source: https://stackoverflow.com/questions/48306443/stop-angular-reloading-iframes-when-changing-components
  */
@@ -31,11 +32,7 @@ export class CachedSrcDirective {
   templateUrl: './berkeleytime-info.component.html',
 })
 export class BerkeleytimeInfoComponent implements OnInit {
-  @Input() berkeleytimeData: {
-    berkeleytimeId: string;
-    grade: string;
-    semestersOffered: string[];
-  };
+  @Input() berkeleytimeData: BerkeleytimeData;
 
   constructor() {}
 
@@ -48,7 +45,6 @@ export class BerkeleytimeInfoComponent implements OnInit {
    * amount of grading information we have.
    */
   getBerkeleytimeGradeUrl(): string {
-    // TODO fix the tslint stuff with the "any"
     const defaultUrl = 'https://berkeleytime.com/grades';
     if (!this.berkeleytimeData.berkeleytimeId) {
       return defaultUrl;
