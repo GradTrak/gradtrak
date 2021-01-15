@@ -14,6 +14,7 @@ import GoalSelector from './components/GoalSelector';
 import Initializer from './components/Initializer';
 import Login from './components/Login';
 import RequirementPane from './components/RequirementPane';
+import ReportForm from './components/ReportForm';
 import SemesterPane from './components/SemesterPane';
 
 import logo from './logo.svg';
