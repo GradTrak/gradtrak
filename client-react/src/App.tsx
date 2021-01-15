@@ -84,11 +84,7 @@ class App extends React.Component<AppProps, AppState> {
       });
 
       /* Fetch user data. */
-      const userData = await User.fetchUserData();
-
-      this.setState({
-        userData,
-      });
+      const userData = await this.fetchUserData();
 
       /* If there are no semesters, open the initializer. */
       if (userData.semesters.size === 0) {
@@ -138,10 +134,19 @@ class App extends React.Component<AppProps, AppState> {
 
   handleLogin = async (username: string, password: string): Promise<string> => {
     const err = await this.login(username, password);
+
     if (!err) {
       return err;
     }
-    this.closeModal();
+
+    const userData = await this.fetchUserData();
+
+    if (userData.semesters.size === 0) {
+      this.openInitializer();
+    } else {
+      this.closeModal();
+    }
+
     return null;
   };
 
@@ -300,13 +305,14 @@ class App extends React.Component<AppProps, AppState> {
     return res.loggedIn ? res.user.username : null;
   };
 
-  fetchUserData = async (): Promise<void> => {
+  fetchUserData = async (): Promise<UserData> => {
     const userData = await User.fetchUserData();
     if (userData.semesters.size > 0) {
       this.setState({
         userData,
       });
     }
+    return userData;
   };
 
   /**
