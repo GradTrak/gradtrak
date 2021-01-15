@@ -34,7 +34,7 @@ function SemesterPane(props: SemesterPaneProps): React.ReactElement {
       </Row>
       <Row>
         {semesterArr.map((semester) => (
-          <Col className="semester" xs={6}>
+          <Col key={semester.name} className="semester" xs={6}>
             <SemesterBox
               semester={semester}
               currentSemesters={semesterArr}

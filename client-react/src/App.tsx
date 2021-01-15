@@ -45,7 +45,6 @@ type AppState = {
   loggedIn: boolean;
   user: Account;
   userData: UserData;
-  isLoading: boolean;
   modal: ModalState;
 };
 
@@ -59,12 +58,7 @@ class App extends React.Component<AppProps, AppState> {
         username: null,
         auth: null,
       },
-      userData: {
-        semesters: new Map<string, Semester[]>(),
-        goals: [],
-        manuallyFulfilledReqs: new Map<string, Set<string>>(),
-      },
-      isLoading: true,
+      userData: null,
       modal: null,
     };
   }
@@ -77,6 +71,10 @@ class App extends React.Component<AppProps, AppState> {
 
   private fetchInitialData = async (): Promise<void> => {
     const res = await User.whoami();
+
+    this.setState({
+      loggedIn: res.loggedIn,
+    });
 
     if (res.loggedIn) {
       this.setState({
@@ -93,10 +91,6 @@ class App extends React.Component<AppProps, AppState> {
     } else {
       this.openLogin();
     }
-
-    this.setState({
-      isLoading: false,
-    });
   };
 
   private prefetchData = async (): Promise<void> => {
@@ -306,12 +300,13 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   fetchUserData = async (): Promise<UserData> => {
+    this.setState({
+      userData: null,
+    });
     const userData = await User.fetchUserData();
-    if (userData.semesters.size > 0) {
-      this.setState({
-        userData,
-      });
-    }
+    this.setState({
+      userData,
+    });
     return userData;
   };
 
@@ -532,7 +527,7 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   private renderBody(): React.ReactElement {
-    if (!this.state.isLoading) {
+    if (this.state.userData) {
       return (
         <Container>
           <Row className="main" noGutters>
@@ -564,6 +559,67 @@ class App extends React.Component<AppProps, AppState> {
     }
   }
 
+  private renderModals(): React.ReactElement {
+    if (this.state.userData) {
+      return (
+        <>
+          <Modal show={this.state.modal?.type === 'login'} backdrop="static">
+            <Modal.Body>
+              <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'initializer'} onHide={this.closeModal}>
+            <Modal.Body>
+              <Initializer onInitializeData={this.setUserData} />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'account-editor'} onHide={this.closeModal}>
+            <Modal.Body>
+              <AccountEditor onClose={this.closeModal} />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'report-form'} onHide={this.closeModal}>
+            <Modal.Body>
+              <ReportForm />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'goal-selector'} onHide={this.closeModal}>
+            <Modal.Body>
+              <GoalSelector initialGoals={this.state.userData.goals} onSelectGoals={this.handleSelectGoals} />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'semester-changer'} onHide={this.closeModal}>
+            <Modal.Body>
+              <SemesterChanger
+                initialSemesters={this.state.userData.semesters}
+                onChangeSemesters={this.handleChangeSemester}
+              />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'course-adder'} onHide={this.closeModal}>
+            <Modal.Header>
+              <Modal.Title>
+                Add a class to {this.state.modal?.type === 'course-adder' && this.state.modal.semester.name}
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <CourseSearcher onSelectCourse={this.handleAddCourse} />
+            </Modal.Body>
+          </Modal>
+          <Modal show={this.state.modal?.type === 'requirement-display'} onHide={this.closeModal}>
+            <Modal.Body>
+              <RequirementDisplay
+                requirement={this.state.modal?.type === 'requirement-display' && this.state.modal.requirement}
+              />
+            </Modal.Body>
+          </Modal>
+        </>
+      );
+    } else {
+      return null;
+    }
+  }
+
   render(): React.ReactElement {
     return (
       <>
@@ -574,56 +630,7 @@ class App extends React.Component<AppProps, AppState> {
           <div className="name">{this.renderName()}</div>
         </div>
         <div className="body">{this.renderBody()}</div>
-        <Modal show={this.state.modal?.type === 'login'}>
-          <Modal.Body>
-            <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'initializer'}>
-          <Modal.Body>
-            <Initializer onInitializeData={this.setUserData} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'account-editor'}>
-          <Modal.Body>
-            <AccountEditor onClose={this.closeModal} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'report-form'}>
-          <Modal.Body>
-            <ReportForm />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'goal-selector'}>
-          <Modal.Body>
-            <GoalSelector initialGoals={this.state.userData.goals} onSelectGoals={this.handleSelectGoals} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'semester-changer'}>
-          <Modal.Body>
-            <SemesterChanger
-              initialSemesters={this.state.userData.semesters}
-              onChangeSemesters={this.handleChangeSemester}
-            />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'course-adder'}>
-          <Modal.Header>
-            <Modal.Title>
-              Add a class to {this.state.modal?.type === 'course-adder' && this.state.modal.semester.name}
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <CourseSearcher onSelectCourse={this.handleAddCourse} />
-          </Modal.Body>
-        </Modal>
-        <Modal show={this.state.modal?.type === 'requirement-display'}>
-          <Modal.Body>
-            <RequirementDisplay
-              requirement={this.state.modal?.type === 'requirement-display' && this.state.modal.requirement}
-            />
-          </Modal.Body>
-        </Modal>
+        {this.renderModals()}
       </>
     );
   }

@@ -162,7 +162,7 @@ class Login extends React.Component<LoginProps, LoginState> {
             </Form.Group>
           </Form>
           <div className="register">
-            Don't have an account?
+            Don't have an account?{' '}
             <a href="#" onClick={this.showRegistration}>
               Register
             </a>
@@ -216,7 +216,7 @@ class Login extends React.Component<LoginProps, LoginState> {
                 Register
               </Button>
               <Form.Text className="text-center my-2 px-3" muted>
-                By clicking Register, I agree to receiving updates on what's new as well as GradTrak&lsquo;s
+                By clicking Register, I agree to receiving updates on what's new as well as GradTrak&lsquo;s{' '}
                 <a href="https://gradtrak.me/terms/" target="_blank">
                   Terms of Service
                 </a>{' '}
@@ -224,12 +224,11 @@ class Login extends React.Component<LoginProps, LoginState> {
                 <a href="https://gradtrak.me/privacy/" target="_blank">
                   Privacy Policy
                 </a>
-                .
               </Form.Text>
             </Form.Group>
           </Form>
           <div className="register">
-            Have an account?
+            Have an account?{' '}
             <a href="#" onClick={this.showLogin}>
               Log In
             </a>

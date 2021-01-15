@@ -29,27 +29,23 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
         </Popover>
       );
       duplicateCourseIcon = (
-        <OverlayTrigger trigger="hover" overlay={duplicatePopover}>
+        <OverlayTrigger trigger={['hover', 'focus']} overlay={duplicatePopover}>
           <i className="material-icons">error_outline</i>
         </OverlayTrigger>
       );
     }
 
     return (
-      <tr className="course">
+      <tr key={course.id} className="course">
         {duplicateCourseIcon}
         <td className="name">{course.dept + ' ' + course.no + ' '}</td>
         <td className="title">{course.title}</td>
         <td className="units">{course.units}</td>
         <td className="button-cell">
           <Dropdown>
-            <Dropdown.Toggle>
-              <button className="gt-button course-more-button"></button>
-            </Dropdown.Toggle>
+            <Dropdown.Toggle className="gt-button course-more-button"></Dropdown.Toggle>
             <Dropdown.Menu className="dropdown-sm">
-              <Dropdown.Item>
-                <button onClick={() => props.onRemoveCourse(course)}>Remove</button>
-              </Dropdown.Item>
+              <Dropdown.Item onClick={() => props.onRemoveCourse(course)}>Remove</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </td>

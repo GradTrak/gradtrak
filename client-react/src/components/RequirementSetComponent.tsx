@@ -52,9 +52,10 @@ class RequirementSetComponent extends React.Component<RequirementSetComponentPro
         <div className="requirement-categories">
           {this.props.requirementSet.requirementCategories.map((reqCategory) => (
             <RequirementCategoryComponent
+              key={reqCategory.name}
               requirementCategory={reqCategory}
               courses={this.props.courses}
-              manuallyFulfilled={this.props.manuallyFulfilled.get(this.props.requirementSet.id)}
+              manuallyFulfilled={this.props.manuallyFulfilled.get(this.props.requirementSet.id) || new Set<string>()}
               fulfillmentMap={this.props.fulfillmentMap}
               onOpenGoalSelector={this.props.onOpenGoalSelector}
               onOpenRequirementDisplay={this.props.onOpenRequirementDisplay}

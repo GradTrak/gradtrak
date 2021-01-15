@@ -9,6 +9,7 @@ import { MultiRequirement } from '../models/requirements/multi-requirement.model
 import { PolyRequirement } from '../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
+
 type RequirementComponentProps = {
   requirement: Requirement;
   courses: Course[];
@@ -27,17 +28,6 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
   const fulfillments: string[] = [fulfillment.status];
   if (fulfillment.method === 'manual') {
     fulfillments.push('manual');
-  }
-
-  /* Annotation popover. */
-  const annotationText = props.requirement.getAnnotation();
-  let annotation: React.ReactElement = null;
-  if (annotationText) {
-    annotation = (
-      <Popover id="requirement-annotation">
-        <Popover.Content>annotationText</Popover.Content>
-      </Popover>
-    );
   }
 
   /* Courses can be displayed for standalone, unit, and count requirements. */
@@ -68,6 +58,7 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
           : numFulfilled + '/' + props.requirement.numRequired + ' of'}
         {(props.requirement.requirements as Requirement[]).map((childReq) => (
           <RequirementComponent
+            key={childReq.id}
             requirement={childReq}
             courses={props.courses}
             manuallyFulfilled={props.manuallyFulfilled}
@@ -88,7 +79,9 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
         {fulfilledUnits}/{props.requirement.units} units of {props.requirement.name}
         <div className="nested">
           {fulfillingCourses.map((course) => (
-            <div className="course">{course.getName()}</div>
+            <div key={course.id} className="course">
+              {course.getName()}
+            </div>
           ))}
         </div>
       </>
@@ -100,7 +93,9 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
         {props.requirement.name}
         <div className="nested">
           {fulfillingCourses.map((course) => (
-            <div className="fulfilled">{course.getName()}</div>
+            <div key={course.id} className="fulfilled">
+              {course.getName()}
+            </div>
           ))}
           {new Array(Math.max(props.requirement.numRequired, fulfillingCourses.length, 0)).fill(
             <div>{props.requirement.name}</div>,
@@ -113,41 +108,49 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
     reqElem = '';
   }
 
-  return (
-    <OverlayTrigger trigger="hover" overlay={annotation}>
-      <div className={'requirement ' + fulfillments.join(' ')}>
-        <Dropdown className="req-more">
-          <Dropdown.Toggle>
-            <button className="gt-button">
-              <i className="material-icons">more_horiz</i>
-            </button>
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            {hasDisplay ? (
-              <Dropdown.Item>
-                <button onClick={() => props.onOpenRequirementDisplay(props.requirement)}>
-                  Show Fulfilling Courses
-                </button>
-              </Dropdown.Item>
-            ) : null}
-            <Dropdown.Item>
-              <button
-                onClick={
-                  !props.manuallyFulfilled
-                    ? () => props.onManualFulfill(props.requirement)
-                    : () => props.onManualUnfulfill(props.requirement)
-                }
-              >
-                Mark as {!props.manuallyFulfilled ? 'Fulfilled' : 'Unfulfilled'}
-              </button>{' '}
-              :
+  let rendered = (
+    <div className={'requirement ' + fulfillments.join(' ')}>
+      <Dropdown className="req-more">
+        <Dropdown.Toggle className="gt-button">
+          <i className="material-icons">more_horiz</i>
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          {hasDisplay ? (
+            <Dropdown.Item onClick={() => props.onOpenRequirementDisplay(props.requirement)}>
+              Show Fulfilling Courses
             </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        {reqElem}
-      </div>
-    </OverlayTrigger>
+          ) : null}
+          <Dropdown.Item
+            onClick={
+              !props.manuallyFulfilled
+                ? () => props.onManualFulfill(props.requirement)
+                : () => props.onManualUnfulfill(props.requirement)
+            }
+          >
+            Mark as {!props.manuallyFulfilled ? 'Fulfilled' : 'Unfulfilled'}
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      {reqElem}
+    </div>
   );
+
+  /* Annotation popover. */
+  const annotationText = props.requirement.getAnnotation();
+  if (annotationText) {
+    const annotation = (
+      <Popover id="requirement-annotation">
+        <Popover.Content>{annotationText}</Popover.Content>
+      </Popover>
+    );
+    rendered = (
+      <OverlayTrigger trigger={['hover', 'focus']} overlay={annotation}>
+        {rendered}
+      </OverlayTrigger>
+    );
+  }
+
+  return rendered;
 }
 
 export default RequirementComponent;

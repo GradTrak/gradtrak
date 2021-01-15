@@ -18,7 +18,9 @@ namespace Courses {
       const [res, tagsMap] = await Promise.all([get(COURSE_API_ENDPOINT), Tags.getTagsMap()]);
       const data = await res.json();
       const courseArr = data.map((courseProto) => Course.fromProto(courseProto, tagsMap));
-      return new Map<string, Course>(courseArr.map((course) => [course.id, course]));
+      const coursesMap = new Map<string, Course>(courseArr.map((course) => [course.id, course]));
+      courseArr.forEach((course) => course.mapEquiv(coursesMap));
+      return coursesMap;
     },
   );
 

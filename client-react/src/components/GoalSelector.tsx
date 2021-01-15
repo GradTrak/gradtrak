@@ -51,9 +51,9 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
   private fetchRequirements = async (): Promise<void> => {
     const requirementsMap = await Requirements.getRequirementsMap();
     this.setState({
-      requirementsMap
+      requirementsMap,
     });
-  }
+  };
 
   handleSelectChange = (): void => {
     this.setState({
@@ -136,14 +136,14 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
           </Row>
           <Row>
             {GOAL_TYPES.map((goalType) => (
-              <Form.Group as={Col}>
+              <Form.Group key={goalType} as={Col}>
                 {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
                 <Form.Group>
                   <Form.Control as="select" htmlSize={8} onChange={this.handleSelectChange}>
                     {this.getGoalsForType(goalType, this.state.requirementsMap)
                       .filter(this.searchFunction)
                       .map((goal) => (
-                        <option value={goal.id}>{goal.name}</option>
+                        <option key={goal.id} value={goal.id}>{goal.name}</option>
                       ))}
                   </Form.Control>
                 </Form.Group>
@@ -180,7 +180,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
               {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
               <hr />
               {this.state.selections[goalType].goals.map((goal) => (
-                <div>
+                <div key={goal.id}>
                   <i className="material-icons remove" onClick={() => this.handleRemoveGoal(goal)}>
                     close
                   </i>

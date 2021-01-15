@@ -150,7 +150,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
         <h4 className="gt-modal-header">Edit Semesters</h4>
         <div className="table">
           {this.getSemArr().map((semester) => (
-            <h4>
+            <h4 key={semester.name}>
               <i className="material-icons" onClick={() => this.removeSemester(semester)}>
                 close
               </i>

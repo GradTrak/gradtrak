@@ -55,6 +55,7 @@ class RequirementCategoryComponent extends React.Component<
         <div className="requirements">
           {this.props.requirementCategory.requirements.map((req) => (
             <RequirementComponent
+              key={req.id}
               requirement={req}
               courses={this.props.courses}
               manuallyFulfilled={this.props.manuallyFulfilled}

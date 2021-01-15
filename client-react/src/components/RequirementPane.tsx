@@ -59,11 +59,12 @@ function RequirementPane(props: RequirementPaneProps): React.ReactElement {
       </Row>
       {requiredSets.map((reqSet) => (
         <RequirementSetComponent
+          key={reqSet.id}
           requirementSet={reqSet}
           courses={props.courses}
           manuallyFulfilled={props.manuallyFulfilled}
           fulfillmentMap={processRequirements(requiredSets, props.courses, props.manuallyFulfilled)}
-          onOpenGoalSelector={this.props.onOpenGoalSelector}
+          onOpenGoalSelector={props.onOpenGoalSelector}
           onOpenRequirementDisplay={props.onOpenRequirementDisplay}
           onManualFulfill={(req) => props.onManualFulfill(req, reqSet)}
           onManualUnfulfill={(req) => props.onManualUnfulfill(req, reqSet)}
