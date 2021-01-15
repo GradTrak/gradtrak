@@ -131,39 +131,37 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
           </Row>
           <Row>
             {GOAL_TYPES.map((goalType) => (
-              <Col>
+              <Form.Group as={Col}>
+                {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
                 <Form.Group>
-                  {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
-                  <Form.Group>
-                    <Form.Control as="select" htmlSize={8} onChange={this.handleSelectChange}>
-                      {this.getGoalsForType(goalType, this.state.requirementsMap)
-                        .filter(this.searchFunction)
-                        .map((goal) => (
-                          <option value={goal.id}>{goal.name}</option>
-                        ))}
-                    </Form.Control>
-                  </Form.Group>
-                  <Form.Group>
-                    <Button
-                      variant="outline-primary"
-                      block
-                      onClick={this.handleAddGoal}
-                      disabled={Boolean(this.state.selections[goalType].selected)}
-                    >
-                      Add
-                    </Button>
-                    <span className="request-major">
-                      <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScWm1kJjcBs5eX-j_HejtM_9iV3CgP4VlgoVz4hm1PX8u9vww/viewform"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Don't see your major?
-                      </a>
-                    </span>
-                  </Form.Group>
+                  <Form.Control as="select" htmlSize={8} onChange={this.handleSelectChange}>
+                    {this.getGoalsForType(goalType, this.state.requirementsMap)
+                      .filter(this.searchFunction)
+                      .map((goal) => (
+                        <option value={goal.id}>{goal.name}</option>
+                      ))}
+                  </Form.Control>
                 </Form.Group>
-              </Col>
+                <Form.Group>
+                  <Button
+                    variant="outline-primary"
+                    block
+                    onClick={this.handleAddGoal}
+                    disabled={Boolean(this.state.selections[goalType].selected)}
+                  >
+                    Add
+                  </Button>
+                  <span className="request-major">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLScWm1kJjcBs5eX-j_HejtM_9iV3CgP4VlgoVz4hm1PX8u9vww/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Don't see your major?
+                    </a>
+                  </span>
+                </Form.Group>
+              </Form.Group>
             ))}
           </Row>
         </Col>
