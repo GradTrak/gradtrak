@@ -5,6 +5,8 @@ import { Course } from '../../models/course.model';
 import { Requirement } from '../../models/requirement.model';
 import { CourseService } from '../../services/course.service';
 
+type sortType = 'no' | 'title' | 'grade';
+
 @Component({
   selector: 'app-requirement-display',
   templateUrl: './requirement-display.component.html',
@@ -16,9 +18,11 @@ export class RequirementDisplayComponent implements OnInit {
   @Output() openBerkeleytime: EventEmitter<Course> = new EventEmitter<Course>();
   sortDescending: boolean = false;
   // TODO: use this.NO and whatnot? instead of fixed strings?
-  sortField: 'no' | 'title' | 'grade' = 'no';
+  sortField: sortType;
 
-  constructor(private courseService: CourseService) {}
+  constructor(private courseService: CourseService) {
+    this.sortField = 'no';
+  }
 
   ngOnInit(): void {}
 
@@ -30,19 +34,21 @@ export class RequirementDisplayComponent implements OnInit {
         }),
       ),
       map((courses: Course[]) => {
+        courses = [...courses]
+        let comparator;
         switch (this.sortField) {
           case 'no':
-            courses.sort((a: Course, b: Course) => {
+            comparator = (a: Course, b: Course) => {
               return a.getName() < b.getName() ? -1 : 1;
-            });
+            };
             break;
           case 'title':
-            courses.sort((a: Course, b: Course) => {
+            comparator = (a: Course, b: Course) => {
               return a.title < b.title ? -1 : 1;
-            });
+            };
             break;
           case 'grade':
-            courses.sort((a: Course, b: Course) => {
+            comparator = (a: Course, b: Course) => {
               const gradeA = a.berkeleytimeData.grade;
               const gradeB = b.berkeleytimeData.grade;
               if (gradeA === gradeB || !(gradeA || gradeB)) {
@@ -69,11 +75,11 @@ export class RequirementDisplayComponent implements OnInit {
                 return score;
               }
               return gradeA[0] < gradeB[0] ? -1 : 1;
-            });
+            };
             break;
-          default:
-            console.error(`Invalid field to sort by. Got ${this.sortField}`);
         }
+        
+        courses.sort(comparator);
         if (this.sortDescending) {
           courses.reverse();
         }
@@ -91,7 +97,7 @@ export class RequirementDisplayComponent implements OnInit {
    * accordingly. Defaults to descending and switches the sort
    * order if you click on the same field multiple times.
    */
-  changeSort(clicked: 'no' | 'title' | 'grade'): void {
+  changeSort(clicked: sortType): void {
     if (clicked === this.sortField) {
       this.sortDescending = !this.sortDescending;
     } else {

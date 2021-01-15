@@ -2,7 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
 
@@ -64,7 +63,7 @@ export class CourseSearcherComponent implements OnInit {
     ['VIETNMS', ['VIETNAMESE']],
   ]);
 
-  constructor(private sanitizer: DomSanitizer, private courseService: CourseService) {}
+  constructor(private courseService: CourseService) {}
 
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {

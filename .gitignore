@@ -3,6 +3,3 @@ node_modules
 
 # Build output
 build/
-
-# Build output
-tsconfig/tsbuildinfo

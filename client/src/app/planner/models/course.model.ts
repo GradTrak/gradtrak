@@ -1,6 +1,14 @@
 import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Tag } from './tag.model';
 
+
+export interface BerkeleytimeData {
+  berkeleytimeId: string;
+  // grade: 'A+' | 'A' | 'A-' | 'B+' | 'B' | 'B-' | 'C+' | 'C' | 'C-' | 'D+' | 'D' | 'D-' | 'F+' | '';
+  grade: string;
+  semestersOffered: string[];
+}
+
 /**
  * The Course class represents a course you can take in a {@link Semester} and that fulfills certain {@link Requirement}s.
  */
@@ -10,11 +18,7 @@ export class Course {
   no: string;
   title: string;
   units: number;
-  berkeleytimeData: {
-    berkeleytimeId: string;
-    grade: string;
-    semestersOffered: string[];
-  };
+  berkeleytimeData: BerkeleytimeData;
 
   tags: Tag[];
   equivIds: string[];
@@ -26,7 +30,7 @@ export class Course {
     no: string,
     title: string,
     units: number,
-    berkeleytimeData: { berkeleytimeId?: string; grade?: string; semestersOffered?: string[] },
+    berkeleytimeData: BerkeleytimeData,
     tags?: Tag[],
     equivIds?: string[],
   ) {
@@ -35,11 +39,7 @@ export class Course {
     this.no = no;
     this.title = title;
     this.units = units;
-    this.berkeleytimeData = {
-      berkeleytimeId: berkeleytimeData.berkeleytimeId,
-      grade: berkeleytimeData.grade,
-      semestersOffered: berkeleytimeData.semestersOffered,
-    };
+    this.berkeleytimeData = berkeleytimeData;
     this.tags = tags;
     this.equivIds = equivIds;
     this.equiv = null;

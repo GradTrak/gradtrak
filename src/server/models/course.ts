@@ -27,18 +27,21 @@ const courseSchema = new mongoose.Schema(
       required: true,
     },
     berkeleytimeData: {
-      berkeleytimeId: {
-        type: String,
-        required: false,
+      type: {
+        berkeleytimeId: {
+          type: String,
+          required: true,
+        },
+        grade: {
+          type: String,
+          required: false,
+        },
+        semestersOffered: {
+          type: [String],
+          required: false,
+        },
       },
-      grade: {
-        type: String,
-        required: false,
-      },
-      semestersOffered: {
-        type: [String],
-        required: false,
-      },
+      required: true,
     },
     tagIds: {
       type: [String],
