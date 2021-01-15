@@ -43,7 +43,9 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
       isChangingPassword: false,
       newPassword: null,
     };
+  }
 
+  componentDidMount(): void {
     this.queryWhoami();
   }
 

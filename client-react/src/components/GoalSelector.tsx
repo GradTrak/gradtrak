@@ -42,7 +42,9 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
         ]),
       ),
     };
+  }
 
+  componentDidMount(): void {
     this.fetchRequirements();
   }
 

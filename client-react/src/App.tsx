@@ -67,7 +67,9 @@ class App extends React.Component<AppProps, AppState> {
       isLoading: true,
       modal: null,
     };
+  }
 
+  componentDidMount(): void {
     this.fetchInitialData();
     this.prefetchData();
     this.registerSavePrompt();

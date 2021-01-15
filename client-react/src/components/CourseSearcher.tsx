@@ -22,7 +22,9 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
       courses: null,
       selected: null,
     };
+  }
 
+  componentDidMount(): void {
     this.fetchCourses();
   }
 

@@ -21,6 +21,10 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     });
   }
 
+  componentDidMount(): void {
+    this.fetchCourses();
+  }
+
   private fetchCourses = async (): Promise<void> => {
     const courses = await Courses.getCourses();
     this.setState({
