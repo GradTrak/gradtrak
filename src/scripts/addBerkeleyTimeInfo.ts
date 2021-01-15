@@ -1,9 +1,10 @@
-import Course from '../server/models/course';
-import RequirementSet from '../server/models/requirement-set';
-import Tag from '../server/models/tag';
-import User from '../server/models/user';
-import { connect } from '../server/config/db';
-
+import Course from '../server/src/models/course';
+import RequirementSet from '../server/src/models/requirement-set';
+import Tag from '../server/src/models/tag';
+import User from '../server/src/models/user';
+import { connect } from '../server/src/config/db';
+import fs from 'fs'
+const courseData = JSON.parse(fs.readFileSync('./dummy/berkeleyTime.json', 'utf8'))
 
 const https = require('https');
 
@@ -46,6 +47,8 @@ function promiseGet(url: string, attemptsRemaining: number = 3): any {
 const main = async () => {
   const btimeInfo = await promiseGet('https://berkeleytime.com/api/catalog/catalog_json/');
   const mapping = {};
+
+
   const fetchCourseInfo = async (btimeCourseObj: {id: string, abbreviation: string, course_number: string}) => {
     const key: string = `${btimeCourseObj.abbreviation} ${btimeCourseObj.course_number.toUpperCase()}`
     const courseBoxObj = (await promiseGet(`https://berkeleytime.com/api/catalog/catalog_json/course_box/?course_id=${btimeCourseObj.id}`)).course
@@ -61,7 +64,9 @@ const main = async () => {
     }
     console.log(`${key}, ${mapping[key].grade}, ${mapping[key].semestersOffered}`)
   }
-  const stepSize: number = 25;
+
+
+  const stepSize: number = 10;
   // for (let i = 900; i < 1000; i += stepSize) {
   for (let i = 0; i < btimeInfo.courses.length; i += stepSize) {
     await(Promise.all(btimeInfo.courses.slice(i, i+stepSize).map(btimeCourse => fetchCourseInfo(btimeCourse).catch((e)=> {
@@ -69,6 +74,18 @@ const main = async () => {
     }))))
     console.log('______________________________________________')
   }
+
+  courseData.forEach((course: any) => {
+    const key = `${course.dept} ${course.no.toUpperCase()}`
+    const btimeData = mapping[key]
+    course.berkeleytimeData = btimeData;
+  })
+  fs.writeFileSync('./dummy/berkeleyTime.json', JSON.stringify(courseData, null, 2))
+
+  
+
+  /**
+  //updates the database directly
   let connection;
   connect()
     .then((c) => {
@@ -88,6 +105,7 @@ const main = async () => {
     .catch((err) => {
       console.error(err);
     })
+    */
 }
 
 //promiseGet('https://berkeleytime.com/api/catalog/catalog_json/').then(a => console.log(a))
