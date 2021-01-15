@@ -1,3 +1,5 @@
+import memoize from 'memoizee';
+
 import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Course } from '../models/course.model';
 import { Tag } from '../models/tag.model';
@@ -7,32 +9,26 @@ import { get } from './utils';
 namespace Courses {
   const COURSE_API_ENDPOINT = '/api/courses';
 
-  let coursesMap: Map<string, Course> = null;
-
   /**
    * Takes in data, map linkTags to it, and turns all objects in the data into
    * an instance of the Course class.
    */
-  async function fetchCourseData(): Promise<Map<string, Course>> {
-    const [res, tagsMap] = await Promise.all([get(COURSE_API_ENDPOINT), Tags.getTagsMap()]);
-    const data = await res.json();
-    const courseArr = data.map((courseProto) => Course.fromProto(courseProto, tagsMap));
-    return new Map<string, Course>(courseArr.map((course) => [course.id, course]));
-  }
+  export const getCoursesMap = memoize(
+    async (): Promise<Map<string, Course>> => {
+      const [res, tagsMap] = await Promise.all([get(COURSE_API_ENDPOINT), Tags.getTagsMap()]);
+      const data = await res.json();
+      const courseArr = data.map((courseProto) => Course.fromProto(courseProto, tagsMap));
+      return new Map<string, Course>(courseArr.map((course) => [course.id, course]));
+    },
+  );
 
-  export async function getCourses(): Promise<Course[]> {
-    if (!coursesMap) {
-      coursesMap = await fetchCourseData();
-    }
-    return Array.from(coursesMap.values());
-  }
-
-  export async function getCoursesMap(): Promise<Map<string, Course>> {
-    if (!coursesMap) {
-      coursesMap = await fetchCourseData();
-    }
-    return coursesMap;
-  }
+  export const getCourses = memoize(
+    async (): Promise<Course[]> => {
+      const coursesMap = await getCoursesMap();
+      return Array.from(coursesMap.values());
+    },
+    { promise: true },
+  );
 }
 
 export default Courses;
