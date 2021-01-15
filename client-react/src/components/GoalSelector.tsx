@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 import Requirements from '../lib/requirements';
 import { RequirementSet } from '../models/requirement-set.model';
@@ -123,78 +123,82 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
     }
 
     return (
-      <Row>
-        <Col className="search">
-          <Row>
-            <Form.Group>
-              <Form.Control
-                type="text"
-                placeholder="Search for a major"
-                onChange={(e) => this.setState({ searchTerm: e.target.value })}
-              />
-            </Form.Group>
-          </Row>
-          <Row>
-            {GOAL_TYPES.map((goalType) => (
-              <Form.Group key={goalType} as={Col}>
-                {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
-                <Form.Group>
-                  <Form.Control as="select" htmlSize={8} onChange={this.handleSelectChange}>
-                    {this.getGoalsForType(goalType, this.state.requirementsMap)
-                      .filter(this.searchFunction)
-                      .map((goal) => (
-                        <option key={goal.id} value={goal.id}>{goal.name}</option>
-                      ))}
-                  </Form.Control>
-                </Form.Group>
-                <Form.Group>
-                  <Button
-                    variant="outline-primary"
-                    block
-                    onClick={this.handleAddGoal}
-                    disabled={Boolean(this.state.selections[goalType].selected)}
-                  >
-                    Add
-                  </Button>
-                  <span className="request-major">
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLScWm1kJjcBs5eX-j_HejtM_9iV3CgP4VlgoVz4hm1PX8u9vww/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Don't see your major?
-                    </a>
-                  </span>
-                </Form.Group>
+      <Container>
+        <Row>
+          <Col className="search">
+            <Row>
+              <Form.Group>
+                <Form.Control
+                  type="text"
+                  placeholder="Search for a major"
+                  onChange={(e) => this.setState({ searchTerm: e.target.value })}
+                />
               </Form.Group>
-            ))}
-          </Row>
-        </Col>
-        <Col xs="auto">
-          <div className="line"></div>
-        </Col>
-        <Col>
-          <h4 className="gt-modal-header">Selected Goals</h4>
-          {GOAL_TYPES.forEach((goalType) => (
-            <div>
-              {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
-              <hr />
-              {this.state.selections[goalType].goals.map((goal) => (
-                <div key={goal.id}>
-                  <i className="material-icons remove" onClick={() => this.handleRemoveGoal(goal)}>
-                    close
-                  </i>
-                  <span className="goal">{goal.name}</span>
-                  <hr />
-                </div>
+            </Row>
+            <Row>
+              {GOAL_TYPES.map((goalType) => (
+                <Form.Group key={goalType} as={Col}>
+                  {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
+                  <Form.Group>
+                    <Form.Control as="select" htmlSize={8} onChange={this.handleSelectChange}>
+                      {this.getGoalsForType(goalType, this.state.requirementsMap)
+                        .filter(this.searchFunction)
+                        .map((goal) => (
+                          <option key={goal.id} value={goal.id}>
+                            {goal.name}
+                          </option>
+                        ))}
+                    </Form.Control>
+                  </Form.Group>
+                  <Form.Group>
+                    <Button
+                      variant="outline-primary"
+                      block
+                      onClick={this.handleAddGoal}
+                      disabled={Boolean(this.state.selections[goalType].selected)}
+                    >
+                      Add
+                    </Button>
+                    <span className="request-major">
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScWm1kJjcBs5eX-j_HejtM_9iV3CgP4VlgoVz4hm1PX8u9vww/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Don't see your major?
+                      </a>
+                    </span>
+                  </Form.Group>
+                </Form.Group>
               ))}
-            </div>
-          ))}
-          <Button variant="primary" size="sm" block onClick={this.handleSubmit}>
-            Confirm
-          </Button>
-        </Col>
-      </Row>
+            </Row>
+          </Col>
+          <Col xs="auto">
+            <div className="line"></div>
+          </Col>
+          <Col>
+            <h4 className="gt-modal-header">Selected Goals</h4>
+            {GOAL_TYPES.forEach((goalType) => (
+              <div>
+                {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
+                <hr />
+                {this.state.selections[goalType].goals.map((goal) => (
+                  <div key={goal.id}>
+                    <i className="material-icons remove" onClick={() => this.handleRemoveGoal(goal)}>
+                      close
+                    </i>
+                    <span className="goal">{goal.name}</span>
+                    <hr />
+                  </div>
+                ))}
+              </div>
+            ))}
+            <Button variant="primary" size="sm" block onClick={this.handleSubmit}>
+              Confirm
+            </Button>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

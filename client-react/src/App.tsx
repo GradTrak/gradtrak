@@ -563,12 +563,12 @@ class App extends React.Component<AppProps, AppState> {
     if (this.state.userData) {
       return (
         <>
-          <Modal show={this.state.modal?.type === 'login'} backdrop="static">
+          <Modal backdrop="static" show={this.state.modal?.type === 'login'}>
             <Modal.Body>
               <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'initializer'} onHide={this.closeModal}>
+          <Modal size="lg" backdrop="static" show={this.state.modal?.type === 'initializer'} onHide={this.closeModal}>
             <Modal.Body>
               <Initializer onInitializeData={this.setUserData} />
             </Modal.Body>
@@ -583,12 +583,12 @@ class App extends React.Component<AppProps, AppState> {
               <ReportForm />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'goal-selector'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal?.type === 'goal-selector'} onHide={this.closeModal}>
             <Modal.Body>
               <GoalSelector initialGoals={this.state.userData.goals} onSelectGoals={this.handleSelectGoals} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'semester-changer'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal?.type === 'semester-changer'} onHide={this.closeModal}>
             <Modal.Body>
               <SemesterChanger
                 initialSemesters={this.state.userData.semesters}
@@ -596,17 +596,13 @@ class App extends React.Component<AppProps, AppState> {
               />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'course-adder'} onHide={this.closeModal}>
-            <Modal.Header>
-              <Modal.Title>
-                Add a class to {this.state.modal?.type === 'course-adder' && this.state.modal.semester.name}
-              </Modal.Title>
-            </Modal.Header>
+          <Modal size="lg" show={this.state.modal?.type === 'course-adder'} onHide={this.closeModal}>
             <Modal.Body>
+              <h4>Add a class to {this.state.modal?.type === 'course-adder' && this.state.modal.semester.name}</h4>
               <CourseSearcher onSelectCourse={this.handleAddCourse} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'requirement-display'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal?.type === 'requirement-display'} onHide={this.closeModal}>
             <Modal.Body>
               <RequirementDisplay
                 requirement={this.state.modal?.type === 'requirement-display' && this.state.modal.requirement}
