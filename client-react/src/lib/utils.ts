@@ -15,15 +15,25 @@ export function getAllCombinations<T>(arr: T[], index?: number): T[][] {
   return [...rest, ...rest.map((combination: T[]) => [arr[index], ...combination])];
 }
 
+/* https://stackoverflow.com/a/25490531 */
+function getCookieValue(key: string): string {
+  const match = document.cookie.match('(^|;)\\s*' + key + '\\s*=\\s*([^;]+)');
+  return match && match.pop();
+}
+
 export function get(url: string): Promise<Response> {
   return fetch(url);
 }
 
 export function post(url: string, data: any): Promise<Response> {
+  // TODO This can be a common config.
+  const csrf = getCookieValue('csrf-token');
+
   return fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'CSRF-Token': csrf,
     },
     body: JSON.stringify(data),
   });

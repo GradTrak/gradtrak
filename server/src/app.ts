@@ -54,7 +54,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.all('*', (req, res, next) => {
-  res.cookie('XSRF-TOKEN', req.csrfToken());
+  res.cookie('csrf-token', req.csrfToken());
   next();
 });
 
