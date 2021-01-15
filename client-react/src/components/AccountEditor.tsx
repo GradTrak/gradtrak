@@ -44,10 +44,13 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
       newPassword: null,
     };
 
-    User.whoami().then((res) => {
-      this.setState({
-        user: res.user,
-      });
+    this.queryWhoami();
+  }
+
+  private queryWhoami = async (): Promise<void> => {
+    const res = await User.whoami();
+    this.setState({
+      user: res.user,
     });
   }
 

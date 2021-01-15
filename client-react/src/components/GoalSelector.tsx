@@ -43,10 +43,13 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
       ),
     };
 
-    Requirements.getRequirementsMap().then((requirementsMap) => {
-      this.setState({
-        requirementsMap,
-      });
+    this.fetchRequirements();
+  }
+
+  private fetchRequirements = async (): Promise<void> => {
+    const requirementsMap = await Requirements.getRequirementsMap();
+    this.setState({
+      requirementsMap
     });
   }
 
