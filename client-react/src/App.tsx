@@ -13,8 +13,9 @@ import AccountEditor from './components/AccountEditor';
 import GoalSelector from './components/GoalSelector';
 import Initializer from './components/Initializer';
 import Login from './components/Login';
-import RequirementPane from './components/RequirementPane';
 import ReportForm from './components/ReportForm';
+import RequirementPane from './components/RequirementPane';
+import SemesterChanger from './components/SemesterChanger';
 import SemesterPane from './components/SemesterPane';
 
 import logo from './logo.svg';
@@ -537,8 +538,8 @@ class App extends React.Component<AppProps, AppState> {
         <Modal show={this.state.modal?.type === 'semester-changer'}>
           <Modal.Body>
             <SemesterChanger
-              initialSemester={this.state.userData.semesters}
-              onChangeSemester={this.handleChangeSemester}
+              initialSemesters={this.state.userData.semesters}
+              onChangeSemesters={this.handleChangeSemester}
             />
           </Modal.Body>
         </Modal>

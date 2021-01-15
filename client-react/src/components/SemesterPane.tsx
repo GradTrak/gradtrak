@@ -16,6 +16,7 @@ type SemesterPaneProps = {
 function SemesterPane(props: SemesterPaneProps): React.ReactElement {
   /* Concat all semester-per-year arrays and remove the null ones. */
   const semesterArr = Array.from(props.semesters.keys())
+    .sort()
     .map((year) => props.semesters.get(year))
     .flat()
     .filter((semester) => semester);
