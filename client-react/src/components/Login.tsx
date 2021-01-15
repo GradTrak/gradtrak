@@ -191,7 +191,7 @@ class Login extends React.Component<LoginProps, LoginState> {
             className="login"
             onSubmit={(e) => {
               e.preventDefault();
-              this.handleSubmitLogin;
+              this.handleSubmitRegistration();
             }}
           >
             <Form.Group>

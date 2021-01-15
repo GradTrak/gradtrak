@@ -16,9 +16,9 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
   constructor(props: RequirementDisplayProps) {
     super(props);
 
-    this.setState({
+    this.state = {
       courses: null,
-    });
+    };
   }
 
   componentDidMount(): void {
@@ -47,11 +47,9 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
         <h3 className="display-title">Eligible Courses</h3>
         <div className="course-list">
           {this.getFulfillingCourses(this.props.requirement, this.state.courses).map((course) => (
-            <React.Fragment key={course.id}>
-              <h4>{course.toString()}</h4>
-              <br />
-            </React.Fragment>
+            <h4 key={course.id}>{course.toString()}</h4>
           ))}
+          <br />
         </div>
       </>
     );

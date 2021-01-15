@@ -29,14 +29,24 @@ export function post(url: string, data: any): Promise<Response> {
   // TODO This can be a common config.
   const csrf = getCookieValue('csrf-token');
 
-  return fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'CSRF-Token': csrf,
-    },
-    body: JSON.stringify(data),
-  });
+  if (data) {
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'CSRF-Token': csrf,
+      },
+      body: JSON.stringify(data),
+    });
+  } else {
+    /* Empty post request. */
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'CSRF-Token': csrf,
+      },
+    });
+  }
 }
 
 export function put(url: string, data: any): Promise<Response> {

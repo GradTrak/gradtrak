@@ -28,18 +28,19 @@ import './App.css';
 
 type AppProps = {};
 
-type ModalState =
-  | {
-      type: 'login' | 'initializer' | 'account-editor' | 'report-form' | 'goal-selector' | 'semester-changer';
-    }
-  | {
-      type: 'course-adder';
-      semester: Semester;
-    }
-  | {
-      type: 'requirement-display';
-      requirement: StandaloneRequirement;
-    };
+type ModalState = {
+  type:
+    | 'login'
+    | 'initializer'
+    | 'account-editor'
+    | 'report-form'
+    | 'goal-selector'
+    | 'semester-changer'
+    | 'course-adder'
+    | 'requirement-display';
+  semChangerSemester: Semester;
+  reqDisplayRequirement: Requirement;
+};
 
 type AppState = {
   loggedIn: boolean;
@@ -59,7 +60,11 @@ class App extends React.Component<AppProps, AppState> {
         auth: null,
       },
       userData: null,
-      modal: null,
+      modal: {
+        type: null,
+        semChangerSemester: null,
+        reqDisplayRequirement: null,
+      },
     };
   }
 
@@ -89,6 +94,11 @@ class App extends React.Component<AppProps, AppState> {
         this.openInitializer();
       }
     } else {
+      /* Initialize anonymous user with empty user data. */
+      this.setState({
+        userData: User.EMPTY_USER_DATA,
+      });
+
       this.openLogin();
     }
   };
@@ -114,13 +124,17 @@ class App extends React.Component<AppProps, AppState> {
 
   closeModal = (): void => {
     this.setState({
-      modal: null,
+      modal: {
+        ...this.state.modal,
+        type: null,
+      },
     });
   };
 
   openLogin = (): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'login',
       },
     });
@@ -129,7 +143,7 @@ class App extends React.Component<AppProps, AppState> {
   handleLogin = async (username: string, password: string): Promise<string> => {
     const err = await this.login(username, password);
 
-    if (!err) {
+    if (err) {
       return err;
     }
 
@@ -146,31 +160,46 @@ class App extends React.Component<AppProps, AppState> {
 
   handleRegister = async (username: string, password: string, userTesting: boolean): Promise<string> => {
     const err = await this.register(username, password, userTesting);
-    if (!err) {
+
+    if (err) {
       return err;
     }
-    this.closeModal();
+
+    this.setState({
+      userData: User.EMPTY_USER_DATA,
+    });
+
+    this.openInitializer();
+
     return null;
   };
 
   handleLoginDismiss = (): void => {
-    this.closeModal();
     if (this.state.userData.semesters.size === 0) {
       this.openInitializer();
+    } else {
+      this.closeModal();
     }
   };
 
   openInitializer = (): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'initializer',
       },
     });
   };
 
+  handleInitializeData = (userData: UserData): void => {
+    this.setUserData(userData);
+    this.closeModal();
+  };
+
   openAccountEditor = (): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'account-editor',
       },
     });
@@ -179,6 +208,7 @@ class App extends React.Component<AppProps, AppState> {
   openReportForm = (): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'report-form',
       },
     });
@@ -187,6 +217,7 @@ class App extends React.Component<AppProps, AppState> {
   openGoalSelector = (): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'goal-selector',
       },
     });
@@ -200,6 +231,7 @@ class App extends React.Component<AppProps, AppState> {
   openSemesterChanger = (): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'semester-changer',
       },
     });
@@ -213,24 +245,26 @@ class App extends React.Component<AppProps, AppState> {
   openCourseAdder = (semester: Semester): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'course-adder',
-        semester,
+        semChangerSemester: semester,
       },
     });
   };
 
   handleAddCourse = (course: Course): void => {
-    if (this.state.modal?.type !== 'course-adder') {
+    if (this.state.modal.type !== 'course-adder') {
       throw new Error('Course adder tried to add course while closed');
     }
-    this.addCourse(course, this.state.modal.semester);
+    this.addCourse(course, this.state.modal.semChangerSemester);
   };
 
   openRequirementDisplay = (requirement: StandaloneRequirement): void => {
     this.setState({
       modal: {
+        ...this.state.modal,
         type: 'requirement-display',
-        requirement,
+        reqDisplayRequirement: requirement,
       },
     });
   };
@@ -253,7 +287,7 @@ class App extends React.Component<AppProps, AppState> {
 
   login = async (username: string, password: string): Promise<string> => {
     if (this.state.loggedIn) {
-      throw new Error('Tried to register when already logged in');
+      throw new Error('Tried to log in when already logged in');
     }
 
     const res = await User.login(username, password);
@@ -563,32 +597,32 @@ class App extends React.Component<AppProps, AppState> {
     if (this.state.userData) {
       return (
         <>
-          <Modal backdrop="static" show={this.state.modal?.type === 'login'}>
+          <Modal backdrop="static" show={this.state.modal.type === 'login'}>
             <Modal.Body>
               <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
             </Modal.Body>
           </Modal>
-          <Modal size="lg" backdrop="static" show={this.state.modal?.type === 'initializer'} onHide={this.closeModal}>
+          <Modal size="lg" backdrop="static" show={this.state.modal.type === 'initializer'} onHide={this.closeModal}>
             <Modal.Body>
-              <Initializer onInitializeData={this.setUserData} />
+              <Initializer onInitializeData={this.handleInitializeData} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'account-editor'} onHide={this.closeModal}>
+          <Modal show={this.state.modal.type === 'account-editor'} onHide={this.closeModal}>
             <Modal.Body>
               <AccountEditor onClose={this.closeModal} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal?.type === 'report-form'} onHide={this.closeModal}>
+          <Modal show={this.state.modal.type === 'report-form'} onHide={this.closeModal}>
             <Modal.Body>
               <ReportForm />
             </Modal.Body>
           </Modal>
-          <Modal size="lg" show={this.state.modal?.type === 'goal-selector'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal.type === 'goal-selector'} onHide={this.closeModal}>
             <Modal.Body>
               <GoalSelector initialGoals={this.state.userData.goals} onSelectGoals={this.handleSelectGoals} />
             </Modal.Body>
           </Modal>
-          <Modal size="lg" show={this.state.modal?.type === 'semester-changer'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal.type === 'semester-changer'} onHide={this.closeModal}>
             <Modal.Body>
               <SemesterChanger
                 initialSemesters={this.state.userData.semesters}
@@ -596,17 +630,21 @@ class App extends React.Component<AppProps, AppState> {
               />
             </Modal.Body>
           </Modal>
-          <Modal size="lg" show={this.state.modal?.type === 'course-adder'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal.type === 'course-adder'} onHide={this.closeModal}>
             <Modal.Body>
-              <h4>Add a class to {this.state.modal?.type === 'course-adder' && this.state.modal.semester.name}</h4>
-              <CourseSearcher onSelectCourse={this.handleAddCourse} />
+              {this.state.modal.semChangerSemester ? (
+                <>
+                  <h4>Add a class to {this.state.modal.semChangerSemester.name}</h4>
+                  <CourseSearcher onSelectCourse={this.handleAddCourse} />
+                </>
+              ) : null}
             </Modal.Body>
           </Modal>
-          <Modal size="lg" show={this.state.modal?.type === 'requirement-display'} onHide={this.closeModal}>
+          <Modal size="lg" show={this.state.modal.type === 'requirement-display'} onHide={this.closeModal}>
             <Modal.Body>
-              <RequirementDisplay
-                requirement={this.state.modal?.type === 'requirement-display' && this.state.modal.requirement}
-              />
+              {this.state.modal.reqDisplayRequirement ? (
+                <RequirementDisplay requirement={this.state.modal.reqDisplayRequirement} />
+              ) : null}
             </Modal.Body>
           </Modal>
         </>

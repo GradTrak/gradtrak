@@ -41,7 +41,7 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
 
   /* Requirement element based on the requirement type. */
   // TODO This probably belongs in separate files.
-  let reqElem: React.ReactNode = null;
+  let reqElem: React.ReactElement = null;
   if (
     (props.requirement instanceof MultiRequirement || props.requirement instanceof PolyRequirement) &&
     !props.requirement.hidden
@@ -105,7 +105,7 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
     );
   } else {
     /* Standard requirement. */
-    reqElem = '';
+    reqElem = <>{props.requirement.name}</>;
   }
 
   let rendered = (

@@ -140,7 +140,12 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
                 <Form.Group key={goalType} as={Col}>
                   {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
                   <Form.Group>
-                    <Form.Control as="select" htmlSize={8} onChange={this.handleSelectChange}>
+                    <Form.Control
+                      as="select"
+                      htmlSize={8}
+                      onChange={this.handleSelectChange}
+                      ref={this.goalRefs.get(goalType)}
+                    >
                       {this.getGoalsForType(goalType, this.state.requirementsMap)
                         .filter(this.searchFunction)
                         .map((goal) => (
@@ -155,7 +160,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
                       variant="outline-primary"
                       block
                       onClick={this.handleAddGoal}
-                      disabled={Boolean(this.state.selections[goalType].selected)}
+                      disabled={!Boolean(this.state.selections[goalType].selected)}
                     >
                       Add
                     </Button>
@@ -178,8 +183,8 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
           </Col>
           <Col>
             <h4 className="gt-modal-header">Selected Goals</h4>
-            {GOAL_TYPES.forEach((goalType) => (
-              <div>
+            {GOAL_TYPES.map((goalType) => (
+              <div key={goalType}>
                 {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
                 <hr />
                 {this.state.selections[goalType].goals.map((goal) => (
