@@ -10,6 +10,7 @@ import { UserData } from './models/user-data.model';
 import User, { Account } from './lib/user';
 
 import AccountEditor from './components/AccountEditor';
+import CourseSearcher from './components/CourseSearcher';
 import GoalSelector from './components/GoalSelector';
 import Initializer from './components/Initializer';
 import Login from './components/Login';
