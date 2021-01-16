@@ -15,7 +15,6 @@ export class CourseSearcherComponent implements OnInit {
   readonly BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED = 1;
   readonly BERKELEYTIME_AVAILABLE = 2;
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
-  @Output() openBerkeleytime: EventEmitter<Course> = new EventEmitter<Course>();
   searchedCourse: Course;
   allCourses: Course[];
 

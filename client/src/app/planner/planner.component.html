@@ -113,10 +113,7 @@
 <ng-template #courseAdder>
   <div class="modal-body">
     <h4>Add a class to {{ courseAdderSemester.name }}</h4>
-    <app-course-searcher
-      (courseReturned)="addCourse($event)"
-      (openBerkeleytime)="openBerkeleytime($event)"
-    ></app-course-searcher>
+    <app-course-searcher (courseReturned)="addCourse($event)"></app-course-searcher>
   </div>
 </ng-template>
 
