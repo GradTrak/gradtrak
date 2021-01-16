@@ -1,0 +1,30 @@
+.RequirementCategory__name {
+  background-color: white;
+  font-size: 1.2rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.RequirementCategory__dropdown-arrow {
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(4px);
+}
+
+.RequirementCategory--collapsed .RequirementCategory__dropdown-arrow {
+  transform: translateY(4px) rotate(-90deg);
+}
+
+.RequirementCategory--collapsed .RequirementCategory__requirements {
+  display: none;
+}
+
+.RequirementCategory__requirements {
+  margin-left: 24px;
+}
+
+.RequirementCategory__requirements > .Requirement:last-child {
+  border-bottom-left-radius: 12px;
+}

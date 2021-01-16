@@ -8,6 +8,8 @@ import { RequirementCategory } from '../models/requirement-category.model';
 
 import RequirementComponent from './RequirementComponent';
 
+import './RequirementCategoryComponent.css';
+
 type RequirementCategoryComponentProps = {
   requirementCategory: RequirementCategory;
   courses: Course[];
@@ -43,16 +45,16 @@ class RequirementCategoryComponent extends React.Component<
 
   render(): React.ReactElement {
     return (
-      <div className={this.state.collapsed ? 'collapsed' : null}>
-        <Row className="name">
+      <div className={`RequirementCategory ${this.state.collapsed ? 'RequirementCategory--collapsed' : ''}`}>
+        <Row className="RequirementCategory__name">
           <Col className="px-1" xs="auto">
-            <i className="dropdown-arrow material-icons" onClick={this.handleToggleCollapsed}>
+            <i className="material-icons RequirementCategory__dropdown-arrow" onClick={this.handleToggleCollapsed}>
               arrow_drop_down
             </i>
           </Col>
           <Col className="px-1">{this.props.requirementCategory.name}</Col>
         </Row>
-        <div className="requirements">
+        <div className="RequirementCategory__requirements">
           {this.props.requirementCategory.requirements.map((req) => (
             <RequirementComponent
               key={req.id}

@@ -3,6 +3,8 @@ import { Button, Col, Form, Row, Modal } from 'react-bootstrap';
 
 import { Semester } from '../models/semester.model';
 
+import './SemesterChanger.css';
+
 type SemesterChangerProps = {
   initialSemesters: Map<string, Semester[]>;
   onChangeSemesters: (semesters: Map<string, Semester[]>) => void;
@@ -148,10 +150,10 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
     return (
       <>
         <h4 className="gt-modal-header">Edit Semesters</h4>
-        <div className="table">
+        <div className="SemesterChanger__table">
           {this.getSemArr().map((semester) => (
             <h4 key={semester.name}>
-              <i className="material-icons" onClick={() => this.removeSemester(semester)}>
+              <i className="material-icons SemesterChanger__remove" onClick={() => this.removeSemester(semester)}>
                 close
               </i>
               {semester.name}
@@ -190,7 +192,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
                   <Form.Label>Year</Form.Label>
                 </Col>
                 <Col>
-                  <Form.Control className="year-name" type="number" min="2010" max="2030" ref={this.yearRef} />
+                  <Form.Control type="number" min="2010" max="2030" ref={this.yearRef} />
                 </Col>
               </Form.Group>
               <Form.Group as={Row} className="justify-content-center">
@@ -201,7 +203,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
                 </Col>
               </Form.Group>
               <Form.Group as={Row}>
-                <Col className="error">{this.state.error}</Col>
+                <Col className="SemesterChanger__error">{this.state.error}</Col>
               </Form.Group>
             </Form>
           </Modal.Body>

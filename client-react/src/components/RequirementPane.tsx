@@ -8,6 +8,8 @@ import { RequirementSet } from '../models/requirement-set.model';
 
 import RequirementSetComponent from './RequirementSetComponent';
 
+import './RequirementPane.css';
+
 type RequirementPaneProps = {
   goals: RequirementSet[];
   courses: Course[];
@@ -52,7 +54,7 @@ function RequirementPane(props: RequirementPaneProps): React.ReactElement {
     <Container className="px-4 py-3">
       <Row className="justify-content-center">
         <Col className="my-4" xs={10}>
-          <button className="gt-button gt-button-primary goal-editor" onClick={props.onOpenGoalSelector}>
+          <button className="gt-button gt-button-primary RequirementPane__goal-editor" onClick={props.onOpenGoalSelector}>
             Edit Majors
           </button>
         </Col>

@@ -1,0 +1,25 @@
+.RequirementSet__name {
+  font-size: 1.5rem;
+}
+
+.RequirementSet__dropdown-arrow {
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(4px);
+}
+
+.RequirementSet--collapsed .dropdown-arrow {
+  transform: translateY(4px) rotate(-90deg);
+}
+
+.RequirementSet--collapsed .requirement-categories {
+  display: none;
+}
+
+.RequirementSet__requirement-categories {
+  margin-left: 16px;
+}
+
+.RequirementCategory {
+  margin-bottom: 16px;
+}

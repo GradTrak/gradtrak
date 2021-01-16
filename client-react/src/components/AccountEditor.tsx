@@ -3,6 +3,8 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 
 import User, { Account } from '../lib/user';
 
+import './AccountEditor.css';
+
 type AccountEditorProps = {
   onClose: () => void;
 };
@@ -98,79 +100,73 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
     return (
       <>
         <h4 className="gt-modal-header">Account Settings</h4>
-        <div className="form-group">
-          <div className="row">
-            <div className="col-6">
-              <label>Email</label>
-            </div>
-            <div className="col-6">{this.state.user.username}</div>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <label>Password</label>
-            </div>
-            <div className="col-6">
-              {this.state.isChangingPassword ? (
-                <>
-                  <input className="form-control" type="password" ref={this.newPasswordRef} />
-                  <small className="form-text text-muted">Your password must be at least 6 characters.</small>
-                </>
-              ) : (
-                <>
-                  ********&nbsp;
-                  <button
-                    className="gt-button"
-                    disabled={this.state.user.auth !== 'local'}
-                    onClick={this.showChangePassword}
-                  >
-                    <i className="material-icons">edit</i>
-                  </button>
-                  <br />
-                  {this.state.user.auth === 'google' ? (
-                    <small className="form-text text-muted">You are currently authenticated through Google.</small>
-                  ) : null}
-                </>
-              )}
-            </div>
-          </div>
-        </div>
+        <Form.Group as={Row} controlId="AccountEditor__username">
+          <Col xs={6}>
+            <Form.Label>Email</Form.Label>
+          </Col>
+          <Col xs={6}>{this.state.user.username}</Col>
+        </Form.Group>
+        <Form.Group as={Row} controlId="AccountEditor__new-password">
+          <Col xs={6}>
+            <Form.Label>Password</Form.Label>
+          </Col>
+          <Col xs={6}>
+            {this.state.isChangingPassword ? (
+              <>
+                <Form.Control type="password" ref={this.newPasswordRef} />
+                <Form.Text muted>Your password must be at least 6 characters.</Form.Text>
+              </>
+            ) : (
+              <>
+                ********&nbsp;
+                <button
+                  className="gt-button"
+                  disabled={this.state.user.auth !== 'local'}
+                  onClick={this.showChangePassword}
+                >
+                  <i className="material-icons AccountEditor__edit">edit</i>
+                </button>
+                <br />
+                {this.state.user.auth === 'google' ? (
+                  <Form.Text muted>You are currently authenticated through Google.</Form.Text>
+                ) : null}
+              </>
+            )}
+          </Col>
+        </Form.Group>
         <Form
           onSubmit={(e) => {
             e.preventDefault();
             this.handleSubmit();
           }}
         >
-          <Form.Group>
-            <Row>
-              <Col xs={6}>
-                <label>Current password:</label>
-              </Col>
-              <Col xs={6}>
-                <input className="form-control" type="password" name="password" ref={this.currentPasswordRef} />
-              </Col>
-            </Row>
+          <Form.Group as={Row} controlId="AccountEditor__current-password">
+            <Col xs={6}>
+              <Form.Label>Current password:</Form.Label>
+            </Col>
+            <Col xs={6}>
+              <Form.Control type="password" name="password" ref={this.currentPasswordRef} />
+            </Col>
           </Form.Group>
-          <Form.Group>
+          <Form.Group as={Row}>
+            <Col xs={12}>
+              <Button
+                type="submit"
+                variant="primary"
+                block
+                disabled={!this.state.changesMade || this.state.isSubmitting}
+              >
+                Save Changes
+              </Button>
+            </Col>
+          </Form.Group>
+          {this.state.error ? (
             <Row>
               <Col xs={12}>
-                <Button
-                  type="submit"
-                  variant="primary"
-                  block
-                  disabled={!this.state.changesMade || this.state.isSubmitting}
-                >
-                  Save Changes
-                </Button>
+                <span className="AccountEditor__error">{this.state.error}</span>
               </Col>
             </Row>
-            {this.state.error ? (
-              <Row>
-                <Col className="error" xs={12}>
-                  {this.state.error}
-                </Col>
-              </Row>
-            ) : null}
-          </Form.Group>
+          ) : null}
         </Form>
       </>
     );

@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { validateEmail } from '../lib/utils';
 
 import googleSigninButton from '../assets/google-signin.svg';
+import './Login.css';
 
 type LoginProps = {
   onLogin: (username: string, password: string) => Promise<string>;
@@ -131,44 +132,44 @@ class Login extends React.Component<LoginProps, LoginState> {
       return (
         <>
           <h4 className="gt-modal-header">Login</h4>
-          <div className="row text-center">
+          <div className="row Login__google-signin">
             <div className="col">
               <a href="/login/google">
                 <img src={googleSigninButton} />
               </a>
             </div>
           </div>
-          <hr className="or" />
+          <hr className="Login__or" />
           <Form
-            className="login"
+            className="Login__login"
             onSubmit={(e) => {
               e.preventDefault();
               this.handleSubmitLogin();
             }}
           >
-            <Form.Group>
+            <Form.Group controlId="Login__username">
               <Form.Label>Email</Form.Label>
               <Form.Control type="text" name="username" ref={this.usernameRef} />
             </Form.Group>
-            <Form.Group>
+            <Form.Group controlId="Login__password">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" name="password" ref={this.passwordRef} />
             </Form.Group>
-            <div className="my-4 failure">{this.state.error}</div>
+            <div className="my-4 Login__failure">{this.state.error}</div>
             <Form.Group className="my-4">
               <Button variant="primary" block type="submit" disabled={this.state.loading}>
                 Login
               </Button>
             </Form.Group>
           </Form>
-          <div className="register">
+          <div className="Login__register">
             Don't have an account?{' '}
             <a href="#" onClick={this.showRegistration}>
               Register
             </a>
           </div>
-          <hr className="or" />
-          <div className="skip">
+          <hr className="Login__or" />
+          <div className="Login__skip">
             <a href="#" onClick={this.props.onDismiss}>
               Continue as guest
             </a>
@@ -179,35 +180,35 @@ class Login extends React.Component<LoginProps, LoginState> {
       return (
         <>
           <h4 className="gt-modal-header">Register</h4>
-          <div className="row text-center">
+          <div className="row Login__google-signin">
             <div className="col">
               <a href="/login/google">
                 <img src={googleSigninButton} />
               </a>
             </div>
           </div>
-          <hr className="or" />
+          <hr className="Login__or" />
           <Form
-            className="login"
+            className="Login__login"
             onSubmit={(e) => {
               e.preventDefault();
               this.handleSubmitRegistration();
             }}
           >
-            <Form.Group>
+            <Form.Group controlId="Register__username">
               <Form.Label>Email</Form.Label>
               <Form.Control type="text" name="username" ref={this.usernameRef} />
             </Form.Group>
-            <Form.Group>
+            <Form.Group controlId="Register__password">
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" name="password" ref={this.passwordRef} />
             </Form.Group>
-            <Form.Group>
+            <Form.Group controlId="Register__password2">
               <Form.Label>Confirm Password</Form.Label>
               <Form.Control type="password" name="password2" ref={this.password2Ref} />
               <Form.Text muted>Your password must be at least 6 characters.</Form.Text>
             </Form.Group>
-            <Form.Group>
+            <Form.Group controlId="Register__user-testing">
               <Form.Check type="checkbox" label="I'd like to help with user testing!" ref={this.regUserTestingRef} />
             </Form.Group>
             <div className="my-4 failure">{this.state.error}</div>
@@ -215,26 +216,26 @@ class Login extends React.Component<LoginProps, LoginState> {
               <Button variant="primary" block type="submit" disabled={this.state.loading}>
                 Register
               </Button>
-              <Form.Text className="text-center my-2 px-3" muted>
+              <Form.Text className="my-2 px-3 Register__disclaimer" muted>
                 By clicking Register, I agree to receiving updates on what's new as well as GradTrak&lsquo;s{' '}
                 <a href="https://gradtrak.me/terms/" target="_blank">
                   Terms of Service
                 </a>{' '}
-                and
+                and{' '}
                 <a href="https://gradtrak.me/privacy/" target="_blank">
                   Privacy Policy
-                </a>
+                </a>.
               </Form.Text>
             </Form.Group>
           </Form>
-          <div className="register">
+          <div className="Login__register">
             Have an account?{' '}
             <a href="#" onClick={this.showLogin}>
               Log In
             </a>
           </div>
-          <hr className="or" />
-          <div className="skip">
+          <hr className="Login__or" />
+          <div className="Login__skip">
             <a href="#" onClick={this.props.onDismiss}>
               Continue as guest
             </a>

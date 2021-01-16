@@ -10,6 +10,8 @@ import { PolyRequirement } from '../models/requirements/poly-requirement.model';
 import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
 
+import './RequirementComponent.css';
+
 type RequirementComponentProps = {
   requirement: Requirement;
   courses: Course[];
@@ -25,9 +27,9 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
   const fulfillment = props.fulfillmentMap.get(props.requirement);
 
   /* Fulfillment CSS classes. */
-  const fulfillments: string[] = [fulfillment.status];
+  const fulfillments: string[] = [`Requirement__${fulfillment.status}`];
   if (fulfillment.method === 'manual') {
-    fulfillments.push('manual');
+    fulfillments.push('Requirement__manual');
   }
 
   /* Courses can be displayed for standalone, unit, and count requirements. */
@@ -77,9 +79,9 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
     reqElem = (
       <>
         {fulfilledUnits}/{props.requirement.units} units of {props.requirement.name}
-        <div className="nested">
+        <div className="Requirement__nested">
           {fulfillingCourses.map((course) => (
-            <div key={course.id} className="course">
+            <div key={course.id} className="Requirement__course">
               {course.getName()}
             </div>
           ))}
@@ -91,15 +93,15 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
     reqElem = (
       <>
         {props.requirement.name}
-        <div className="nested">
+        <div className="Requirement__nested">
           {fulfillingCourses.map((course) => (
-            <div key={course.id} className="fulfilled">
+            <div key={course.id} className="Requirement__fulfilled">
               {course.getName()}
             </div>
           ))}
-          {new Array(Math.max(props.requirement.numRequired, fulfillingCourses.length, 0)).fill(
-            <div>{props.requirement.name}</div>,
-          )}
+          {new Array(props.requirement.numRequired - fulfillingCourses.length).fill(null).map((value, index) => (
+            <div key={index}>{props.requirement.name}</div>
+          ))}
         </div>
       </>
     );
@@ -109,9 +111,9 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
   }
 
   let rendered = (
-    <div className={'requirement ' + fulfillments.join(' ')}>
-      <Dropdown className="req-more">
-        <Dropdown.Toggle className="gt-button">
+    <div className={`Requirement ${fulfillments.join(' ')}`}>
+      <Dropdown className="Requirement__more">
+        <Dropdown.Toggle className="gt-button" as="button" bsPrefix="unused">
           <i className="material-icons">more_horiz</i>
         </Dropdown.Toggle>
         <Dropdown.Menu>

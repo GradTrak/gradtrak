@@ -8,6 +8,8 @@ import { RequirementSet } from '../models/requirement-set.model';
 
 import RequirementCategoryComponent from './RequirementCategoryComponent';
 
+import './RequirementSetComponent.css';
+
 type RequirementSetComponentProps = {
   requirementSet: RequirementSet;
   courses: Course[];
@@ -40,16 +42,16 @@ class RequirementSetComponent extends React.Component<RequirementSetComponentPro
 
   render(): React.ReactElement {
     return (
-      <div className={this.state.collapsed ? 'collapsed' : null}>
-        <Row className="name">
+      <div className={`RequirementSet ${this.state.collapsed ? 'RequirementSet--collapsed' : ''}`}>
+        <Row className="RequirementSet__name">
           <Col className="px-1" xs="auto">
-            <i className="dropdown-arrow material-icons" onClick={this.handleToggleCollapsed}>
+            <i className="material-icons RequirementSet__dropdown-arrow" onClick={this.handleToggleCollapsed}>
               arrow_drop_down
             </i>
           </Col>
           <Col className="px-1">{this.props.requirementSet.name}</Col>
         </Row>
-        <div className="requirement-categories">
+        <div className="RequirementSet__requirement-categories">
           {this.props.requirementSet.requirementCategories.map((reqCategory) => (
             <RequirementCategoryComponent
               key={reqCategory.name}

@@ -4,6 +4,8 @@ import { Col, Container, Dropdown, OverlayTrigger, Popover, Row } from 'react-bo
 import { Course } from '../models/course.model';
 import { Semester } from '../models/semester.model';
 
+import './SemesterBox.css';
+
 type SemesterBoxProps = {
   semester: Semester;
   currentSemesters: Semester[];
@@ -30,20 +32,20 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
       );
       duplicateCourseIcon = (
         <OverlayTrigger trigger={['hover', 'focus']} overlay={duplicatePopover}>
-          <i className="material-icons">error_outline</i>
+          <i className="material-icons SemesterBox__duplicate">error_outline</i>
         </OverlayTrigger>
       );
     }
 
     return (
-      <tr key={course.id} className="course">
+      <tr key={course.id} className="SemesterBox__courses__course">
         {duplicateCourseIcon}
-        <td className="name">{course.dept + ' ' + course.no + ' '}</td>
-        <td className="title">{course.title}</td>
-        <td className="units">{course.units}</td>
-        <td className="button-cell">
+        <td className="SemesterBox__courses__name">{course.dept + ' ' + course.no + ' '}</td>
+        <td className="SemesterBox__courses__title">{course.title}</td>
+        <td className="SemesterBox__courses__units">{course.units}</td>
+        <td className="SemesterBox__courses__button-cell">
           <Dropdown>
-            <Dropdown.Toggle className="gt-button course-more-button"></Dropdown.Toggle>
+            <Dropdown.Toggle className="gt-button SemesterBox__courses__more" as="button"></Dropdown.Toggle>
             <Dropdown.Menu className="dropdown-sm">
               <Dropdown.Item onClick={() => props.onRemoveCourse(course)}>Remove</Dropdown.Item>
             </Dropdown.Menu>
@@ -54,39 +56,39 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
   };
 
   return (
-    <>
+    <div className="SemesterBox">
       <Container>
         <Row className="justify-content-between">
-          <Col className="semester-name" xs="auto">
+          <Col className="SemesterBox__name" xs="auto">
             {props.semester.name}
           </Col>
-          <Col className="unit-count" xs="auto">
+          <Col className="SemesterBox__unit-count" xs="auto">
             {unitCount} units
           </Col>
         </Row>
       </Container>
       <hr />
-      <table className="courses">
+      <table className="SemesterBox__courses">
         <colgroup>
-          <col className="name" />
-          <col className="title" />
-          <col className="units" />
-          <col className="button-cell" />
+          <col className="SemesterBox__courses__name-col" />
+          <col className="SemesterBox__courses__title-col" />
+          <col className="SemesterBox__courses__units-col" />
+          <col className="SemesterBox__courses__button-cell-col" />
         </colgroup>
         <tbody>
-          <tr className="table-header">
-            <td>Class</td>
-            <td>Title</td>
-            <td>Units</td>
-            <td></td>
+          <tr>
+            <th>Class</th>
+            <th>Title</th>
+            <th>Units</th>
+            <th></th>
           </tr>
           {props.semester.courses.map(renderCourse)}
         </tbody>
       </table>
-      <button className="gt-button course-adder" onClick={props.onOpenCourseAdder}>
+      <button className="gt-button SemesterBox__course-adder" onClick={props.onOpenCourseAdder}>
         +
       </button>
-    </>
+    </div>
   );
 }
 

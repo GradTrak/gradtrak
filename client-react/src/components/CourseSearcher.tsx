@@ -1,9 +1,11 @@
 import React from 'react';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Button, Col, Form } from 'react-bootstrap';
 import { AsyncTypeahead, TypeaheadModel } from 'react-bootstrap-typeahead';
 
 import Courses from '../lib/courses';
 import { Course } from '../models/course.model';
+
+import './CourseSearcher.css';
 
 // TODO Put this somewhere more reasonable
 const DEPT_ALIASES = new Map<string, string[]>([
@@ -200,7 +202,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
           this.handleSubmit();
         }}
       >
-        <Form.Group as={Row}>
+        <Form.Row>
           <Col>
             {/* We use AsyncTypeahead because the search function is slow. */}
             <AsyncTypeahead<Course>
@@ -221,7 +223,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
               Add
             </Button>
           </Col>
-        </Form.Group>
+        </Form.Row>
       </Form>
     );
   }

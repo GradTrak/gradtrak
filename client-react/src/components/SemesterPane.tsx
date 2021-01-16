@@ -6,6 +6,8 @@ import { Semester } from '../models/semester.model';
 
 import SemesterBox from './SemesterBox';
 
+import './SemesterPane.css';
+
 type SemesterPaneProps = {
   semesters: Map<string, Semester[]>;
   onOpenSemesterChanger: () => void;
@@ -27,14 +29,17 @@ function SemesterPane(props: SemesterPaneProps): React.ReactElement {
     <Container className="px-4 py-3">
       <Row className="justify-content-center">
         <Col className="my-4" xs={8}>
-          <button className="gt-button gt-button-primary semester-changer" onClick={props.onOpenSemesterChanger}>
+          <button
+            className="gt-button gt-button-primary SemesterPane__semester-changer"
+            onClick={props.onOpenSemesterChanger}
+          >
             Edit Semesters
           </button>
         </Col>
       </Row>
       <Row>
         {semesterArr.map((semester) => (
-          <Col key={semester.name} className="semester" xs={6}>
+          <Col key={semester.name} className="SemesterPane__semester" xs={6}>
             <SemesterBox
               semester={semester}
               currentSemesters={semesterArr}

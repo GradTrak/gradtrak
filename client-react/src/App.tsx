@@ -521,8 +521,8 @@ class App extends React.Component<AppProps, AppState> {
     if (this.state.loggedIn) {
       return (
         <>
-          <div className="left">Name: {this.state.user.username}</div>
-          <div className="right">
+          <div className="App__left">Name: {this.state.user.username}</div>
+          <div className="App__right">
             <button className="gt-button" onClick={this.openAccountEditor}>
               Account
             </button>
@@ -540,7 +540,7 @@ class App extends React.Component<AppProps, AppState> {
               Help
             </a>
             <span> | &nbsp;</span>
-            <i className="material-icons" onClick={this.openReportForm}>
+            <i className="material-icons App__report" onClick={this.openReportForm}>
               flag
             </i>
           </div>
@@ -550,8 +550,8 @@ class App extends React.Component<AppProps, AppState> {
       /* Not logged in. */
       return (
         <>
-          <div className="left">Guest User</div>
-          <div className="right">
+          <div className="App__left">Guest User</div>
+          <div className="App__right">
             <button className="gt-button" onClick={this.openLogin}>
               Register to Save
             </button>
@@ -565,7 +565,7 @@ class App extends React.Component<AppProps, AppState> {
               Help
             </a>
             <span> | &nbsp;</span>
-            <i className="material-icons" onClick={this.openReportForm}>
+            <i className="material-icons App__report" onClick={this.openReportForm}>
               flag
             </i>
           </div>
@@ -577,8 +577,7 @@ class App extends React.Component<AppProps, AppState> {
   private renderBody(): React.ReactElement {
     if (this.state.userData) {
       return (
-        <Container>
-          <Row className="main" noGutters>
+          <Row className="App__main" noGutters>
             <Col xs={8}>
               <SemesterPane
                 semesters={this.state.userData.semesters}
@@ -599,7 +598,6 @@ class App extends React.Component<AppProps, AppState> {
               />
             </Col>
           </Row>
-        </Container>
       );
     } else {
       /* Loading. */
@@ -671,13 +669,13 @@ class App extends React.Component<AppProps, AppState> {
   render(): React.ReactElement {
     return (
       <>
-        <div className="header">
-          <div className="title">
-            GradTrak<sup className="beta">BETA</sup>
+        <div className="App__header">
+          <div className="App__title">
+            GradTrak<sup className="App__beta">BETA</sup>
           </div>
-          <div className="name">{this.renderName()}</div>
+          <div className="App__name">{this.renderName()}</div>
         </div>
-        <div className="body">{this.renderBody()}</div>
+        <div className="App__body">{this.renderBody()}</div>
         {this.renderModals()}
       </>
     );

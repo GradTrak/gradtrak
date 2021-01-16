@@ -7,6 +7,8 @@ import { UserData } from '../models/user-data.model';
 
 import GoalSelector from './GoalSelector';
 
+import './Initializer.css';
+
 type InitializerProps = {
   onInitializeData: (userData: UserData) => void;
 };
@@ -36,12 +38,26 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
 
   setStage = (stage: 'semesters' | 'goals'): void => {
     if (stage === 'goals') {
+      /* Validate semesters. */
       const startYear = parseInt(this.startYearRef.current.value);
       const gradYear = parseInt(this.gradYearRef.current.value);
+      if (!startYear || !gradYear) {
+        this.setState({
+          error: 'Please fill in all required fields.',
+        });
+        return;
+      }
+      if (startYear >= gradYear) {
+        this.setState({
+          error: 'The start year must be before the year of graduation.',
+        });
+        return;
+      }
     }
 
     this.setState({
       stage,
+      error: null,
     });
   };
 
@@ -77,7 +93,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
       <>
         <div style={{ display: this.state.stage === 'semesters' ? undefined : 'none' }}>
           <h4 className="gt-modal-header">Set Up</h4>
-          <Form.Group>
+          <Form.Group controlId="Initializer__start-year">
             <Form.Label>Start Year</Form.Label>
             <Form.Control as="select" ref={this.startYearRef}>
               <option value={2015}>2015</option>
@@ -89,7 +105,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
               <option value={2021}>2021</option>
             </Form.Control>
           </Form.Group>
-          <Form.Group>
+          <Form.Group controlId="Initializer__end-year">
             <Form.Label>Graduation Year</Form.Label>
             <Form.Control as="select" ref={this.gradYearRef}>
               <option value={2020}>2020</option>
@@ -105,12 +121,12 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
               <option value={2030}>2030</option>
             </Form.Control>
           </Form.Group>
-          <Form.Group>
+          <Form.Group controlId="Initializer__include-summers">
             <Form.Check label="Include Summer Semesters?" ref={this.includeSummersRef} />
           </Form.Group>
           <Form.Group className="my-4">
-            <Button onClick={() => this.setStage('goals')}>Next</Button>
-            <span className="failure">{this.state.error}</span>
+            <Button variant="primary" block onClick={() => this.setStage('goals')}>Next</Button>
+            <span className="Initializer__failure">{this.state.error}</span>
           </Form.Group>
         </div>
         <div style={{ display: this.state.stage === 'goals' ? undefined : 'none' }}>

@@ -4,6 +4,8 @@ import Courses from '../lib/courses';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
 
+import './RequirementDisplay.css';
+
 type RequirementDisplayProps = {
   requirement: Requirement;
 };
@@ -44,8 +46,8 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
     return (
       <>
-        <h3 className="display-title">Eligible Courses</h3>
-        <div className="course-list">
+        <h3>Eligible Courses</h3>
+        <div className="RequirementDisplay__course-list">
           {this.getFulfillingCourses(this.props.requirement, this.state.courses).map((course) => (
             <h4 key={course.id}>{course.toString()}</h4>
           ))}
