@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "../../build/client-react",
+    "rootDir": ".",
+    "composite": true,
+    "tsBuildInfoFile": "../../build/client-react.tsbuildinfo",
+    "strict": false,
+    "esModuleInterop": true
+  },
+  "references": [
+    {
+      "path": "../common"
+    }
+  ]
+}
