@@ -3,7 +3,6 @@ import path from 'path';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import csrf from 'csurf';
-import mongoose from 'mongoose';
 import logger from 'morgan';
 import passport from 'passport';
 import session from 'express-session';
@@ -12,7 +11,6 @@ import connectRedis from 'connect-redis';
 import * as db from './config/db';
 import { deserializeUser, googleStrategy, localStrategy, serializeUser } from './config/passport';
 import { client as redisClient } from './config/redis';
-import { UserType } from './models/user';
 import { api } from './routers/api';
 
 db.connect();

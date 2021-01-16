@@ -125,7 +125,9 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
             <Form.Check label="Include Summer Semesters?" ref={this.includeSummersRef} />
           </Form.Group>
           <Form.Group className="my-4">
-            <Button variant="primary" block onClick={() => this.setStage('goals')}>Next</Button>
+            <Button variant="primary" block onClick={() => this.setStage('goals')}>
+              Next
+            </Button>
             <span className="Initializer__failure">{this.state.error}</span>
           </Form.Group>
         </div>

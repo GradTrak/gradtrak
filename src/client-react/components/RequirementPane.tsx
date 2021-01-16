@@ -54,7 +54,10 @@ function RequirementPane(props: RequirementPaneProps): React.ReactElement {
     <Container className="px-4 py-3">
       <Row className="justify-content-center">
         <Col className="my-4" xs={10}>
-          <button className="gt-button gt-button-primary RequirementPane__goal-editor" onClick={props.onOpenGoalSelector}>
+          <button
+            className="gt-button gt-button-primary RequirementPane__goal-editor"
+            onClick={props.onOpenGoalSelector}
+          >
             Edit Majors
           </button>
         </Col>

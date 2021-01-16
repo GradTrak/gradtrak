@@ -577,27 +577,27 @@ class App extends React.Component<AppProps, AppState> {
   private renderBody(): React.ReactElement {
     if (this.state.userData) {
       return (
-          <Row className="App__main" noGutters>
-            <Col xs={8}>
-              <SemesterPane
-                semesters={this.state.userData.semesters}
-                onOpenSemesterChanger={this.openSemesterChanger}
-                onOpenCourseAdder={this.openCourseAdder}
-                onRemoveCourse={this.removeCourse}
-              />
-            </Col>
-            <Col xs={4}>
-              <RequirementPane
-                courses={this.getCurrentCourses()}
-                goals={this.state.userData.goals}
-                manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
-                onOpenGoalSelector={this.openGoalSelector}
-                onOpenRequirementDisplay={this.openRequirementDisplay}
-                onManualFulfill={this.manuallyFulfill}
-                onManualUnfulfill={this.manuallyUnfulfill}
-              />
-            </Col>
-          </Row>
+        <Row className="App__main" noGutters>
+          <Col xs={8}>
+            <SemesterPane
+              semesters={this.state.userData.semesters}
+              onOpenSemesterChanger={this.openSemesterChanger}
+              onOpenCourseAdder={this.openCourseAdder}
+              onRemoveCourse={this.removeCourse}
+            />
+          </Col>
+          <Col xs={4}>
+            <RequirementPane
+              courses={this.getCurrentCourses()}
+              goals={this.state.userData.goals}
+              manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
+              onOpenGoalSelector={this.openGoalSelector}
+              onOpenRequirementDisplay={this.openRequirementDisplay}
+              onManualFulfill={this.manuallyFulfill}
+              onManualUnfulfill={this.manuallyUnfulfill}
+            />
+          </Col>
+        </Row>
       );
     } else {
       /* Loading. */

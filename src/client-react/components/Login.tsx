@@ -224,7 +224,8 @@ class Login extends React.Component<LoginProps, LoginState> {
                 and{' '}
                 <a href="https://gradtrak.me/privacy/" target="_blank">
                   Privacy Policy
-                </a>.
+                </a>
+                .
               </Form.Text>
             </Form.Group>
           </Form>
