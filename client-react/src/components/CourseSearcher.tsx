@@ -84,9 +84,35 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     });
   };
 
+  handleSearch = async (input: string) => {
+    // TODO: sort this by search rankings for relevance
+    let options = [];
+    if (input.length > 2) {
+      options = this.courseSorter(this.state.courses, input).slice(0, 8);
+      this.setState({
+        options,
+      });
+    }
+  };
+
+  handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      if (!this.state.selected) {
+        this.setState({
+          selected: this.state.options[0],
+        });
+      } else {
+        this.handleSubmit();
+      }
+    }
+  };
+
   handleSubmit = (): void => {
     const course = this.state.selected as Course;
     this.props.onSelectCourse(course);
+    this.setState({
+      selected: null,
+    });
   };
 
   /**
@@ -140,7 +166,6 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
       const containsDept: boolean = deptAlises.some((dept) => splitInput.includes(dept));
       const containsNum: boolean = splitInput.includes(courseNum);
       if (containsDept && containsNum) {
-        console.log(course);
         return 1000;
       }
       if (containsDept || containsNum) {
@@ -171,30 +196,6 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
       return <>Loading...</>;
     }
 
-    const handleSearch = async (input: string) => {
-      // TODO: sort this by search rankings for relevance
-      let options = [];
-      if (input.length > 2) {
-        options = this.courseSorter(this.state.courses, input).slice(0, 8);
-        console.log(options);
-        this.setState({
-          options,
-        });
-      }
-    };
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.defaultPrevented) {
-        return;
-      }
-
-      if (e.key === 'Enter' && this.state.options && !this.state.selected) {
-        this.setState({
-          selected: this.state.options[0],
-        });
-      }
-    };
-
     return (
       <Form
         onSubmit={(e) => {
@@ -209,10 +210,10 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
               id="course-search"
               isLoading={this.state.options === null}
               selected={this.state.selected ? [this.state.selected] : []}
-              onSearch={handleSearch}
+              onSearch={this.handleSearch}
               options={this.state.options}
               filterBy={() => true}
-              onKeyDown={handleKeyDown}
+              onKeyDown={this.handleKeyDown}
               onChange={(selected) => this.setState({ selected: selected[0] || null })}
               labelKey={(course) => course.toString()}
               placeholder="Search for a class"

@@ -22,12 +22,14 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
     if (semestersWithCourse.length > 1) {
       const duplicatePopover = (
         <Popover id="semester-duplicate-popover">
-          This course is duplicated in:
-          <ul>
-            {semestersWithCourse.map((semester) => (
-              <li>{semester.name}</li>
-            ))}
-          </ul>
+          <Popover.Content>
+            This course is duplicated in:
+            <ul>
+              {semestersWithCourse.map((semester) => (
+                <li key={semester.name}>{semester.name}</li>
+              ))}
+            </ul>
+          </Popover.Content>
         </Popover>
       );
       duplicateCourseIcon = (
@@ -39,8 +41,10 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
 
     return (
       <tr key={course.id} className="SemesterBox__courses__course">
-        {duplicateCourseIcon}
-        <td className="SemesterBox__courses__name">{course.dept + ' ' + course.no + ' '}</td>
+        <td className="SemesterBox__courses__name">
+          {duplicateCourseIcon}
+          {course.dept + ' ' + course.no + ' '}
+        </td>
         <td className="SemesterBox__courses__title">{course.title}</td>
         <td className="SemesterBox__courses__units">{course.units}</td>
         <td className="SemesterBox__courses__button-cell">
