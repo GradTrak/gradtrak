@@ -63,7 +63,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
    */
   addSemester = (): void => {
     const term = this.termRef.current.value;
-    const yearNum = parseInt(this.termRef.current.value);
+    const yearNum = parseInt(this.yearRef.current.value);
 
     if (!(term && yearNum) || yearNum < 2000 || yearNum > 2050) {
       this.setState({
@@ -166,7 +166,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
         <Button variant="primary" onClick={this.handleSubmit}>
           Confirm
         </Button>
-        <Modal>
+        <Modal show={this.state.semesterAdderOpen} onHide={this.closeSemesterAdder}>
           <Modal.Body>
             <h4 className="gt-modal-header">Add a semester</h4>
             <Form
