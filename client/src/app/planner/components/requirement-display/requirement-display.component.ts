@@ -15,13 +15,14 @@ type sortType = 'no' | 'title' | 'grade';
 export class RequirementDisplayComponent implements OnInit {
   @Input() requirementInput: Requirement;
   /* Views the berkeleytime information about a course */
-  @Output() openBerkeleytime: EventEmitter<Course> = new EventEmitter<Course>();
   sortDescending: boolean = false;
   // TODO: use this.NO and whatnot? instead of fixed strings?
   sortField: sortType;
+  selectedCourse: Course;
 
   constructor(private courseService: CourseService) {
     this.sortField = 'no';
+    this.selectedCourse = null;
   }
 
   ngOnInit(): void {}
@@ -91,7 +92,7 @@ export class RequirementDisplayComponent implements OnInit {
   }
 
   viewCourseBerkeleytime(course: Course): void {
-    this.openBerkeleytime.emit(course);
+    this.selectedCourse = course;
   }
 
   /**

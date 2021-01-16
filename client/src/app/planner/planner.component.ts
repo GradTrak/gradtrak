@@ -34,7 +34,6 @@ export class PlannerComponent implements OnInit {
   @ViewChild('semesterChanger', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>;
   @ViewChild('requirementDisplay', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
-  @ViewChild('berkeleytime', { static: false }) private berkeleytimeTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;
@@ -156,11 +155,6 @@ export class PlannerComponent implements OnInit {
     this.closeModal();
     this.displayedRequirement = displayedRequirement;
     this.modalInstance = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
-  }
-
-  openBerkeleytime(course: Course): void {
-    this.berkeleytimeCourse = course;
-    this.modalInstance = this.modalService.open(this.berkeleytimeTemplate, { size: 'xl' });
   }
 
   logout(): void {

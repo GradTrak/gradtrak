@@ -18,7 +18,6 @@
         <p *ngIf="sortField === 'grade' && sortDescending">&#8595;</p>
       </th>
     </tr>
-
     <tr></tr>
     <tr
       class="course-table-row"
@@ -30,6 +29,7 @@
       <td>{{ course.berkeleytimeData.grade }}</td>
     </tr>
   </table>
-
-  <br />
+</div>
+<div *ngIf="selectedCourse">
+  <app-berkeleytime-info [berkeleytimeData]="selectedCourse.berkeleytimeData"></app-berkeleytime-info>
 </div>
