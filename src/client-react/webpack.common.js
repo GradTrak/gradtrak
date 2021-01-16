@@ -12,11 +12,20 @@ module.exports = {
     path: path.resolve(__dirname, '../../build/server/dist'),
   },
   plugins: [
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [{ from: '../../public' }],
+    new CleanWebpackPlugin({
+      dry: false,
+      dangerouslyAllowCleanPatternsOutsideProject: true,
     }),
-    new ForkTsCheckerWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: '../../public' },
+      ],
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        build: true,
+      },
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'index.html'),
     }),

@@ -1,5 +1,8 @@
-# Node dependencies
+# Node dependencies.
 node_modules
 
-# Build output
+# Build output.
 build/
+
+# Yarn stuff.
+yarn-error.log
