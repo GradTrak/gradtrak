@@ -1,4 +1,5 @@
-import { Component, OnInit, Directive, Input, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Directive, Input, ElementRef, Renderer2, ViewChild, TemplateRef } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { BerkeleytimeData } from '../../models/course.model';
 
 /**
@@ -30,11 +31,20 @@ export class CachedSrcDirective {
 @Component({
   selector: 'app-berkeleytime-info',
   templateUrl: './berkeleytime-info.component.html',
+  styleUrls: ['./berkeleytime-info.component.scss'],
 })
 export class BerkeleytimeInfoComponent implements OnInit {
   @Input() berkeleytimeData: BerkeleytimeData;
 
-  constructor() {}
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  @ViewChild('berkeleytimeIframe', { static: true }) private iframeTemplate: TemplateRef<any>;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
+
+  private iframeModal: NgbModalRef;
+
+  constructor(private modalService: NgbModal) {
+    this.iframeModal = null;
+  }
 
   ngOnInit(): void {}
 
@@ -51,5 +61,40 @@ export class BerkeleytimeInfoComponent implements OnInit {
     }
     const url = `https://berkeleytime.com/grades/0-${this.berkeleytimeData.berkeleytimeId}-all-all`;
     return url;
+  }
+
+  /**
+   * Emit event to open berkeleytime modal
+   */
+  showBerkeleytimeDistribution(): void {
+    if (this.iframeModal) {
+      this.iframeModal.close();
+    }
+    this.iframeModal = this.modalService.open(this.iframeTemplate);
+  }
+
+  isAvailable(): boolean {
+    if (this.berkeleytimeData.berkeleytimeId === null || this.berkeleytimeData.berkeleytimeId === undefined) {
+      return false;
+    }
+    let badBerkeleytime = !this.berkeleytimeData.grade;
+    badBerkeleytime =
+      badBerkeleytime &&
+      !(Array.isArray(this.berkeleytimeData.semestersOffered) && this.berkeleytimeData.semestersOffered.length);
+    if (badBerkeleytime) {
+      // If berkeleytime returns poop...
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * What to display for the semester
+   */
+  getSemesterText(): string[] {
+    if (!Array.isArray(this.berkeleytimeData.semestersOffered)) {
+      return ['unavailable'];
+    }
+    return this.berkeleytimeData.semestersOffered.length ? this.berkeleytimeData.semestersOffered : ['unavailable'];
   }
 }

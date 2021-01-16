@@ -16,25 +16,10 @@
       </div>
     </div>
   </form>
-  <div [ngSwitch]="berkeleytimeStatus()">
-    <div *ngSwitchCase="'available'">
-      <span>
-        <p>Average grade: {{ searchedCourse.berkeleytimeData.grade || 'unavailable' }}</p>
-        <button
-          class="btn btn-secondary"
-          *ngIf="searchedCourse.berkeleytimeData.grade"
-          (click)="showBerkeleytimeDistribution()"
-        >
-          See distribution
-        </button>
-      </span>
-      <p>Semesters previously offered: {{ getSemesterText() }}</p>
-    </div>
-    <div *ngSwitchCase="'no-course-selected'"></div>
-    <div *ngSwitchCase="'unavailable'">
-      <p>This course does not have berkeleytime information available.</p>
-    </div>
-  </div>
+  <app-berkeleytime-info
+    *ngIf="hasSearchedCourse()"
+    [berkeleytimeData]="searchedCourse.berkeleytimeData"
+  ></app-berkeleytime-info>
 </ng-container>
 
 <ng-template #loading>

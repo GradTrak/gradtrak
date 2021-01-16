@@ -5,8 +5,6 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
 
-type availabilityType = 'no-course-selected' | 'unavailable' | 'available';
-
 @Component({
   selector: 'app-course-searcher',
   templateUrl: './course-searcher.component.html',
@@ -18,7 +16,6 @@ export class CourseSearcherComponent implements OnInit {
   readonly BERKELEYTIME_AVAILABLE = 2;
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   @Output() openBerkeleytime: EventEmitter<Course> = new EventEmitter<Course>();
-  berkeleyTimeAvailability: availabilityType;
   searchedCourse: Course;
   allCourses: Course[];
 
@@ -166,50 +163,14 @@ export class CourseSearcherComponent implements OnInit {
     );
   };
 
+  hasSearchedCourse() {
+    return this.searchedCourse instanceof Course;
+  }
+
   returnCourse(): void {
     if (this.searchedCourse instanceof Course) {
       this.courseReturned.emit(this.searchedCourse);
       this.searchedCourse = null;
     }
-  }
-
-  /**
-   * Emit event to open berkeleytime modal
-   */
-  showBerkeleytimeDistribution(): void {
-    this.openBerkeleytime.emit(this.searchedCourse);
-  }
-
-  berkeleytimeStatus(): availabilityType {
-    if (!(this.searchedCourse instanceof Course)) {
-      return 'no-course-selected';
-    }
-    if (!this.searchedCourse.berkeleytimeData.berkeleytimeId) {
-      return 'unavailable';
-    }
-    let badBerkeleytime: boolean = !this.searchedCourse.berkeleytimeData.grade;
-    badBerkeleytime =
-      badBerkeleytime &&
-      !(
-        Array.isArray(this.searchedCourse.berkeleytimeData.semestersOffered) &&
-        this.searchedCourse.berkeleytimeData.semestersOffered.length
-      );
-    if (badBerkeleytime) {
-      // If berkeleytime returns poop...
-      return 'unavailable';
-    }
-    return 'available';
-  }
-
-  /**
-   * What to display for the semester
-   */
-  getSemesterText(): string[] {
-    if (!Array.isArray(this.searchedCourse.berkeleytimeData.semestersOffered)) {
-      return ['unavailable'];
-    }
-    return this.searchedCourse.berkeleytimeData.semestersOffered.length
-      ? this.searchedCourse.berkeleytimeData.semestersOffered
-      : ['unavailable'];
   }
 }

@@ -1,2 +1,20 @@
-<iframe [cachedSrc]="getBerkeleytimeGradeUrl()" width="100%" height="580" id="btime-iframe"></iframe>
-<p>Offered {{ berkeleytimeData.semestersOffered.slice(0, 10) }}</p>
+<div>
+  <ng-container *ngIf="isAvailable(); else unavailable">
+    <p>
+      Average grade: {{ berkeleytimeData.grade || 'unavailable' }}
+      <button class="btn btn-secondary btn-sm" *ngIf="berkeleytimeData.grade" (click)="showBerkeleytimeDistribution()">
+        See distribution
+      </button>
+    </p>
+    <p>Semesters previously offered: {{ getSemesterText() }}</p>
+  </ng-container>
+  <ng-template #unavailable>
+    <p>This course does not have berkeleytime information available.</p>
+  </ng-template>
+</div>
+
+<ng-template #berkeleytimeIframe>
+  <div class="modal-body">
+    <iframe class="grades-iframe" [cachedSrc]="getBerkeleytimeGradeUrl()"></iframe>
+  </div>
+</ng-template>
