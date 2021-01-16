@@ -122,12 +122,12 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
           ) : null}
           <Dropdown.Item
             onClick={
-              !props.manuallyFulfilled
+              !manuallyFulfilled
                 ? () => props.onManualFulfill(props.requirement)
                 : () => props.onManualUnfulfill(props.requirement)
             }
           >
-            Mark as {!props.manuallyFulfilled ? 'Fulfilled' : 'Unfulfilled'}
+            Mark as {!manuallyFulfilled ? 'Fulfilled' : 'Unfulfilled'}
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
