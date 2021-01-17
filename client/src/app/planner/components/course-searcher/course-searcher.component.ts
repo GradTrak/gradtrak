@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
 import { CourseService } from '../../services/course.service';
@@ -11,9 +10,6 @@ import { CourseService } from '../../services/course.service';
   styleUrls: ['./course-searcher.component.scss'],
 })
 export class CourseSearcherComponent implements OnInit {
-  readonly BERKELEYTIME_UNAVAILABLE_NO_COURSE_SELECTED = 0;
-  readonly BERKELEYTIME_UNAVAILABLE_COURSE_SELECTED = 1;
-  readonly BERKELEYTIME_AVAILABLE = 2;
   @Output() courseReturned: EventEmitter<Course> = new EventEmitter<Course>();
   searchedCourse: Course;
   allCourses: Course[];

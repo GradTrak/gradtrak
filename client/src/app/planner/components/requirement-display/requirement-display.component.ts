@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
 import { Requirement } from '../../models/requirement.model';
 import { CourseService } from '../../services/course.service';
 
-type sortType = 'no' | 'title' | 'grade';
+type SortType = 'no' | 'title' | 'grade';
 
 @Component({
   selector: 'app-requirement-display',
@@ -14,10 +14,10 @@ type sortType = 'no' | 'title' | 'grade';
 })
 export class RequirementDisplayComponent implements OnInit {
   @Input() requirementInput: Requirement;
+
   /* Views the berkeleytime information about a course */
-  sortDescending: boolean = false;
-  // TODO: use this.NO and whatnot? instead of fixed strings?
-  sortField: sortType;
+  sortField: SortType;
+  sortDescending: boolean;
   selectedCourse: Course;
 
   constructor(private courseService: CourseService) {
@@ -36,7 +36,7 @@ export class RequirementDisplayComponent implements OnInit {
       ),
       map((coursesInput: Course[]) => {
         const courses = [...coursesInput];
-        let comparator;
+        let comparator: (a: Course, b: Course) => number;
         switch (this.sortField) {
           case 'no':
             comparator = (a: Course, b: Course): number => {
@@ -78,14 +78,12 @@ export class RequirementDisplayComponent implements OnInit {
               return gradeA[0] < gradeB[0] ? -1 : 1;
             };
             break;
-          default:
-            break;
         }
 
-        courses.sort(comparator);
-        if (this.sortDescending) {
-          courses.reverse();
-        }
+        /* Reverse the comparator if we are sorting descending. */
+        let reversedComparator = (a, b) => -comparator(a, b);
+
+        courses.sort(reversedComparator);
         return courses;
       }),
     );
@@ -100,7 +98,7 @@ export class RequirementDisplayComponent implements OnInit {
    * accordingly. Defaults to descending and switches the sort
    * order if you click on the same field multiple times.
    */
-  changeSort(clicked: sortType): void {
+  changeSort(clicked: SortType): void {
     if (clicked === this.sortField) {
       this.sortDescending = !this.sortDescending;
     } else {
