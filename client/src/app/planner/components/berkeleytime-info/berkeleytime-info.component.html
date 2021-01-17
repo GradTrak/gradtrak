@@ -15,6 +15,6 @@
 
 <ng-template #berkeleytimeIframe>
   <div class="modal-body">
-    <iframe class="grades-iframe" [cachedSrc]="getBerkeleytimeGradeUrl()"></iframe>
+    <iframe class="grades-iframe" [src]="sanitizer.bypassSecurityTrustResourceUrl(getBerkeleytimeGradeUrl())"></iframe>
   </div>
 </ng-template>

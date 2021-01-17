@@ -15,10 +15,7 @@ import { RequirementsPaneComponent } from './components/requirements-pane/requir
 import { RequirementComponent } from './components/requirement/requirement.component';
 import { RequirementCategoryComponent } from './components/requirement-category/requirement-category.component';
 import { CourseSearcherComponent } from './components/course-searcher/course-searcher.component';
-import {
-  BerkeleytimeInfoComponent,
-  CachedSrcDirective,
-} from './components/berkeleytime-info/berkeleytime-info.component';
+import { BerkeleytimeInfoComponent } from './components/berkeleytime-info/berkeleytime-info.component';
 import { GoalSelectorComponent } from './components/goal-selector/goal-selector.component';
 import { SemesterChangerComponent } from './components/semester-changer/semester-changer.component';
 import { RequirementDisplayComponent } from './components/requirement-display/requirement-display.component';
@@ -45,7 +42,6 @@ import { InitializerComponent } from './components/initializer/initializer.compo
     ReportPaneComponent,
     AccountEditorComponent,
     InitializerComponent,
-    CachedSrcDirective,
   ],
   exports: [
     PlannerComponent, //
