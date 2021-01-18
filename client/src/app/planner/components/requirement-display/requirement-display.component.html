@@ -34,7 +34,8 @@
       >
         <td class="no">{{ course.dept }} {{ course.no }}</td>
         <td class="title">{{ course.title }}</td>
-        <td class="grade">{{ course.berkeleytimeData.grade || '-' }}</td>
+        <!-- TODO This '&&' should be removed after strict typing is enabled. */ -->
+        <td class="grade">{{ (course.berkeleytimeData && course.berkeleytimeData.grade) || '-' }}</td>
       </tr>
     </tbody>
   </table>

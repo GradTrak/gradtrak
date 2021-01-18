@@ -43,7 +43,9 @@ export class BerkeleytimeInfoComponent implements OnInit {
   }
 
   isAvailable(): boolean {
+    // TODO These checks need to be re-worked after we enable strict typing.
     if (
+      !this.course.berkeleytimeData ||
       this.course.berkeleytimeData.berkeleytimeId === null ||
       this.course.berkeleytimeData.berkeleytimeId === undefined
     ) {
