@@ -30,9 +30,9 @@ export class PlannerComponent implements OnInit {
   @ViewChild('reportForm', { static: true }) private reportFormTemplate: TemplateRef<any>;
   @ViewChild('accountEditor', { static: true }) private accountEditorTemplate: TemplateRef<any>;
   @ViewChild('goalSelector', { static: false }) private goalSelectorTemplate: TemplateRef<any>;
-  @ViewChild('semesterChangerTemplate', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
+  @ViewChild('semesterChanger', { static: false }) private semesterChangerTemplate: TemplateRef<any>;
   @ViewChild('courseAdder', { static: false }) private courseAdderTemplate: TemplateRef<any>;
-  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
+  @ViewChild('requirementDisplay', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
   private modalInstance: NgbModalRef;

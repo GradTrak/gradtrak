@@ -2,6 +2,21 @@ import mongoose from 'mongoose';
 
 import { CoursePrototype } from '../../common/prototypes/course.prototype';
 
+const berkeleytimeDataSchema = new mongoose.Schema({
+  berkeleytimeId: {
+    type: String,
+    required: true,
+  },
+  grade: {
+    type: String,
+    required: false,
+  },
+  semestersOffered: {
+    type: [String],
+    required: false,
+  },
+});
+
 const courseSchema = new mongoose.Schema(
   {
     id: {
@@ -24,6 +39,10 @@ const courseSchema = new mongoose.Schema(
     },
     units: {
       type: Number,
+      required: true,
+    },
+    berkeleytimeData: {
+      type: berkeleytimeDataSchema,
       required: true,
     },
     tagIds: {
