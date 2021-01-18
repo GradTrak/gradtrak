@@ -1,3 +1,4 @@
+import { BerkeleytimeData } from 'common/prototypes/berkeleytime-data';
 import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Tag } from './tag.model';
 
@@ -10,16 +11,27 @@ export class Course {
   no: string;
   title: string;
   units: number;
+  berkeleytimeData: BerkeleytimeData;
   tags: Tag[];
   equivIds: string[];
   equiv: Course[];
 
-  constructor(id: string, dept: string, no: string, title: string, units: number, tags?: Tag[], equivIds?: string[]) {
+  constructor(
+    id: string,
+    dept: string,
+    no: string,
+    title: string,
+    units: number,
+    berkeleytimeData: BerkeleytimeData,
+    tags?: Tag[],
+    equivIds?: string[],
+  ) {
     this.id = id;
     this.dept = dept;
     this.no = no;
     this.title = title;
     this.units = units;
+    this.berkeleytimeData = berkeleytimeData;
     this.tags = tags;
     this.equivIds = equivIds;
     this.equiv = null;
@@ -32,6 +44,7 @@ export class Course {
       proto.no,
       proto.title,
       proto.units,
+      proto.berkeleytimeData,
       proto.tagIds.map((tagId: string) => tagMap.get(tagId)),
       proto.equivIds,
     );
