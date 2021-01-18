@@ -22,7 +22,7 @@
     "pretty:client": "prettier --check \"client/src/app/**/*.{html,scss,ts}\"",
     "pretty-fix:client": "prettier --check --write \"client/src/app/**/*.{html,scss,ts}\"",
     "build:server": "tsc --build src/server/tsconfig.json",
-    "watch:server": "nodemon --ext ts --exec \"yarn build:server && yarn start\"",
+    "watch:server": "nodemon --watch src/server --ext ts --exec \"yarn build:server && yarn start\"",
     "lint:server": "cd src/server && eslint \"**/*.ts\"",
     "lint-fix:server": "cd src/server && eslint --fix \"**/*.ts\"",
     "pretty:server": "prettier --check \"src/server/**/*.ts\"",
