@@ -44,15 +44,22 @@ module.exports = {
       {
         loader: 'babel-loader',
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /^webpack\..*\.js$/,
+        ],
       },
       {
         use: ['style-loader', 'css-loader'],
         test: /\.css$/,
       },
       {
+        loader: '@svgr/webpack',
+        test: /\.svg$/,
+      },
+      {
         type: 'asset/resource',
-        exclude: /\.(js|jsx|ts|tsx|css|html)$/,
+        exclude: /\.(js|jsx|ts|tsx|css|html|svg)$/,
       },
     ],
   },

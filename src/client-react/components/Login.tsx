@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 
 import { validateEmail } from '../lib/utils';
 
-import googleSigninButton from '../assets/google-signin.svg';
+import GoogleSigninButton from '../assets/google-signin.svg';
 import './Login.css';
 
 type LoginProps = {
@@ -135,7 +135,7 @@ class Login extends React.Component<LoginProps, LoginState> {
           <div className="row Login__google-signin">
             <div className="col">
               <a href="/login/google">
-                <img src={googleSigninButton} />
+                <GoogleSigninButton />
               </a>
             </div>
           </div>
@@ -183,7 +183,7 @@ class Login extends React.Component<LoginProps, LoginState> {
           <div className="row Login__google-signin">
             <div className="col">
               <a href="/login/google">
-                <img src={googleSigninButton} />
+                <GoogleSigninButton />
               </a>
             </div>
           </div>
