@@ -34,6 +34,9 @@
     </tbody>
   </table>
 </div>
-<div *ngIf="selectedCourse">
-  <app-berkeleytime-info [berkeleytimeData]="selectedCourse.berkeleytimeData"></app-berkeleytime-info>
-</div>
+
+<ng-template #courseInfo>
+  <div class="modal-body">
+    <app-berkeleytime-info [course]="selectedCourse"></app-berkeleytime-info>
+  </div>
+</ng-template>

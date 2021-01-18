@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
@@ -15,14 +16,19 @@ type SortType = 'no' | 'title' | 'grade';
 export class RequirementDisplayComponent implements OnInit {
   @Input() requirementInput: Requirement;
 
+  /* eslint-disable no-explicit-any */
+  @ViewChild('courseInfo', { static: true }) private readonly courseInfoTemplate: TemplateRef<any>;
+
   /* Views the berkeleytime information about a course */
   sortField: SortType;
   sortDescending: boolean;
   selectedCourse: Course;
+  courseInfoModal: NgbModalRef;
 
-  constructor(private courseService: CourseService) {
+  constructor(private modalService: NgbModal, private courseService: CourseService) {
     this.sortField = 'no';
     this.selectedCourse = null;
+    this.courseInfoModal = null;
   }
 
   ngOnInit(): void {}
@@ -93,6 +99,7 @@ export class RequirementDisplayComponent implements OnInit {
 
   viewCourseBerkeleytime(course: Course): void {
     this.selectedCourse = course;
+    this.courseInfoModal = this.modalService.open(this.courseInfoTemplate, { size: 'xl' });
   }
 
   /**

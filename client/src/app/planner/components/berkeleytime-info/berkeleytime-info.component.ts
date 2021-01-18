@@ -1,7 +1,10 @@
 import { Component, OnInit, Input, ViewChild, SecurityContext, TemplateRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { BerkeleytimeData } from 'common/prototypes/berkeleytime-data';
+import { Course } from '../../models/course.model';
+
+/* Make sure you modify hasAllFields below. */
+type FieldType = 'grade' | 'semesters-offered' | 'grade-distribution';
 
 @Component({
   selector: 'app-berkeleytime-info',
@@ -9,16 +12,17 @@ import { BerkeleytimeData } from 'common/prototypes/berkeleytime-data';
   styleUrls: ['./berkeleytime-info.component.scss'],
 })
 export class BerkeleytimeInfoComponent implements OnInit {
-  @Input() berkeleytimeData: BerkeleytimeData;
+  @Input() readonly course: Course;
+  @Input() readonly fields: FieldType[];
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
-  @ViewChild('berkeleytimeIframe', { static: true }) private iframeTemplate: TemplateRef<any>;
+  @ViewChild('allInfo', { static: true }) private allInfoTemplate: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
 
-  private iframeModal: NgbModalRef;
+  private allInfoModal: NgbModalRef;
 
   constructor(public sanitizer: DomSanitizer, private modalService: NgbModal) {
-    this.iframeModal = null;
+    this.allInfoModal = null;
   }
 
   ngOnInit(): void {}
@@ -31,31 +35,27 @@ export class BerkeleytimeInfoComponent implements OnInit {
    */
   getBerkeleytimeGradeUrl(): string {
     const defaultUrl = 'https://berkeleytime.com/grades';
-    if (!this.berkeleytimeData.berkeleytimeId) {
+    if (!this.course.berkeleytimeData.berkeleytimeId) {
       return defaultUrl;
     }
-    const url = `https://berkeleytime.com/grades/0-${this.berkeleytimeData.berkeleytimeId}-all-all`;
+    const url = `https://berkeleytime.com/grades/0-${this.course.berkeleytimeData.berkeleytimeId}-all-all`;
     return this.sanitizer.sanitize(SecurityContext.URL, url);
   }
 
-  /**
-   * Emit event to open berkeleytime modal
-   */
-  showBerkeleytimeDistribution(): void {
-    if (this.iframeModal) {
-      this.iframeModal.close();
-    }
-    this.iframeModal = this.modalService.open(this.iframeTemplate);
-  }
-
   isAvailable(): boolean {
-    if (this.berkeleytimeData.berkeleytimeId === null || this.berkeleytimeData.berkeleytimeId === undefined) {
+    if (
+      this.course.berkeleytimeData.berkeleytimeId === null ||
+      this.course.berkeleytimeData.berkeleytimeId === undefined
+    ) {
       return false;
     }
-    let badBerkeleytime = !this.berkeleytimeData.grade;
+    let badBerkeleytime = !this.course.berkeleytimeData.grade;
     badBerkeleytime =
       badBerkeleytime &&
-      !(Array.isArray(this.berkeleytimeData.semestersOffered) && this.berkeleytimeData.semestersOffered.length);
+      !(
+        Array.isArray(this.course.berkeleytimeData.semestersOffered) &&
+        this.course.berkeleytimeData.semestersOffered.length
+      );
     if (badBerkeleytime) {
       // If berkeleytime returns poop...
       return false;
@@ -66,10 +66,44 @@ export class BerkeleytimeInfoComponent implements OnInit {
   /**
    * What to display for the semester
    */
-  getSemesterText(): string[] {
-    if (!Array.isArray(this.berkeleytimeData.semestersOffered)) {
-      return ['unavailable'];
+  getSemesterText(): string {
+    if (
+      !Array.isArray(this.course.berkeleytimeData.semestersOffered) ||
+      this.course.berkeleytimeData.semestersOffered.length === 0
+    ) {
+      return 'Unavailable';
     }
-    return this.berkeleytimeData.semestersOffered.length ? this.berkeleytimeData.semestersOffered : ['unavailable'];
+    return this.course.berkeleytimeData.semestersOffered.slice(0, 8).join(', ');
+  }
+
+  /**
+   * Returns whether the component has the given field.
+   *
+   * @param {FieldType} The field.
+   * @return {boolean} Whether the component has the field.
+   */
+  hasField(field: FieldType): boolean {
+    return !this.fields || this.fields.includes(field);
+  }
+
+  /**
+   * Returns whether all fields are present.
+   *
+   * @return {boolean} Whether all fields are present.
+   */
+  hasAllFields(): boolean {
+    return (
+      !this.fields ||
+      (this.fields.includes('grade') &&
+        this.fields.includes('semesters-offered') &&
+        this.fields.includes('grade-distribution'))
+    );
+  }
+
+  /**
+   * Opens a modal with all info displayed.
+   */
+  openAllInfo(): void {
+    this.allInfoModal = this.modalService.open(this.allInfoTemplate, { size: 'xl' });
   }
 }
