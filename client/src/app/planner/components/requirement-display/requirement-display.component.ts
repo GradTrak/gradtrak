@@ -78,10 +78,12 @@ export class RequirementDisplayComponent implements OnInit {
               return gradeA[0] < gradeB[0] ? -1 : 1;
             };
             break;
+          default:
+            throw new Error(`Invalid sort field: ${this.sortField}`);
         }
 
         /* Reverse the comparator if we are sorting descending. */
-        let reversedComparator = (a, b) => -comparator(a, b);
+        const reversedComparator = (a: Course, b: Course): number => -comparator(a, b);
 
         courses.sort(reversedComparator);
         return courses;

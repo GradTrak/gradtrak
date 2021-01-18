@@ -158,7 +158,7 @@ export class CourseSearcherComponent implements OnInit {
     );
   };
 
-  hasSearchedCourse() {
+  hasSearchedCourse(): boolean {
     return this.searchedCourse instanceof Course;
   }
 
