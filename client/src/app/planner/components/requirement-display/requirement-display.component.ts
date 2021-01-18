@@ -16,8 +16,9 @@ type SortType = 'no' | 'title' | 'grade';
 export class RequirementDisplayComponent implements OnInit {
   @Input() requirementInput: Requirement;
 
-  /* eslint-disable no-explicit-any */
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('courseInfo', { static: true }) private readonly courseInfoTemplate: TemplateRef<any>;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   /* Views the berkeleytime information about a course */
   sortField: SortType;
