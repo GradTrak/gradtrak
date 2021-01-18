@@ -23,7 +23,6 @@ export class PlannerComponent implements OnInit {
 
   courseAdderSemester: Semester;
   displayedRequirement: Requirement;
-  berkeleytimeCourse: Course;
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('login', { static: true }) private loginTemplate: TemplateRef<any>;
