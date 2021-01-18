@@ -28,14 +28,6 @@ export abstract class StandaloneRequirement extends Requirement {
   protected abstract isFulfillableBy(course: Course): boolean;
 
   /**
-   * For standalones, a COURSE contributes if and only if it fullfills that standalone.
-   * returns false otherwise.
-   */
-  canFulfill(course: Course): boolean {
-    return this.isFulfillableBy(course);
-  }
-
-  /**
    * For standalones the combination of courses that will fullfill it
    * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
    */

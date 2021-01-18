@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import processRequirements, { ProcessedFulfillmentType } from '../lib/process-requirements';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
+import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 
 import RequirementSetComponent from './RequirementSetComponent';
@@ -15,7 +16,7 @@ type RequirementPaneProps = {
   courses: Course[];
   manuallyFulfilled: Map<string, Set<string>>;
   onOpenGoalSelector: () => void;
-  onOpenRequirementDisplay: (req: Requirement) => void;
+  onOpenRequirementDisplay: (req: StandaloneRequirement) => void;
   onManualFulfill: (req: Requirement, reqSet: RequirementSet) => void;
   onManualUnfulfill: (req: Requirement, reqSet: RequirementSet) => void;
 };
@@ -66,8 +67,6 @@ function RequirementPane(props: RequirementPaneProps): React.ReactElement {
         <RequirementSetComponent
           key={reqSet.id}
           requirementSet={reqSet}
-          courses={props.courses}
-          manuallyFulfilled={props.manuallyFulfilled}
           fulfillmentMap={processRequirements(requiredSets, props.courses, props.manuallyFulfilled)}
           onOpenGoalSelector={props.onOpenGoalSelector}
           onOpenRequirementDisplay={props.onOpenRequirementDisplay}

@@ -39,7 +39,7 @@ type ModalState = {
     | 'course-adder'
     | 'requirement-display';
   semChangerSemester: Semester;
-  reqDisplayRequirement: Requirement;
+  reqDisplayRequirement: StandaloneRequirement;
 };
 
 type AppState = {

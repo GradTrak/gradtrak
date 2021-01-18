@@ -27,7 +27,9 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
   }
 
   isAvailable = (): boolean => {
+    // TODO These checks need to be re-worked after we enable strict typing.
     if (
+      !this.props.course.berkeleytimeData ||
       this.props.course.berkeleytimeData.berkeleytimeId === null ||
       this.props.course.berkeleytimeData.berkeleytimeId === undefined
     ) {

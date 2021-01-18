@@ -14,17 +14,16 @@ import './RequirementComponent.css';
 
 type RequirementComponentProps = {
   requirement: Requirement;
-  courses: Course[];
-  manuallyFulfilled: Set<string>;
   fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   onOpenGoalSelector: () => void;
-  onOpenRequirementDisplay: (req: Requirement) => void;
+  onOpenRequirementDisplay: (req: StandaloneRequirement) => void;
   onManualFulfill: (req: Requirement) => void;
   onManualUnfulfill: (req: Requirement) => void;
 };
 
 function RequirementComponent(props: RequirementComponentProps): React.ReactElement {
   const fulfillment = props.fulfillmentMap.get(props.requirement);
+  const manuallyFulfilled = fulfillment.method === 'manual';
 
   /* Fulfillment CSS classes. */
   const fulfillments: string[] = [`Requirement__${fulfillment.status}`];
@@ -33,13 +32,12 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
   }
 
   /* Courses can be displayed for standalone, unit, and count requirements. */
-  const hasDisplay =
-    props.requirement instanceof StandaloneRequirement ||
-    props.requirement instanceof UnitRequirement ||
-    props.requirement instanceof CountRequirement;
-
-  /* Whether the course is manually fulfilled. */
-  const manuallyFulfilled = props.manuallyFulfilled.has(props.requirement.id);
+  let displayRequirement: StandaloneRequirement = null;
+  if (props.requirement instanceof StandaloneRequirement) {
+    displayRequirement = props.requirement;
+  } else if (props.requirement instanceof UnitRequirement || props.requirement instanceof CountRequirement) {
+    displayRequirement = props.requirement.requirement;
+  }
 
   /* Requirement element based on the requirement type. */
   // TODO This probably belongs in separate files.
@@ -62,8 +60,6 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
           <RequirementComponent
             key={childReq.id}
             requirement={childReq}
-            courses={props.courses}
-            manuallyFulfilled={props.manuallyFulfilled}
             fulfillmentMap={props.fulfillmentMap}
             onOpenGoalSelector={props.onOpenGoalSelector}
             onOpenRequirementDisplay={props.onOpenRequirementDisplay}
@@ -79,13 +75,11 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
     reqElem = (
       <>
         {fulfilledUnits}/{props.requirement.units} units of {props.requirement.name}
-        <div className="Requirement__nested">
-          {fulfillingCourses.map((course) => (
-            <div key={course.id} className="Requirement__course">
-              {course.getName()}
-            </div>
-          ))}
-        </div>
+        {fulfillingCourses.map((course) => (
+          <div key={course.id} className="Requirement Requirement__course">
+            {course.getName()}
+          </div>
+        ))}
       </>
     );
   } else if (props.requirement instanceof CountRequirement) {
@@ -93,16 +87,16 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
     reqElem = (
       <>
         {props.requirement.name}
-        <div className="Requirement__nested">
-          {fulfillingCourses.map((course) => (
-            <div key={course.id} className="Requirement__fulfilled">
-              {course.getName()}
-            </div>
-          ))}
-          {new Array(props.requirement.numRequired - fulfillingCourses.length).fill(null).map((value, index) => (
-            <div key={index}>{props.requirement.name}</div>
-          ))}
-        </div>
+        {fulfillingCourses.map((course) => (
+          <div key={course.id} className="Requirement Requirement__fulfilled">
+            {course.getName()}
+          </div>
+        ))}
+        {new Array(props.requirement.numRequired - fulfillingCourses.length).fill(null).map((value, index) => (
+          <div key={index} className="Requirement Requirement__unfulfilled">
+            {props.requirement.name}
+          </div>
+        ))}
       </>
     );
   } else {
@@ -117,8 +111,8 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
           <i className="material-icons">more_horiz</i>
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          {hasDisplay ? (
-            <Dropdown.Item onClick={() => props.onOpenRequirementDisplay(props.requirement)}>
+          {displayRequirement ? (
+            <Dropdown.Item onClick={() => props.onOpenRequirementDisplay(displayRequirement)}>
               Show Fulfilling Courses
             </Dropdown.Item>
           ) : null}

@@ -2,8 +2,8 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import { ProcessedFulfillmentType } from '../lib/process-requirements';
-import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
+import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import { RequirementCategory } from '../models/requirement-category.model';
 
 import RequirementComponent from './RequirementComponent';
@@ -12,11 +12,9 @@ import './RequirementCategoryComponent.css';
 
 type RequirementCategoryComponentProps = {
   requirementCategory: RequirementCategory;
-  courses: Course[];
-  manuallyFulfilled: Set<string>;
   fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   onOpenGoalSelector: () => void;
-  onOpenRequirementDisplay: (req: Requirement) => void;
+  onOpenRequirementDisplay: (req: StandaloneRequirement) => void;
   onManualFulfill: (req: Requirement) => void;
   onManualUnfulfill: (req: Requirement) => void;
 };
@@ -59,8 +57,6 @@ class RequirementCategoryComponent extends React.Component<
             <RequirementComponent
               key={req.id}
               requirement={req}
-              courses={this.props.courses}
-              manuallyFulfilled={this.props.manuallyFulfilled}
               fulfillmentMap={this.props.fulfillmentMap}
               onOpenGoalSelector={this.props.onOpenGoalSelector}
               onOpenRequirementDisplay={this.props.onOpenRequirementDisplay}

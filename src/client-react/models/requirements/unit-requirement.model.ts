@@ -24,15 +24,6 @@ export class UnitRequirement extends Requirement {
       .reduce((sum: number, units: number) => sum + units, 0);
   }
 
-  /**
-   * Any COURSE that is a possible contribution to any child requirement is
-   * a possible contribution to a UnitRequirement, and will return true.
-   * @return whether the course could possibly help fullfill a requirement.
-   */
-  canFulfill(course: Course): boolean {
-    return this.requirement.canFulfill(course);
-  }
-
   getFulfillingCourses(courses: Course[]): Course[] {
     return courses.filter((course) => this.requirement.isFulfilled(course));
   }

@@ -3,13 +3,13 @@ import { Modal } from 'react-bootstrap';
 
 import Courses from '../lib/courses';
 import { Course } from '../models/course.model';
-import { Requirement } from '../models/requirement.model';
+import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import BerkeleytimeInfoDisplay from './BerkeleytimeInfoDisplay';
 
 import './RequirementDisplay.css';
 
 type RequirementDisplayProps = {
-  requirement: Requirement;
+  requirement: StandaloneRequirement;
 };
 
 type SortType = 'no' | 'title' | 'grade';
@@ -72,7 +72,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
   // TODO This should probably be memoimzed.
   private getFulfillingCourses = (coursesInput: Course[]): Course[] => {
-    const courses = coursesInput.filter((course) => this.props.requirement.canFulfill(course));
+    const courses = coursesInput.filter((course) => this.props.requirement.isFulfilledWith(course));
     let comparator: (a: Course, b: Course) => number;
     switch (this.state.sortField) {
       case 'no':
@@ -87,8 +87,10 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
         break;
       case 'grade':
         comparator = (a: Course, b: Course): number => {
-          const gradeA = a.berkeleytimeData.grade;
-          const gradeB = b.berkeleytimeData.grade;
+          // TODO Nullish coalescing operator should also be removed with
+          // strict null checks.
+          const gradeA = a.berkeleytimeData?.grade;
+          const gradeB = b.berkeleytimeData?.grade;
           if (gradeA === gradeB || !(gradeA || gradeB)) {
             // Default to the course Dept and No. if equal or both null
             return a.getName() < b.getName() ? 1 : -1;
@@ -134,8 +136,10 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
         <td className="no">
           {course.dept} {course.no}
         </td>
+        {/* TODO Nullish coalescing operator should be removed after strict
+          null checks. */}
         <td className="title">{course.title}</td>
-        <td className="grade">{course.berkeleytimeData.grade || '-'}</td>
+        <td className="grade">{course.berkeleytimeData?.grade || '-'}</td>
       </tr>
     );
   }
