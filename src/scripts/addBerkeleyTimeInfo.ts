@@ -57,7 +57,9 @@ const main = async () => {
     mapping[key] = {
       berkeleytimeId: btimeCourseObj.id,
       grade: courseBoxObj && courseBoxObj.letter_average,
-      semestersOffered: Array.isArray(semestersOfferedArr)? semestersOfferedArr.map(sem => `${sem.semester} ${sem.year}`): undefined,
+      semestersOffered: Array.isArray(semestersOfferedArr)? 
+        semestersOfferedArr.map(sem => `${sem.semester.charAt(0).toUpperCase() + sem.semester.slice(1)} ${sem.year}`):
+        undefined,
     };
     if (mapping[key].grade === undefined) {
       console.log(courseBoxObj)
