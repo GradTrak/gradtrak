@@ -1,10 +1,35 @@
 .course-list {
-  margin-left: 32px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   overflow: auto;
   max-height: 450px;
 }
 
+.course-table-sort {
+  cursor: pointer;
+}
+
+.sort-arrow {
+  font-size: 18px;
+  transform: translateY(3px);
+}
+
 .course-table-row {
   cursor: pointer;
+}
+
+.course-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.course-list th,
+.course-list td {
+  padding: 4px 8px;
+}
+
+.no-col {
+  width: 9rem;
+}
+
+.grade-col {
+  width: 8rem;
 }

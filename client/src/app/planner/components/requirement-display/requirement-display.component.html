@@ -1,22 +1,27 @@
 <h3 class="display-title">Eligible Courses</h3>
 <div class="course-list">
   <table>
+    <colgroup>
+      <col class="no-col" />
+      <col class="title-col" />
+      <col class="grade-col" />
+    </colgroup>
     <thead>
       <tr>
-        <th (click)="changeSort('no')">
+        <th class="course-table-sort" (click)="changeSort('no')">
           Course No.
-          <ng-container *ngIf="sortField === 'no' && !sortDescending">&#8593;</ng-container>
-          <ng-container *ngIf="sortField === 'no' && sortDescending">&#8595;</ng-container>
+          <i class="material-icons sort-arrow" *ngIf="sortField === 'no' && !sortDescending">arrow_drop_up</i>
+          <i class="material-icons sort-arrow" *ngIf="sortField === 'no' && sortDescending">arrow_drop_down</i>
         </th>
-        <th (click)="changeSort('title')">
+        <th class="course-table-sort" (click)="changeSort('title')">
           Course Title
-          <ng-container *ngIf="sortField === 'title' && !sortDescending">&#8593;</ng-container>
-          <ng-container *ngIf="sortField === 'title' && sortDescending">&#8595;</ng-container>
+          <i class="material-icons sort-arrow" *ngIf="sortField === 'title' && !sortDescending">arrow_drop_up</i>
+          <i class="material-icons sort-arrow" *ngIf="sortField === 'title' && sortDescending">arrow_drop_down</i>
         </th>
-        <th (click)="changeSort('grade')">
-          Average Grade
-          <ng-container *ngIf="sortField === 'grade' && !sortDescending">&#8593;</ng-container>
-          <ng-container *ngIf="sortField === 'grade' && sortDescending">&#8595;</ng-container>
+        <th class="course-table-sort" (click)="changeSort('grade')">
+          Avg. Grade
+          <i class="material-icons sort-arrow" *ngIf="sortField === 'grade' && !sortDescending">arrow_drop_up</i>
+          <i class="material-icons sort-arrow" *ngIf="sortField === 'grade' && sortDescending">arrow_drop_down</i>
         </th>
       </tr>
     </thead>
@@ -27,9 +32,9 @@
         *ngFor="let course of getFulfillingCourses() | async"
         (click)="viewCourseBerkeleytime(course)"
       >
-        <td>{{ course.dept }} {{ course.no }}</td>
-        <td>{{ course.title }}</td>
-        <td>{{ course.berkeleytimeData.grade }}</td>
+        <td class="no">{{ course.dept }} {{ course.no }}</td>
+        <td class="title">{{ course.title }}</td>
+        <td class="grade">{{ course.berkeleytimeData.grade || '-' }}</td>
       </tr>
     </tbody>
   </table>

@@ -89,7 +89,9 @@ export class RequirementDisplayComponent implements OnInit {
         }
 
         /* Reverse the comparator if we are sorting descending. */
-        const reversedComparator = (a: Course, b: Course): number => -comparator(a, b);
+        const reversedComparator = this.sortDescending
+          ? (a: Course, b: Course): number => -comparator(a, b)
+          : comparator;
 
         courses.sort(reversedComparator);
         return courses;
