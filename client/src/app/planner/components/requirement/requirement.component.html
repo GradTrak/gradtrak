@@ -34,11 +34,9 @@
 
 <ng-template #countReq>
   {{ requirement.name }}
-  <div class="nested">
-    <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
-      <div class="{{ i < getFulfillingCourses().length ? 'fulfilled' : null }}">
-        {{ i < getFulfillingCourses().length ? getFulfillingCourses()[i].getName() : getCount().requirement.name }}
-      </div>
+  <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
+    <div class="requirement" [ngClass]="i < getFulfillingCourses().length ? 'fulfilled' : 'unfulfilled'">
+      {{ i < getFulfillingCourses().length ? getFulfillingCourses()[i].getName() : getCount().requirement.name }}
     </div>
   </div>
 </ng-template>
