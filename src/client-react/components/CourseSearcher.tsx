@@ -213,8 +213,10 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
               {/* We use AsyncTypeahead because the search function is slow. */}
               <AsyncTypeahead<Course>
                 id="course-search"
+                autoFocus
                 isLoading={this.state.options === null}
                 selected={this.state.selected ? [this.state.selected] : []}
+                open={this.state.selected ? false : undefined}
                 onSearch={this.handleSearch}
                 options={this.state.options}
                 filterBy={() => true}
