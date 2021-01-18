@@ -1,12 +1,6 @@
+import { BerkeleytimeData } from 'common/prototypes/berkeleytime-data';
 import { CoursePrototype } from 'common/prototypes/course.prototype';
 import { Tag } from './tag.model';
-
-export interface BerkeleytimeData {
-  berkeleytimeId: string;
-  // grade: 'A+' | 'A' | 'A-' | 'B+' | 'B' | 'B-' | 'C+' | 'C' | 'C-' | 'D+' | 'D' | 'D-' | 'F+' | '';
-  grade: string;
-  semestersOffered: string[];
-}
 
 /**
  * The Course class represents a course you can take in a {@link Semester} and that fulfills certain {@link Requirement}s.
@@ -18,7 +12,6 @@ export class Course {
   title: string;
   units: number;
   berkeleytimeData: BerkeleytimeData;
-
   tags: Tag[];
   equivIds: string[];
   equiv: Course[];

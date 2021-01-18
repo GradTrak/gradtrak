@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild, SecurityContext, TemplateRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { BerkeleytimeData } from '../../models/course.model';
+import { BerkeleytimeData } from 'common/prototypes/berkeleytime-data';
 
 @Component({
   selector: 'app-berkeleytime-info',
