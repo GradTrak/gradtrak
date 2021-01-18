@@ -38,12 +38,6 @@ export abstract class Requirement {
   }
 
   /**
-   * Given a course, returns whether the course has any possibility of
-   * contributing to to the requirement.
-   */
-  abstract canFulfill(course: Course): boolean;
-
-  /**
    * Given a list of COURSES, returns a 2d array. Each element in the 2d array
    * is an array of courses which potentially fullfill part or all of the requirement.
    */

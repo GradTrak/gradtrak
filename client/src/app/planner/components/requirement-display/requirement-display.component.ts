@@ -3,7 +3,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Course } from '../../models/course.model';
-import { Requirement } from '../../models/requirement.model';
+import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { CourseService } from '../../services/course.service';
 
 type SortType = 'no' | 'title' | 'grade';
@@ -14,7 +14,7 @@ type SortType = 'no' | 'title' | 'grade';
   styleUrls: ['./requirement-display.component.scss'],
 })
 export class RequirementDisplayComponent implements OnInit {
-  @Input() requirementInput: Requirement;
+  @Input() requirementInput: StandaloneRequirement;
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('courseInfo', { static: true }) private readonly courseInfoTemplate: TemplateRef<any>;
@@ -38,7 +38,7 @@ export class RequirementDisplayComponent implements OnInit {
     return this.courseService.getCourses().pipe(
       map((courses: Course[]) =>
         courses.filter((course) => {
-          return this.requirementInput.canFulfill(course);
+          return this.requirementInput.isFulfilledWith(course);
         }),
       ),
       map((coursesInput: Course[]) => {

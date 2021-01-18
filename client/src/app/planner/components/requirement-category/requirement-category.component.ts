@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Requirement } from '../../models/requirement.model';
+import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { RequirementCategory } from '../../models/requirement-category.model';
 
 import { ProcessedFulfillmentType } from '../../lib/process-requirements';
@@ -15,7 +16,9 @@ export class RequirementCategoryComponent implements OnInit {
   @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly openRequirementDisplay: EventEmitter<StandaloneRequirement> = new EventEmitter<
+    StandaloneRequirement
+  >();
 
   collapsed: boolean;
 

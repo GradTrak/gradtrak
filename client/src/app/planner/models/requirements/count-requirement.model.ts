@@ -24,15 +24,6 @@ export class CountRequirement extends Requirement {
     return this.getFulfillingCourses(courses).length;
   }
 
-  /**
-   * Any COURSE that is a possible contribution to any child requirement is
-   * a possible contribution to a UnitRequirement, and will return true.
-   * @return whether the course could possibly help fullfill a requirement.
-   */
-  canFulfill(course: Course): boolean {
-    return this.requirement.canFulfill(course);
-  }
-
   getFulfillingCourses(courses: Course[]): Course[] {
     // FIXME: Does not take into account constraints.
     return courses.filter((course) => this.requirement.isFulfilled(course));

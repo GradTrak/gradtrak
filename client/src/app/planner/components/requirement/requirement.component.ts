@@ -21,7 +21,9 @@ export class RequirementComponent implements OnInit {
   @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly openRequirementDisplay: EventEmitter<StandaloneRequirement> = new EventEmitter<
+    StandaloneRequirement
+  >();
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
@@ -67,8 +69,17 @@ export class RequirementComponent implements OnInit {
   /**
    * Standalone requirements and unit requirements can show requirement display.
    */
-  hasDisplay(): boolean {
-    return this.isStandalone() || this.isUnit() || this.isCount();
+  getDisplayRequirement(): StandaloneRequirement {
+    if (this.isStandalone()) {
+      return this.getStandalone();
+    }
+    if (this.isUnit()) {
+      return this.getUnit().requirement;
+    }
+    if (this.isCount()) {
+      return this.getCount().requirement;
+    }
+    return null;
   }
 
   getFulfillment(): string[] {
