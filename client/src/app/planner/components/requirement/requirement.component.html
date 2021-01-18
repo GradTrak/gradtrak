@@ -7,13 +7,11 @@
         ? 'One of'
         : getMulti().numRequired === getMulti().requirements.length
         ? 'All of'
-        : getMulti().numFulfilled(courses, manuallyFulfilled) + '/' + getMulti().numRequired + ' of'
+        : getMultiFulfilled() + '/' + getMulti().numRequired + ' of'
     }}
     <app-requirement
       *ngFor="let childReq of getMulti().requirements"
       [requirement]="childReq"
-      [courses]="courses"
-      [manuallyFulfilled]="manuallyFulfilled"
       [fulfillmentMap]="fulfillmentMap"
       (onManualFulfill)="manuallyFulfill($event)"
       (onManualUnfulfill)="manuallyUnfulfill($event)"

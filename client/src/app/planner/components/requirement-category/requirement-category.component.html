@@ -11,8 +11,6 @@
     <app-requirement
       *ngFor="let requirement of requirementCategory.requirements"
       [requirement]="requirement"
-      [courses]="courses"
-      [manuallyFulfilled]="manuallyFulfilled"
       [fulfillmentMap]="fulfillmentMap"
       (onManualFulfill)="onManualFulfill.emit($event)"
       (onManualUnfulfill)="onManualUnfulfill.emit($event)"

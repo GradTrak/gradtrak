@@ -17,9 +17,7 @@ import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 })
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
-  @Input() readonly courses: Course[];
   @Input() readonly override: string;
-  @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
@@ -59,6 +57,11 @@ export class RequirementComponent implements OnInit {
       throw new Error('Attempted to retreive non-MultiRequirement as MultiRequirement');
     }
     return this.requirement as MultiRequirement;
+  }
+
+  getMultiFulfilled(): number {
+    return this.getMulti().requirements.filter((childReq) => this.fulfillmentMap.get(childReq).status === 'fulfilled')
+      .length;
   }
 
   /**
@@ -159,7 +162,7 @@ export class RequirementComponent implements OnInit {
   }
 
   isManuallyFulfilled(): boolean {
-    return this.manuallyFulfilled && this.manuallyFulfilled.has(this.requirement.id);
+    return this.fulfillmentMap.get(this.requirement).method === 'manual';
   }
 
   manuallyFulfill(requirement: Requirement): void {
