@@ -4,6 +4,7 @@ import { AsyncTypeahead, TypeaheadModel } from 'react-bootstrap-typeahead';
 
 import Courses from '../lib/courses';
 import { Course } from '../models/course.model';
+import BerkeleytimeInfoDisplay from './BerkeleytimeInfoDisplay';
 
 import './CourseSearcher.css';
 
@@ -108,8 +109,10 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
   };
 
   handleSubmit = (): void => {
-    const course = this.state.selected as Course;
-    this.props.onSelectCourse(course);
+    if (!this.state.selected) {
+      return;
+    }
+    this.props.onSelectCourse(this.state.selected);
     this.setState({
       selected: null,
     });
@@ -197,35 +200,41 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     }
 
     return (
-      <Form
-        onSubmit={(e) => {
-          e.preventDefault();
-          this.handleSubmit();
-        }}
-      >
-        <Form.Row>
-          <Col>
-            {/* We use AsyncTypeahead because the search function is slow. */}
-            <AsyncTypeahead<Course>
-              id="course-search"
-              isLoading={this.state.options === null}
-              selected={this.state.selected ? [this.state.selected] : []}
-              onSearch={this.handleSearch}
-              options={this.state.options}
-              filterBy={() => true}
-              onKeyDown={this.handleKeyDown}
-              onChange={(selected) => this.setState({ selected: selected[0] || null })}
-              labelKey={(course) => course.toString()}
-              placeholder="Search for a class"
-            />
-          </Col>
-          <Col xs="auto">
-            <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-              Add
-            </Button>
-          </Col>
-        </Form.Row>
-      </Form>
+      <div>
+        <Form
+          className="CourseSearcher__search-bar"
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.handleSubmit();
+          }}
+        >
+          <Form.Row>
+            <Col>
+              {/* We use AsyncTypeahead because the search function is slow. */}
+              <AsyncTypeahead<Course>
+                id="course-search"
+                isLoading={this.state.options === null}
+                selected={this.state.selected ? [this.state.selected] : []}
+                onSearch={this.handleSearch}
+                options={this.state.options}
+                filterBy={() => true}
+                onKeyDown={this.handleKeyDown}
+                onChange={(selected) => this.setState({ selected: selected[0] || null })}
+                labelKey={(course) => course.toString()}
+                placeholder="Search for a class"
+              />
+            </Col>
+            <Col xs="auto">
+              <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                Add
+              </Button>
+            </Col>
+          </Form.Row>
+        </Form>
+        {this.state.selected ? (
+          <BerkeleytimeInfoDisplay course={this.state.selected} fields={['semesters-offered']} />
+        ) : null}
+      </div>
     );
   }
 }
