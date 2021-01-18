@@ -18,8 +18,16 @@
     "lib": [
       "es2019",
       "dom"
-    ]
+    ],
+    "paths": {
+      "common/*": ["../../src/common/*"]
+    }
   },
+  "references": [
+    {
+      "path": "../common"
+    }
+  ],
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

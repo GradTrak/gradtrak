@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../../models/requirements/unit-requirement.model';
@@ -9,6 +7,8 @@ import { PolyRequirement } from '../../models/requirements/poly-requirement.mode
 import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { CountRequirement } from '../../models/requirements/count-requirement.model';
 import { RegexRequirement } from '../../models/requirements/regex-requirement.model';
+
+import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirement',
@@ -20,24 +20,18 @@ export class RequirementComponent implements OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly override: string;
   @Input() readonly manuallyFulfilled: Set<string>;
-  @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
+  @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-
-  displayedRequirement: Requirement;
+  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
   @ViewChild('multiReq', { static: true }) private multiReq: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
-  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
   @ViewChild('countReq', { static: true }) private countReq: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
-
-  private requirementDisplayModalReference: NgbModalRef;
-
-  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
@@ -76,11 +70,30 @@ export class RequirementComponent implements OnInit {
 
   getFulfillment(): string[] {
     const fulfillments: string[] = [];
-    fulfillments.push(this.fulfillmentMap.get(this.requirement));
+    fulfillments.push(this.fulfillmentMap.get(this.requirement).status);
     if (this.isManuallyFulfilled()) {
       fulfillments.push('manual');
     }
     return fulfillments;
+  }
+
+  getFulfillingCourses(): Course[] {
+    const fulfillment: ProcessedFulfillmentType = this.fulfillmentMap.get(this.requirement);
+    if (fulfillment.method === 'courses') {
+      return Array.from(fulfillment.coursesUsed);
+    } else {
+      return [];
+    }
+  }
+
+  getFulfilledUnits(): number {
+    return this.getFulfillingCourses()
+      .map((course: Course) => course.units)
+      .reduce((a: number, b: number) => a + b, 0);
+  }
+
+  getFulfilledCount(): number {
+    return this.getFulfillingCourses().length;
   }
 
   isUnit(): boolean {
@@ -155,14 +168,5 @@ export class RequirementComponent implements OnInit {
 
   manuallyUnfulfill(requirement: Requirement): void {
     this.onManualUnfulfill.emit(requirement);
-  }
-
-  openRequirementDisplay(requirement: Requirement): void {
-    this.displayedRequirement = requirement;
-    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
-  }
-
-  closeRequirementDisplay(): void {
-    this.requirementDisplayModalReference.close();
   }
 }

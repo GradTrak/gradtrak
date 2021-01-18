@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../../models/course.model';
-import { FulfillmentType } from '../../models/fulfillment-type.model';
 import { Requirement } from '../../models/requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { UserService } from '../../services/user.service';
+
+import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 
 @Component({
   selector: 'app-requirement-set',
@@ -14,7 +15,8 @@ export class RequirementSetComponent implements OnInit {
   @Input() readonly requirementSet: RequirementSet;
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
-  @Input() readonly fulfillmentMap: Map<Requirement, FulfillmentType>;
+  @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
+  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
 
   collapsed: boolean;
 
