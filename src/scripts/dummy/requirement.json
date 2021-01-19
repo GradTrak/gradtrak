@@ -73,7 +73,7 @@
           {
             "id": "ld_hss",
             "type": "count",
-            "name": "lower division H/SS",
+            "name": "Lower division H/SS",
             "numRequired": 2,
             "hidden": false,
             "requirement": {
@@ -119,7 +119,7 @@
           {
             "id": "ud_hss",
             "type": "count",
-            "name": "upper division H/SS",
+            "name": "Upper division H/SS",
             "numRequired": 2,
             "hidden": false,
             "requirement": {
