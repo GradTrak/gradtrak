@@ -18,7 +18,8 @@ type RequirementDisplayState = {
   courses: Course[];
   sortField: SortType;
   sortDescending: boolean;
-  shownCourse: Course;
+  showCourseInfo: boolean;
+  shownCourseInfo: Course;
 };
 
 class RequirementDisplay extends React.Component<RequirementDisplayProps, RequirementDisplayState> {
@@ -29,7 +30,8 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
       courses: null,
       sortField: 'no',
       sortDescending: false,
-      shownCourse: null,
+      showCourseInfo: false,
+      shownCourseInfo: null,
     };
   }
 
@@ -37,9 +39,16 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     this.fetchCourses();
   }
 
-  showCourse = (course: Course): void => {
+  showCourseInfo = (course: Course): void => {
     this.setState({
-      shownCourse: course,
+      showCourseInfo: true,
+      shownCourseInfo: course,
+    });
+  };
+
+  hideCourseInfo = (): void => {
+    this.setState({
+      showCourseInfo: false,
     });
   };
 
@@ -128,7 +137,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
   private renderCourseRow = (course: Course): React.ReactNode => {
     return (
-      <tr key={course.id} className="RequirementDisplay__course-table-row" onClick={() => this.showCourse(course)}>
+      <tr key={course.id} className="RequirementDisplay__course-table-row" onClick={() => this.showCourseInfo(course)}>
         <td className="RequirementDisplay__no">
           {course.dept} {course.no}
         </td>
@@ -182,9 +191,9 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
             <tbody>{this.getFulfillingCourses(this.state.courses).map(this.renderCourseRow)}</tbody>
           </table>
         </div>
-        <Modal show={Boolean(this.state.shownCourse)} onHide={() => this.showCourse(null)}>
+        <Modal show={this.state.showCourseInfo} onHide={this.hideCourseInfo}>
           <Modal.Body>
-            <BerkeleytimeInfoDisplay course={this.state.shownCourse} />
+            {this.state.shownCourseInfo ? <BerkeleytimeInfoDisplay course={this.state.shownCourseInfo} /> : null}
           </Modal.Body>
         </Modal>
       </>
