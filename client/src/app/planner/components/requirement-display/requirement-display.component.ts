@@ -59,7 +59,7 @@ export class RequirementDisplayComponent implements OnInit {
             comparator = (a: Course, b: Course): number => {
               // TODO Nullish coalescing operator please. Should also be removed with strict null checks.
               const gradeA = a.berkeleytimeData && a.berkeleytimeData.grade;
-              const gradeB = a.berkeleytimeData && b.berkeleytimeData.grade;
+              const gradeB = b.berkeleytimeData && b.berkeleytimeData.grade;
               if (gradeA === gradeB || !(gradeA || gradeB)) {
                 // Default to the course Dept and No. if equal or both null
                 return a.getName() < b.getName() ? 1 : -1;
