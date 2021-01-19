@@ -17,13 +17,13 @@ import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 })
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
-  @Input() readonly courses: Course[];
   @Input() readonly override: string;
-  @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly openRequirementDisplay: EventEmitter<StandaloneRequirement> = new EventEmitter<
+    StandaloneRequirement
+  >();
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
@@ -61,11 +61,25 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MultiRequirement;
   }
 
+  getMultiFulfilled(): number {
+    return this.getMulti().requirements.filter((childReq) => this.fulfillmentMap.get(childReq).status === 'fulfilled')
+      .length;
+  }
+
   /**
    * Standalone requirements and unit requirements can show requirement display.
    */
-  hasDisplay(): boolean {
-    return this.isStandalone() || this.isUnit() || this.isCount();
+  getDisplayRequirement(): StandaloneRequirement {
+    if (this.isStandalone()) {
+      return this.getStandalone();
+    }
+    if (this.isUnit()) {
+      return this.getUnit().requirement;
+    }
+    if (this.isCount()) {
+      return this.getCount().requirement;
+    }
+    return null;
   }
 
   getFulfillment(): string[] {
@@ -159,7 +173,7 @@ export class RequirementComponent implements OnInit {
   }
 
   isManuallyFulfilled(): boolean {
-    return this.manuallyFulfilled && this.manuallyFulfilled.has(this.requirement.id);
+    return this.fulfillmentMap.get(this.requirement).method === 'manual';
   }
 
   manuallyFulfill(requirement: Requirement): void {

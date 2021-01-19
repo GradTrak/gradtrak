@@ -7,13 +7,11 @@
         ? 'One of'
         : getMulti().numRequired === getMulti().requirements.length
         ? 'All of'
-        : getMulti().numFulfilled(courses, manuallyFulfilled) + '/' + getMulti().numRequired + ' of'
+        : getMultiFulfilled() + '/' + getMulti().numRequired + ' of'
     }}
     <app-requirement
       *ngFor="let childReq of getMulti().requirements"
       [requirement]="childReq"
-      [courses]="courses"
-      [manuallyFulfilled]="manuallyFulfilled"
       [fulfillmentMap]="fulfillmentMap"
       (onManualFulfill)="manuallyFulfill($event)"
       (onManualUnfulfill)="manuallyUnfulfill($event)"
@@ -34,11 +32,9 @@
 
 <ng-template #countReq>
   {{ requirement.name }}
-  <div class="nested">
-    <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
-      <div class="{{ i < getFulfillingCourses().length ? 'fulfilled' : null }}">
-        {{ i < getFulfillingCourses().length ? getFulfillingCourses()[i].getName() : getCount().requirement.name }}
-      </div>
+  <div *ngFor="let item of [].constructor(getCount().numRequired); let i = index">
+    <div class="requirement" [ngClass]="i < getFulfillingCourses().length ? 'fulfilled' : 'unfulfilled'">
+      {{ i < getFulfillingCourses().length ? getFulfillingCourses()[i].getName() : getCount().requirement.name }}
     </div>
   </div>
 </ng-template>
@@ -52,7 +48,11 @@
   <div ngbDropdown class="req-more">
     <button class="gt-button" ngbDropdownToggle><i class="material-icons">more_horiz</i></button>
     <div ngbDropdownMenu>
-      <button *ngIf="hasDisplay()" ngbDropdownItem (click)="openRequirementDisplay.emit(requirement)">
+      <button
+        *ngIf="getDisplayRequirement()"
+        ngbDropdownItem
+        (click)="openRequirementDisplay.emit(getDisplayRequirement())"
+      >
         Show Fulfilling Courses
       </button>
       <button *ngIf="!isManuallyFulfilled()" ngbDropdownItem (click)="manuallyFulfill(requirement)">

@@ -26,14 +26,6 @@ export class MultiRequirement extends Requirement implements RequirementContaine
     return null;
   }
 
-  /**
-   * For MultiRequirements, possible contribution to any of its subrequirements means it
-   * contributes to the MultiRequirement.
-   */
-  canFulfill(course: Course): boolean {
-    return this.requirements.some((requirement: Requirement) => requirement.canFulfill(course));
-  }
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     throw new Error('Tried to get Course combinations for MultiRequirement');

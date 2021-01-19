@@ -45,6 +45,7 @@
         <div ngbDropdown class="dropdown-sm">
           <button ngbDropdownToggle class="gt-button course-more-button"></button>
           <div ngbDropdownMenu>
+            <button ngbDropdownItem (click)="openCourseInfo(course)">Course Info</button>
             <button ngbDropdownItem (click)="removeCourse(course)">Remove</button>
           </div>
         </div>
@@ -54,3 +55,9 @@
   </tbody>
 </table>
 <button class="gt-button course-adder" (click)="openCourseAdder.emit()">+</button>
+
+<ng-template #courseInfo>
+  <div class="modal-body">
+    <app-berkeleytime-info [course]="openCourse"></app-berkeleytime-info>
+  </div>
+</ng-template>

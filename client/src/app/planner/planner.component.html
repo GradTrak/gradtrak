@@ -74,7 +74,7 @@
 
 <ng-template #initializer>
   <div class="modal-body">
-    <app-initializer (initializeData)="setUserData($event)"></app-initializer>
+    <app-initializer (initializeData)="setUserData($event)" (initializeData)="closeModal()"></app-initializer>
   </div>
 </ng-template>
 

@@ -22,8 +22,4 @@ export class RegexRequirement extends StandaloneRequirement {
   toString(): string {
     return this.name;
   }
-
-  canFulfill(course: Course): boolean {
-    return this.isFulfillableBy(course);
-  }
 }
