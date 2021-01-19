@@ -12,9 +12,9 @@
     "lint-fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "pretty": "prettier --check \"src/**/*.{js,jsx,ts,tsx,html,css}\"",
     "pretty-fix": "prettier --check --write \"src/**/*.{js,jsx,ts,tsx,html,css}\"",
-    "start:client": "cd src/client-react && webpack serve --config webpack.development.js",
-    "build:client": "cd src/client-react && webpack bundle",
-    "build-dev:client": "cd src/client-react && webpack bundle --config webpack.development.js",
+    "start:client": "cd src/client && webpack serve --config webpack.development.js",
+    "build:client": "cd src/client && webpack bundle",
+    "build-dev:client": "cd src/client && webpack bundle --config webpack.development.js",
     "build:server": "tsc --build src/server/tsconfig.json",
     "watch:server": "nodemon --watch src/server --ext ts --exec \"yarn build:server && yarn start\"",
     "heroku-postbuild": "true"

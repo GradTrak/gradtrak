@@ -10,10 +10,10 @@
     ],
     "jsx": "react-jsx",
     "sourceMap": true,
-    "outDir": "../../build/client-react",
+    "outDir": "../../build/client",
     "rootDir": ".",
     "composite": true,
-    "tsBuildInfoFile": "../../build/client-react.tsbuildinfo",
+    "tsBuildInfoFile": "../../build/client.tsbuildinfo",
     "strict": false,
     "esModuleInterop": true
   },

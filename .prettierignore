@@ -1,2 +1,2 @@
-src/client-react/webpack.*.js
+src/client/webpack.*.js
 src/scripts
