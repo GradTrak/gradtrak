@@ -8,11 +8,11 @@
   transform: translateY(4px);
 }
 
-.RequirementSet--collapsed .dropdown-arrow {
+.RequirementSet--collapsed .RequirementSet__dropdown-arrow {
   transform: translateY(4px) rotate(-90deg);
 }
 
-.RequirementSet--collapsed .requirement-categories {
+.RequirementSet--collapsed .RequirementSet__requirement-categories {
   display: none;
 }
 
