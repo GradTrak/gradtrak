@@ -13,11 +13,11 @@
   font-size: 0.7rem;
 }
 
-hr {
+.SemesterBox__separator {
   margin: 8px;
 }
 
-table,
+.SemesterBox__courses,
 .SemesterBox__course-adder {
   width: calc(100% - 24px);
   margin-left: 12px;

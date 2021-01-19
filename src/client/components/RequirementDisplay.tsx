@@ -128,14 +128,14 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
   private renderCourseRow = (course: Course): React.ReactNode => {
     return (
-      <tr key={course.id} className="course-table-row" onClick={() => this.showCourse(course)}>
-        <td className="no">
+      <tr key={course.id} className="RequirementDisplay__course-table-row" onClick={() => this.showCourse(course)}>
+        <td className="RequirementDisplay__no">
           {course.dept} {course.no}
         </td>
         {/* TODO Nullish coalescing operator should be removed after strict
           null checks. */}
-        <td className="title">{course.title}</td>
-        <td className="grade">{course.berkeleytimeData?.grade || '-'}</td>
+        <td className="RequirementDisplay__title">{course.title}</td>
+        <td className="RequirementDisplay__grade">{course.berkeleytimeData?.grade || '-'}</td>
       </tr>
     );
   };
