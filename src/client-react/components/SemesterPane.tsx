@@ -31,6 +31,7 @@ function SemesterPane(props: SemesterPaneProps): React.ReactElement {
         <Col className="my-4" xs={8}>
           <button
             className="gt-button gt-button-primary SemesterPane__semester-changer"
+            type="button"
             onClick={props.onOpenSemesterChanger}
           >
             Edit Semesters

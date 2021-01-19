@@ -224,9 +224,9 @@ function getMappings(
       /* Prune possibilities that don't fulfill a necessary course requirement
        * if we can */
       if (req instanceof CourseRequirement) {
-        courseCombinations = courseCombinations.filter((combination: Set<Course>) => {
-          return req.isFulfilledWith(Array.from(combination));
-        });
+        courseCombinations = courseCombinations.filter((combination: Set<Course>) =>
+          req.isFulfilledWith(Array.from(combination)),
+        );
         if (courseCombinations.length === 0) {
           courseCombinations = [new Set<Course>()];
         }

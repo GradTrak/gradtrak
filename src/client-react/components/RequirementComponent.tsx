@@ -1,8 +1,7 @@
 import React from 'react';
-import { Col, Container, Dropdown, OverlayTrigger, Popover, Row } from 'react-bootstrap';
+import { Dropdown, OverlayTrigger, Popover } from 'react-bootstrap';
 
 import { ProcessedFulfillmentType } from '../lib/process-requirements';
-import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
 import { CountRequirement } from '../models/requirements/count-requirement.model';
 import { MultiRequirement } from '../models/requirements/multi-requirement.model';
@@ -48,14 +47,24 @@ function RequirementComponent(props: RequirementComponentProps): React.ReactElem
   ) {
     /* Multi-requirement display, showing nested requirements underneath.
      * Hidden requirements do not show this. */
-    const numFulfilled = props.requirement.requirements.filter((childReq) => fulfillment.status === 'fulfilled').length;
+    const numFulfilled = props.requirement.requirements.filter(
+      (childReq) => this.props.fulfillmentMap.get(childReq).status === 'fulfilled',
+    ).length;
+    let numRequiredText: React.ReactNode;
+    switch (props.requirement.numRequired) {
+      case 1:
+        numRequiredText = 'One of';
+        break;
+      case props.requirement.requirements.length:
+        numRequiredText = 'All of';
+        break;
+      default:
+        numRequiredText = `${numFulfilled}/${props.requirement.numRequired} of`;
+        break;
+    }
     reqElem = (
       <>
-        {props.requirement.numRequired === 1
-          ? 'One of'
-          : props.requirement.numRequired === props.requirement.requirements.length
-          ? 'All of'
-          : numFulfilled + '/' + props.requirement.numRequired + ' of'}
+        {numRequiredText}
         {(props.requirement.requirements as Requirement[]).map((childReq) => (
           <RequirementComponent
             key={childReq.id}

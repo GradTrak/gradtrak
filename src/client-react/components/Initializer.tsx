@@ -39,8 +39,8 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
   setStage = (stage: 'semesters' | 'goals'): void => {
     if (stage === 'goals') {
       /* Validate semesters. */
-      const startYear = parseInt(this.startYearRef.current.value);
-      const gradYear = parseInt(this.gradYearRef.current.value);
+      const startYear = parseInt(this.startYearRef.current.value, 10);
+      const gradYear = parseInt(this.gradYearRef.current.value, 10);
       if (!startYear || !gradYear) {
         this.setState({
           error: 'Please fill in all required fields.',
@@ -62,8 +62,8 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
   };
 
   handleSubmit = (goals: RequirementSet[]): void => {
-    const startYear = parseInt(this.startYearRef.current.value);
-    const gradYear = parseInt(this.gradYearRef.current.value);
+    const startYear = parseInt(this.startYearRef.current.value, 10);
+    const gradYear = parseInt(this.gradYearRef.current.value, 10);
     const includeSummers = this.includeSummersRef.current.checked;
 
     const semesters = this.initializeSemesters(startYear, gradYear, includeSummers);

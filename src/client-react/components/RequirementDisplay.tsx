@@ -33,15 +33,15 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     };
   }
 
+  componentDidMount(): void {
+    this.fetchCourses();
+  }
+
   showCourse = (course: Course): void => {
     this.setState({
       shownCourse: course,
     });
   };
-
-  componentDidMount(): void {
-    this.fetchCourses();
-  }
 
   viewCourseBerkeleytime = (): void => {};
 
@@ -76,14 +76,10 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     let comparator: (a: Course, b: Course) => number;
     switch (this.state.sortField) {
       case 'no':
-        comparator = (a: Course, b: Course): number => {
-          return a.getName() < b.getName() ? -1 : 1;
-        };
+        comparator = (a: Course, b: Course): number => (a.getName() < b.getName() ? -1 : 1);
         break;
       case 'title':
-        comparator = (a: Course, b: Course): number => {
-          return a.title < b.title ? -1 : 1;
-        };
+        comparator = (a: Course, b: Course): number => (a.title < b.title ? -1 : 1);
         break;
       case 'grade':
         comparator = (a: Course, b: Course): number => {

@@ -8,11 +8,13 @@ body {
   background-color: #f2f2f2;
 }
 
-a {
+a,
+.btn-link {
   color: #283adc;
 }
 
-a:hover {
+a:hover,
+.btn-link:hover {
   color: #417fdc;
 }
 
@@ -61,6 +63,12 @@ a.gt-button {
 
 .btn-primary:disabled {
   background-color: #5764db;
+}
+
+.btn-link {
+  display: inline;
+  font-weight: unset;
+  padding: 0;
 }
 
 .modal-body {

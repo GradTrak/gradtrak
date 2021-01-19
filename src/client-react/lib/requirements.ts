@@ -9,8 +9,6 @@ import { get } from './utils';
 namespace Requirements {
   const REQUIREMENT_API_ENDPOINT = '/api/requirements';
 
-  let requirementsMap: Map<string, RequirementSet> = null;
-
   export const getRequirementsMap = memoize(
     async (): Promise<Map<string, RequirementSet>> => {
       const [res, coursesMap, tagsMap] = await Promise.all([

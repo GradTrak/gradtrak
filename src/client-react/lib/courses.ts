@@ -1,8 +1,6 @@
 import memoize from 'memoizee';
 
-import { CoursePrototype } from '../../common/prototypes/course.prototype';
 import { Course } from '../models/course.model';
-import { Tag } from '../models/tag.model';
 import Tags from './tags';
 import { get } from './utils';
 

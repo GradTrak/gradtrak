@@ -1,4 +1,3 @@
-import { UserDataPrototype } from '../../common/prototypes/user-data.prototype';
 import { Semester } from '../models/semester.model';
 import { UserData } from '../models/user-data.model';
 import Courses from './courses';
@@ -45,7 +44,7 @@ namespace User {
    */
   export async function register(username: string, password: string, userTesting: boolean): Promise<RegisterResponse> {
     const res = await post(REGISTER_ENDPOINT, { username, password, userTesting });
-    return await res.json();
+    return res.json();
   }
 
   type LoginResponse = {
@@ -64,7 +63,7 @@ namespace User {
    */
   export async function login(username: string, password: string): Promise<LoginResponse> {
     const res = await post(LOGIN_ENDPOINT, { username, password });
-    return await res.json();
+    return res.json();
   }
 
   /**
@@ -88,7 +87,7 @@ namespace User {
    */
   export async function whoami(): Promise<WhoamiResponse> {
     const res = await get(WHOAMI_ENDPOINT);
-    return await res.json();
+    return res.json();
   }
 
   type ChangePasswordResponse = {
@@ -106,7 +105,7 @@ namespace User {
    */
   export async function changePassword(oldPassword: string, newPassword: string): Promise<ChangePasswordResponse> {
     const res = await post(PASSWORD_CHANGE_ENDPOINT, { oldPassword, newPassword });
-    return await res.json();
+    return res.json();
   }
 
   /**

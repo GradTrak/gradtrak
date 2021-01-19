@@ -13,18 +13,9 @@ type AccountEditorState = {
   user: Account;
   isSubmitting: boolean;
   changesMade: boolean;
-  currentPassword: string;
   error: string;
-} & (
-  | {
-      isChangingPassword: true;
-      newPassword: string;
-    }
-  | {
-      isChangingPassword: false;
-      newPassword: null;
-    }
-);
+  isChangingPassword: boolean;
+};
 
 class AccountEditor extends React.Component<AccountEditorProps, AccountEditorState> {
   private readonly newPasswordRef: React.RefObject<HTMLInputElement>;
@@ -40,10 +31,8 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
       user: null,
       isSubmitting: false,
       changesMade: false,
-      currentPassword: '',
       error: null,
       isChangingPassword: false,
-      newPassword: null,
     };
   }
 
@@ -62,7 +51,6 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
     this.setState({
       changesMade: true,
       isChangingPassword: true,
-      newPassword: '',
     });
   };
 
@@ -121,6 +109,7 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
                 ********&nbsp;
                 <button
                   className="gt-button"
+                  type="button"
                   disabled={this.state.user.auth !== 'local'}
                   onClick={this.showChangePassword}
                 >

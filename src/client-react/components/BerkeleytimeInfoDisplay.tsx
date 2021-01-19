@@ -114,7 +114,15 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
       return defaultUrl;
     }
     const url = `https://berkeleytime.com/grades/0-${this.props.course.berkeleytimeData.berkeleytimeId}-all-all`;
-    return <iframe className="BerkeleytimeInfoDisplay__grade-distribution-iframe" src={url}></iframe>;
+    return (
+      <iframe
+        className="BerkeleytimeInfoDisplay__grade-distribution-iframe"
+        title="Berkeleytime Grade Distribution"
+        src={url}
+      >
+        Loading&#8230;
+      </iframe>
+    );
   }
 
   render(): React.ReactElement {

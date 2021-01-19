@@ -4,5 +4,3 @@ export type MutexConstraintPrototype = {
 };
 
 export type ConstraintPrototype = MutexConstraintPrototype;
-
-let a: ConstraintPrototype;

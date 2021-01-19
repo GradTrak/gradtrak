@@ -9,20 +9,16 @@ export abstract class StandaloneRequirement extends Requirement {
   isFulfilled(courses: Course | Course[], override?: Set<string>): boolean {
     if (courses instanceof Course) {
       return super.isFulfilled([courses], override);
-    } else {
-      return super.isFulfilled(courses, override);
     }
+    return super.isFulfilled(courses, override);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course | Course[], override?: Set<string>): boolean {
     if (courses instanceof Course) {
       return this.equivIsFulfillableBy(courses, new Set<Course>());
-    } else {
-      return courses.some((course: Course) => {
-        return this.equivIsFulfillableBy(course, new Set<Course>());
-      });
     }
+    return courses.some((course: Course) => this.equivIsFulfillableBy(course, new Set<Course>()));
   }
 
   protected abstract isFulfillableBy(course: Course): boolean;
@@ -33,9 +29,7 @@ export abstract class StandaloneRequirement extends Requirement {
    */
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     const combinations: Set<Course>[] = courses
-      .filter((course: Course) => {
-        return this.isFulfilledWith([course]);
-      })
+      .filter((course: Course) => this.isFulfilledWith([course]))
       .map((course: Course) => {
         const combination: Set<Course> = new Set<Course>();
         combination.add(course);

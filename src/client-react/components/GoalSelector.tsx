@@ -164,7 +164,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
                         size="sm"
                         block
                         onClick={this.handleAddGoal}
-                        disabled={!Boolean(this.state.selections[goalType].selected)}
+                        disabled={!this.state.selections[goalType].selected}
                       >
                         Add
                       </Button>
@@ -174,7 +174,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Don't see your major?
+                          Don&rsquo;t see your major?
                         </a>
                       </span>
                     </Form.Group>
@@ -184,7 +184,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
             </Container>
           </Col>
           <Col xs="auto">
-            <div className="GoalSelector__line"></div>
+            <div className="GoalSelector__line" />
           </Col>
           <Col>
             <h4 className="gt-modal-header">Selected Goals</h4>

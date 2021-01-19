@@ -63,7 +63,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
    */
   addSemester = (): void => {
     const term = this.termRef.current.value;
-    const yearNum = parseInt(this.yearRef.current.value);
+    const yearNum = parseInt(this.yearRef.current.value, 10);
 
     if (!(term && yearNum) || yearNum < 2000 || yearNum > 2050) {
       this.setState({

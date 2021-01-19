@@ -20,15 +20,11 @@
       }
     ],
     "@typescript-eslint/no-inferrable-types": "off",
+    "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "import/prefer-default-export": "off",
     "max-classes-per-file": "off",
-    "no-else-return": [
-      "error",
-      {
-        "allowElseIf": true
-      }
-    ],
+    "no-else-return": "off",
     "no-console": [
       "error",
       {

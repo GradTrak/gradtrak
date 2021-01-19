@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
-import processRequirements, { ProcessedFulfillmentType } from '../lib/process-requirements';
+import processRequirements from '../lib/process-requirements';
 import { Course } from '../models/course.model';
 import { Requirement } from '../models/requirement.model';
 import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
@@ -57,6 +57,7 @@ function RequirementPane(props: RequirementPaneProps): React.ReactElement {
         <Col className="my-4" xs={10}>
           <button
             className="gt-button gt-button-primary RequirementPane__goal-editor"
+            type="button"
             onClick={props.onOpenGoalSelector}
           >
             Edit Majors

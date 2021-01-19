@@ -43,13 +43,13 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
       <tr key={course.id} className="SemesterBox__courses__course">
         <td className="SemesterBox__courses__name">
           {duplicateCourseIcon}
-          {course.dept + ' ' + course.no + ' '}
+          {course.dept} {course.no}
         </td>
         <td className="SemesterBox__courses__title">{course.title}</td>
         <td className="SemesterBox__courses__units">{course.units}</td>
         <td className="SemesterBox__courses__button-cell">
           <Dropdown>
-            <Dropdown.Toggle className="gt-button SemesterBox__courses__more" as="button"></Dropdown.Toggle>
+            <Dropdown.Toggle className="gt-button SemesterBox__courses__more" as="button" />
             <Dropdown.Menu className="dropdown-sm">
               <Dropdown.Item onClick={() => props.onRemoveCourse(course)}>Remove</Dropdown.Item>
             </Dropdown.Menu>
@@ -84,12 +84,11 @@ function SemesterBox(props: SemesterBoxProps): React.ReactElement {
             <th>Class</th>
             <th>Title</th>
             <th>Units</th>
-            <th></th>
           </tr>
           {props.semester.courses.map(renderCourse)}
         </tbody>
       </table>
-      <button className="gt-button SemesterBox__course-adder" onClick={props.onOpenCourseAdder}>
+      <button className="gt-button SemesterBox__course-adder" type="button" onClick={props.onOpenCourseAdder}>
         +
       </button>
     </div>

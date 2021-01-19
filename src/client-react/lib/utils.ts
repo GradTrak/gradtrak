@@ -17,7 +17,7 @@ export function getAllCombinations<T>(arr: T[], index?: number): T[][] {
 
 /* https://stackoverflow.com/a/25490531 */
 function getCookieValue(key: string): string {
-  const match = document.cookie.match('(^|;)\\s*' + key + '\\s*=\\s*([^;]+)');
+  const match = document.cookie.match(`(^|;)\\s*${key}\\s*=\\s*([^;]+)`);
   return match && match.pop();
 }
 

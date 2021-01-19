@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
-import { AsyncTypeahead, TypeaheadModel } from 'react-bootstrap-typeahead';
+import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 
 import Courses from '../lib/courses';
 import { Course } from '../models/course.model';

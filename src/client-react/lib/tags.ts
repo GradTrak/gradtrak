@@ -6,7 +6,6 @@ import { get } from './utils';
 
 namespace Tags {
   const API_TAG_ENDPOINT = '/api/tags';
-  let tagsMap: Map<string, Tag> = null;
 
   export const getTagsMap = memoize(
     async (): Promise<Map<string, Tag>> => {

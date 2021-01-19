@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Modal, Row } from 'react-bootstrap';
+import { Col, Modal, Row } from 'react-bootstrap';
 
 import { Course } from './models/course.model';
 import { Requirement } from './models/requirement.model';
@@ -23,7 +23,6 @@ import RequirementPane from './components/RequirementPane';
 import SemesterChanger from './components/SemesterChanger';
 import SemesterPane from './components/SemesterPane';
 
-import logo from './logo.svg';
 import './App.css';
 
 type AppProps = {};
@@ -523,11 +522,11 @@ class App extends React.Component<AppProps, AppState> {
         <>
           <div className="App__left">Name: {this.state.user.username}</div>
           <div className="App__right">
-            <button className="gt-button" onClick={this.openAccountEditor}>
+            <button className="gt-button" type="button" onClick={this.openAccountEditor}>
               Account
             </button>
             <span> | </span>
-            <button className="gt-button" onClick={this.logout}>
+            <button className="gt-button" type="button" onClick={this.logout}>
               Logout
             </button>
             <span> | </span>
@@ -552,7 +551,7 @@ class App extends React.Component<AppProps, AppState> {
         <>
           <div className="App__left">Guest User</div>
           <div className="App__right">
-            <button className="gt-button" onClick={this.openLogin}>
+            <button className="gt-button" type="button" onClick={this.openLogin}>
               Register to Save
             </button>
             <span> | </span>
