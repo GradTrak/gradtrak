@@ -18,7 +18,7 @@ type RequirementDisplayState = {
   courses: Course[];
   sortField: SortType;
   sortDescending: boolean;
-  showCourseInfo: boolean;
+  openCourseInfo: boolean;
   shownCourseInfo: Course;
 };
 
@@ -30,7 +30,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
       courses: null,
       sortField: 'no',
       sortDescending: false,
-      showCourseInfo: false,
+      openCourseInfo: false,
       shownCourseInfo: null,
     };
   }
@@ -39,16 +39,16 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     this.fetchCourses();
   }
 
-  showCourseInfo = (course: Course): void => {
+  openCourseInfo = (course: Course): void => {
     this.setState({
-      showCourseInfo: true,
+      openCourseInfo: true,
       shownCourseInfo: course,
     });
   };
 
-  hideCourseInfo = (): void => {
+  closeCourseInfo = (): void => {
     this.setState({
-      showCourseInfo: false,
+      openCourseInfo: false,
     });
   };
 
@@ -137,7 +137,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
   private renderCourseRow = (course: Course): React.ReactNode => {
     return (
-      <tr key={course.id} className="RequirementDisplay__course-table-row" onClick={() => this.showCourseInfo(course)}>
+      <tr key={course.id} className="RequirementDisplay__course-table-row" onClick={() => this.openCourseInfo(course)}>
         <td className="RequirementDisplay__no">
           {course.dept} {course.no}
         </td>
@@ -191,7 +191,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
             <tbody>{this.getFulfillingCourses(this.state.courses).map(this.renderCourseRow)}</tbody>
           </table>
         </div>
-        <Modal show={this.state.showCourseInfo} onHide={this.hideCourseInfo}>
+        <Modal show={this.state.openCourseInfo} onHide={this.closeCourseInfo}>
           <Modal.Body>
             {this.state.shownCourseInfo ? <BerkeleytimeInfoDisplay course={this.state.shownCourseInfo} /> : null}
           </Modal.Body>

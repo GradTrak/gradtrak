@@ -138,7 +138,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
           </Form.Group>
           <Row>
             {GOAL_TYPES.map((goalType) => (
-              <Form.Group as={Col}>
+              <Form.Group key={goalType} as={Col}>
                 {GOAL_TYPES.length > 1 ? <h4>{goalType}</h4> : null}
                 <Form.Group>
                   <Form.Control

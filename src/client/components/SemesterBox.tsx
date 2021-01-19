@@ -4,17 +4,19 @@ import { Col, Container, Dropdown, Modal, OverlayTrigger, Popover, Row } from 'r
 import { Course } from '../models/course.model';
 import { Semester } from '../models/semester.model';
 import BerkeleytimeInfoDisplay from './BerkeleytimeInfoDisplay';
+import CourseSearcher from './CourseSearcher';
 
 import './SemesterBox.css';
 
 type SemesterBoxProps = {
   semester: Semester;
   currentSemesters: Semester[];
-  onOpenCourseAdder: () => void;
+  onAddCourse: (course: Course) => void;
   onRemoveCourse: (course: Course) => void;
 };
 
 type SemesterBoxState = {
+  showCourseAdder: boolean;
   showCourseInfo: boolean;
   shownCourseInfo: Course;
 };
@@ -24,19 +26,32 @@ class SemesterBox extends React.Component<SemesterBoxProps, SemesterBoxState> {
     super(props);
 
     this.state = {
+      showCourseAdder: false,
       showCourseInfo: false,
       shownCourseInfo: null,
     };
   }
 
-  showCourseInfo = (course: Course): void => {
+  openCourseAdder = (): void => {
+    this.setState({
+      showCourseAdder: true,
+    });
+  };
+
+  closeCourseAdder = (): void => {
+    this.setState({
+      showCourseAdder: false,
+    });
+  };
+
+  openCourseInfo = (course: Course): void => {
     this.setState({
       showCourseInfo: true,
       shownCourseInfo: course,
     });
   };
 
-  hideCourseInfo = (): void => {
+  closeCourseInfo = (): void => {
     this.setState({
       showCourseInfo: false,
     });
@@ -77,7 +92,7 @@ class SemesterBox extends React.Component<SemesterBoxProps, SemesterBoxState> {
           <Dropdown>
             <Dropdown.Toggle className="gt-button SemesterBox__courses__more" as="button" />
             <Dropdown.Menu className="dropdown-sm">
-              <Dropdown.Item onClick={() => this.showCourseInfo(course)}>Course Info</Dropdown.Item>
+              <Dropdown.Item onClick={() => this.openCourseInfo(course)}>Course Info</Dropdown.Item>
               <Dropdown.Item onClick={() => this.props.onRemoveCourse(course)}>Remove</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -118,12 +133,18 @@ class SemesterBox extends React.Component<SemesterBoxProps, SemesterBoxState> {
             {this.props.semester.courses.map(this.renderCourse)}
           </tbody>
         </table>
-        <button className="gt-button SemesterBox__course-adder" type="button" onClick={this.props.onOpenCourseAdder}>
+        <button className="gt-button SemesterBox__course-adder" type="button" onClick={this.openCourseAdder}>
           +
         </button>
-        <Modal size="xl" show={Boolean(this.state.showCourseInfo)} onHide={this.hideCourseInfo}>
+        <Modal size="xl" show={Boolean(this.state.showCourseInfo)} onHide={this.closeCourseInfo}>
           <Modal.Body>
             {this.state.shownCourseInfo ? <BerkeleytimeInfoDisplay course={this.state.shownCourseInfo} /> : null}
+          </Modal.Body>
+        </Modal>
+        <Modal size="lg" show={this.state.showCourseAdder} onHide={this.closeCourseAdder}>
+          <Modal.Body>
+            <h4>Add a class to {this.props.semester.name}</h4>
+            <CourseSearcher onSelectCourse={this.props.onAddCourse} />
           </Modal.Body>
         </Modal>
       </div>

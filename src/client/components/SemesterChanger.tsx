@@ -43,13 +43,13 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
     };
   }
 
-  openSemesterAdder = () => {
+  showSemesterAdder = () => {
     this.setState({
       semesterAdderOpen: true,
     });
   };
 
-  closeSemesterAdder = () => {
+  hideSemesterAdder = () => {
     this.setState({
       semesterAdderOpen: false,
     });
@@ -94,7 +94,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
     this.setState({
       semesters,
     });
-    this.closeSemesterAdder();
+    this.hideSemesterAdder();
   };
 
   removeSemester = (semester: Semester): void => {
@@ -159,14 +159,14 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
               {semester.name}
             </h4>
           ))}
-          <Button variant="primary" size="sm" onClick={this.openSemesterAdder}>
+          <Button variant="primary" size="sm" onClick={this.showSemesterAdder}>
             Add a Semester
           </Button>
         </div>
         <Button variant="primary" onClick={this.handleSubmit}>
           Confirm
         </Button>
-        <Modal show={this.state.semesterAdderOpen} onHide={this.closeSemesterAdder}>
+        <Modal show={this.state.semesterAdderOpen} onHide={this.hideSemesterAdder}>
           <Modal.Body>
             <h4 className="gt-modal-header">Add a semester</h4>
             <Form

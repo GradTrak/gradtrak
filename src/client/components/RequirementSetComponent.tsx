@@ -3,7 +3,6 @@ import { Col, Row } from 'react-bootstrap';
 
 import { ProcessedFulfillmentType } from '../lib/process-requirements';
 import { Requirement } from '../models/requirement.model';
-import { StandaloneRequirement } from '../models/requirements/standalone-requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 
 import RequirementCategoryComponent from './RequirementCategoryComponent';
@@ -13,8 +12,6 @@ import './RequirementSetComponent.css';
 type RequirementSetComponentProps = {
   requirementSet: RequirementSet;
   fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
-  onOpenGoalSelector: () => void;
-  onOpenRequirementDisplay: (req: StandaloneRequirement) => void;
   onManualFulfill: (req: Requirement) => void;
   onManualUnfulfill: (req: Requirement) => void;
 };
@@ -55,8 +52,6 @@ class RequirementSetComponent extends React.Component<RequirementSetComponentPro
               key={reqCategory.name}
               requirementCategory={reqCategory}
               fulfillmentMap={this.props.fulfillmentMap}
-              onOpenGoalSelector={this.props.onOpenGoalSelector}
-              onOpenRequirementDisplay={this.props.onOpenRequirementDisplay}
               onManualFulfill={this.props.onManualFulfill}
               onManualUnfulfill={this.props.onManualUnfulfill}
             />

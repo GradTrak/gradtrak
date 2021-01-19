@@ -5,7 +5,6 @@ import { Course } from './models/course.model';
 import { Requirement } from './models/requirement.model';
 import { RequirementSet } from './models/requirement-set.model';
 import { Semester } from './models/semester.model';
-import { StandaloneRequirement } from './models/requirements/standalone-requirement.model';
 import { UserData } from './models/user-data.model';
 import Courses from './lib/courses';
 import Requirements from './lib/requirements';
@@ -13,39 +12,21 @@ import Tags from './lib/tags';
 import User, { Account } from './lib/user';
 
 import AccountEditor from './components/AccountEditor';
-import CourseSearcher from './components/CourseSearcher';
-import GoalSelector from './components/GoalSelector';
 import Initializer from './components/Initializer';
 import Login from './components/Login';
 import ReportForm from './components/ReportForm';
-import RequirementDisplay from './components/RequirementDisplay';
 import RequirementPane from './components/RequirementPane';
-import SemesterChanger from './components/SemesterChanger';
 import SemesterPane from './components/SemesterPane';
 
 import './App.css';
 
 type AppProps = {};
 
-type ModalState = {
-  type:
-    | 'login'
-    | 'initializer'
-    | 'account-editor'
-    | 'report-form'
-    | 'goal-selector'
-    | 'semester-changer'
-    | 'course-adder'
-    | 'requirement-display';
-  semChangerSemester: Semester;
-  reqDisplayRequirement: StandaloneRequirement;
-};
-
 type AppState = {
   loggedIn: boolean;
   user: Account;
   userData: UserData;
-  modal: ModalState;
+  modal: 'login' | 'initializer' | 'account-editor' | 'report-form';
 };
 
 class App extends React.Component<AppProps, AppState> {
@@ -59,11 +40,7 @@ class App extends React.Component<AppProps, AppState> {
         auth: null,
       },
       userData: null,
-      modal: {
-        type: null,
-        semChangerSemester: null,
-        reqDisplayRequirement: null,
-      },
+      modal: null,
     };
   }
 
@@ -137,19 +114,13 @@ class App extends React.Component<AppProps, AppState> {
 
   closeModal = (): void => {
     this.setState({
-      modal: {
-        ...this.state.modal,
-        type: null,
-      },
+      modal: null,
     });
   };
 
   openLogin = (): void => {
     this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'login',
-      },
+      modal: 'login',
     });
   };
 
@@ -197,10 +168,7 @@ class App extends React.Component<AppProps, AppState> {
 
   openInitializer = (): void => {
     this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'initializer',
-      },
+      modal: 'initializer',
     });
   };
 
@@ -211,75 +179,19 @@ class App extends React.Component<AppProps, AppState> {
 
   openAccountEditor = (): void => {
     this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'account-editor',
-      },
+      modal: 'account-editor',
     });
   };
 
   openReportForm = (): void => {
     this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'report-form',
-      },
-    });
-  };
-
-  openGoalSelector = (): void => {
-    this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'goal-selector',
-      },
+      modal: 'report-form',
     });
   };
 
   handleSelectGoals = (goals: RequirementSet[]) => {
     this.setGoals(goals);
     this.closeModal();
-  };
-
-  openSemesterChanger = (): void => {
-    this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'semester-changer',
-      },
-    });
-  };
-
-  handleChangeSemester = (semesters: Map<string, Semester[]>) => {
-    this.setSemesters(semesters);
-    this.closeModal();
-  };
-
-  openCourseAdder = (semester: Semester): void => {
-    this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'course-adder',
-        semChangerSemester: semester,
-      },
-    });
-  };
-
-  handleAddCourse = (course: Course): void => {
-    if (this.state.modal.type !== 'course-adder') {
-      throw new Error('Course adder tried to add course while closed');
-    }
-    this.addCourse(course, this.state.modal.semChangerSemester);
-  };
-
-  openRequirementDisplay = (requirement: StandaloneRequirement): void => {
-    this.setState({
-      modal: {
-        ...this.state.modal,
-        type: 'requirement-display',
-        reqDisplayRequirement: requirement,
-      },
-    });
   };
 
   register = async (username: string, password: string, userTesting: boolean): Promise<string> => {
@@ -394,10 +306,10 @@ class App extends React.Component<AppProps, AppState> {
   /**
    * Adds a course to a given semester.
    *
-   * @param {Course} course The course to add.
    * @param {Semester} semester The semester to which to add the course.
+   * @param {Course} course The course to add.
    */
-  addCourse = (course: Course, semester: Semester): void => {
+  addCourse = (semester: Semester, course: Course): void => {
     if (semester.courses.includes(course)) {
       console.error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
       return;
@@ -580,9 +492,9 @@ class App extends React.Component<AppProps, AppState> {
           <Col xs={8}>
             <SemesterPane
               semesters={this.state.userData.semesters}
-              onOpenSemesterChanger={this.openSemesterChanger}
-              onOpenCourseAdder={this.openCourseAdder}
+              onAddCourse={this.addCourse}
               onRemoveCourse={this.removeCourse}
+              onChangeSemesters={this.setSemesters}
             />
           </Col>
           <Col xs={4}>
@@ -590,10 +502,9 @@ class App extends React.Component<AppProps, AppState> {
               courses={this.getCurrentCourses()}
               goals={this.state.userData.goals}
               manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
-              onOpenGoalSelector={this.openGoalSelector}
-              onOpenRequirementDisplay={this.openRequirementDisplay}
               onManualFulfill={this.manuallyFulfill}
               onManualUnfulfill={this.manuallyUnfulfill}
+              onChangeGoals={this.setGoals}
             />
           </Col>
         </Row>
@@ -608,54 +519,24 @@ class App extends React.Component<AppProps, AppState> {
     if (this.state.userData) {
       return (
         <>
-          <Modal backdrop="static" show={this.state.modal.type === 'login'}>
+          <Modal backdrop="static" show={this.state.modal === 'login'}>
             <Modal.Body>
               <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
             </Modal.Body>
           </Modal>
-          <Modal size="lg" backdrop="static" show={this.state.modal.type === 'initializer'} onHide={this.closeModal}>
+          <Modal size="lg" backdrop="static" show={this.state.modal === 'initializer'} onHide={this.closeModal}>
             <Modal.Body>
               <Initializer onInitializeData={this.handleInitializeData} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal.type === 'account-editor'} onHide={this.closeModal}>
+          <Modal show={this.state.modal === 'account-editor'} onHide={this.closeModal}>
             <Modal.Body>
               <AccountEditor onClose={this.closeModal} />
             </Modal.Body>
           </Modal>
-          <Modal show={this.state.modal.type === 'report-form'} onHide={this.closeModal}>
+          <Modal show={this.state.modal === 'report-form'} onHide={this.closeModal}>
             <Modal.Body>
               <ReportForm />
-            </Modal.Body>
-          </Modal>
-          <Modal size="lg" show={this.state.modal.type === 'goal-selector'} onHide={this.closeModal}>
-            <Modal.Body>
-              <GoalSelector initialGoals={this.state.userData.goals} onSelectGoals={this.handleSelectGoals} />
-            </Modal.Body>
-          </Modal>
-          <Modal size="lg" show={this.state.modal.type === 'semester-changer'} onHide={this.closeModal}>
-            <Modal.Body>
-              <SemesterChanger
-                initialSemesters={this.state.userData.semesters}
-                onChangeSemesters={this.handleChangeSemester}
-              />
-            </Modal.Body>
-          </Modal>
-          <Modal size="lg" show={this.state.modal.type === 'course-adder'} onHide={this.closeModal}>
-            <Modal.Body>
-              {this.state.modal.semChangerSemester ? (
-                <>
-                  <h4>Add a class to {this.state.modal.semChangerSemester.name}</h4>
-                  <CourseSearcher onSelectCourse={this.handleAddCourse} />
-                </>
-              ) : null}
-            </Modal.Body>
-          </Modal>
-          <Modal size="lg" show={this.state.modal.type === 'requirement-display'} onHide={this.closeModal}>
-            <Modal.Body>
-              {this.state.modal.reqDisplayRequirement ? (
-                <RequirementDisplay requirement={this.state.modal.reqDisplayRequirement} />
-              ) : null}
             </Modal.Body>
           </Modal>
         </>
