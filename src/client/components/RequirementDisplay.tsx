@@ -126,7 +126,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     return courses;
   };
 
-  private renderCourseRow(course: Course): React.ReactNode {
+  private renderCourseRow = (course: Course): React.ReactNode => {
     return (
       <tr key={course.id} className="course-table-row" onClick={() => this.showCourse(course)}>
         <td className="no">
@@ -138,15 +138,15 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
         <td className="grade">{course.berkeleytimeData?.grade || '-'}</td>
       </tr>
     );
-  }
+  };
 
-  private renderSortArrow(): React.ReactNode {
+  private renderSortArrow = (): React.ReactNode => {
     return (
       <i className="material-icons RequirementDisplay__sort-arrow">
         {this.state.sortDescending ? 'arrow_drop_down' : 'arrow_drop_up'}
       </i>
     );
-  }
+  };
 
   render(): React.ReactElement {
     if (!this.state.courses) {

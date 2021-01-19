@@ -127,7 +127,7 @@ class Login extends React.Component<LoginProps, LoginState> {
     });
   };
 
-  private renderRegistration(): React.ReactElement {
+  private renderRegistration = (): React.ReactElement => {
     return (
       <>
         <h4 className="gt-modal-header">Register</h4>
@@ -194,9 +194,9 @@ class Login extends React.Component<LoginProps, LoginState> {
         </div>
       </>
     );
-  }
+  };
 
-  private renderLogin(): React.ReactElement {
+  private renderLogin = (): React.ReactElement => {
     return (
       <>
         <h4 className="gt-modal-header">Login</h4>
@@ -244,7 +244,7 @@ class Login extends React.Component<LoginProps, LoginState> {
         </div>
       </>
     );
-  }
+  };
 
   render(): React.ReactElement {
     if (!this.state.registering) {

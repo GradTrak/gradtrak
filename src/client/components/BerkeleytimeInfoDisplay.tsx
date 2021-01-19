@@ -91,11 +91,11 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
     });
   };
 
-  private renderGrade(): React.ReactNode {
+  private renderGrade = (): React.ReactNode => {
     return `Average grade: ${this.props.course.berkeleytimeData.grade || 'unavailable'}`;
-  }
+  };
 
-  private renderSemestersOffered(): React.ReactNode {
+  private renderSemestersOffered = (): React.ReactNode => {
     let text: string;
     if (
       !Array.isArray(this.props.course.berkeleytimeData.semestersOffered) ||
@@ -106,9 +106,9 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
       text = this.props.course.berkeleytimeData.semestersOffered.slice(0, 5).join(', ');
     }
     return `Semesters offered: ${text}`;
-  }
+  };
 
-  private renderGradeDistribution(): React.ReactNode {
+  private renderGradeDistribution = (): React.ReactNode => {
     const defaultUrl = 'https://berkeleytime.com/grades';
     if (!this.props.course.berkeleytimeData.berkeleytimeId) {
       return defaultUrl;
@@ -123,7 +123,7 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
         Loading&#8230;
       </iframe>
     );
-  }
+  };
 
   render(): React.ReactElement {
     return (
