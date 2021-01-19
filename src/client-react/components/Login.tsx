@@ -130,56 +130,6 @@ class Login extends React.Component<LoginProps, LoginState> {
   private renderRegistration(): React.ReactElement {
     return (
       <>
-        <h4 className="gt-modal-header">Login</h4>
-        <div className="row Login__google-signin">
-          <div className="col">
-            <a href="/login/google">
-              <GoogleSigninButton />
-            </a>
-          </div>
-        </div>
-        <hr className="Login__or" />
-        <Form
-          className="Login__login"
-          onSubmit={(e) => {
-            e.preventDefault();
-            this.handleSubmitLogin();
-          }}
-        >
-          <Form.Group controlId="Login__username">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="text" name="username" ref={this.usernameRef} />
-          </Form.Group>
-          <Form.Group controlId="Login__password">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" name="password" ref={this.passwordRef} />
-          </Form.Group>
-          <div className="my-4 Login__failure">{this.state.error}</div>
-          <Form.Group className="my-4">
-            <Button variant="primary" block type="submit" disabled={this.state.loading}>
-              Login
-            </Button>
-          </Form.Group>
-        </Form>
-        <div className="Login__register">
-          Don&rsquo;t have an account?{' '}
-          <Button variant="link" onClick={this.showRegistration}>
-            Register
-          </Button>
-        </div>
-        <hr className="Login__or" />
-        <div className="Login__skip">
-          <Button variant="link" onClick={this.props.onDismiss}>
-            Continue as guest
-          </Button>
-        </div>
-      </>
-    );
-  }
-
-  private renderLogin(): React.ReactElement {
-    return (
-      <>
         <h4 className="gt-modal-header">Register</h4>
         <div className="row Login__google-signin">
           <div className="col">
@@ -234,6 +184,56 @@ class Login extends React.Component<LoginProps, LoginState> {
           Have an account?{' '}
           <Button variant="link" onClick={this.showLogin}>
             Log In
+          </Button>
+        </div>
+        <hr className="Login__or" />
+        <div className="Login__skip">
+          <Button variant="link" onClick={this.props.onDismiss}>
+            Continue as guest
+          </Button>
+        </div>
+      </>
+    );
+  }
+
+  private renderLogin(): React.ReactElement {
+    return (
+      <>
+        <h4 className="gt-modal-header">Login</h4>
+        <div className="row Login__google-signin">
+          <div className="col">
+            <a href="/login/google">
+              <GoogleSigninButton />
+            </a>
+          </div>
+        </div>
+        <hr className="Login__or" />
+        <Form
+          className="Login__login"
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.handleSubmitLogin();
+          }}
+        >
+          <Form.Group controlId="Login__username">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="text" name="username" ref={this.usernameRef} />
+          </Form.Group>
+          <Form.Group controlId="Login__password">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" name="password" ref={this.passwordRef} />
+          </Form.Group>
+          <div className="my-4 Login__failure">{this.state.error}</div>
+          <Form.Group className="my-4">
+            <Button variant="primary" block type="submit" disabled={this.state.loading}>
+              Login
+            </Button>
+          </Form.Group>
+        </Form>
+        <div className="Login__register">
+          Don&rsquo;t have an account?{' '}
+          <Button variant="link" onClick={this.showRegistration}>
+            Register
           </Button>
         </div>
         <hr className="Login__or" />

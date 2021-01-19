@@ -103,7 +103,7 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
     ) {
       text = 'Unavailable';
     } else {
-      text = this.props.course.berkeleytimeData.semestersOffered.slice(0, 8).join(', ');
+      text = this.props.course.berkeleytimeData.semestersOffered.slice(0, 5).join(', ');
     }
     return `Semesters offered: ${text}`;
   }
