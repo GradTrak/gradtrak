@@ -44,10 +44,7 @@ module.exports = {
       {
         loader: 'babel-loader',
         test: /\.(js|jsx)$/,
-        exclude: [
-          /node_modules/,
-          /^webpack\..*\.js$/,
-        ],
+        exclude: /node_modules/,
       },
       {
         use: ['style-loader', 'css-loader'],
