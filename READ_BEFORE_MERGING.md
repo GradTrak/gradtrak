@@ -15,6 +15,7 @@ try not to break more than a few if you're merging into prod, okay?
 
 I'm so glad you asked! Here are the basics: 
 
+- Populate the database first. 
 - Logging in, logging out. 
 - Creating an account. Yes, I know you can use a nonexistent email. It's ok.
 - Log in with google, change a course, semester, and a goal,
