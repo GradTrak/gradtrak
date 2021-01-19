@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Course } from '../../models/course.model';
 import { Requirement } from '../../models/requirement.model';
+import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 
 import { processRequirements, ProcessedFulfillmentType } from '../../lib/process-requirements';
@@ -15,7 +16,9 @@ export class RequirementsPaneComponent implements OnChanges, OnInit {
   @Input() readonly courses: Course[];
   @Input() readonly manuallyFulfilled: Map<string, Set<string>>; // Maps from a requirementSet id to a list of requirement ids.
   @Output() openGoalSelector: EventEmitter<void> = new EventEmitter<void>();
-  @Output() readonly openRequirementDisplay: EventEmitter<Requirement> = new EventEmitter<Requirement>();
+  @Output() readonly openRequirementDisplay: EventEmitter<StandaloneRequirement> = new EventEmitter<
+    StandaloneRequirement
+  >();
 
   fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
 
