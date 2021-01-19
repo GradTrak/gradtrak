@@ -75,7 +75,7 @@ export class BerkeleytimeInfoComponent implements OnInit {
     ) {
       return 'Unavailable';
     }
-    return this.course.berkeleytimeData.semestersOffered.slice(0, 8).join(', ');
+    return this.course.berkeleytimeData.semestersOffered.slice(0, 5).join(', ');
   }
 
   /**
