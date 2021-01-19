@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Course } from '../../models/course.model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Requirement } from '../../models/requirement.model';
+import { StandaloneRequirement } from '../../models/requirements/standalone-requirement.model';
 import { RequirementSet } from '../../models/requirement-set.model';
 import { UserService } from '../../services/user.service';
 
@@ -13,9 +13,10 @@ import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 })
 export class RequirementSetComponent implements OnInit {
   @Input() readonly requirementSet: RequirementSet;
-  @Input() readonly courses: Course[];
-  @Input() readonly manuallyFulfilled: Map<string, Set<string>>;
   @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
+  @Output() readonly openRequirementDisplay: EventEmitter<StandaloneRequirement> = new EventEmitter<
+    StandaloneRequirement
+  >();
 
   collapsed: boolean;
 

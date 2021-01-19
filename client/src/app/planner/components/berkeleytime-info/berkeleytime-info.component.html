@@ -1,0 +1,30 @@
+<div>
+  <h6>
+    {{ course.getName() }}
+    <ng-container *ngIf="!hasAllFields()">
+      <button class="btn btn-link px-0 py-0" (click)="openAllInfo()">
+        <i class="material-icons all-button">launch</i>
+      </button>
+    </ng-container>
+  </h6>
+  <ng-container *ngIf="isAvailable(); else unavailable">
+    <ng-container *ngIf="hasField('grade')">
+      Average grade: {{ course.berkeleytimeData.grade || 'unavailable' }}<br />
+    </ng-container>
+    <ng-container *ngIf="hasField('semesters-offered')">Semesters offered: {{ getSemesterText() }}<br /></ng-container>
+  </ng-container>
+  <ng-template #unavailable>
+    This course does not have Berkeleytime information available.
+  </ng-template>
+  <iframe
+    *ngIf="hasField('grade-distribution')"
+    class="grades-iframe"
+    [src]="sanitizer.bypassSecurityTrustResourceUrl(getBerkeleytimeGradeUrl())"
+  ></iframe>
+</div>
+
+<ng-template #allInfo>
+  <div class="modal-body">
+    <app-berkeleytime-info [course]="course"></app-berkeleytime-info>
+  </div>
+</ng-template>

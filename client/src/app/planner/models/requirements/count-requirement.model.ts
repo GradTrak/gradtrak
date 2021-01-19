@@ -11,7 +11,6 @@ import { getAllCombinations } from '../../../../utils';
 export class CountRequirement extends Requirement {
   numRequired: number;
   requirement: StandaloneRequirement;
-  hidden: boolean;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
@@ -23,15 +22,6 @@ export class CountRequirement extends Requirement {
    */
   countFulfilled(courses: Course[]): number {
     return this.getFulfillingCourses(courses).length;
-  }
-
-  /**
-   * Any COURSE that is a possible contribution to any child requirement is
-   * a possible contribution to a UnitRequirement, and will return true.
-   * @return whether the course could possibly help fullfill a requirement.
-   */
-  canFulfill(course: Course): boolean {
-    return this.requirement.canFulfill(course);
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {

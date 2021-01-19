@@ -20,12 +20,12 @@
       "dom"
     ],
     "paths": {
-      "common/*": ["../../common/src/*"]
+      "common/*": ["../../src/common/*"]
     }
   },
   "references": [
     {
-      "path": "../common/"
+      "path": "../common"
     }
   ],
   "angularCompilerOptions": {

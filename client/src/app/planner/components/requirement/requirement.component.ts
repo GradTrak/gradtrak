@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Course } from '../../models/course.model';
 import { Requirement } from '../../models/requirement.model';
 import { MultiRequirement } from '../../models/requirements/multi-requirement.model';
@@ -18,27 +17,21 @@ import { ProcessedFulfillmentType } from '../../lib/process-requirements';
 })
 export class RequirementComponent implements OnInit {
   @Input() readonly requirement: Requirement;
-  @Input() readonly courses: Course[];
   @Input() readonly override: string;
-  @Input() readonly manuallyFulfilled: Set<string>;
   @Input() readonly fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
   @Output() readonly onManualFulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
   @Output() readonly onManualUnfulfill: EventEmitter<Requirement> = new EventEmitter<Requirement>();
-
-  displayedRequirement: Requirement;
+  @Output() readonly openRequirementDisplay: EventEmitter<StandaloneRequirement> = new EventEmitter<
+    StandaloneRequirement
+  >();
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   @ViewChild('standardReq', { static: true }) private standardReq: TemplateRef<any>;
   @ViewChild('multiReq', { static: true }) private multiReq: TemplateRef<any>;
   @ViewChild('unitReq', { static: true }) private unitReq: TemplateRef<any>;
   @ViewChild('tagReq', { static: true }) private tagReq: TemplateRef<any>;
-  @ViewChild('requirementDisplayTemplate', { static: false }) private requirementDisplayTemplate: TemplateRef<any>;
   @ViewChild('countReq', { static: true }) private countReq: TemplateRef<any>;
   /* eslint-enable @typescript-eslint/no-explicit-any */
-
-  private requirementDisplayModalReference: NgbModalRef;
-
-  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {}
 
@@ -68,11 +61,25 @@ export class RequirementComponent implements OnInit {
     return this.requirement as MultiRequirement;
   }
 
+  getMultiFulfilled(): number {
+    return this.getMulti().requirements.filter((childReq) => this.fulfillmentMap.get(childReq).status === 'fulfilled')
+      .length;
+  }
+
   /**
    * Standalone requirements and unit requirements can show requirement display.
    */
-  hasDisplay(): boolean {
-    return this.isStandalone() || this.isUnit() || this.isCount();
+  getDisplayRequirement(): StandaloneRequirement {
+    if (this.isStandalone()) {
+      return this.getStandalone();
+    }
+    if (this.isUnit()) {
+      return this.getUnit().requirement;
+    }
+    if (this.isCount()) {
+      return this.getCount().requirement;
+    }
+    return null;
   }
 
   getFulfillment(): string[] {
@@ -84,13 +91,23 @@ export class RequirementComponent implements OnInit {
     return fulfillments;
   }
 
-  getFulfillingCourses(): string[] {
+  getFulfillingCourses(): Course[] {
     const fulfillment: ProcessedFulfillmentType = this.fulfillmentMap.get(this.requirement);
     if (fulfillment.method === 'courses') {
-      return Array.from(fulfillment.coursesUsed).map((course: Course) => course.getName());
+      return Array.from(fulfillment.coursesUsed);
     } else {
       return [];
     }
+  }
+
+  getFulfilledUnits(): number {
+    return this.getFulfillingCourses()
+      .map((course: Course) => course.units)
+      .reduce((a: number, b: number) => a + b, 0);
+  }
+
+  getFulfilledCount(): number {
+    return this.getFulfillingCourses().length;
   }
 
   isUnit(): boolean {
@@ -156,7 +173,7 @@ export class RequirementComponent implements OnInit {
   }
 
   isManuallyFulfilled(): boolean {
-    return this.manuallyFulfilled && this.manuallyFulfilled.has(this.requirement.id);
+    return this.fulfillmentMap.get(this.requirement).method === 'manual';
   }
 
   manuallyFulfill(requirement: Requirement): void {
@@ -165,14 +182,5 @@ export class RequirementComponent implements OnInit {
 
   manuallyUnfulfill(requirement: Requirement): void {
     this.onManualUnfulfill.emit(requirement);
-  }
-
-  openRequirementDisplay(requirement: Requirement): void {
-    this.displayedRequirement = requirement;
-    this.requirementDisplayModalReference = this.modalService.open(this.requirementDisplayTemplate, { size: 'lg' });
-  }
-
-  closeRequirementDisplay(): void {
-    this.requirementDisplayModalReference.close();
   }
 }

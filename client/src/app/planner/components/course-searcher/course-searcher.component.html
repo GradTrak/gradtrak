@@ -1,5 +1,5 @@
 <ng-container *ngIf="allCourses; else loading">
-  <form (ngSubmit)="returnCourse()">
+  <form class="search-bar" (ngSubmit)="returnCourse()">
     <div class="form-row">
       <div class="col">
         <input
@@ -16,6 +16,11 @@
       </div>
     </div>
   </form>
+  <app-berkeleytime-info
+    *ngIf="hasSearchedCourse()"
+    [fields]="['semesters-offered']"
+    [course]="searchedCourse"
+  ></app-berkeleytime-info>
 </ng-container>
 
 <ng-template #loading>

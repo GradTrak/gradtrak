@@ -42,12 +42,19 @@
 <div class="body">
   <ng-container *ngIf="!isLoading; else loading">
     <div class="row no-gutters main">
-      <app-semester-pane class="col-8" [semesters]="state.userData.semesters"></app-semester-pane>
+      <app-semester-pane
+        class="col-8"
+        [semesters]="state.userData.semesters"
+        (openSemesterChanger)="openSemesterChanger()"
+        (openCourseAdder)="openCourseAdder($event)"
+      ></app-semester-pane>
       <app-requirements-pane
         class="col-4"
         [courses]="currentCourses"
         [goals]="state.userData.goals"
         [manuallyFulfilled]="state.userData.manuallyFulfilledReqs"
+        (openGoalSelector)="openGoalSelector()"
+        (openRequirementDisplay)="openRequirementDisplay($event)"
       ></app-requirements-pane>
     </div>
   </ng-container>
@@ -67,7 +74,7 @@
 
 <ng-template #initializer>
   <div class="modal-body">
-    <app-initializer (initializeData)="setUserData($event)"></app-initializer>
+    <app-initializer (initializeData)="setUserData($event)" (initializeData)="closeModal()"></app-initializer>
   </div>
 </ng-template>
 
@@ -80,5 +87,38 @@
 <ng-template #accountEditor>
   <div class="modal-body">
     <app-account-editor (onClose)="closeModal()"></app-account-editor>
+  </div>
+</ng-template>
+
+<ng-template #goalSelector>
+  <div class="modal-body">
+    <app-goal-selector
+      [initialGoals]="state.userData.goals"
+      (selectGoals)="setGoals($event)"
+      (selectGoals)="closeModal()"
+    ></app-goal-selector>
+  </div>
+</ng-template>
+
+<ng-template #semesterChanger>
+  <div class="modal-body">
+    <app-semester-changer
+      [semestersInput]="state.userData.semesters"
+      (semesterChanged)="setSemesters($event)"
+      (semesterChanged)="closeModal()"
+    ></app-semester-changer>
+  </div>
+</ng-template>
+
+<ng-template #courseAdder>
+  <div class="modal-body">
+    <h4>Add a class to {{ courseAdderSemester.name }}</h4>
+    <app-course-searcher (courseReturned)="addCourse($event)"></app-course-searcher>
+  </div>
+</ng-template>
+
+<ng-template #requirementDisplay>
+  <div class="modal-body">
+    <app-requirement-display [requirementInput]="displayedRequirement"></app-requirement-display>
   </div>
 </ng-template>
