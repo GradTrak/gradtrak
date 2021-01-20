@@ -1,0 +1,36 @@
+.RequirementDisplay__course-list {
+  width: 100%;
+  font-size: 1rem;
+  overflow: auto;
+  max-height: 450px;
+}
+
+.RequirementDisplay__course-table-sort {
+  cursor: pointer;
+}
+
+.RequirementDisplay__sort-arrow {
+  font-size: 18px;
+  transform: translateY(3px);
+}
+
+.RequirementDisplay__course-table-row {
+  cursor: pointer;
+}
+
+.RequirementDisplay__course-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.RequirementDisplay__course-list th,
+.RequirementDisplay__course-list td {
+  padding: 4px 8px;
+}
+
+.RequirementDisplay__no-col {
+  width: 9rem;
+}
+
+.RequirementDisplay__grade-col {
+  width: 9rem;
+}

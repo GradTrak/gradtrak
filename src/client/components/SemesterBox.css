@@ -1,0 +1,89 @@
+.SemesterBox {
+  display: block;
+  padding: 12px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.SemesterBox__name {
+  color: #1337f1;
+}
+
+.SemesterBox__unit-count {
+  font-size: 0.7rem;
+}
+
+.SemesterBox__separator {
+  margin: 8px;
+}
+
+.SemesterBox__courses,
+.SemesterBox__course-adder {
+  width: calc(100% - 24px);
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.SemesterBox__courses {
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  font-size: 0.7rem;
+}
+
+.SemesterBox__courses__name-col {
+  width: 5rem;
+}
+
+.SemesterBox__courses__units-col {
+  width: 2rem;
+}
+
+.SemesterBox__courses__button-cell-col {
+  width: 2rem;
+}
+
+.SemesterBox__courses th {
+  font-weight: normal;
+}
+
+.SemesterBox__courses td {
+  padding: 0 4px;
+}
+
+.SemesterBox__courses__course td,
+.SemesterBox__course-adder {
+  background-color: #f0f0f0;
+}
+
+.SemesterBox__courses__course td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.SemesterBox__courses__course td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.SemesterBox__course-adder {
+  border-radius: 8px;
+}
+
+.SemesterBox__courses__name {
+  position: relative;
+}
+
+.SemesterBox__duplicate {
+  position: absolute;
+  transform: translateX(-24px);
+  font-size: 16px;
+  color: #dfae00;
+}
+
+.SemesterBox__units {
+  text-align: center;
+}
+
+.SemesterBox__courses__more {
+  font-size: 1rem;
+}
