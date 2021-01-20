@@ -103,7 +103,7 @@ class App extends React.Component<AppProps, AppState> {
     window.addEventListener('beforeunload', (e) => {
       if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
         /* This text isn't actually what is displayed. */
-        const confirmation: string = 'Are you sure you want to leave? Guest account changes will be lost.';
+        const confirmation = 'Are you sure you want to leave? Guest account changes will be lost.';
         e.returnValue = confirmation;
         e.preventDefault();
         return confirmation;
@@ -340,7 +340,7 @@ class App extends React.Component<AppProps, AppState> {
     }
 
     // TODO Making this a function that returns a clone breaks the course-changer
-    semester.courses = semester.courses.filter((c: Course) => c !== course);
+    semester.courses = semester.courses.filter((c) => c !== course);
     this.setState({
       ...this.state,
       userData: {
@@ -363,10 +363,10 @@ class App extends React.Component<AppProps, AppState> {
       return;
     }
 
-    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
     nextSet.add(requirement.id);
 
-    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
     nextManuallyFulfilled.set(requirementSet.id, nextSet);
 
     this.setState({
@@ -391,8 +391,8 @@ class App extends React.Component<AppProps, AppState> {
       return;
     }
 
-    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
-    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
+    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
     nextManuallyFulfilled.set(requirementSet.id, nextSet);
 
     nextSet.delete(requirement.id);

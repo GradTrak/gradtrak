@@ -18,7 +18,7 @@ export abstract class StandaloneRequirement extends Requirement {
     if (courses instanceof Course) {
       return this.equivIsFulfillableBy(courses, new Set<Course>());
     }
-    return courses.some((course: Course) => this.equivIsFulfillableBy(course, new Set<Course>()));
+    return courses.some((course) => this.equivIsFulfillableBy(course, new Set<Course>()));
   }
 
   protected abstract isFulfillableBy(course: Course): boolean;
@@ -28,13 +28,11 @@ export abstract class StandaloneRequirement extends Requirement {
    * is any one course, or possibly no courses (leaving the requirement unfulfilled.)
    */
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    const combinations: Set<Course>[] = courses
-      .filter((course: Course) => this.isFulfilledWith([course]))
-      .map((course: Course) => {
-        const combination: Set<Course> = new Set<Course>();
-        combination.add(course);
-        return combination;
-      });
+    const combinations = courses
+      .filter((course) => this.isFulfilledWith([course]))
+      .map(
+        (course) => new Set<Course>([course]),
+      );
     combinations.push(new Set<Course>());
     return combinations;
   }
@@ -48,7 +46,7 @@ export abstract class StandaloneRequirement extends Requirement {
       visited.add(course);
       if (this.isFulfillableBy(course)) {
         return true;
-      } else if (course.equiv.some((equivCourse: Course) => this.equivIsFulfillableBy(equivCourse, visited))) {
+      } else if (course.equiv.some((equivCourse) => this.equivIsFulfillableBy(equivCourse, visited))) {
         return true;
       }
     }

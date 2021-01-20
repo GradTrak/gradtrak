@@ -16,7 +16,7 @@ export class MultiRequirement extends Requirement implements RequirementContaine
   }
 
   numFulfilled(courses: Course[], override?: Set<string>): number {
-    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses, override)).length;
+    return this.requirements.filter((requirement) => requirement.isFulfilled(courses, override)).length;
   }
 
   getAnnotation(): string {
@@ -33,7 +33,7 @@ export class MultiRequirement extends Requirement implements RequirementContaine
 
   toString(): string {
     return this.requirements.reduce(
-      (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
+      (annotation, requirement) => `${annotation}\n${requirement.toString()}`,
       `Fulfill with ${this.numRequired} of:`,
     );
   }

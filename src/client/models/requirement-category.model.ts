@@ -1,6 +1,5 @@
 import { RequirementPrototype } from '../../common/prototypes/requirement.prototype';
 import { RequirementCategoryPrototype } from '../../common/prototypes/requirement-category.prototype';
-import { ConstraintPrototype } from '../../common/prototypes/constraint.prototype';
 import { Course } from './course.model';
 import { Constraint, Requirement } from './requirement.model';
 import { CourseRequirement } from './requirements/course-requirement.model';
@@ -33,12 +32,12 @@ export class RequirementCategory {
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
   ): RequirementCategory {
-    const requirements: Requirement[] = proto.requirements.map((reqProto: RequirementPrototype) =>
+    const requirements = proto.requirements.map((reqProto) =>
       RequirementCategory.reqFromProto(reqProto, coursesMap, tagsMap),
     );
-    const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
+    const reqMap = new Map<string, Requirement>();
 
-    const addReqToMap: (Requirement) => void = (req: Requirement) => {
+    const addReqToMap = (req: Requirement): void => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
@@ -47,8 +46,8 @@ export class RequirementCategory {
     };
     requirements.forEach(addReqToMap);
 
-    const constraints: Constraint[] = proto.constraints
-      ? proto.constraints.map((constraintProto: ConstraintPrototype) => {
+    const constraints = proto.constraints
+      ? proto.constraints.map((constraintProto) => {
           switch (constraintProto.type) {
             case 'mutex':
               return MutexConstraint.fromProto(constraintProto, reqMap);
@@ -92,7 +91,7 @@ export class RequirementCategory {
       }
 
       case 'multi': {
-        protoClone.requirements = proto.requirements.map((childReqProto: RequirementPrototype) =>
+        protoClone.requirements = proto.requirements.map((childReqProto) =>
           RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
         );
         requirement = new MultiRequirement(protoClone);
@@ -100,7 +99,7 @@ export class RequirementCategory {
       }
 
       case 'poly': {
-        protoClone.requirements = proto.requirements.map((childReqProto: RequirementPrototype) =>
+        protoClone.requirements = proto.requirements.map((childReqProto) =>
           RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
         );
         requirement = new PolyRequirement(protoClone);
@@ -127,14 +126,14 @@ export class RequirementCategory {
       }
 
       default: {
-        const unknownProto: RequirementPrototype = proto as RequirementPrototype;
+        const unknownProto = proto as RequirementPrototype;
         console.error(`Requirement ${unknownProto.name} has unknown Requirement type: ${unknownProto.type}`);
         break;
       }
     }
 
-    const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
-    const addReqToMap: (Requirement) => void = (req: Requirement) => {
+    const reqMap = new Map<string, Requirement>();
+    const addReqToMap = (req: Requirement): void => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
@@ -143,7 +142,7 @@ export class RequirementCategory {
     };
     addReqToMap(requirement);
     requirement.constraints = proto.constraints
-      ? proto.constraints.map((constraintProto: ConstraintPrototype) => {
+      ? proto.constraints.map((constraintProto) => {
           switch (constraintProto.type) {
             case 'mutex':
               return MutexConstraint.fromProto(constraintProto, reqMap);

@@ -1,5 +1,4 @@
 import { ConstraintPrototype } from '../../common/prototypes/constraint.prototype';
-import { RequirementCategoryPrototype } from '../../common/prototypes/requirement-category.prototype';
 import { RequirementSetPrototype } from '../../common/prototypes/requirement-set.prototype';
 import { RequirementCategory } from './requirement-category.model';
 import { Constraint, Requirement } from './requirement.model';
@@ -55,21 +54,21 @@ export class RequirementSet {
       parent = null;
     }
 
-    const reqCategories = proto.requirementCategories.map((reqCategoryProto: RequirementCategoryPrototype) =>
+    const reqCategories = proto.requirementCategories.map((reqCategoryProto) =>
       RequirementCategory.fromProto(reqCategoryProto, coursesMap, tagsMap),
     );
-    const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
+    const reqMap = new Map<string, Requirement>();
 
-    const addReqToMap: (Requirement) => void = (req: Requirement) => {
+    const addReqToMap = (req: Requirement): void => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
         req.requirements.forEach(addReqToMap);
       }
     };
-    reqCategories.flatMap((reqCategory: RequirementCategory) => reqCategory.requirements).forEach(addReqToMap);
+    reqCategories.flatMap((reqCategory) => reqCategory.requirements).forEach(addReqToMap);
 
-    const universalConstraints: Constraint[] = proto.universalConstraints
+    const universalConstraints = proto.universalConstraints
       ? proto.universalConstraints.map((universalConstraintProto: ConstraintPrototype) => {
           switch (universalConstraintProto.type) {
             case 'mutex':
@@ -79,8 +78,8 @@ export class RequirementSet {
           }
         })
       : [];
-    const selfConstraints: Constraint[] = proto.selfConstraints
-      ? proto.selfConstraints.map((selfConstraintProto: ConstraintPrototype) => {
+    const selfConstraints = proto.selfConstraints
+      ? proto.selfConstraints.map((selfConstraintProto) => {
           switch (selfConstraintProto.type) {
             case 'mutex':
               return MutexConstraint.fromProto(selfConstraintProto, reqMap);
@@ -102,14 +101,14 @@ export class RequirementSet {
   }
 
   getRequirements(): Requirement[] {
-    return this.requirementCategories.flatMap((reqCategory: RequirementCategory) => reqCategory.requirements);
+    return this.requirementCategories.flatMap((reqCategory) => reqCategory.requirements);
   }
 
   getConstraints(): Constraint[] {
     const selfConstraints = this.selfConstraints ? this.selfConstraints : [];
     const universalConstraints = this.universalConstraints ? this.universalConstraints : [];
-    const constraints: Constraint[] = [...selfConstraints, ...universalConstraints];
-    let curr: RequirementSet = this.parent;
+    const constraints = [...selfConstraints, ...universalConstraints];
+    let curr = this.parent;
     while (curr) {
       constraints.push(...(curr.universalConstraints ? curr.universalConstraints : []));
       curr = curr.parent;

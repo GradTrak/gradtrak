@@ -85,13 +85,13 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     let comparator: (a: Course, b: Course) => number;
     switch (this.state.sortField) {
       case 'no':
-        comparator = (a: Course, b: Course): number => (a.getName() < b.getName() ? -1 : 1);
+        comparator = (a, b) => (a.getName() < b.getName() ? -1 : 1);
         break;
       case 'title':
-        comparator = (a: Course, b: Course): number => (a.title < b.title ? -1 : 1);
+        comparator = (a, b) => (a.title < b.title ? -1 : 1);
         break;
       case 'grade':
-        comparator = (a: Course, b: Course): number => {
+        comparator = (a, b) => {
           // TODO Nullish coalescing operator should also be removed with
           // strict null checks.
           const gradeA = a.berkeleytimeData?.grade;
@@ -127,9 +127,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     }
 
     /* Reverse the comparator if we are sorting descending. */
-    const reversedComparator = this.state.sortDescending
-      ? (a: Course, b: Course): number => -comparator(a, b)
-      : comparator;
+    const reversedComparator = this.state.sortDescending ? (a, b) => -comparator(a, b) : comparator;
 
     courses.sort(reversedComparator);
     return courses;

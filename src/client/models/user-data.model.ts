@@ -14,17 +14,15 @@ export class UserData {
     coursesMap: Map<string, Course>,
     reqSetMap: Map<string, RequirementSet>,
   ): UserData {
-    const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
+    const semesters = new Map<string, Semester[]>();
     Object.entries(proto.semesters).forEach(([key, value]) => {
       semesters.set(
         key,
-        (value as SemesterPrototype[]).map((semesterProto: SemesterPrototype) =>
-          semesterProto ? Semester.fromProto(semesterProto, coursesMap) : null,
-        ),
+        value.map((semesterProto) => (semesterProto ? Semester.fromProto(semesterProto, coursesMap) : null)),
       );
     });
-    const goals: RequirementSet[] = proto.goalIds.map((goalId: string) => reqSetMap.get(goalId));
-    const manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>();
+    const goals = proto.goalIds.map((goalId) => reqSetMap.get(goalId));
+    const manuallyFulfilledReqs = new Map<string, Set<string>>();
     Object.entries(proto.manuallyFulfilledReqs).forEach((entry) => {
       manuallyFulfilledReqs.set(entry[0], new Set<string>(entry[1]));
     });
@@ -38,7 +36,7 @@ export class UserData {
   static toProto(userData: UserData): UserDataPrototype {
     const semesters: { [year: string]: SemesterPrototype[] } = {};
     userData.semesters.forEach((academicYearSemesters, academicYearName) => {
-      semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
+      semesters[academicYearName] = academicYearSemesters.map((semester) => {
         if (!semester) {
           return null;
         }
@@ -49,8 +47,8 @@ export class UserData {
         return semesterPrototype;
       });
     });
-    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
-    const manuallyFulfilledReqs: { [reqSetId: string]: string[] } = Object.fromEntries(
+    const goalIds = userData.goals.map((goal) => goal.id);
+    const manuallyFulfilledReqs = Object.fromEntries(
       Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
         entry[0],
         Array.from(entry[1]),

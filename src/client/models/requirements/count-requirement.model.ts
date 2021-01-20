@@ -30,8 +30,8 @@ export class CountRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    const filteredCourses: Course[] = courses.filter((course: Course) => this.requirement.isFulfilledWith([course]));
-    return getAllCombinations(filteredCourses).map((combination: Course[]) => new Set<Course>(combination));
+    const filteredCourses = courses.filter((course) => this.requirement.isFulfilledWith([course]));
+    return getAllCombinations(filteredCourses).map((combination) => new Set<Course>(combination));
   }
 
   toString(): string {

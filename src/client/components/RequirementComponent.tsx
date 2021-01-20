@@ -137,7 +137,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
     const manuallyFulfilled = fulfillment.method === 'manual';
 
     /* Fulfillment CSS classes. */
-    const fulfillments: string[] = [`Requirement__${fulfillment.status}`];
+    const fulfillments = [`Requirement__${fulfillment.status}`];
     if (fulfillment.method === 'manual') {
       fulfillments.push('Requirement__manual');
     }

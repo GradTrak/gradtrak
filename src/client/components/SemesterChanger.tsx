@@ -71,8 +71,8 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
       });
       return;
     }
-    const semesterName: string = `${term} ${yearNum}`;
-    if (this.getSemArr().some((semester: Semester) => semester.name === semesterName)) {
+    const semesterName = `${term} ${yearNum}`;
+    if (this.getSemArr().some((semester) => semester.name === semesterName)) {
       this.setState({
         error: 'This semester is already in your schedule!',
       });
@@ -104,7 +104,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
     const index = TERM_INDEX[semesterArr[0]];
     const year = Array.from(this.state.semesters.get(yearName));
     year[index] = null;
-    if (year.every((yearSem: Semester) => !yearSem)) {
+    if (year.every((yearSem) => !yearSem)) {
       semesters.delete(yearName);
     } else {
       semesters.set(yearName, year);

@@ -11,8 +11,8 @@ export function getAllCombinations<T>(arr: T[], index?: number): T[][] {
   if (index >= arr.length) {
     return [[]];
   }
-  const rest: T[][] = getAllCombinations(arr, index + 1);
-  return [...rest, ...rest.map((combination: T[]) => [arr[index], ...combination])];
+  const rest = getAllCombinations(arr, index + 1);
+  return [...rest, ...rest.map((combination) => [arr[index], ...combination])];
 }
 
 /* https://stackoverflow.com/a/25490531 */

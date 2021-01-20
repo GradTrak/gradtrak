@@ -12,7 +12,7 @@ export class PolyRequirement extends StandaloneRequirement {
   hidden: boolean;
 
   numFulfilled(course: Course): number {
-    return this.requirements.filter((requirement: StandaloneRequirement) => requirement.isFulfilled(course)).length;
+    return this.requirements.filter((requirement) => requirement.isFulfilled(course)).length;
   }
 
   getAnnotation(): string {
@@ -24,7 +24,7 @@ export class PolyRequirement extends StandaloneRequirement {
 
   toString(): string {
     return this.requirements.reduce(
-      (annotation: string, requirement: StandaloneRequirement) => `${annotation}\n${requirement.toString()}`,
+      (annotation, requirement) => `${annotation}\n${requirement.toString()}`,
       `Using one course, fulfill ${this.numRequired} of:`,
     );
   }

@@ -16,7 +16,7 @@ export class Semester {
   static fromProto(proto: SemesterPrototype, coursesMap: Map<string, Course>): Semester {
     return new Semester(
       proto.name,
-      proto.courseIds.map((courseId: string) => coursesMap.get(courseId)),
+      proto.courseIds.map((courseId) => coursesMap.get(courseId)),
     );
   }
 }

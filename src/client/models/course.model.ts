@@ -45,7 +45,7 @@ export class Course {
       proto.title,
       proto.units,
       proto.berkeleytimeData,
-      proto.tagIds.map((tagId: string) => tagMap.get(tagId)),
+      proto.tagIds.map((tagId) => tagMap.get(tagId)),
       proto.equivIds,
     );
   }
@@ -64,13 +64,13 @@ export class Course {
 
   mapEquiv(map: Map<string, Course>): void {
     this.equiv = this.equivIds
-      .filter((id: string) => {
+      .filter((id) => {
         if (!map.has(id)) {
           console.error(`No equivalent course with ID ${id} found for course ${this.id}`);
           return false;
         }
         return true;
       })
-      .map((id: string) => map.get(id));
+      .map((id) => map.get(id));
   }
 }

@@ -14,7 +14,7 @@ export class RegexRequirement extends StandaloneRequirement {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
-    return courses.some((course: Course) => this.isFulfillableBy(course));
+    return courses.some((course) => this.isFulfillableBy(course));
   }
 
   toString(): string {

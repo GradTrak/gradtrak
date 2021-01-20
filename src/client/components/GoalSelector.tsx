@@ -40,7 +40,10 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
       selections: Object.fromEntries(
         GOAL_TYPES.map((goalType) => [
           goalType,
-          { selected: null, goals: this.props.initialGoals.filter((goal) => goal.type === goalType) },
+          {
+            selected: null,
+            goals: this.props.initialGoals.filter((goal) => goal.type === goalType),
+          },
         ]),
       ),
     };
