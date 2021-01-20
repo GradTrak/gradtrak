@@ -41,6 +41,11 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
     });
   };
 
+  handleChangeSemesters = (semesters: Map<string, Semester[]>): void => {
+    this.closeChanger();
+    this.props.onChangeSemesters(semesters);
+  };
+
   render(): React.ReactElement {
     /* Concat all semester-per-year arrays and remove the null ones. */
     const semesterArr = Array.from(this.props.semesters.keys())
@@ -78,7 +83,7 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
         </Row>
         <Modal size="lg" show={this.state.showChanger} onHide={this.closeChanger}>
           <Modal.Body>
-            <SemesterChanger initialSemesters={this.props.semesters} onChangeSemesters={this.props.onChangeSemesters} />
+            <SemesterChanger initialSemesters={this.props.semesters} onChangeSemesters={this.handleChangeSemesters} />
           </Modal.Body>
         </Modal>
       </Container>
