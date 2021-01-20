@@ -6,3 +6,6 @@ build/
 
 # Yarn stuff.
 yarn-error.log
+
+# ESLint cache.
+.eslintcache
