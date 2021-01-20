@@ -162,7 +162,7 @@ class Login extends React.Component<LoginProps, LoginState> {
           <Form.Group controlId="Register__user-testing">
             <Form.Check type="checkbox" label="I'd like to help with user testing!" ref={this.regUserTestingRef} />
           </Form.Group>
-          <div className="my-4 failure">{this.state.error}</div>
+          <div className="my-4 Login__failure">{this.state.error}</div>
           <Form.Group className="my-4">
             <Button variant="primary" block type="submit" disabled={this.state.loading}>
               Register
