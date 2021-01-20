@@ -116,7 +116,7 @@ class SemesterBox extends React.Component<SemesterBoxProps, SemesterBoxState> {
             </Col>
           </Row>
         </Container>
-        <hr />
+        <hr className="SemesterBox__separator" />
         <table className="SemesterBox__courses">
           <colgroup>
             <col className="SemesterBox__courses__name-col" />
