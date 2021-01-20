@@ -109,7 +109,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
 
   private searchFunction = (goal: RequirementSet): boolean => {
     /* Hide goals that are already selected. */
-    if (this.state.selections[goal.type].goals.includes(goal)) {
+    if (!this.state.selections[goal.type] || this.state.selections[goal.type].goals.includes(goal)) {
       return false;
     }
     return goal

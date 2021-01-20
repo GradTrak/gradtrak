@@ -5,6 +5,7 @@ import { CourseFulfillmentMethodType, FulfillmentMethodType, FulfillmentType } f
 import { Constraint, Requirement } from '../models/requirement.model';
 import { RequirementSet } from '../models/requirement-set.model';
 import { RequirementCategory } from '../models/requirement-category.model';
+import { CountRequirement } from '../models/requirements/count-requirement.model';
 import { CourseRequirement } from '../models/requirements/course-requirement.model';
 import { MultiRequirement } from '../models/requirements/multi-requirement.model';
 import { UnitRequirement } from '../models/requirements/unit-requirement.model';
@@ -255,6 +256,10 @@ function getMappings(
         }
         courseCombinations = courseCombinations.filter(
           (combination: Set<Course>) => unitsPerCombination.get(combination) === unitTarget,
+        );
+      } else if (req instanceof CountRequirement) {
+        courseCombinations = courseCombinations.filter(
+          (combination: Set<Course>) => combination.size <= req.numRequired,
         );
       }
     }
