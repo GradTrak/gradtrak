@@ -164,7 +164,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
           </Dropdown.Menu>
         </Dropdown>
         {this.renderReqElem()}
-        <Modal show={this.state.showDisplay} onHide={this.closeDisplay}>
+        <Modal size="lg" show={this.state.showDisplay} onHide={this.closeDisplay}>
           <Modal.Body>
             {this.getDisplayRequirement() ? <RequirementDisplay requirement={this.getDisplayRequirement()} /> : null}
           </Modal.Body>

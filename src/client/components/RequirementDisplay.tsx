@@ -191,7 +191,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
             <tbody>{this.getFulfillingCourses(this.state.courses).map(this.renderCourseRow)}</tbody>
           </table>
         </div>
-        <Modal show={this.state.openCourseInfo} onHide={this.closeCourseInfo}>
+        <Modal size="xl" show={this.state.openCourseInfo} onHide={this.closeCourseInfo}>
           <Modal.Body>
             {this.state.shownCourseInfo ? <BerkeleytimeInfoDisplay course={this.state.shownCourseInfo} /> : null}
           </Modal.Body>
