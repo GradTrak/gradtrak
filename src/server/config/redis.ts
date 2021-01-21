@@ -1,3 +1,5 @@
 import redis from 'redis';
 
-export const client = redis.createClient(process.env.REDIS_URL);
+export const client = redis.createClient({
+  url: process.env.REDIS_URL,
+});

@@ -46,10 +46,17 @@ if (process.env.NODE_ENV === 'production') {
 
 passport.use(localStrategy);
 passport.use(googleStrategy);
-passport.deserializeUser<string>(deserializeUser);
-passport.serializeUser<string>(serializeUser);
+passport.deserializeUser<string, express.Request>(deserializeUser);
+passport.serializeUser<string, express.Request>(serializeUser);
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.get('/', (req, res, next) => {
+  if (!req.user) {
+    return;
+  }
+  req.user;
+});
 
 app.all('*', (req, res, next) => {
   res.cookie('csrf-token', req.csrfToken());

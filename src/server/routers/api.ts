@@ -23,7 +23,7 @@ api.post(
   passport.authenticate('local', { failWithError: true }),
   userController.loginSuccessLocal,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  (err, req, res, next) => {
+  (req: express.Request, res: express.Response) => {
     res.status(200);
     userController.loginFailure(req, res);
   },
@@ -33,7 +33,7 @@ api.get(
   passport.authenticate('google'),
   userController.loginSuccessGoogle,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  (err, req, res, next) => {
+  (req: express.Request, res: express.Response) => {
     res.status(200);
     userController.loginFailure(req, res);
   },

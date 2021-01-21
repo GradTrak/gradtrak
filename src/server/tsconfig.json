@@ -7,7 +7,12 @@
     "rootDir": ".",
     "composite": true,
     "tsBuildInfoFile": "../../build/server.tsbuildinfo",
-    "strict": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedIndexedAccess": false,
     "esModuleInterop": true
   },
   "references": [
