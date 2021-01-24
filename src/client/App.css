@@ -3,6 +3,7 @@
   height: 5rem;
   position: fixed;
   color: white;
+  z-index: 1;
 }
 
 .App__header button {
@@ -33,11 +34,18 @@
   position: absolute;
   top: 5rem;
   width: 100%;
-}
-
-.App__main > * {
+  z-index: 0;
   height: calc(100vh - 5rem);
   overflow-y: scroll;
+}
+
+/* TODO Should _probably_ use the Sass mixin at some point instead of
+ * hard-coding. */
+@media (min-width: 768px) {
+  .App__main > * {
+    height: calc(100vh - 5rem);
+    overflow-y: scroll;
+  }
 }
 
 .App__left {

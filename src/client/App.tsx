@@ -489,7 +489,7 @@ class App extends React.Component<AppProps, AppState> {
     if (this.state.userData) {
       return (
         <Row className="App__main" noGutters>
-          <Col xs={8}>
+          <Col xs={12} md={8}>
             <SemesterPane
               semesters={this.state.userData.semesters}
               onAddCourse={this.addCourse}
@@ -497,7 +497,7 @@ class App extends React.Component<AppProps, AppState> {
               onChangeSemesters={this.setSemesters}
             />
           </Col>
-          <Col xs={4}>
+          <Col xs={12} md={4}>
             <RequirementPane
               courses={this.getCurrentCourses()}
               goals={this.state.userData.goals}

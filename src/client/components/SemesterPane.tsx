@@ -71,7 +71,7 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
         </Row>
         <Row>
           {semesterArr.map((semester) => (
-            <Col key={semester.name} className="SemesterPane__semester" xs={6}>
+            <Col key={semester.name} className="SemesterPane__semester" xs={12} lg={6}>
               <SemesterBox
                 semester={semester}
                 currentSemesters={semesterArr}
