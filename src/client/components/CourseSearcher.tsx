@@ -57,9 +57,9 @@ type CourseSearcherProps = {
 };
 
 type CourseSearcherState = {
-  courses: Course[];
+  courses: Course[] | null;
   options: Course[];
-  selected: Course;
+  selected: Course | null;
 };
 
 class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcherState> {
@@ -68,7 +68,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
 
     this.state = {
       courses: null,
-      options: null,
+      options: [],
       selected: null,
     };
   }
@@ -77,7 +77,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     this.fetchCourses();
   }
 
-  private fetchCourses = async (): Promise<void> => {
+  private fetchCourses = async () => {
     const courses = await Courses.getCourses();
     this.setState({
       courses,
@@ -85,7 +85,12 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     });
   };
 
-  handleSearch = async (input: string) => {
+  handleSearch = async (input: string): Promise<void> => {
+    if (!this.state.courses) {
+      console.error('Tried to search before courses loaded');
+      return;
+    }
+
     // TODO: sort this by search rankings for relevance
     let options = [];
     if (input.length > 2) {
@@ -96,7 +101,11 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     }
   };
 
-  handleKeyDown = (e: KeyboardEvent) => {
+  handleKeyDown = (e: Event) => {
+    if (!(e instanceof KeyboardEvent)) {
+      return;
+    }
+
     if (e.key === 'Enter') {
       if (!this.state.selected) {
         this.setState({

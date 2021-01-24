@@ -11,11 +11,18 @@ export class PolyRequirement extends StandaloneRequirement {
   numRequired: number;
   hidden: boolean;
 
+  constructor(id: string, name: string, requirements: StandaloneRequirement[], numRequired: number, hidden: boolean) {
+    super(id, name);
+    this.requirements = requirements;
+    this.numRequired = numRequired;
+    this.hidden = hidden;
+  }
+
   numFulfilled(course: Course): number {
     return this.requirements.filter((requirement) => requirement.isFulfilled(course)).length;
   }
 
-  getAnnotation(): string {
+  getAnnotation(): string | null {
     if (this.hidden) {
       return this.toString();
     }

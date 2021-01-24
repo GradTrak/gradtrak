@@ -15,7 +15,7 @@ type InitializerProps = {
 
 type InitializerState = {
   stage: 'semesters' | 'goals';
-  error: string;
+  error: string | null;
 };
 
 class Initializer extends React.Component<InitializerProps, InitializerState> {
@@ -37,6 +37,11 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
   }
 
   setStage = (stage: 'semesters' | 'goals'): void => {
+    if (!this.startYearRef.current || !this.gradYearRef.current) {
+      console.error('Tried to change stage before render finished');
+      return;
+    }
+
     if (stage === 'goals') {
       /* Validate semesters. */
       const startYear = parseInt(this.startYearRef.current.value, 10);
@@ -62,6 +67,11 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
   };
 
   handleSubmit = (goals: RequirementSet[]): void => {
+    if (!this.startYearRef.current || !this.gradYearRef.current || !this.includeSummersRef.current) {
+      console.error('Tried to submit before render finished');
+      return;
+    }
+
     const startYear = parseInt(this.startYearRef.current.value, 10);
     const gradYear = parseInt(this.gradYearRef.current.value, 10);
     const includeSummers = this.includeSummersRef.current.checked;

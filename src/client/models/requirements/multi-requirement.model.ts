@@ -11,6 +11,13 @@ export class MultiRequirement extends Requirement implements RequirementContaine
   numRequired: number;
   hidden: boolean;
 
+  constructor(id: string, name: string, requirements: Requirement[], numRequired: number, hidden: boolean) {
+    super(id, name);
+    this.requirements = requirements;
+    this.numRequired = numRequired;
+    this.hidden = hidden;
+  }
+
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.numFulfilled(courses, override) >= this.numRequired;
   }
@@ -19,7 +26,7 @@ export class MultiRequirement extends Requirement implements RequirementContaine
     return this.requirements.filter((requirement) => requirement.isFulfilled(courses, override)).length;
   }
 
-  getAnnotation(): string {
+  getAnnotation(): string | null {
     if (this.hidden) {
       return this.toString();
     }

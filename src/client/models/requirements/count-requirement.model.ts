@@ -12,6 +12,12 @@ export class CountRequirement extends Requirement {
   numRequired: number;
   requirement: StandaloneRequirement;
 
+  constructor(id: string, name: string, numRequired: number, requirement: StandaloneRequirement) {
+    super(id, name);
+    this.numRequired = numRequired;
+    this.requirement = requirement;
+  }
+
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.countFulfilled(courses) >= this.numRequired;
   }

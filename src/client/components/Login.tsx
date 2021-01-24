@@ -7,15 +7,15 @@ import GoogleSigninButton from '../assets/google-signin.svg';
 import './Login.css';
 
 type LoginProps = {
-  onLogin: (username: string, password: string) => Promise<string>;
-  onRegister: (username: string, password: string, userTesting: boolean) => Promise<string>;
+  onLogin: (username: string, password: string) => Promise<string | null>;
+  onRegister: (username: string, password: string, userTesting: boolean) => Promise<string | null>;
   onDismiss: () => void;
 };
 
 type LoginState = {
   loading: boolean;
   registering: boolean;
-  error: string;
+  error: string | null;
 };
 
 class Login extends React.Component<LoginProps, LoginState> {
@@ -58,6 +58,11 @@ class Login extends React.Component<LoginProps, LoginState> {
   };
 
   handleSubmitLogin = async () => {
+    if (!this.usernameRef.current || !this.passwordRef.current) {
+      console.error('Tried to log in before render finished');
+      return;
+    }
+
     const username = this.usernameRef.current.value;
     const password = this.passwordRef.current.value;
 
@@ -86,6 +91,16 @@ class Login extends React.Component<LoginProps, LoginState> {
   };
 
   handleSubmitRegistration = async () => {
+    if (
+      !this.usernameRef.current ||
+      !this.passwordRef.current ||
+      !this.password2Ref.current ||
+      !this.regUserTestingRef.current
+    ) {
+      console.error('Tried to register before render finished');
+      return;
+    }
+
     const username = this.usernameRef.current.value;
     const password = this.passwordRef.current.value;
     const password2 = this.password2Ref.current.value;

@@ -10,10 +10,10 @@ import SemesterChanger from './SemesterChanger';
 import './SemesterPane.css';
 
 type SemesterPaneProps = {
-  semesters: Map<string, Semester[]>;
+  semesters: Map<string, (Semester | null)[]>;
   onAddCourse: (semester: Semester, course: Course) => void;
   onRemoveCourse: (semester: Semester, course: Course) => void;
-  onChangeSemesters: (semesters: Map<string, Semester[]>) => void;
+  onChangeSemesters: (semesters: Map<string, (Semester | null)[]>) => void;
 };
 
 type SemesterPaneState = {
@@ -41,7 +41,7 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
     });
   };
 
-  handleChangeSemesters = (semesters: Map<string, Semester[]>): void => {
+  handleChangeSemesters = (semesters: Map<string, (Semester | null)[]>): void => {
     this.closeChanger();
     this.props.onChangeSemesters(semesters);
   };
@@ -52,7 +52,7 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
       .sort()
       .map((year) => this.props.semesters.get(year))
       .flat()
-      .filter((semester) => semester);
+      .filter((semester) => semester) as Semester[];
     // a temporary fix because we haven't implemented view by year functionality yet.
 
     return (
@@ -70,16 +70,18 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
           </Col>
         </Row>
         <Row>
-          {semesterArr.map((semester) => (
-            <Col key={semester.name} className="SemesterPane__semester" xs={6}>
-              <SemesterBox
-                semester={semester}
-                currentSemesters={semesterArr}
-                onAddCourse={(course) => this.props.onAddCourse(semester, course)}
-                onRemoveCourse={(course) => this.props.onRemoveCourse(semester, course)}
-              />
-            </Col>
-          ))}
+          {semesterArr
+            .filter((semester) => semester)
+            .map((semester) => (
+              <Col key={semester.name} className="SemesterPane__semester" xs={6}>
+                <SemesterBox
+                  semester={semester}
+                  currentSemesters={semesterArr}
+                  onAddCourse={(course) => this.props.onAddCourse(semester, course)}
+                  onRemoveCourse={(course) => this.props.onRemoveCourse(semester, course)}
+                />
+              </Col>
+            ))}
         </Row>
         <Modal size="lg" show={this.state.showChanger} onHide={this.closeChanger}>
           <Modal.Body>

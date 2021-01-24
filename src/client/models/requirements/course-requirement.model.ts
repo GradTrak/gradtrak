@@ -7,6 +7,11 @@ import { StandaloneRequirement } from './standalone-requirement.model';
 export class CourseRequirement extends StandaloneRequirement {
   course: Course;
 
+  constructor(id: string, name: string, course: Course) {
+    super(id, name);
+    this.course = course;
+  }
+
   protected isFulfillableBy(course: Course): boolean {
     return course === this.course;
   }

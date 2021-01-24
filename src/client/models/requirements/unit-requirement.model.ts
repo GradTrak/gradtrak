@@ -13,6 +13,12 @@ export class UnitRequirement extends Requirement {
   units: number;
   requirement: StandaloneRequirement;
 
+  constructor(id: string, name: string, units: number, requirement: StandaloneRequirement) {
+    super(id, name);
+    this.units = units;
+    this.requirement = requirement;
+  }
+
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.unitsFulfilled(courses) >= this.units;
   }

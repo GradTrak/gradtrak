@@ -37,6 +37,7 @@
         "allow": ["warn", "error"]
       }
     ],
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off"
   }
 }

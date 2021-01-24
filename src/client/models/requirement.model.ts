@@ -8,18 +8,18 @@ import { FulfillmentMethodType } from './fulfillment-type';
 export abstract class Requirement {
   id: string;
   name: string;
-  constraints: Constraint[];
+  private _constraints?: Constraint[];
 
-  constructor(obj: object) {
-    // FIXME Constraints
-    Object.assign(this, obj);
+  constructor(id: string, name: string) {
+    this.id = id;
+    this.name = name;
   }
 
   /* Requirement.fromProto is currently RequirementCategory.reqFromProto to
    * avoid circular dependencies. */
 
-  isFulfilled(courses: Course[], override: Set<string>): boolean {
-    if (override && override.has(this.id)) {
+  isFulfilled(courses: Course[], override?: Set<string>): boolean {
+    if (override?.has(this.id)) {
       return true;
     }
     return this.isFulfilledWith(courses, override);
@@ -27,14 +27,24 @@ export abstract class Requirement {
 
   abstract isFulfilledWith(courses: Course[], override?: Set<string>): boolean;
 
-  getAnnotation(): string {
+  getAnnotation(): string | null {
     return null;
   }
 
   abstract toString(): string;
 
-  getConstraints(): Constraint[] {
-    return this.constraints ? this.constraints : [];
+  get constraints(): Constraint[] {
+    if (!this._constraints) {
+      throw new Error('Tried to get requirement constraints before initialized');
+    }
+    return this._constraints;
+  }
+
+  set constraints(constraints: Constraint[]) {
+    if (this._constraints) {
+      throw new Error('Tried to double-initialize constraints');
+    }
+    this._constraints = constraints;
   }
 
   /**

@@ -12,11 +12,11 @@ type GoalSelectorProps = {
 };
 
 type GoalSelectorState = {
-  requirementsMap: Map<string, RequirementSet>;
+  requirementsMap: Map<string, RequirementSet> | null;
   searchTerm: string;
   selections: {
     [goalType: string]: {
-      selected: RequirementSet;
+      selected: RequirementSet | null;
       goals: RequirementSet[];
     };
   };
@@ -61,15 +61,31 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
   };
 
   handleSelectChange = (): void => {
+    if (!this.state.requirementsMap) {
+      console.error('Tried to select goal before requirements loaded');
+      return;
+    }
+
+    if (
+      !Object.keys(this.state.selections).every(
+        (goalType) => this.goalRefs.has(goalType) && this.goalRefs.get(goalType)!.current,
+      )
+    ) {
+      console.error('Tried to select goal before render finished');
+      return;
+    }
+
     this.setState({
       selections: Object.fromEntries(
-        Object.entries(this.state.selections).map(([goalType, selection]) => [
-          goalType,
-          {
-            ...selection,
-            selected: this.state.requirementsMap.get(this.goalRefs.get(goalType).current.value),
-          },
-        ]),
+        Object.entries(this.state.selections).map(([goalType, selection]) => {
+          return [
+            goalType,
+            {
+              ...selection,
+              selected: this.state.requirementsMap!.get(this.goalRefs.get(goalType)!.current!.value)!,
+            },
+          ];
+        }),
       ),
     });
   };
@@ -118,7 +134,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
     return goal
       ? goal.id.includes(this.state.searchTerm) ||
           goal.name.includes(this.state.searchTerm) ||
-          this.searchFunction(goal.parent)
+          Boolean(goal.parent && this.searchFunction(goal.parent))
       : false;
   };
 
@@ -150,7 +166,7 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
                     onChange={this.handleSelectChange}
                     ref={this.goalRefs.get(goalType)}
                   >
-                    {this.getGoalsForType(goalType, this.state.requirementsMap)
+                    {this.getGoalsForType(goalType, this.state.requirementsMap!)
                       .filter(this.searchFunction)
                       .map((goal) => (
                         <option key={goal.id} value={goal.id}>

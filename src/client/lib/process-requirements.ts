@@ -23,13 +23,13 @@ export type ProcessedFulfillmentType = {
  */
 function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
   const mapping = new Map<Requirement, Constraint[]>();
-  mapping.set(req, req.getConstraints());
+  mapping.set(req, req.constraints);
 
   // TODO Fix type guard for RequirementContainer
   if (req instanceof MultiRequirement) {
     req.requirements.forEach((childReq) => {
       fetchReqConstraints(childReq).forEach((value, key) => {
-        mapping.set(key, [...req.getConstraints(), ...value]);
+        mapping.set(key, [...req.constraints, ...value]);
       });
     });
   }
@@ -38,12 +38,12 @@ function fetchReqConstraints(req: Requirement): Map<Requirement, Constraint[]> {
 }
 
 const reqIsFulfilledWithMapping = memoize(
-  (req: Requirement, reqToCourseMapping: Map<Requirement, FulfillmentMethodType>) => {
+  (req: Requirement, reqToCourseMapping: Map<Requirement, FulfillmentMethodType>): boolean => {
     if (!reqToCourseMapping.has(req)) {
       return false;
     }
 
-    const fulfillmentMethod = reqToCourseMapping.get(req);
+    const fulfillmentMethod = reqToCourseMapping.get(req)!;
 
     if (fulfillmentMethod.method === 'manual') {
       return true;
@@ -214,7 +214,7 @@ function getMappings(
         method: 'courses',
         coursesUsed: combination,
       });
-      const valid = constraints.get(req).every((constraint) => constraint.isValidMapping(mapping));
+      const valid = constraints.get(req)!.every((constraint) => constraint.isValidMapping(mapping));
       mapping.delete(req);
       return valid;
     });
@@ -333,7 +333,7 @@ function deriveReqFulfillment(
     /* Handle MultiRequirements by recursing down its children */
     // eslint-disable-next-line @typescript-eslint/no-use-before-define
     deriveFulfillment(req.requirements, bestMappings, fulfillment);
-    const childFulfillments = req.requirements.map((childReq) => fulfillment.get(childReq));
+    const childFulfillments = req.requirements.map((childReq) => fulfillment.get(childReq)!);
     const coursesUsed = new Set<Course>();
     /* Union all courses used from children */
     childFulfillments.forEach((childFulfillment) => {
@@ -352,7 +352,7 @@ function deriveReqFulfillment(
     fulfillment.set(req, reqFulfillment);
   } else {
     const chosenMapping = bestMappings[0];
-    const fulfillmentMethod = chosenMapping.get(req);
+    const fulfillmentMethod = chosenMapping.get(req)!;
     let status: FulfillmentType;
     if (bestMappings.every((reqToCourseMapping) => reqIsFulfilledWithMapping(req, reqToCourseMapping))) {
       /* Requirement is fulfilled */
@@ -413,7 +413,7 @@ function deriveFulfillment(
       new Set(
         Array.from(reqToCourseMapping.values())
           .filter((fulfillmentMethod) => fulfillmentMethod.method === 'courses')
-          .map((fulfillmentMethod: CourseFulfillmentMethodType) => Array.from(fulfillmentMethod.coursesUsed))
+          .map((fulfillmentMethod) => Array.from((fulfillmentMethod as CourseFulfillmentMethodType).coursesUsed))
           .flat(),
       ).size,
     ]),
@@ -463,7 +463,7 @@ function processRequirements(
   const manualReqs = new Set<Requirement>();
   reqSets.forEach((reqSet) => {
     if (manuallyFulfilled.has(reqSet.id)) {
-      const manualReqIds = manuallyFulfilled.get(reqSet.id);
+      const manualReqIds = manuallyFulfilled.get(reqSet.id)!;
       const addManualReq = (req: Requirement): void => {
         if (manualReqIds.has(req.id)) {
           manualReqs.add(req);

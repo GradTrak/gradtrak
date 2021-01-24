@@ -14,7 +14,7 @@ import { Tag } from './tag.model';
 export class RequirementSet {
   id: string;
   name: string;
-  parent: RequirementSet;
+  parent: RequirementSet | null;
   type: string;
   requirementCategories: RequirementCategory[];
   universalConstraints: Constraint[];
@@ -23,7 +23,7 @@ export class RequirementSet {
   constructor(
     id: string,
     name: string,
-    parent: RequirementSet,
+    parent: RequirementSet | null,
     type: string,
     requirementCategories: RequirementCategory[],
     universalConstraints: Constraint[] = [],
@@ -44,11 +44,13 @@ export class RequirementSet {
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
   ): RequirementSet {
-    let parent: RequirementSet;
+    let parent: RequirementSet | null;
     if (proto.parentId) {
-      parent = reqSetMap.get(proto.parentId);
-      if (!parent) {
+      if (!reqSetMap.has(proto.parentId)) {
         console.error(`Parent RequirementSet not yet instantiated or nonexistent: ${proto.parentId}`);
+        parent = null;
+      } else {
+        parent = reqSetMap.get(proto.parentId)!;
       }
     } else {
       parent = null;

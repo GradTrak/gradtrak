@@ -15,11 +15,11 @@ type RequirementDisplayProps = {
 type SortType = 'no' | 'title' | 'grade';
 
 type RequirementDisplayState = {
-  courses: Course[];
+  courses: Course[] | null;
   sortField: SortType;
   sortDescending: boolean;
   openCourseInfo: boolean;
-  shownCourseInfo: Course;
+  shownCourseInfo: Course | null;
 };
 
 class RequirementDisplay extends React.Component<RequirementDisplayProps, RequirementDisplayState> {
@@ -92,11 +92,9 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
         break;
       case 'grade':
         comparator = (a, b) => {
-          // TODO Nullish coalescing operator should also be removed with
-          // strict null checks.
-          const gradeA = a.berkeleytimeData?.grade;
-          const gradeB = b.berkeleytimeData?.grade;
-          if (gradeA === gradeB || !(gradeA || gradeB)) {
+          const gradeA = a.berkeleytimeData.grade;
+          const gradeB = b.berkeleytimeData.grade;
+          if (gradeA === gradeB || !gradeA || !gradeB) {
             // Default to the course Dept and No. if equal or both null
             return a.getName() < b.getName() ? 1 : -1;
           }
@@ -127,7 +125,9 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
     }
 
     /* Reverse the comparator if we are sorting descending. */
-    const reversedComparator = this.state.sortDescending ? (a, b) => -comparator(a, b) : comparator;
+    const reversedComparator = this.state.sortDescending
+      ? (a: Course, b: Course): number => -comparator(a, b)
+      : comparator;
 
     courses.sort(reversedComparator);
     return courses;
@@ -139,10 +139,8 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
         <td className="RequirementDisplay__no">
           {course.dept} {course.no}
         </td>
-        {/* TODO Nullish coalescing operator should be removed after strict
-          null checks. */}
         <td className="RequirementDisplay__title">{course.title}</td>
-        <td className="RequirementDisplay__grade">{course.berkeleytimeData?.grade || '-'}</td>
+        <td className="RequirementDisplay__grade">{course.berkeleytimeData.grade || '-'}</td>
       </tr>
     );
   };
