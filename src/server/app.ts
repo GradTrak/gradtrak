@@ -51,13 +51,6 @@ passport.serializeUser<string, express.Request>(serializeUser);
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/', (req, res, next) => {
-  if (!req.user) {
-    return;
-  }
-  req.user;
-});
-
 app.all('*', (req, res, next) => {
   res.cookie('csrf-token', req.csrfToken());
   next();

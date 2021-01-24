@@ -26,7 +26,6 @@ export class MultiRequirement extends Requirement implements RequirementContaine
     return null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     throw new Error('Tried to get Course combinations for MultiRequirement');
   }
