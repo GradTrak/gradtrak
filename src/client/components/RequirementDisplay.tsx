@@ -159,11 +159,11 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
   render(): React.ReactElement {
     if (!this.state.courses) {
-      return <>Loading...</>;
+      return <div className="RequirementDisplay">Loading...</div>;
     }
 
     return (
-      <>
+      <div className="RequirementDisplay">
         <h3 className="RequirementDisplay__display-title">Eligible Courses</h3>
         <div className="RequirementDisplay__course-list">
           <table>
@@ -196,7 +196,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
             {this.state.shownCourseInfo ? <BerkeleytimeInfoDisplay course={this.state.shownCourseInfo} /> : null}
           </Modal.Body>
         </Modal>
-      </>
+      </div>
     );
   }
 }

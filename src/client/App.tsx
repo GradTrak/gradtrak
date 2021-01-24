@@ -431,7 +431,7 @@ class App extends React.Component<AppProps, AppState> {
   private renderName = (): React.ReactElement => {
     if (this.state.loggedIn) {
       return (
-        <>
+        <div className="App__name">
           <div className="App__left">Name: {this.state.user.username}</div>
           <div className="App__right">
             <button className="gt-button" type="button" onClick={this.openAccountEditor}>
@@ -455,12 +455,12 @@ class App extends React.Component<AppProps, AppState> {
               flag
             </i>
           </div>
-        </>
+        </div>
       );
     } else {
       /* Not logged in. */
       return (
-        <>
+        <div className="App__name">
           <div className="App__left">Guest User</div>
           <div className="App__right">
             <button className="gt-button" type="button" onClick={this.openLogin}>
@@ -480,7 +480,7 @@ class App extends React.Component<AppProps, AppState> {
               flag
             </i>
           </div>
-        </>
+        </div>
       );
     }
   };
@@ -548,16 +548,16 @@ class App extends React.Component<AppProps, AppState> {
 
   render(): React.ReactElement {
     return (
-      <>
-        <div className="App__header">
+      <div className="App">
+        <header className="App__header">
           <div className="App__title">
             GradTrak<sup className="App__beta">BETA</sup>
           </div>
-          <div className="App__name">{this.renderName()}</div>
-        </div>
-        <div className="App__body">{this.renderBody()}</div>
+          {this.renderName()}
+        </header>
+        <main className="App__body">{this.renderBody()}</main>
         {this.renderModals()}
-      </>
+      </div>
     );
   }
 }

@@ -90,7 +90,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
 
   render(): React.ReactElement {
     return (
-      <>
+      <div className="Initializer">
         <div style={{ display: this.state.stage === 'semesters' ? undefined : 'none' }}>
           <h4 className="gt-modal-header">Set Up</h4>
           <Form.Group controlId="Initializer__start-year">
@@ -134,7 +134,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
         <div style={{ display: this.state.stage === 'goals' ? undefined : 'none' }}>
           <GoalSelector initialGoals={[]} onSelectGoals={this.handleSubmit} />
         </div>
-      </>
+      </div>
     );
   }
 }

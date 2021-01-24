@@ -196,11 +196,11 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
 
   render(): React.ReactElement {
     if (!this.state.courses) {
-      return <>Loading...</>;
+      return <div className="CourseSearcher">Loading...</div>;
     }
 
     return (
-      <div>
+      <div className="CourseSearcher">
         <Form
           className="CourseSearcher__search-bar"
           onSubmit={(e) => {

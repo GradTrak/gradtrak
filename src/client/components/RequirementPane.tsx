@@ -81,7 +81,7 @@ class RequirementPane extends React.Component<RequirementPaneProps, RequirementP
     const requiredSets = getRequiredSets();
 
     return (
-      <Container className="px-4 py-3">
+      <Container className="RequirementPane px-4 py-3">
         <Row className="justify-content-center">
           <Col className="my-4" xs={10}>
             <button

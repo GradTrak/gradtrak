@@ -148,7 +148,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
 
   render(): React.ReactElement {
     return (
-      <>
+      <div className="SemesterChanger">
         <h4 className="gt-modal-header">Edit Semesters</h4>
         <div className="SemesterChanger__table">
           {this.getSemArr().map((semester) => (
@@ -208,7 +208,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
             </Form>
           </Modal.Body>
         </Modal>
-      </>
+      </div>
     );
   }
 }
