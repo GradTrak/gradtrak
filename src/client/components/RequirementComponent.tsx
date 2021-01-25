@@ -172,20 +172,21 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
       </div>
     );
 
-    /* Annotation popover. */
-    const annotationText = this.props.requirement.getAnnotation();
-    if (annotationText) {
-      const annotation = (
-        <Popover id="requirement-annotation">
-          <Popover.Content>{annotationText}</Popover.Content>
-        </Popover>
-      );
-      rendered = (
-        <OverlayTrigger trigger={['hover', 'focus']} overlay={annotation}>
-          {rendered}
-        </OverlayTrigger>
-      );
-    }
+    // Annotations removed in v0.2.0 for now.
+    ///* Annotation popover. */
+    //const annotationText = this.props.requirement.getAnnotation();
+    //if (annotationText) {
+    //  const annotation = (
+    //    <Popover id="requirement-annotation">
+    //      <Popover.Content>{annotationText}</Popover.Content>
+    //    </Popover>
+    //  );
+    //  rendered = (
+    //    <OverlayTrigger trigger={['hover', 'focus']} overlay={annotation}>
+    //      {rendered}
+    //    </OverlayTrigger>
+    //  );
+    //}
 
     return rendered;
   }
