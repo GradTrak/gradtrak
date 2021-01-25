@@ -87,9 +87,9 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
       if (a.dept === b.dept) {
         return a.getBareNumber() - b.getBareNumber();
       }
-      return a.dept < b.dept ? -1: 1;
-    }
- 
+      return a.dept < b.dept ? -1 : 1;
+    };
+
     switch (this.state.sortField) {
       case 'no':
         comparator = courseNoComparator;
