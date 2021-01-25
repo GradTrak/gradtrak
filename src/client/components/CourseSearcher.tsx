@@ -88,7 +88,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
   handleSearch = async (input: string) => {
     // TODO: sort this by search rankings for relevance
     let options = [];
-    if (input.length > 2) {
+    if (input.length >= 2) {
       options = this.searchFunction(input, this.state.courses).slice(0, 8);
       this.setState({
         options,
