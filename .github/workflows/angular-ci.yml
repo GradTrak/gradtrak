@@ -16,18 +16,3 @@ jobs:
       run: yarn install --frozen-lockfile
     - name: Build Angular App
       run: yarn build:client
-  lint-and-pretty:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - name: Install Yarn
-      run: npm install --global yarn
-    - name: Install Dependencies
-      run: yarn install --frozen-lockfile
-    - name: ESLint
-      run: yarn lint:client
-    - name: Prettier
-      run: yarn pretty:client
