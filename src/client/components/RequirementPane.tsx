@@ -81,7 +81,7 @@ class RequirementPane extends React.Component<RequirementPaneProps, RequirementP
     const requiredSets = getRequiredSets();
 
     return (
-      <Container className="px-4 py-3">
+      <Container className="RequirementPane px-4 py-3">
         <Row className="justify-content-center">
           <Col className="my-4" xs={10}>
             <button
@@ -102,7 +102,7 @@ class RequirementPane extends React.Component<RequirementPaneProps, RequirementP
             onManualUnfulfill={(req) => this.props.onManualUnfulfill(req, reqSet)}
           />
         ))}
-        <Modal show={this.state.showGoalSelector} onHide={this.closeGoalSelector}>
+        <Modal size="lg" show={this.state.showGoalSelector} onHide={this.closeGoalSelector}>
           <Modal.Body>
             <GoalSelector initialGoals={this.props.goals} onSelectGoals={this.handleChangeGoals} />
           </Modal.Body>

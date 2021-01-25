@@ -75,7 +75,7 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
 
   render(): React.ReactElement {
     return (
-      <>
+      <div className="AccountEditor">
         <h4 className="gt-modal-header">Account Settings</h4>
         <Form.Group as={Row} controlId="AccountEditor__username">
           <Col xs={6}>
@@ -146,7 +146,7 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
             </Row>
           ) : null}
         </Form>
-      </>
+      </div>
     );
   }
 }

@@ -125,7 +125,7 @@ class BerkeleytimeInfoDisplay extends React.Component<BerkeleytimeInfoDisplayPro
 
   render(): React.ReactElement {
     return (
-      <div>
+      <div className="BerkeleytimeInfoDisplay">
         <h6>
           {this.props.course.getName()}
           {!this.hasAllFields() ? (

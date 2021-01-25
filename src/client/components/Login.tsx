@@ -262,11 +262,7 @@ class Login extends React.Component<LoginProps, LoginState> {
   };
 
   render(): React.ReactElement {
-    if (!this.state.registering) {
-      return this.renderLogin();
-    } else {
-      return this.renderRegistration();
-    }
+    return <div className="Login">{this.state.registering ? this.renderRegistration() : this.renderLogin()}</div>;
   }
 }
 

@@ -57,7 +57,7 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
 
     return (
       // TODO Restore spacing from Angular.
-      <Container className="px-4 py-3">
+      <Container className="SemesterPane px-4 py-3">
         <Row className="justify-content-center">
           <Col className="my-4" xs={8}>
             <button

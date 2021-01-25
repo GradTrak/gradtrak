@@ -83,9 +83,16 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
   private getFulfillingCourses = (coursesInput: Course[]): Course[] => {
     const courses = coursesInput.filter((course) => this.props.requirement.isFulfilledWith(course));
     let comparator: (a: Course, b: Course) => number;
+    const courseNoComparator = (a: Course, b: Course): number => {
+      if (a.dept === b.dept) {
+        return a.getBareNumber() - b.getBareNumber();
+      }
+      return a.dept < b.dept ? -1 : 1;
+    };
+
     switch (this.state.sortField) {
       case 'no':
-        comparator = (a, b) => (a.getName() < b.getName() ? -1 : 1);
+        comparator = courseNoComparator;
         break;
       case 'title':
         comparator = (a, b) => (a.title < b.title ? -1 : 1);
@@ -96,7 +103,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
           const gradeB = b.berkeleytimeData.grade;
           if (gradeA === gradeB || !gradeA || !gradeB) {
             // Default to the course Dept and No. if equal or both null
-            return a.getName() < b.getName() ? 1 : -1;
+            return courseNoComparator(a, b);
           }
           if (!gradeA !== !gradeB) {
             // if one is truthy and the other isn't
@@ -155,44 +162,42 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
 
   render(): React.ReactElement {
     if (!this.state.courses) {
-      return <>Loading...</>;
+      return <div className="RequirementDisplay">Loading...</div>;
     }
 
     return (
-      <>
+      <div className="RequirementDisplay">
         <h3 className="RequirementDisplay__display-title">Eligible Courses</h3>
-        <div className="RequirementDisplay__course-list">
-          <table>
-            <colgroup>
-              <col className="RequirementDisplay__no-col" />
-              <col className="RequirementDisplay__title-col" />
-              <col className="RequirementDisplay__grade-col" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th className="RequirementDisplay__course-table-sort" onClick={() => this.changeSort('no')}>
-                  Course No.
-                  {this.state.sortField === 'no' ? this.renderSortArrow() : null}
-                </th>
-                <th className="RequirementDisplay__course-table-sort" onClick={() => this.changeSort('title')}>
-                  Course Title
-                  {this.state.sortField === 'title' ? this.renderSortArrow() : null}
-                </th>
-                <th className="RequirementDisplay__course-table-sort" onClick={() => this.changeSort('grade')}>
-                  Avg. Grade
-                  {this.state.sortField === 'grade' ? this.renderSortArrow() : null}
-                </th>
-              </tr>
-            </thead>
-            <tbody>{this.getFulfillingCourses(this.state.courses).map(this.renderCourseRow)}</tbody>
-          </table>
-        </div>
+        <table className="RequirementDisplay__course-list">
+          <colgroup>
+            <col className="RequirementDisplay__no-col" />
+            <col className="RequirementDisplay__title-col" />
+            <col className="RequirementDisplay__grade-col" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th className="RequirementDisplay__course-table-sort" onClick={() => this.changeSort('no')}>
+                Course No.
+                {this.state.sortField === 'no' ? this.renderSortArrow() : null}
+              </th>
+              <th className="RequirementDisplay__course-table-sort" onClick={() => this.changeSort('title')}>
+                Course Title
+                {this.state.sortField === 'title' ? this.renderSortArrow() : null}
+              </th>
+              <th className="RequirementDisplay__course-table-sort" onClick={() => this.changeSort('grade')}>
+                Avg. Grade
+                {this.state.sortField === 'grade' ? this.renderSortArrow() : null}
+              </th>
+            </tr>
+          </thead>
+          <tbody>{this.getFulfillingCourses(this.state.courses).map(this.renderCourseRow)}</tbody>
+        </table>
         <Modal size="xl" show={this.state.openCourseInfo} onHide={this.closeCourseInfo}>
           <Modal.Body>
             {this.state.shownCourseInfo ? <BerkeleytimeInfoDisplay course={this.state.shownCourseInfo} /> : null}
           </Modal.Body>
         </Modal>
-      </>
+      </div>
     );
   }
 }

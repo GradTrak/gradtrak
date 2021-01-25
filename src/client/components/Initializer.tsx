@@ -15,44 +15,29 @@ type InitializerProps = {
 
 type InitializerState = {
   stage: 'semesters' | 'goals';
+  startYear: number;
+  gradYear: number;
+  includeSummers: boolean;
   error: string | null;
 };
 
 class Initializer extends React.Component<InitializerProps, InitializerState> {
-  private readonly startYearRef: React.RefObject<HTMLSelectElement>;
-  private readonly gradYearRef: React.RefObject<HTMLSelectElement>;
-  private readonly includeSummersRef: React.RefObject<HTMLInputElement>;
-
   constructor(props: InitializerProps) {
     super(props);
 
-    this.startYearRef = React.createRef<HTMLSelectElement>();
-    this.gradYearRef = React.createRef<HTMLSelectElement>();
-    this.includeSummersRef = React.createRef<HTMLInputElement>();
-
     this.state = {
       stage: 'semesters',
+      startYear: 2021, // TODO Dynamically get this and below options from date.
+      gradYear: 2025,
+      includeSummers: false,
       error: null,
     };
   }
 
   setStage = (stage: 'semesters' | 'goals'): void => {
-    if (!this.startYearRef.current || !this.gradYearRef.current) {
-      console.error('Tried to change stage before render finished');
-      return;
-    }
-
     if (stage === 'goals') {
       /* Validate semesters. */
-      const startYear = parseInt(this.startYearRef.current.value, 10);
-      const gradYear = parseInt(this.gradYearRef.current.value, 10);
-      if (!startYear || !gradYear) {
-        this.setState({
-          error: 'Please fill in all required fields.',
-        });
-        return;
-      }
-      if (startYear >= gradYear) {
+      if (this.state.startYear >= this.state.gradYear) {
         this.setState({
           error: 'The start year must be before the year of graduation.',
         });
@@ -67,16 +52,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
   };
 
   handleSubmit = (goals: RequirementSet[]): void => {
-    if (!this.startYearRef.current || !this.gradYearRef.current || !this.includeSummersRef.current) {
-      console.error('Tried to submit before render finished');
-      return;
-    }
-
-    const startYear = parseInt(this.startYearRef.current.value, 10);
-    const gradYear = parseInt(this.gradYearRef.current.value, 10);
-    const includeSummers = this.includeSummersRef.current.checked;
-
-    const semesters = this.initializeSemesters(startYear, gradYear, includeSummers);
+    const semesters = this.initializeSemesters(this.state.startYear, this.state.gradYear, this.state.includeSummers);
     this.props.onInitializeData({
       semesters,
       goals,
@@ -100,12 +76,16 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
 
   render(): React.ReactElement {
     return (
-      <>
+      <div className="Initializer">
         <div style={{ display: this.state.stage === 'semesters' ? undefined : 'none' }}>
           <h4 className="gt-modal-header">Set Up</h4>
           <Form.Group controlId="Initializer__start-year">
             <Form.Label>Start Year</Form.Label>
-            <Form.Control as="select" ref={this.startYearRef}>
+            <Form.Control
+              as="select"
+              value={this.state.startYear}
+              onChange={(e) => this.setState({ startYear: parseInt(e.target.value, 10) })}
+            >
               <option value={2015}>2015</option>
               <option value={2016}>2016</option>
               <option value={2017}>2017</option>
@@ -117,7 +97,11 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
           </Form.Group>
           <Form.Group controlId="Initializer__end-year">
             <Form.Label>Graduation Year</Form.Label>
-            <Form.Control as="select" ref={this.gradYearRef}>
+            <Form.Control
+              as="select"
+              value={this.state.gradYear}
+              onChange={(e) => this.setState({ gradYear: parseInt(e.target.value, 10) })}
+            >
               <option value={2020}>2020</option>
               <option value={2021}>2021</option>
               <option value={2022}>2022</option>
@@ -132,7 +116,11 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
             </Form.Control>
           </Form.Group>
           <Form.Group controlId="Initializer__include-summers">
-            <Form.Check label="Include Summer Semesters?" ref={this.includeSummersRef} />
+            <Form.Check
+              label="Include Summer Semesters?"
+              checked={this.state.includeSummers}
+              onChange={(e) => this.setState({ includeSummers: e.target.checked })}
+            />
           </Form.Group>
           <Form.Group className="my-4">
             <Button variant="primary" block onClick={() => this.setStage('goals')}>
@@ -144,7 +132,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
         <div style={{ display: this.state.stage === 'goals' ? undefined : 'none' }}>
           <GoalSelector initialGoals={[]} onSelectGoals={this.handleSubmit} />
         </div>
-      </>
+      </div>
     );
   }
 }

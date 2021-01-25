@@ -140,11 +140,11 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
 
   render(): React.ReactElement {
     if (!this.state.requirementsMap) {
-      return <>Loading...</>;
+      return <div className="GoalSelector">Loading...</div>;
     }
 
     return (
-      <Row>
+      <Row className="GoalSelector">
         <Col className="GoalSelector__search">
           <Form.Group as={Row}>
             <Col>
