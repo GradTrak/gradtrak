@@ -83,9 +83,16 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
   private getFulfillingCourses = (coursesInput: Course[]): Course[] => {
     const courses = coursesInput.filter((course) => this.props.requirement.isFulfilledWith(course));
     let comparator: (a: Course, b: Course) => number;
+    const courseNoComparator = (a: Course, b: Course): number => {
+      if (a.dept === b.dept) {
+        return a.getBareNumber() - b.getBareNumber();
+      }
+      return a.dept < b.dept ? -1: 1;
+    }
+ 
     switch (this.state.sortField) {
       case 'no':
-        comparator = (a: Course, b: Course): number => (a.getName() < b.getName() ? -1 : 1);
+        comparator = courseNoComparator;
         break;
       case 'title':
         comparator = (a: Course, b: Course): number => (a.title < b.title ? -1 : 1);
@@ -98,7 +105,7 @@ class RequirementDisplay extends React.Component<RequirementDisplayProps, Requir
           const gradeB = b.berkeleytimeData?.grade;
           if (gradeA === gradeB || !(gradeA || gradeB)) {
             // Default to the course Dept and No. if equal or both null
-            return a.getName() < b.getName() ? 1 : -1;
+            return courseNoComparator(a, b);
           }
           if (!gradeA !== !gradeB) {
             // if one is truthy and the other isn't
