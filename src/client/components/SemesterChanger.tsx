@@ -12,6 +12,8 @@ type SemesterChangerProps = {
 
 type SemesterChangerState = {
   semesters: Map<string, Semester[]>;
+  term: string;
+  year: number;
   semesterAdderOpen: boolean;
   error: string;
 };
@@ -23,14 +25,8 @@ const TERM_INDEX = {
 };
 
 class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChangerState> {
-  private readonly termRef: React.RefObject<HTMLSelectElement>;
-  private readonly yearRef: React.RefObject<HTMLInputElement>;
-
   constructor(props: SemesterChangerProps) {
     super(props);
-
-    this.termRef = React.createRef<HTMLSelectElement>();
-    this.yearRef = React.createRef<HTMLInputElement>();
 
     this.state = {
       /* Clone map and inner arrays, keeping individual semester references the
@@ -38,6 +34,8 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
       semesters: new Map<string, Semester[]>(
         Array.from(this.props.initialSemesters.entries()).map(([year, sems]) => [year, Array.from(sems)]),
       ),
+      term: 'Fall',
+      year: 2021, // TODO Dynamically get this and below options from date.
       semesterAdderOpen: false,
       error: null,
     };
@@ -62,16 +60,13 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
    * being initialized. Must be formatted "term YYYY".
    */
   addSemester = (): void => {
-    const term = this.termRef.current.value;
-    const yearNum = parseInt(this.yearRef.current.value, 10);
-
-    if (!(term && yearNum) || yearNum < 2000 || yearNum > 2050) {
+    if (this.state.year < 2000 || this.state.year > 2050) {
       this.setState({
         error: 'Please select a term and a valid year.',
       });
       return;
     }
-    const semesterName: string = `${term} ${yearNum}`;
+    const semesterName: string = `${this.state.term} ${this.state.year}`;
     if (this.getSemArr().some((semester: Semester) => semester.name === semesterName)) {
       this.setState({
         error: 'This semester is already in your schedule!',
@@ -167,7 +162,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
         <Button variant="primary" onClick={this.handleSubmit}>
           Confirm
         </Button>
-        <Modal show={this.state.semesterAdderOpen} onHide={this.hideSemesterAdder}>
+        <Modal size="sm" show={this.state.semesterAdderOpen} onHide={this.hideSemesterAdder}>
           <Modal.Body>
             <h4 className="gt-modal-header">Add a semester</h4>
             <Form
@@ -181,7 +176,11 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
                   <Form.Label>Semester</Form.Label>
                 </Col>
                 <Col>
-                  <Form.Control as="select" ref={this.termRef}>
+                  <Form.Control
+                    as="select"
+                    value={this.state.term}
+                    onChange={(e) => this.setState({ term: e.target.value })}
+                  >
                     <option value="Fall">Fall</option>
                     <option value="Spring">Spring</option>
                     <option value="Summer">Summer</option>
@@ -193,7 +192,13 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
                   <Form.Label>Year</Form.Label>
                 </Col>
                 <Col>
-                  <Form.Control type="number" min="2010" max="2030" ref={this.yearRef} />
+                  <Form.Control
+                    type="number"
+                    min="2010"
+                    max="2030"
+                    value={this.state.year}
+                    onChange={(e) => this.setState({ year: parseInt(e.target.value, 10) })}
+                  />
                 </Col>
               </Form.Group>
               <Form.Group as={Row} className="justify-content-center">
