@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Modal, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Dropdown, Modal } from 'react-bootstrap';
 
 import { ProcessedFulfillmentType } from '../lib/process-requirements';
 import { Requirement } from '../models/requirement.model';
@@ -142,7 +142,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
       fulfillments.push('Requirement__manual');
     }
 
-    let rendered = (
+    const rendered = (
       <div className={`Requirement ${fulfillments.join(' ')}`}>
         <Dropdown className="Requirement__more">
           <Dropdown.Toggle className="gt-button" as="button" bsPrefix="unused">
@@ -173,20 +173,20 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
     );
 
     // Annotations removed in v0.2.0 for now.
-    ///* Annotation popover. */
-    //const annotationText = this.props.requirement.getAnnotation();
-    //if (annotationText) {
-    //  const annotation = (
-    //    <Popover id="requirement-annotation">
-    //      <Popover.Content>{annotationText}</Popover.Content>
-    //    </Popover>
-    //  );
-    //  rendered = (
-    //    <OverlayTrigger trigger={['hover', 'focus']} overlay={annotation}>
-    //      {rendered}
-    //    </OverlayTrigger>
-    //  );
-    //}
+    // /* Annotation popover. */
+    // const annotationText = this.props.requirement.getAnnotation();
+    // if (annotationText) {
+    //   const annotation = (
+    //     <Popover id="requirement-annotation">
+    //       <Popover.Content>{annotationText}</Popover.Content>
+    //     </Popover>
+    //   );
+    //   rendered = (
+    //     <OverlayTrigger trigger={['hover', 'focus']} overlay={annotation}>
+    //       {rendered}
+    //     </OverlayTrigger>
+    //   );
+    // }
 
     return rendered;
   }
