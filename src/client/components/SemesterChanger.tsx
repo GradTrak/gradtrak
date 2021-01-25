@@ -93,6 +93,7 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
     semesters.set(academicYearName, year);
     this.setState({
       semesters,
+      error: null,
     });
     this.hideSemesterAdder();
   };
