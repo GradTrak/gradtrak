@@ -2,23 +2,33 @@ import mongoose from 'mongoose';
 
 import { CoursePrototype } from '../../common/prototypes/course.prototype';
 
-const berkeleytimeDataSchema = new mongoose.Schema({
-  berkeleytimeId: {
-    type: String,
-    required: true,
+export const COURSE_SCHEMA_VERSION = 1;
+
+const berkeleytimeDataSchema = new mongoose.Schema(
+  {
+    berkeleytimeId: {
+      type: String,
+      required: true,
+    },
+    grade: {
+      type: String,
+      required: false,
+    },
+    semestersOffered: {
+      type: [String],
+      required: false,
+    },
   },
-  grade: {
-    type: String,
-    required: false,
-  },
-  semestersOffered: {
-    type: [String],
-    required: false,
-  },
-});
+  { strict: 'throw', _id: true },
+);
 
 const courseSchema = new mongoose.Schema(
   {
+    schemaVersion: {
+      type: Number,
+      required: true,
+      default: COURSE_SCHEMA_VERSION,
+    },
     id: {
       type: String,
       index: true,

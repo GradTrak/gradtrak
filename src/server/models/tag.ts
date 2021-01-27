@@ -2,8 +2,15 @@ import mongoose from 'mongoose';
 
 import { TagPrototype } from '../../common/prototypes/tag.prototype';
 
+export const TAG_SCHEMA_VERSION = 1;
+
 const tagSchema = new mongoose.Schema(
   {
+    schemaVersion: {
+      type: Number,
+      required: true,
+      default: TAG_SCHEMA_VERSION,
+    },
     id: {
       type: String,
       index: true,
