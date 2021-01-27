@@ -8,16 +8,25 @@ import passport from 'passport';
 import session from 'express-session';
 import connectRedis from 'connect-redis';
 
+import { cache } from './config/cache';
 import * as db from './config/db';
 import { deserializeUser, googleStrategy, localStrategy, serializeUser } from './config/passport';
 import { client as redisClient } from './config/redis';
 import { migrateSchemas } from './models/migration';
 import { api } from './routers/api';
 
-db.connect();
-migrateSchemas();
-
 const app = express();
+
+let schemaMigrationFinished = false;
+
+db.connect();
+migrateSchemas().then(() => {
+  cache.del('*', (err, deleted) => {
+    if (err) throw err;
+    console.log(`${deleted} keys flushed`);
+  });
+  schemaMigrationFinished = true;
+});
 
 app.use(logger('dev'));
 app.use(compression());
@@ -53,10 +62,22 @@ passport.serializeUser<string>(serializeUser);
 app.use(passport.initialize());
 app.use(passport.session());
 
+/* Custom middleware. */
+
 app.all('*', (req, res, next) => {
   res.cookie('csrf-token', req.csrfToken());
   next();
 });
+
+app.all('*', (req, res, next) => {
+  if (!schemaMigrationFinished) {
+    res.status(503).send();
+    return;
+  }
+  next();
+});
+
+/* Routes. */
 
 app.use('/api', api);
 app.get(
