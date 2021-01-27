@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 import { UserDataPrototype } from '../../common/prototypes/user-data.prototype';
 
+/* Make sure to set up the appropriate migration in the migrations folder if
+ * you update the schema. */
 export const USER_SCHEMA_VERSION = 1;
 
 const semesterSchema = new mongoose.Schema(

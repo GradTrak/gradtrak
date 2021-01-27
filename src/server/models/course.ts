@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 import { CoursePrototype } from '../../common/prototypes/course.prototype';
 
+/* Make sure to set up the appropriate migration in the migrations folder if
+ * you update the schema. */
 export const COURSE_SCHEMA_VERSION = 1;
 
 const berkeleytimeDataSchema = new mongoose.Schema(

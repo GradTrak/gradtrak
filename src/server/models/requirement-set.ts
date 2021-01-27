@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 import { RequirementSetPrototype } from '../../common/prototypes/requirement-set.prototype';
 
+/* Make sure to set up the appropriate migration in the migrations folder if
+ * you update the schema. */
 export const REQUIREMENT_SET_SCHEMA_VERSION = 1;
 
 const constraintSchema = new mongoose.Schema(

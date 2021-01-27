@@ -11,9 +11,11 @@ import connectRedis from 'connect-redis';
 import * as db from './config/db';
 import { deserializeUser, googleStrategy, localStrategy, serializeUser } from './config/passport';
 import { client as redisClient } from './config/redis';
+import { migrateSchemas } from './models/migration';
 import { api } from './routers/api';
 
 db.connect();
+migrateSchemas();
 
 const app = express();
 
