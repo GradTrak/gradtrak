@@ -4,7 +4,7 @@ import { CoursePrototype } from '../../common/prototypes/course.prototype';
 
 /* Make sure to set up the appropriate migration in the migrations folder if
  * you update the schema. */
-export const COURSE_SCHEMA_VERSION = 1;
+export const COURSE_SCHEMA_VERSION = 2;
 
 const berkeleytimeDataSchema = new mongoose.Schema(
   {
@@ -21,7 +21,7 @@ const berkeleytimeDataSchema = new mongoose.Schema(
       required: false,
     },
   },
-  { strict: 'throw', _id: true },
+  { strict: 'throw', _id: false },
 );
 
 const courseSchema = new mongoose.Schema(

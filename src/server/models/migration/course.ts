@@ -10,4 +10,13 @@ export async function migrateCourses() {
       $set: { schemaVersion: 1 },
     },
   );
+
+  /* v1 to v2 removes the berkeleytimeData._id field. */
+  await Course.collection.updateMany(
+    { schemaVersion: 1 },
+    {
+      $set: { schemaVersion: 2 },
+      $unset: { 'berkeleytimeData._id': '' },
+    },
+  );
 }
