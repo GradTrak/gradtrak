@@ -57,6 +57,7 @@ const userSchema = new mongoose.Schema(
   {
     schemaVersion: {
       type: Number,
+      index: true,
       required: true,
       default: USER_SCHEMA_VERSION,
     },

@@ -28,6 +28,7 @@ const courseSchema = new mongoose.Schema(
   {
     schemaVersion: {
       type: Number,
+      index: true,
       required: true,
       default: COURSE_SCHEMA_VERSION,
     },

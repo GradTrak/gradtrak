@@ -10,6 +10,7 @@ const tagSchema = new mongoose.Schema(
   {
     schemaVersion: {
       type: Number,
+      index: true,
       required: true,
       default: TAG_SCHEMA_VERSION,
     },

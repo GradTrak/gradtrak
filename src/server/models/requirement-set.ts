@@ -102,6 +102,7 @@ const requirementSetSchema = new mongoose.Schema(
   {
     schemaVersion: {
       type: Number,
+      index: true,
       required: true,
       default: REQUIREMENT_SET_SCHEMA_VERSION,
     },
