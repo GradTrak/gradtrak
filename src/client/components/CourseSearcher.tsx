@@ -102,18 +102,20 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
   };
 
   handleKeyDown = (e: Event) => {
-    if (!(e instanceof KeyboardEvent)) {
+    if (e.type !== 'keydown') {
       return;
     }
 
-    if (e.key === 'Enter') {
-      if (!this.state.selected) {
-        this.setState({
-          selected: this.state.options[0],
-        });
-      } else {
-        this.handleSubmit();
-      }
+    if ((e as KeyboardEvent).key !== 'Enter') {
+      return;
+    }
+
+    if (!this.state.selected) {
+      this.setState({
+        selected: this.state.options[0],
+      });
+    } else {
+      this.handleSubmit();
     }
   };
 
