@@ -6,11 +6,20 @@ help () {
     usage
     echo
     echo "Options:"
-    echo "  -s Source URI"
-    echo "  -d Destination URI"
+    echo "  -s Source URI, starting with mongodb:// or mongodb+srv://"
     echo "  -f Source database name"
+    echo "  -d Destination URI, starting with mongodb:// or mongdb+srv://"
     echo "  -t Destination database name"
     echo "  -h Print help"
+    echo
+    echo "Specifying -s 'local' or -d 'local' will set the appropriate URI to
+mongodb://localhost:27017/gradtrak and the DB name to gradtrak, the default
+local installation used by the GradTrak server."
+    echo
+    echo "Examples:"
+    echo "  $ $0 -s 'mongodb+srv://example.com/db' -f db -d 'mongodb://foo.com/bar' -t bar"
+    echo "  $ $0 -s 'mongodb+srv://example.com/db' -f db -t 'local'"
+    echo "  $ $0 -s 'local' -d 'mongodb+srv://example.com/db' -t db"
 }
 
 usage () {
