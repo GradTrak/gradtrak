@@ -56,12 +56,16 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
     this.props.onInitializeData({
       semesters,
       goals,
-      manuallyFulfilledReqs: new Map<string, Set<string>>(),
+      manuallyFulfilledReqs: {},
     });
   };
 
-  private initializeSemesters(startYear: number, gradYear: number, includeSummers: boolean): Map<string, Semester[]> {
-    const semesters = new Map<string, Semester[]>();
+  private initializeSemesters(
+    startYear: number,
+    gradYear: number,
+    includeSummers: boolean,
+  ): { [year: string]: Semester[] } {
+    const semesters: { [year: string]: Semester[] } = {};
     for (let i = startYear; i < gradYear; i += 1) {
       const currSem: Semester[] = [];
       currSem.push(new Semester(`Fall ${i}`));
@@ -69,7 +73,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
       if (includeSummers) {
         currSem.push(new Semester(`Summer ${i + 1}`));
       }
-      semesters.set(`${i}-${i + 1}`, currSem);
+      semesters[`${i}-${i + 1}`] = currSem;
     }
     return semesters;
   }

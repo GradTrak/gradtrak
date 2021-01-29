@@ -1,4 +1,3 @@
-import { Semester } from '../models/semester.model';
 import { UserData } from '../models/user-data.model';
 import Courses from './courses';
 import Requirements from './requirements';
@@ -20,9 +19,9 @@ namespace User {
   const SEMESTER_API_ENDPOINT = '/api/user';
 
   export const EMPTY_USER_DATA = {
-    semesters: new Map<string, Semester[]>(),
+    semesters: {},
     goals: [],
-    manuallyFulfilledReqs: new Map<string, Set<string>>(),
+    manuallyFulfilledReqs: {},
   };
 
   // TODO Specify this type and other API types as a union.

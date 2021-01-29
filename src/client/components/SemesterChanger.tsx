@@ -6,12 +6,12 @@ import { Semester } from '../models/semester.model';
 import './SemesterChanger.css';
 
 type SemesterChangerProps = {
-  initialSemesters: Map<string, (Semester | null)[]>;
-  onChangeSemesters: (semesters: Map<string, (Semester | null)[]>) => void;
+  initialSemesters: { [year: string]: (Semester | null)[] };
+  onChangeSemesters: (semesters: { [year: string]: (Semester | null)[] }) => void;
 };
 
 type SemesterChangerState = {
-  semesters: Map<string, (Semester | null)[]>;
+  semesters: { [year: string]: (Semester | null)[] };
   term: string;
   year: number;
   semesterAdderOpen: boolean;
@@ -31,8 +31,8 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
     this.state = {
       /* Clone map and inner arrays, keeping individual semester references the
        * same. */
-      semesters: new Map<string, (Semester | null)[]>(
-        Array.from(this.props.initialSemesters.entries()).map(([year, sems]) => [year, Array.from(sems)]),
+      semesters: Object.fromEntries(
+        Object.entries(this.props.initialSemesters).map(([year, sems]) => [year, Array.from(sems)]),
       ),
       term: 'Fall',
       year: 2021, // TODO Dynamically get this and below options from date.
@@ -73,19 +73,19 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
       });
       return;
     }
-    const semesters = new Map<string, (Semester | null)[]>(this.state.semesters);
+    const semesters = { ...this.state.semesters };
     const newSemester = new Semester(semesterName);
     const academicYearName = this.getAcademicYearName(newSemester);
     const semArr = semesterName.split(' ');
     const index = TERM_INDEX[semArr[0]];
     let year: (Semester | null)[];
-    if (semesters.has(academicYearName)) {
-      year = Array.from(semesters.get(academicYearName)!);
+    if (semesters[academicYearName]) {
+      year = Array.from(semesters[academicYearName]);
     } else {
       year = [null, null, null];
     }
     year[index] = newSemester;
-    semesters.set(academicYearName, year);
+    semesters[academicYearName] = year;
     this.setState({
       semesters,
       error: null,
@@ -96,19 +96,19 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
   removeSemester = (semester: Semester): void => {
     const yearName = this.getAcademicYearName(semester);
 
-    if (!this.state.semesters.has(yearName)) {
+    if (!this.state.semesters[yearName]) {
       return;
     }
 
-    const semesters = new Map<string, (Semester | null)[]>(this.state.semesters);
+    const semesters = { ...this.state.semesters };
     const semesterArr = semester.name.split(' ');
     const index: number = TERM_INDEX[semesterArr[0]];
-    const year: (Semester | null)[] = Array.from(this.state.semesters.get(yearName)!);
+    const year: (Semester | null)[] = Array.from(this.state.semesters[yearName]);
     year[index] = null;
     if (year.every((yearSem) => !yearSem)) {
-      semesters.delete(yearName);
+      delete semesters[yearName];
     } else {
-      semesters.set(yearName, year);
+      semesters[yearName] = year;
     }
     this.setState({
       semesters,
@@ -127,9 +127,9 @@ class SemesterChanger extends React.Component<SemesterChangerProps, SemesterChan
    * @return {Semester[]} An array of all the semestsers in the values of the map
    */
   private getSemArr = (): Semester[] => {
-    return Array.from(this.state.semesters.keys())
+    return Object.keys(this.state.semesters)
       .sort()
-      .map((key) => this.state.semesters.get(key))
+      .map((key) => this.state.semesters[key])
       .flat()
       .filter((a) => a) as Semester[];
   };

@@ -28,4 +28,11 @@ export class Semester {
         .map((courseId) => coursesMap.get(courseId)!),
     );
   }
+
+  static toProto(semester: Semester): SemesterPrototype {
+    return {
+      name: semester.name,
+      courseIds: semester.courses.map((course: Course) => course.id),
+    };
+  }
 }

@@ -79,7 +79,7 @@ class App extends React.Component<AppProps, AppState> {
       const userData = await this.fetchUserData();
 
       /* If there are no semesters, open the initializer. */
-      if (userData.semesters.size === 0) {
+      if (Object.keys(userData.semesters).length === 0) {
         this.openInitializer();
       }
     } else {
@@ -100,7 +100,7 @@ class App extends React.Component<AppProps, AppState> {
 
   private registerSavePrompt = (): void => {
     window.addEventListener('beforeunload', (e) => {
-      if (!this.state.loggedIn && this.state.userData && this.state.userData.semesters.size > 0) {
+      if (!this.state.loggedIn && this.state.userData && Object.keys(this.state.userData.semesters).length > 0) {
         /* This text isn't actually what is displayed. */
         const confirmation = 'Are you sure you want to leave? Guest account changes will be lost.';
         e.returnValue = confirmation;
@@ -132,7 +132,7 @@ class App extends React.Component<AppProps, AppState> {
 
     const userData = await this.fetchUserData();
 
-    if (userData.semesters.size === 0) {
+    if (Object.keys(userData.semesters).length === 0) {
       this.openInitializer();
     } else {
       this.closeModal();
@@ -148,7 +148,7 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    if (this.state.userData && this.state.userData.semesters.size !== 0) {
+    if (this.state.userData && Object.keys(this.state.userData.semesters).length !== 0) {
       User.saveUserData(this.state.userData);
     }
 
@@ -158,7 +158,7 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   handleLoginDismiss = (): void => {
-    if (this.state.userData && this.state.userData.semesters.size === 0) {
+    if (this.state.userData && Object.keys(this.state.userData.semesters).length === 0) {
       this.openInitializer();
     } else {
       this.closeModal();
@@ -291,21 +291,15 @@ class App extends React.Component<AppProps, AppState> {
    *
    * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
-  setSemesters = (newSemesters: Map<string, (Semester | null)[]>): void => {
+  setSemesters = (newSemesters: { [name: string]: (Semester | null)[] }): void => {
     if (!this.state.userData) {
       throw new Error('Tried to set semesters before user data loaded');
     }
 
-    // not sure why, before the rework the list of semesters was copied, so
-    // I've copied the map here as well.
-    const newMap = new Map<string, (Semester | null)[]>();
-    newSemesters.forEach((value, key) => {
-      newMap.set(key, [...value]);
-    });
     this.setState({
       userData: {
         ...this.state.userData,
-        semesters: newMap,
+        semesters: newSemesters,
       },
     });
   };
@@ -325,14 +319,29 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
     }
 
-    // TODO Making this a function that returns a clone breaks the
-    // course-changer
-    semester.courses = [...semester.courses, course];
+    const year = Object.keys(this.state.userData.semesters).find((y) =>
+      this.state.userData!.semesters[y].includes(semester),
+    );
+
+    if (year === undefined) {
+      throw new Error("Tried to add a course to a semester which doesn't exist");
+    }
+
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        semesters: new Map<string, (Semester | null)[]>(this.state.userData.semesters),
+        semesters: {
+          ...this.state.userData.semesters,
+          [year]: this.state.userData.semesters[year].map((s) =>
+            s !== semester
+              ? s
+              : {
+                  ...semester,
+                  courses: [...semester.courses, course],
+                },
+          ),
+        },
       },
     });
   };
@@ -352,13 +361,30 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
     }
 
-    // TODO Making this a function that returns a clone breaks the course-changer
-    semester.courses = semester.courses.filter((c) => c !== course);
+    const year = Object.keys(this.state.userData.semesters).find((y) =>
+      this.state.userData!.semesters[y].includes(semester),
+    );
+
+    if (year === undefined) {
+      throw new Error("Tried to remove a course to a semester which doesn't exist");
+    }
+
+    semester.courses = [...semester.courses, course];
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        semesters: new Map<string, (Semester | null)[]>(this.state.userData.semesters),
+        semesters: {
+          ...this.state.userData.semesters,
+          [year]: this.state.userData.semesters[year].map((s) =>
+            s !== semester
+              ? s
+              : {
+                  ...semester,
+                  courses: semester.courses.filter((c) => c !== course),
+                },
+          ),
+        },
       },
     });
   };
@@ -368,25 +394,20 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to manually fulfill before user data loaded');
     }
 
-    const { manuallyFulfilledReqs } = this.state.userData;
-
-    if (manuallyFulfilledReqs.get(requirementSet.id)?.has(requirement.id)) {
+    if (this.state.userData.manuallyFulfilledReqs[requirementSet.id].includes(requirementSet.id)) {
       throw new Error(
         `Tried to mark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already is`,
       );
     }
 
-    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
-    nextSet.add(requirement.id);
-
-    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
-    nextManuallyFulfilled.set(requirementSet.id, nextSet);
-
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        manuallyFulfilledReqs: nextManuallyFulfilled,
+        manuallyFulfilledReqs: {
+          ...this.state.userData.manuallyFulfilledReqs,
+          [requirementSet.id]: [...this.state.userData.manuallyFulfilledReqs[requirementSet.id], requirement.id],
+        },
       },
     });
   };
@@ -396,27 +417,30 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to manually unfulfill before user data loaded');
     }
 
-    const { manuallyFulfilledReqs } = this.state.userData;
-
-    if (!manuallyFulfilledReqs.get(requirementSet.id)?.has(requirement.id)) {
+    if (!this.state.userData.manuallyFulfilledReqs[requirementSet.id]?.includes(requirement.id)) {
       throw new Error(
         `Tried to unmark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already isn't`,
       );
     }
 
-    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
-    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
-    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+    const nextArr = this.state.userData.manuallyFulfilledReqs[requirementSet.id].filter(
+      (reqId) => reqId !== requirement.id,
+    );
 
-    nextSet.delete(requirement.id);
-    if (nextSet.size === 0) {
-      nextManuallyFulfilled.delete(requirementSet.id);
+    const nextObj = Object.fromEntries(
+      Object.entries(this.state.userData.manuallyFulfilledReqs).filter(
+        ([reqSetId, reqSets]) => reqSetId !== requirementSet.id,
+      ),
+    );
+    if (nextArr.length > 0) {
+      nextObj[requirementSet.id] = nextArr;
     }
+
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        manuallyFulfilledReqs: nextManuallyFulfilled,
+        manuallyFulfilledReqs: nextObj,
       },
     });
   };
@@ -439,7 +463,7 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to get current courses before user data loaded');
     }
 
-    return Array.from(this.state.userData.semesters.values())
+    return Object.values(this.state.userData.semesters)
       .flat()
       .filter((semester) => semester)
       .flatMap((semester) => semester!.courses);
