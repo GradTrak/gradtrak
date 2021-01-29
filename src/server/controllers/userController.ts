@@ -189,7 +189,7 @@ export function getUserData(req: express.Request, res: express.Response): void {
     return;
   }
 
-  res.json(req.user.userdata);
+  res.json(req.user.userData);
 }
 
 export function setUserData(req: express.Request, res: express.Response): void {
@@ -198,7 +198,7 @@ export function setUserData(req: express.Request, res: express.Response): void {
     return;
   }
 
-  req.user.userdata = req.body;
+  req.user.userData = req.body;
   req.user.save().then(() => {
     res.status(204).send();
   });
