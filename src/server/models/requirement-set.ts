@@ -2,6 +2,10 @@ import mongoose from 'mongoose';
 
 import { RequirementSetPrototype } from '../../common/prototypes/requirement-set.prototype';
 
+/* Make sure to set up the appropriate migration in the migrations folder if
+ * you update the schema. */
+export const REQUIREMENT_SET_SCHEMA_VERSION = 1;
+
 export type RequirementSetType = RequirementSetPrototype & mongoose.Document;
 
 const constraintSchema = new mongoose.Schema(
@@ -98,6 +102,12 @@ const requirementCategorySchema = new mongoose.Schema(
 
 const requirementSetSchema = new mongoose.Schema(
   {
+    schemaVersion: {
+      type: Number,
+      index: true,
+      required: true,
+      default: REQUIREMENT_SET_SCHEMA_VERSION,
+    },
     id: {
       type: String,
       index: true,
