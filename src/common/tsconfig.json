@@ -8,6 +8,11 @@
     "composite": true,
     "tsBuildInfoFile": "../../build/common.tsbuildinfo",
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedIndexedAccess": false,
     "esModuleInterop": true
   }
 }

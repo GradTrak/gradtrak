@@ -16,7 +16,7 @@ Best,
 The GradTrak Team`,
 };
 
-let transporter;
+let transporter: nodemailer.Transporter;
 if (process.env.SMTP_URL) {
   transporter = nodemailer.createTransport(process.env.SMTP_URL);
 } else {

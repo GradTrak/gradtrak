@@ -46,7 +46,7 @@ export type UserType = {
   userdata: UserDataPrototype;
   emailMarketing: boolean;
   userTesting: boolean;
-};
+} & mongoose.Document;
 
 const userSchema = new mongoose.Schema(
   {
@@ -87,11 +87,17 @@ const userSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const User = mongoose.model<mongoose.Document & UserType>('User', userSchema);
+const User = mongoose.model<UserType>('User', userSchema);
 
 declare module 'express' {
   export interface Request {
-    user?: mongoose.Document & UserType;
+    user?: UserType;
+  }
+}
+
+declare module 'express-serve-static-core' {
+  export interface Request {
+    user?: UserType;
   }
 }
 

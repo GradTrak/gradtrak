@@ -13,15 +13,20 @@ export class UnitRequirement extends Requirement {
   units: number;
   requirement: StandaloneRequirement;
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(id: string, name: string, units: number, requirement: StandaloneRequirement) {
+    super(id, name);
+    this.units = units;
+    this.requirement = requirement;
+  }
+
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.unitsFulfilled(courses) >= this.units;
   }
 
   unitsFulfilled(courses: Course[]): number {
     return this.getFulfillingCourses(courses)
-      .map((course: Course) => course.units)
-      .reduce((sum: number, units: number) => sum + units, 0);
+      .map((course) => course.units)
+      .reduce((sum, units) => sum + units, 0);
   }
 
   getFulfillingCourses(courses: Course[]): Course[] {
@@ -29,8 +34,8 @@ export class UnitRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    const filteredCourses: Course[] = courses.filter((course: Course) => this.requirement.isFulfilledWith([course]));
-    return getAllCombinations(filteredCourses).map((combination: Course[]) => new Set<Course>(combination));
+    const filteredCourses = courses.filter((course) => this.requirement.isFulfilledWith([course]));
+    return getAllCombinations(filteredCourses).map((combination) => new Set<Course>(combination));
   }
 
   toString(): string {

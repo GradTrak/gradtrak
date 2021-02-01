@@ -57,9 +57,9 @@ type CourseSearcherProps = {
 };
 
 type CourseSearcherState = {
-  courses: Course[];
+  courses: Course[] | null;
   options: Course[];
-  selected: Course;
+  selected: Course | null;
 };
 
 class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcherState> {
@@ -68,7 +68,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
 
     this.state = {
       courses: null,
-      options: null,
+      options: [],
       selected: null,
     };
   }
@@ -77,7 +77,7 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     this.fetchCourses();
   }
 
-  private fetchCourses = async (): Promise<void> => {
+  private fetchCourses = async () => {
     const courses = await Courses.getCourses();
     this.setState({
       courses,
@@ -85,7 +85,12 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     });
   };
 
-  handleSearch = async (input: string) => {
+  handleSearch = async (input: string): Promise<void> => {
+    if (!this.state.courses) {
+      console.error('Tried to search before courses loaded');
+      return;
+    }
+
     // TODO: sort this by search rankings for relevance
     let options = [];
     if (input.length >= 2) {
@@ -96,15 +101,21 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     }
   };
 
-  handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      if (!this.state.selected) {
-        this.setState({
-          selected: this.state.options[0],
-        });
-      } else {
-        this.handleSubmit();
-      }
+  handleKeyDown = (e: Event) => {
+    if (e.type !== 'keydown') {
+      return;
+    }
+
+    if ((e as KeyboardEvent).key !== 'Enter') {
+      return;
+    }
+
+    if (!this.state.selected) {
+      this.setState({
+        selected: this.state.options[0],
+      });
+    } else {
+      this.handleSubmit();
     }
   };
 
@@ -126,15 +137,15 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
   private searchFunction = (input: string, courseList: Course[]): Course[] => {
     const processedInput = input.toLowerCase().replace(/[^\w]/g, ''); // remove whitespace from input.
     const resultCourses = courseList.filter((course) => {
-      const canonicalName: string = course.toString();
-      const names: string[] = [canonicalName];
-      const deptAlises: string[] = DEPT_ALIASES.get(course.dept);
+      const canonicalName = course.toString();
+      const names = [canonicalName];
+      const deptAlises = DEPT_ALIASES.get(course.dept);
       if (deptAlises) {
-        names.push(...deptAlises.map((alias: string) => `${alias} ${course.no}`));
+        names.push(...deptAlises.map((alias) => `${alias} ${course.no}`));
       }
       return names
-        .map((name: string) => name.toLowerCase().replace(/[^\w]/g, ''))
-        .some((name: string) => name.includes(processedInput));
+        .map((name) => name.toLowerCase().replace(/[^\w]/g, ''))
+        .some((name) => name.includes(processedInput));
     });
     return this.courseSorter(resultCourses, input);
   };
@@ -160,14 +171,14 @@ class CourseSearcher extends React.Component<CourseSearcherProps, CourseSearcher
     const priorityFunction = (course: Course): number => {
       const courseNum = course.no.toLowerCase();
       let sum = 0;
-      const splitInput: string[] = input.toLowerCase().split(' ');
+      const splitInput = input.toLowerCase().split(' ');
       // If it includes any of the dept aliases
-      let deptAlises: string[] = DEPT_ALIASES.get(course.dept) || [];
+      let deptAlises = DEPT_ALIASES.get(course.dept) || [];
       deptAlises = [...deptAlises]
         .concat([course.dept])
         .map((deptName) => deptName.toLowerCase().replace(/[^\w]/g, ''));
-      const containsDept: boolean = deptAlises.some((dept) => splitInput.includes(dept));
-      const containsNum: boolean = splitInput.includes(courseNum);
+      const containsDept = deptAlises.some((dept) => splitInput.includes(dept));
+      const containsNum = splitInput.includes(courseNum);
       if (containsDept && containsNum) {
         return 1000;
       }

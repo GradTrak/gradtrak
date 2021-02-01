@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 import { CoursePrototype } from '../../common/prototypes/course.prototype';
 
+export type CourseType = CoursePrototype & mongoose.Document;
+
 const berkeleytimeDataSchema = new mongoose.Schema({
   berkeleytimeId: {
     type: String,
@@ -59,6 +61,6 @@ const courseSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const Course = mongoose.model<mongoose.Document & CoursePrototype>('Course', courseSchema);
+const Course = mongoose.model<CourseType>('Course', courseSchema);
 
 export default Course;

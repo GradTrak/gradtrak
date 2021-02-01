@@ -12,7 +12,12 @@ export class CountRequirement extends Requirement {
   numRequired: number;
   requirement: StandaloneRequirement;
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  constructor(id: string, name: string, numRequired: number, requirement: StandaloneRequirement) {
+    super(id, name);
+    this.numRequired = numRequired;
+    this.requirement = requirement;
+  }
+
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.countFulfilled(courses) >= this.numRequired;
   }
@@ -30,8 +35,8 @@ export class CountRequirement extends Requirement {
   }
 
   getCourseCombinations(courses: Course[]): Set<Course>[] {
-    const filteredCourses: Course[] = courses.filter((course: Course) => this.requirement.isFulfilledWith([course]));
-    return getAllCombinations(filteredCourses).map((combination: Course[]) => new Set<Course>(combination));
+    const filteredCourses = courses.filter((course) => this.requirement.isFulfilledWith([course]));
+    return getAllCombinations(filteredCourses).map((combination) => new Set<Course>(combination));
   }
 
   toString(): string {

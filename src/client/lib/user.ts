@@ -26,11 +26,15 @@ namespace User {
   };
 
   // TODO Specify this type and other API types as a union.
-  type RegisterResponse = {
-    success: boolean;
-    error?: string;
-    user?: Account;
-  };
+  type RegisterResponse =
+    | {
+        success: true;
+        user: Account;
+      }
+    | {
+        success: false;
+        error: string;
+      };
 
   /**
    * Registers a user with the given username, password, and
@@ -47,11 +51,15 @@ namespace User {
     return res.json();
   }
 
-  type LoginResponse = {
-    success: boolean;
-    error?: string;
-    user?: Account;
-  };
+  type LoginResponse =
+    | {
+        success: true;
+        user: Account;
+      }
+    | {
+        success: false;
+        error: string;
+      };
 
   /**
    * Logs into the application with the given username and password.
@@ -73,10 +81,12 @@ namespace User {
     await post(LOGOUT_ENDPOINT, null);
   }
 
-  type WhoamiResponse = {
-    loggedIn: boolean;
-    user?: Account;
-  };
+  type WhoamiResponse =
+    | {
+        loggedIn: true;
+        user: Account;
+      }
+    | { loggedIn: false };
 
   /**
    * Queries the server to detect current login status and updates state

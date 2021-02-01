@@ -11,29 +11,35 @@ export class MultiRequirement extends Requirement implements RequirementContaine
   numRequired: number;
   hidden: boolean;
 
+  constructor(id: string, name: string, requirements: Requirement[], numRequired: number, hidden: boolean) {
+    super(id, name);
+    this.requirements = requirements;
+    this.numRequired = numRequired;
+    this.hidden = hidden;
+  }
+
   isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
     return this.numFulfilled(courses, override) >= this.numRequired;
   }
 
   numFulfilled(courses: Course[], override?: Set<string>): number {
-    return this.requirements.filter((requirement: Requirement) => requirement.isFulfilled(courses, override)).length;
+    return this.requirements.filter((requirement) => requirement.isFulfilled(courses, override)).length;
   }
 
-  getAnnotation(): string {
+  getAnnotation(): string | null {
     if (this.hidden) {
       return this.toString();
     }
     return null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getCourseCombinations(courses: Course[]): Set<Course>[] {
     throw new Error('Tried to get Course combinations for MultiRequirement');
   }
 
   toString(): string {
     return this.requirements.reduce(
-      (annotation: string, requirement: Requirement) => `${annotation}\n${requirement.toString()}`,
+      (annotation, requirement) => `${annotation}\n${requirement.toString()}`,
       `Fulfill with ${this.numRequired} of:`,
     );
   }

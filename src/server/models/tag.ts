@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 import { TagPrototype } from '../../common/prototypes/tag.prototype';
 
+export type TagType = TagPrototype & mongoose.Document;
+
 const tagSchema = new mongoose.Schema(
   {
     id: {
@@ -18,6 +20,6 @@ const tagSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const Tag = mongoose.model<mongoose.Document & TagPrototype>('Tag', tagSchema);
+const Tag = mongoose.model<TagType>('Tag', tagSchema);
 
 export default Tag;

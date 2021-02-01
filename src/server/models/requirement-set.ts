@@ -2,6 +2,8 @@ import mongoose from 'mongoose';
 
 import { RequirementSetPrototype } from '../../common/prototypes/requirement-set.prototype';
 
+export type RequirementSetType = RequirementSetPrototype & mongoose.Document;
+
 const constraintSchema = new mongoose.Schema(
   {
     name: {
@@ -128,9 +130,6 @@ const requirementSetSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const RequirementSet = mongoose.model<mongoose.Document & RequirementSetPrototype>(
-  'RequirementSet',
-  requirementSetSchema,
-);
+const RequirementSet = mongoose.model<RequirementSetType>('RequirementSet', requirementSetSchema);
 
 export default RequirementSet;

@@ -16,7 +16,16 @@ export class Semester {
   static fromProto(proto: SemesterPrototype, coursesMap: Map<string, Course>): Semester {
     return new Semester(
       proto.name,
-      proto.courseIds.map((courseId: string) => coursesMap.get(courseId)),
+      proto.courseIds
+        .filter((courseId) => {
+          /* Check for course in coursesMap. */
+          if (!coursesMap.has(courseId)) {
+            console.error(`Semester references unknown course ID: ${courseId}`);
+            return false;
+          }
+          return true;
+        })
+        .map((courseId) => coursesMap.get(courseId)!),
     );
   }
 }

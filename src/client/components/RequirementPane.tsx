@@ -60,9 +60,9 @@ class RequirementPane extends React.Component<RequirementPaneProps, RequirementP
      */
     const getRequiredSets = (): RequirementSet[] => {
       const required: RequirementSet[] = [];
-      this.props.goals.forEach((baseGoal: RequirementSet) => {
+      this.props.goals.forEach((baseGoal) => {
         const path = [];
-        let current: RequirementSet = baseGoal;
+        let current: RequirementSet | null = baseGoal;
         while (current !== null && !required.includes(current)) {
           if (current === undefined) {
             console.error('A selected goal was not found.');

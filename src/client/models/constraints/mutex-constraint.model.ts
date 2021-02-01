@@ -28,7 +28,19 @@ export class MutexConstraint extends Constraint {
    * @return {MutexConstraint} The constructed constraint.
    */
   static fromProto(proto: ConstraintPrototype, reqMap: Map<string, Requirement>): MutexConstraint {
-    return new MutexConstraint(new Set<Requirement>(proto.mutexReqIds.map((reqId: string) => reqMap.get(reqId))));
+    return new MutexConstraint(
+      new Set<Requirement>(
+        proto.mutexReqIds
+          .filter((reqId) => {
+            if (!reqMap.has(reqId)) {
+              console.error(`MutexConstraint has unknown requirement set ${reqId}`);
+              return false;
+            }
+            return true;
+          })
+          .map((reqId) => reqMap.get(reqId)!),
+      ),
+    );
   }
 
   /**
@@ -36,13 +48,13 @@ export class MutexConstraint extends Constraint {
    * courses.
    */
   isValidMapping(mapping: Map<Requirement, FulfillmentMethodType>): boolean {
-    const mutexCourses: Set<Course> = new Set<Course>();
-    let valid: boolean = true;
-    this.mutexReqs.forEach((req: Requirement) => {
+    const mutexCourses = new Set<Course>();
+    let valid = true;
+    this.mutexReqs.forEach((req) => {
       if (mapping.has(req)) {
-        const fulfillment: FulfillmentMethodType = mapping.get(req);
+        const fulfillment = mapping.get(req)!;
         if (fulfillment.method === 'courses') {
-          fulfillment.coursesUsed.forEach((course: Course) => {
+          fulfillment.coursesUsed.forEach((course) => {
             if (mutexCourses.has(course)) {
               valid = false;
             }

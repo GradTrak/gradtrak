@@ -44,7 +44,19 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
     });
   };
 
-  private getDisplayRequirement = (): StandaloneRequirement => {
+  private getFulfillment = (): ProcessedFulfillmentType => {
+    if (!this.props.fulfillmentMap.has(this.props.requirement)) {
+      console.error(`Fulfillment map is missing ${this.props.requirement.id}`);
+      return {
+        status: 'unfulfilled',
+        method: 'courses',
+        coursesUsed: new Set(),
+      };
+    }
+    return this.props.fulfillmentMap.get(this.props.requirement)!;
+  };
+
+  private getDisplayRequirement = (): StandaloneRequirement | null => {
     /* Courses can be displayed for standalone, unit, and count requirements. */
     if (this.props.requirement instanceof StandaloneRequirement) {
       return this.props.requirement;
@@ -59,7 +71,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
 
   private renderReqElem = (): React.ReactNode => {
     // TODO These probably belong in separate files.
-    const fulfillment = this.props.fulfillmentMap.get(this.props.requirement);
+    const fulfillment = this.getFulfillment();
 
     if (
       (this.props.requirement instanceof MultiRequirement || this.props.requirement instanceof PolyRequirement) &&
@@ -68,7 +80,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
       /* Multi-requirement display, showing nested requirements underneath.
        * Hidden requirements do not show this. */
       const numFulfilled = this.props.requirement.requirements.filter(
-        (childReq) => this.props.fulfillmentMap.get(childReq).status === 'fulfilled',
+        (childReq) => this.props.fulfillmentMap.get(childReq)?.status === 'fulfilled',
       ).length;
       let numRequiredText: React.ReactNode;
       switch (this.props.requirement.numRequired) {
@@ -133,14 +145,16 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
   };
 
   render(): React.ReactElement {
-    const fulfillment = this.props.fulfillmentMap.get(this.props.requirement);
+    const fulfillment = this.getFulfillment();
     const manuallyFulfilled = fulfillment.method === 'manual';
 
     /* Fulfillment CSS classes. */
-    const fulfillments: string[] = [`Requirement__${fulfillment.status}`];
+    const fulfillments = [`Requirement__${fulfillment.status}`];
     if (fulfillment.method === 'manual') {
       fulfillments.push('Requirement__manual');
     }
+
+    const displayRequirement = this.getDisplayRequirement();
 
     const rendered = (
       <div className={`Requirement ${fulfillments.join(' ')}`}>
@@ -165,9 +179,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
         </Dropdown>
         {this.renderReqElem()}
         <Modal size="lg" show={this.state.showDisplay} onHide={this.closeDisplay}>
-          <Modal.Body>
-            {this.getDisplayRequirement() ? <RequirementDisplay requirement={this.getDisplayRequirement()} /> : null}
-          </Modal.Body>
+          <Modal.Body>{displayRequirement ? <RequirementDisplay requirement={displayRequirement} /> : null}</Modal.Body>
         </Modal>
       </div>
     );

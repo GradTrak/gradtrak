@@ -1,5 +1,5 @@
 import argon2 from 'argon2';
-import mongoose from 'mongoose';
+import express from 'express';
 import { OAuth2Strategy as GoogleStrategy } from 'passport-google-oauth';
 import { Strategy } from 'passport-local';
 
@@ -21,7 +21,7 @@ export async function verifyUser(user: UserType, inputPassword: string): Promise
 export const localStrategy = new Strategy(async (username, inputPassword, done) => {
   try {
     const user = await User.findOne({ username });
-    if (!(await verifyUser(user, inputPassword))) {
+    if (!user || !(await verifyUser(user, inputPassword))) {
       done(null, false, { message: 'Incorrect username or password' });
       return;
     }
@@ -39,6 +39,10 @@ export const googleStrategy = new GoogleStrategy(
     callbackURL: `${process.env.HOST || 'http://localhost:8080'}/login/google/callback`,
   },
   async (accessToken, refreshToken, profile, done) => {
+    if (!profile.emails || !profile.emails[0]) {
+      done(new Error('Invalid profile'));
+      return;
+    }
     const username = profile.emails[0].value;
     const googleId = profile.id;
     try {
@@ -71,10 +75,14 @@ export const googleStrategy = new GoogleStrategy(
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-underscore-dangle */
 
-export function serializeUser(user: UserType & mongoose.Document, done: (err: any, id?: string) => void): void {
-  done(null, user._id);
+export function serializeUser(req: express.Request, user: object, done: (err: any, id?: string) => void): void {
+  if (!req.user) {
+    done(new Error('Cannot serialize undefined user'));
+    return;
+  }
+  done(null, req.user._id);
 }
-export function deserializeUser(id: string, done: (err: any, user?: UserType & mongoose.Document) => void): void {
+export function deserializeUser(req: express.Request, id: string, done: (err: any, user?: UserType) => void): void {
   User.findOne({ _id: id }, done);
 }
 
