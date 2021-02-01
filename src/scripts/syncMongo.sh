@@ -10,6 +10,7 @@ help () {
     echo "  -f Source database name"
     echo "  -d Destination URI, starting with mongodb:// or mongdb+srv://"
     echo "  -t Destination database name"
+    echo "  -U Sync users (DANGEROUS)"
     echo "  -h Print help"
     echo
     echo "Specifying -s 'local' or -d 'local' will set the appropriate URI to
@@ -23,13 +24,15 @@ local installation used by the GradTrak server."
 }
 
 usage () {
-    echo "usage: $0 -s src_uri -f src_db -d dst_uri -t dst_db"
-    echo "usage: $0 -s 'local' -d dst_uri -t dst_db"
-    echo "usage: $0 -s src_uri -f src_db -d 'local'"
+    echo "usage: $0 [-U] -s src_uri -f src_db -d dst_uri -t dst_db"
+    echo "usage: $0 [-U] -s 'local' -d dst_uri -t dst_db"
+    echo "usage: $0 [-U] -s src_uri -f src_db -d 'local'"
     echo "usage: $0 -h"
 }
 
-while getopts "hs:d:f:t:" flag; do
+SYNC_USERS=false
+
+while getopts "hs:d:f:t:U" flag; do
     case "${flag}" in
         h)
             help
@@ -57,6 +60,9 @@ while getopts "hs:d:f:t:" flag; do
         t)
             DST_DB="${OPTARG}"
             ;;
+        U)
+            SYNC_USERS=true
+            ;;
     esac
 done
 
@@ -65,4 +71,17 @@ if [ -z "${SRC}" ] || [ -z "${DST}" ] || [ -z "{$SRC_DB}" ] || [ -z "${DST_DB}" 
     exit 1
 fi
 
-mongodump --archive "${SRC}" | mongorestore --archive --nsFrom="${SRC_DB}.*" --nsTo="${DST_DB}.*" --drop "${DST}"
+if ! ${SYNC_USERS}; then
+    flags="${flags} --nsExclude=\"${SRC_DB}.users\""
+else
+    echo 'Are you SURE you want to sync users? All existing user data in the destination will be lost!'
+    read -p 'Press Enter to continue...'
+fi
+
+mongodump --archive "${SRC}" | mongorestore \
+    --archive \
+    --nsFrom="${SRC_DB}.*" \
+    --nsTo="${DST_DB}.*" \
+    --drop \
+    ${flags} \
+    "${DST}"
