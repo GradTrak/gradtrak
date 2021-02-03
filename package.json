@@ -40,7 +40,7 @@
     "redis": "^3.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.12.13",
     "@svgr/webpack": "^5.5.0",
     "@types/compression": "^1.7.0",
     "@types/connect-redis": "^0.0.16",
