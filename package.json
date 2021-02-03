@@ -57,7 +57,7 @@
     "@types/passport": "^1.0.5",
     "@types/passport-google-oauth": "^1.0.41",
     "@types/passport-local": "^1.0.33",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.1",
     "@types/react-bootstrap-typeahead": "^5.1.1",
     "@types/react-dom": "^17.0.0",
     "@types/redis": "^2.8.28",
