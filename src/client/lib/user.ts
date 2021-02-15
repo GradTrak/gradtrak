@@ -19,9 +19,7 @@ namespace User {
   const SEMESTER_API_ENDPOINT = '/api/user';
 
   export const EMPTY_USER_DATA = {
-    semesters: {},
-    goals: [],
-    manuallyFulfilledReqs: {},
+    schedules: {},
   };
 
   // TODO Specify this type and other API types as a union.

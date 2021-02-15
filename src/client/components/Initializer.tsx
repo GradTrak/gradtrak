@@ -2,15 +2,15 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 
 import { RequirementSet } from '../models/requirement-set.model';
+import { Schedule } from '../models/schedule.model';
 import { Semester } from '../models/semester.model';
-import { UserData } from '../models/user-data.model';
 
 import GoalSelector from './GoalSelector';
 
 import './Initializer.css';
 
 type InitializerProps = {
-  onInitializeData: (userData: UserData) => void;
+  onInitialize: (schedule: Schedule) => void;
 };
 
 type InitializerState = {
@@ -53,7 +53,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
 
   handleSubmit = (goals: RequirementSet[]): void => {
     const semesters = this.initializeSemesters(this.state.startYear, this.state.gradYear, this.state.includeSummers);
-    this.props.onInitializeData({
+    this.props.onInitialize({
       semesters,
       goals,
       manuallyFulfilledReqs: {},
