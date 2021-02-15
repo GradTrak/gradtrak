@@ -104,7 +104,18 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
 
   // TODO This should probably be memoized.
   private getGoalsForType = (goalType: string, requirementSets: Map<string, RequirementSet>): RequirementSet[] => {
-    return Array.from(requirementSets.values()).filter((reqSet) => reqSet.type === goalType);
+    return Array.from(requirementSets.values())
+      .filter((reqSet) => reqSet.type === goalType)
+      .filter(this.searchFunction)
+      .sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
   };
 
   private searchFunction = (goal: RequirementSet): boolean => {
@@ -147,13 +158,11 @@ class GoalSelector extends React.Component<GoalSelectorProps, GoalSelectorState>
                     onChange={this.handleSelectChange}
                     ref={this.goalRefs.get(goalType)}
                   >
-                    {this.getGoalsForType(goalType, this.state.requirementsMap)
-                      .filter(this.searchFunction)
-                      .map((goal) => (
-                        <option key={goal.id} value={goal.id}>
-                          {goal.name}
-                        </option>
-                      ))}
+                    {this.getGoalsForType(goalType, this.state.requirementsMap).map((goal) => (
+                      <option key={goal.id} value={goal.id}>
+                        {goal.name}
+                      </option>
+                    ))}
                   </Form.Control>
                 </Form.Group>
                 <Form.Group>
