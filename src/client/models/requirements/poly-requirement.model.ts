@@ -16,6 +16,8 @@ export class PolyRequirement extends StandaloneRequirement {
     this.requirements = requirements;
     this.numRequired = numRequired;
     this.hidden = hidden;
+    // Temporarily disable support for non hidden poly requirements.
+    this.hidden = true;
   }
 
   numFulfilled(course: Course): number {
