@@ -26,7 +26,7 @@ export abstract class Requirement {
   }
 
   /*
-   * Req-specific implementation of whether a set of courses will fulfill 
+   * Req-specific implementation of whether a set of courses will fulfill
    * the requirement
    */
   abstract isFulfilledWith(courses: Course[], override?: Set<string>): boolean;

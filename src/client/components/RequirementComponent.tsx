@@ -113,7 +113,7 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
       const fulfilledUnits = fulfillingCourses.map((course) => course.units).reduce((a, b) => a + b, 0);
       return (
         <>
-          {fulfilledUnits}/{this.props.requirement.units} units of {this.props.requirement.name}
+          {fulfilledUnits}/{this.props.requirement.units} Units of {this.props.requirement.name}
           {fulfillingCourses.map((course) => (
             <div key={course.id} className="Requirement Requirement__course">
               {course.getName()}
