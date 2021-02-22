@@ -39,6 +39,6 @@ export class UnitRequirement extends Requirement {
   }
 
   toString(): string {
-    return `${this.units} units of \n${this.requirement.name}`;
+    return `${this.units} Units of \n${this.requirement.name}`;
   }
 }

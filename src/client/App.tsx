@@ -148,11 +148,11 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    if (this.state.userData && this.state.userData.semesters.size !== 0) {
+    if (this.state.userData && this.state.userData.semesters.size === 0) {
       User.saveUserData(this.state.userData);
+    } else {
+      this.openInitializer();
     }
-
-    this.openInitializer();
 
     return null;
   };
@@ -567,7 +567,9 @@ class App extends React.Component<AppProps, AppState> {
       <div className="App">
         <header className="App__header">
           <div className="App__title">
-            GradTrak<sup className="App__beta">BETA</sup>
+            <a className="App__title-link" href="https://gradtrak.me/">
+              GradTrak<sup className="App__beta">BETA</sup>
+            </a>
           </div>
           {this.renderName()}
         </header>
