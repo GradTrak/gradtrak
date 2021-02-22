@@ -43,7 +43,7 @@ const DEPT_ALIASES = new Map<string, string[]>([
   ['PHYS ED', ['PE']],
   ['PLANTBI', ['PMB']],
   ['POL SCI', ['POLI', 'POLISCI', 'PS']],
-  ['POLECON', ['POLIECON']],
+  ['POLECON', ['POLIECON', 'PE']],
   ['PSYCH', ['PSYCHOLOGY']],
   ['PUB POL', ['PP', 'PUBLIC POLICY']],
   ['STAT', ['STATS']],
