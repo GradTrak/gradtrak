@@ -14,7 +14,8 @@ import './RequirementComponent.css';
 
 type RequirementComponentProps = {
   requirement: Requirement;
-  fulfillmentMap: Map<Requirement, ProcessedFulfillmentType>;
+  fulfillmentOverride?: ProcessedFulfillmentType;
+  fulfillmentMap?: Map<Requirement, ProcessedFulfillmentType>;
   onManualFulfill: (req: Requirement) => void;
   onManualUnfulfill: (req: Requirement) => void;
 };
@@ -45,6 +46,16 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
   };
 
   private getFulfillment = (): ProcessedFulfillmentType => {
+    if (this.props.fulfillmentOverride !== undefined) {
+      return this.props.fulfillmentOverride;
+    }
+    if (!this.props.fulfillmentMap) {
+      return {
+        status: 'unfulfilled',
+        method: 'courses',
+        coursesUsed: new Set(),
+      };
+    }
     if (!this.props.fulfillmentMap.has(this.props.requirement)) {
       console.error(`Fulfillment map is missing ${this.props.requirement.id}`);
       return {
@@ -73,14 +84,11 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
     // TODO These probably belong in separate files.
     const fulfillment = this.getFulfillment();
 
-    if (
-      (this.props.requirement instanceof MultiRequirement || this.props.requirement instanceof PolyRequirement) &&
-      !this.props.requirement.hidden
-    ) {
+    if (this.props.requirement instanceof MultiRequirement && !this.props.requirement.hidden) {
       /* Multi-requirement display, showing nested requirements underneath.
        * Hidden requirements do not show this. */
       const numFulfilled = this.props.requirement.requirements.filter(
-        (childReq) => this.props.fulfillmentMap.get(childReq)?.status === 'fulfilled',
+        (childReq) => this.props.fulfillmentMap?.get(childReq)?.status === 'fulfilled',
       ).length;
       let numRequiredText: React.ReactNode;
       switch (this.props.requirement.numRequired) {
@@ -102,6 +110,36 @@ class RequirementComponent extends React.Component<RequirementComponentProps, Re
               key={childReq.id}
               requirement={childReq}
               fulfillmentMap={this.props.fulfillmentMap}
+              onManualFulfill={this.props.onManualFulfill}
+              onManualUnfulfill={this.props.onManualUnfulfill}
+            />
+          ))}
+        </>
+      );
+    } else if (this.props.requirement instanceof PolyRequirement && !this.props.requirement.hidden) {
+      /* Poly-requirement display, showing nested requirements underneath with
+       * the same fulfillment status (override) as the current requirement's
+       * own fulfillment. Hidden requirements do not show this. */
+      let numRequiredText: React.ReactNode;
+      switch (this.props.requirement.numRequired) {
+        case 1:
+          numRequiredText = 'Course satisfying one of';
+          break;
+        case this.props.requirement.requirements.length:
+          numRequiredText = 'Course satisyfing all of';
+          break;
+        default:
+          numRequiredText = `Courses satisfying ${this.props.requirement.numRequired} of`;
+          break;
+      }
+      return (
+        <>
+          {numRequiredText}
+          {(this.props.requirement.requirements as Requirement[]).map((childReq) => (
+            <RequirementComponent
+              key={childReq.id}
+              requirement={childReq}
+              fulfillmentOverride={fulfillment}
               onManualFulfill={this.props.onManualFulfill}
               onManualUnfulfill={this.props.onManualUnfulfill}
             />
