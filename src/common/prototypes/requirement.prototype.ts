@@ -32,7 +32,7 @@ export type PolyRequirementPrototype = {
 
 export type UnitRequirementPrototype = {
   type: 'unit';
-  numRequired: number;
+  units: number;
   requirement: StandaloneRequirementPrototype;
 } & BaseRequirementPrototype;
 
