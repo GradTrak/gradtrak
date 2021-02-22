@@ -8,13 +8,14 @@ export class RegexRequirement extends StandaloneRequirement {
   deptRegex: RegExp;
   numberRegex: RegExp;
 
-  protected isFulfillableBy(course: Course): boolean {
-    return this.deptRegex.test(course.dept) && this.numberRegex.test(course.no);
+  constructor(id: string, name: string, deptRegex: RegExp, numberRegex: RegExp) {
+    super(id, name);
+    this.deptRegex = deptRegex;
+    this.numberRegex = numberRegex;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  isFulfilledWith(courses: Course[], override?: Set<string>): boolean {
-    return courses.some((course: Course) => this.isFulfillableBy(course));
+  protected isFulfillableBy(course: Course): boolean {
+    return this.deptRegex.test(course.dept) && this.numberRegex.test(course.no);
   }
 
   toString(): string {

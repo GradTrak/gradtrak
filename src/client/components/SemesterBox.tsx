@@ -18,7 +18,7 @@ type SemesterBoxProps = {
 type SemesterBoxState = {
   showCourseAdder: boolean;
   showCourseInfo: boolean;
-  shownCourseInfo: Course;
+  shownCourseInfo: Course | null;
 };
 
 class SemesterBox extends React.Component<SemesterBoxProps, SemesterBoxState> {
@@ -59,7 +59,7 @@ class SemesterBox extends React.Component<SemesterBoxProps, SemesterBoxState> {
 
   private renderCourse = (course: Course): React.ReactNode => {
     const semestersWithCourse = this.props.currentSemesters.filter((semester) => semester.courses.includes(course));
-    let duplicateCourseIcon: React.ReactElement = null;
+    let duplicateCourseIcon: React.ReactElement | null = null;
     if (semestersWithCourse.length > 1) {
       const duplicatePopover = (
         <Popover id="semester-duplicate-popover">

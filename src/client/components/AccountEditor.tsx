@@ -6,14 +6,14 @@ import User, { Account } from '../lib/user';
 import './AccountEditor.css';
 
 type AccountEditorProps = {
+  user: Account;
   onClose: () => void;
 };
 
 type AccountEditorState = {
-  user: Account;
   isSubmitting: boolean;
   changesMade: boolean;
-  error: string;
+  error: string | null;
   isChangingPassword: boolean;
 };
 
@@ -28,24 +28,12 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
     this.currentPasswordRef = React.createRef<HTMLInputElement>();
 
     this.state = {
-      user: null,
       isSubmitting: false,
       changesMade: false,
       error: null,
       isChangingPassword: false,
     };
   }
-
-  componentDidMount(): void {
-    this.queryWhoami();
-  }
-
-  private queryWhoami = async (): Promise<void> => {
-    const res = await User.whoami();
-    this.setState({
-      user: res.user,
-    });
-  };
 
   showChangePassword = () => {
     this.setState({
@@ -55,6 +43,11 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
   };
 
   handleSubmit = async () => {
+    if (!this.currentPasswordRef.current || !this.newPasswordRef.current) {
+      console.error('Tried to edit account before render finished');
+      return;
+    }
+
     const currentPassword = this.currentPasswordRef.current.value;
 
     this.setState({
@@ -81,10 +74,6 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
   };
 
   render(): React.ReactElement {
-    if (!this.state.user) {
-      return <div className="AccountEditor">Loading...</div>;
-    }
-
     return (
       <div className="AccountEditor">
         <h4 className="gt-modal-header">Account Settings</h4>
@@ -92,7 +81,7 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
           <Col xs={6}>
             <Form.Label>Email</Form.Label>
           </Col>
-          <Col xs={6}>{this.state.user.username}</Col>
+          <Col xs={6}>{this.props.user.username}</Col>
         </Form.Group>
         <Form.Group as={Row} controlId="AccountEditor__new-password">
           <Col xs={6}>
@@ -110,13 +99,13 @@ class AccountEditor extends React.Component<AccountEditorProps, AccountEditorSta
                 <button
                   className="gt-button"
                   type="button"
-                  disabled={this.state.user.auth !== 'local'}
+                  disabled={this.props.user.auth !== 'local'}
                   onClick={this.showChangePassword}
                 >
                   <i className="material-icons AccountEditor__edit">edit</i>
                 </button>
                 <br />
-                {this.state.user.auth === 'google' ? (
+                {this.props.user.auth === 'google' ? (
                   <Form.Text muted>You are currently authenticated through Google.</Form.Text>
                 ) : null}
               </>

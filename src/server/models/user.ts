@@ -2,6 +2,10 @@ import mongoose from 'mongoose';
 
 import { UserDataPrototype } from '../../common/prototypes/user-data.prototype';
 
+/* Make sure to set up the appropriate migration in the migrations folder if
+ * you update the schema. */
+export const USER_SCHEMA_VERSION = 1;
+
 const semesterSchema = new mongoose.Schema(
   {
     name: {
@@ -16,6 +20,7 @@ const semesterSchema = new mongoose.Schema(
   },
   { strict: 'throw', _id: false },
 );
+
 const userDataSchema = new mongoose.Schema(
   {
     semesters: {
@@ -46,10 +51,16 @@ export type UserType = {
   userdata: UserDataPrototype;
   emailMarketing: boolean;
   userTesting: boolean;
-};
+} & mongoose.Document;
 
 const userSchema = new mongoose.Schema(
   {
+    schemaVersion: {
+      type: Number,
+      index: true,
+      required: true,
+      default: USER_SCHEMA_VERSION,
+    },
     username: {
       type: String,
       index: true,
@@ -87,11 +98,17 @@ const userSchema = new mongoose.Schema(
   { strict: 'throw' },
 );
 
-const User = mongoose.model<mongoose.Document & UserType>('User', userSchema);
+const User = mongoose.model<UserType>('User', userSchema);
 
 declare module 'express' {
   export interface Request {
-    user?: mongoose.Document & UserType;
+    user?: UserType;
+  }
+}
+
+declare module 'express-serve-static-core' {
+  export interface Request {
+    user?: UserType;
   }
 }
 

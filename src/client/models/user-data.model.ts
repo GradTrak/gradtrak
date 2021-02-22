@@ -5,26 +5,37 @@ import { RequirementSet } from './requirement-set.model';
 import { Semester } from './semester.model';
 
 export class UserData {
-  semesters: Map<string, Semester[]>;
+  semesters: Map<string, (Semester | null)[]>;
   goals: RequirementSet[];
   manuallyFulfilledReqs: Map<string, Set<string>>;
+
+  private constructor() {
+    throw new Error('Disabled constructor');
+  }
 
   static fromProto(
     proto: UserDataPrototype,
     coursesMap: Map<string, Course>,
     reqSetMap: Map<string, RequirementSet>,
   ): UserData {
-    const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
+    const semesters = new Map<string, (Semester | null)[]>();
     Object.entries(proto.semesters).forEach(([key, value]) => {
       semesters.set(
         key,
-        (value as SemesterPrototype[]).map((semesterProto: SemesterPrototype) =>
-          semesterProto ? Semester.fromProto(semesterProto, coursesMap) : null,
-        ),
+        value.map((semesterProto) => (semesterProto ? Semester.fromProto(semesterProto, coursesMap) : null)),
       );
     });
-    const goals: RequirementSet[] = proto.goalIds.map((goalId: string) => reqSetMap.get(goalId));
-    const manuallyFulfilledReqs: Map<string, Set<string>> = new Map<string, Set<string>>();
+    const goals = proto.goalIds
+      .filter((goalId) => {
+        /* Check for goal in reqSetMap. */
+        if (!reqSetMap.has(goalId)) {
+          console.error(`Goals reference unknown requirement set ID: ${goalId}`);
+          return false;
+        }
+        return true;
+      })
+      .map((goalId) => reqSetMap.get(goalId)!);
+    const manuallyFulfilledReqs = new Map<string, Set<string>>();
     Object.entries(proto.manuallyFulfilledReqs).forEach((entry) => {
       manuallyFulfilledReqs.set(entry[0], new Set<string>(entry[1]));
     });
@@ -36,9 +47,9 @@ export class UserData {
   }
 
   static toProto(userData: UserData): UserDataPrototype {
-    const semesters: { [year: string]: SemesterPrototype[] } = {};
+    const semesters: { [year: string]: (SemesterPrototype | null)[] } = {};
     userData.semesters.forEach((academicYearSemesters, academicYearName) => {
-      semesters[academicYearName] = academicYearSemesters.map((semester: Semester) => {
+      semesters[academicYearName] = academicYearSemesters.map((semester) => {
         if (!semester) {
           return null;
         }
@@ -49,8 +60,8 @@ export class UserData {
         return semesterPrototype;
       });
     });
-    const goalIds: string[] = userData.goals.map((goal: RequirementSet) => goal.id);
-    const manuallyFulfilledReqs: { [reqSetId: string]: string[] } = Object.fromEntries(
+    const goalIds = userData.goals.map((goal) => goal.id);
+    const manuallyFulfilledReqs = Object.fromEntries(
       Array.from(userData.manuallyFulfilledReqs.entries()).map((entry: [string, Set<string>]) => [
         entry[0],
         Array.from(entry[1]),

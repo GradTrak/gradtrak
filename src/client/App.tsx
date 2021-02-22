@@ -22,11 +22,13 @@ import './App.css';
 
 type AppProps = {};
 
+// TODO loggedIn state can be derived from user state.
+
 type AppState = {
   loggedIn: boolean;
-  user: Account;
-  userData: UserData;
-  modal: 'login' | 'initializer' | 'account-editor' | 'report-form';
+  user: Account | null;
+  userData: UserData | null;
+  modal: 'login' | 'initializer' | 'account-editor' | 'report-form' | null;
 };
 
 class App extends React.Component<AppProps, AppState> {
@@ -35,10 +37,7 @@ class App extends React.Component<AppProps, AppState> {
 
     this.state = {
       loggedIn: false,
-      user: {
-        username: null,
-        auth: null,
-      },
+      user: null,
       userData: null,
       modal: null,
     };
@@ -101,9 +100,9 @@ class App extends React.Component<AppProps, AppState> {
 
   private registerSavePrompt = (): void => {
     window.addEventListener('beforeunload', (e) => {
-      if (!this.state.loggedIn && this.state.userData.semesters.size > 0) {
+      if (!this.state.loggedIn && this.state.userData && this.state.userData.semesters.size > 0) {
         /* This text isn't actually what is displayed. */
-        const confirmation: string = 'Are you sure you want to leave? Guest account changes will be lost.';
+        const confirmation = 'Are you sure you want to leave? Guest account changes will be lost.';
         e.returnValue = confirmation;
         e.preventDefault();
         return confirmation;
@@ -124,7 +123,7 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
-  handleLogin = async (username: string, password: string): Promise<string> => {
+  handleLogin = async (username: string, password: string): Promise<string | null> => {
     const err = await this.login(username, password);
 
     if (err) {
@@ -142,24 +141,24 @@ class App extends React.Component<AppProps, AppState> {
     return null;
   };
 
-  handleRegister = async (username: string, password: string, userTesting: boolean): Promise<string> => {
+  handleRegister = async (username: string, password: string, userTesting: boolean): Promise<string | null> => {
     const err = await this.register(username, password, userTesting);
 
     if (err) {
       return err;
     }
 
-    if (this.state.userData.semesters.size !== 0) {
+    if (this.state.userData && this.state.userData.semesters.size === 0) {
       User.saveUserData(this.state.userData);
+    } else {
+      this.openInitializer();
     }
-
-    this.openInitializer();
 
     return null;
   };
 
   handleLoginDismiss = (): void => {
-    if (this.state.userData.semesters.size === 0) {
+    if (this.state.userData && this.state.userData.semesters.size === 0) {
       this.openInitializer();
     } else {
       this.closeModal();
@@ -194,7 +193,7 @@ class App extends React.Component<AppProps, AppState> {
     this.closeModal();
   };
 
-  register = async (username: string, password: string, userTesting: boolean): Promise<string> => {
+  register = async (username: string, password: string, userTesting: boolean): Promise<string | null> => {
     if (this.state.loggedIn) {
       throw new Error('Tried to register when already logged in');
     }
@@ -204,13 +203,13 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: res.user,
+        user: res.user || null,
       });
     }
-    return res.error || null;
+    return res.success ? null : res.error;
   };
 
-  login = async (username: string, password: string): Promise<string> => {
+  login = async (username: string, password: string): Promise<string | null> => {
     if (this.state.loggedIn) {
       throw new Error('Tried to log in when already logged in');
     }
@@ -220,10 +219,10 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: res.user,
+        user: res.user || null,
       });
     }
-    return res.error || null;
+    return res.success ? null : res.error;
   };
 
   /**
@@ -242,12 +241,12 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
-  queryWhoami = async (): Promise<string> => {
+  queryWhoami = async (): Promise<string | null> => {
     const res = await User.whoami();
     if (res.loggedIn) {
       this.setState({
         loggedIn: true,
-        user: res.user,
+        user: res.user || null,
       });
     } else {
       this.setState({
@@ -275,6 +274,10 @@ class App extends React.Component<AppProps, AppState> {
    * @param {RequirementSet[]} newGoals The new goals.
    */
   setGoals = (newGoals: RequirementSet[]): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to set goals before user data loaded');
+    }
+
     this.setState({
       userData: {
         ...this.state.userData,
@@ -288,10 +291,14 @@ class App extends React.Component<AppProps, AppState> {
    *
    * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
-  setSemesters = (newSemesters: Map<string, Semester[]>): void => {
+  setSemesters = (newSemesters: Map<string, (Semester | null)[]>): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to set semesters before user data loaded');
+    }
+
     // not sure why, before the rework the list of semesters was copied, so
     // I've copied the map here as well.
-    const newMap = new Map<string, Semester[]>();
+    const newMap = new Map<string, (Semester | null)[]>();
     newSemesters.forEach((value, key) => {
       newMap.set(key, [...value]);
     });
@@ -310,9 +317,12 @@ class App extends React.Component<AppProps, AppState> {
    * @param {Course} course The course to add.
    */
   addCourse = (semester: Semester, course: Course): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to add course before user data loaded');
+    }
+
     if (semester.courses.includes(course)) {
-      console.error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
-      return;
+      throw new Error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
     }
 
     // TODO Making this a function that returns a clone breaks the
@@ -322,7 +332,7 @@ class App extends React.Component<AppProps, AppState> {
       ...this.state,
       userData: {
         ...this.state.userData,
-        semesters: new Map<string, Semester[]>(this.state.userData.semesters),
+        semesters: new Map<string, (Semester | null)[]>(this.state.userData.semesters),
       },
     });
   };
@@ -334,39 +344,42 @@ class App extends React.Component<AppProps, AppState> {
    * @param {Course} course The course to remove.
    */
   removeCourse = (semester: Semester, course: Course): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to remove course before user data loaded');
+    }
+
     if (!semester.courses.includes(course)) {
-      console.error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
-      return;
+      throw new Error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
     }
 
     // TODO Making this a function that returns a clone breaks the course-changer
-    semester.courses = semester.courses.filter((c: Course) => c !== course);
+    semester.courses = semester.courses.filter((c) => c !== course);
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        semesters: new Map<string, Semester[]>(this.state.userData.semesters),
+        semesters: new Map<string, (Semester | null)[]>(this.state.userData.semesters),
       },
     });
   };
 
   manuallyFulfill = (requirement: Requirement, requirementSet: RequirementSet): void => {
-    const { manuallyFulfilledReqs } = this.state.userData;
-
-    if (
-      manuallyFulfilledReqs.has(requirementSet.id) &&
-      manuallyFulfilledReqs.get(requirementSet.id).has(requirement.id)
-    ) {
-      console.error(
-        `Tried to mark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already is`,
-      );
-      return;
+    if (!this.state.userData) {
+      throw new Error('Tried to manually fulfill before user data loaded');
     }
 
-    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    const { manuallyFulfilledReqs } = this.state.userData;
+
+    if (manuallyFulfilledReqs.get(requirementSet.id)?.has(requirement.id)) {
+      throw new Error(
+        `Tried to mark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already is`,
+      );
+    }
+
+    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
     nextSet.add(requirement.id);
 
-    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
+    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
     nextManuallyFulfilled.set(requirementSet.id, nextSet);
 
     this.setState({
@@ -379,20 +392,20 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   manuallyUnfulfill = (requirement: Requirement, requirementSet: RequirementSet): void => {
-    const { manuallyFulfilledReqs } = this.state.userData;
-
-    if (
-      !manuallyFulfilledReqs.has(requirementSet.id) ||
-      !manuallyFulfilledReqs.get(requirementSet.id).has(requirement.id)
-    ) {
-      console.error(
-        `Tried to unmark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already isn't`,
-      );
-      return;
+    if (!this.state.userData) {
+      throw new Error('Tried to manually unfulfill before user data loaded');
     }
 
-    const nextManuallyFulfilled: Map<string, Set<string>> = new Map(manuallyFulfilledReqs);
-    const nextSet: Set<string> = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
+    const { manuallyFulfilledReqs } = this.state.userData;
+
+    if (!manuallyFulfilledReqs.get(requirementSet.id)?.has(requirement.id)) {
+      throw new Error(
+        `Tried to unmark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already isn't`,
+      );
+    }
+
+    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
+    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
     nextManuallyFulfilled.set(requirementSet.id, nextSet);
 
     nextSet.delete(requirement.id);
@@ -422,14 +435,18 @@ class App extends React.Component<AppProps, AppState> {
    * @return {Course[]} A list of courses that are in the state.
    */
   private getCurrentCourses = (): Course[] => {
+    if (!this.state.userData) {
+      throw new Error('Tried to get current courses before user data loaded');
+    }
+
     return Array.from(this.state.userData.semesters.values())
       .flat()
-      .filter((semester: Semester) => semester)
-      .flatMap((semester: Semester) => semester.courses);
+      .filter((semester) => semester)
+      .flatMap((semester) => semester!.courses);
   };
 
-  private renderName = (): React.ReactElement => {
-    if (this.state.loggedIn) {
+  private renderName = (): React.ReactNode => {
+    if (this.state.loggedIn && this.state.user) {
       return (
         <div className="App__name">
           <div className="App__left">Name: {this.state.user.username}</div>
@@ -485,37 +502,36 @@ class App extends React.Component<AppProps, AppState> {
     }
   };
 
-  private renderBody(): React.ReactElement {
-    if (this.state.userData) {
-      return (
-        <Row className="App__main" noGutters>
-          <Col xs={8}>
-            <SemesterPane
-              semesters={this.state.userData.semesters}
-              onAddCourse={this.addCourse}
-              onRemoveCourse={this.removeCourse}
-              onChangeSemesters={this.setSemesters}
-            />
-          </Col>
-          <Col xs={4}>
-            <RequirementPane
-              courses={this.getCurrentCourses()}
-              goals={this.state.userData.goals}
-              manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
-              onManualFulfill={this.manuallyFulfill}
-              onManualUnfulfill={this.manuallyUnfulfill}
-              onChangeGoals={this.setGoals}
-            />
-          </Col>
-        </Row>
-      );
-    } else {
-      /* Loading. */
+  private renderBody(): React.ReactNode {
+    if (!this.state.userData) {
       return <div>Loading...</div>;
     }
+
+    return (
+      <Row className="App__main" noGutters>
+        <Col xs={8}>
+          <SemesterPane
+            semesters={this.state.userData.semesters}
+            onAddCourse={this.addCourse}
+            onRemoveCourse={this.removeCourse}
+            onChangeSemesters={this.setSemesters}
+          />
+        </Col>
+        <Col xs={4}>
+          <RequirementPane
+            courses={this.getCurrentCourses()}
+            goals={this.state.userData.goals}
+            manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
+            onManualFulfill={this.manuallyFulfill}
+            onManualUnfulfill={this.manuallyUnfulfill}
+            onChangeGoals={this.setGoals}
+          />
+        </Col>
+      </Row>
+    );
   }
 
-  private renderModals(): React.ReactElement {
+  private renderModals(): React.ReactNode {
     if (this.state.userData) {
       return (
         <>
@@ -531,7 +547,7 @@ class App extends React.Component<AppProps, AppState> {
           </Modal>
           <Modal show={this.state.modal === 'account-editor'} onHide={this.closeModal}>
             <Modal.Body>
-              <AccountEditor onClose={this.closeModal} />
+              {this.state.user ? <AccountEditor user={this.state.user} onClose={this.closeModal} /> : null}
             </Modal.Body>
           </Modal>
           <Modal show={this.state.modal === 'report-form'} onHide={this.closeModal}>
@@ -551,7 +567,9 @@ class App extends React.Component<AppProps, AppState> {
       <div className="App">
         <header className="App__header">
           <div className="App__title">
-            GradTrak<sup className="App__beta">BETA</sup>
+            <a className="App__title-link" href="https://gradtrak.me/">
+              GradTrak<sup className="App__beta">BETA</sup>
+            </a>
           </div>
           {this.renderName()}
         </header>

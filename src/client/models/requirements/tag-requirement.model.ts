@@ -9,6 +9,11 @@ import { StandaloneRequirement } from './standalone-requirement.model';
 export class TagRequirement extends StandaloneRequirement {
   tag: Tag;
 
+  constructor(id: string, name: string, tag: Tag) {
+    super(id, name);
+    this.tag = tag;
+  }
+
   toString(): string {
     return `Category: ${this.tag.name}`;
   }

@@ -13,8 +13,7 @@ export class Course {
   units: number;
   berkeleytimeData: BerkeleytimeData;
   tags: Tag[];
-  equivIds: string[];
-  equiv: Course[];
+  private _equiv?: Course[];
 
   constructor(
     id: string,
@@ -23,8 +22,7 @@ export class Course {
     title: string,
     units: number,
     berkeleytimeData: BerkeleytimeData,
-    tags?: Tag[],
-    equivIds?: string[],
+    tags: Tag[],
   ) {
     this.id = id;
     this.dept = dept;
@@ -33,8 +31,6 @@ export class Course {
     this.units = units;
     this.berkeleytimeData = berkeleytimeData;
     this.tags = tags;
-    this.equivIds = equivIds;
-    this.equiv = null;
   }
 
   static fromProto(proto: CoursePrototype, tagMap: Map<string, Tag>): Course {
@@ -45,9 +41,22 @@ export class Course {
       proto.title,
       proto.units,
       proto.berkeleytimeData,
-      proto.tagIds.map((tagId: string) => tagMap.get(tagId)),
-      proto.equivIds,
+      proto.tagIds.filter((tagId) => tagMap.has(tagId)).map((tagId) => tagMap.get(tagId)!),
     );
+  }
+
+  get equiv(): Course[] {
+    if (!this._equiv) {
+      throw new Error('Tried to get equivalent courses before initialized');
+    }
+    return this._equiv;
+  }
+
+  set equiv(equiv: Course[]) {
+    if (this._equiv) {
+      throw new Error('Tried to double-initialize equivalent courses');
+    }
+    this._equiv = equiv;
   }
 
   getName(): string {
@@ -60,17 +69,5 @@ export class Course {
 
   getBareNumber(): number {
     return parseInt(this.no.replace(/[^\d]/g, ''), 10);
-  }
-
-  mapEquiv(map: Map<string, Course>): void {
-    this.equiv = this.equivIds
-      .filter((id: string) => {
-        if (!map.has(id)) {
-          console.error(`No equivalent course with ID ${id} found for course ${this.id}`);
-          return false;
-        }
-        return true;
-      })
-      .map((id: string) => map.get(id));
   }
 }

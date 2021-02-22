@@ -5,42 +5,41 @@ export function validateEmail(email: string): boolean {
 }
 
 export function getAllCombinations<T>(arr: T[], index?: number): T[][] {
-  if (index === undefined) {
-    index = 0;
-  }
-  if (index >= arr.length) {
+  const i = index !== undefined ? index : 0;
+  if (i >= arr.length) {
     return [[]];
   }
-  const rest: T[][] = getAllCombinations(arr, index + 1);
-  return [...rest, ...rest.map((combination: T[]) => [arr[index], ...combination])];
+  const rest = getAllCombinations(arr, i + 1);
+  return [...rest, ...rest.map((combination) => [arr[i], ...combination])];
 }
 
 /* https://stackoverflow.com/a/25490531 */
-function getCookieValue(key: string): string {
+function getCookieValue(key: string): string | undefined {
   const match = document.cookie.match(`(^|;)\\s*${key}\\s*=\\s*([^;]+)`);
-  return match && match.pop();
+  return match ? match.pop() : undefined;
 }
 
 function csrfRequest(url: string, data: any, method: 'POST' | 'PUT'): Promise<Response> {
+  const headers = new Headers();
+
   // TODO This can be a common config.
   const csrf = getCookieValue('csrf-token');
+  if (csrf !== undefined) {
+    headers.append('CSRF-Token', csrf);
+  }
 
   if (data) {
+    headers.append('Content-Type', 'application/json');
     return fetch(url, {
       method,
-      headers: {
-        'Content-Type': 'application/json',
-        'CSRF-Token': csrf,
-      },
+      headers,
       body: JSON.stringify(data),
     });
   } else {
     /* Empty request. */
     return fetch(url, {
       method,
-      headers: {
-        'CSRF-Token': csrf,
-      },
+      headers,
     });
   }
 }

@@ -18,7 +18,7 @@ type InitializerState = {
   startYear: number;
   gradYear: number;
   includeSummers: boolean;
-  error: string;
+  error: string | null;
 };
 
 class Initializer extends React.Component<InitializerProps, InitializerState> {
@@ -61,8 +61,8 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
   };
 
   private initializeSemesters(startYear: number, gradYear: number, includeSummers: boolean): Map<string, Semester[]> {
-    const semesters: Map<string, Semester[]> = new Map<string, Semester[]>();
-    for (let i: number = startYear; i < gradYear; i += 1) {
+    const semesters = new Map<string, Semester[]>();
+    for (let i = startYear; i < gradYear; i += 1) {
       const currSem: Semester[] = [];
       currSem.push(new Semester(`Fall ${i}`));
       currSem.push(new Semester(`Spring ${i + 1}`));

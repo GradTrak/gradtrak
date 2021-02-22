@@ -1,6 +1,5 @@
 import { RequirementPrototype } from '../../common/prototypes/requirement.prototype';
 import { RequirementCategoryPrototype } from '../../common/prototypes/requirement-category.prototype';
-import { ConstraintPrototype } from '../../common/prototypes/constraint.prototype';
 import { Course } from './course.model';
 import { Constraint, Requirement } from './requirement.model';
 import { CourseRequirement } from './requirements/course-requirement.model';
@@ -11,6 +10,7 @@ import { TagRequirement } from './requirements/tag-requirement.model';
 import { UnitRequirement } from './requirements/unit-requirement.model';
 import { CountRequirement } from './requirements/count-requirement.model';
 import { RegexRequirement } from './requirements/regex-requirement.model';
+import { StandaloneRequirement } from './requirements/standalone-requirement.model';
 import { Tag } from './tag.model';
 
 /**
@@ -33,12 +33,24 @@ export class RequirementCategory {
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
   ): RequirementCategory {
-    const requirements: Requirement[] = proto.requirements.map((reqProto: RequirementPrototype) =>
-      RequirementCategory.reqFromProto(reqProto, coursesMap, tagsMap),
-    );
-    const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
+    const requirements = proto.requirements
+      .map((reqProto) => {
+        try {
+          const req = RequirementCategory.reqFromProto(reqProto, coursesMap, tagsMap);
+          return req;
+        } catch (err: unknown) {
+          if (err instanceof Error) {
+            console.error(err.message);
+          } else {
+            console.error(err);
+          }
+          return undefined;
+        }
+      })
+      .filter((req) => req) as Requirement[];
+    const reqMap = new Map<string, Requirement>();
 
-    const addReqToMap: (Requirement) => void = (req: Requirement) => {
+    const addReqToMap = (req: Requirement): void => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
@@ -47,8 +59,8 @@ export class RequirementCategory {
     };
     requirements.forEach(addReqToMap);
 
-    const constraints: Constraint[] = proto.constraints
-      ? proto.constraints.map((constraintProto: ConstraintPrototype) => {
+    const constraints = proto.constraints
+      ? proto.constraints.map((constraintProto) => {
           switch (constraintProto.type) {
             case 'mutex':
               return MutexConstraint.fromProto(constraintProto, reqMap);
@@ -67,74 +79,82 @@ export class RequirementCategory {
     coursesMap: Map<string, Course>,
     tagsMap: Map<string, Tag>,
   ): Requirement {
-    const protoClone: any = { ...proto }; // eslint-disable-line @typescript-eslint/no-explicit-any
-
     let requirement: Requirement;
     switch (proto.type) {
       case 'course': {
-        protoClone.course = coursesMap.get(proto.courseId);
-        if (!protoClone.course) {
-          console.error(`No Course object found for course ID: ${proto.courseId}`);
+        if (!coursesMap.has(proto.courseId)) {
+          throw new Error(`No Course object found for course ID: ${proto.courseId}`);
         }
-        delete protoClone.courseId;
-        requirement = new CourseRequirement(protoClone);
+        const course = coursesMap.get(proto.courseId)!;
+        requirement = new CourseRequirement(proto.id, proto.name, course);
         break;
       }
 
       case 'tag': {
-        protoClone.tag = tagsMap.get(proto.tagId);
-        if (!protoClone.tag) {
-          console.error(`No Tag object found for tag ID: ${proto.tagId}`);
+        if (!tagsMap.has(proto.tagId)) {
+          throw new Error(`No Tag object found for tag ID: ${proto.tagId}`);
         }
-        delete protoClone.tagId;
-        requirement = new TagRequirement(protoClone);
+        const tag = tagsMap.get(proto.tagId)!;
+        requirement = new TagRequirement(proto.id, proto.name, tag);
         break;
       }
 
       case 'multi': {
-        protoClone.requirements = proto.requirements.map((childReqProto: RequirementPrototype) =>
+        const childReqs = proto.requirements.map((childReqProto) =>
           RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
         );
-        requirement = new MultiRequirement(protoClone);
+        requirement = new MultiRequirement(proto.id, proto.name, childReqs, proto.numRequired, proto.hidden);
         break;
       }
 
       case 'poly': {
-        protoClone.requirements = proto.requirements.map((childReqProto: RequirementPrototype) =>
-          RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap),
-        );
-        requirement = new PolyRequirement(protoClone);
+        const childReqs = proto.requirements
+          .map((childReqProto) => RequirementCategory.reqFromProto(childReqProto, coursesMap, tagsMap))
+          .filter((childReq) => {
+            if (!(childReq instanceof StandaloneRequirement)) {
+              throw new Error(`PolyRequirement ${proto.id} contains non-StandaloneRequirement`);
+              return false;
+            }
+            return true;
+          }) as StandaloneRequirement[];
+        requirement = new PolyRequirement(proto.id, proto.name, childReqs, proto.numRequired, proto.hidden);
         break;
       }
 
       case 'unit': {
-        protoClone.requirement = RequirementCategory.reqFromProto(proto.requirement, coursesMap, tagsMap);
-        requirement = new UnitRequirement(protoClone);
+        const req = RequirementCategory.reqFromProto(proto.requirement, coursesMap, tagsMap);
+        if (!(req instanceof StandaloneRequirement)) {
+          throw new Error(`UnitRequirement ${proto.id} is based on non-StandaloneRequirement`);
+        }
+        requirement = new UnitRequirement(proto.id, proto.name, proto.numRequired, req);
         break;
       }
 
       case 'count': {
-        protoClone.requirement = RequirementCategory.reqFromProto(protoClone.requirement, coursesMap, tagsMap);
-        requirement = new CountRequirement(protoClone);
+        const req = RequirementCategory.reqFromProto(proto.requirement, coursesMap, tagsMap);
+        if (!(req instanceof StandaloneRequirement)) {
+          throw new Error(`CountRequirement ${proto.id} is based on non-StandaloneRequirement`);
+        }
+        requirement = new CountRequirement(proto.id, proto.name, proto.numRequired, req);
         break;
       }
 
       case 'regex': {
-        protoClone.deptRegex = new RegExp(proto.deptRegex);
-        protoClone.numberRegex = new RegExp(proto.numberRegex);
-        requirement = new RegexRequirement(protoClone);
+        const deptRegex = new RegExp(proto.deptRegex);
+        const numberRegex = new RegExp(proto.numberRegex);
+        requirement = new RegexRequirement(proto.id, proto.name, deptRegex, numberRegex);
         break;
       }
 
       default: {
-        const unknownProto: RequirementPrototype = proto as RequirementPrototype;
-        console.error(`Requirement ${unknownProto.name} has unknown Requirement type: ${unknownProto.type}`);
+        const unknownProto = proto as RequirementPrototype;
+        throw new Error(`Requirement ${unknownProto.name} has unknown Requirement type: ${unknownProto.type}`);
         break;
       }
     }
 
-    const reqMap: Map<string, Requirement> = new Map<string, Requirement>();
-    const addReqToMap: (Requirement) => void = (req: Requirement) => {
+    const reqMap = new Map<string, Requirement>();
+    const addReqToMap = (req: Requirement): void => {
       reqMap.set(req.id, req);
       // TODO Type guard
       if (req instanceof MultiRequirement) {
@@ -143,7 +163,7 @@ export class RequirementCategory {
     };
     addReqToMap(requirement);
     requirement.constraints = proto.constraints
-      ? proto.constraints.map((constraintProto: ConstraintPrototype) => {
+      ? proto.constraints.map((constraintProto) => {
           switch (constraintProto.type) {
             case 'mutex':
               return MutexConstraint.fromProto(constraintProto, reqMap);

@@ -7,7 +7,7 @@ import * as smtp from '../config/smtp';
 import { validateEmail } from '../lib/utils';
 import User, { UserType } from '../models/user';
 
-function validPassword(password): boolean {
+function validPassword(password: string): boolean {
   return password.length >= 6;
 }
 
@@ -95,7 +95,7 @@ export function loginSuccessLocal(req: express.Request, res: express.Response): 
   res.json({
     success: true,
     user: {
-      username: req.user.username,
+      username: req.user!.username,
       auth: 'local',
     },
   });
@@ -105,7 +105,7 @@ export function loginSuccessGoogle(req: express.Request, res: express.Response):
   res.json({
     success: true,
     user: {
-      username: req.user.username,
+      username: req.user!.username,
       auth: 'google',
     },
   });
