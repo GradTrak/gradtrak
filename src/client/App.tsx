@@ -148,11 +148,11 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    if (this.state.userData && this.state.userData.semesters.size !== 0) {
+    if (this.state.userData && this.state.userData.semesters.size === 0) {
       User.saveUserData(this.state.userData);
+    } else {
+      this.openInitializer();
     }
-
-    this.openInitializer();
 
     return null;
   };
