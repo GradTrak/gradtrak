@@ -148,10 +148,11 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    if (this.state.userData && this.state.userData.semesters.size === 0) {
-      User.saveUserData(this.state.userData);
-    } else {
+    if (!this.state.userData || this.state.userData.semesters.size === 0) {
       this.openInitializer();
+    } else {
+      User.saveUserData(this.state.userData);
+      this.closeModal();
     }
 
     return null;
@@ -203,7 +204,7 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: res.user || null,
+        user: res.user,
       });
     }
     return res.success ? null : res.error;
@@ -219,7 +220,7 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: res.user || null,
+        user: res.user,
       });
     }
     return res.success ? null : res.error;
@@ -246,7 +247,7 @@ class App extends React.Component<AppProps, AppState> {
     if (res.loggedIn) {
       this.setState({
         loggedIn: true,
-        user: res.user || null,
+        user: res.user,
       });
     } else {
       this.setState({
