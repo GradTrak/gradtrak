@@ -1,0 +1,30 @@
+name: React CI
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install Yarn
+      run: npm install --global yarn
+    - name: Install Dependencies
+      run: yarn install --frozen-lockfile
+    - name: Build React App
+      run: yarn build:client
+    - name: Start Server and Run Cypress Tests
+      uses: cypress-io/github-action@v2     
+      with:
+        start: yarn start
+        browser: chrome
+        wait-on: 'https://localhost:3000'
+        config: baseUrl=https://localhost:3000
+        wait-on-timeout: 10
+        record: true
+        parallel: true
+      env:
+        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
