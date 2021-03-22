@@ -15,6 +15,7 @@ import User, { Account } from './lib/user';
 import AccountEditor from './components/AccountEditor';
 import Initializer from './components/Initializer';
 import Login from './components/Login';
+import NewScheduleDialog from './components/NewScheduleDialog';
 import ReportForm from './components/ReportForm';
 import RequirementPane from './components/RequirementPane';
 import SemesterPane from './components/SemesterPane';
@@ -30,7 +31,7 @@ type AppState = {
   user: Account | null;
   userData: UserData | null;
   activeSchedule: string;
-  modal: 'login' | 'initializer' | 'account-editor' | 'report-form' | null;
+  modal: 'login' | 'initializer' | 'new-schedule' | 'account-editor' | 'report-form' | null;
 };
 
 class App extends React.Component<AppProps, AppState> {
@@ -177,6 +178,25 @@ class App extends React.Component<AppProps, AppState> {
 
   handleInitializeSchedule = (schedule: Schedule): void => {
     this.setSchedule(this.state.activeSchedule, schedule);
+    this.closeModal();
+  };
+
+  handleNewSchedule = (name: string, createFrom: string | null): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to add new schedule before user data loaded');
+    }
+
+    if (createFrom === null) {
+      this.setSchedule(name, Schedule.EMPTY_SCHEDULE);
+    } else {
+      if (!this.state.userData.schedules[createFrom]) {
+        throw new Error('Tried to add new schedule from non-existent schedule');
+      }
+      this.setSchedule(name, this.state.userData.schedules[createFrom]);
+    }
+    this.setState({
+      activeSchedule: name,
+    });
     this.closeModal();
   };
 
@@ -552,12 +572,41 @@ class App extends React.Component<AppProps, AppState> {
       .flatMap((semester) => semester!.courses);
   };
 
+  private renderScheduleTabs = (): React.ReactNode => {
+    if (!this.state.userData?.schedules) {
+      return null;
+    }
+    const tabs = Object.entries(this.state.userData.schedules).map(([scheduleName, schedule]) => (
+      <>
+        <button
+          key={scheduleName}
+          className={`gt-button App__schedule-tabs ${
+            scheduleName === this.state.activeSchedule ? 'App__schedule-tabs--active' : ''
+          }`}
+          type="button"
+          onClick={() => this.setState({ activeSchedule: scheduleName })}
+        >
+          {scheduleName}
+        </button>
+        <span> | </span>
+      </>
+    ));
+    tabs.push(
+      <button className="gt-button" type="button" onClick={() => this.setState({ modal: 'new-schedule' })}>
+        +
+      </button>,
+    );
+    return tabs;
+  };
+
   private renderName = (): React.ReactNode => {
     if (this.state.loggedIn && this.state.user) {
       return (
         <div className="App__name">
-          <div className="App__left">Name: {this.state.user.username}</div>
+          <div className="App__left">{this.renderScheduleTabs()}</div>
           <div className="App__right">
+            Name: {this.state.user.username}
+            <span> | </span>
             <button className="gt-button" type="button" onClick={this.openAccountEditor}>
               Account
             </button>
@@ -585,8 +634,10 @@ class App extends React.Component<AppProps, AppState> {
       /* Not logged in. */
       return (
         <div className="App__name">
-          <div className="App__left">Guest User</div>
+          <div className="App__left">{this.renderScheduleTabs()}</div>
           <div className="App__right">
+            Guest User
+            <span> | </span>
             <button className="gt-button" type="button" onClick={this.openLogin}>
               Register to Save
             </button>
@@ -659,6 +710,14 @@ class App extends React.Component<AppProps, AppState> {
         <Modal size="lg" backdrop="static" show={this.state.modal === 'initializer'} onHide={this.closeModal}>
           <Modal.Body>
             <Initializer onInitialize={this.handleInitializeSchedule} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal === 'new-schedule'} onHide={this.closeModal}>
+          <Modal.Body>
+            <NewScheduleDialog
+              existingScheduleNames={Object.keys(this.state.userData.schedules)}
+              onCreate={this.handleNewSchedule}
+            />
           </Modal.Body>
         </Modal>
         <Modal show={this.state.modal === 'account-editor'} onHide={this.closeModal}>

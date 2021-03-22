@@ -4,6 +4,12 @@ import { RequirementSet } from './requirement-set.model';
 import { Semester } from './semester.model';
 
 export class Schedule {
+  static readonly EMPTY_SCHEDULE: Schedule = {
+    semesters: {},
+    goals: [],
+    manuallyFulfilledReqs: {},
+  };
+
   semesters: { [year: string]: (Semester | null)[] };
   goals: RequirementSet[];
   manuallyFulfilledReqs: { [reqSet: string]: string[] };

@@ -5,7 +5,11 @@
   color: white;
 }
 
-.App__header button {
+.App__schedule-tabs {
+  color: lightgray;
+}
+
+.App__schedule-tabs--active {
   color: white;
 }
 
