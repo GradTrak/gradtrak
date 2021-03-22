@@ -66,7 +66,7 @@ export type UserType = {
   username: string;
   passwordHash?: string;
   googleId?: string;
-  userData: UserDataPrototype[];
+  userData: UserDataPrototype;
   emailMarketing: boolean;
   userTesting: boolean;
 } & mongoose.Document;
@@ -97,11 +97,9 @@ const userSchema = new mongoose.Schema(
     userData: {
       type: userDataSchema,
       required: true,
-      default: [
-        {
-          schedules: {},
-        },
-      ],
+      default: {
+        schedules: {},
+      },
     },
     emailMarketing: {
       type: Boolean,
