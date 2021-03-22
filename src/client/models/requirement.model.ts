@@ -25,6 +25,10 @@ export abstract class Requirement {
     return this.isFulfilledWith(courses, override);
   }
 
+  /*
+   * Req-specific implementation of whether a set of courses will fulfill
+   * the requirement
+   */
   abstract isFulfilledWith(courses: Course[], override?: Set<string>): boolean;
 
   getAnnotation(): string | null {

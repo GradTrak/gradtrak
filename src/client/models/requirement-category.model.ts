@@ -126,7 +126,7 @@ export class RequirementCategory {
         if (!(req instanceof StandaloneRequirement)) {
           throw new Error(`UnitRequirement ${proto.id} is based on non-StandaloneRequirement`);
         }
-        requirement = new UnitRequirement(proto.id, proto.name, proto.numRequired, req);
+        requirement = new UnitRequirement(proto.id, proto.name, proto.units, req);
         break;
       }
 

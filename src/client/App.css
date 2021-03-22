@@ -18,6 +18,15 @@
   font-weight: 500;
 }
 
+.App__title-link {
+  color: white;
+}
+
+.App__title-link:hover {
+  color: unset;
+  text-decoration: unset;
+}
+
 .App__beta {
   font-size: 0.75rem;
   font-weight: 500;

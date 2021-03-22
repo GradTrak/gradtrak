@@ -151,11 +151,12 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    if (this.state.userData && Object.keys(this.state.userData.schedules).length !== 0) {
+    if (!this.state.userData || Object.keys(this.state.userData.schedules).length === 0) {
+      this.openInitializer();
+    } else {
       User.saveUserData(this.state.userData);
+      this.closeModal();
     }
-
-    this.openInitializer();
 
     return null;
   };
@@ -206,7 +207,7 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: res.user || null,
+        user: res.user,
       });
     }
     return res.success ? null : res.error;
@@ -222,7 +223,7 @@ class App extends React.Component<AppProps, AppState> {
       this.setState({
         ...this.state,
         loggedIn: true,
-        user: res.user || null,
+        user: res.user,
       });
     }
     return res.success ? null : res.error;
@@ -249,7 +250,7 @@ class App extends React.Component<AppProps, AppState> {
     if (res.loggedIn) {
       this.setState({
         loggedIn: true,
-        user: res.user || null,
+        user: res.user,
       });
     } else {
       this.setState({
@@ -679,7 +680,9 @@ class App extends React.Component<AppProps, AppState> {
       <div className="App">
         <header className="App__header">
           <div className="App__title">
-            GradTrak<sup className="App__beta">BETA</sup>
+            <a className="App__title-link" href="https://gradtrak.me/">
+              GradTrak<sup className="App__beta">BETA</sup>
+            </a>
           </div>
           {this.renderName()}
         </header>
