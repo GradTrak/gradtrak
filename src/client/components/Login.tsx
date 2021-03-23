@@ -177,9 +177,9 @@ class Login extends React.Component<LoginProps, LoginState> {
           <Form.Group controlId="Register__user-testing">
             <Form.Check type="checkbox" label="I'd like to help with user testing!" ref={this.regUserTestingRef} />
           </Form.Group>
-          <div className="my-4 Login__failure">{this.state.error}</div>
+          <div className="my-4 Login__failure" data-cy="register-error" >{this.state.error}</div>
           <Form.Group className="my-4">
-            <Button variant="primary" block type="submit" disabled={this.state.loading}>
+            <Button variant="primary" block type="submit" disabled={this.state.loading} data-cy="register-button">
               Register
             </Button>
             <Form.Text className="my-2 px-3 Register__disclaimer" muted>
@@ -232,15 +232,15 @@ class Login extends React.Component<LoginProps, LoginState> {
         >
           <Form.Group controlId="Login__username">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="text" name="username" ref={this.usernameRef} />
+            <Form.Control type="text" name="username" data-cy="login-email" ref={this.usernameRef} />
           </Form.Group>
           <Form.Group controlId="Login__password">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" name="password" ref={this.passwordRef} />
+            <Form.Control type="password" name="password" data-cy="login-password" ref={this.passwordRef} />
           </Form.Group>
-          <div className="my-4 Login__failure">{this.state.error}</div>
+          <div className="my-4 Login__failure" data-cy="login-error">{this.state.error}</div>
           <Form.Group className="my-4">
-            <Button variant="primary" block type="submit" disabled={this.state.loading}>
+            <Button variant="primary" data-cy="login-button" block type="submit" disabled={this.state.loading}>
               Login
             </Button>
           </Form.Group>

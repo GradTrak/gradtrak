@@ -17,6 +17,7 @@
     "build-dev:client": "cd src/client && webpack bundle --config webpack.development.js",
     "build:server": "tsc --build src/server/tsconfig.json",
     "watch:server": "nodemon --watch src/server --ext ts --exec \"yarn build:server && yarn start\"",
+    "test": "cypress run --record --key f0af4d87-8c44-4eef-b096-205a55d2f40d",
     "heroku-postbuild": "true"
   },
   "dependencies": {

@@ -23,3 +23,35 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('getBySel', (selector, ...args) => {
+  return cy.get(`[data-cy=${selector}]`, ...args);
+})
+
+Cypress.Commands.add('getBySelLike', (selector, ...args) => {
+  return cy.get(`[data-cy*=${selector}]`, ...args);
+});
+
+/**
+ * Continue as guest without logging in
+ */
+Cypress.Commands.add('continueAsGuest', () => {
+
+});
+
+Cypress.Commands.add('logIn', (username, password) => {
+
+});
+
+Cypress.Commands.add('createAccount', (username, password) => {
+
+})
+
+Cypress.Commands.add('addMajor', (major) => {
+
+});
+
+Cypress.Commands.add('addCourse', (year, season) => {
+
+});
