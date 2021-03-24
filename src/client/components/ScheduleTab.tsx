@@ -50,7 +50,7 @@ class ScheduleTab extends React.Component<ScheduleTabProps, ScheduleTabState> {
           {this.props.scheduleName}
         </button>
         <Dropdown className="dropdown-sm" as="span">
-          <Dropdown.Toggle className="gt-button" as="button"></Dropdown.Toggle>
+          <Dropdown.Toggle className="gt-button" as="button" />
           <Dropdown.Menu>
             <Dropdown.Item onClick={() => this.setState({ modal: 'rename' })}>Rename</Dropdown.Item>
             <Dropdown.Item onClick={() => this.setState({ modal: 'delete' })}>Delete</Dropdown.Item>

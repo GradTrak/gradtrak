@@ -15,7 +15,7 @@ type NewScheduleDialogState = {
   error: string | null;
 };
 
-export class NewScheduleDialog extends React.Component<NewScheduleDialogProps, NewScheduleDialogState> {
+class NewScheduleDialog extends React.Component<NewScheduleDialogProps, NewScheduleDialogState> {
   constructor(props: NewScheduleDialogProps) {
     super(props);
     this.state = {
