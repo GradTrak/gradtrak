@@ -41,6 +41,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@sentry/react": "^6.2.3",
+    "@sentry/tracing": "^6.2.3",
     "@svgr/webpack": "^5.5.0",
     "@types/compression": "^1.7.0",
     "@types/connect-redis": "^0.0.16",
