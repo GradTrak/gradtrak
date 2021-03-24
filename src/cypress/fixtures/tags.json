@@ -1,0 +1,561 @@
+[{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e2"
+  },
+  "id": "upper_div",
+  "name": "Upper Division Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e3"
+  },
+  "id": "cw",
+  "name": "Entry-Level Writing",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e4"
+  },
+  "id": "ah",
+  "name": "American History",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e5"
+  },
+  "id": "ai",
+  "name": "American Institutions",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e6"
+  },
+  "id": "ac",
+  "name": "American Cultures",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e7"
+  },
+  "id": "rc_a",
+  "name": "Reading and Composition Part A",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e8"
+  },
+  "id": "rc_b",
+  "name": "Reading and Composition Part B",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3e9"
+  },
+  "id": "ls_quant",
+  "name": "Quantitative Reasoning",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3ea"
+  },
+  "id": "ls_lang",
+  "name": "Foreign Language",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3eb"
+  },
+  "id": "ls_arts",
+  "name": "L&S Arts and Literature",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3ec"
+  },
+  "id": "ls_bio",
+  "name": "L&S Biological Science",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3ed"
+  },
+  "id": "ls_hist",
+  "name": "L&S Historical Studies",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3ee"
+  },
+  "id": "ls_inter",
+  "name": "L&S International Studies",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3ef"
+  },
+  "id": "ls_philo",
+  "name": "L&S Philosophy and Values",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f0"
+  },
+  "id": "ls_phys",
+  "name": "L&S Physical Science",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f1"
+  },
+  "id": "ls_socio",
+  "name": "L&S Social and Behavioral Sciences",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f2"
+  },
+  "id": "eecs_ethics",
+  "name": "EECS Ethics Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f3"
+  },
+  "id": "eecs_upper_div",
+  "name": "EECS Upper Division Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f4"
+  },
+  "id": "cs_upper_div",
+  "name": "EECS Upper Division Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f5"
+  },
+  "id": "eecs_design",
+  "name": "EECS Upper Division Design Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f6"
+  },
+  "id": "eecs_technical_elective",
+  "name": "EECS Technical Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f7"
+  },
+  "id": "eecs_natural_science",
+  "name": "EECS Natural Science Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f8"
+  },
+  "id": "cs_design",
+  "name": "CS Upper Division Design Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3f9"
+  },
+  "id": "cs_technical_elective",
+  "name": "CS Upper Division Technical Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3fa"
+  },
+  "id": "linguis_elective",
+  "name": "Linguistics Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3fb"
+  },
+  "id": "stat_cluster",
+  "name": "Statistics Cluster Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3fc"
+  },
+  "id": "mcb_bmb_elective",
+  "name": "MCB BMB Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3fd"
+  },
+  "id": "mcb_cdb_elective_a",
+  "name": "MCB CDB Elective A",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3fe"
+  },
+  "id": "mcb_cdb_elective_b",
+  "name": "MCB CDB Elective B",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e3ff"
+  },
+  "id": "mcb_ggd_elective_a",
+  "name": "MCB GGD Elective A",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e400"
+  },
+  "id": "mcb_ggd_elective_b",
+  "name": "MCB GGD Elective B",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e401"
+  },
+  "id": "mcb_imm_elective_a",
+  "name": "MCB IMM Elective A",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e402"
+  },
+  "id": "mcb_imm_elective_b",
+  "name": "MCB IMM Elective B",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e403"
+  },
+  "id": "mcb_imm_elective_c",
+  "name": "MCB IMM Elective C",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e404"
+  },
+  "id": "mcb_neu_elective",
+  "name": "MCB NEU Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e405"
+  },
+  "id": "ugba_upper_div",
+  "name": "Business Upper Division Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e406"
+  },
+  "id": "non_ugba_upper_div",
+  "name": "Non-business Upper Division Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e407"
+  },
+  "id": "bioeng_ethics",
+  "name": "BioE Ethics Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e408"
+  },
+  "id": "bioeng_design_research",
+  "name": "BioE Design Project or Research",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e409"
+  },
+  "id": "bioeng_lab_course",
+  "name": "BioE Lab Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e40a"
+  },
+  "id": "bioeng_fundamentals",
+  "name": "BioE Fundamental",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e40b"
+  },
+  "id": "bioeng_technical_topics",
+  "name": "BioE Technical Topic",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e40c"
+  },
+  "id": "bioeng_upper_div",
+  "name": "BioE Upper Division Course",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e40d"
+  },
+  "id": "econ_upper_div",
+  "name": "Economics Upper Division Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e40e"
+  },
+  "id": "data_sci_compute",
+  "name": "Computational and Inferential Depth",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e40f"
+  },
+  "id": "data_sci_prob",
+  "name": "Probability",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e410"
+  },
+  "id": "data_sci_model",
+  "name": "Modeling, Learning, and Decision Making",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e411"
+  },
+  "id": "data_sci_ethics",
+  "name": "Human Contexts and Ethics",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e412"
+  },
+  "id": "data_sci_domain_dummy",
+  "name": "Data Science Domain (dummy since not implemented)",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e413"
+  },
+  "id": "english_elective",
+  "name": "English Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e414"
+  },
+  "id": "english_pre1800",
+  "name": "English Pre 1800",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e415"
+  },
+  "id": "ieor_eng_breadth",
+  "name": "IEOR Engineering Breadths",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e416"
+  },
+  "id": "ieor_elective",
+  "name": "IEOR Upper Division Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e417"
+  },
+  "id": "cog_sci_elective",
+  "name": "Cog Sci Upper Division Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e418"
+  },
+  "id": "cog_sci_neuro",
+  "name": "Cog Sci Cognitive Neuroscience",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e419"
+  },
+  "id": "cog_sci_psych",
+  "name": "Cog Sci Cognitive Psychology",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e41a"
+  },
+  "id": "cog_sci_ling",
+  "name": "Cog Sci Linguistics",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e41b"
+  },
+  "id": "cog_sci_philos",
+  "name": "Cog Sci Philosophy",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e41c"
+  },
+  "id": "cog_sci_society",
+  "name": "Cog Sci Society, Culture, and Cognition",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e41d"
+  },
+  "id": "philos_hist",
+  "name": "Philos History",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e41e"
+  },
+  "id": "media_group_a",
+  "name": "Media Studies Group A",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e41f"
+  },
+  "id": "media_group_b",
+  "name": "Media Studies Group B",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e420"
+  },
+  "id": "media_group_c",
+  "name": "Media Studies Group C",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e421"
+  },
+  "id": "poli_sci_amer_pol",
+  "name": "Poli Sci American Politics",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e422"
+  },
+  "id": "poli_sci_comp_pol",
+  "name": "Poli Sci Comparative Politics",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e423"
+  },
+  "id": "poli_sci_emp_theory",
+  "name": "Poli Sci Emp. Theory and Quant. Methods",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e424"
+  },
+  "id": "poli_sci_int_rel",
+  "name": "Poli Sci International Relations",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e425"
+  },
+  "id": "poli_sci_poli_theory",
+  "name": "Poli Sci Political Theory",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e426"
+  },
+  "id": "poli_sci_amer_pol_upper",
+  "name": "Poli Sci American Politics Upper Div",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e427"
+  },
+  "id": "poli_sci_comp_pol_upper",
+  "name": "Poli Sci Comparative Politics Upper Div",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e428"
+  },
+  "id": "poli_sci_emp_theory_upper",
+  "name": "Poli Sci Emp. Theory and Quant. Methods Upper Div",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e429"
+  },
+  "id": "poli_sci_int_rel_upper",
+  "name": "Poli Sci International Relations Upper Div",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e42a"
+  },
+  "id": "poli_sci_poli_theory_upper",
+  "name": "Poli Sci Political Theory Upper Div",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e42b"
+  },
+  "id": "poli_sci_history",
+  "name": "Poli Sci History",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e42c"
+  },
+  "id": "pb_hlth_capstone",
+  "name": "Public Health Capstone",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e42d"
+  },
+  "id": "pb_hlth_elective",
+  "name": "Public Health Elective",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e42e"
+  },
+  "id": "poli_sci_upper_div",
+  "name": "Poli Sci Upper Div",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e42f"
+  },
+  "name": "Applied Math Cluster",
+  "id": "applied_math_cluster",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e430"
+  },
+  "name": "Mec Eng Design Course",
+  "id": "meceng_design",
+  "schemaVersion": 1
+},{
+  "_id": {
+    "$oid": "60099e2d1a9d0076b3e6e431"
+  },
+  "name": "Mec Eng Quantitative Science Course",
+  "id": "meceng_qs",
+  "schemaVersion": 1
+}]

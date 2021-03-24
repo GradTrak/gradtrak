@@ -1,0 +1,187 @@
+[{
+  "schemaVersion": 1,
+  "userdata": {
+    "semesters": {
+      "2017-2018": [
+        {
+          "courseIds": [
+            "anthro3ac",
+            "germanr5a",
+            "biology1a",
+            "biology1al",
+            "chinese3a"
+          ],
+          "name": "Fall 2017"
+        },
+        {
+          "courseIds": [
+            "africamr1b",
+            "biology1b",
+            "math10a"
+          ],
+          "name": "Spring 2018"
+        }
+      ],
+      "2018-2019": [
+        {
+          "courseIds": [],
+          "name": "Fall 2018"
+        },
+        {
+          "courseIds": [],
+          "name": "Spring 2019"
+        }
+      ],
+      "2019-2020": [
+        {
+          "courseIds": [],
+          "name": "Fall 2019"
+        },
+        {
+          "courseIds": [],
+          "name": "Spring 2020"
+        }
+      ],
+      "2020-2021": [
+        {
+          "courseIds": [
+            "compsci61a"
+          ],
+          "name": "Fall 2020"
+        },
+        {
+          "courseIds": [],
+          "name": "Spring 2021"
+        }
+      ],
+      "2016-2017": [
+        null,
+        null,
+        {
+          "courseIds": [
+            "chem1a",
+            "chem1al"
+          ],
+          "name": "Summer 2017"
+        }
+      ]
+    },
+    "goalIds": [
+      "mcb_bmb_biochem"
+    ],
+    "manuallyFulfilledReqs": {
+      "ls": [
+        "lang"
+      ]
+    }
+  },
+  "emailMarketing": true,
+  "userTesting": true,
+  "username": "fbmessengeruser@gmail.com",
+  "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$uRcINNvuknMFsZXs9xna1A$4OJKzbq9PAa69uNb80qETexbb0BjgAAohASAqWdh+IM"
+},{
+  "schemaVersion": 1,
+  "userdata": {
+    "semesters": {
+      "2019-2020": [
+        {
+          "courseIds": [
+            "compsci161"
+          ],
+          "name": "Fall 2019"
+        },
+        {
+          "courseIds": [
+            "compsci161"
+          ],
+          "name": "Spring 2020"
+        }
+      ],
+      "2020-2021": [
+        {
+          "courseIds": [
+            "compsci161"
+          ],
+          "name": "Fall 2020"
+        },
+        {
+          "courseIds": [
+            "compsci161"
+          ],
+          "name": "Spring 2021"
+        }
+      ]
+    },
+    "goalIds": [
+      "eecs"
+    ],
+    "manuallyFulfilledReqs": {}
+  },
+  "emailMarketing": false,
+  "userTesting": false,
+  "username": "signaluser@firefoxmail.com",
+  "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$SCyPLa6GJCNpqgfocTr3KA$UacEWzEsPvkpd7YyNsDj5KHdw1ofrkO1cOY98qszClk"
+},{
+  "schemaVersion": 1,
+  "userdata": {
+    "semesters": {},
+    "goalIds": [
+      "bioeng"
+    ],
+    "manuallyFulfilledReqs": {}
+  },
+  "emailMarketing": true,
+  "userTesting": true,
+  "username": "genericbioe@gmail.com",
+  "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$rqwNVRElEHapet/1NcJLTA$vZXJ83G+pglEQqnIHLKL9b038In9S0SLmwHrQ6Ee/k0"
+},{
+  "schemaVersion": 1,
+  "userdata": {
+    "semesters": {},
+    "goalIds": [
+      "eecs"
+    ],
+    "manuallyFulfilledReqs": {}
+  },
+  "emailMarketing": true,
+  "userTesting": false,
+  "username": "this_school_is_dogshit@berkeley.edu",
+  "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$yX8yWFFNDGhHQYGBcfsS/g$8ZZAg82unETVYvv2c/Q0Ju/AdOpcFBLZiqfXv4Q9C7k"
+},{
+  "schemaVersion": 1,
+  "userdata": {
+    "semesters": {},
+    "goalIds": [
+      "eecs",
+      "applied_math",
+      "cs",
+      "bioeng",
+      "haas",
+      "cogsci",
+      "econ",
+      "english",
+      "mcb_bmb_bmb",
+      "mcb_bmb_biochem",
+      "mcb_cdb_mbp",
+      "mcb_imm_imm",
+      "mcb_neu",
+      "meche",
+      "media",
+      "mcb_imm_id",
+      "philosophy",
+      "publichealth",
+      "sociol",
+      "statistics",
+      "polisci",
+      "mcb_ggd_ggd",
+      "mcb_ggd_devgen",
+      "mcb_cdb_csb",
+      "linguis"
+    ],
+    "manuallyFulfilledReqs": {}
+  },
+  "emailMarketing": true,
+  "userTesting": true,
+  "username": "ugly@gang.gang",
+  "passwordHash": "$argon2id$v=19$m=4096,t=3,p=1$D7VpC7adcjxkx1JkNrlTxw$0SGlISloykXHaF57zIyd9sLJdCyVJJFhk2vWF8cPO2s"
+}]

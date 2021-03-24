@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "../../build/cypress",
+    "rootDir": ".",
+    "composite": true,
+    "tsBuildInfoFile": "../../build/cypress.tsbuildinfo",
+    "strict": false,
+    "esModuleInterop": true
+  },
+  "references": [
+    {
+      "path": "../common"
+    },
+    {
+      "path": "../server"
+    }
+  ]
+}

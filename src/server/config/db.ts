@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
-const dbUrl = process.env.MONGO_URL || 'mongodb://localhost/gradtrak';
+const defaultDbUrl = process.env.NODE_ENV === 'test'? 'mongodb://localhost/gradtrak-test': 'mongodb://localhost/gradtrak'
+const dbUrl = process.env.MONGO_URL || defaultDbUrl;
 
 const CONFIG = {
   useNewUrlParser: true,
