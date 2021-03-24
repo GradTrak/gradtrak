@@ -1,7 +1,6 @@
 import Course from '../server/models/course';
 import RequirementSet from '../server/models/requirement-set';
 import Tag from '../server/models/tag';
-import User from '../server/models/user';
 import { connect } from '../server/config/db';
 import fs from 'fs'
 const courseData = JSON.parse(fs.readFileSync('./dummy/berkeleyTime.json', 'utf8'))

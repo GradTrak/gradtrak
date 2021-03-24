@@ -18,4 +18,15 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  // Usage: cy.task('seedUser')
+  on('task', {
+    'seedUser': (userData) => {
+      // TODO use backend to add a user to database
+    }
+  });
+  on('task', {
+    'unseedUser': (email) => {
+      // TODO use backend to add a user to database
+    }
+  })
 }
