@@ -90,7 +90,11 @@ export class NewScheduleDialog extends React.Component<NewScheduleDialogProps, N
                     Copy from
                   </Form.Label>
                   <Col>
-                    <Form.Control as="select" value={this.state.createFrom!}>
+                    <Form.Control
+                      as="select"
+                      value={this.state.createFrom!}
+                      onChange={(e) => this.setState({ createFrom: e.target.value })}
+                    >
                       {this.props.existingScheduleNames.map((scheduleName) => (
                         <option key={scheduleName} value={scheduleName}>
                           {scheduleName}

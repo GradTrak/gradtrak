@@ -2,6 +2,7 @@ import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 
 import ConfirmDialog from './ConfirmDialog';
+import RenameDialog from './RenameDialog';
 
 import './ScheduleTab.css';
 
@@ -9,7 +10,7 @@ type ScheduleTabProps = {
   scheduleName: string;
   active: boolean;
   onSetActive: () => void;
-  onRename: (name: string) => void;
+  onRename: (newName: string) => void;
   onDelete: () => void;
 };
 
@@ -26,14 +27,17 @@ class ScheduleTab extends React.Component<ScheduleTabProps, ScheduleTabState> {
     };
   }
 
+  private handleRenameConfirm = (newName: string): void => {
+    this.closeModal();
+    this.props.onRename(newName);
+  };
+
   private handleDeleteConfirm = (): void => {
-    this.setState({
-      modal: null,
-    });
+    this.closeModal();
     this.props.onDelete();
   };
 
-  private handleDeleteCancel = (): void => {
+  private closeModal = (): void => {
     this.setState({
       modal: null,
     });
@@ -48,14 +52,21 @@ class ScheduleTab extends React.Component<ScheduleTabProps, ScheduleTabState> {
         <Dropdown className="dropdown-sm" as="span">
           <Dropdown.Toggle className="gt-button" as="button"></Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item>Rename</Dropdown.Item>
+            <Dropdown.Item onClick={() => this.setState({ modal: 'rename' })}>Rename</Dropdown.Item>
             <Dropdown.Item onClick={() => this.setState({ modal: 'delete' })}>Delete</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+        <RenameDialog
+          show={this.state.modal === 'rename'}
+          onRename={this.handleRenameConfirm}
+          onCancel={this.closeModal}
+        >
+          New name for schedule <span className="ScheduleTab__schedule-name">{this.props.scheduleName}</span>:
+        </RenameDialog>
         <ConfirmDialog
           show={this.state.modal === 'delete'}
           onConfirm={this.handleDeleteConfirm}
-          onCancel={this.handleDeleteCancel}
+          onCancel={this.closeModal}
         >
           Are you sure you want to delete the schedule{' '}
           <span className="ScheduleTab__schedule-name">{this.props.scheduleName}</span>? This action cannot be undone.

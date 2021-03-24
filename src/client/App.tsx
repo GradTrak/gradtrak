@@ -572,15 +572,18 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to delete non-existent schedule');
     }
 
-    const nextSchedules = { ...this.state.userData.schedules };
-    delete nextSchedules[name];
+    this.setState((oldState) => {
+      const nextSchedules = { ...oldState.userData!.schedules };
+      delete nextSchedules[name];
 
-    this.setState({
-      userData: {
-        ...this.state.userData,
-        schedules: nextSchedules,
-      },
+      return {
+        userData: {
+          ...oldState.userData,
+          schedules: nextSchedules,
+        },
+      };
     });
+
     if (this.state.activeSchedule === name) {
       this.setState({
         activeSchedule: Object.keys(this.state.userData.schedules)[0],
@@ -635,8 +638,8 @@ class App extends React.Component<AppProps, AppState> {
     }
 
     const tabs = Object.entries(this.state.userData.schedules).map(([scheduleName, schedule]) => (
-      <>
-        <ScheduleName
+      <React.Fragment key={scheduleName}>
+        <ScheduleTab
           scheduleName={scheduleName}
           active={scheduleName === this.state.activeSchedule}
           onSetActive={() => this.setState({ activeSchedule: scheduleName })}
@@ -644,10 +647,10 @@ class App extends React.Component<AppProps, AppState> {
           onDelete={() => this.deleteSchedule(scheduleName)}
         />
         <span> | </span>
-      </>
+      </React.Fragment>
     ));
     tabs.push(
-      <button className="gt-button" type="button" onClick={() => this.setState({ modal: 'new-schedule' })}>
+      <button key="" className="gt-button" type="button" onClick={() => this.setState({ modal: 'new-schedule' })}>
         +
       </button>,
     );
