@@ -25,11 +25,11 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('getBySel', (selector, ...args) => {
+Cypress.Commands.add('getCy', (selector, ...args) => {
   return cy.get(`[data-cy=${selector}]`, ...args);
 })
 
-Cypress.Commands.add('getBySelLike', (selector, ...args) => {
+Cypress.Commands.add('getCyLike', (selector, ...args) => {
   return cy.get(`[data-cy*=${selector}]`, ...args);
 });
 

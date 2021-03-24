@@ -21,11 +21,13 @@ module.exports = (on, config) => {
   // Usage: cy.task('seedUser')
   on('task', {
     'seedUser': (userData) => {
+      return null;
       // TODO use backend to add a user to database
     }
   });
   on('task', {
     'unseedUser': (email) => {
+      return null;
       // TODO use backend to add a user to database
     }
   })

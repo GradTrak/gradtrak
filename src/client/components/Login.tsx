@@ -262,7 +262,7 @@ class Login extends React.Component<LoginProps, LoginState> {
   };
 
   render(): React.ReactElement {
-    return <div className="Login">{this.state.registering ? this.renderRegistration() : this.renderLogin()}</div>;
+    return <div className="Login" data-cy="login-modal">{this.state.registering ? this.renderRegistration() : this.renderLogin()}</div>;
   }
 }
 
