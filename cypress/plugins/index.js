@@ -1,3 +1,5 @@
+const { seeder } = require('mongo-seeding');
+
 /// <reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
@@ -18,9 +20,9 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  // Usage: cy.task('seedUser')
+  // Usage: cy.task('seedUsers')
   on('task', {
-    'seedUser': (userData) => {
+    'seedUsers': (userData) => {
       return null;
       // TODO use backend to add a user to database
     }
@@ -28,7 +30,7 @@ module.exports = (on, config) => {
   on('task', {
     'unseedUser': (email) => {
       return null;
-      // TODO use backend to add a user to database
+      // TODO 
     }
   })
 }

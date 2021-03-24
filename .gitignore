@@ -9,3 +9,7 @@ yarn-error.log
 
 # ESLint cache.
 .eslintcache
+
+# Recordings and screenshots of tests
+cypress/videos
+cypress/screenshots

@@ -25,14 +25,28 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-Cypress.Commands.add('getCy', (selector, ...args) => {
-  return cy.get(`[data-cy=${selector}]`, ...args);
+Cypress.Commands.add('setupBlank', () => {
+  cy.register();
 })
 
-Cypress.Commands.add('getCyLike', (selector, ...args) => {
-  return cy.get(`[data-cy*=${selector}]`, ...args);
+/**
+ * Logs in with the given email and password. Assumes that you're
+ * on the login modal.
+ */
+Cypress.Commands.add('login', (email, password) => {
+
 });
 
+/**
+ * Registers a user with the given email and password. Assumes
+ * that you're on the register part of the login modal.
+ */
+Cypress.Commands.add('register', (email, password) => {
+  cy.getCy('open-registration-button').should('exist').click();
+  cy.getCy('register-email').should('exist').type(email);
+  cy.getCy('register-password').should('exist').type(password);
+  cy.getCy('register-confirm-password').should('exist').type(password);
+})
 /**
  * Continue as guest without logging in
  */
