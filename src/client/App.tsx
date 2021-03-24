@@ -18,6 +18,7 @@ import Login from './components/Login';
 import NewScheduleDialog from './components/NewScheduleDialog';
 import ReportForm from './components/ReportForm';
 import RequirementPane from './components/RequirementPane';
+import ScheduleTab from './components/ScheduleTab';
 import SemesterPane from './components/SemesterPane';
 
 import './App.css';
@@ -282,13 +283,26 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   fetchUserData = async (): Promise<UserData> => {
+    /* Set user data to null while loading. */
     this.setState({
       userData: null,
     });
+
+    /* Fetch user data. */
     const userData = await User.fetchUserData();
+
+    /* Update user data with new data. */
     this.setState({
       userData,
     });
+
+    /* Set the active schedule to the first one, if it exists. */
+    if (Object.keys(userData.schedules).length > 0) {
+      this.setState({
+        activeSchedule: Object.keys(userData.schedules)[0],
+      });
+    }
+
     return userData;
   };
 
@@ -549,6 +563,49 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
+  deleteSchedule = (name: string): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to delete schedule before user data loaded');
+    }
+
+    if (!Object.keys(this.state.userData.schedules).includes(name)) {
+      throw new Error('Tried to delete non-existent schedule');
+    }
+
+    const nextSchedules = { ...this.state.userData.schedules };
+    delete nextSchedules[name];
+
+    this.setState({
+      userData: {
+        ...this.state.userData,
+        schedules: nextSchedules,
+      },
+    });
+    if (this.state.activeSchedule === name) {
+      this.setState({
+        activeSchedule: Object.keys(this.state.userData.schedules)[0],
+      });
+    }
+  };
+
+  renameSchedule = (oldName: string, newName: string): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to rename schedule before user data loaded');
+    }
+
+    if (Object.keys(!this.state.userData.schedules).includes(oldName)) {
+      throw new Error('Tried to rename non-existent schedule');
+    }
+
+    this.setSchedule(newName, this.state.userData.schedules[oldName]);
+    this.deleteSchedule(oldName);
+    if (this.state.activeSchedule === oldName) {
+      this.setState({
+        activeSchedule: newName,
+      });
+    }
+  };
+
   /**
    * Gets a list of all the courses a user is currently taking, in the form of
    * an array, based on the currrent state and userdata.
@@ -576,18 +633,16 @@ class App extends React.Component<AppProps, AppState> {
     if (!this.state.userData?.schedules) {
       return null;
     }
+
     const tabs = Object.entries(this.state.userData.schedules).map(([scheduleName, schedule]) => (
       <>
-        <button
-          key={scheduleName}
-          className={`gt-button App__schedule-tabs ${
-            scheduleName === this.state.activeSchedule ? 'App__schedule-tabs--active' : ''
-          }`}
-          type="button"
-          onClick={() => this.setState({ activeSchedule: scheduleName })}
-        >
-          {scheduleName}
-        </button>
+        <ScheduleName
+          scheduleName={scheduleName}
+          active={scheduleName === this.state.activeSchedule}
+          onSetActive={() => this.setState({ activeSchedule: scheduleName })}
+          onRename={(newName) => this.renameSchedule(scheduleName, newName)}
+          onDelete={() => this.deleteSchedule(scheduleName)}
+        />
         <span> | </span>
       </>
     ));

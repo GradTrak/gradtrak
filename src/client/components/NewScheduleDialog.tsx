@@ -43,7 +43,7 @@ export class NewScheduleDialog extends React.Component<NewScheduleDialogProps, N
     this.props.onCreate(this.state.name, this.state.createAs === 'copy' ? this.state.createFrom : null);
   };
 
-  render(): React.ReactNode {
+  render(): React.ReactElement {
     return (
       <div className="NewScheduleDialog">
         <Form onSubmit={this.handleSubmit}>

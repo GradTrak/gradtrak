@@ -3,14 +3,7 @@
   height: 5rem;
   position: fixed;
   color: white;
-}
-
-.App__schedule-tabs {
-  color: lightgray;
-}
-
-.App__schedule-tabs--active {
-  color: white;
+  z-index: 1;
 }
 
 .App__title {
