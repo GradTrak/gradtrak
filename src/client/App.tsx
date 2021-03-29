@@ -195,10 +195,8 @@ class App extends React.Component<AppProps, AppState> {
       }
       this.setSchedule(name, this.state.userData.schedules[createFrom]);
     }
-    this.setState({
-      activeSchedule: name,
-    });
     this.closeModal();
+    this.setActiveSchedule(name);
   };
 
   openAccountEditor = (): void => {
@@ -211,6 +209,24 @@ class App extends React.Component<AppProps, AppState> {
     this.setState({
       modal: 'report-form',
     });
+  };
+
+  setActiveSchedule = (scheduleName: string): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to set active schedule before user data loaded');
+    }
+
+    this.setState({
+      activeSchedule: scheduleName,
+    });
+
+    /* If the active schedule is empty or nonexistent, open the initializer. */
+    if (
+      !Object.keys(this.state.userData.schedules).includes(scheduleName) ||
+      Object.keys(this.state.userData.schedules[scheduleName]?.semesters)?.length === 0
+    ) {
+      this.openInitializer();
+    }
   };
 
   handleSelectGoals = (goals: RequirementSet[]) => {
@@ -298,9 +314,7 @@ class App extends React.Component<AppProps, AppState> {
 
     /* Set the active schedule to the first one, if it exists. */
     if (Object.keys(userData.schedules).length > 0) {
-      this.setState({
-        activeSchedule: Object.keys(userData.schedules)[0],
-      });
+      this.setActiveSchedule(Object.keys(userData.schedules)[0]);
     }
 
     return userData;
@@ -585,9 +599,7 @@ class App extends React.Component<AppProps, AppState> {
     });
 
     if (this.state.activeSchedule === name) {
-      this.setState({
-        activeSchedule: Object.keys(this.state.userData.schedules)[0],
-      });
+      this.setActiveSchedule(Object.keys(this.state.userData.schedules)[0]);
     }
   };
 
@@ -603,9 +615,7 @@ class App extends React.Component<AppProps, AppState> {
     this.setSchedule(newName, this.state.userData.schedules[oldName]);
     this.deleteSchedule(oldName);
     if (this.state.activeSchedule === oldName) {
-      this.setState({
-        activeSchedule: newName,
-      });
+      this.setActiveSchedule(newName);
     }
   };
 
@@ -642,7 +652,7 @@ class App extends React.Component<AppProps, AppState> {
         <ScheduleTab
           scheduleName={scheduleName}
           active={scheduleName === this.state.activeSchedule}
-          onSetActive={() => this.setState({ activeSchedule: scheduleName })}
+          onSetActive={() => this.setActiveSchedule(scheduleName)}
           onRename={(newName) => this.renameSchedule(scheduleName, newName)}
           onDelete={() => this.deleteSchedule(scheduleName)}
         />
