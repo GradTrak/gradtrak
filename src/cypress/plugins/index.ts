@@ -24,7 +24,7 @@ module.exports = (on, config) => {
   module.exports = (on) => {
       on('file:preprocessor', webpackPreprocessor());
   }
-}
+
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   // Usage: cy.task('seedUsers')

@@ -1,3 +1,4 @@
+/// <reference path="./index.d.ts" />
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -68,5 +69,5 @@ Cypress.Commands.add('addCourse', (year, season) => {
 });
 
 Cypress.Commands.add('setupBlank', () => {
-  cy.createAccount();
+  cy.createAccount('');
 })

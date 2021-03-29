@@ -6,7 +6,7 @@
     "outDir": "../../build/cypress",
     "rootDir": ".",
     "composite": true,
-    "tsBuildInfoFile": "../../build/cypress.tsbuildinfo",
+    "tsBuildInfoFile": "../../build/cypress/cypress.tsbuildinfo",
     "strict": false,
     "esModuleInterop": true
   },

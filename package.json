@@ -16,9 +16,10 @@
     "build:client": "cd src/client && webpack bundle",
     "build-dev:client": "cd src/client && webpack bundle --config webpack.development.js",
     "build:server": "tsc --build src/server/tsconfig.json",
-    "test": "concurrently \"yarn build-dev\" \"tsc --build src/cypress/tsconfig.json && cypress run",
+    "build:test": "tsc --build src/cypress/tsconfig.json ",
+    "test": "yarn build-dev && yarn build:test && yarn run-test",
     "watch:server": "nodemon --watch src/server --ext ts --exec \"yarn build:server && yarn start\"",
-    "test": "cypress run --record --key f0af4d87-8c44-4eef-b096-205a55d2f40d",
+    "run-test": "concurrently \"yarn start\" \"cd build && cypress run --record --key f0af4d87-8c44-4eef-b096-205a55d2f40d && cd ..\"",
     "heroku-postbuild": "true"
   },
   "dependencies": {
