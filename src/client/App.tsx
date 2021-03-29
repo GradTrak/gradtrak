@@ -661,7 +661,7 @@ class App extends React.Component<AppProps, AppState> {
     ));
     tabs.push(
       <button key="" className="gt-button" type="button" onClick={() => this.setState({ modal: 'new-schedule' })}>
-        +
+        + Add
       </button>,
     );
     return tabs;
