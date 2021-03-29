@@ -46,6 +46,7 @@ class NewScheduleDialog extends React.Component<NewScheduleDialogProps, NewSched
   render(): React.ReactElement {
     return (
       <div className="NewScheduleDialog">
+        <h4 className="gt-modal-header">Create New Schedule</h4>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group as={Form.Row}>
             <Form.Label xs={3} column>
