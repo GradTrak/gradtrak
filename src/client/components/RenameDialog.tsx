@@ -39,11 +39,11 @@ class RenameDialog extends React.Component<RenameDialogProps, RenameDialogState>
           </div>
         </Modal.Body>
         <Modal.Footer>
+          <Button variant="outline-primary" size="sm" onClick={this.props.onCancel}>
+            Cancel
+          </Button>
           <Button variant="primary" size="sm" onClick={this.handleRename}>
             Confirm
-          </Button>
-          <Button variant="danger" size="sm" onClick={this.props.onCancel}>
-            Cancel
           </Button>
         </Modal.Footer>
       </Modal>

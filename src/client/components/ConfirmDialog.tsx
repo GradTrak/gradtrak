@@ -15,11 +15,11 @@ function ConfirmDialog(props: ConfirmDialogProps): React.ReactElement {
         <div className="ConfirmDialog">{props.children}</div>
       </Modal.Body>
       <Modal.Footer>
+        <Button variant="outline-primary" size="sm" onClick={props.onCancel}>
+          Cancel
+        </Button>
         <Button variant="primary" size="sm" onClick={props.onConfirm}>
           Confirm
-        </Button>
-        <Button variant="danger" size="sm" onClick={props.onCancel}>
-          Cancel
         </Button>
       </Modal.Footer>
     </Modal>
