@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "outDir": "../../build/client",
+    "rootDir": ".",
+    "composite": true,
+    "tsBuildInfoFile": "../../build/client.tsbuildinfo",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "esModuleInterop": true
+  },
+  "references": [
+    {
+      "path": "../common"
+    }
+  ]
+}

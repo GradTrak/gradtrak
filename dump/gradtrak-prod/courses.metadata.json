@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"gradtrak-prod.courses"},{"v":{"$numberInt":"2"},"unique":true,"key":{"id":{"$numberInt":"1"}},"name":"id_1","background":true,"ns":"gradtrak-prod.courses"}],"uuid":"c6bc1d1752834a908e4e84cc3ae4c297"}

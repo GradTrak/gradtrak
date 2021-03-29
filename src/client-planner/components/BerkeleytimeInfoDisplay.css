@@ -1,0 +1,10 @@
+.BerkeleytimeInfoDisplay__grade-distribution-iframe {
+  width: 100%;
+  height: 580px;
+  border: none;
+}
+
+.BerkeleytimeInfoDisplay__all-button {
+  font-size: 1.2rem;
+  transform: translateY(1px);
+}
