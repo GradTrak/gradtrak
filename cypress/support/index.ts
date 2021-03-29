@@ -17,10 +17,10 @@
 import './commands'
 
 
-import User from '../../server/models/user';
-import Tag from '../../server/models/tag';
-import RequirementSet from '../../server/models/requirement-set';
-import Course from '../../server/models/course';
+import User from '../../build/server/models/user';
+import Tag from '../../build/server/models/tag';
+import RequirementSet from '../../build/server/models/requirement-set';
+import Course from '../../server/build/models/course';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
