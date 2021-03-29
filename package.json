@@ -16,6 +16,7 @@
     "build:client": "cd src/client && webpack bundle",
     "build-dev:client": "cd src/client && webpack bundle --config webpack.development.js",
     "build:server": "tsc --build src/server/tsconfig.json",
+    "test": "concurrently \"yarn build-dev\" \"tsc --build src/cypress/tsconfig.json && cypress run",
     "watch:server": "nodemon --watch src/server --ext ts --exec \"yarn build:server && yarn start\"",
     "test": "cypress run --record --key f0af4d87-8c44-4eef-b096-205a55d2f40d",
     "heroku-postbuild": "true"
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@cypress/webpack-preprocessor": "^5.6.0",
     "@svgr/webpack": "^5.5.0",
     "@types/compression": "^1.7.0",
     "@types/connect-redis": "^0.0.16",

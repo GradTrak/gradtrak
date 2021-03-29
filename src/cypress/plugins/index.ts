@@ -19,18 +19,20 @@ import User from '../../server/models/user';
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on, config) => {
+
+  const webpackPreprocessor = require('@cypress/webpack-preprocessor');
+  module.exports = (on) => {
+      on('file:preprocessor', webpackPreprocessor());
+  }
+}
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   // Usage: cy.task('seedUsers')
   on('task', {
-    'setupDatabase': () => {
-      return null;
-      // TODO use backend to add a user to database
-    }
-  });
-  on('task', {
     'seedUsers': () => {
-      return null;
+      cy.fixture('userSeedLogins').then((userData) => {
+        User.insertMany(userData);
+      })
       // TODO use backend to add a user to database
     }
   });

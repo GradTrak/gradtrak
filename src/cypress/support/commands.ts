@@ -26,15 +26,6 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-import User from '../../server/models/user';
-
-
-Cypress.Commands.add('seedDatabaseUsers', () => {
-  cy.fixture('userSeedLogins').then((userData) => {
-    User.insertMany(userData);
-  })
-});
-
 /**
  * Logs in with the given email and password. Assumes that you're
  * on the login modal.
