@@ -1,5 +1,9 @@
-import * as db from '../../server/config/db';
-import User from '../../server/models/user';
+import fs from 'fs'
+import * as db from '../../build/server/config/db';
+import Tag from '../../src/server/models/tag';
+import RequirementSet from '../../src/server/models/requirement-set';
+import Course from '../../src/server/models/course';
+import User from '../../build/server/models/user';
 
 /// <reference types="cypress" />
 // ***********************************************************
@@ -18,6 +22,11 @@ import User from '../../server/models/user';
 /**
  * @type {Cypress.PluginConfig}
  */
+
+
+db.connect();
+
+
 module.exports = (on, config) => {
 
   const webpackPreprocessor = require('@cypress/webpack-preprocessor');
@@ -29,11 +38,35 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
   // Usage: cy.task('seedUsers')
   on('task', {
-    'seedUsers': () => {
-      cy.fixture('userSeedLogins').then((userData) => {
-        User.insertMany(userData);
-      })
-      // TODO use backend to add a user to database
+    'setupDatabase': async () => {
+      await Tag.deleteMany({}).then(() => {
+        const items = require('../fixtures/tags');
+        Tag.insertMany(items);
+      });
+      await Course.deleteMany({}).then(() => {
+        const items = require('../fixtures/courses');
+        items.forEach((course) => {course.berkeleytimeData.berkeleytimeId = course.berkeleytimeData.berkeleytimeId || 'something'})
+        Course.insertMany(items);
+      });
+      await RequirementSet.deleteMany({}).then(() => {
+        const items = require('../fixtures/requirement-sets');
+        RequirementSet.insertMany(items);
+      });
+      return null;
     }
   });
+
+  on('task', {
+    'clearUsers': async () => {
+      return await User.deleteMany({});
+    }
+  });
+
+  on('task', {
+    'seedUsers': async () => {
+      return await User.insertMany(require('../fixtures/user-seed'));
+    }
+  });
+
+
 }
