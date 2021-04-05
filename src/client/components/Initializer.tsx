@@ -82,6 +82,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
           <Form.Group controlId="Initializer__start-year">
             <Form.Label>Start Year</Form.Label>
             <Form.Control
+              data-cy="initializer-start-year-selector"
               as="select"
               value={this.state.startYear}
               onChange={(e) => this.setState({ startYear: parseInt(e.target.value, 10) })}
@@ -98,6 +99,7 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
           <Form.Group controlId="Initializer__end-year">
             <Form.Label>Graduation Year</Form.Label>
             <Form.Control
+              data-cy="initializer-end-year-selector"
               as="select"
               value={this.state.gradYear}
               onChange={(e) => this.setState({ gradYear: parseInt(e.target.value, 10) })}
@@ -117,13 +119,19 @@ class Initializer extends React.Component<InitializerProps, InitializerState> {
           </Form.Group>
           <Form.Group controlId="Initializer__include-summers">
             <Form.Check
+              data-cy="summer-semester-checkbox"
               label="Include Summer Semesters?"
               checked={this.state.includeSummers}
               onChange={(e) => this.setState({ includeSummers: e.target.checked })}
             />
           </Form.Group>
           <Form.Group className="my-4">
-            <Button variant="primary" block onClick={() => this.setStage('goals')}>
+            <Button
+              variant="primary"
+              block
+              onClick={() => this.setStage('goals')}
+              data-cy="confirm-semester-setup"
+            >
               Next
             </Button>
             <span className="Initializer__failure">{this.state.error}</span>

@@ -39,14 +39,27 @@ Cypress.Commands.add('login', (email, password) => {
 });
 
 /**
+ * Runs through initializer with the start and end years and the majors.
+ * Assumes that you have finished the registration
+ */
+Cypress.Commands.add('initialize', (startYear, endYear, summers, goals) => {
+  cy.getCy('initializer-start-year-selector').select(startYear);
+  cy.getCy('initializer-end-year-selector').select(endYear);
+  if (summers) {
+    cy.getCy('summer-semester-checkbox').should('exist').click();
+  }
+  cy.getCy('confirm-semester-setup').click();
+})
+/**
  * Registers a user with the given email and password. Assumes
  * that you're on the register part of the login modal.
  */
 Cypress.Commands.add('register', (email, password) => {
-  cy.get('open-registration-button').should('exist').click();
-  cy.get('register-email').should('exist').type(email);
-  cy.get('register-password').should('exist').type(password);
-  cy.get('register-confirm-password').should('exist').type(password);
+  cy.getCy('open-registration-button').should('exist').click();
+  cy.getCy('register-email').should('exist').type(email);
+  cy.getCy('register-password').should('exist').type(password);
+  cy.getCy('register-confirm-password').should('exist').type(password);
+  cy.getCy('register-button').should('exist').click();
 })
 /**
  * Continue as guest without logging in

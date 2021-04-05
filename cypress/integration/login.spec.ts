@@ -2,6 +2,8 @@
 
 context('Login/Register', () => {
   beforeEach(() => {
+    cy.task('clearUsers')
+    cy.task('seedUsers')
     cy.visit('/')
   });
 
@@ -34,4 +36,26 @@ context('Login/Register', () => {
     cy.getCy('login-modal').should('exist');
     cy.getCy('register-error').should('have.text', "Password and confirm password fields don't match!")
   });
+  it('fails to register for an account that already exists', () => {
+    cy.fixture('user-seed-logins').then(users => {
+      console.log(users)
+      const { username, password } = users[2];
+      cy.register(username, password);
+      cy.getCy('login-modal').should('exist');
+      cy.getCy('register-error').should('exist').should('have.text', "User with that email already exists")
+    })
+  })
+  it('registers and walks through a setup process', () => {
+    cy.task('clearUsers');
+    cy.fixture('user-seed-logins').then(users => {
+      const { username, password } = users[3];
+      cy.register(username, password);
+      cy.getCy('login-modal').should('not.exist');
+      cy.get('.Initializer').should('exist');
+      cy.getCy('initializer-start-year-selector').select('2021');
+      cy.getCy('initializer-end-year-selector').select('2022');
+      cy.getCy('summer-semester-checkbox').should('exist').click();
+    })
+
+  })
 });
