@@ -46,7 +46,12 @@ class ScheduleTab extends React.Component<ScheduleTabProps, ScheduleTabState> {
   render(): React.ReactElement {
     return (
       <span className={`ScheduleTab ${this.props.active ? 'ScheduleTab--active' : ''}`}>
-        <button key={this.props.scheduleName} className="gt-button" type="button" onClick={this.props.onSetActive}>
+        <button
+          key={this.props.scheduleName}
+          className={`gt-button ScheduleTab__button ${this.props.active ? 'ScheduleTab__button--active' : ''}`}
+          type="button"
+          onClick={this.props.onSetActive}
+        >
           {this.props.scheduleName}
         </button>
         <Dropdown className="dropdown-sm" as="span">
