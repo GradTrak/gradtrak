@@ -22,7 +22,7 @@ api.post(
   '/account/login',
   passport.authenticate('local', { failWithError: true }),
   userController.loginSuccessLocal,
-  (req: express.Request, res: express.Response) => {
+  (err: any, req: express.Request, res: express.Response, next: express.Handler) => {
     res.status(200);
     userController.loginFailure(req, res);
   },
