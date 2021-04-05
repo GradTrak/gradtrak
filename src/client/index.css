@@ -33,6 +33,7 @@ a:hover,
 }
 
 a.gt-button {
+  color: unset;
   text-decoration: unset;
 }
 
