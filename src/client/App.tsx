@@ -212,21 +212,23 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   setActiveSchedule = (scheduleName: string): void => {
-    if (!this.state.userData) {
-      throw new Error('Tried to set active schedule before user data loaded');
-    }
+    this.setState((oldState) => {
+      if (!this.state.userData) {
+        throw new Error('Tried to set active schedule before user data loaded');
+      }
 
-    this.setState({
-      activeSchedule: scheduleName,
+      /* If the active schedule is empty or nonexistent, open the initializer. */
+      if (
+        !Object.keys(oldState.userData!.schedules).includes(scheduleName) ||
+        Object.keys(oldState.userData!.schedules[scheduleName]?.semesters)?.length === 0
+      ) {
+        this.openInitializer();
+      }
+
+      return {
+        activeSchedule: scheduleName,
+      };
     });
-
-    /* If the active schedule is empty or nonexistent, open the initializer. */
-    if (
-      !Object.keys(this.state.userData.schedules).includes(scheduleName) ||
-      Object.keys(this.state.userData.schedules[scheduleName]?.semesters)?.length === 0
-    ) {
-      this.openInitializer();
-    }
   };
 
   handleSelectGoals = (goals: RequirementSet[]) => {
