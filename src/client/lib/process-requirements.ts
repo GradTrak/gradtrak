@@ -442,7 +442,7 @@ function deriveFulfillment(
 function processRequirements(
   reqSets: RequirementSet[],
   courses: Course[],
-  manuallyFulfilled: Map<string, Set<string>>,
+  manuallyFulfilled: { [reqSetId: string]: string[] },
 ): Map<Requirement, ProcessedFulfillmentType> {
   /* Precompute applicable constraints */
   const constraints = new Map<Requirement, Constraint[]>();
@@ -462,10 +462,10 @@ function processRequirements(
   /* Find Requirement instances of manually fulfillled reqs */
   const manualReqs = new Set<Requirement>();
   reqSets.forEach((reqSet) => {
-    if (manuallyFulfilled.has(reqSet.id)) {
-      const manualReqIds = manuallyFulfilled.get(reqSet.id)!;
+    if (manuallyFulfilled[reqSet.id]) {
+      const manualReqIds = manuallyFulfilled[reqSet.id]!;
       const addManualReq = (req: Requirement): void => {
-        if (manualReqIds.has(req.id)) {
+        if (manualReqIds.includes(req.id)) {
           manualReqs.add(req);
         }
         // TODO Type guard

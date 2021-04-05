@@ -10,10 +10,10 @@ import SemesterChanger from './SemesterChanger';
 import './SemesterPane.css';
 
 type SemesterPaneProps = {
-  semesters: Map<string, (Semester | null)[]>;
+  semesters: { [year: string]: (Semester | null)[] };
   onAddCourse: (semester: Semester, course: Course) => void;
   onRemoveCourse: (semester: Semester, course: Course) => void;
-  onChangeSemesters: (semesters: Map<string, (Semester | null)[]>) => void;
+  onChangeSemesters: (semesters: { [year: string]: (Semester | null)[] }) => void;
 };
 
 type SemesterPaneState = {
@@ -41,16 +41,16 @@ class SemesterPane extends React.Component<SemesterPaneProps, SemesterPaneState>
     });
   };
 
-  handleChangeSemesters = (semesters: Map<string, (Semester | null)[]>): void => {
+  handleChangeSemesters = (semesters: { [year: string]: (Semester | null)[] }): void => {
     this.closeChanger();
     this.props.onChangeSemesters(semesters);
   };
 
   render(): React.ReactElement {
     /* Concat all semester-per-year arrays and remove the null ones. */
-    const semesterArr = Array.from(this.props.semesters.keys())
+    const semesterArr = Object.keys(this.props.semesters)
       .sort()
-      .map((year) => this.props.semesters.get(year))
+      .map((year) => this.props.semesters[year])
       .flat()
       .filter((semester) => semester) as Semester[];
     // a temporary fix because we haven't implemented view by year functionality yet.

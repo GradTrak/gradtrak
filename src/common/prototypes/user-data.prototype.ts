@@ -1,11 +1,7 @@
-import { SemesterPrototype } from './semester.prototype';
+import { SchedulePrototype } from './schedule.prototype';
 
 export type UserDataPrototype = {
-  semesters: {
-    [year: string]: (SemesterPrototype | null)[];
-  };
-  goalIds: string[];
-  manuallyFulfilledReqs: {
-    [reqSetId: string]: string[];
+  schedules: {
+    [name: string]: SchedulePrototype;
   };
 };

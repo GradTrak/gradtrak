@@ -4,6 +4,7 @@ import { Col, Modal, Row } from 'react-bootstrap';
 import { Course } from './models/course.model';
 import { Requirement } from './models/requirement.model';
 import { RequirementSet } from './models/requirement-set.model';
+import { Schedule } from './models/schedule.model';
 import { Semester } from './models/semester.model';
 import { UserData } from './models/user-data.model';
 import Courses from './lib/courses';
@@ -14,8 +15,10 @@ import User, { Account } from './lib/user';
 import AccountEditor from './components/AccountEditor';
 import Initializer from './components/Initializer';
 import Login from './components/Login';
+import NewScheduleDialog from './components/NewScheduleDialog';
 import ReportForm from './components/ReportForm';
 import RequirementPane from './components/RequirementPane';
+import ScheduleTab from './components/ScheduleTab';
 import SemesterPane from './components/SemesterPane';
 
 import './App.css';
@@ -28,7 +31,8 @@ type AppState = {
   loggedIn: boolean;
   user: Account | null;
   userData: UserData | null;
-  modal: 'login' | 'initializer' | 'account-editor' | 'report-form' | null;
+  activeSchedule: string;
+  modal: 'login' | 'initializer' | 'new-schedule' | 'account-editor' | 'report-form' | null;
 };
 
 class App extends React.Component<AppProps, AppState> {
@@ -39,6 +43,7 @@ class App extends React.Component<AppProps, AppState> {
       loggedIn: false,
       user: null,
       userData: null,
+      activeSchedule: 'Schedule 1',
       modal: null,
     };
   }
@@ -78,8 +83,8 @@ class App extends React.Component<AppProps, AppState> {
       /* Fetch user data. */
       const userData = await this.fetchUserData();
 
-      /* If there are no semesters, open the initializer. */
-      if (userData.semesters.size === 0) {
+      /* If there are no schedules, open the initializer. */
+      if (Object.keys(userData.schedules).length === 0) {
         this.openInitializer();
       }
     } else {
@@ -100,7 +105,7 @@ class App extends React.Component<AppProps, AppState> {
 
   private registerSavePrompt = (): void => {
     window.addEventListener('beforeunload', (e) => {
-      if (!this.state.loggedIn && this.state.userData && this.state.userData.semesters.size > 0) {
+      if (!this.state.loggedIn && this.state.userData && Object.keys(this.state.userData.schedules).length > 0) {
         /* This text isn't actually what is displayed. */
         const confirmation = 'Are you sure you want to leave? Guest account changes will be lost.';
         e.returnValue = confirmation;
@@ -132,7 +137,7 @@ class App extends React.Component<AppProps, AppState> {
 
     const userData = await this.fetchUserData();
 
-    if (userData.semesters.size === 0) {
+    if (Object.keys(userData.schedules).length === 0) {
       this.openInitializer();
     } else {
       this.closeModal();
@@ -148,7 +153,7 @@ class App extends React.Component<AppProps, AppState> {
       return err;
     }
 
-    if (!this.state.userData || this.state.userData.semesters.size === 0) {
+    if (!this.state.userData || Object.keys(this.state.userData.schedules).length === 0) {
       this.openInitializer();
     } else {
       User.saveUserData(this.state.userData);
@@ -159,7 +164,7 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   handleLoginDismiss = (): void => {
-    if (this.state.userData && this.state.userData.semesters.size === 0) {
+    if (this.state.userData && Object.keys(this.state.userData.schedules).length === 0) {
       this.openInitializer();
     } else {
       this.closeModal();
@@ -172,9 +177,26 @@ class App extends React.Component<AppProps, AppState> {
     });
   };
 
-  handleInitializeData = (userData: UserData): void => {
-    this.setUserData(userData);
+  handleInitializeSchedule = (schedule: Schedule): void => {
+    this.setSchedule(this.state.activeSchedule, schedule);
     this.closeModal();
+  };
+
+  handleNewSchedule = (name: string, createFrom: string | null): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to add new schedule before user data loaded');
+    }
+
+    if (createFrom === null) {
+      this.setSchedule(name, Schedule.EMPTY_SCHEDULE);
+    } else {
+      if (!this.state.userData.schedules[createFrom]) {
+        throw new Error('Tried to add new schedule from non-existent schedule');
+      }
+      this.setSchedule(name, this.state.userData.schedules[createFrom]);
+    }
+    this.closeModal();
+    this.setActiveSchedule(name);
   };
 
   openAccountEditor = (): void => {
@@ -186,6 +208,26 @@ class App extends React.Component<AppProps, AppState> {
   openReportForm = (): void => {
     this.setState({
       modal: 'report-form',
+    });
+  };
+
+  setActiveSchedule = (scheduleName: string): void => {
+    this.setState((oldState) => {
+      if (!this.state.userData) {
+        throw new Error('Tried to set active schedule before user data loaded');
+      }
+
+      /* If the active schedule is empty or nonexistent, open the initializer. */
+      if (
+        !Object.keys(oldState.userData!.schedules).includes(scheduleName) ||
+        Object.keys(oldState.userData!.schedules[scheduleName]?.semesters)?.length === 0
+      ) {
+        this.openInitializer();
+      }
+
+      return {
+        activeSchedule: scheduleName,
+      };
     });
   };
 
@@ -259,13 +301,24 @@ class App extends React.Component<AppProps, AppState> {
   };
 
   fetchUserData = async (): Promise<UserData> => {
+    /* Set user data to null while loading. */
     this.setState({
       userData: null,
     });
+
+    /* Fetch user data. */
     const userData = await User.fetchUserData();
+
+    /* Update user data with new data. */
     this.setState({
       userData,
     });
+
+    /* Set the active schedule to the first one, if it exists. */
+    if (Object.keys(userData.schedules).length > 0) {
+      this.setActiveSchedule(Object.keys(userData.schedules)[0]);
+    }
+
     return userData;
   };
 
@@ -279,10 +332,22 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to set goals before user data loaded');
     }
 
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
+
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
     this.setState({
       userData: {
         ...this.state.userData,
-        goals: [...newGoals],
+        schedules: {
+          ...this.state.userData.schedules,
+          [this.state.activeSchedule]: {
+            ...schedule,
+            goals: [...newGoals],
+          },
+        },
       },
     });
   };
@@ -292,21 +357,27 @@ class App extends React.Component<AppProps, AppState> {
    *
    * @param {Map<string, Semester[]>} newSemesters The new semesters.
    */
-  setSemesters = (newSemesters: Map<string, (Semester | null)[]>): void => {
+  setSemesters = (newSemesters: { [name: string]: (Semester | null)[] }): void => {
     if (!this.state.userData) {
       throw new Error('Tried to set semesters before user data loaded');
     }
 
-    // not sure why, before the rework the list of semesters was copied, so
-    // I've copied the map here as well.
-    const newMap = new Map<string, (Semester | null)[]>();
-    newSemesters.forEach((value, key) => {
-      newMap.set(key, [...value]);
-    });
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
+
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
     this.setState({
       userData: {
         ...this.state.userData,
-        semesters: newMap,
+        schedules: {
+          ...this.state.userData.schedules,
+          [this.state.activeSchedule]: {
+            ...schedule,
+            semesters: newSemesters,
+          },
+        },
       },
     });
   };
@@ -326,14 +397,39 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error(`Tried to add course ${course.id} to semester ${semester.name}, which it already has`);
     }
 
-    // TODO Making this a function that returns a clone breaks the
-    // course-changer
-    semester.courses = [...semester.courses, course];
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
+
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
+    const year = Object.keys(schedule.semesters).find((y) => schedule.semesters[y].includes(semester));
+
+    if (year === undefined) {
+      throw new Error("Tried to add a course to a semester which doesn't exist");
+    }
+
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        semesters: new Map<string, (Semester | null)[]>(this.state.userData.semesters),
+        schedules: {
+          ...this.state.userData.schedules,
+          [this.state.activeSchedule]: {
+            ...schedule,
+            semesters: {
+              ...schedule.semesters,
+              [year]: schedule.semesters[year].map((s) =>
+                s !== semester
+                  ? s
+                  : {
+                      ...semester,
+                      courses: [...semester.courses, course],
+                    },
+              ),
+            },
+          },
+        },
       },
     });
   };
@@ -353,13 +449,40 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error(`Tried to remove course ${course.id} from semester ${semester.name}, which it doesn't have`);
     }
 
-    // TODO Making this a function that returns a clone breaks the course-changer
-    semester.courses = semester.courses.filter((c) => c !== course);
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
+
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
+    const year = Object.keys(schedule.semesters).find((y) => schedule.semesters[y].includes(semester));
+
+    if (year === undefined) {
+      throw new Error("Tried to remove a course to a semester which doesn't exist");
+    }
+
+    semester.courses = [...semester.courses, course];
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        semesters: new Map<string, (Semester | null)[]>(this.state.userData.semesters),
+        schedules: {
+          ...this.state.userData.schedules,
+          [this.state.activeSchedule]: {
+            ...schedule,
+            semesters: {
+              ...schedule.semesters,
+              [year]: schedule.semesters[year].map((s) =>
+                s !== semester
+                  ? s
+                  : {
+                      ...semester,
+                      courses: semester.courses.filter((c) => c !== course),
+                    },
+              ),
+            },
+          },
+        },
       },
     });
   };
@@ -369,25 +492,32 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to manually fulfill before user data loaded');
     }
 
-    const { manuallyFulfilledReqs } = this.state.userData;
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
 
-    if (manuallyFulfilledReqs.get(requirementSet.id)?.has(requirement.id)) {
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
+    if (schedule.manuallyFulfilledReqs[requirementSet.id].includes(requirementSet.id)) {
       throw new Error(
         `Tried to mark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already is`,
       );
     }
 
-    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
-    nextSet.add(requirement.id);
-
-    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
-    nextManuallyFulfilled.set(requirementSet.id, nextSet);
-
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        manuallyFulfilledReqs: nextManuallyFulfilled,
+        schedules: {
+          ...this.state.userData.schedules,
+          [this.state.activeSchedule]: {
+            ...schedule,
+            manuallyFulfilledReqs: {
+              ...schedule.manuallyFulfilledReqs,
+              [requirementSet.id]: [...schedule.manuallyFulfilledReqs[requirementSet.id], requirement.id],
+            },
+          },
+        },
       },
     });
   };
@@ -397,36 +527,98 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to manually unfulfill before user data loaded');
     }
 
-    const { manuallyFulfilledReqs } = this.state.userData;
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
 
-    if (!manuallyFulfilledReqs.get(requirementSet.id)?.has(requirement.id)) {
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
+    if (!schedule.manuallyFulfilledReqs[requirementSet.id]?.includes(requirement.id)) {
       throw new Error(
         `Tried to unmark fulfilled requirement ${requirement.id} from set ${requirementSet.id}, which it already isn't`,
       );
     }
 
-    const nextManuallyFulfilled = new Map<string, Set<string>>(manuallyFulfilledReqs);
-    const nextSet = new Set<string>(manuallyFulfilledReqs.get(requirementSet.id));
-    nextManuallyFulfilled.set(requirementSet.id, nextSet);
+    const nextArr = schedule.manuallyFulfilledReqs[requirementSet.id].filter((reqId) => reqId !== requirement.id);
 
-    nextSet.delete(requirement.id);
-    if (nextSet.size === 0) {
-      nextManuallyFulfilled.delete(requirementSet.id);
+    const nextObj = Object.fromEntries(
+      Object.entries(schedule.manuallyFulfilledReqs).filter(([reqSetId, reqSets]) => reqSetId !== requirementSet.id),
+    );
+    if (nextArr.length > 0) {
+      nextObj[requirementSet.id] = nextArr;
     }
+
     this.setState({
       ...this.state,
       userData: {
         ...this.state.userData,
-        manuallyFulfilledReqs: nextManuallyFulfilled,
+        schedules: {
+          ...this.state.userData.schedules,
+          [this.state.activeSchedule]: {
+            ...schedule,
+            manuallyFulfilledReqs: nextObj,
+          },
+        },
       },
     });
   };
 
-  setUserData = (userData: UserData): void => {
+  setSchedule = (name: string, schedule: Schedule): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to set schedule before user data loaded');
+    }
+
     this.setState({
-      ...this.state,
-      userData,
+      userData: {
+        ...this.state.userData,
+        schedules: {
+          ...this.state.userData.schedules,
+          [name]: schedule,
+        },
+      },
     });
+  };
+
+  deleteSchedule = (name: string): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to delete schedule before user data loaded');
+    }
+
+    if (!Object.keys(this.state.userData.schedules).includes(name)) {
+      throw new Error('Tried to delete non-existent schedule');
+    }
+
+    this.setState((oldState) => {
+      const nextSchedules = { ...oldState.userData!.schedules };
+      delete nextSchedules[name];
+
+      return {
+        userData: {
+          ...oldState.userData,
+          schedules: nextSchedules,
+        },
+      };
+    });
+
+    if (this.state.activeSchedule === name) {
+      this.setActiveSchedule(Object.keys(this.state.userData.schedules)[0]);
+    }
+  };
+
+  renameSchedule = (oldName: string, newName: string): void => {
+    if (!this.state.userData) {
+      throw new Error('Tried to rename schedule before user data loaded');
+    }
+
+    if (Object.keys(!this.state.userData.schedules).includes(oldName)) {
+      throw new Error('Tried to rename non-existent schedule');
+    }
+
+    this.setSchedule(newName, this.state.userData.schedules[oldName]);
+    this.deleteSchedule(oldName);
+    if (this.state.activeSchedule === oldName) {
+      this.setActiveSchedule(newName);
+    }
   };
 
   /**
@@ -440,20 +632,51 @@ class App extends React.Component<AppProps, AppState> {
       throw new Error('Tried to get current courses before user data loaded');
     }
 
-    return Array.from(this.state.userData.semesters.values())
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
+
+    if (!schedule) {
+      throw new Error('Tried to set goals on non-existent schedule');
+    }
+
+    return Object.values(schedule.semesters)
       .flat()
       .filter((semester) => semester)
       .flatMap((semester) => semester!.courses);
+  };
+
+  private renderScheduleTabs = (): React.ReactNode => {
+    if (!this.state.userData?.schedules) {
+      return null;
+    }
+
+    const tabs = Object.entries(this.state.userData.schedules).map(([scheduleName, schedule]) => (
+      <React.Fragment key={scheduleName}>
+        <ScheduleTab
+          scheduleName={scheduleName}
+          active={scheduleName === this.state.activeSchedule}
+          onSetActive={() => this.setActiveSchedule(scheduleName)}
+          onRename={(newName) => this.renameSchedule(scheduleName, newName)}
+          onDelete={() => this.deleteSchedule(scheduleName)}
+        />
+        <span> | </span>
+      </React.Fragment>
+    ));
+    tabs.push(
+      <button key="" className="gt-button" type="button" onClick={() => this.setState({ modal: 'new-schedule' })}>
+        + Add
+      </button>,
+    );
+    return tabs;
   };
 
   private renderName = (): React.ReactNode => {
     if (this.state.loggedIn && this.state.user) {
       return (
         <div className="App__name">
-          <div className="App__left">Name: {this.state.user.username}</div>
+          <div className="App__left">{this.renderScheduleTabs()}</div>
           <div className="App__right">
             <button className="gt-button" type="button" onClick={this.openAccountEditor}>
-              Account
+              {this.state.user.username}
             </button>
             <span> | </span>
             <button className="gt-button" type="button" onClick={this.logout}>
@@ -479,8 +702,12 @@ class App extends React.Component<AppProps, AppState> {
       /* Not logged in. */
       return (
         <div className="App__name">
-          <div className="App__left">Guest User</div>
+          <div className="App__left">{this.renderScheduleTabs()}</div>
           <div className="App__right">
+            <button className="gt-button" type="button" onClick={this.openLogin}>
+              Guest User
+            </button>
+            <span> | </span>
             <button className="gt-button" type="button" onClick={this.openLogin}>
               Register to Save
             </button>
@@ -508,11 +735,17 @@ class App extends React.Component<AppProps, AppState> {
       return <div>Loading...</div>;
     }
 
+    const schedule = this.state.userData.schedules[this.state.activeSchedule];
+
+    if (!schedule) {
+      return null;
+    }
+
     return (
       <Row className="App__main" noGutters>
         <Col xs={8}>
           <SemesterPane
-            semesters={this.state.userData.semesters}
+            semesters={schedule.semesters}
             onAddCourse={this.addCourse}
             onRemoveCourse={this.removeCourse}
             onChangeSemesters={this.setSemesters}
@@ -521,8 +754,8 @@ class App extends React.Component<AppProps, AppState> {
         <Col xs={4}>
           <RequirementPane
             courses={this.getCurrentCourses()}
-            goals={this.state.userData.goals}
-            manuallyFulfilled={this.state.userData.manuallyFulfilledReqs}
+            goals={schedule.goals}
+            manuallyFulfilled={schedule.manuallyFulfilledReqs}
             onManualFulfill={this.manuallyFulfill}
             onManualUnfulfill={this.manuallyUnfulfill}
             onChangeGoals={this.setGoals}
@@ -533,34 +766,42 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   private renderModals(): React.ReactNode {
-    if (this.state.userData) {
-      return (
-        <>
-          <Modal backdrop="static" show={this.state.modal === 'login'}>
-            <Modal.Body>
-              <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
-            </Modal.Body>
-          </Modal>
-          <Modal size="lg" backdrop="static" show={this.state.modal === 'initializer'} onHide={this.closeModal}>
-            <Modal.Body>
-              <Initializer onInitializeData={this.handleInitializeData} />
-            </Modal.Body>
-          </Modal>
-          <Modal show={this.state.modal === 'account-editor'} onHide={this.closeModal}>
-            <Modal.Body>
-              {this.state.user ? <AccountEditor user={this.state.user} onClose={this.closeModal} /> : null}
-            </Modal.Body>
-          </Modal>
-          <Modal show={this.state.modal === 'report-form'} onHide={this.closeModal}>
-            <Modal.Body>
-              <ReportForm />
-            </Modal.Body>
-          </Modal>
-        </>
-      );
-    } else {
+    if (!this.state.userData) {
       return null;
     }
+
+    return (
+      <>
+        <Modal backdrop="static" show={this.state.modal === 'login'}>
+          <Modal.Body>
+            <Login onLogin={this.handleLogin} onRegister={this.handleRegister} onDismiss={this.handleLoginDismiss} />
+          </Modal.Body>
+        </Modal>
+        <Modal size="lg" backdrop="static" show={this.state.modal === 'initializer'} onHide={this.closeModal}>
+          <Modal.Body>
+            <Initializer onInitialize={this.handleInitializeSchedule} />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal === 'new-schedule'} onHide={this.closeModal}>
+          <Modal.Body>
+            <NewScheduleDialog
+              existingScheduleNames={Object.keys(this.state.userData.schedules)}
+              onCreate={this.handleNewSchedule}
+            />
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal === 'account-editor'} onHide={this.closeModal}>
+          <Modal.Body>
+            {this.state.user ? <AccountEditor user={this.state.user} onClose={this.closeModal} /> : null}
+          </Modal.Body>
+        </Modal>
+        <Modal show={this.state.modal === 'report-form'} onHide={this.closeModal}>
+          <Modal.Body>
+            <ReportForm />
+          </Modal.Body>
+        </Modal>
+      </>
+    );
   }
 
   render(): React.ReactElement {

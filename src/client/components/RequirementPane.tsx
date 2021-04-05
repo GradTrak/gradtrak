@@ -14,7 +14,9 @@ import './RequirementPane.css';
 type RequirementPaneProps = {
   goals: RequirementSet[];
   courses: Course[];
-  manuallyFulfilled: Map<string, Set<string>>;
+  manuallyFulfilled: {
+    [reqSetId: string]: string[];
+  };
   onManualFulfill: (req: Requirement, reqSet: RequirementSet) => void;
   onManualUnfulfill: (req: Requirement, reqSet: RequirementSet) => void;
   onChangeGoals: (goals: RequirementSet[]) => void;

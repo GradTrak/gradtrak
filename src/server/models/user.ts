@@ -4,7 +4,7 @@ import { UserDataPrototype } from '../../common/prototypes/user-data.prototype';
 
 /* Make sure to set up the appropriate migration in the migrations folder if
  * you update the schema. */
-export const USER_SCHEMA_VERSION = 1;
+export const USER_SCHEMA_VERSION = 2;
 
 const semesterSchema = new mongoose.Schema(
   {
@@ -21,11 +21,13 @@ const semesterSchema = new mongoose.Schema(
   { strict: 'throw', _id: false },
 );
 
-const userDataSchema = new mongoose.Schema(
+const scheduleSchema = new mongoose.Schema(
   {
     semesters: {
       type: Map,
-      of: [semesterSchema],
+      of: {
+        type: [semesterSchema],
+      },
       required: true,
       default: {},
     },
@@ -36,7 +38,23 @@ const userDataSchema = new mongoose.Schema(
     },
     manuallyFulfilledReqs: {
       type: Map,
-      of: [String],
+      of: {
+        type: [String],
+      },
+      required: true,
+      default: {},
+    },
+  },
+  { strict: 'throw', _id: false },
+);
+
+const userDataSchema = new mongoose.Schema(
+  {
+    schedules: {
+      type: Map,
+      of: {
+        type: scheduleSchema,
+      },
       required: true,
       default: {},
     },
@@ -48,7 +66,7 @@ export type UserType = {
   username: string;
   passwordHash?: string;
   googleId?: string;
-  userdata: UserDataPrototype;
+  userData: UserDataPrototype;
   emailMarketing: boolean;
   userTesting: boolean;
 } & mongoose.Document;
@@ -76,12 +94,11 @@ const userSchema = new mongoose.Schema(
       unique: true,
       sparse: true,
     },
-    userdata: {
+    userData: {
       type: userDataSchema,
       required: true,
       default: {
-        semesters: {},
-        goalIds: [],
+        schedules: {},
       },
     },
     emailMarketing: {

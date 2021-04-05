@@ -3,10 +3,7 @@
   height: 5rem;
   position: fixed;
   color: white;
-}
-
-.App__header button {
-  color: white;
+  z-index: 1;
 }
 
 .App__title {

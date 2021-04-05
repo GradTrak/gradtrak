@@ -1,0 +1,15 @@
+.ScheduleTab {
+  color: lightgray;
+}
+
+.ScheduleTab--active {
+  color: white;
+}
+
+.ScheduleTab__button--active {
+  text-decoration: underline;
+}
+
+.ScheduleTab__schedule-name {
+  font-style: italic;
+}
