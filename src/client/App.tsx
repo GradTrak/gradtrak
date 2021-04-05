@@ -673,10 +673,8 @@ class App extends React.Component<AppProps, AppState> {
         <div className="App__name">
           <div className="App__left">{this.renderScheduleTabs()}</div>
           <div className="App__right">
-            Name: {this.state.user.username}
-            <span> | </span>
             <button className="gt-button" type="button" onClick={this.openAccountEditor}>
-              Account
+              {this.state.user.username}
             </button>
             <span> | </span>
             <button className="gt-button" type="button" onClick={this.logout}>
@@ -704,7 +702,9 @@ class App extends React.Component<AppProps, AppState> {
         <div className="App__name">
           <div className="App__left">{this.renderScheduleTabs()}</div>
           <div className="App__right">
-            Guest User
+            <button className="gt-button" type="button" onClick={this.openLogin}>
+              Guest User
+            </button>
             <span> | </span>
             <button className="gt-button" type="button" onClick={this.openLogin}>
               Register to Save
