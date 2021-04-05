@@ -27,6 +27,9 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
+
+Cypress.Commands.add('getCy', (selector, ...args) => cy.get(`[data-cy=${selector}]`, ...args));
+Cypress.Commands.add('getCyLike', (selector, ...args) => cy.get(`[data-cy*=${selector}]`, ...args));
 /**
  * Logs in with the given email and password. Assumes that you're
  * on the login modal.
@@ -71,3 +74,4 @@ Cypress.Commands.add('addCourse', (year, season) => {
 Cypress.Commands.add('setupBlank', () => {
   cy.createAccount('');
 })
+

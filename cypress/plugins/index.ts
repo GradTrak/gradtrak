@@ -68,5 +68,14 @@ module.exports = (on, config) => {
     }
   });
 
+  /**
+   * Seed a single user instead of all of them
+   */
+  on('task', {
+    'seedUser': async (user) => {
+      return User.insertMany([user]);
+    }
+  });
+
 
 }

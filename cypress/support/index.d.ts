@@ -2,6 +2,8 @@
 
 declare namespace Cypress {
   interface Chainable {
+    getCy(value: string): Chainable<Element>
+    getCyLike(value: string): Chainable<Element>
     continueAsGuest(value: string): Chainable<Element>
     logIn(value: string): Chainable<Element>
     createAccount(value: string): Chainable<Element>
